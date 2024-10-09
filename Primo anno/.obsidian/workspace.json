@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Senza nome.md",
+                "file": "programmazione-1/08 ottobre 2024.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Senza nome.md",
+                "file": "programmazione-1/08 ottobre 2024.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Senza nome.md",
+                "file": "programmazione-1/08 ottobre 2024.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Senza nome.md"
+                "file": "programmazione-1/08 ottobre 2024.md"
               }
             }
           }
@@ -157,11 +157,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "54dc711e09a7e4b8",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "programmazione-1/LibroConsigliatoDalProf.pdf",
     "Senza nome.md",
+    "programmazione-1/08 ottobre 2024.md",
     "programmazione-1/dfgrgf.md",
+    "programmazione-1/LibroConsigliatoDalProf.pdf",
     "strutture-discrete/FileRielaborazioni/01_Rielaborazione.md"
   ]
 }
