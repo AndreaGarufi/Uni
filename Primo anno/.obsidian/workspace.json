@@ -1,0 +1,167 @@
+{
+  "main": {
+    "id": "bf89027f93d81fb6",
+    "type": "split",
+    "children": [
+      {
+        "id": "f334306b85d241d6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "51f481f7460c9f27",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "programmazione-1/LibroConsigliatoDalProf.pdf"
+              }
+            }
+          },
+          {
+            "id": "54dc711e09a7e4b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Senza nome.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b504f1c1378291df",
+    "type": "split",
+    "children": [
+      {
+        "id": "90aced882f84f11d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "59476c80b7c5f8bb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f69a8cd29e757190",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "26ba83a7050d47cf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e5cbad16aa00cfb4",
+    "type": "split",
+    "children": [
+      {
+        "id": "83abbd526ffa63e0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1126aeaf0956906b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Senza nome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2acbfccf60ac161f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Senza nome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "545e5843f8bc6ddf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "fdc893cc064980ff",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Senza nome.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false
+    }
+  },
+  "active": "54dc711e09a7e4b8",
+  "lastOpenFiles": [
+    "programmazione-1/LibroConsigliatoDalProf.pdf",
+    "Senza nome.md",
+    "programmazione-1/dfgrgf.md",
+    "strutture-discrete/FileRielaborazioni/01_Rielaborazione.md"
+  ]
+}
