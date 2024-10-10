@@ -11,11 +11,9 @@
             "id": "8c2fd7e665dbf7ee",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "programmazione-1/Traduzione e linguaggi (introduzione) 8_10_24.md",
-                "mode": "source",
-                "source": false
+                "file": "programmazione-1/LibrofConsigliatoDalProf.pdf"
               }
             }
           }
@@ -108,8 +106,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "545e5843f8bc6ddf",
+  "active": "8c2fd7e665dbf7ee",
   "lastOpenFiles": [
+    "programmazione-1/Traduzione e linguaggi (introduzione) 8_10_24.md",
     "Modelli/Pasted image 20241008232806.png",
     "Modelli/Pasted image 20241008230351.png",
     "Modelli/Pasted image 20241007222104.png",
@@ -122,16 +121,14 @@
     "programmazione-1/FileCondivisiTeams",
     "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
     "architettura-degli-elaboratori/7 ottobre 2024.pdf",
-    "programmazione-1/LibroConsigliatoDalProf.pdf",
+    "programmazione-1/LibrofConsigliatoDalProf.pdf",
     "programmazione-1/Attachments/image1728546329299png.png",
     "programmazione-1/08 ottobre 2024.md",
     "programmazione-1/Attachments/image1728546329279png.png",
     "programmazione-1/Attachments/image1728546329262png.png",
     "programmazione-1/Attachments/image1728546329229png.png",
     "programmazione-1/Attachments/image1728546329105png.png",
-    "programmazione-1/Traduzione e linguaggi (introduzione) 8_10_24.md",
     "programmazione-1/Traduzione e linguaggi (introduzione)_241008_201314.docx",
-    "programmazione-1/Attachments/image1728546329360png.png",
     "programmazione-1/Attachments",
     "architettura-degli-elaboratori/FileRielaborazioni/01_Rielaborazione.md",
     "Senza nome.md",
