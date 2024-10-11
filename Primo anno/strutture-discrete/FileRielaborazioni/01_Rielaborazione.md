@@ -40,13 +40,13 @@ Questa è la tabella della verità di tutte queste formule:
 | 0     | 1     | 1      | 1             | 0             | 1             | 0             |
 | 0     | 0     | 1      | 0             | 0             | 1             | 1             |
 ##### Nomenclature varie:
-- Data una formula diremo che è **==soddisfacibile**== se esiste almeno un caso in cui sia vera, qualunque siano i valori delle variabili.
-- Data una formula diremo che è **==insoddisfacibile==** se non esiste almeno una caso in cui sia vera, qualunque siano i valori delle variabili.
-- Data una formula si dice **==tautologia==** se è sempre vera qualunque siano i valori delle variabili.
+- Data una formula diremo che è **soddisfacibile** se esiste almeno un caso in cui sia vera, qualunque siano i valori delle variabili.
+- Data una formula diremo che è **insoddisfacibile** se non esiste almeno una caso in cui sia vera, qualunque siano i valori delle variabili.
+- Data una formula si dice **tautologia** se è sempre vera qualunque siano i valori delle variabili.
 Di seguito degli esempi (usando le variabili della tabella di verità):
 - $P_1$ ∧ $P_2$ è soddisfacibile
-- $P_2$ ∨ ¬$P_2$ è tautologia (Questo viene chiamato ==**Principio del terzo escluso**==)
-- $P_2$ ∧ ¬$P_2$ è insoddisfacibile (Questo viene chiamato ==**Principio di non contraddizione**==)
+- $P_2$ ∨ ¬$P_2$ è tautologia (Questo viene chiamato **Principio del terzo escluso**)
+- $P_2$ ∧ ¬$P_2$ è insoddisfacibile (Questo viene chiamato **Principio di non contraddizione**)
 
 Due formule $P_1$ e $P_2$ si dicono equivalenti se hanno lo stesso valore è si scrivono in questo modo:  $P_1$ $\equiv$ $P_2$
 
@@ -55,7 +55,7 @@ Per la disgiunzione e la congiunzione vale la proprietà commutativa e associati
 - p ∨ (q ∨ r ) ≡ (p ∨ q) ∨ r (associatività della disgiunzione)
 
 ##### Giustificazione o conseguenza logica:
-Sia $P$ un insieme di proporzioni e $p$ una proporzione generica, ci chiediamo quando $P$ giustifica $p$ questa domanda la denotiamo con: $P$  |= $p$
+Sia $P$ un insieme di proposizioni e $p$ una proposizione generica, ci chiediamo quando $P$ giustifica $p$ questa domanda la denotiamo con: $P$  |= $p$
 Di seguito un esempio:
 $P$ = { p, p => q }  
 $P$  |= $q$
@@ -77,3 +77,6 @@ Molte volte formule complesse vengono standardizzate in 2 forme chiamate "normal
 	- (p ∨ q) ∧ (¬p ∨ ¬r ∨ s)
 - DNF (Forma Normale Disgiuntiva) che si basa sul fare un OR di vari AND:
 	- (p ∧ q) ∨ (¬p ∧ ¬r ∧ s)
+
+
+

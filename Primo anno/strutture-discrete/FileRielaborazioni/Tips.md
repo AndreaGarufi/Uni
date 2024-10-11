@@ -1,7 +1,7 @@
 ###### Come creare tutte le combinazioni tra le variabili senza confondersi
-![[Pasted image 20241009133640.png]]
-Numero casi possibili: nCasi = $2^4$ = $16$
-Per la prima variabile:
+
+Numero casi possibili: nCasi = $2^n$  dove n è il numero di variabili (es. 3 variabili = $2^3$ = 8 casi)
+Per la prima variabile: (esempio per 16 casi)
 - scrivi 8 volte V e 8 volte F
 Per la seconda variabile scrivi: 
 - 4 volte V -  4 volte F - 4 volte V - 4 volte F

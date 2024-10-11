@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "2d5bca4d03c616c1",
+        "id": "53a83aa4e7669311",
         "type": "tabs",
         "children": [
           {
-            "id": "8c2fd7e665dbf7ee",
+            "id": "29062c2e4a7007d4",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "programmazione-1/LibroConsigliatoDalProf.pdf"
+                "file": "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf"
+              }
+            }
+          },
+          {
+            "id": "56cf6bbbeb63027d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "strutture-discrete/FileRielaborazioni/Tips.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -67,7 +79,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 334.5110321044922
+    "width": 334.5110321044922,
+    "collapsed": true
   },
   "right": {
     "id": "e5cbad16aa00cfb4",
@@ -106,33 +119,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8c2fd7e665dbf7ee",
+  "active": "29062c2e4a7007d4",
   "lastOpenFiles": [
+    "strutture-discrete/FileRielaborazioni/Tips.md",
+    "strutture-discrete/FileRielaborazioni/01_Rielaborazione.md",
+    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Determinante TEORIA 8_10_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Matrici 1_10_24 TEORIA.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Matrici TEORIA 3_10_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Girlando/Metodo di Gauss-Jordan.pdf",
+    "algebra-lineare-e-geometria/Pdf note Girlando/3 ottobre 2024.pdf",
+    "algebra-lineare-e-geometria/Pdf note Girlando/1 ottobre 2024.pdf",
+    "algebra-lineare-e-geometria/Pdf note Girlando",
+    "algebra-lineare-e-geometria/Pdf note Garufi",
+    "algebra-lineare-e-geometria/Nuova cartella",
     "programmazione-1/Traduzione e linguaggi (introduzione) 8_10_24.md",
     "Modelli/Pasted image 20241008232806.png",
     "Modelli/Pasted image 20241008230351.png",
     "Modelli/Pasted image 20241007222104.png",
     "Modelli/Pasted image 20241005110025.png",
     "Modelli/Imgs/Pasted image 20241004212308.png",
-    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni.docx",
-    "programmazione-1/FileCondivisiTeams/1) Traduzione e Linguaggi.pdf",
-    "programmazione-1/FileCondivisiTeams/2) Problemi - Algoritmi - Diagrammi.pdf",
-    "architettura-degli-elaboratori/2 ottobre 2024.pdf",
-    "programmazione-1/FileCondivisiTeams",
-    "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
-    "architettura-degli-elaboratori/7 ottobre 2024.pdf",
-    "programmazione-1/LibroConsigliatoDalProf.pdf",
     "programmazione-1/Attachments/image1728546329299png.png",
     "programmazione-1/08 ottobre 2024.md",
     "programmazione-1/Attachments/image1728546329279png.png",
     "programmazione-1/Attachments/image1728546329262png.png",
     "programmazione-1/Attachments/image1728546329229png.png",
     "programmazione-1/Attachments/image1728546329105png.png",
-    "programmazione-1/Traduzione e linguaggi (introduzione)_241008_201314.docx",
-    "programmazione-1/Attachments",
     "architettura-degli-elaboratori/FileRielaborazioni/01_Rielaborazione.md",
     "Senza nome.md",
-    "programmazione-1/dfgrgf.md",
-    "strutture-discrete/FileRielaborazioni/01_Rielaborazione.md"
+    "programmazione-1/dfgrgf.md"
   ]
 }
