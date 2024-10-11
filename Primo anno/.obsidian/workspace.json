@@ -4,27 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b4c51dae87b14e3a",
+        "id": "df7700d630ff8461",
         "type": "tabs",
         "children": [
           {
-            "id": "74f3ecf119c14057",
+            "id": "6dd23f10f886fdd5",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
-              }
-            }
-          },
-          {
-            "id": "214e3114f390ba3e",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "programmazione-1/FileCondivisiTeams/2) Problemi - Algoritmi - Diagrammi.pdf"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -104,7 +92,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
-              }
+              "state": {}
             }
           },
           {
@@ -164,33 +148,38 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b1638c93943e32a3",
+  "active": "6dd23f10f886fdd5",
   "lastOpenFiles": [
-    "programmazione-1/FileCondivisiTeams/2) Problemi - Algoritmi - Diagrammi.pdf",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "architettura-degli-elaboratori/FileCondivisiTeams/2 Bus.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/01_Rielaborazione.md",
+    "architettura-degli-elaboratori/appunti.md",
+    "architettura-degli-elaboratori/Senza nome.md",
+    "architettura-degli-elaboratori/Senza nome 1.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/1 Memoria.pdf",
+    "architettura-degli-elaboratori/7 ottobre 2024.pdf",
+    "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
+    "architettura-degli-elaboratori/2 ottobre 2024.pdf",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
+    "programmazione-1/FileCondivisiTeams/1 bis) Algoritmi-e-Diagrammi-di-flusso.pdf",
+    "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
+    "programmazione-1/FileCondivisiTeams/2) Problemi - Algoritmi - Diagrammi.pdf",
+    "programmazione-1/Tips Algoritmi.md",
+    "strutture-discrete/FileRielaborazioni/01_Rielaborazione.md",
+    "strutture-discrete/FileRielaborazioni/Tips.md",
+    "programmazione-1/Attachments/Pasted image 20241011134142.png",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "programmazione-1/Senza nome.canvas",
     "programmazione-1/LibroConsigliatoDalProf (nona edizione).pdf",
     "Modelli/Pasted image 20241011110236.png",
     "Modelli/Pasted image 20241011110058.png",
     "Modelli/Pasted image 20241011105518.png",
     "Modelli/Pasted image 20241011105446.png",
     "Modelli/Pasted image 20241011104949.png",
-    "strutture-discrete/FileRielaborazioni/01_Rielaborazione.md",
-    "programmazione-1/FileCondivisiTeams/1) Traduzione e Linguaggi (RIASSUNTATO).pdf",
-    "programmazione-1/FileCondivisiTeams/2) Problemi - Algoritmi - Diagrammi 1.pdf",
-    "programmazione-1/FileCondivisiTeams/1 bis) Algoritmi-e-Diagrammi-di-flusso.pdf",
-    "programmazione-1/FileCondivisiTeams/0) Flowcharts-vol.2.pdf",
-    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
-    "strutture-discrete/FileRielaborazioni/Tips.md",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Determinante TEORIA 8_10_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Matrici 1_10_24 TEORIA.pdf",
     "Modelli/Pasted image 20241008232806.png",
     "Modelli/Pasted image 20241008230351.png",
     "Modelli/Pasted image 20241007222104.png",
     "Modelli/Pasted image 20241005110025.png",
-    "Modelli/Imgs/Pasted image 20241004212308.png",
     "programmazione-1/08 ottobre 2024.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/01_Rielaborazione.md",
     "Senza nome.md",
     "programmazione-1/dfgrgf.md"
   ]

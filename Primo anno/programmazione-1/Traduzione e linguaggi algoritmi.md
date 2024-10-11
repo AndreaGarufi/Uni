@@ -146,3 +146,6 @@ Un algoritmo va descritto mediante:
 
 
 
+
+# <font color="#000000">COME CREARE UN ALGORITMO</font>
+ihfvo
