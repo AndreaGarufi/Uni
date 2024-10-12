@@ -14,7 +14,7 @@ Un'esempio di elaboratore è il **computer**, il computer è una macchina che co
 - Tablet/Smartphone
 
 Un qualsiasi computer moderno segue la seguente architettura:
-#### *macchina di Von Neumann*
+# <font color="#000000">Macchina di Von Neumann</font>
 
 ![[Pasted image 20241004212308.png]]
 Questo tipo di architettura viene chiamata Macchina di Von Neuman (questa è l'architettura alla quale fa riferimento la definizione di algoritmo sopracitata). Di seguito una descrizione di tutti i componenti:
@@ -61,7 +61,7 @@ Come possiamo ben notare un programma eseguibile dalla macchina von Neumann cons
 9. **Ripetizione del ciclo**: Questo ciclo continua fino a quando non viene incontrata un'istruzione speciale che ferma o altera l'esecuzione, come un'istruzione ALT o un salto condizionato che modifica il flusso del programma. 
 
 Il modello di elaboratore dalla quale Von Neumann prese spunto fu:
-#### *macchina di Turing*
+# <font color="#000000">Macchina di Turing</font>
 
 Una **macchina di Turing (o MdT)**  è stata inventata da Alan Turing nel 1936. Questo modello è fondamentale nella teoria della computabilità e fornisce una rappresentazione astratta di come funzionano i calcolatori. Formalmente viene definita in questo modo:
 ![[Pasted image 20241005110025.png  |  center]]
@@ -105,13 +105,77 @@ Da tutto questo Turing formula la seguente Tesi: "*ogni funzione parziale calcol
 (appunto per questo all'inizio si parla dell'algoritmo come una funzione parziale della macchina di Turing). Questa tesi ci dice che **ogni funzione calcolabile da un algoritmo può essere calcolata da una macchina di Turing**, poiché ogni algoritmo può essere descritto in termini di un insieme finito di regole.
 
 
+# <font color="#000000">MEMORIA</font>
+![[Pasted image 20241012121316.png|600]]
+
+• **La memoria, detta normalmente memoria principale (per distinguerla da altri tipi di memorie dette secondarie), è un contenitore di celle ordinato.**
+
+• Nelle celle di memoria vengono immesse o prelevate le istruzioni del software e i dati di input e di output. Ogni cella è ampia un byte e ogni cella possiede un indirizzo (address).
+
+• Gli indirizzi delle celle partono da zero e l'indirizzo dell'ultima cella coincide con il numero totale di celle della memoria (meno uno, dato che gli indirizzi partono da zero).
+ l'insieme di tutte le celle di una memoria è detto spazio degli indirizzi o spazio di indirizzamento della memoria.
+ 
+(lo spazio di indirizzamento dipende dall' ABUS vedi capitolo BUS)
+
+**La RAM (Random Access Memory) per non perdere il suo contenuto quando il pc è acceso, viene "refreshata" con un segnale elettrico** con frequenza costante.
+
+**le celle di memoria sono dei micro condensatori infatti si chiama DRAM (Dynamic RAM)**
+
+Per la fase di **BOOTSTRAP** (avvio) il computer ha bisogno di caricare dei dati per il corretto avviamento e questi dati sono contenuti nel **BIOS** che è una **ROM** (Read Only Memory) ovvero una memoria di sola lettura che non perde i dati allo spegnimento del computer. I programmi contenuti nelle ROM sono detti Firmware.
+
+Esiste una tipologia di RAM **più veloce** della DRAM (questa è la RAM normale,8,16,32 GB ecc..) **chiamata SRAM (Static RAM)** che è molto più veloce ma anche più costosa, i micro condensatori vengono sostituiti dai dai micro flip-flop. **Queste sono le MEMORIE CACHE**
+
+![[Pasted image 20241012123225.png|600]]
+
+											(La NOR FLASH è la ROM del BIOS)
+
+
+
+
+
+
 # <font color="#000000">BUS</font>
  **Il bus è l'unità di interconnessione tra i moduli del modello di von Neumann. **
  
  Esso si presenta come un fascio ordinato di linee, ognuna delle quali **può assumere il significato di un bit**, cioè di un valore binario.
+ 
  Si dice che i moduli processore, memoria e input/output si «affacciano» sul bus, ovvero essendovi collegati, possono impostare, prelevare o modificare i valori presenti sulle linee che lo compongono.
+![[Pasted image 20241012101734.png|300]]
 
----
+molta dell'attività di un calcolatore si basa sul trasferimento dati attraverso i vari componenti  attraverso i bus, **questo modello è di tipo master/slave** (processore - master , memoria, I/O  - slave)
+
+Un operazione che **trasporta bit dalla CPU alla memoria (o I/O) si dice di WRITE** 
+mentre se i bit vanno **verso la CPU** si dice che è un operazione di **READ** 
+
+
+il BUS è scomponibile in **3 sottoinsiemi (LINEE)** -AddressBUS, DataBUS, ControlBUS
+1. CBUS ha una linea che specifica(controlla) la direzione (CPU--I/O oppure I/O CPU) 
+   ha un altra linea per specificare il verso del trasferimento (WRITE/READ) 
+2. DBUS da qui passano i dati da trasferire.
+3. ABUS : viene usato dalla CPU per trasmettere gli indirizzi di memoria ad altri componenti (RAM)
+
+le **CPU vanno a diversi GHz mentre i bus al massimo a alcune centinaia di MHz** (bottleneck)
+- la linea **WAIT** del CBUS indica il trasferimento completato (1) o in corso (0), infatti il trasferimento dei dati da CPU a memoria è più lento dei tempi di operazione della CPU.
+
+| LINEA CBUS | VALORE | SIGNIFICATO              |
+| ---------- | ------ | ------------------------ |
+| WAIT       | 1      | trasferimento completato |
+| WAIT       | 0      | trasferimento in corso   |
+| I/O-MEM    | 1      | trasferimento CPU-I/O    |
+| I/O-MEM    | 0      | trasferimento CPU-MEM    |
+| READ/WRITE | 1      | lettura                  |
+| READ/WRITE | 0      | scrittura                |
+
+La quantità di linee di ABUS e DBUS dipendono dall'architettura della **CPU (64 bit 64 linee, 32 bit 32 linee)**
+la **dimensione dell' ABUS specifica la quantità di memoria raggiungibile dai programmi.** 2 elevato al numero di linee dell' ABUS quindi un' architettura a 32 bit = $2^{32}$ indirizzi (4 GB di RAM al massimo ciascun processo) 64 bit = $2^{64}$ 
+
+la dimensione del **DBUS** rappresenta il grado di parallelismo del processore ovvero la massima quantità di dati che è in grado di elaborare in un solo trasferimento di bus
+
+**(**domanda d' esame)** se ho 4 processi e un architettura a 32 bit (32 linee di ABUS) ognuno dei 4 processi può indirizzare 4 gb di RAM? 
+si 4 gb massimo (2^32) ogni processo
+
+Il chipset è il termine complessivo per descrivere tutte le linee e i bus di sistema. Il chipset è formato da northBridge (dedicato alla connessione memoria-CPU)e southBridge (dedicato alla connessione CPU-I/O)
+
 
 # Ulteriori informazioni:
 
@@ -121,5 +185,23 @@ La CPU è progettata per operare a velocità estremamente elevate, elaborando mi
 
 ###### <mark style="background: #D2B3FFA6;">Il test di Turing</mark>
 Turing cercò di rispondere alla domanda "can machines think?", per fare ciò formulo quello che viene chiamato test di Turing ovvero un giudice umano comunica con due interlocutori nascosti: uno è un essere umano, e l'altro è una macchina. Se il giudice non riesce a distinguere chi è la macchina e chi è l'umano basandosi solo sulle risposte fornite, allora si dice che la macchina ha **superato il test** e può essere considerata "intelligente". Fino a qualche mese fa nessuno era riuscito a superarlo tranne ChatGPT-4 di recente
+
+###### <mark style="background: #D2B3FFA6;">Processi sincroni / a-sincroni, latenza</mark>
+- **La latenza** è il tempo che il dato impiega a passare per il bus a seguito del comando READ, 
+	Il comando viene lanciato (READ) - il dato pasa per il bus - il dato viene effettivamente letto dalla CPU.
+
+- **I processi sincroni** hanno bisogno di essere "sincronizzati" perché ad esempio il primo è propedeutico per il secondo (quindi il secondo non può iniziare se ancora il primo non ha finito) questi processi vengono eseguiti dalla CPU che esegue sia processi sincroni che a-sincroni.
+- **I processi a-sincroni** non hanno bisogno di essere sincronizzati perché "lavorano da soli" infatti le GPU hanno moltissimi core rispetto alle CPU proprio perché loro devono svolgere solo processi a-sincroni
+(lo schermo è formato da delle matrici (1920x1080 è la matrice del full HD, quindi la risoluzione indica anche quanto è grande la matrice dello schermo) quindi ogni processo si occupa di una sottomatrice e svolge il suo compito dentro un core della scheda video, alla fine la scheda video mette insieme tutti i risultati di questi processi per avere una matrice completa e renderizzare lo schermo correttamente. (lo schermo a colori è dato da 3 matrici RED,GREEN,BLUE [RGB] ))
+
+###### <mark style="background: #D2B3FFA6;">Memorie</mark>
+
+- L' ultima tecnologia di **DRAM** (fino al 12/10/24) è la DDR5 uscita nel 2020.
+- Le **ROM** anche se hanno l'acronimo Read Only Memory attraverso procedure speciali si possono effettuare operazioni di scrittura.
+
+
+
+
+
 
 

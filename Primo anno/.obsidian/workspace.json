@@ -11,8 +11,12 @@
             "id": "6dd23f10f886fdd5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti pc.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -92,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti pc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti pc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti pc.md"
+              }
             }
           },
           {
@@ -148,14 +156,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6dd23f10f886fdd5",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "architettura-degli-elaboratori/FileCondivisiTeams/2 Bus.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/01_Rielaborazione.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/1 Memoria.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti pc.md",
+    "Modelli/Pasted image 20241012123225.png",
+    "Modelli/Pasted image 20241012121316.png",
+    "architettura-degli-elaboratori/FileCondivisiTeams/00_Introduzione.pdf",
+    "Modelli/nota_del_giorno.md",
     "architettura-degli-elaboratori/appunti.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/2 Bus.pdf",
+    "Modelli/Pasted image 20241012101734.png",
     "architettura-degli-elaboratori/Senza nome.md",
     "architettura-degli-elaboratori/Senza nome 1.md",
-    "architettura-degli-elaboratori/FileCondivisiTeams/1 Memoria.pdf",
     "architettura-degli-elaboratori/7 ottobre 2024.pdf",
     "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
     "architettura-degli-elaboratori/2 ottobre 2024.pdf",
@@ -169,16 +182,12 @@
     "programmazione-1/Attachments/Pasted image 20241011134142.png",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/Senza nome.canvas",
-    "programmazione-1/LibroConsigliatoDalProf (nona edizione).pdf",
     "Modelli/Pasted image 20241011110236.png",
     "Modelli/Pasted image 20241011110058.png",
     "Modelli/Pasted image 20241011105518.png",
     "Modelli/Pasted image 20241011105446.png",
     "Modelli/Pasted image 20241011104949.png",
     "Modelli/Pasted image 20241008232806.png",
-    "Modelli/Pasted image 20241008230351.png",
-    "Modelli/Pasted image 20241007222104.png",
-    "Modelli/Pasted image 20241005110025.png",
     "programmazione-1/08 ottobre 2024.md",
     "Senza nome.md",
     "programmazione-1/dfgrgf.md"
