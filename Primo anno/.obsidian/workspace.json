@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "df7700d630ff8461",
+        "id": "de2a9ede0314b906",
         "type": "tabs",
         "children": [
           {
-            "id": "6dd23f10f886fdd5",
+            "id": "4229547bf2d5953d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti pc.md",
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b0c5c5addf4e11a0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "strutture-discrete/FileRielaborazioni/01_Rielaborazione.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti pc.md",
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti pc.md",
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti pc.md"
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md"
               }
             }
           },
@@ -156,10 +168,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "4229547bf2d5953d",
   "lastOpenFiles": [
+    "programmazione-1/Traduzione e linguaggi algoritmi.md",
+    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
+    "strutture-discrete/FileRielaborazioni/01_Rielaborazione.md",
+    "strutture-discrete/FileRielaborazioni/PDFs/01_Rielaborazione.pdf",
+    "Modelli/Pasted image 20241013110249.png",
+    "Modelli/Pasted image 20241013110104.png",
+    "strutture-discrete/FileCondivisiTeams/Parte0.pdf",
+    "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileCondivisiTeams/1 Memoria.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti pc.md",
     "Modelli/Pasted image 20241012123225.png",
     "Modelli/Pasted image 20241012121316.png",
     "architettura-degli-elaboratori/FileCondivisiTeams/00_Introduzione.pdf",
@@ -172,22 +192,14 @@
     "architettura-degli-elaboratori/7 ottobre 2024.pdf",
     "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
     "architettura-degli-elaboratori/2 ottobre 2024.pdf",
-    "programmazione-1/Traduzione e linguaggi algoritmi.md",
-    "programmazione-1/FileCondivisiTeams/1 bis) Algoritmi-e-Diagrammi-di-flusso.pdf",
-    "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
-    "programmazione-1/FileCondivisiTeams/2) Problemi - Algoritmi - Diagrammi.pdf",
     "programmazione-1/Tips Algoritmi.md",
-    "strutture-discrete/FileRielaborazioni/01_Rielaborazione.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "programmazione-1/Attachments/Pasted image 20241011134142.png",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/Senza nome.canvas",
     "Modelli/Pasted image 20241011110236.png",
     "Modelli/Pasted image 20241011110058.png",
     "Modelli/Pasted image 20241011105518.png",
     "Modelli/Pasted image 20241011105446.png",
-    "Modelli/Pasted image 20241011104949.png",
-    "Modelli/Pasted image 20241008232806.png",
     "programmazione-1/08 ottobre 2024.md",
     "Senza nome.md",
     "programmazione-1/dfgrgf.md"

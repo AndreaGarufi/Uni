@@ -72,11 +72,40 @@ Come possiamo facilmente notare P giustifica quella disgiunzione (ovvero p ∨ q
 
 **TIPS**: [[Tips#Come creare tutte le combinazioni tra le variabili senza confondersi]] 
 
-Molte volte formule complesse vengono standardizzate in 2 forme chiamate "normali":
+**Molte volte formule complesse vengono standardizzate in 2 forme chiamate "normali":**
 - CNF (Forma Normale Congiuntiva) che si basa sul fare un AND di vari OR:
 	- (p ∨ q) ∧ (¬p ∨ ¬r ∨ s)
 - DNF (Forma Normale Disgiuntiva) che si basa sul fare un OR di vari AND:
 	- (p ∧ q) ∨ (¬p ∧ ¬r ∧ s)
 
+Una qualunque formula P si può trasformare in una delle due forme normali, attraverso un semplice procedimento algoritmico.
 
+**Algoritmo di Trasformazione in Forma Normale**
+
+**(Fase 1)** Elimina le doppie implicazioni p ⇔ q sostituendole con (p ⇒ q) ∧ (q ⇒ p) 
+**(Fase 2)** Elimina le implicazioni p ⇒ q dalla formula sostituendole con ¬p ∨ q 
+**(Fase 3)** Sposta le negazioni ¬ a ridosso delle variabili proposizionali, utilizzando le regole di De Morgan, ed eliminando le doppie negazioni.
+Per esempio ¬(¬p ∨ ¬r ∨ s) diventa (p ∧ r ∧ ¬s)
+
+**(Fase 4-a)** **Per costruire una CNF** distribuire la congiunzione sulla disgiunzione ed eliminare tautologie. Per esempio (p ∧ q) ∨ (¬p ∧ ¬r ∧ s) è una formula in DNF che vogliamo trasformare in CNF. Abbiamo 
+(p ∨ (¬p ∧ ¬r ∧ s)) ∧ (q ∨ (¬p ∧ ¬r ∧ s)) 
+≡
+(p ∨ ¬p) ∧ (p ∨ ¬r ) ∧ (p ∨ s) ∧ (q ∨ ¬p) ∧ (q ∨ ¬r ) ∧ (q ∨ s)      (qui ha eliminato una tautologia)
+≡
+		  (p ∨ ¬r ) ∧ (p ∨ s) ∧ (q ∨ ¬p) ∧ (q ∨ ¬r ) ∧ (q ∨ s)
+
+**(Fase 4-b) Per costruire una DNF** distribuire la disgiunzione sulla congiunzione ed eliminare disgiunti insoddisfacibili e ripetizioni. Per esempio, (p ∨ q) ∧ (¬p ∨ ¬r ) è una formula in CNF che vogliamo trasformare in DNF. Abbiamo 
+(p ∧ ¬p) ∨ (p ∧ ¬r ) ∨ (q ∧ ¬p) ∨ (q ∧ ¬r )             (qui ha eliminato un insoddisfacibile)
+≡
+		  (p ∧ ¬r ) ∨ (q ∧ ¬p) ∨ (q ∧ ¬r )
+
+Esercizi per capire meglio:
+Dimostrare, utilizzando le tavole di verità, che (p ∧ q) ∨ (¬p ∧ ¬r ∧ s) ≡ (p ∨ ¬r ) ∧ (p ∨ s) ∧ (q ∨ ¬p) ∧ (q ∨ ¬r ) ∧ (q ∨ s)  CNF
+Dimostrare, utilizzando le tavole di verità, che (p ∨ q) ∧ (¬p ∨ ¬r ) ≡ (p ∧ ¬r ) ∨ (q ∧ ¬p) ∨ (q ∧ ¬r )  (DNF)
+
+
+![[Pasted image 20241013110104.png]]
+
+
+![[Pasted image 20241013110249.png]]
 
