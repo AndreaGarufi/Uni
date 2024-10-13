@@ -11,11 +11,9 @@
             "id": "4229547bf2d5953d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
-                "mode": "source",
-                "source": false
+                "file": "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf"
               }
             }
           },
@@ -108,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+                "file": "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+                "file": "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md"
+                "file": "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf"
               }
             }
           },
@@ -170,15 +168,18 @@
   },
   "active": "4229547bf2d5953d",
   "lastOpenFiles": [
-    "programmazione-1/Traduzione e linguaggi algoritmi.md",
-    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "strutture-discrete/FileRielaborazioni/01_Rielaborazione.md",
+    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
+    "Modelli/Pasted image 20241013190459.png",
+    "ORARIO_LEZIONI.jpg",
+    "Modelli/Pasted image 20241013184436.png",
+    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+    "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "strutture-discrete/FileRielaborazioni/PDFs/01_Rielaborazione.pdf",
     "Modelli/Pasted image 20241013110249.png",
     "Modelli/Pasted image 20241013110104.png",
     "strutture-discrete/FileCondivisiTeams/Parte0.pdf",
     "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileCondivisiTeams/1 Memoria.pdf",
     "Modelli/Pasted image 20241012123225.png",
     "Modelli/Pasted image 20241012121316.png",
@@ -197,9 +198,6 @@
     "programmazione-1/Attachments/Pasted image 20241011134142.png",
     "programmazione-1/Senza nome.canvas",
     "Modelli/Pasted image 20241011110236.png",
-    "Modelli/Pasted image 20241011110058.png",
-    "Modelli/Pasted image 20241011105518.png",
-    "Modelli/Pasted image 20241011105446.png",
     "programmazione-1/08 ottobre 2024.md",
     "Senza nome.md",
     "programmazione-1/dfgrgf.md"

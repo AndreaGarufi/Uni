@@ -109,3 +109,63 @@ Dimostrare, utilizzando le tavole di verità, che (p ∨ q) ∧ (¬p ∨ ¬r ) �
 
 ![[Pasted image 20241013110249.png]]
 
+
+
+# INSIEMI
+**Due insiemi A e B sono uguali se hanno gli stessi elementi. In simboli:**
+**A = B ⇔ (∀x)(x ∈ A ⇔ x ∈ B)**
+gli insiemi A = {1, 2, 3} e B = {2, 3, 1, 2, 3} sono uguali perché contengono gli stessi elementi.
+
+- In un insieme gli elementi compaiono solo una volta ciascuno.
+
+- Un insieme che ha solo un elemento è detto Singoletto {a}.
+
+- Con il simbolo ∅ indicheremo un insieme vuoto.
+
+Cosa vuol dire che P è una proprietà ben definita? Vuol dire che per ogni valore di x, P(x) può assumere sempre solo i 2 valori (BEN DEFINITI **vero o falso** (anche se non sappiamo quale).
+
+La **cardinalità** definisce il numero di elementi che compone l'insieme. E si esprime con  |A| .
+Esempio:
+- la cardinalità di |{1,2,3}| = 3 
+- la cardinalità dell'insieme dei numeri pari è +∞
+
+
+Se abbiamo due insiemi A e B e tutti gli elementi di A sono anche elementi di B allora diciamo che A è incluso in B, ovvero che A è un sottoinsieme di B. 
+**Definizione (Inclusione)** A è un sottoinsieme di B, denotato con A ⊆ B se :
+A ⊆ B ⇔ (∀x)(x ∈ A ⇒ x ∈ B)
+B è il suo sovra insieme B ⊇ A
+
+
+**Definizione (Insieme discreto)** Un insieme A si dice discreto se è possibile ordinare i suoi elementi in maniera tale che tra un qualunque elemento ed il successivo nell’ordinamento dato, non vi sono altri elementi dell’insieme. Quindi, è un insieme composto da elementi "isolati".
+
+Esempio: l'insieme dei numeri naturali A={1,2,3,4,5,6,7,8,9} dove in questo caso tra i numeri non c'è nulla perché abbiamo preso in considerazione i numeri naturali (N).
+invece se prendessimo in considerazione i numeri reali (R), quello non sarebbe un insieme discreto.
+
+**Operazioni tra insiemi ∪, ∩**
+
+**Unione di due insiemi** 
+L’unione di due insiemi A e B è l’insieme formato da quegli **elementi che appartengono ad almeno uno dei due insiemi** A e B. La notazione per indicare l’unione è A ∪ B e quindi: 
+A ∪ B = {x : x ∈ A oppure x ∈ B.}
+Esempio: A = {1,2,3} B = {3,4,5}     A ∪ B = {1,2,3,4,5,6}
+
+**Intersezione di due insiemi**
+L’intersezione di due insiemi A e B è l’insieme formato da quegli **elementi che appartengono ad entrambi gli insiemi** A e B. La notazione per indicare l’intersezione è A ∩ B e quindi: 
+A ∩ B = {x : x ∈ A e x ∈ B.}
+Esempio: A = {1,2,3} B = {3,4,5}   A ∩ B = {3}
+
+![[Pasted image 20241013184436.png]]
+
+**Differenza di due insiemi**
+La differenza di due insiemi A e B denotata con A \ B è **l’insieme formato da quegli elementi del primo insieme A che non appartengono al secondo insieme B**. 
+Quindi A \ B = {x : x ∈ A e x /∈ B.}
+Esempio Se A = {1, 2, 3} e B = {3, 4, 5} allora A \ B = {1, 2}, l’elemento 3, che è l’unico presente in entrambi gli insiemi, è sottratto da A.
+
+Se assumiamo di trattare con insiemi che siano tutti sottoinsiemi di un insieme "universo" U, dato A ⊆ U l’insieme U \ A viene detto complemento di A. **Quindi, il complemento di un insieme A è l’insieme di tutti gli elementi che non appartengono ad A.** 
+Ci sono diverse notazioni per indicare il complemento di un insieme, le più comuni sono: 
+U / A = $A^C$ 
+U/\ A = ¯A 
+Esempio Se A = {1, 2, 3} e U = {1, 2, 3, · · · , 10}| allora AC = {4, 5, · · · , 10}
+
+![[Pasted image 20241013190459.png]]
+
+**Differenza simmetrica di due insiemi** COMPLETARE
