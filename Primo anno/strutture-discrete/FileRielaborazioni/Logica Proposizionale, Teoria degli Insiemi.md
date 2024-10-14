@@ -1,5 +1,6 @@
 Questo file è la rielaborazione delle slide [[01_Parte1.pdf]]
 
+# LOGICA PROPOSIZIONALE
 La **logica** è un linguaggio formale usato per rappresentare informazioni. Ogni linguaggio è formato da:
 - **Sintassi**: che definisce le frasi del linguaggio
 - **Semantica**: che definisce il significato delle frasi
@@ -168,4 +169,23 @@ Esempio Se A = {1, 2, 3} e U = {1, 2, 3, · · · , 10}| allora AC = {4, 5, · �
 
 ![[Pasted image 20241013190459.png]]
 
-**Differenza simmetrica di due insiemi** COMPLETARE
+**Differenza simmetrica di due insiemi**
+La differenza simmetrica di due insiemi A e B è l’unione delle 2 differenze, **ovvero (A \ B) ∪ (B \ A), quindi è l’insieme formato da quegli elementi del primo o del secondo insieme che non appartengono ad entrambi.** La notazione per indicare la differenza simmetrica è ∆ e quindi: A∆B = (A \ B) ∪ (B \ A).
+Esempio:
+Se A = {1, 2, 3} e B = {3, 4, 5}| allora A∆B = {1, 2, 4, 5}    (si levano gli elementi in comune)
+
+**Una famiglia di insiemi** **che ha un numero infinito di elementi è una famiglia infinita.** **Se invece ha un numero finito di elementi allora è una famiglia finita.** Si noti che la definizione appena data non riguarda la cardinalità (finita o infinita) degli elementi della famiglia.
+Esempio:
+Sia F = {P, D} dove P è l’insieme dei numeri pari (infinito) e D è l’insieme dei numeri dispari (infinito). La famiglia F è una famiglia finita di insiemi.
+
+Sia dato un insieme U ed una operazione definita su uno o più elementi di U. **Se l’operazione può essere definita o completata all’interno di U allora diciamo che U è chiuso rispetto a tale operazione.** 
+Esempi: 
+1) Sia U = N se consideriamo l’operazione binaria "somma" allora N è chiuso rispetto alla somma, perché la somma di due numeri interi non negativi è a sua volta un numero intero non negativo. Se invece consideriamo l’operazione "sottrazione" allora N non è chiuso rispetto alla sottrazione perché il risultato della sottrazione potrebbe essere un numero negativo che non appartiene a N. (in breve quando fai l'operazione non devi "uscire fuori dall'insieme"). 
+2) Sia X = {1, 2, 3}. Se consideriamo l’operazione binaria "minimo comune multiplo" (mcm) allora dato che mcm(2, 3) = 6, X non è chiuso rispetto a tale operazione. 
+3) Se poniamo X = {1, 2, 3, 6} allora X è chiuso rispetto all’operazione mcm.
+
+**Definizione** 
+**UNIONE**
+Sia F una famiglia di insiemi diciamo che F è chiusa rispetto all’unione se per ogni coppia di insiemi X e Y appartenenti a F anche X ∪ Y appartiene a F. 
+**INTERSEZIONE**
+Diciamo che F è chiusa rispetto all’intersezione se per ogni coppia di insiemi X e Y appartenenti a F anche X ∩ Y appartiene a F.

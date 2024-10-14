@@ -166,7 +166,7 @@ le **CPU vanno a diversi GHz mentre i bus al massimo a alcune centinaia di MHz**
 | READ/WRITE | 1      | lettura                  |
 | READ/WRITE | 0      | scrittura                |
 
-La quantità di linee di ABUS e DBUS dipendono dall'architettura della **CPU (64 bit 64 linee, 32 bit 32 linee)**
+La quantità di linee di ABUS e DBUS dipendono (anche se non sempre) dall'architettura della **CPU (64 bit 64 linee, 32 bit 32 linee)**
 la **dimensione dell' ABUS specifica la quantità di memoria raggiungibile dai programmi.** 2 elevato al numero di linee dell' ABUS quindi un' architettura a 32 bit = $2^{32}$ indirizzi (4 GB di RAM al massimo ciascun processo) 64 bit = $2^{64}$ 
 
 la dimensione del **DBUS** rappresenta il grado di parallelismo del processore ovvero la massima quantità di dati che è in grado di elaborare in un solo trasferimento di bus
