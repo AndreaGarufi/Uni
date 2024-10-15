@@ -13,23 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "strutture-discrete/FileRielaborazioni/Logica Proposizionale, Teoria degli Insiemi.md",
+                "file": "programmazione-1/Variabili, Tipi su C.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "918bb4d70763bca8",
+            "id": "bf2457be89e5396f",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf"
+                "file": "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -106,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "strutture-discrete/FileRielaborazioni/Logica Proposizionale, Teoria degli Insiemi.md",
+                "file": "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "strutture-discrete/FileRielaborazioni/Logica Proposizionale, Teoria degli Insiemi.md",
+                "file": "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "strutture-discrete/FileRielaborazioni/Logica Proposizionale, Teoria degli Insiemi.md"
+                "file": "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf"
               }
             }
           },
@@ -166,10 +167,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8123fc4816f9d37f",
+  "active": "bf2457be89e5396f",
   "lastOpenFiles": [
+    "programmazione-1/FileCondivisiTeams/3) Variabili, rappresentazione dei numeri.pdf",
+    "programmazione-1/Variabili, Tipi su C.md",
+    "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "strutture-discrete/FileRielaborazioni/Logica Proposizionale, Teoria degli Insiemi.md",
+    "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf",
     "architettura-degli-elaboratori/FileCondivisiTeams/2 Bus.pdf",
     "architettura-degli-elaboratori/FileCondivisiTeams/2 Bus riscarica.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
@@ -178,7 +183,6 @@
     "Modelli/Pasted image 20241013190459.png",
     "ORARIO_LEZIONI.jpg",
     "Modelli/Pasted image 20241013184436.png",
-    "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "strutture-discrete/FileRielaborazioni/PDFs/01_Rielaborazione.pdf",
     "Modelli/Pasted image 20241013110249.png",
     "Modelli/Pasted image 20241013110104.png",
@@ -191,8 +195,6 @@
     "Modelli/Pasted image 20241012101734.png",
     "architettura-degli-elaboratori/Senza nome.md",
     "architettura-degli-elaboratori/Senza nome 1.md",
-    "architettura-degli-elaboratori/7 ottobre 2024.pdf",
-    "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
     "programmazione-1/Tips Algoritmi.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "programmazione-1/Attachments/Pasted image 20241011134142.png",

@@ -184,7 +184,7 @@ Esempi:
 2) Sia X = {1, 2, 3}. Se consideriamo l’operazione binaria "minimo comune multiplo" (mcm) allora dato che mcm(2, 3) = 6, X non è chiuso rispetto a tale operazione. 
 3) Se poniamo X = {1, 2, 3, 6} allora X è chiuso rispetto all’operazione mcm.
 
-**Definizione** 
+**Definizione**:
 **UNIONE**
 Sia F una famiglia di insiemi diciamo che F è chiusa rispetto all’unione se per ogni coppia di insiemi X e Y appartenenti a F anche X ∪ Y appartiene a F. 
 **INTERSEZIONE**
