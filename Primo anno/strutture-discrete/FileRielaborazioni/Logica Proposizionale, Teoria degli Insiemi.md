@@ -189,3 +189,4 @@ Esempi:
 Sia F una famiglia di insiemi diciamo che F è chiusa rispetto all’unione se per ogni coppia di insiemi X e Y appartenenti a F anche X ∪ Y appartiene a F. 
 **INTERSEZIONE**
 Diciamo che F è chiusa rispetto all’intersezione se per ogni coppia di insiemi X e Y appartenenti a F anche X ∩ Y appartiene a F.
+

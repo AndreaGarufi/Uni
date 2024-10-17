@@ -4,33 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "0863daf500ce1010",
+        "id": "7b5bc8d7930125ef",
         "type": "tabs",
         "children": [
           {
-            "id": "001fca74bfebdeea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Introduzione e componenti PC"
-            }
-          },
-          {
-            "id": "b8efac43a8bc682f",
+            "id": "c1171bc6731706a6",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf"
+                "file": "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "4 Processore"
+              "title": "0) Flowcharts ESERCIZI DA FARE"
             }
           }
         ]
@@ -118,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+                "file": "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a Introduzione e componenti PC"
+              "title": "Riferimenti a 0) Flowcharts ESERCIZI DA FARE"
             }
           },
           {
@@ -137,12 +123,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+                "file": "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da Introduzione e componenti PC"
+              "title": "Collegamenti in uscita da 0) Flowcharts ESERCIZI DA FARE"
             }
           },
           {
@@ -151,10 +137,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md"
+                "file": "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf"
               },
               "icon": "lucide-list",
-              "title": "Struttura di Introduzione e componenti PC"
+              "title": "Struttura di 0) Flowcharts ESERCIZI DA FARE"
             }
           },
           {
@@ -186,10 +172,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "c1171bc6731706a6",
   "lastOpenFiles": [
-    "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf",
+    "strutture-discrete/FileRielaborazioni/Logica Proposizionale, Teoria degli Insiemi.md",
+    "strutture-discrete/Esercizi note/Esercizi con prof 16_10_24.pdf",
+    "strutture-discrete/Esercizi note",
+    "strutture-discrete/Appunti/7 ottobre 2024.pdf",
+    "strutture-discrete/Appunti/2 ottobre 2024.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf",
     "Modelli/Pasted image 20241017090756.png",
     "Modelli/Pasted image 20241017090736.png",
     "Modelli/Pasted image 20241017090705.png",
@@ -203,12 +194,7 @@
     "architettura-degli-elaboratori/appunti.md",
     "programmazione-1/Variabili, Tipi su C.md",
     "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf",
-    "programmazione-1/FileCondivisiTeams/3) Variabili, rappresentazione dei numeri.pdf",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
-    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
-    "strutture-discrete/FileRielaborazioni/Logica Proposizionale, Teoria degli Insiemi.md",
-    "architettura-degli-elaboratori/FileCondivisiTeams/2 Bus.pdf",
-    "architettura-degli-elaboratori/FileCondivisiTeams/2 Bus riscarica.pdf",
     "Modelli/Pasted image 20241013190459.png",
     "ORARIO_LEZIONI.jpg",
     "Modelli/Pasted image 20241013184436.png",
