@@ -177,6 +177,70 @@ si 4 gb massimo (2^32) ogni processo
 Il chipset è il termine complessivo per descrivere tutte le linee e i bus di sistema. Il chipset è formato da northBridge (dedicato alla connessione memoria-CPU)e southBridge (dedicato alla connessione CPU-I/O)
 
 
+# <font color="#000000">I/O</font>
+La sezione di input/output di un calcolatore è dedicata all'acquisizione dei dati e dei programmi, ed alla rappresentazione degli stessi in varie forme, dal video alla stampa a valori memorizzati su memorie secondarie (per esempio tutti i tipi di memorie di massa, dal DVD all'hard disk al pendrive).
+
+Concettualmente la sezione di **I/O è ancora rappresentabile come un contenitore di celle del tutto analogo alla memoria,** anche se dotato di uno spazio di indirizzamento (spazio degli indirizzi di I/O molto più ridotto. 
+
+**Ogni dispositivo periferico, di input o di output, possiede un proprio range di indirizzi di I/0 riservato (ogni tanto se hanno bisogno di tanti indirizzi possono usare la memoria normale)**, detti anche registri di l/O o porte di I/O all’interno dello spazio di indirizzamento di I/O.
+
+La sezione di I/O dispone tuttavia di almeno un'altra modalità fondamentale per consentire la gestione delle attività di I/O con le attività generali del bus, **ovvero linee di sincronizzazione dedicate denominate linee di interruzione (Interrupt).**
+
+il **CBUS** ha 2 segnali da mandare (INTR, INTA) per gestire gli interrupt che esprimono la richiesta di interruzione e il suo completamento.
+
+**Con un segnale di interruzione, il dispositivo periferico chiede al processore di sospendere temporaneamente la sua esecuzione per eseguire una parte di programma che lo riguarda,** sotto forma di procedura associata a quella interruzione (ISR, Interrupt Service Routine). 
+• Questo è molto importante per quell’I/0 denominato **asincrono, ovvero che può intervenire senza preavviso e in ogni momento** (per esempio il movimento del mouse).
+
+**In realtà i calcolatori prevedono anche speciali modalità di trasferimento di I/O che evitano di occupare il processore**, veicolando i valori di I/O direttamente verso (e dalla) memoria, mediante tecniche denominate DMA Direct Memory Access) o di bus Mastering. In questi casi ampie quantità di informazioni vengono spostate sul bus senza impegnare il processore.
+La circuiteria di una periferica, dedicata ad affacciarsi sul bus di sistema, a rendere disponibili i propri indirizzi di 1/0, a sincronizzarsi con i trasferimenti tramite il CBus e a condividere le proprie linee dedicate di interruzione e/o DMA, è detta **scheda controller della periferica.**
+
+**Molti dispositivi di I/O sono interni al calcolatore**, cioè hanno la scheda controller integrata nel Chipset della scheda madre (per esempio tastiera, scheda di rete e scheda video).
+Anche speciali elementi di I/0 dedicati al controllo dei trasferimenti di I/O sono integrati nel Chipset, come ad esempio il dispositivo di controllo delle interruzioni (Interrupt Controller) e di gestione del DMA (DMA Controller)
+
+Un tempo indirizzi canali e linee dovevano essere impostati manualmente dall'utente o da un tecnico, ma con le nuove tecnologie **bus** **Plug&Play**, BIOS, sistema operativo e firmware si mettono d'accordo all'avvio del PC o quando viene montato un nuovo dispositivo e gestiscono tutto in automatico.
+
+Tra gli standard di connessione più diffusi ricordiamo lo standard USB (Universal Serial Bus), il Firewire (o IEEE 1394) e l'Ethernet 802.x.
+
+
+# <font color="#000000">PROCESSORE</font>
+**Un processore è un singolo circuito integrato in grado di effettuare operazioni decisionali, di calcolo o di elaborazione dell'informazione**; spesso il processore è indicato con la sigla CPU (Central Processor Unit).
+
+Il processore può essere visto come **suddiviso in tre unità funzionali**, l’**CU** (unità di controllo), l'**area dei registri** e l'**ALU** (unità aritmetico-logica).La CU si affaccia sul bus, lo arbitra impostando i valori sulle linee ABus, DBus e CBus, legge il DBus e il CBus, legge dalla memoria (e dall'I/O) i dati o li aggiorna in memoria (o nell'I/O) dopo aver compiuto operazioni
+![[Pasted image 20241016220122.png|550]]
+
+**I registri contengono i dati letti dall'UC**   <font color="#000000">sul bus per predisporli all'esecuzione delle istruzioni che avverranno nell'ALU</font>**; oppure contengono i risultati delle operazioni compiute dall'ALU** <font color="#000000">in attesa di essere passati allUC e quindi sul bus.</font>
+
+**L’ALU è l'unità di esecuzione effettiva del processore**, <font color="#000000">all'interno della quale si trovano microprogrammi cablati direttamente in hardware, scritti nel cosiddetto microcodice con relative microistruzioni.</font>
+
+##### **Instraction set e funzionamento operazioni**
+
+**Ogni processore viene progettato con un set di istruzioni specifico denominato ISA (Instruction Set** Architecture o Instruction Set), in corrispondenza di ognuna delle quali è implementato un preciso microprogramma in ALU. 
+• **Ogni istruzione dell'ISA è contraddistinta da un numero specifico, denominato Op. Code** (**Operation Code** o op.cod.) e ogni istruzione dotata di Op.Code necessita di un numero preciso e definito di parametri (operandi) che, assieme all'Op. Code, determinano la lunghezza dell'istruzione (in byte). 
+• Ad ogni Op. Code si associa anche una breve descrizione in lingua naturale che ne ricorda la funzione, detta codice mnemonico. **Un registro speciale del processore, detto PC (Program Counter), si incrementa automaticamente della lunghezza dell'istruzione appena eseguita.**
+
+![[Pasted image 20241016221226.png|1200]]
+
+![[Pasted image 20241016221321.png]]
+
+
+
+- **Esistevano le architetture CISC** ( Complex Instruction Set Computer), sostenute dai colossi IBM, VAX, Intel, … **basate su molte e complicate istruzioni, interpretate** 
+
+- **Nascono negli anni ’80 le architetture RISC** ( Reduced Instruction Set Computer), come il DEC Alpha, **basate su poche e semplici istruzioni, non interpretate**
+Le architetture moderne sono ibride.
+
+![[Pasted image 20241017090736.png]]
+
+
+![[Pasted image 20241017090756.png|500]]
+
+
+
+
+
+********************
+
+
 # Ulteriori informazioni:
 
 ###### <mark style="background: #D2B3FFA6;">Bottleneck</mark>

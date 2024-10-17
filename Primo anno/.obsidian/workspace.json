@@ -4,33 +4,36 @@
     "type": "split",
     "children": [
       {
-        "id": "848f57d5370f16b7",
+        "id": "0863daf500ce1010",
         "type": "tabs",
         "children": [
           {
-            "id": "8123fc4816f9d37f",
+            "id": "001fca74bfebdeea",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "programmazione-1/Variabili, Tipi su C.md",
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Introduzione e componenti PC"
             }
           },
           {
-            "id": "bf2457be89e5396f",
+            "id": "b8efac43a8bc682f",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf"
-              }
+                "file": "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "4 Processore"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -50,7 +53,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "byModifiedTime"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Esplora risorse"
             }
           },
           {
@@ -65,7 +70,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Ricerca"
             }
           },
           {
@@ -73,7 +80,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Segnalibri"
             }
           }
         ]
@@ -98,7 +107,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
             }
           },
           {
@@ -107,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf",
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +126,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Riferimenti a Introduzione e componenti PC"
             }
           },
           {
@@ -124,10 +137,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf",
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Collegamenti in uscita da Introduzione e componenti PC"
             }
           },
           {
@@ -136,8 +151,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf"
-              }
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md"
+              },
+              "icon": "lucide-list",
+              "title": "Struttura di Introduzione e componenti PC"
             }
           },
           {
@@ -145,7 +162,9 @@
             "type": "leaf",
             "state": {
               "type": "git-view",
-              "state": {}
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -167,41 +186,39 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bf2457be89e5396f",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "programmazione-1/FileCondivisiTeams/3) Variabili, rappresentazione dei numeri.pdf",
+    "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+    "Modelli/Pasted image 20241017090756.png",
+    "Modelli/Pasted image 20241017090736.png",
+    "Modelli/Pasted image 20241017090705.png",
+    "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
+    "architettura-degli-elaboratori/2 ottobre 2024.pdf",
+    "architettura-degli-elaboratori/7 ottobre 2024.pdf",
+    "Modelli/Pasted image 20241016221321.png",
+    "Modelli/Pasted image 20241016221226.png",
+    "Modelli/Pasted image 20241016220122.png",
+    "architettura-degli-elaboratori/FileCondivisiTeams/3 Input_Output.pdf",
+    "architettura-degli-elaboratori/appunti.md",
     "programmazione-1/Variabili, Tipi su C.md",
+    "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf",
+    "programmazione-1/FileCondivisiTeams/3) Variabili, rappresentazione dei numeri.pdf",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "strutture-discrete/FileRielaborazioni/Logica Proposizionale, Teoria degli Insiemi.md",
-    "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf",
     "architettura-degli-elaboratori/FileCondivisiTeams/2 Bus.pdf",
     "architettura-degli-elaboratori/FileCondivisiTeams/2 Bus riscarica.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
-    "architettura-degli-elaboratori/appunti.md",
-    "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
     "Modelli/Pasted image 20241013190459.png",
     "ORARIO_LEZIONI.jpg",
     "Modelli/Pasted image 20241013184436.png",
-    "strutture-discrete/FileRielaborazioni/PDFs/01_Rielaborazione.pdf",
     "Modelli/Pasted image 20241013110249.png",
-    "Modelli/Pasted image 20241013110104.png",
-    "strutture-discrete/FileCondivisiTeams/Parte0.pdf",
-    "architettura-degli-elaboratori/FileCondivisiTeams/1 Memoria.pdf",
-    "Modelli/Pasted image 20241012123225.png",
-    "Modelli/Pasted image 20241012121316.png",
-    "architettura-degli-elaboratori/FileCondivisiTeams/00_Introduzione.pdf",
     "Modelli/nota_del_giorno.md",
-    "Modelli/Pasted image 20241012101734.png",
-    "architettura-degli-elaboratori/Senza nome.md",
     "architettura-degli-elaboratori/Senza nome 1.md",
     "programmazione-1/Tips Algoritmi.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
-    "programmazione-1/Attachments/Pasted image 20241011134142.png",
     "programmazione-1/Senza nome.canvas",
-    "Modelli/Pasted image 20241011110236.png",
     "programmazione-1/08 ottobre 2024.md",
-    "Senza nome.md",
     "programmazione-1/dfgrgf.md"
   ]
 }
