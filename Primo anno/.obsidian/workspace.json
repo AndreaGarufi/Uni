@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "7b5bc8d7930125ef",
+        "id": "b305d85b06edabb0",
         "type": "tabs",
         "children": [
           {
-            "id": "c1171bc6731706a6",
+            "id": "d6cc506f7159ee29",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf"
+                "file": "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "0) Flowcharts ESERCIZI DA FARE"
+              "title": "Sistemi lineari TEORIA 15_10_24 e 17_10_24"
             }
           }
         ]
@@ -104,7 +104,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a 0) Flowcharts ESERCIZI DA FARE"
+              "title": "Riferimenti"
             }
           },
           {
@@ -123,12 +122,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da 0) Flowcharts ESERCIZI DA FARE"
+              "title": "Collegamenti in uscita"
             }
           },
           {
@@ -136,11 +134,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Struttura di 0) Flowcharts ESERCIZI DA FARE"
+              "title": "Struttura"
             }
           },
           {
@@ -172,8 +168,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c1171bc6731706a6",
+  "active": "d6cc506f7159ee29",
   "lastOpenFiles": [
+    "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 2 TEORIA 10_10_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 1 TEORIA 8_10_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
+    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni.docx",
+    "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
     "strutture-discrete/FileRielaborazioni/Logica Proposizionale, Teoria degli Insiemi.md",
     "strutture-discrete/Esercizi note/Esercizi con prof 16_10_24.pdf",
     "strutture-discrete/Esercizi note",
@@ -185,15 +186,11 @@
     "Modelli/Pasted image 20241017090736.png",
     "Modelli/Pasted image 20241017090705.png",
     "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
-    "architettura-degli-elaboratori/2 ottobre 2024.pdf",
-    "architettura-degli-elaboratori/7 ottobre 2024.pdf",
     "Modelli/Pasted image 20241016221321.png",
     "Modelli/Pasted image 20241016221226.png",
     "Modelli/Pasted image 20241016220122.png",
-    "architettura-degli-elaboratori/FileCondivisiTeams/3 Input_Output.pdf",
     "architettura-degli-elaboratori/appunti.md",
     "programmazione-1/Variabili, Tipi su C.md",
-    "programmazione-1/FileCondivisiTeams/4) Tipi primitivi, operazioni aritmetiche in C.pdf",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Modelli/Pasted image 20241013190459.png",
     "ORARIO_LEZIONI.jpg",
