@@ -8,18 +8,33 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d6cc506f7159ee29",
+            "id": "31818eb376607099",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf"
+                "file": "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Sistemi lineari TEORIA 15_10_24 e 17_10_24"
+              "title": "4 Processore"
+            }
+          },
+          {
+            "id": "004a3cbda7105662",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "architettura-degli-elaboratori/appunti.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "appunti"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -168,11 +183,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d6cc506f7159ee29",
+  "active": "004a3cbda7105662",
   "lastOpenFiles": [
+    "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf",
+    "architettura-degli-elaboratori/appunti.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 2 TEORIA 10_10_24.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 1 TEORIA 8_10_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
     "programmazione-1/FileCondivisiTeams/Calendario delle lezioni.docx",
     "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
     "strutture-discrete/FileRielaborazioni/Logica Proposizionale, Teoria degli Insiemi.md",
@@ -180,16 +198,12 @@
     "strutture-discrete/Esercizi note",
     "strutture-discrete/Appunti/7 ottobre 2024.pdf",
     "strutture-discrete/Appunti/2 ottobre 2024.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
-    "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf",
     "Modelli/Pasted image 20241017090756.png",
     "Modelli/Pasted image 20241017090736.png",
     "Modelli/Pasted image 20241017090705.png",
-    "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
     "Modelli/Pasted image 20241016221321.png",
     "Modelli/Pasted image 20241016221226.png",
     "Modelli/Pasted image 20241016220122.png",
-    "architettura-degli-elaboratori/appunti.md",
     "programmazione-1/Variabili, Tipi su C.md",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Modelli/Pasted image 20241013190459.png",
