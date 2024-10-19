@@ -11,10 +11,24 @@
             "id": "45ef112158049c87",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Sistemi lineari TEORIA 15_10_24 e 17_10_24"
+            }
+          },
+          {
+            "id": "8abb1b83303c1b84",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 2 TEORIA 10_10_24.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Determinante parte 2 TEORIA 10_10_24"
             }
           }
         ]
@@ -166,24 +180,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "45ef112158049c87",
   "lastOpenFiles": [
+    "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 3 TEORIA 15_10_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 2 TEORIA 10_10_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Matrici TEORIA 3_10_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Matrici 1_10_24 TEORIA.pdf",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni.docx",
     "architettura-degli-elaboratori/appunti.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf",
     "Modelli/Pasted image 20241019105313.png",
     "Modelli/Pasted image 20241019103636.png",
     "Modelli/Pasted image 20241019103355.png",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 2 TEORIA 10_10_24.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 1 TEORIA 8_10_24.pdf",
-    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni.docx",
     "programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
     "strutture-discrete/FileRielaborazioni/Logica Proposizionale, Teoria degli Insiemi.md",
-    "strutture-discrete/Esercizi note/Esercizi con prof 16_10_24.pdf",
-    "strutture-discrete/Esercizi note",
-    "strutture-discrete/Appunti/7 ottobre 2024.pdf",
-    "strutture-discrete/Appunti/2 ottobre 2024.pdf",
     "Modelli/Pasted image 20241017090756.png",
     "Modelli/Pasted image 20241017090736.png",
     "Modelli/Pasted image 20241017090705.png",
