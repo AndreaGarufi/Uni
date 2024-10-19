@@ -4,37 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "b305d85b06edabb0",
+        "id": "908b5813bebdb8df",
         "type": "tabs",
         "children": [
           {
-            "id": "31818eb376607099",
+            "id": "45ef112158049c87",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "4 Processore"
-            }
-          },
-          {
-            "id": "004a3cbda7105662",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "architettura-degli-elaboratori/appunti.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "appunti"
+              "title": "Nuova scheda"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -183,11 +166,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "004a3cbda7105662",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf",
     "architettura-degli-elaboratori/appunti.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf",
+    "Modelli/Pasted image 20241019105313.png",
+    "Modelli/Pasted image 20241019103636.png",
+    "Modelli/Pasted image 20241019103355.png",
     "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 2 TEORIA 10_10_24.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 1 TEORIA 8_10_24.pdf",
@@ -207,9 +193,6 @@
     "programmazione-1/Variabili, Tipi su C.md",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Modelli/Pasted image 20241013190459.png",
-    "ORARIO_LEZIONI.jpg",
-    "Modelli/Pasted image 20241013184436.png",
-    "Modelli/Pasted image 20241013110249.png",
     "Modelli/nota_del_giorno.md",
     "architettura-degli-elaboratori/Senza nome 1.md",
     "programmazione-1/Tips Algoritmi.md",

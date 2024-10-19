@@ -205,7 +205,10 @@ Tra gli standard di connessione più diffusi ricordiamo lo standard USB (Univers
 # <font color="#000000">PROCESSORE</font>
 **Un processore è un singolo circuito integrato in grado di effettuare operazioni decisionali, di calcolo o di elaborazione dell'informazione**; spesso il processore è indicato con la sigla CPU (Central Processor Unit).
 
-Il processore può essere visto come **suddiviso in tre unità funzionali**, l’**CU** (unità di controllo), l'**area dei registri** e l'**ALU** (unità aritmetico-logica).La CU si affaccia sul bus, lo arbitra impostando i valori sulle linee ABus, DBus e CBus, legge il DBus e il CBus, legge dalla memoria (e dall'I/O) i dati o li aggiorna in memoria (o nell'I/O) dopo aver compiuto operazioni
+Il processore può essere visto come **suddiviso in tre unità funzionali**, l’**CU** (unità di controllo), l'**area dei registri** e l'**ALU** (unità aritmetico-logica).
+(Nella realtà ci sono più componenti come l FPU Float Point Unit, per il calcoli in virgola mobile che sono trattati diversamente dai numeri naturali, e ci sono anche varie unità di calcolo per istruzioni più complesse).
+
+La CU si affaccia sul bus, lo arbitra impostando i valori sulle linee ABus, DBus e CBus, legge il DBus e il CBus, legge dalla memoria (e dall'I/O) i dati o li aggiorna in memoria (o nell'I/O) dopo aver compiuto operazioni
 ![[Pasted image 20241016220122.png|550]]
 
 **I registri contengono i dati letti dall'UC**   <font color="#000000">sul bus per predisporli all'esecuzione delle istruzioni che avverranno nell'ALU</font>**; oppure contengono i risultati delle operazioni compiute dall'ALU** <font color="#000000">in attesa di essere passati allUC e quindi sul bus.</font>
@@ -215,7 +218,9 @@ Il processore può essere visto come **suddiviso in tre unità funzionali**, l�
 ##### **Instraction set e funzionamento operazioni**
 
 **Ogni processore viene progettato con un set di istruzioni specifico denominato ISA (Instruction Set** Architecture o Instruction Set), in corrispondenza di ognuna delle quali è implementato un preciso microprogramma in ALU. 
-• **Ogni istruzione dell'ISA è contraddistinta da un numero specifico, denominato Op. Code** (**Operation Code** o op.cod.) e ogni istruzione dotata di Op.Code necessita di un numero preciso e definito di parametri (operandi) che, assieme all'Op. Code, determinano la lunghezza dell'istruzione (in byte). 
+
+• **Ogni istruzione dell'ISA è contraddistinta da un numero specifico, denominato Op. Code** (**Operation Code**, contraddistingue in **modo univoco ogni IS**) e ogni istruzione dotata di Op.Code necessita di un numero preciso e definito di parametri (operandi) che, assieme all'Op. Code, determinano la lunghezza dell'istruzione (in byte). 
+
 • Ad ogni Op. Code si associa anche una breve descrizione in lingua naturale che ne ricorda la funzione, detta codice mnemonico. **Un registro speciale del processore, detto PC (Program Counter), si incrementa automaticamente della lunghezza dell'istruzione appena eseguita.**
 
 ![[Pasted image 20241016221226.png|1200]]
@@ -229,6 +234,8 @@ Il processore può essere visto come **suddiviso in tre unità funzionali**, l�
 - **Nascono negli anni ’80 le architetture RISC** ( Reduced Instruction Set Computer), come il DEC Alpha, **basate su poche e semplici istruzioni, non interpretate**
 Le architetture moderne sono ibride.
 
+(Studia bene Fetch-decode-excute-store)
+
 ![[Pasted image 20241017090736.png]]
 
 
@@ -236,6 +243,54 @@ Le architetture moderne sono ibride.
 
 
 
+Questo ciclo può interrompersi infatti il segnale **INTR** sospende il ciclo CPU ed è un interrupt per una periferica (la CPU si dedica alle richieste della periferica).
+
+Ogni **IS è caratterizzata da un proprio Op. code, una determinata quantità di operandi e un preciso numero di cicli di bus** per il suo completamento (compresi tra il fetch, il decode e lo store). Questo ne determina il tempo di esecuzione di ogni microprogramma, anche se influisce poco dato che ogni ciclo CPU è almeno 10 volte più veloce di un ciclo di bus.
+Questo ne determina un bottleneck di sistema.
+
+(Studia bene Cisc e Risc)
+
+**CISC** (Complex Instruction Set Code).
+Queste architetture utilizzano IS molto complessi e quindi per ogni istruzione fanno più cicli CPU.
+**Le architetture CISC possiedono un set di istruzioni numeroso**; le ampiezze delle istruzioni sono molto variabili.
+Si tratta di architetture che facilitano la portabilità del software, dato che l'insieme dei microprogrammi (o interprete del processore) può essere trasportato su processori più recenti, e quindi sono processori adatti per essere programmati anche in Assembly.
+
+![[Pasted image 20241019103355.png]]
+
+
+**RISC** (Reducted Instruction Set Code)
+**Il set di istruzioni di una architettura RISC è limitato**, contiene istruzioni di lunghezza costante (con un numero di operandi fisso), con fase di decode breve e senza microprogrammi da eseguire nel processore: ogni istruzione è eseguita direttamente in hardware con pochi cicli di clock. 
+In questo modo una elaborazione RISC appare nettamente più veloce (almeno di un ordine 10).
+![[Pasted image 20241019103636.png|450]]
+
+
+In sostanza un'istruzione CISC - con molti passi nel data path - equivale a numerose istruzioni RISC con data path singolo.
+
+
+
+| Architettura | Vantaggi                                                                        | Svantaggi                                                                         | Uso                                                |
+| ------------ | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------- |
+| CISC         | Portabilità <br>dei programmi,<br>Facilità di <br>programmazione<br>in Assembli | Tempi di <br>esecuzione<br>lenti<br>                                              | Si utilizzavano<br>nei vecchi Personal<br>computer |
+| RISC         | Tempi di <br>esecuzione<br>veloci                                               | Portabilità <br>dei programmi,<br>Difficoltà di <br>programmazione<br>in Assembly | Si utilizzavano nei <br>vecchi server              |
+Nessuna delle due è ideale.
+Oggi i processori sono Ibridi, ovvero basati su CISC ma con sottosistemi RISC, cercando di ottenere i vantaggi di uno e dell'altro.
+Queste architetture moderne si chiamano **CRISC** (Complex Reducted Instruction Set Code).
+
+**CACHE** 
+Un modo ingegnoso per diminuire gli accessi al bus e alla memoria, è quello di dotare il calcolatore di una memoria «tampone» (Cache Memory) tra il processore e il bus.
+in parole povere serve per non passare dal bus e rimanere dentro la CPU evitando il battleneck.
+![[Pasted image 20241019105313.png|500]]
+
+
+La cache è una memoria di tipo SRAM (static ram) ed è quindi velocissima, ma non molto capiente (i migliori processori del 2024 hanno al massimo 32 mega di cache).
+
+Man mano che il processore legge dalla memoria, ad un **determinato indirizzo, molte locazioni di memoria con indirizzi prossimi a quello, vengono spostati nella memoria cache (nello stesso tempo di bus). Queste sono le linee di cache**
+
+Quindi, **ad ogni operazione di lettura** del processore, l'informazione viene cercata prima di tutto nella cache; se è presente (hit), non è necessario accedere al bus; se non è presente (miss) si accede alla memoria e, oltre all'informazione richiesta, si carica una nuova linea in cache, sovrascrivendo la linea di cache meno usata di recente.
+Esistono **3 livelli di cache**
+• Livello 1, all'interno del processore;                   (man mano che i livelli crescono aumenta lo
+• Livello 2, collegato al processore;                       spazio nella cache ma diminuisce la velocità)
+• Livello 3 sulla motherboard.
 
 
 ********************
