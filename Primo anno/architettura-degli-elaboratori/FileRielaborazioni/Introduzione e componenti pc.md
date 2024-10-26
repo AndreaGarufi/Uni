@@ -292,6 +292,77 @@ Esistono **3 livelli di cache**
 • Livello 2, collegato al processore;                       spazio nella cache ma diminuisce la velocità)
 • Livello 3 sulla motherboard.
 
+**PREFETCH** 
+Un modo per aumentare il parallelismo d'esecuzione, fu quello di caricare nel processore più istruzioni oltre a quella richiesta.
+Fin dagli esordi, per esempio, i processori erano dotati di una coda di Prefetch, ovvero di un buffer interno in cui il processore memorizzava i successivi 6 o 8 byte consecutivi a quello appena letto dalla memoria. In questo modo, con un solo accesso alla memoria, si aveva a disposizione una serie di valori che potevano essere usati successivamente (come istruzioni ed operandi) senza dover accedere di nuovo al bus.
+![[Pasted image 20241024090635.png|500]]
+
+Esistono **4 tipi di prefetch**
+
+1. **PREFETCHING HARDWARE**: le CPU hanno un componente HW al loro interno che rileva automaticamente i data pattern (dati che servono molte volte e seguono quindi una sorta di pattern nel loro utilizzo) nella memoria e li carica preventivamente nella cache.
+2. **PREFETCHING SOFTWARE**: nel prefetching software si usano delle variabili per suggerire alla CPU che certi dati saranno utilizzati molto spesso, quindi cosi la CPU li caricherà nella cache senza passare ogni volta dal BUS.
+3. **TECNICA DI OTTIMIZZAZIONE IN FASE DI COMPILAZIONE** : è un metodo che in fase di compilazione identifica le linee di codice e i dati che vanno utilizzati di più. Questo è un modo per ottimizzare il codice. Funziona con compilatori moderni (C,C++ ecc...)
+4. **PREFETCHING CON ACCESSO ALLE LINEE DI CACHE**: utilizza le linee di cache per l'accesso alla memoria, quindi trasporta dei blocchi fissi, da 64 byte solitamente, direttamente alla cache.
+
+**PIPELINE**
+Ben presto, **alla coda di Prefetch, fu affiancato un sistema a Pipeline** che ha lo scopo di sfruttare il concetto di **catena di montaggio:** invece di eseguire un'istruzione completamente e solo al termine la sua successiva, si può avviare l'istruzione subito dopo che la precedente è stata inserita nel data path.
+Per esempio, basta che la **prima istruzione si trovi in fase di decode, e la successiva può essere posta in stato di fetch**. Così come in una catena di montaggio, un nuovo pezzo può essere lavorato anche se il precedente non è ancora stato completato: **basta che le fasi (dette anche stadi della pipeline) non si sovrappongano.**
+
+Le fasi della pipeline sono: **fetch-decode-execute-store/writeback**
+
+Writeback permette di scrivere il risultato di un operazione nei registri o nella memoria RAM, apporta un beneficio nella velocità della CPU, aumentando il throughput di calcolo.
+
+Così, una Pipeline a 5 stadi trasporta cinque istruzioni in catena di montaggio. 
+• La Pipeline sopperisce così alle attese di CPU veloci nei confronti di memorie lente (collo di bottiglia di von Neumann). 
+• Una volta dotato di Pipeline, in un processore si è notato che lo stadio di esecuzione è il più lento: lo stadio precedente fornisce più valori di quanto lo stadio di esecuzione, implementato nell'ALU, può elaborare. 
+• Ecco allora che sui processori sono montate più ALU in modo da servire velocemente (più cores = "più CPU" )
+
+**Ci sono anche dei pericoli usando le pipeline**
+1. **DATA HAZARDS**: si verifica quando un istruzione richiede dei dati che vengono forniti da un altra istruzione che non ha ancora finito (ritardi di elaborazione o blocchi)
+2. **CONTROL HAZARDS** si verifica quando la pipeline deve gestire dei salti condizionali (tipo il go-to)
+3. **STRUCURAL HAZARDS**  si verifica quando più istruzioni competono quando ci sono più operazioni che cercano di accedere alla stessa risorsa (problemi dei filosofi a cena)
+
+• Ecco allora che sui processori sono montate più ALU in modo da servire velocemente ogni istruzione che arriva allo stadio di execute. In questo caso il processore è detto Superscalare.
+• In questo modo è possibile dotare i processori anche di due o quattro pipeline differenti.
+
+**La pipeline viene vanificata se:**
+- c'è un istruzione di salto (go-to) - qui la pipeline viene persa.
+- Dipendenza dei dati tra le istruzioni - qui la pipeline potrebbe dover' essere interrotta
+
+**L'esecuzione predicativa**, cerca di prevenire la perdita delle pipeline a causa delle istruzioni di salto, attraverso degli algoritmi che usano tabelle simili a memorie cache.
+
+**Il problema di questa tecnica, che in realtà è molto efficiente, si ha quando la previsione è sbagliata**: le istruzioni eseguite inutilmente devono essere gettate e lo stato della macchina ripristinato. 
+L'esecuzione predicativa è anche nota come esecuzione speculativa, intendendosi quella elaborazione che computa anche il codice che potrebbe non essere mai utilizzato.
+
+• **Quando il processore individua una dipendenza in una pipeline, invece «di buttarla» e attendere l'operando mancante, la salta e prosegue con istruzioni "future"** che, in teoria, dovrebbero essere eseguite solo dopo quella interrotta. 
+• **In questo caso la pipeline viene quasi del tutto conservata (un solo stadio rimane bloccato, fino all'arrivo dell'operando mancante) ma, una volta risolta la dipendenza, saranno già state eseguite altre istruzioni (quelle che avevamo chiamato istruzioni «future»)**, con conseguente risalita delle prestazioni.
+
+**Condizioni critiche** 
+• Naturalmente le istruzioni "future" possono essere eseguite solo se non hanno, a loro volta, dipendenze con istruzioni in corso. 
+• Non appena le istruzioni con dipendenze terminano, il processore continuerà l'esecuzione in ordine (in order execution). 
+• La condizione più critica per questa tecnica si presenta quando il processore deve essere interrotto a causa di un interrupt; se il processore si trova in fase di fuori ordine, lo stato del sistema potrebbe non essere coerente. In questi casi il processore deve ripristinare lo stato della CPU ritirando «in ordine» tutte le fasi fuori ordine.
+
+**DIPENDEZE RAW**
+La dipendenza classica e più complicata (RAW, Read After Write).
+
+• Istruzione1: A = B + C; 
+• Istruzione2: D = A + 1 
+
+• l'Istruzione2 contiene una dipendenza RAW
+
+**Per poter riordinare il giusto flusso di esecuzione dopo aver saltato e ricalcolato una istruzione con dipendenza, i processori utilizzano una serie di registri d'appoggio (interni e invisibili al programmatore)** su cui memorizzare i calcoli temporanei delle istruzioni fuori ordine.
+
+All'atto del riordinamento, **per evitare di spostare i valori dai registri interni a quelli effettivamente usati nel data path**, i processori sono in grado di **rinominare i registri interni nei nomi dei registri effettivi**, **risparmiando il tempo del trasferimento (register renaming).**
+(in pratica anziché spostare i dati dei registri d'appoggio a quelli normali (che richiederebbe del tempo) rinominano quei registri d'appoggio con i nomi dei normali registri e fanno la stesso quelle operazioni).
+
+**VLIW**
+Anche se non esplicitamente, tutte queste innovazioni (pipeline, super- scalarità, predicazione, esecuzione fuori ordine) cercano di implementare un modello di esecuzione parallelo molto studiato nei centri di calcolo, e denominato VLIW (Very Long Instruction Word).
+
+I compilatori moderni prendono tutte le **istruzioni a-sincrone e le raggruppano formando il VLIW cosi la CPU può parallelizzare** almeno quelle.
+
+**Vantaggio:** Migliora la velocità di calcolo della CPU perché parallelizza le operazioni a-sincrone.
+
+**Limite:** VLIW funziona bene solo quando le operazioni sono veramente indipendenti (ovvero può capitare che il compilatore sbagli), inoltre se nel codice non ci sono abbastanza operazioni parallelizzabili questo sistema non funziona.
 
 ********************
 
@@ -318,7 +389,7 @@ Turing cercò di rispondere alla domanda "can machines think?", per fare ciò fo
 - L' ultima tecnologia di **DRAM** (fino al 12/10/24) è la DDR5 uscita nel 2020.
 - Le **ROM** anche se hanno l'acronimo Read Only Memory attraverso procedure speciali si possono effettuare operazioni di scrittura.
 
-
+###### <mark style="background: #D2B3FFA6;">Throughput = portata di calcolo</mark>
 
 
 

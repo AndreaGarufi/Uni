@@ -4,31 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "908b5813bebdb8df",
+        "id": "a3725e9120114714",
         "type": "tabs",
         "children": [
           {
-            "id": "45ef112158049c87",
+            "id": "0ff2c21f489fae14",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf"
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Introduzione e componenti PC.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Sistemi lineari TEORIA 15_10_24 e 17_10_24"
-            }
-          },
-          {
-            "id": "8abb1b83303c1b84",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 2 TEORIA 10_10_24.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Determinante parte 2 TEORIA 10_10_24"
+              "title": "Introduzione e componenti PC"
             }
           }
         ]
@@ -180,33 +168,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "45ef112158049c87",
+  "active": "0ff2c21f489fae14",
   "lastOpenFiles": [
     "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 2 TEORIA 10_10_24.pdf",
-    "strutture-discrete/FileRielaborazioni/Logica Proposizionale, Teoria degli Insiemi.md",
-    "strutture-discrete/FileRielaborazioni/Tips.md",
-    "strutture-discrete/FileRielaborazioni/Tips 1.md",
-    "Modelli/Pasted image 20241020173502.png",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 3 TEORIA 15_10_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Matrici TEORIA 3_10_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Matrici 1_10_24 TEORIA.pdf",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
-    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni.docx",
-    "architettura-degli-elaboratori/appunti.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Introduzione e componenti PC.pdf",
     "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf",
-    "Modelli/Pasted image 20241019105313.png",
-    "Modelli/Pasted image 20241019103636.png",
-    "Modelli/Pasted image 20241019103355.png",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Determinante parte 1 TEORIA 8_10_24.pdf",
-    "Modelli/Pasted image 20241017090756.png",
-    "Modelli/Pasted image 20241017090736.png",
-    "Modelli/Pasted image 20241017090705.png",
-    "Modelli/Pasted image 20241016221321.png",
-    "Modelli/Pasted image 20241016221226.png",
-    "Modelli/Pasted image 20241016220122.png",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Base dello spazio vettoriale 24_10_24_241025_150916.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Base dello spazio vettoriale 24_10_24_241024_221719.pdf",
+    "strutture-discrete/Esercizi note/Esercizi con prof 16_10_24.pdf",
+    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni .docx.docx",
+    "strutture-discrete/Esercizi note/Esercizi con prof 21_10_24_241021_211428.pdf",
+    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
+    "strutture-discrete/FileRielaborazioni/(vecchio) Logica Proposizionale, Teoria degli Insiemi.md",
+    "strutture-discrete/FileRielaborazioni/Tips 1.md",
+    "Modelli/Pasted image 20241009133640.png",
+    "strutture-discrete/FileRielaborazioni/Tips.md",
+    "Modelli/Pasted image 20241023101548.png",
+    "Modelli/Pasted image 20241020164744.png",
+    "Modelli/Pasted image 20241019115203.png",
+    "Modelli/Pasted image 20241012110411.png",
+    "Modelli/Pasted image 20241012123046.png",
+    "Modelli/Pasted image 20241020161146.png",
+    "Modelli/Pasted image 20241020160345.png",
+    "Modelli/Pasted image 20241019143758.png",
+    "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
+    "Modelli/Pasted image 20241024090635.png",
+    "architettura-degli-elaboratori/appunti.md",
     "programmazione-1/Variabili, Tipi su C.md",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Modelli/nota_del_giorno.md",
