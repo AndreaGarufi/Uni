@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a3725e9120114714",
+        "id": "7ceab41da18b45f1",
         "type": "tabs",
         "children": [
           {
-            "id": "0ff2c21f489fae14",
+            "id": "7573b502e1440e23",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Introduzione e componenti PC.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Introduzione e componenti PC"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -75,7 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 334.5110321044922
+    "width": 200
   },
   "right": {
     "id": "e5cbad16aa00cfb4",
@@ -168,33 +166,36 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0ff2c21f489fae14",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+    "algebra-lineare-e-geometria/Libri/Corso Di Algebra Lineare Co_ (Z-Library).pdf",
+    "algebra-lineare-e-geometria/Libri",
+    "architettura-degli-elaboratori/FileCondivisiTeams/5 Rappresentazione delle informazioni nei calcolatori.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
+    "Modelli/Pasted image 20241027102411.png",
+    "Modelli/Pasted image 20241027102155.png",
+    "Modelli/Pasted image 20241027102140.png",
+    "Modelli/Pasted image 20241027102029.png",
+    "Modelli/Pasted image 20241027101153.png",
+    "Modelli/Pasted image 20241027101138.png",
+    "Modelli/Pasted image 20241027100951.png",
+    "algebra-lineare-e-geometria/Esercizi/Esercizi_Algebra_Lineare.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
+    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "strutture-discrete/FileRielaborazioni/Tips.md",
+    "ExcelProof1.png.md",
+    "Tips.md",
+    "strutture-discrete/FileRielaborazioni/(vecchio) Logica Proposizionale, Teoria degli Insiemi.md",
+    "strutture-discrete/Esercizi note/Esercizi con prof 16_10_24.pdf",
+    "strutture-discrete/Esercizi note/Esercizi con prof 21_10_24.pdf",
+    "algebra-lineare-e-geometria/Esercizi/5-6 ottobre 2024.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Introduzione e componenti PC.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Base dello spazio vettoriale 24_10_24_241025_150916.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Base dello spazio vettoriale 24_10_24_241024_221719.pdf",
-    "strutture-discrete/Esercizi note/Esercizi con prof 16_10_24.pdf",
-    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni .docx.docx",
-    "strutture-discrete/Esercizi note/Esercizi con prof 21_10_24_241021_211428.pdf",
-    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
-    "strutture-discrete/FileRielaborazioni/(vecchio) Logica Proposizionale, Teoria degli Insiemi.md",
-    "strutture-discrete/FileRielaborazioni/Tips 1.md",
     "Modelli/Pasted image 20241009133640.png",
-    "strutture-discrete/FileRielaborazioni/Tips.md",
     "Modelli/Pasted image 20241023101548.png",
     "Modelli/Pasted image 20241020164744.png",
-    "Modelli/Pasted image 20241019115203.png",
-    "Modelli/Pasted image 20241012110411.png",
-    "Modelli/Pasted image 20241012123046.png",
-    "Modelli/Pasted image 20241020161146.png",
-    "Modelli/Pasted image 20241020160345.png",
-    "Modelli/Pasted image 20241019143758.png",
-    "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
-    "Modelli/Pasted image 20241024090635.png",
     "architettura-degli-elaboratori/appunti.md",
     "programmazione-1/Variabili, Tipi su C.md",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
