@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7ceab41da18b45f1",
+        "id": "30112480d749e9ad",
         "type": "tabs",
         "children": [
           {
-            "id": "7573b502e1440e23",
+            "id": "913babaf65d557e4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Assembly e come funzionano i linguaggi di programmazione.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Assembly e come funzionano i linguaggi di programmazione"
             }
           }
         ]
@@ -166,12 +170,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "913babaf65d557e4",
   "lastOpenFiles": [
+    "architettura-degli-elaboratori/FileRielaborazioni/Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/Assembly e come funzionano i linguaggi di programmazione.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/5.1 Livello-software.pdf",
+    "Modelli/Pasted image 20241028201958.png",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Sistemi di numerazione e rappresentazione binaria dei numeri interi.pdf",
+    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni .docx.docx",
     "algebra-lineare-e-geometria/Libri/Corso Di Algebra Lineare Co_ (Z-Library).pdf",
     "algebra-lineare-e-geometria/Libri",
     "architettura-degli-elaboratori/FileCondivisiTeams/5 Rappresentazione delle informazioni nei calcolatori.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "Modelli/Pasted image 20241027102411.png",
     "Modelli/Pasted image 20241027102155.png",
     "Modelli/Pasted image 20241027102140.png",
@@ -181,21 +192,14 @@
     "Modelli/Pasted image 20241027100951.png",
     "algebra-lineare-e-geometria/Esercizi/Esercizi_Algebra_Lineare.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
-    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "ExcelProof1.png.md",
     "Tips.md",
     "strutture-discrete/FileRielaborazioni/(vecchio) Logica Proposizionale, Teoria degli Insiemi.md",
     "strutture-discrete/Esercizi note/Esercizi con prof 16_10_24.pdf",
     "strutture-discrete/Esercizi note/Esercizi con prof 21_10_24.pdf",
-    "algebra-lineare-e-geometria/Esercizi/5-6 ottobre 2024.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Introduzione e componenti PC.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
-    "architettura-degli-elaboratori/FileCondivisiTeams/4 Processore.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Base dello spazio vettoriale 24_10_24_241025_150916.pdf",
     "Modelli/Pasted image 20241009133640.png",
     "Modelli/Pasted image 20241023101548.png",
-    "Modelli/Pasted image 20241020164744.png",
     "architettura-degli-elaboratori/appunti.md",
     "programmazione-1/Variabili, Tipi su C.md",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
