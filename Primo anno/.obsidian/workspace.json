@@ -4,11 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "30112480d749e9ad",
+        "id": "9f74952903193029",
         "type": "tabs",
         "children": [
           {
-            "id": "913babaf65d557e4",
+            "id": "199a00dcb3db08b7",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "architettura-degli-elaboratori/FileCondivisiTeams/5.1 Livello-software.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "5.1 Livello-software"
+            }
+          },
+          {
+            "id": "673a9af10b9f43ec",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,7 +33,8 @@
               "title": "Assembly e come funzionano i linguaggi di programmazione"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 227.51103591918945
   },
   "right": {
     "id": "e5cbad16aa00cfb4",
@@ -170,19 +183,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "913babaf65d557e4",
+  "active": "673a9af10b9f43ec",
   "lastOpenFiles": [
+    "architettura-degli-elaboratori/FileCondivisiTeams/5.1 Livello-software.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/Assembly e come funzionano i linguaggi di programmazione.md",
+    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni .docx.docx",
+    "programmazione-1/LibroConsigliatoDalProf (nona edizione).pdf",
+    "programmazione-1/FileCondivisiTeams/Suddividere un programma in più file sorgenti.pdf",
+    "programmazione-1/FileCondivisiTeams/2) Problemi - Algoritmi - Diagrammi 1.pdf",
+    "programmazione-1/FileCondivisiTeams/1 bis) Algoritmi-e-Diagrammi-di-flusso.pdf",
+    "programmazione-1/FileCondivisiTeams/2) Problemi - Algoritmi - Diagrammi.pdf",
+    "programmazione-1/FileCondivisiTeams/1) Traduzione e Linguaggi (RIASSUNTATO).pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/Assembly e come funzionano i linguaggi di programmazione.md",
-    "architettura-degli-elaboratori/FileCondivisiTeams/5.1 Livello-software.pdf",
     "Modelli/Pasted image 20241028201958.png",
     "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Sistemi di numerazione e rappresentazione binaria dei numeri interi.pdf",
     "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni .docx.docx",
     "algebra-lineare-e-geometria/Libri/Corso Di Algebra Lineare Co_ (Z-Library).pdf",
-    "algebra-lineare-e-geometria/Libri",
-    "architettura-degli-elaboratori/FileCondivisiTeams/5 Rappresentazione delle informazioni nei calcolatori.pdf",
     "Modelli/Pasted image 20241027102411.png",
     "Modelli/Pasted image 20241027102155.png",
     "Modelli/Pasted image 20241027102140.png",
@@ -190,14 +207,10 @@
     "Modelli/Pasted image 20241027101153.png",
     "Modelli/Pasted image 20241027101138.png",
     "Modelli/Pasted image 20241027100951.png",
-    "algebra-lineare-e-geometria/Esercizi/Esercizi_Algebra_Lineare.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Sistemi lineari TEORIA 15_10_24 e 17_10_24.pdf",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "ExcelProof1.png.md",
     "Tips.md",
     "strutture-discrete/FileRielaborazioni/(vecchio) Logica Proposizionale, Teoria degli Insiemi.md",
-    "strutture-discrete/Esercizi note/Esercizi con prof 16_10_24.pdf",
-    "strutture-discrete/Esercizi note/Esercizi con prof 21_10_24.pdf",
     "Modelli/Pasted image 20241009133640.png",
     "Modelli/Pasted image 20241023101548.png",
     "architettura-degli-elaboratori/appunti.md",

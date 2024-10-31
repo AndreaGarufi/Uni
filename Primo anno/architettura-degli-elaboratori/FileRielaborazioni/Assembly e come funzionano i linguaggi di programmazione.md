@@ -52,8 +52,15 @@ Bootstrap loader -> carico il sistema operativo in memoria all'avvio del PC
 è un programma essenziale nel processo di trasformazione in codice binario, questo lo fa generando un file oggetto che collega tutti gli altri file oggetti creati
 
 **LIBRERIE**
-sono contenitori di file che raggruppano oggetti tutti dello stesso tipo
+sono contenitori di file che raggruppano oggetti tutti dello stesso tipo e sono create dall'Archiver.
+Nel file di libreria sono inserite le informazioni per permettere al Linker di risolvere i riferimenti a nomi esterni in altri programmi.
 
+**COMPILATORE**
+1) Normalmente i programmi vengono scritti in linguaggi ad alto livello molto espressivi 
+2) Il COMPILATORE trasforma un file sorgente scritto in linguaggio ad alto livello in un file scritto in assembly 
+3) Il compilatore automatizza molti compiti del programmatore assembly (gestione delle aree di attivazione per esempio) 
+4) Un compilatore che riorganizza le istruzioni per ottimizzare il codice viene detto OTTIMIZZANTE 
+5) Un programma ad alto livello può chiamare sottoprogrammi presenti in altri file assembly o scritti in altri linguaggi (il linker gestirà i collegamenti)
 
 
 
