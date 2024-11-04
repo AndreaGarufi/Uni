@@ -175,7 +175,7 @@ Le operazioni principali tra insiemi sono:
 	- $A ∩ B$ = {$x$ : $x ∈ A$ e $x ∈ B$.} (==$A$ intersezione $B$ è formata dalle x che appartengono sia ad $A$ che a $B$==)
 		- Se A = {1, 2, 3} e B = {3, 4, 5} allora A ∩ B = {3} notiamo che l’elemento 3, è l’unico presente in entrambi gli insiemi
 	- A ∩ B = ∅. Se l'intersezione tra 2 insiemi è vuota si dicono disgiunti
-3. ***Differenza*** di 2 insiemi, è l'insieme formato da quegli elementi del primo insieme che non appartengono al secondo insieme. La notazione che usiamo è la seguente:
+3. ***Differenza*** di 2 insiemi, è ==l'insieme formato da quegli elementi del primo insieme che non appartengono al secondo insieme==. La notazione che usiamo è la seguente:
 	- $A \backslash B$ = {x : x ∈ A e $x \notin B$.} (A differenza B è formato dalle x che appartengono ad A ma non appartengono a B)
 4. [[#Altre operazioni tra insiemi]]
 Sia per l'unione che per l'intersezione valgono le proprietà commutativa e associativa
@@ -198,7 +198,7 @@ Come possiamo notare ci sono 8 regioni e sono le seguenti:
 Un'altra regione è quella dove ci sono tutti gli elementi che non appartengono a nessuno dei 3 insiemi. Il numero di regioni nel diagramma di Venn è $2^n$ dove $n$ è il numero di insiemi presi in considerazione.
 
 ---
-##### Altre operazioni tra insiemi
+##### Altre operazioni tra insiemi...
 4. ***Complemento di un'insieme***, se assumiamo che tutti gli insiemi siano sottoinsiemi di un insieme ***"universo"*** detto $U$ allora $U \backslash A$ viene detto complemento di A (in notazione matematica si scrive così: $A^C$)
 	- Se A = {1, 2, 3} e U = {1, 2, 3, · · · , 10}| allora AC = {4, 5, · · · , 10}
 	Questo tipo di operazione ha delle proprietà:
