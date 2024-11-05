@@ -4,33 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "007d4a78f1b75e80",
+        "id": "525626b1d094cc5c",
         "type": "tabs",
         "children": [
           {
-            "id": "73335b1c20387f43",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Pipelining e come è fatto_funziona il processore.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Pipelining e come è fatto_funziona il processore"
-            }
-          },
-          {
-            "id": "6bd256c14a672cbd",
+            "id": "07efee8357895405",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf"
+                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
               },
               "icon": "lucide-file-text",
-              "title": "5.2 Pipelining"
+              "title": "Introduzione a C programmazione 1 (ottava edizione)"
             }
           }
         ]
@@ -182,22 +168,27 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "73335b1c20387f43",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf",
+    "programmazione-1/Tips Algoritmi.md",
+    "Modelli/Pasted image 20241105120250.png",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "Modelli/Pasted image 20241105114731.png",
+    "Modelli/Pasted image 20241105114703.png",
+    "Modelli/Pasted image 20241105114445.png",
+    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni.docx",
     "architettura-degli-elaboratori/FileRielaborazioni/Pipelining e come è fatto_funziona il processore.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
     "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.pdf",
     "architettura-degli-elaboratori/FileCondivisiTeams/5.3 Struttura-base-del-processore.pdf",
     "architettura-degli-elaboratori/FileCondivisiTeams/5.1 Livello-software.pdf",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/LibroConsigliatoDalProf (nona edizione).pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Sottospazidi R^n e rappresentazioni 29_10_24_241029_214553.pdf",
     "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "algebra-lineare-e-geometria/Esercizi/Esercizi in classe 31_10_24_241101_160013.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Base dello spazio vettoriale 24_10_24_241025_150916.pdf",
-    "algebra-lineare-e-geometria/Esercizi/5-6 ottobre 2024.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
     "Modelli/Pasted image 20241028201958.png",
     "Modelli/Pasted image 20241027102411.png",
@@ -205,20 +196,15 @@
     "Modelli/Pasted image 20241027102140.png",
     "Modelli/Pasted image 20241027102029.png",
     "Modelli/Pasted image 20241027101153.png",
-    "Modelli/Pasted image 20241027101138.png",
-    "Modelli/Pasted image 20241027100951.png",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "ExcelProof1.png.md",
     "Tips.md",
     "strutture-discrete/FileRielaborazioni/(vecchio) Logica Proposizionale, Teoria degli Insiemi.md",
-    "Modelli/Pasted image 20241009133640.png",
-    "Modelli/Pasted image 20241023101548.png",
     "architettura-degli-elaboratori/appunti.md",
     "programmazione-1/Variabili, Tipi su C.md",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Modelli/nota_del_giorno.md",
     "architettura-degli-elaboratori/Senza nome 1.md",
-    "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/Senza nome.canvas",
     "programmazione-1/08 ottobre 2024.md",
     "programmazione-1/dfgrgf.md"
