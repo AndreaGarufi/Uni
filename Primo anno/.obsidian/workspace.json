@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "2a2feadcba3abb8b",
+        "id": "5ebc372d761f19d2",
         "type": "tabs",
         "children": [
           {
-            "id": "2e4d9722d4e82dba",
+            "id": "ccf816def41c5519",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Introduzione a C programmazione 1 (ottava edizione)"
             }
           }
         ]
@@ -166,8 +168,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "ccf816def41c5519",
   "lastOpenFiles": [
+    "programmazione-1/C Università/EliminareDuplicati.c",
+    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni.docx",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "programmazione-1/C Università/Commissioni.exe",
     "architettura-degli-elaboratori/FileRielaborazioni/Pipelining e come è fatto_funziona il processore.md",
     "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf",
     "ORARIO_LEZIONI.jpg",
@@ -176,9 +182,7 @@
     "Modelli/Pasted image 20241105221515.png",
     "algebra-lineare-e-geometria/Pdf note Garufi/Ultima parte sottospazi vettoriali 5_11_24_241105_204058.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Applicazioni Lineari 5_11_24_241105_213724.pdf",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/Tips Algoritmi.md",
-    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni.docx",
     "Modelli/Pasted image 20241105120250.png",
     "Modelli/Pasted image 20241105114731.png",
     "Modelli/Pasted image 20241105114703.png",
@@ -189,7 +193,6 @@
     "architettura-degli-elaboratori/FileCondivisiTeams/5.3 Struttura-base-del-processore.pdf",
     "architettura-degli-elaboratori/FileCondivisiTeams/5.1 Livello-software.pdf",
     "programmazione-1/LibroConsigliatoDalProf (nona edizione).pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Sottospazidi R^n e rappresentazioni 29_10_24_241029_214553.pdf",
     "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
     "Modelli/Pasted image 20241028201958.png",

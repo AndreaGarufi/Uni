@@ -8,3 +8,50 @@ che determini quanti agenti di vendita hanno avuto i loro guadagni in ognuno dei
 a) $200-299 b) $300-399 c) $400-499 d) £500-599 e) $600-699 f) $700-799 g) $800-899 h) $900-999 i} $1000 e oltre
 PAG 261 libro, PDF pag 307*/ 
 
+#include <stdio.h>
+int main(){
+
+int arrayF[9] = {0};
+
+int salario = 0;
+
+printf("Inserisci un salario per continuare o -1 per fermarti\n");
+while(salario != -1){
+
+printf("Inserisci il salario. \n");
+scanf("%d",&salario);
+
+if (salario > 999){
+    arrayF[8]++;
+
+    }else if (salario > 899){
+    arrayF[7]++;
+
+        }else if (salario > 799){
+            arrayF[6]++;
+
+            }else if (salario > 699){
+                arrayF[5]++;
+                
+                }else if (salario > 599){
+                    arrayF[4]++;
+
+                    }else if (salario > 499){
+                        arrayF[3]++;
+
+                        }else if (salario > 399){
+                            arrayF[2]++;
+
+                            }else if (salario > 299){
+                                arrayF[1]++;
+                                
+                                    }else if (salario != -1){
+                                        arrayF[0]++;
+                                        }
+
+}
+printf("Stampa delle fascie di salario: ");
+printf("\n 200-299 %5d\n 300-399 %5d\n 400-499 %5d\n 500-599 %5d\n 600-699 %5d \n 700-799 %5d\n 800-899 %5d \n 900-999 %5d \n 1000+ %7d\n",arrayF[0],arrayF[1],arrayF[2],arrayF[3],arrayF[4],arrayF[5],arrayF[6],arrayF[7],arrayF[8]);
+
+
+}
