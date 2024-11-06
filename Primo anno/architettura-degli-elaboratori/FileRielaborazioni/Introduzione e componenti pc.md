@@ -292,7 +292,7 @@ Esistono **3 livelli di cache**
 • Livello 2, collegato al processore;                       spazio nella cache ma diminuisce la velocità)
 • Livello 3 sulla motherboard.
 
-**PREFETCH** 
+###### **PREFETCH** 
 Un modo per aumentare il parallelismo d'esecuzione, fu quello di caricare nel processore più istruzioni oltre a quella richiesta.
 Fin dagli esordi, per esempio, i processori erano dotati di una coda di Prefetch, ovvero di un buffer interno in cui il processore memorizzava i successivi 6 o 8 byte consecutivi a quello appena letto dalla memoria. In questo modo, con un solo accesso alla memoria, si aveva a disposizione una serie di valori che potevano essere usati successivamente (come istruzioni ed operandi) senza dover accedere di nuovo al bus.
 ![[Pasted image 20241024090635.png|500]]
@@ -304,7 +304,8 @@ Esistono **4 tipi di prefetch**
 3. **TECNICA DI OTTIMIZZAZIONE IN FASE DI COMPILAZIONE** : è un metodo che in fase di compilazione identifica le linee di codice e i dati che vanno utilizzati di più. Questo è un modo per ottimizzare il codice. Funziona con compilatori moderni (C,C++ ecc...)
 4. **PREFETCHING CON ACCESSO ALLE LINEE DI CACHE**: utilizza le linee di cache per l'accesso alla memoria, quindi trasporta dei blocchi fissi, da 64 byte solitamente, direttamente alla cache.
 
-**PIPELINE**
+###### **PIPELINE**
+[[Pipelining e come è fatto_funziona il processore#Pipeline|Spiegazione dettagliata]]
 Ben presto, **alla coda di Prefetch, fu affiancato un sistema a Pipeline** che ha lo scopo di sfruttare il concetto di **catena di montaggio:** invece di eseguire un'istruzione completamente e solo al termine la sua successiva, si può avviare l'istruzione subito dopo che la precedente è stata inserita nel data path.
 Per esempio, basta che la **prima istruzione si trovi in fase di decode, e la successiva può essere posta in stato di fetch**. Così come in una catena di montaggio, un nuovo pezzo può essere lavorato anche se il precedente non è ancora stato completato: **basta che le fasi (dette anche stadi della pipeline) non si sovrappongano.**
 
@@ -317,7 +318,7 @@ Così, una Pipeline a 5 stadi trasporta cinque istruzioni in catena di montaggio
 • Una volta dotato di Pipeline, in un processore si è notato che lo stadio di esecuzione è il più lento: lo stadio precedente fornisce più valori di quanto lo stadio di esecuzione, implementato nell'ALU, può elaborare. 
 • Ecco allora che sui processori sono montate più ALU in modo da servire velocemente (più cores = "più CPU" )
 
-**Ci sono anche dei pericoli usando le pipeline**
+**Ci sono anche dei pericoli usando le pipeline** [[Pipelining e come è fatto_funziona il processore#**TIPI DI CONFLITTI|Tipi di conflitti in dettaglio]]
 1. **DATA HAZARDS**: si verifica quando un istruzione richiede dei dati che vengono forniti da un altra istruzione che non ha ancora finito (ritardi di elaborazione o blocchi)
 2. **CONTROL HAZARDS** si verifica quando la pipeline deve gestire dei salti condizionali (tipo il go-to)
 3. **STRUCURAL HAZARDS**  si verifica quando più istruzioni competono quando ci sono più operazioni che cercano di accedere alla stessa risorsa (problemi dei filosofi a cena)
@@ -329,7 +330,7 @@ Così, una Pipeline a 5 stadi trasporta cinque istruzioni in catena di montaggio
 - c'è un istruzione di salto (go-to) - qui la pipeline viene persa.
 - Dipendenza dei dati tra le istruzioni - qui la pipeline potrebbe dover' essere interrotta
 
-**L'esecuzione predicativa**, cerca di prevenire la perdita delle pipeline a causa delle istruzioni di salto, attraverso degli algoritmi che usano tabelle simili a memorie cache.
+**L'esecuzione predicativa** ([[Pipelining e come è fatto_funziona il processore|esecuzione predicativa in dettaglio]]), cerca di prevenire la perdita delle pipeline a causa delle istruzioni di salto, attraverso degli algoritmi che usano tabelle simili a memorie cache.
 
 **Il problema di questa tecnica, che in realtà è molto efficiente, si ha quando la previsione è sbagliata**: le istruzioni eseguite inutilmente devono essere gettate e lo stato della macchina ripristinato. 
 L'esecuzione predicativa è anche nota come esecuzione speculativa, intendendosi quella elaborazione che computa anche il codice che potrebbe non essere mai utilizzato.
@@ -342,13 +343,6 @@ L'esecuzione predicativa è anche nota come esecuzione speculativa, intendendosi
 • Non appena le istruzioni con dipendenze terminano, il processore continuerà l'esecuzione in ordine (in order execution). 
 • La condizione più critica per questa tecnica si presenta quando il processore deve essere interrotto a causa di un interrupt; se il processore si trova in fase di fuori ordine, lo stato del sistema potrebbe non essere coerente. In questi casi il processore deve ripristinare lo stato della CPU ritirando «in ordine» tutte le fasi fuori ordine.
 
-**DIPENDEZE RAW**
-La dipendenza classica e più complicata (RAW, Read After Write).
-
-• Istruzione1: A = B + C; 
-• Istruzione2: D = A + 1 
-
-• l'Istruzione2 contiene una dipendenza RAW
 
 **Per poter riordinare il giusto flusso di esecuzione dopo aver saltato e ricalcolato una istruzione con dipendenza, i processori utilizzano una serie di registri d'appoggio (interni e invisibili al programmatore)** su cui memorizzare i calcoli temporanei delle istruzioni fuori ordine.
 

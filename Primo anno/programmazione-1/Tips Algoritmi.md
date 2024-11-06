@@ -156,7 +156,7 @@ dove la variabile extra hold memorizza temporaneamente uno dei due valori da sca
 ![[Pasted image 20241105114731.png]]
 Se, ad esempio, a[i] è 7 e a[i + 1] è 5, dopo la prima assegnazione entrambi i valori saranno 5 e il valore 7 sarà perduto. Da qui la necessità di una variabile extra hold. Il principale pregio del bubble sort consiste nella facilità di programmarlo. Tuttavia, esso opera lentamente, poiché ogni scambio sposta un elemento solo di una posizione verso la sua destina- zione finale. Questo risulta evidente quando si ordinano array grandi. Negli esercizi esamineremo versioni più efficienti del bubble sort. Sono state sviluppate tecniche di ordinamento di gran lunga più efficienti del bubble sort. Analizzeremo altri algoritmi nell’Appendice D. I corsi più avanzati di informatica analizzano più approfonditamente l’ordinamento e la ricerca di elementi in array.
 
-## **RICERCA TRAMITE CHIAVE NEL VETTORE**
+## **RICERCA TRAMITE CHIAVE NELL' ARRAY**
 LIBRO PAG 250...
 
 1 #include <stdio.h>
@@ -238,6 +238,97 @@ int linear_search(int a[],int key, size_t n){
 
 return -1;
 }
+
+## **RICERCA BINARIA NELL' ARRAY**
+![[Pasted image 20241106204157.png|1000]]
+
+#### **CODICE PER COPIA INCOLLA**
+#include <stdio.h>
+
+  
+
+int binary_search(const int a[], int chiave, int low, int high); //prototipo di funzione
+
+  
+
+int main(){
+
+  
+
+int vettore[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};          //vettore
+
+  
+
+int key = 0;
+
+  
+
+printf("Inserisci il numero da cercare: \n");
+
+scanf("%d",&key);
+
+  
+
+int risultato = binary_search(vettore , key , 0 , 10-1);        //salva il risultato il valore che ritorna da questa chiamata di funzione
+
+  
+
+if(risultato != -1){
+
+  
+
+    printf("il valore %d e' stato trovato nella posizione : %d",key,risultato);
+
+  
+
+}else{
+
+    printf("valore non trovato");
+
+}
+
+  
+
+}
+
+  
+
+int binary_search(const int a[], int chiave, int low, int high){            //funzione
+
+  
+
+    while(low <= high){
+
+  
+
+        int centro = (low + high) / 2;
+
+        if(a[centro] == chiave){
+
+            return centro;
+
+        }else if(a[centro] > chiave){
+
+            high = centro - 1;
+
+        }else{
+
+            low = centro + 1;}
+
+        }
+
+        return -1;
+
+    }
+
+
+
+
+
+
+
+
+
 
 ## **INVERTIRE I NUMERI USANDO ARRAY**
 ![[Pasted image 20241105120250.png]]
