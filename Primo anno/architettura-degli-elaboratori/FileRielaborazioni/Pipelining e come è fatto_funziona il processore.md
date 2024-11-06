@@ -19,15 +19,10 @@
 
 ### 1.  **DIPENDENZE DA DATO**
 DIPENDENZE **RAW** (read after write)
-
-
-cerca su chat
-
+si verifica quando un’istruzione deve leggere un dato che un'istruzione precedente non ha ancora scritto
 
 DIPENDENZE **WAW**
-
-cerca su chat
-
+si verificano quando due istruzioni vogliono scrivere nello stesso registro o nella stessa posizione di memoria
 
 DIPENDENZE **WAR**
 Si verifica quando un istruzione cerca di scrivere un registro prima che un'altra abbia finito di leggere.

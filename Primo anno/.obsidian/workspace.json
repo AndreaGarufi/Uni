@@ -4,33 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "525626b1d094cc5c",
+        "id": "2a2feadcba3abb8b",
         "type": "tabs",
         "children": [
           {
-            "id": "4fbf5463fa78cfef",
+            "id": "2e4d9722d4e82dba",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Pipelining e come è fatto_funziona il processore.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Pipelining e come è fatto_funziona il processore"
-            }
-          },
-          {
-            "id": "e190d7f7dd219be6",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "5.2 Pipelining"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -182,13 +166,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4fbf5463fa78cfef",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Pipelining e come è fatto_funziona il processore.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf",
+    "ORARIO_LEZIONI.jpg",
     "Senza nome.md",
-    "Pasted image 20241105221652.png",
-    "Pasted image 20241105221515.png",
+    "Modelli/Pasted image 20241105221652.png",
+    "Modelli/Pasted image 20241105221515.png",
     "algebra-lineare-e-geometria/Pdf note Garufi/Ultima parte sottospazi vettoriali 5_11_24_241105_204058.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Applicazioni Lineari 5_11_24_241105_213724.pdf",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
@@ -210,7 +195,6 @@
     "Modelli/Pasted image 20241028201958.png",
     "Modelli/Pasted image 20241027102411.png",
     "Modelli/Pasted image 20241027102155.png",
-    "Modelli/Pasted image 20241027102140.png",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "ExcelProof1.png.md",
     "Tips.md",
