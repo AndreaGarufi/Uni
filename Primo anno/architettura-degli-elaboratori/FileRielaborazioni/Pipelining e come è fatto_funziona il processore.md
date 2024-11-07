@@ -64,6 +64,15 @@ Esistono delle **tecniche per rallentare questi ritardi:**
 3) **Produrre memoria a bassa latenza** --> che siano cache o RAM più sono veloci meglio è.
 
 ### 3. **RITARDI NEI SALTI**
+Nei processori moderni **i salti, nel pipelining introducono grossi ritardi (branch penalties/delays)**
+
+##### **Esistono delle** **tecniche per evitare questi ritardi:**
+La tecnica più importante è sicuramente la **branch prediction** (esecuzione speculativa) --> fa uso delle **predizioni di istruzioni di salto per anticipare una branch penalties** basandosi sui branch penalties precedenti e lo storico delle altre istruzioni, **se la predizione è sbagliata si ha un branch prediction miss**. (In quel caso la CPU esegue il **flushing** ovvero la pulizia della pipeline per evitare che si eseguano istruzioni errate) 
+1) La **predizione statica** utilizza regole semplici basate su informazioni statiche come la posizione di istruzioni nel codice oppure il tipo di istruzione di salto, per prevedere se il branch verrà preso o no, questo approccio statico è rapido e **semplice ma meno preciso in caso di situazioni complesse.**
+
+2) La **predizione dinamica** è **basata sulla storia dei branch precedenti**, quindi utilizza i branch prediction buffer o tabelle di predizione di branch per memorizzare il comportamento passato dei branch. I moderni processori utilizzano dei metodi di predizione come i predittori a 2 livelli o predittori neurali per migliorare l'accuratezza delle predizioni.
+
+
 ### 4. **LIMITI NELLE RISORSE**
 
 

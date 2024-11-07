@@ -3,12 +3,10 @@
 #define size 10
 void stampaArray(int a[], int n);
 int main() {
-    // srand(time(NULL));
+    
     int arr[size];
     int count = 0;
-    // for(int i = 0; i < size; i++){
-    //     arr[i] = rand()%100 + 9;
-    // }
+    
 
     for (int i = 0; i < size; i++){
         int value = 0;

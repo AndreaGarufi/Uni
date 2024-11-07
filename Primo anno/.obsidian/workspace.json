@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "9dd811524d1ee267",
+        "id": "cda0425e1e39a682",
         "type": "tabs",
         "children": [
           {
-            "id": "a0b2e2dc19010fc3",
+            "id": "005cfe8461b4f70a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Introduzione a C programmazione 1 (ottava edizione)"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -168,27 +166,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a0b2e2dc19010fc3",
+  "active": "005cfe8461b4f70a",
   "lastOpenFiles": [
+    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/Pipelining e come è fatto_funziona il processore.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf",
+    "Senza nome.md",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "programmazione-1/C Università/output/arrayEsercizi.exe",
+    "programmazione-1/C Università/RicercaBinaria.exe",
+    "programmazione-1/C Università/RicercaBinaria.c",
+    "programmazione-1/C Università/output/tempCodeRunnerFile.c",
+    "programmazione-1/C Università/output/arrayEsercizi.c",
     "programmazione-1/C Università/output/LancioDadi6_19.c",
     "programmazione-1/FileCondivisiTeams/Calendario delle lezioni (1).docx",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/FileCondivisiTeams/Calendario delle lezioni.docx",
-    "architettura-degli-elaboratori/FileRielaborazioni/Pipelining e come è fatto_funziona il processore.md",
-    "Senza nome.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
-    "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf",
     "Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "Modelli/Pasted image 20241106204324.png",
     "programmazione-1/Tips Algoritmi.md",
-    "programmazione-1/C Università/output/duplicati.c",
-    "programmazione-1/C Università/EliminareDuplicati.exe",
-    "programmazione-1/C Università/output/main.exe",
-    "programmazione-1/C Università/output/main.c",
     "Modelli/Pasted image 20241106204157.png",
-    "programmazione-1/C Università/output/RicercaBinaria.exe",
-    "programmazione-1/C Università/output/RicercaBinaria.c",
     "ORARIO_LEZIONI.jpg",
     "Modelli/Pasted image 20241105221652.png",
     "Modelli/Pasted image 20241105221515.png",

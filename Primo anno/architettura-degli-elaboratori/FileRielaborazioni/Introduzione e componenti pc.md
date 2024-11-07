@@ -330,8 +330,7 @@ Così, una Pipeline a 5 stadi trasporta cinque istruzioni in catena di montaggio
 - c'è un istruzione di salto (go-to) - qui la pipeline viene persa.
 - Dipendenza dei dati tra le istruzioni - qui la pipeline potrebbe dover' essere interrotta
 
-**L'esecuzione predicativa** ([[Pipelining e come è fatto_funziona il processore|esecuzione predicativa in dettaglio]]), cerca di prevenire la perdita delle pipeline a causa delle istruzioni di salto, attraverso degli algoritmi che usano tabelle simili a memorie cache.
-
+**L'esecuzione predicativa** ([[Pipelining e come è fatto_funziona il processore#**Esistono delle** **tecniche per evitare questi ritardi **|esecuzione predicativa in dettaglio]]), cerca di prevenire la perdita delle pipeline a causa delle istruzioni di salto, attraverso degli algoritmi che usano tabelle simili a memorie cache.
 **Il problema di questa tecnica, che in realtà è molto efficiente, si ha quando la previsione è sbagliata**: le istruzioni eseguite inutilmente devono essere gettate e lo stato della macchina ripristinato. 
 L'esecuzione predicativa è anche nota come esecuzione speculativa, intendendosi quella elaborazione che computa anche il codice che potrebbe non essere mai utilizzato.
 
