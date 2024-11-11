@@ -20,7 +20,7 @@ for (i=0;i<10;i++){
     if(esito == 2){
         failed = failed + (esito / 2);
     }
-    if(esito != 1 && esito != 2){               //se inserisco un numero che non è ne 1 ne 2 mi fa reinserire il nuemro e decremento i cosi il for la incrementa ed è come se non fossi andato avanti nel ciclo avendo sempre la i che non cambia di numero
+    if(esito != 1 && esito != 2){               //se inserisco un numero che non è ne 1 ne 2 mi fa reinserire il nuemro e decremento i, cosi il for la incrementa ed è come se non fossi andato avanti nel ciclo avendo sempre la i che non cambia di numero
         printf("reinserisci il numero \n");
         i--;
     }

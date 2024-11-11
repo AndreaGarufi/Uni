@@ -13,7 +13,23 @@ un sesto di tutti i lanci deve avere come somma 7.*/
 #include <time.h>
 int main(){
 
+srand(time(NULL));
+int array[13] = {0};
 
+for(int i = 0; i < 36000; i++){
+
+    int dado1 = 1 +rand() % 6;
+    int dado2 = 1 + rand() % 6;
+
+    int somma = dado1 + dado2;
+    array[somma]++;
+}
+for(int i = 0; i < 13; i++){
+
+printf("%d ",array[i]);
+
+
+}
 
 
 

@@ -321,7 +321,7 @@ Così, una Pipeline a 5 stadi trasporta cinque istruzioni in catena di montaggio
 **Ci sono anche dei pericoli usando le pipeline** [[Pipelining e come è fatto_funziona il processore#**TIPI DI CONFLITTI|Tipi di conflitti in dettaglio]]
 1. **DATA HAZARDS**: si verifica quando un istruzione richiede dei dati che vengono forniti da un altra istruzione che non ha ancora finito (ritardi di elaborazione o blocchi)
 2. **CONTROL HAZARDS** si verifica quando la pipeline deve gestire dei salti condizionali (tipo il go-to)
-3. **STRUCURAL HAZARDS**  si verifica quando più istruzioni competono quando ci sono più operazioni che cercano di accedere alla stessa risorsa (problemi dei filosofi a cena)
+3. **STRUCTURAL HAZARDS**  si verifica quando più istruzioni competono e cercano di accedere alla stessa risorsa (problemi dei filosofi a cena)
 
 • Ecco allora che sui processori sono montate più ALU in modo da servire velocemente ogni istruzione che arriva allo stadio di execute. In questo caso il processore è detto Superscalare.
 • In questo modo è possibile dotare i processori anche di due o quattro pipeline differenti.
@@ -384,7 +384,7 @@ Turing cercò di rispondere alla domanda "can machines think?", per fare ciò fo
 
 ###### <mark style="background: #D2B3FFA6;">Throughput = portata di calcolo</mark>
 
-
+###### <mark style="background: #D2B3FFA6;">Deadlock: quando 2 istruzioni rimangono bloccate a causa di dipendenze reciproche</mark>
 
 
 

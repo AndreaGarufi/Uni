@@ -238,6 +238,23 @@ int linear_search(int a[],int key, size_t n){
 
 return -1;
 }
+##### **RICERCA CON CHIAVE RICORSIVA (COPIA E INCOLLA)**
+int linear_search_ricorsiva(int a[], int key, int low, int high){
+
+    if(low <= high){
+
+        if(a[low] == key){
+            return low;
+        }
+
+        return linear_search_ricorsiva(a,key,low+1,high);  //si richiama 
+													//aumentando low di 1 cosi
+				                                                              //si scorre l'array 1 alla volta
+    }
+
+    return -1;      //elemento non trovato
+
+}
 
 ## **RICERCA BINARIA NELL' ARRAY**
 ![[Pasted image 20241106204157.png|1000]]
@@ -323,11 +340,31 @@ int binary_search(const int a[], int chiave, int low, int high){           
 
 
 
+##### **RICERCA BINARIO RICORSIVA (COPIA INCOLLA)**
+int ricerca_binaria_ricorsiva(int a[],int key, int low,int high){
+
+    if(low <= high){
 
 
+        if(a[(low+high)/2] == key){
+
+            return (low+high)/2;
+
+        }else if(a[(low+high)/2] < key){
+
+            return ricerca_binaria_ricorsiva(a,key,(low+high)/2 + 1,high);
+
+        }else{
 
 
+            return ricerca_binaria_ricorsiva(a,key,low,(low+high)/2 - 1);
 
+        }
+
+    }
+
+    return -1;
+}
 
 
 ## **INVERTIRE I NUMERI USANDO ARRAY**
@@ -347,5 +384,33 @@ int main() {
         printf("%d ", array[i]);
 
     }
+
+}
+
+## **PALINDROMO**
+![[Pasted image 20241107193836.png]]
+
+##### **CODICE PER COPIA E INCOLLA**
+int palindromo(char a[], int n){
+
+    int low = 0;
+
+    int high = n - 1;
+
+    while(low <= high){
+
+        if(a[low] != a[high]){
+
+            return 0;
+
+        }
+
+        low++;
+
+        high--;
+
+    }
+
+    return 1;  
 
 }

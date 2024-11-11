@@ -1,6 +1,8 @@
 [[Introduzione e componenti PC#**PIPELINE**|spiegazione pipeline breve]]
 # Pipeline
 **Il pipelining è una tecnica usata per migliorare l'efficienza della gestione delle istruzioni, le istruzioni vengono gestite in modo che ci siano più istruzioni eseguite contemporaneamente.** 
+( processori con pipeline hanno un throughput maggiore rispetto a quelli che non la adottano)
+(la pipeline si adatta meglio ai processori RISC perché loro usano istruzioni più semplici)
 ![[Pasted image 20241105221515.png]]
 
 
@@ -74,6 +76,52 @@ La tecnica più importante è sicuramente la **branch prediction** (esecuzione s
 
 
 ### 4. **LIMITI NELLE RISORSE**
+La pipeline può andare in **stallo** quando una risorsa hardware è richiesta da più istruzioni contemporaneamente.
+lo stallo è un problema critico che **si verifica quando la pipeline viene interrotta a causa delle dipendenze da dato, o per altri problemi come le risorse limitate** (le risorse devono essere condivise. se non ci fossero le risorse condivise, quindi senza accesso concorrente alle risorse non ci sarebbero stalli nella pipeline)).
+alcuni processi possono non rilasciare più una risorsa (qui è colpa del programmatore) e quindi creare stalli.
+![[Pasted image 20241110145725.png]]
+![[Pasted image 20241110145739.png]]
+![[Pasted image 20241110145752.png]]
+
+
+Il **CASO OTTIMALE** della pipeline è 1 istruzione / ciclo di clock
+vanno però considerati i problemi legati alle dipendenze ai salti e alle risorse limitate.
+
+I **processori moderni utilizzano più unità aritmetiche (ALU)**, utilizzano l'emissione multipla e vengono chiamati **super scalari**.
+I processori superscalari sono formati dalle seguenti componenti e buffer: 
+• Unità di prelievo (Fetch unit) e Coda di istruzioni 
+• Unità di smistamento (Dispatch unit) e Stazioni di prenotazione 
+• Varie unità di esecuzione e Registri temporanei 
+• Unità di commitment e Buffer di riordino
+
+![[Pasted image 20241111100855.png]]
+
+
+**Può avvenire che due istruzioni dipendenti vengano inviate a due unità di esecuzione differenti e non se ne possa garantire l’ordine di esecuzione** 
+
+ **In questo caso bisogna bloccare l’esecuzione dell’istruzione con dipendenze di dato finché l’altra istruzione non sia stata eseguita**
+ 
+Dei buffer specifici chiamati **stazioni di prenotazione** sono presenti all’ingresso di ciascuna unità di esecuzione. Essi contengono:
+• **L’istruzione smistata in attesa di esecuzione** 
+**• Informazioni e operandi rilevanti a ciascuna istruzione smistata**
+le stazioni di prenotazione sono una **tecnica** **utilizzata nei processori superscalari** con esecuzione fuori ordine per gestire le dipendenze di dato e migliorare l'efficienza della pipeline (sono dei buffer che memorizzano istruzioni e operandi)
+
+
+• **A causa di cache miss o eccezioni possono avvenire esecuzioni di istruzioni fuori ordine** 
+
+• In questi casi **si rischia che un’istruzione che non sarebbe dovuta essere eseguita modifichi i contenuti di registri e/o locazioni di memoria** (eccezioni imprecise) 
+
+• **Per evitare il problema, i risultati generati dalle unità di esecuzione vengono memorizzati in registri temporanei che assumono il ruolo dei registri permanenti** (register renaming)
+
+• L’unità di commitment ha il compito di trasferire i risultati nei registri permanenti secondo l’ordine di prelievo 
+
+• Per questo scopo viene usata una coda chiamata **buffer di riordino** dove vengono poste in coda le istruzioni nel loro ordine di prelievo.
+
+(esecuzione fuori ordine è una tecnica avanzata utilizzata nei processori per migliorare l'efficienza nell' uso delle risorse. (Introduce una flessibilità nell' esecuzione delle istruzioni (non per forza I1,I2,I3,I4)ma può creare degli stalli.)
+si possono eseguire le istruzioni in modo diverso dal modo con cui sono state fornite dal programma.)
+
+(nei processori CISC le operazioni vengono trasformate in operazioni simili a quelle dei RISC e cosi si può utilizzare la pipeline)
+
 
 
 
