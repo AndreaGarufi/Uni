@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "d973822d5a973fa0",
+        "id": "7f25d2fd8cb02237",
         "type": "tabs",
         "children": [
           {
-            "id": "5c29ab96a2ecdf6c",
+            "id": "8847b4f1ed59e175",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Introduzione a C programmazione 1 (ottava edizione)"
             }
           }
         ]
@@ -166,8 +168,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5c29ab96a2ecdf6c",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
+    "programmazione-1/Tips Algoritmi.md",
+    "programmazione-1/PUNTATORI (importante).md",
+    "Modelli/Pasted image 20241112145632.png",
+    "Modelli/Pasted image 20241112144455.png",
+    "programmazione-1/C Università/output/c.exe",
+    "programmazione-1/C Università/output/c.c",
+    "Modelli/Pasted image 20241112143059.png",
+    "Modelli/Pasted image 20241112141743.png",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "programmazione-1/C Università/output/TemperatureCitta.exe",
+    "programmazione-1/C Università/output/TemperatureCitta.c",
+    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "strutture-discrete/FileRielaborazioni/Tips.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Pipelining e come è fatto_funziona il processore.md",
@@ -175,30 +190,17 @@
     "Modelli/Pasted image 20241111101105.png",
     "Modelli/Pasted image 20241111100855.png",
     "architettura-degli-elaboratori/FileCondivisiTeams/5.1 Livello-software.pdf",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "Modelli/Pasted image 20241110145752.png",
     "Modelli/Pasted image 20241110145739.png",
     "Modelli/Pasted image 20241110145725.png",
     "programmazione-1/C Università/output/TotVendite_6_22.c",
     "programmazione-1/C Università/output/aereoporto_6_22.c",
     "programmazione-1/C Università/output/aereoporto_6.c",
-    "programmazione-1/C Università/output/TotVendite_6_21.c",
-    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni (1).docx",
-    "programmazione-1/PUNTATORI (importante).md",
-    "programmazione-1/C Università/output/tempCodeRunnerFile.exe",
-    "programmazione-1/C Università/output/aereoporto.exe",
     "Modelli/Pasted image 20241107224713.png",
-    "Modelli/Pasted image 20241107224346.png",
-    "Modelli/Pasted image 20241107224314.png",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
-    "Modelli/Pasted image 20241107223747.png",
-    "programmazione-1/Tips Algoritmi.md",
-    "Modelli/Pasted image 20241107194534.png",
     "Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
-    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "strutture-discrete/FileRielaborazioni/Tips.md",
     "ExcelProof1.png.md",
     "Tips.md",
     "strutture-discrete/FileRielaborazioni/(vecchio) Logica Proposizionale, Teoria degli Insiemi.md",
