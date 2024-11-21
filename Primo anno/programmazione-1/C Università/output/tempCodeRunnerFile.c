@@ -1,1 +1,2 @@
-n
+
+            case 0: generaMatrice();

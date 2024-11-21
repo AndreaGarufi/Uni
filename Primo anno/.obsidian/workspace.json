@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7f25d2fd8cb02237",
+        "id": "c3dafa652013db60",
         "type": "tabs",
         "children": [
           {
-            "id": "8847b4f1ed59e175",
+            "id": "6ef39f60434ff1dc",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Introduzione a C programmazione 1 (ottava edizione)"
+              "icon": "lucide-file",
+              "title": "appunti"
             }
           }
         ]
@@ -75,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.5110321044922
+    "width": 200
   },
   "right": {
     "id": "e5cbad16aa00cfb4",
@@ -168,8 +170,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "6ef39f60434ff1dc",
   "lastOpenFiles": [
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/appunti.pdf",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/ALGEBRA BOOLEANA.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/6 algebra booleana e circuiti logici.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/Struttura Processore.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Struttura Processore.pdf",
+    "architettura-degli-elaboratori/FileCondivisiTeams/5.3 Struttura-base-del-processore.pdf",
+    "Modelli/Pasted image 20241119151632.png",
+    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
+    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "strutture-discrete/TUTTI I TEOREMI.md",
+    "strutture-discrete/FileRielaborazioni/Tips.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/Pipelining.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+    "Modelli/Pasted image 20241119100216.png",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Pipelining.pdf",
+    "Modelli/Pasted image 20241116185529.png",
+    "Modelli/Pasted image 20241116184012.png",
+    "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf",
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/PUNTATORI (importante).md",
     "Modelli/Pasted image 20241112145632.png",
@@ -178,25 +200,10 @@
     "programmazione-1/C Università/output/c.c",
     "Modelli/Pasted image 20241112143059.png",
     "Modelli/Pasted image 20241112141743.png",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/TemperatureCitta.exe",
-    "programmazione-1/C Università/output/TemperatureCitta.c",
-    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "strutture-discrete/FileRielaborazioni/Tips.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
-    "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/Pipelining e come è fatto_funziona il processore.md",
     "Senza nome.md",
     "Modelli/Pasted image 20241111101105.png",
     "Modelli/Pasted image 20241111100855.png",
-    "architettura-degli-elaboratori/FileCondivisiTeams/5.1 Livello-software.pdf",
-    "Modelli/Pasted image 20241110145752.png",
-    "Modelli/Pasted image 20241110145739.png",
-    "Modelli/Pasted image 20241110145725.png",
-    "programmazione-1/C Università/output/TotVendite_6_22.c",
-    "programmazione-1/C Università/output/aereoporto_6_22.c",
-    "programmazione-1/C Università/output/aereoporto_6.c",
-    "Modelli/Pasted image 20241107224713.png",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",

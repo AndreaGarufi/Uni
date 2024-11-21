@@ -299,7 +299,7 @@ Sia data:
 - * una generica operazione sull'insieme
 
 > [!Chiusura di una famiglia rispetto ad un'operazione generica] 
-> Definiamo chiusura di $F$ rispetto ad * la più piccola famiglia $F_*$ che contiene $F$ ed è chiusa rispetto a * .
+> Definiamo chiusura di $F$ rispetto ad _*_ la più piccola famiglia $F$ che contiene $F$ ed è chiusa rispetto a * .
 
 - Esempio: sia data $F$ = {{1, 2, 3}, {1, 2}, {1, 3}, {2, 4}} ovvero famiglia non chiusa rispetto all'operazione di unione. La famiglia più piccola che contiene $F$ ed è chiusa rispetto all'operazione di unione è la famiglia $F^I$ = {{1, 2, 3}, {1, 2}, {1, 3}, {2, 4}, {1, 2, 3, 4}, {1, 2, 4}} [[Tips#Come calcolare la chiusura di una famiglia rispetto ad unione/intersezione]] 
 ---
@@ -340,10 +340,10 @@ Sia $U$ un insieme non vuoto. Con il termine relazione indichiamo un insieme for
 [[#Proprietà delle relazioni]]
 ---
 ##### Funzioni
-Una relazione f definita su $A × A$ si dice funzione di $A$ (dominio) in $B$ (codominio), se per ogni $x ∈ A$ esiste uno ed uno solo $y ∈ A$ tale che $(x, y) ∈ f$. La notazione classica per esprimere f è la seguente: $f : A → B$ per ogni x ∈ A l’unico elemento $y ∈ B$ tale che (x, y) ∈ $f$ si indica con $f(x)$
+Una relazione f definita su $A × B$ si dice funzione di $A$ (dominio) in $B$ (codominio), se per ogni $x ∈ A$ esiste uno ed uno solo $y ∈ B$ tale che $(x, y) ∈ f$. La notazione classica per esprimere f è la seguente: $f : A → B$ per ogni x ∈ A l’unico elemento $y ∈ B$ tale che (x, y) ∈ $f$ si indica con $f(x)$
 
 Casi particolari:
-- $f : A → B$  per ogni x, f(x) = $x$ si dice ==**applicazione identica**== di $A$
+- $f : A → A$  per ogni x, f(x) = $x$ si dice ==**applicazione identica**== di $A$
 - $f : A × B → A$ tale che per ogni $(x, y)$ $f(x, y)$ = $x$ si dice ==**proiezione canonica**== su $A$.
 - $f : A × B → B$ tale che per ogni $(x, y)$ $f(x, y)$ = $y$ si dice ==**proiezione canonica**== su $B$.
 
@@ -356,15 +356,15 @@ Data un'applicazione $f$: $A$ → $B$ se porta punti distinti del dominio su su 
 - $\forall x, y \in A, \text{ se } x \neq y, \text{ allora } f(x) \neq f(y).$ Per tutti x e y appartenenti ad A se x è diverso da y allora f(x) è diverso da f(y). Questo tipo di funzione viene definita funzione "uno a uno"
 appunto perché associa ad ogni elemento di B(codominio) **soltanto** un elemento di A(dominio)
 - Esempio: ![[Pasted image 20241020160345.png]]
-- $X$ è l'insieme delle $x$ del piano cartesiano corrisponde a $A$ nella definizione precedente
-- $Y$ è l'insieme delle $y$ del piano cartesiano corrisponde a $B$ nella definizione precedente
-- ***nel primo grafico ad ogni valore di $Y$*** ***posso sempre associare un solo elemento di $X$*** ***e quindi è surgettiva, nel secondo invece ad ogni valore di $Y$ posso associare più elementi di $X$***
+- $X$ è l'insieme delle $x$ del piano cartesiano, corrisponde a $A$ nella definizione precedente
+- $Y$ è l'insieme delle $y$ del piano cartesiano, corrisponde a $B$ nella definizione precedente
+- ***nel primo grafico ad ogni valore di $Y$*** ***posso sempre associare un solo elemento di $X$*** ***e quindi è iniettiva, nel secondo invece ad ogni valore di $Y$ posso associare più elementi di $X$***
 ---
-###### Funzione surgettiva
+###### Funzione surgettiva (o suriettiva)
 Data un'applicazione $f$: $A$ → $B$ se l'immagine $f(A)$ $=$ $B$ la funzione si dice ==***surgettiva***== ovvero un funzione che associa ad ogni elemento di B (codominio) **almeno** un'elemento di A(dominio).
 - Esempio:![[Pasted image 20241020161146.png]]
-- $X$ è l'insieme delle $x$ del piano cartesiano corrisponde al dominio
-- $Y$ è l'insieme delle $y$ del piano cartesiano corrisponde al codominio
+- $X$ è l'insieme delle $x$ del piano cartesiano, corrisponde al dominio
+- $Y$ è l'insieme delle $y$ del piano cartesiano, corrisponde al codominio
 - ***nel primo grafico ad ogni valore di $Y$ posso associare almeno un elemento di $X$, nel secondo grafico invece ad ogni valore di $Y$ non posso associare un valore di $X$ (dove c'è la linea rossa non posso associare $Y$ a nessuna $X$)**.*
 
 > [!Nota bene]
@@ -375,8 +375,8 @@ Data un'applicazione $f$: $A$ → $B$ se l'immagine $f(A)$ $=$ $B$ la funzione s
 ###### Funzione biiettiva
 Data un'applicazione $f$: $A$ → $B$ si dice *==biiettiva==* se è sia iniettiva che surgettiva. Questo tipo di funzione associa sempre ogni elemento di A ad ogni elemento di B
 Esempio: ![[Pasted image 20241020164744.png]] 
-- $X$ è l'insieme delle $x$ del piano cartesiano corrisponde al dominio
-- $Y$ è l'insieme delle $y$ del piano cartesiano corrisponde al codominio
+- $X$ è l'insieme delle $x$ del piano cartesiano, corrisponde al dominio
+- $Y$ è l'insieme delle $y$ del piano cartesiano, corrisponde al codominio
 - ad ogni elemento di $X$ posso associare soltanto un elemento di $Y$ questo posso farlo sempre
 
 La cardinalità di un insieme è definita come il numero di elementi che appartengono all'insieme, per riuscire a contare questi elementi si cerca una corrispondenza biunivoca tra l'insieme e un insieme "campione" fatto da numeri naturali detto $l_n$ ovvero l'insieme dei numeri naturali interi che precedono $n$ ( es: {0, 1, 2, · · · , n − 1} ), infatti:
