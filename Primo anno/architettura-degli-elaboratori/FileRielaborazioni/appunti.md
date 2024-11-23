@@ -1,3 +1,5 @@
+# 20_11_24
+
 le porte nand a più ingressi sono un estensione delle porte nand a 2 ingressi . **regola** l'uscita è falsa solo se tutti gli ingressi sono 1, in tutti gli altri casi l'uscita è sempre vera
 
 a cosa servono le porte nand a più ingressi? serve perche si ha un numero più grande di ingressi, (gestisce gli ingressi) quindi una porta nand a n ingressi può gestire n input.
@@ -54,3 +56,65 @@ vantaggi : è semplice da realizzare
 svantaggio: ritardo ([{mentale}]) 
 
 in sintesi RCA è un tipo di addizionatore a più bit in cui i riporti si propagano in tutti i bit successivi causando ritardi che crescono in modo proporzionale alla lunghezza del numero da sommare
+
+# 22_11_24
+
+generazione del riporto determina ....
+
+la generazione del riporto si verifica quando entrambi i bit sono uguali a 1
+
+G = Xi * Yi    P = Xi + Yi
+
+propagazione determina se il riporto in ingresso verrà propagato al bit successivo
+
+il calcolo del riporto può essere parallelizzato, questo permette di svincolarsi dalla sequenzialità del riporto
+come si fa? per parallelizzarlo si utilizzano delle tecniche che riducono il ritardo che porta il calcolo del riporto
+
+CELLA DI STADIO DA UN BIT (FULL ADDER BIT CELL in iglish of cors)
+è un componente fondamentale in un addizionatore completo a n bit (è quello che fa la somma)
+come funziona? 
+ogni stadio dell' addizionatore a n bit si occupa di sommare 2 bit e 1 riporto in ingresso e fornire un eventuale riporto in uscita
+una cella di stadio da un bit riceve 2 input, il primo bit e Xi il secondo è Yi, Ci è il carry in (riporto della somma precedente)
+
+CARRY LOOKAHEAD ADDER (addizionatore con anticipo di riporto a 4 bit)
+migliora la velocità della somma riducendo il ritardo, l'anticipo del riporto permette di calcolare in parallelo i riporti
+come è fatto?
+utilizza anche lui P e G
+
+ADDIZIONATORE CON ANTICIPO A 2 LIVELLI (versione ottimizzata di CLA)
+riduce ulteriormente il tempo di calcolo utilizzando una struttura a più livelli per calcolare i riporti in parallelo, i calcoli vengono eseguiti su 2 livelli logici distinti, permettendo di ridurre la profondità di rete di calcolo (ovvero il numero di stadi che deve affrontare il calcolo)
+
+combina più bit in gruppi e calcolare i riporti su un altro livello, in pratica prendiamo la struttura di un CLA e lo sdoppiamo su 2 livelli
+
+per parallelizzare si usa G e P (come in tutti gli adder che parallelizzano) 
+
+**il primo** livello si occupa di calcolare le funzioni G e P 
+**il secondo** calcola i riporti
+
+ADDIZIONATORE CON ANTICIPO DI RIPORTO A 16 BIT
+è un tipo di addizionatore che utilizza un meccanismo di calcolo dei riporti rispetto a RCA per ridurre i tempi del calcolo del riporto
+riportiamo tutti i riporti nei 16 bit che abbiamo a disposizione, usa anche lui G e P
+
+MOLTIPLICATORE SEQUENZIALE
+è un tipo di moltiplicatore che esegue la moltiplicazione in più fasi utilizzando una sorta di algoritmo (un approccio top-down), invece di calcolare il risultato della moltiplicazione in un unico ciclo, sfrutta i registri per memorizzare i risultati parziali.
+ha un vantaggio rispetto al moltiplicatore parallelo ovvero riduce la complessità hardware (costa meno), in ogni caso le performance di un moltiplicatore parallelo sono migliori.
+
+questi moltiplicatori sequenziali si trovano nei vecchi processori o nelle CPU a basso costo
+come è fatto? (c'è sul power point slide 17) **può chiederlo agli esami**
+
+ricodifica bit-pair
+è una tecnica di compressione dei dati utilizzata per ridurre la lunghezza di una sequenza di bit senza perdere informazioni(raggruppa i bit in coppie (bit-pair))
+questa tecnica e utile per ottimizzare l'uso della memoria
+
+(algoritmo di divisione algebrica in poi non è da fare, verso le ultime slide dopo ieee 754)
+
+--------------------------------------
+nuovo power point (assembly)
+
+cosa è una memory word --**esame** 
+è la dimensione del' unita di dato che un sistema di elaborazione può gestire e memorizzare in un singolo ciclo di clock di una cpu, varia in base a se l'architettura è a 8,16,32,64 bit, 
+queste memory word vengono lette e scritte dalla memoria RAM
+viene gestita come vettori di memory word
+ogni word ha quindi un indirizzo in memoria
+
+
