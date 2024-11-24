@@ -11,10 +11,14 @@
             "id": "27450069392210d1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni"
             }
           }
         ]
@@ -168,6 +172,10 @@
   },
   "active": "27450069392210d1",
   "lastOpenFiles": [
+    "01_Parte1.md",
+    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
+    "strutture-discrete/TUTTI I TEOREMI.md",
     "algebra-lineare-e-geometria/Pdf note Garufi/Gioco della diagonalizzazione 21_11_24.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Teorema dell'isomorfismo 7_11_24.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Diagonalizzazione 19_11_24.pdf",
@@ -178,8 +186,6 @@
     "algebra-lineare-e-geometria/Pdf note Garufi/Applicazioni Lineari 5_11_24.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Ultima parte sottospazi vettoriali 5_11_24.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Aglebra Booleana.md",
-    "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Aglebra Booleana.pdf",
     "Modelli/Pasted image 20241124094027.png",
     "Modelli/Pasted image 20241124093451.png",
     "Modelli/Pasted image 20241124093430.png",
@@ -192,8 +198,6 @@
     "Modelli/Pasted image 20241123110007.png",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Struttura Processore.md",
-    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "strutture-discrete/TUTTI I TEOREMI.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Pipelining.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",

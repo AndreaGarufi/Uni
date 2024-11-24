@@ -440,3 +440,60 @@ Individuato l'insieme quoziente (che denotiamo con $U/R$), l'applicazione $U →
 > Nel contesto specifico dell'**applicazione canonica sul quoziente**, si parla di **applicazione** perché si vuole mettere in evidenza il fatto che stiamo "applicando" una trasformazione sugli elementi dell'insieme $U$. In particolare, stiamo usando una regola (la relazione di equivalenza) per trasformare ogni elemento xxx di $U$ nella sua **classe di equivalenza** $[x]$.
 
 ==Continua da slide 107==
+
+Di seguito delle definizioni:
+
+1. Si dice che una relazione binaria si ***antisimmetrica*** se:
+	- $∀x, ∀y ∈ U$ si ha che: $(R(x, y) e R(y, x)) → x = y$. il sussistere di entrambe le relazioni $R(x, y)$ e $R(y, x)$ è possibile solo quando $x$ e $y$ coincidono.
+
+2. Si dice ***preordinamento*** una relazione binaria assegnata in un insieme che goda della proprietà riflessiva e transitiva
+
+3. Si dice ***ordinata*** una relazione binaria assegnata in un insieme che goda della proprietà riflessiva, transitiva e antisimmetrica
+
+Un insieme $U$ su cui è definita un relazione di pre-ordine si dice pre-ordinato. 
+Un insieme $U$ su cui è definita un relazione d’ordine si dice ordinato.
+
+Dato un pre-ordinamento oppure un ordinamento (rappresentato dal simbolo ≤) in un insieme U, si pone
+- $x < y \quad \text{se} \quad x \leq y \quad \text{e} \quad x \neq y$  ovvero x è minore di y, se x è minore/uguale a y però con x diverso da y
+
+Un ordinamento $≤$ definito in un insieme $U$ si dice totale o lineare se per ogni coppia $(x, y)$ di elementi di $U$ si ha $x ≤ y$ oppure $y ≤ x$. Altrimenti si dirà parziale.
+
+---
+###### Massimi e minimi
+- Un elemento M di un insieme ordinato U si dice ***massimo*** se per ogni $x ∈ U$ si ha $x ≤ M$
+- Si dice invece ***massimale*** se non vi è alcun elemento di U che lo supera.
+- Un elemento m di un insieme ordinato U si dice ***minimo*** se per ogni $x ∈ U$ si ha $m ≤ x$. 
+- Si dice invece ***minimale*** se non vi è alcun elemento di U ad esso inferiore
+
+Il massimo (minimo) in un insieme è unico, il massimale (minimale) invece si può riscontrare più volte, questo accade perché potrebbe succedere che due elementi non siano confrontabili tra loro e quindi sono dei massimali.
+
+Sia $A ⊆ N$ quindi $c(A) = n$ dal momento che A è finito, possiamo dire che A ⊆ $I_m$ per qualche intero $m$. con $I_m$ intendiamo un insieme fatto cosi {0,1,2, … , m-1}. Esistono diversi modi per rappresentare A ⊆ $I_m$
+- ***Rappresentazione binaria***: la struttura dati più semplice che potremmo usare è un'array fatto da valori binari
+	- $X[i]$ = 1 se $i ∈ A$
+	- $X[i]$ = 0 se $i \notin A$
+- ***Rappresentazione estesa***: si può anche usare un'array di interi Y con |A| = n elementi tale che se A = {$x_0$, $x_1$, . . . , $x_{n-1}$} allora per ogni $0 ≤ i ≤ n − 1$ $Y[i]$ = $x_i$ 
+
+Se utilizziamo la rappresentazione binaria, verificare che un elemento i ∈ A prende tempo costante. Se utilizziamo la rappresentazione estesa, invece, ed A non è ordinato, dobbiamo scorrere tutta l’array e quindi tempo lineare. Se l’array è ordinata invece si può fare in tempo logaritmico. D’altro canto, se utilizziamo la rappresentazione binaria, per l’insieme A = {10, 3, 99} serve un’array di dimensione 100, mentre, se utilizziamo la rappresentazione estesa, serve un’array di dimensione 3.
+
+Se prendiamo $U$ ovvero {0, 1, 2, . . . , n − 1}  gli elementi di $pow(U)$ sono i numeri binari esprimibili con $|U|$ bits. Quindi $2^{|U|}$.
+
+---
+Siano $U$ un insieme finito, $H ⊆ U$, e sia $A$ una famiglia di sottoinsiemi di U tutti diversi dall’insieme vuoto. Diciamo che $H$ è un hitting set ($HS$) per $A$ se e solo se per ogni $A ∈ A$ si ha $A ∩ H$ $\neq$ ∅
+
+Sia $U$ = {a, b, c, d, e} e sia A = {{a, b, c, }, {a, d, e}, {b, c, d, }, {c, d, e}}. 
+L’insieme {a, b, c} è un $HS$ per $A$ mentre {b, c} o {d, e} non lo sono.
+- **{a, b, c} è un hitting set** perché:
+    - Contiene 'a', che è presente anche in {a, d, e}.
+    - Contiene 'b', che è presente anche in {b, c, d}.
+    - Contiene 'c', che è presente anche in {c, d, e}.
+    - In altre parole, questa scatola più piccola "colpisce" (interseca) tutte le altre scatole.
+- **{b, c} e {d, e} non sono hitting set** perché:
+	- **{b, c}** non contiene alcun elemento presente in {a, d, e}.
+	- **{d, e}** non contiene alcun elemento presente in {a, b, c}.
+
+Possono esistere diversi hitting set dentro un'insieme, si definisce **hitting set minimo** l'hitting set con meno elementi, nell'esempio sopra descritto un hitting set minimo sarebbe {a, c} visto che contiene almeno un elemento di ogni insieme contenuto in $A$
+
+Il problema di trovare un $HS$ minimo per una famiglia di insiemi è facilmente risolvibile: basta provare per tutti i sottoinsiemi di $U$. Questo però vorrebbe dire che il numero di operazioni da fare è esponenziale visto che i sottoinsiemi non vuoti di $U$ sono esattamente $2|U| − 1$
+- Per |U| = 100 il numero totale di operazioni sarebbe dell’ordine di 1, 26 · $10^{30}$ 
+Esiste un modo migliore? ***non si sa!***
+L'unico modo per cercare di risolvere questo tipo di problematiche è usare degli algoritmi detti greedy ciò vuol dire nello specifico, che potremmo prendere l’elemento $x_1$ di U che appartiene al maggior numero di elementi di $A$ Poi, per tutti gli elementi di $A$ a cui $x_1$ non appartiene, scegliamo l’elemento $x_2$ che appartiene alla maggior parte di essi, e così via.
