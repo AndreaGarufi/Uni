@@ -190,14 +190,17 @@ int generaMatrice(){
     printf("GENERAZIONE MATRICE\n");
     printf("\033[0m");
 
-    printf("Inserisci le dimensioni della matrice:(es. 5 7): ");
-    scanf("%d %d",&riga,&colonna);
-
+    do{
+        printf("Inserisci le dimensioni della matrice:(es. 5 7): ");
+        printf("\033[0m");
+        scanf("%d %d",&riga,&colonna);
+    }while(riga < 0 || colonna < 0);
+    
     for(int i = 0; i < riga; i++){
 
         for(int j = 0; j < colonna;j++){
 
-            matriceRand[i][j] = rand() % 99;
+            matriceRand[i][j] = rand() % 20;
         } 
     }
 
@@ -228,7 +231,7 @@ int sommaMatrici(){
         printf("Inserisci le dimensioni della seconda matrice:(es. 7 5): ");
         scanf("%d %d",&riga2,&colonna2);
 
-    }while(riga1 != riga2 || colonna1 != colonna2);
+    }while(riga1 != riga2 || colonna1 != colonna2 || riga1 < 0 || riga2 < 0 || colonna1 < 0 || colonna2 < 0);
 
 
     printf("Inserisci la prima matrice: %d x %d \n",riga1,colonna1);
@@ -316,7 +319,7 @@ int moltiplicaMatrici(){
         printf("Inserisci le dimensioni della seconda matrice:(es. 7 5): ");
         scanf("%d %d",&riga2,&colonna2);   
 
-    }while(riga1 != colonna2);
+    }while(riga1 != colonna2 || riga1 < 0 || riga2 < 0 || colonna1 < 0 || colonna2 < 0);
     
 
     printf("Inserisci la prima matrice: %d x %d \n",riga1,colonna1);
@@ -402,8 +405,11 @@ int trasposta(){
     printf("TRASPOSTA DI UNA MATRICE\n");
     printf("\033[0m");
 
+    do{
         printf("Inserisci le dimensioni della matrice:(es. 5 7): ");
         scanf("%d %d",&riga,&colonna);
+    }while(riga < 0 || colonna < 0);
+
 
     printf("Inserisci la matrice: %d x %d \n",riga,colonna);
 
@@ -466,7 +472,7 @@ int determinante(){
     do{
         printf("Inserisci le dimensioni della matrice quadrata (massimo 3 x 3):(es. 5 7): ");
         scanf("%d %d",&riga,&colonna);
-    }while(riga != colonna);
+    }while(riga != colonna || riga < 0 || colonna < 0);
         
 
     printf("Inserisci la matrice: %d x %d \n",riga,colonna);

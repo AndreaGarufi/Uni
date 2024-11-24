@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c3dafa652013db60",
+        "id": "1be6c1c98c43cfc0",
         "type": "tabs",
         "children": [
           {
-            "id": "6ef39f60434ff1dc",
+            "id": "9804f232d51e6305",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/Aglebra Booleana.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "appunti"
+              "title": "Aglebra Booleana"
             }
           }
         ]
@@ -170,40 +170,40 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ef39f60434ff1dc",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
+    "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/Aglebra Booleana.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Aglebra Booleana.pdf",
+    "architettura-degli-elaboratori/FileCondivisiTeams/7 Circuiti-aritmetici.pdf",
+    "architettura-degli-elaboratori/FileCondivisiTeams/6 algebra booleana e circuiti logici.pdf",
+    "Modelli/Pasted image 20241124094027.png",
+    "Modelli/Pasted image 20241124093451.png",
+    "Modelli/Pasted image 20241124093430.png",
+    "Modelli/Pasted image 20241124092921.png",
+    "Modelli/Pasted image 20241124092839.png",
+    "Modelli/Pasted image 20241124091932.png",
+    "Modelli/Pasted image 20241124091802.png",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Gioco della diagonalizzazione 21_11_24_241123_151748.pdf",
+    "Modelli/Pasted image 20241123142757.png",
+    "Modelli/Pasted image 20241123141833.png",
+    "Modelli/Pasted image 20241123110007.png",
+    "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/8 Insieme-di-istruzioni-macchina.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/PDFs/appunti.pdf",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/ALGEBRA BOOLEANA.md",
-    "architettura-degli-elaboratori/FileCondivisiTeams/6 algebra booleana e circuiti logici.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Struttura Processore.md",
     "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Struttura Processore.pdf",
     "architettura-degli-elaboratori/FileCondivisiTeams/5.3 Struttura-base-del-processore.pdf",
-    "Modelli/Pasted image 20241119151632.png",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "strutture-discrete/TUTTI I TEOREMI.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Pipelining.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
-    "Modelli/Pasted image 20241119100216.png",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Pipelining.pdf",
-    "Modelli/Pasted image 20241116185529.png",
-    "Modelli/Pasted image 20241116184012.png",
-    "architettura-degli-elaboratori/FileCondivisiTeams/5.2 Pipelining.pdf",
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/PUNTATORI (importante).md",
-    "Modelli/Pasted image 20241112145632.png",
-    "Modelli/Pasted image 20241112144455.png",
-    "programmazione-1/C Università/output/c.exe",
-    "programmazione-1/C Università/output/c.c",
-    "Modelli/Pasted image 20241112143059.png",
-    "Modelli/Pasted image 20241112141743.png",
-    "programmazione-1/C Università/output/TemperatureCitta.exe",
     "Senza nome.md",
-    "Modelli/Pasted image 20241111101105.png",
-    "Modelli/Pasted image 20241111100855.png",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
