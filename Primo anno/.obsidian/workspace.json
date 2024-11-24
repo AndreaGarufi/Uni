@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1be6c1c98c43cfc0",
+        "id": "039427ea3db74fbe",
         "type": "tabs",
         "children": [
           {
-            "id": "9804f232d51e6305",
+            "id": "27450069392210d1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "architettura-degli-elaboratori/FileRielaborazioni/Aglebra Booleana.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Aglebra Booleana"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -77,7 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 242.5
   },
   "right": {
     "id": "e5cbad16aa00cfb4",
@@ -170,13 +166,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "27450069392210d1",
   "lastOpenFiles": [
-    "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Gioco della diagonalizzazione 21_11_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Teorema dell'isomorfismo 7_11_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Diagonalizzazione 19_11_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Continuo t Isomorfismo (matrici) 14_11_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Continuo isomorfismi 15_11_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Base dello spazio vettoriale 24_10_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Sottospazidi R alla n e rappresentazioni 29_10_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Applicazioni Lineari 5_11_24.pdf",
+    "algebra-lineare-e-geometria/Pdf note Garufi/Ultima parte sottospazi vettoriali 5_11_24.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Aglebra Booleana.md",
+    "architettura-degli-elaboratori/4 Ottobre 2024.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Aglebra Booleana.pdf",
-    "architettura-degli-elaboratori/FileCondivisiTeams/7 Circuiti-aritmetici.pdf",
-    "architettura-degli-elaboratori/FileCondivisiTeams/6 algebra booleana e circuiti logici.pdf",
     "Modelli/Pasted image 20241124094027.png",
     "Modelli/Pasted image 20241124093451.png",
     "Modelli/Pasted image 20241124093430.png",
@@ -184,18 +187,11 @@
     "Modelli/Pasted image 20241124092839.png",
     "Modelli/Pasted image 20241124091932.png",
     "Modelli/Pasted image 20241124091802.png",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Gioco della diagonalizzazione 21_11_24_241123_151748.pdf",
     "Modelli/Pasted image 20241123142757.png",
     "Modelli/Pasted image 20241123141833.png",
     "Modelli/Pasted image 20241123110007.png",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
-    "architettura-degli-elaboratori/FileCondivisiTeams/8 Insieme-di-istruzioni-macchina.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/appunti.pdf",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Struttura Processore.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Struttura Processore.pdf",
-    "architettura-degli-elaboratori/FileCondivisiTeams/5.3 Struttura-base-del-processore.pdf",
-    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "strutture-discrete/TUTTI I TEOREMI.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
