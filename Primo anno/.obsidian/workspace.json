@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "039427ea3db74fbe",
+        "id": "d3245e42f43a3d30",
         "type": "tabs",
         "children": [
           {
-            "id": "27450069392210d1",
+            "id": "446654d363fccfa2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-                "mode": "source",
-                "source": false
+                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
               },
-              "icon": "lucide-file",
-              "title": "01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni"
+              "icon": "lucide-file-text",
+              "title": "Introduzione a C programmazione 1 (ottava edizione)"
             }
           }
         ]
@@ -170,10 +168,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "27450069392210d1",
+  "active": "446654d363fccfa2",
   "lastOpenFiles": [
-    "01_Parte1.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/8 Insieme-di-istruzioni-macchina.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/appunti 25_11_24.md",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "01_Parte1.md",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "strutture-discrete/TUTTI I TEOREMI.md",
     "algebra-lineare-e-geometria/Pdf note Garufi/Gioco della diagonalizzazione 21_11_24.pdf",
@@ -184,7 +185,6 @@
     "algebra-lineare-e-geometria/Pdf note Garufi/Base dello spazio vettoriale 24_10_24.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Sottospazidi R alla n e rappresentazioni 29_10_24.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Applicazioni Lineari 5_11_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Ultima parte sottospazi vettoriali 5_11_24.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Aglebra Booleana.md",
     "Modelli/Pasted image 20241124094027.png",
     "Modelli/Pasted image 20241124093451.png",
@@ -203,7 +203,6 @@
     "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/PUNTATORI (importante).md",
-    "Senza nome.md",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
