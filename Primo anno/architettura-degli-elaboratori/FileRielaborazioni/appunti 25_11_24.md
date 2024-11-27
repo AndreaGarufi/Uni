@@ -27,4 +27,3 @@ facoltativa                                                              facolta
 
 esame -> può chiedere come funziona lo stack in assembly , come si fa una push e un pop
 
-  

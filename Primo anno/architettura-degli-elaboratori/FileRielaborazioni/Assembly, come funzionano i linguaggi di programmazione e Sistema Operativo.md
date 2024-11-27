@@ -49,7 +49,7 @@ Loader dinamico -> carico solo le parti del programma che devo usare
 Bootstrap loader -> carico il sistema operativo in memoria all'avvio del PC
 
 **LINKER**
-è un programma essenziale nel processo di trasformazione in codice binario, questo lo fa generando un file oggetto che collega tutti gli altri file oggetti creati
+è un programma essenziale nel processo di trasformazione in codice binario, questo lo fa **generando un file oggetto che collega tutti gli altri file oggetti creati,** **infine crea un file eseguibile**
 
 **LIBRERIE**
 sono contenitori di file che raggruppano oggetti tutti dello stesso tipo e sono create dall'Archiver.

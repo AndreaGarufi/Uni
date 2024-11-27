@@ -12,8 +12,8 @@ int chiamataGiocatore();
 int banco();
 int vincita();
 
-int carteBanco = 0,cartePlayer = 0,i = 0,j = 0,k = 0;
-bool win = false;   //dal punto di vista del player quindi se è true vince il player
+int carteBanco = 0,cartePlayer = 0,i = 0,j = 0,k = 0,cartaNascosta = 0,y = 0,secondaCarta = 0;
+bool win = false,counter = false,x = false,condizione = false;   //dal punto di vista del player quindi se è true vince il player
 char chiama;
 
 int main(){
@@ -31,7 +31,7 @@ int main(){
 
 
     printf("\033[43m");
-    printf("\nBLACK JACK\n");
+    printf("\nBLACKJACK\n");
     printf("\033[0m");
 
     while(gioca != -1){
@@ -43,6 +43,8 @@ int main(){
         if(gioca == 1){
             gioco();
         }
+        condizione = false;
+        x = false;
         win = false;
         k = 0;
         cartePlayer = 0;
@@ -52,7 +54,7 @@ int main(){
 
 }
 int gioco(){
-    printf("MELOX\n");
+
     cartePlayer = 0;
     carteBanco = 0;
         
@@ -61,8 +63,12 @@ int gioco(){
 
             chiamataGiocatore();
             if(k < 1){ 
-                banco();  //viene chiamata la sua carta solo la prima volta
+                banco();  //viene chiamata la seconda carta solo la prima volta
+                if(condizione == true){
+                    break;
+                }
             }
+
             if(cartePlayer > 21 || carteBanco > 21){
                 break;
             }
@@ -74,12 +80,29 @@ int gioco(){
             scanf(" %c",&chiama);
         }while(chiama == 'S' || chiama == 's');
 
+
+        if(chiama == 'n' || chiama == 'N' || cartePlayer == 21){
+            counter = true;
+        }
+        if(counter == true){
+            printf("\nLa carta nascosta del banco era: %d",cartaNascosta);
+            counter = false;
+            x = true;
+        }
+        
         if(chiama == 'n' || chiama == 'N' || cartePlayer == 21){
             while(carteBanco < 17){
                 banco();
             }
             if(carteBanco >= 17 && carteBanco < 21){
-                vincita();
+                if(carteBanco >= cartePlayer){
+                    win = false;
+                    vincita();
+                }else{
+                    win = true;
+                    vincita();
+                }
+                
             }
             
         }
@@ -101,19 +124,35 @@ int vincita(){
 
 }
 int chiamataGiocatore(){
+    y++;
     int scelta = 0;
     j = 0;
     j = 1 + rand() %10;     //carte del player
-    
+
     if(j == 1){
-        printf("ASSO! scegli: se vale 1 o 11\n");
-        scanf("%d",&scelta);
-        
-        j = scelta;
+        if(cartePlayer == 10){
+            j = 11;
+            }else if(cartePlayer > 10){
+                j = 1;
+            }else{
+                printf("ASSO! scegli: se vale 1 o 11\n");
+                scanf("%d",&scelta);
+                j = scelta;            
+            }
+
     }
 
     cartePlayer = cartePlayer + j;
+    printf("\nCARTA = %d ",j);
     printf("\nPLAYER = %d \n",cartePlayer);
+
+    if(y == 1){
+        secondaCarta = 1 + rand() %10;
+        printf("\nSECONDA CARTA = %d ",secondaCarta);
+        cartePlayer = cartePlayer + secondaCarta;
+        printf("\nPLAYER = %d \n",cartePlayer);
+    }
+
 
     if(cartePlayer > 21){
         win = false;    //player perde
@@ -127,11 +166,35 @@ int chiamataGiocatore(){
     return 0;
 }
 int banco(){
-    k = 1;
-
+    k ++;
+    i = 0;
     i = 1 + rand() %10;     //carte del banco
+    if(k == 1){
+        cartaNascosta = 1 + rand() %10; //carta iniziale nascosta
 
+        if(cartaNascosta == 1 && i == 10 || i == 1 && cartaNascosta == 10){
+            win = false; //banco vince
+            condizione = true; //serve per farlo uscire dal while in "gioco()"
+            if(i == 10){
+                printf("\nIl banco ha fatto 21! %d + asso",i);
+            }else if(i == 1){
+                printf("\nIl banco ha fatto 21! asso + %d",cartaNascosta);
+            }   
+            vincita();              
+            return 0;
+        }        
+    }
+    if(x == true){
+        carteBanco = carteBanco + cartaNascosta;        
+        printf("\nBANCO = %d \n",carteBanco);
+        x = false;
+
+        if(carteBanco == 17){
+            return 0;
+        }
+    }
     carteBanco = carteBanco + i;
+    printf("\nCARTA = %d ",i);
     printf("\nBANCO = %d \n",carteBanco);
 
     if(carteBanco > 21){
@@ -144,5 +207,5 @@ int banco(){
     }
 
     return 0;
-
+    
 }

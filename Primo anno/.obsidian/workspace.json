@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "d3245e42f43a3d30",
+        "id": "83ad970282bd46f9",
         "type": "tabs",
         "children": [
           {
-            "id": "446654d363fccfa2",
+            "id": "79deda3d0cdf6996",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
+                "file": "architettura-degli-elaboratori/FileCondivisiTeams/8 Insieme-di-istruzioni-macchina.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Introduzione a C programmazione 1 (ottava edizione)"
+              "title": "8 Insieme-di-istruzioni-macchina"
             }
           }
         ]
@@ -168,10 +168,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "446654d363fccfa2",
+  "active": "79deda3d0cdf6996",
   "lastOpenFiles": [
     "architettura-degli-elaboratori/FileCondivisiTeams/8 Insieme-di-istruzioni-macchina.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti 25_11_24.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/appunti 25_11_24.pdf",
+    "architettura-degli-elaboratori/FileCondivisiTeams/5.1 Livello-software.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/Pipelining.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/Struttura Processore.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Aglebra Booleana.pdf",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "01_Parte1.md",
@@ -181,10 +188,6 @@
     "algebra-lineare-e-geometria/Pdf note Garufi/Teorema dell'isomorfismo 7_11_24.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Diagonalizzazione 19_11_24.pdf",
     "algebra-lineare-e-geometria/Pdf note Garufi/Continuo t Isomorfismo (matrici) 14_11_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Continuo isomorfismi 15_11_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Base dello spazio vettoriale 24_10_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Sottospazidi R alla n e rappresentazioni 29_10_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Applicazioni Lineari 5_11_24.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/Aglebra Booleana.md",
     "Modelli/Pasted image 20241124094027.png",
     "Modelli/Pasted image 20241124093451.png",
@@ -197,16 +200,12 @@
     "Modelli/Pasted image 20241123141833.png",
     "Modelli/Pasted image 20241123110007.png",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/Struttura Processore.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/Pipelining.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/PUNTATORI (importante).md",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileRielaborazioni/Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
     "ExcelProof1.png.md",
     "Tips.md",
     "strutture-discrete/FileRielaborazioni/(vecchio) Logica Proposizionale, Teoria degli Insiemi.md",
