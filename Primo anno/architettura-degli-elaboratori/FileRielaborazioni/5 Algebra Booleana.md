@@ -76,7 +76,7 @@ Un altro operatore logico importante è lo **XOR** (OR esclusivo) che restituisc
 TABELLA DI VERITA
 ![[Pasted image 20241124092839.png|200]]
 Questa è la sua porta logica:
-![[Pasted image 20241124092921.png|350]]
+![[Pasted image 20241124092921.png|350]] ^26fdc9
 
 
 Altre 2 porte logiche di largo uso sono **NAND** e **NOR** (ovvero AND e OR negati)

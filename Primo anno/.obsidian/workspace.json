@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "83ad970282bd46f9",
+        "id": "d56db6681a873c7d",
         "type": "tabs",
         "children": [
           {
-            "id": "79deda3d0cdf6996",
+            "id": "c5f4e0bc2ef39c9d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "architettura-degli-elaboratori/FileCondivisiTeams/8 Insieme-di-istruzioni-macchina.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "8 Insieme-di-istruzioni-macchina"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -75,7 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 242.5
+    "width": 234.50260543823242
   },
   "right": {
     "id": "e5cbad16aa00cfb4",
@@ -168,27 +166,38 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "79deda3d0cdf6996",
+  "active": "c5f4e0bc2ef39c9d",
   "lastOpenFiles": [
+    "architettura-degli-elaboratori/FileRielaborazioni/27 novembre 2024.md",
     "architettura-degli-elaboratori/FileCondivisiTeams/8 Insieme-di-istruzioni-macchina.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/appunti 29_11_24 parte 1.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/2 Pipelining.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/3 Struttura Processore.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/5 Algebra Booleana.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/6 Circuiti Aritmetici.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/1 Introduzione e componenti PC.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/6 Circuiti Aritmetici.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/5 Algebra Booleana.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/3 Struttura Processore.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/2 Pipelining.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti 25_11_24.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/appunti 25_11_24.pdf",
-    "architettura-degli-elaboratori/FileCondivisiTeams/5.1 Livello-software.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/Introduzione e componenti PC.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/Pipelining.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/Struttura Processore.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/Aglebra Booleana.pdf",
+    "Modelli/Pasted image 20241129214231.png",
+    "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
+    "architettura-degli-elaboratori/FileCondivisiTeams/7 Circuiti-aritmetici.pdf",
+    "Modelli/Pasted image 20241129151250.png",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "Modelli/Pasted image 20241128154058.png",
+    "programmazione-1/PUNTATORI (importante).md",
     "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "01_Parte1.md",
-    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "strutture-discrete/TUTTI I TEOREMI.md",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Gioco della diagonalizzazione 21_11_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Teorema dell'isomorfismo 7_11_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Diagonalizzazione 19_11_24.pdf",
-    "algebra-lineare-e-geometria/Pdf note Garufi/Continuo t Isomorfismo (matrici) 14_11_24.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/Aglebra Booleana.md",
     "Modelli/Pasted image 20241124094027.png",
     "Modelli/Pasted image 20241124093451.png",
     "Modelli/Pasted image 20241124093430.png",
@@ -196,25 +205,14 @@
     "Modelli/Pasted image 20241124092839.png",
     "Modelli/Pasted image 20241124091932.png",
     "Modelli/Pasted image 20241124091802.png",
-    "Modelli/Pasted image 20241123142757.png",
-    "Modelli/Pasted image 20241123141833.png",
-    "Modelli/Pasted image 20241123110007.png",
-    "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "programmazione-1/Tips Algoritmi.md",
-    "programmazione-1/PUNTATORI (importante).md",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Introduzione e componenti PC.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "ExcelProof1.png.md",
     "Tips.md",
     "strutture-discrete/FileRielaborazioni/(vecchio) Logica Proposizionale, Teoria degli Insiemi.md",
     "architettura-degli-elaboratori/appunti.md",
-    "programmazione-1/Variabili, Tipi su C.md",
-    "Modelli/nota_del_giorno.md",
-    "architettura-degli-elaboratori/Senza nome 1.md",
-    "programmazione-1/Senza nome.canvas",
-    "programmazione-1/08 ottobre 2024.md",
-    "programmazione-1/dfgrgf.md"
+    "programmazione-1/Senza nome.canvas"
   ]
 }

@@ -1,4 +1,4 @@
-[[Introduzione e componenti PC#**PIPELINE**|spiegazione pipeline breve]]
+[[1 Introduzione e componenti PC#**PIPELINE**|spiegazione pipeline breve]]
 # Pipeline
 **Il pipelining è una tecnica usata per migliorare l'efficienza della gestione delle istruzioni, le istruzioni vengono gestite in modo che ci siano più istruzioni eseguite contemporaneamente.** 
 ( processori con pipeline hanno un throughput maggiore rispetto a quelli che non la adottano)
@@ -48,7 +48,7 @@ Il beneficio rispetto al NOP è che evita i ritardi (quindi migliora le performa
 
 **Riordinamento delle istruzioni** --> riordina le istruzioni in modo che non ci siano problemi di dipendenza
 
-**Pre-fetching** --> carica le istruzioni prima [[Introduzione e componenti PC#**PREFETCH**|Pre-fetching spiegazione]]
+**Pre-fetching** --> carica le istruzioni prima [[1 Introduzione e componenti PC#**PREFETCH**|Pre-fetching spiegazione]]
 
 **Speculative execution** --> cerca di predire eventuali problemi di dipendenza e cerca di non farli accadere
 
@@ -62,7 +62,7 @@ Il problema sta nel fatto che **la CPU deve aspettare che i dati contenuti nella
 
 Esistono delle **tecniche per rallentare questi ritardi:**
 1) **Gerarchia della cache** --> si usano 3 livelli di cache (L1 L2 L3) dalla più veloce e vicina alla CPU alla più lenta posta sulla scheda madre.
-2) **Pre-fetching** --> carica in anticipo i dati nella cache [[Introduzione e componenti PC#**PREFETCH**|Pre-fetching spiegazione]]
+2) **Pre-fetching** --> carica in anticipo i dati nella cache [[1 Introduzione e componenti PC#**PREFETCH**|Pre-fetching spiegazione]]
 3) **Produrre memoria a bassa latenza** --> che siano cache o RAM più sono veloci meglio è.
 
 ### 3. **RITARDI NEI SALTI**

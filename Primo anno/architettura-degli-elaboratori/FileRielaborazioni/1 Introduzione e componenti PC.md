@@ -386,5 +386,9 @@ Turing cercò di rispondere alla domanda "can machines think?", per fare ciò fo
 
 ###### <mark style="background: #D2B3FFA6;">Deadlock: quando 2 istruzioni rimangono bloccate a causa di dipendenze reciproche</mark>
 
+###### <mark style="background: #D2B3FFA6;">Codifica Bit-Pair</mark>
+è una tecnica di compressione dei dati utilizzata per ridurre la lunghezza di una sequenza di bit senza perdere informazioni(raggruppa i bit in coppie (bit-pair))
+questa tecnica e utile per ottimizzare l'uso della memoria
+
 
 

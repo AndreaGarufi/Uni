@@ -5,7 +5,7 @@
 #include<windows.h>
 #include <stdbool.h>
 
-int gioca = 0;
+int gioca = 1;
 
 int gioco();
 int chiamataGiocatore();
@@ -13,11 +13,11 @@ int banco();
 int vincita();
 
 int carteBanco = 0,cartePlayer = 0,i = 0,j = 0,k = 0,cartaNascosta = 0,y = 0,secondaCarta = 0;
-bool win = false,counter = false,x = false,condizione = false;   //dal punto di vista del player quindi se è true vince il player
+bool win = false,counter = false,x = false,condizione = false,doppia = false;   //dal punto di vista del player quindi se è true vince il player
 char chiama;
 
 int main(){
-
+    //system("color 9F");
     srand(time(NULL));
 
     HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);                            //serve per cambiare i colori dei testi
@@ -36,17 +36,21 @@ int main(){
 
     while(gioca != -1){
         if(gioca != 1){
-            printf("Inserisci il giusto numero\n");
+            printf("Inserisci il numero giusto\n");
         }
+        printf("\n\033[32m"); 
         printf("\nPremi 1 per giocare, -1 per uscire:\n");
+        printf("\n\033[0m"); 
         scanf("%d",&gioca);
         if(gioca == 1){
             gioco();
         }
+        doppia = false;
         condizione = false;
         x = false;
         win = false;
-        k = 0;
+        k = 0; //serve per far spawnare la seconda carta solo una volta
+        y = 0; //serve per far spawnare la seconda carta solo una volta
         cartePlayer = 0;
         carteBanco = 0;
     
@@ -116,11 +120,11 @@ int vincita(){
         printf("\n\033[43m");
         printf("\nHAI VINTO\n");
         printf("\033[0m");
-        }else{
-            printf("\n\033[43m");
-            printf("\nHAI PERSO\n");
-            printf("\033[0m");
-        }
+    }else{
+        printf("\n\033[43m");
+        printf("\nHAI PERSO\n");
+        printf("\033[0m");
+    }
 
 }
 int chiamataGiocatore(){
@@ -144,13 +148,20 @@ int chiamataGiocatore(){
 
     cartePlayer = cartePlayer + j;
     printf("\nCARTA = %d ",j);
-    printf("\nPLAYER = %d \n",cartePlayer);
+    printf("\033[33m");
+    printf("PLAYER = %d \n",cartePlayer);
+    printf("\n\033[0m");
 
     if(y == 1){
         secondaCarta = 1 + rand() %10;
+        if(secondaCarta == 1 || secondaCarta == 10 && j == 1 || j == 10){
+            doppia = true;  //nel caso il player facesse 21 con le prime 2 carte deve vencire 1.5 x anziche 1x
+        }
         printf("\nSECONDA CARTA = %d ",secondaCarta);
         cartePlayer = cartePlayer + secondaCarta;
-        printf("\nPLAYER = %d \n",cartePlayer);
+        printf("\033[33m");
+        printf("PLAYER = %d \n",cartePlayer);
+        printf("\n\033[0m");
     }
 
 
@@ -185,8 +196,10 @@ int banco(){
         }        
     }
     if(x == true){
-        carteBanco = carteBanco + cartaNascosta;        
+        carteBanco = carteBanco + cartaNascosta;
+        printf("\n\033[96m");   
         printf("\nBANCO = %d \n",carteBanco);
+        printf("\n\033[0m");
         x = false;
 
         if(carteBanco == 17){
@@ -195,7 +208,9 @@ int banco(){
     }
     carteBanco = carteBanco + i;
     printf("\nCARTA = %d ",i);
+    printf("\n\033[96m"); 
     printf("\nBANCO = %d \n",carteBanco);
+    printf("\n\033[0m"); 
 
     if(carteBanco > 21){
         win = true;     //player vince
