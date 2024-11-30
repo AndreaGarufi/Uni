@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fb7fc4c446699246",
+        "id": "19a4db20e20cb5d6",
         "type": "tabs",
         "children": [
           {
-            "id": "0b914a7135168dbb",
+            "id": "0e808855509642f0",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
+                "file": "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Introduzione a C programmazione 1 (ottava edizione)"
+              "icon": "lucide-file",
+              "title": "Parte 2 RIELABORAZIONE"
             }
           }
         ]
@@ -168,20 +170,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0b914a7135168dbb",
+  "active": "0e808855509642f0",
   "lastOpenFiles": [
-    "programmazione-1/C Università/output/array/duplicati.c",
-    "programmazione-1/C Università/output/array/arrayEsercizi.c",
-    "programmazione-1/C Università/output/array/arrayDoubleMedia.c",
-    "programmazione-1/C Università/output/array/array1SeSonoDiversi.c",
-    "programmazione-1/C Università/output/array",
-    "programmazione-1/C Università/output/Nuova cartella",
-    "programmazione-1/C Università/output/random/LancioDadi6_19.c",
-    "programmazione-1/C Università/output/random",
-    "programmazione-1/C Università/output/matrici/TemperatureCitta.c",
-    "programmazione-1/C Università/output/matrici/matriceTrasposta.c",
-    "programmazione-1/C Università/output/matrici",
-    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+    "Pasted image 20241130202515.png",
+    "Pasted image 20241130201548.png",
+    "Pasted image 20241130201210.png",
+    "Pasted image 20241130194603.png",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "programmazione-1/C Università/output/puntatori/InizializzareArray.exe",
+    "programmazione-1/C Università/output/puntatori/InizializzareArray.c",
+    "programmazione-1/C Università/output/puntatori/SommaPuntatori.exe",
+    "programmazione-1/C Università/output/puntatori/SommaPuntatori.c",
+    "programmazione-1/C Università/output/puntatori/LunghezzaStringa.exe",
+    "programmazione-1/C Università/output/puntatori/LunghezzaStringa.c",
+    "programmazione-1/C Università/output/puntatori/Puntatori2.exe",
+    "programmazione-1/C Università/output/puntatori/Puntatori2.c",
     "architettura-degli-elaboratori/FileRielaborazioni/27 novembre 2024.md",
     "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti 29_11_24 parte 1.md",
@@ -204,10 +210,6 @@
     "Modelli/Pasted image 20241124094027.png",
     "Modelli/Pasted image 20241124093451.png",
     "Modelli/Pasted image 20241124093430.png",
-    "Modelli/Pasted image 20241124092921.png",
-    "Modelli/Pasted image 20241124092839.png",
-    "Modelli/Pasted image 20241124091932.png",
-    "Modelli/Pasted image 20241124091802.png",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
@@ -215,7 +217,6 @@
     "ExcelProof1.png.md",
     "Tips.md",
     "strutture-discrete/FileRielaborazioni/(vecchio) Logica Proposizionale, Teoria degli Insiemi.md",
-    "architettura-degli-elaboratori/appunti.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
