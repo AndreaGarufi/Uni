@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "d56db6681a873c7d",
+        "id": "fb7fc4c446699246",
         "type": "tabs",
         "children": [
           {
-            "id": "c5f4e0bc2ef39c9d",
+            "id": "0b914a7135168dbb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Introduzione a C programmazione 1 (ottava edizione)"
             }
           }
         ]
@@ -166,10 +168,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c5f4e0bc2ef39c9d",
+  "active": "0b914a7135168dbb",
   "lastOpenFiles": [
+    "programmazione-1/C Università/output/array/duplicati.c",
+    "programmazione-1/C Università/output/array/arrayEsercizi.c",
+    "programmazione-1/C Università/output/array/arrayDoubleMedia.c",
+    "programmazione-1/C Università/output/array/array1SeSonoDiversi.c",
+    "programmazione-1/C Università/output/array",
+    "programmazione-1/C Università/output/Nuova cartella",
+    "programmazione-1/C Università/output/random/LancioDadi6_19.c",
+    "programmazione-1/C Università/output/random",
+    "programmazione-1/C Università/output/matrici/TemperatureCitta.c",
+    "programmazione-1/C Università/output/matrici/matriceTrasposta.c",
+    "programmazione-1/C Università/output/matrici",
+    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "architettura-degli-elaboratori/FileRielaborazioni/27 novembre 2024.md",
-    "architettura-degli-elaboratori/FileCondivisiTeams/8 Insieme-di-istruzioni-macchina.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti 29_11_24 parte 1.md",
     "architettura-degli-elaboratori/FileRielaborazioni/2 Pipelining.md",
@@ -180,22 +193,12 @@
     "architettura-degli-elaboratori/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "architettura-degli-elaboratori/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/6 Circuiti Aritmetici.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/5 Algebra Booleana.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/3 Struttura Processore.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/2 Pipelining.pdf",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti 25_11_24.md",
     "Modelli/Pasted image 20241129214231.png",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
-    "architettura-degli-elaboratori/FileCondivisiTeams/7 Circuiti-aritmetici.pdf",
     "Modelli/Pasted image 20241129151250.png",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "Modelli/Pasted image 20241128154058.png",
     "programmazione-1/PUNTATORI (importante).md",
-    "strutture-discrete/FileRielaborazioni/01_Parte1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "01_Parte1.md",
     "strutture-discrete/TUTTI I TEOREMI.md",
     "Modelli/Pasted image 20241124094027.png",

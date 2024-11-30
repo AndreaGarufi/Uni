@@ -26,13 +26,4 @@ int main(){
     printf("\nnu1 scambio %d",a);
     printf("\nnu2 scambio %d",b);
 
-/*Scrivi un programma che:
-
-Chieda all'utente di inserire 5 numeri interi in un array.
-Calcoli la somma dei numeri nell'array utilizzando un puntatore per scorrere gli elementi.
-Stampi la somma finale.*/
-
-
-
-
 }

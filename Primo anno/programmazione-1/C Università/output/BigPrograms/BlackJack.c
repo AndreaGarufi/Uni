@@ -208,8 +208,8 @@ int banco(){
     }
     carteBanco = carteBanco + i;
     printf("\nCARTA = %d ",i);
-    printf("\n\033[96m"); 
-    printf("\nBANCO = %d \n",carteBanco);
+    printf("\033[96m"); 
+    printf("BANCO = %d \n",carteBanco);
     printf("\n\033[0m"); 
 
     if(carteBanco > 21){
