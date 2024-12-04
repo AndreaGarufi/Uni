@@ -71,4 +71,67 @@ Sia x un numero reale, definiamo i 2 seguenti valori:
 
 **Esempi**: ![[Pasted image 20241130202515.png|200]]
 
-**continua da slide 23**
+**DIVISIONE TRA INTERI**
+**TEOREMA** 
+Dati 2 interi a, b  ∈ ℤ con b ≠ 0, chiamati rispettivamente dividendo e divisore, esistono unici 2 interi relativi q, r, denotati rispettivamente quoziente e resto, tali che a = q · b + r con 0 ≤ r < |b|
+
+il **modulo** è il resto (r) della divisione indicato con a mod b
+
+Si noti che nel teorema definiamo il resto sempre positivo. Per dimostrare il teorema agiremo per casi: 
+1) Nel primo caso assumiamo che il dividendo a ed il divisore b siano entrambi non negativi 
+2) Nel secondo caso assumiamo che il dividendo a sia negativo ma il divisore b positivo 
+3) Nel terzo caso assumiamo che il dividendo a sia positivo e il divisore b negativo 
+4) Nel quarto caso assumiamo che il dividendo a ed il divisore b siano entrambi negativi Ed infine, dimostreremo l’unicità di quoziente e resto.
+
+**Primo caso (dividendo a, divisore b positivo)** 
+Assumiamo che a, b siano entrambi non negativi con b ≠ 0. 
+- Consideriamo il seguente insieme di numeri interi non negativi
+			  S = {a-kb | k ∈ ℕ, a-kb ≥ 0}
+- L'insieme è non vuoto, perché per k = 0 abbiamo che a ∈ S. Per l'assioma del buon ordinamento, l'insieme S ha un minimo, indichiamolo con r ≥ 0. Denotiamo con q il valore di k tale che r = a-qb da cui a = qb+r.
+- Notiamo subito che se r = a-qb è il minimo di S allora q è il massimo intero in  ℕ tale che a-qb ≥ 0, ossia q = $\lfloor a/b \rfloor$. Infatti, se esistesse k > q tale che a-kb ≥ 0 avremmo
+				(a-qb) - (a-kb) = (k-q)b ≥ 0
+  perché b > 0 e k > q. Ma questo contraddirebbe l'ipotesi che a-qb è il minimo di S
+- Viceversa, se q è il massimo intero in  ℕ tale che a-qb ≥ 0, allora per ogni k ∈  ℕ se  a-kb ≥ 0 abbiamo che q  > k e quindi
+				(a-kb) - (a-qb) = (q-k)b ≥ 0
+- perché b > 0 e q ≥ k, e tale diseguaglianza dimostra che a-qb è il minimo in S.
+- supponiamo per assurdo che sia 0 < b ≤ r. In particolare, avremmo r = b+h per qualche h≥0. Quindi
+				a = qb + r = qb + b + h = (q + 1)b + h
+- ed allora h = a-(q+1)b ∈ S ossia h = a-(q+1)b < a-qb = r che contraddice l'ipotesi che r era il minimo di S
+**Esempi**
+![[Pasted image 20241204153415.png]]
+
+**Secondo caso (dividendo a negativo, divisore b positivo)**
+ Assumiamo che b > 0 mentre a < 0
+ - Consideriamo il valore assoluto |a| > 0. Dal momento che a < 0 ne segue che |a| = -a
+ - Per quanto visto nel primo caso, esistono q' ed 0 ≤ r' < b tali che 
+				 |a| = q′b + r ′ e quindi − a = q′b + r 
+   da cui otteniamo
+				   a = (−q′)b + (−r ′)
+- Se r' = 0 abbiamo finito. Se r' > 0 abbiamo 0 < b-r' < b e possiamo riscrivere l'uguaglianza come
+	 a = (−q′)b + (−r ′) = (−q′)b − b + b + (−r ′) = (−q′ − 1)b + (b − r ′)
+  prendendo come quoziente q = -q' -1 e come resto r = b - r' il secondo caso del teorema è dimostrato.
+  come nel primo caso anche qua q = $\lfloor a/b \rfloor$
+  **Esempi**
+  ![[Pasted image 20241204174939.png]]
+**Terzo caso (dividendo a positivo, divisore b negativo)**
+Assumiamo che b < 0 e a > 0
+- Consideriamo il valore assoluto |b| > 0 e sappiamo che |b| = -b
+- Per quanto visto nel primo caso, esistono q' ed 0 ≤ r ′ < |b| tali che 
+			a = q′|b| + r ′ e quindi a = q′(−b) + r 
+  da cui otteniamo
+			a = (−q′)b + r 
+ - Prendendo come quoziente q = -q' e come resto r = r' il terzo caso del teorema è dimostrato
+ **Esempi**
+ ![[Pasted image 20241204175319.png]]
+**Quarto caso (dividendo a negativo, divisore b negativo)**
+Assumiamo che b < 0, a < 0
+- Consideriamo i valori assoluti |a| > 0 e |b| > 0 e quindi |a| = -a e |b| = -b
+- Per quanto visto nel primo caso, esistono q' ed 0 ≤ r ′ < |b| ovvero 0 ≤ r ′ < −b tali che 
+				|a| = q′|b| + r 
+- Utilizziamo i valori di q' e r' ed agendo come nel secondo caso, abbiamo
+			a = (−q′ − 1)|b| + |b| − r ′ = (q′ + 1)b − b − r 
+- Prendendo come quoziente q = q'+1 e come resto r = -b -r' il quarto caso del teorema è dimostrato
+**Esempi**
+![[Pasted image 20241204175806.png]]
+
+**continua dalla slide 34**
