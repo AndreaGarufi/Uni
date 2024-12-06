@@ -144,11 +144,48 @@ Esiste una particolare proprietà dei numeri dispari, **ovvero la somma dei prim
 Dimostriamo per induzione:
 - Caso base: n = 1 e la somma in questo caso è proprio 1 = $1^2$ 
 - (induzione): supponiamo allora che la somma dei primi n - 1 numeri dispari sia uguale a (n - 1)$^2$ 
-- Come sono fatti i primi n numeri dispari? Sono della forma 2k + 1 per 0 ≤ k ≤ n − 1 . Infatti abbiamo 1 = 2 · o +1      3 = 2 · 1 +1,     5 = 2 · 2 +1 ecc...
+- Come sono fatti i primi n numeri dispari? Sono della forma 2k + 1 per 0 ≤ k ≤ n − 1 . Infatti abbiamo 1 = 2 · 0 +1      3 = 2 · 1 +1,     5 = 2 · 2 +1 ecc...
 - In particolare, l'ennesimo numero dispari sarà allora uguale a 2(n - 1) + 1. Se lo aggiungiamo a (n - 1)$^2$ otteniamo 
   (n − 1)$^2$ + 2(n − 1) + 1 = n$^2$ − 2n + 1 + 2n − 2 + 1 = n$^2$
   che dimostra la proprietà.
 
+**Proprietà della divisibiltà**
 **Teorema**
-Siano a, b, c ∈ Z, allora
+Siano a, b, c ∈ Z, allora                                         (| è un divisore, $\nmid$ NON è un divisore)
+**(somma)** Se a | b e a | c allora a | (b+c)
+**(prodotto)** Se a | b allora a | bc
+**(Transitività)** Se a | b e b | c allora a | c
 
+**Dimostrazione**
+**Somma** 
+Dato che a | b esiste x tale che b = ax, e dato che a | c esiste y tale che c = ay. Quindi b + c = ax + ay = a(x + y) e ponendo z = x + y abbiamo trovato un intero tale che b + c = az dimostrando che a | (b + c). 
+**Prodotto** 
+Dato che a | b esiste x tale che b = ax, quindi bc = axc il che dimostra che a | bc. **Transitività** 
+Dato che a | b esiste x tale che b = ax, e dato che b | c esiste y tale che c = yb. Quindi by = axy ossia c = axy e ponendo z = xy abbiamo trovato un intero tale che c = az dimostrando che a | c.
+
+**Corollario**
+**(quadrato)** Se a | b allora a | $b^2$
+**(Combinazione lineare)** Se a | b e a | c allora a | (hb + kc) per ogni h, k ∈ Z
+
+**Dimostrazione**
+Il primo caso è una banale conseguenza del caso "prodotto". 
+Per il secondo caso, abbiamo che se a | b allora a | hb per ogni h ∈ Z e, se a | c, allora a | kc per ogni k ∈ Z. Quindi, a | (hb + kc)
+
+**Teorema** **(proprietà di 0)**
+Ogni relativo a è un divisore di 0 (a | 0) (ovvero 0 è multiplo di tutti i relativi). 0 è divisore solo di se stesso
+
+**Dimostrazione**
+- Per ogni a ∈ Z abbiamo che a · 0 = 0, quindi a | 0
+- Se 0 | a allora esiste x tale che 0  · x = a. Ma 0  · x = 0 e quindi a = 0 (quindi 0 è un divisore solo di se stesso)
+
+**Teorema** **(proprietà antisimmetrica)**
+Siano a, b ∈ Z, se a | b e b | a allora |a| = |b| quindi a = ± b (es. 12, -12)
+
+**Dimostrazione**
+- Dalle ipotesi abbiamo che b = ax e a = by. Quindi, a = axy.
+- Abbiamo allora che a(xy - 1) = 0 che implica che a = 0 oppure xy = 1
+- Se il prodotto fra interi è nullo almeno uno dei fattori deve essere nullo. Quindi:
+		-  Se a = 0 quindi b = 0y = 0 e la proprietà è dimostrata
+		- Se xy = 1 allora o sono entrambi uguali ad 1 o entrambi uguali a −1. Quindi y = ±1 e a = ±b.
+
+slide 46

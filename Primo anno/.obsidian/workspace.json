@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e6a7af3addca65d6",
+        "id": "b54cf9b70090ea19",
         "type": "tabs",
         "children": [
           {
-            "id": "41fb91f9c46c0769",
+            "id": "390d1ff72f695160",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -166,11 +166,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "41fb91f9c46c0769",
+  "active": "390d1ff72f695160",
   "lastOpenFiles": [
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/strutture/tempCodeRunnerFile.exe",
     "programmazione-1/C Università/output/strutture/output",
     "programmazione-1/C Università/output/strutture/tempCodeRunnerFile.c",
