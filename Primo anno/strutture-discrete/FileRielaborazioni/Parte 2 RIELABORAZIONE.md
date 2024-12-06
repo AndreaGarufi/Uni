@@ -134,4 +134,21 @@ Assumiamo che b < 0, a < 0
 **Esempi**
 ![[Pasted image 20241204175806.png]]
 
-**continua dalla slide 34**
+**Definizione di divisibilità**
+m è un divisore di n se il resto della loro divisione è 0 (es. 12,2   12/2 q = 6, r = 0, 2 è un divisore di 12)
+Divisore = $m | n$
+Non divisore $m \nmid n$
+    
+
+Esiste una particolare proprietà dei numeri dispari, **ovvero la somma dei primi n numeri dispari è uguale a $n^2$** 
+Dimostriamo per induzione:
+- Caso base: n = 1 e la somma in questo caso è proprio 1 = $1^2$ 
+- (induzione): supponiamo allora che la somma dei primi n - 1 numeri dispari sia uguale a (n - 1)$^2$ 
+- Come sono fatti i primi n numeri dispari? Sono della forma 2k + 1 per 0 ≤ k ≤ n − 1 . Infatti abbiamo 1 = 2 · o +1      3 = 2 · 1 +1,     5 = 2 · 2 +1 ecc...
+- In particolare, l'ennesimo numero dispari sarà allora uguale a 2(n - 1) + 1. Se lo aggiungiamo a (n - 1)$^2$ otteniamo 
+  (n − 1)$^2$ + 2(n − 1) + 1 = n$^2$ − 2n + 1 + 2n − 2 + 1 = n$^2$
+  che dimostra la proprietà.
+
+**Teorema**
+Siano a, b, c ∈ Z, allora
+

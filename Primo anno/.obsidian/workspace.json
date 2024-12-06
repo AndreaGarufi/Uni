@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5964551d363db522",
+        "id": "e6a7af3addca65d6",
         "type": "tabs",
         "children": [
           {
-            "id": "2fc8a5edda1093a1",
+            "id": "41fb91f9c46c0769",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Parte 2 RIELABORAZIONE"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -170,52 +166,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "530cb7528c6bb918",
-    "type": "floating",
-    "children": [
-      {
-        "id": "28fcbb88dd9c5062",
-        "type": "window",
-        "children": [
-          {
-            "id": "c63872286573cbaa",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "65a519d02d852420",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "Parte2-1"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 256,
-        "y": 12,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 1
-      }
-    ]
-  },
-  "active": "59476c80b7c5f8bb",
+  "active": "41fb91f9c46c0769",
   "lastOpenFiles": [
-    "Modelli/Pasted image 20241204175806.png",
-    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
+    "programmazione-1/C Università/output/strutture/tempCodeRunnerFile.exe",
+    "programmazione-1/C Università/output/strutture/output",
+    "programmazione-1/C Università/output/strutture/tempCodeRunnerFile.c",
+    "programmazione-1/FileCondivisiTeams/7) Allocazione della Memoria.pdf",
+    "programmazione-1/FileCondivisiTeams/6) Allocazione Dinamica Memoria.pdf",
+    "Modelli/Pasted image 20241204175806.png",
     "Modelli/Pasted image 20241204175319.png",
     "Modelli/Pasted image 20241204174939.png",
     "Modelli/Pasted image 20241204153415.png",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/prova.exe",
     "programmazione-1/C Università/output/prova.c",
     "Modelli/Pasted image 20241130202515.png",
@@ -224,11 +188,6 @@
     "Pasted image 20241130194603.png",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "programmazione-1/C Università/output/puntatori/InizializzareArray.exe",
-    "programmazione-1/C Università/output/puntatori/InizializzareArray.c",
-    "programmazione-1/C Università/output/puntatori/SommaPuntatori.exe",
-    "programmazione-1/C Università/output/puntatori/SommaPuntatori.c",
-    "programmazione-1/C Università/output/puntatori/LunghezzaStringa.exe",
-    "programmazione-1/C Università/output/puntatori/LunghezzaStringa.c",
     "architettura-degli-elaboratori/FileRielaborazioni/27 novembre 2024.md",
     "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti 29_11_24 parte 1.md",
@@ -244,7 +203,6 @@
     "Modelli/Pasted image 20241129214231.png",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
     "Modelli/Pasted image 20241129151250.png",
-    "Modelli/Pasted image 20241128154058.png",
     "programmazione-1/PUNTATORI (importante).md",
     "01_Parte1.md",
     "strutture-discrete/TUTTI I TEOREMI.md",
