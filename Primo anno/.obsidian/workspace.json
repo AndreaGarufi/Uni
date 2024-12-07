@@ -8,13 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "390d1ff72f695160",
+            "id": "ad87c24fba7b2718",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Parte 2 RIELABORAZIONE"
             }
           }
         ]
@@ -166,10 +170,47 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "390d1ff72f695160",
+  "floating": {
+    "id": "4e7b3f73309c7642",
+    "type": "floating",
+    "children": [
+      {
+        "id": "7992402553673cda",
+        "type": "window",
+        "children": [
+          {
+            "id": "914be839e873426d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "7438ab8bbc4ab821",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Parte2-1"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 256,
+        "y": 12,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 1
+      }
+    ]
+  },
+  "active": "ad87c24fba7b2718",
   "lastOpenFiles": [
-    "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/strutture/tempCodeRunnerFile.exe",
     "programmazione-1/C Università/output/strutture/output",

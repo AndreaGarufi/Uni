@@ -163,7 +163,7 @@ Dato che a | b esiste x tale che b = ax, e dato che a | c esiste y tale che c = 
 Dato che a | b esiste x tale che b = ax, quindi bc = axc il che dimostra che a | bc. **Transitività** 
 Dato che a | b esiste x tale che b = ax, e dato che b | c esiste y tale che c = yb. Quindi by = axy ossia c = axy e ponendo z = xy abbiamo trovato un intero tale che c = az dimostrando che a | c.
 
-**Corollario**
+**Corollario** **(altre proprietà)**
 **(quadrato)** Se a | b allora a | $b^2$
 **(Combinazione lineare)** Se a | b e a | c allora a | (hb + kc) per ogni h, k ∈ Z
 
@@ -184,8 +184,66 @@ Siano a, b ∈ Z, se a | b e b | a allora |a| = |b| quindi a = ± b (es. 12, -12
 **Dimostrazione**
 - Dalle ipotesi abbiamo che b = ax e a = by. Quindi, a = axy.
 - Abbiamo allora che a(xy - 1) = 0 che implica che a = 0 oppure xy = 1
-- Se il prodotto fra interi è nullo almeno uno dei fattori deve essere nullo. Quindi:
+- Se il pro<span style="color:rgb(0, 0, 0)">dotto fra interi è nullo almeno uno dei fattori deve essere nullo. Quindi:
 		-  Se a = 0 quindi b = 0y = 0 e la proprietà è dimostrata
 		- Se xy = 1 allora o sono entrambi uguali ad 1 o entrambi uguali a −1. Quindi y = ±1 e a = ±b.
+</span>
 
-slide 46
+**Divisori banali**
+**Teorema**
+<span style="color:rgb(0, 0, 0)">Sia a ∈ Z, allora ±a | a e ±1 | a</span>
+
+**Dimostrazione** (esercizio)
+Data la definizione di divisibilità, ovvero dati n,m ∈ Z, m è un divisore di n se il resto (r) della divisione di n per m è uguale a zero. Il resto della divisione tra un qualsiasi numero n e ± 1 è sempre uguale a 0 e quindi  ± 1 è un divisore di tutti i numeri.
+Possiamo applicare la stessa definizione ponendo m = ± n, il resto della divisione di n con se stesso darà sempre resto 0 da questo capiamo che  ± n è divisore di n.
+
+**MINIMO COMUNE MULTIPLO**
+**Definizione (MCM)** 
+Siano a, b ∈ Z non entrambi nulli, si chiama Minimo Comune Multiplo fra a e b un terzo intero m ∈ N (quindi positivo) tale che m è il più piccolo multiplo sia di a che di b. Ovvero, 
+- a | m e b | m cioè a, b sono entrambi divisori di m 
+- Se x è un multiplo comune di a e b, ovvero a | x e b | x, allora m | x cioè m divide ogni altro multiplo comune di a e b
+
+**MASSIMO COMUNE DIVISORE**
+**Definizione (MCD)**
+Siano a, b ∈ Z non entrambi nulli, si chiama Massimo Comune Divisore fra a e b un terzo intero d ∈ Z tale che: 
+- d | a e d | b cioè d è un divisore sia di a che di b 
+- Se x è un divisore comune di a e b, ovvero x | a e x | b, allora x | d cioè d è multiplo di ogni altro divisore comune di a e b
+
+**ALGORITMO DI EUCLIDE**
+
+è un modo più facile per calcolare il MCD.
+L’algoritmo si basa su questa osservazione (che è anche la dimostrazione per induzione della sua correttezza ). 
+Siano a, b ∈ N e sia b ≤ a. Allora
+**(Caso Base)** se b = 0 allora il MCD(a, b) = a. Altrimenti 
+**(Passo Induttivo)** visto che a = qb + r con 0 ≤ r < b allora
+					MCD(a, b) = MCD(b, r )
+
+Notiamo che se b | a allora a = qb ed il resto della divisione r = 0 e quindi MCD(a, b) = MCD(b, 0) = b per il caso base. Quindi, se b | a otteniamo in un passo che MCD(a, b) = b.
+
+ Dimostriamo allora che se a = qb + r con r $\neq$ 0 e 0 < r < b allora 
+ MCD(a, b) = MCD(b, r ) 
+ - Se d è un divisore di a e b allora esistono h e k tali che a = hd = qkd + r . Quindi r = d(h − qk) e quindi d è anche un divisore di r . 
+ - Viceversa, se d è un divisore di b e di r allora esistono h e k tali che a = qb + r = qkd + hd e quindi d è un divisore di a visto che a = d(qk + h)
+
+**Esempio**
+X<sub>1</sub> = 330            X<sub>2</sub> = 156 
+330%156 = 18 -> 330 = 2 · 156 + 18
+156%18 = 12 -> 156 = 8 · 18 + 12
+18%12 = 6 -> 18 = 1 · 12 +6
+12%6 = 0 -> 12 = 2 · 6 +0
+quindi MCD(330,156) = 6
+
+Notiamo che 330/6 = 55 = 5 · 11 e 156/6 = 26 = 2 · 13 e quindi il risultato è corretto
+
+Dall'esempio, notiamo anche che andando a ritroso
+6 = 18 - 12 = 
+= 18 -(156 - 8 · 18) = -156 + 9 · 18 =
+= -156 + 9 · (330 - 2 · 156) =
+= -19 · 156 + 9 · 330
+
+Quanto appena visto, suggerisce una dimostrazione costruttiva del seguente teorema che ci dice che il MCD tra due numeri si può sempre scrivere come una loro combinazione lineare
+
+**Teorema**
+ Siano a, b ∈ N non entrambi uguali a 0, allora esistono h, k ∈ Z tali che
+MCD(a,b) = a · h + b · k
+**slide 54** 
