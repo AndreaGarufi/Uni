@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b54cf9b70090ea19",
+        "id": "2976b508b0bc13c8",
         "type": "tabs",
         "children": [
           {
-            "id": "ad87c24fba7b2718",
+            "id": "8607ec4c02e3a808",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Parte 2 RIELABORAZIONE"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -170,49 +166,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "4e7b3f73309c7642",
-    "type": "floating",
-    "children": [
-      {
-        "id": "7992402553673cda",
-        "type": "window",
-        "children": [
-          {
-            "id": "914be839e873426d",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "7438ab8bbc4ab821",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "Parte2-1"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 256,
-        "y": 12,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 1
-      }
-    ]
-  },
-  "active": "ad87c24fba7b2718",
+  "active": "8607ec4c02e3a808",
   "lastOpenFiles": [
-    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
-    "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+    "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/strutture/tempCodeRunnerFile.exe",
+    "programmazione-1/C Università/output/strutture/prova.exe",
+    "programmazione-1/C Università/output/strutture/prova.c",
+    "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "programmazione-1/C Università/output/strutture/output",
     "programmazione-1/C Università/output/strutture/tempCodeRunnerFile.c",
     "programmazione-1/FileCondivisiTeams/7) Allocazione della Memoria.pdf",
@@ -222,13 +184,11 @@
     "Modelli/Pasted image 20241204174939.png",
     "Modelli/Pasted image 20241204153415.png",
     "programmazione-1/C Università/output/prova.exe",
-    "programmazione-1/C Università/output/prova.c",
     "Modelli/Pasted image 20241130202515.png",
     "Modelli/Pasted image 20241130201548.png",
     "Modelli/Pasted image 20241130201210.png",
     "Pasted image 20241130194603.png",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "programmazione-1/C Università/output/puntatori/InizializzareArray.exe",
     "architettura-degli-elaboratori/FileRielaborazioni/27 novembre 2024.md",
     "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti 29_11_24 parte 1.md",
@@ -248,7 +208,6 @@
     "01_Parte1.md",
     "strutture-discrete/TUTTI I TEOREMI.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
-    "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Introduzione e componenti PC.md",
     "ExcelProof1.png.md",

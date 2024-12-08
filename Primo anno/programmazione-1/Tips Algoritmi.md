@@ -106,7 +106,6 @@ int main(void) {
 
         for (size_t i = 0; i < SIZE - 1; ++i) {
 
-  
 
             // confronta due elementi adiacenti e scambiali se il primo
 
