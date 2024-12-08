@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2976b508b0bc13c8",
+        "id": "bd7b51b123a5fedc",
         "type": "tabs",
         "children": [
           {
-            "id": "8607ec4c02e3a808",
+            "id": "ab05fcd81ac9b3eb",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -166,7 +166,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8607ec4c02e3a808",
+  "active": "ab05fcd81ac9b3eb",
   "lastOpenFiles": [
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",

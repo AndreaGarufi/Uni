@@ -18,7 +18,8 @@ Calcolare il costo totale dei libri inseriti.*/
 #include <ctype.h>
 
 void dati(char *a[], char *autore[], int anno[], float prezzo[]);
-void stampaAlfabetico(char *libro[]);
+void stampaAlfabetico(char *libro[], char *autore[], int anno[], float prezzo[]);
+void cercaLibro(char *libro[], char *autore[], int anno[], float prezzo[], char key[], int dim);
 
 typedef struct {
     char *nome[100];
@@ -35,30 +36,38 @@ int quantita = 0;
 int main(){
 
     libriStr datiLibro;
+    char chiave[50];
 
     int operazione = 0;
-    printf("Inserisci 1 per aggiungere un libro, -1 per uscire -> ");
+    printf("Inserisci 1 per aggiungere un libro, 2 per stampare l'elenco dei libri in ordine alfabetico, 3 per cercare un libro, -1 per uscire -> ");
     
-    do{
-        scanf("%d",&operazione);
-        if(operazione == 1){
-            dati(datiLibro.nome,datiLibro.autore,datiLibro.anno,datiLibro.prezzo);
-        } 
-    }while(operazione == 1);
+    
+    scanf("%d",&operazione);
+    switch(operazione){
+
+        case 1: dati(datiLibro.nome,datiLibro.autore,datiLibro.anno,datiLibro.prezzo);
+                break;
+        case 2: stampaAlfabetico(datiLibro.nome,datiLibro.autore,datiLibro.anno,datiLibro.prezzo);
+                break;
+        case 3: printf("Inserisci il libro da cercare -> ");
+                scanf(" %[^\n]",chiave);
+                cercaLibro(datiLibro.nome,datiLibro.autore,datiLibro.anno,datiLibro.prezzo,chiave,50);
+    }
+            
     
     /*for(int i = 0; i < quantita;i++){       //stampa delle stringhe + con gli altri dati
         printf("\nNome Libro: %s \nNome Autore: %s \nAnno Pubblicazione: %d \nPrezzo: %.2f" ,datiLibro.nome[i],datiLibro.autore[i],datiLibro.anno[i],datiLibro.prezzo[i]);
         puts("");
     } */       
     
-   stampaAlfabetico(datiLibro.nome);
+   
     printf("\n\nfine");
 }
 void dati(char *libro[], char *autore[], int anno[], float prezzo[]){   //qui passa per riferimento
 
     printf("\nDATI LIBRI\n");
 
-    printf("Qunati libri vuoi inserire? -> ");
+    printf("Quanti libri vuoi inserire? -> ");
     scanf("%d",&quantita);
 
     char tempLibro[50] = {0};
@@ -93,6 +102,7 @@ void dati(char *libro[], char *autore[], int anno[], float prezzo[]){   //qui pa
 
     for(int i = 0; i < quantita;i++){       //stampa delle stringhe + con gli altri dati
         libro[i][0] = toupper(libro[i][0]); //scrive la prima lettera maiuscola
+        autore[i][0] = toupper(autore[i][0]);
         printf("\nNome Libro: %s \nNome Autore: %s \nAnno Pubblicazione: %d \nPrezzo: %.2f" ,libro[i],autore[i],anno[i],prezzo[i]);
         puts("");
     }
@@ -100,10 +110,10 @@ void dati(char *libro[], char *autore[], int anno[], float prezzo[]){   //qui pa
 
 }
 
-void stampaAlfabetico(char *libro[]){
+void stampaAlfabetico(char *libro[], char *autore[], int anno[], float prezzo[]){
 
 
-    printf("STAMPA IN ORDINE ALFABETICO\n");//orario 16:16
+    printf("\nSTAMPA IN ORDINE ALFABETICO\n");//orario 16:16
 
     //bubble sort 
 
@@ -112,16 +122,41 @@ void stampaAlfabetico(char *libro[]){
         for(int j = 0;j < quantita - 1; j++){
 
             if((int)libro[j][0] > (int)libro[j + 1][0]){
-                char *temp = libro[j];
-                libro[j] = libro[j + 1];
+
+                char *temp = libro[j];              
+                libro[j] = libro[j + 1];        //scambio stringhe libri
                 libro[j + 1] = temp;
+
+                char *tempAutore = autore[j];
+                autore[j] = autore[j + 1];          //scambio stringhe autori
+                autore[j + 1] = tempAutore;
+
+                int tempAnno = anno[j];
+                anno[j] = anno[j + 1];
+                anno[j + 1] = tempAnno;
+
+                float tempPrezzo = prezzo[j];
+                prezzo[j] = prezzo[j + 1];
+                prezzo[j + 1] = tempPrezzo;                
+
             }
         }
 
     }
     for(int i = 0;i < quantita; i++){
-        printf("\n %s ",libro[i]);
+        printf("\nNome Libro %s \nNome Autore %s \nAnno Pubblicazione %d \nPrezzo(EUR) %.2f \n",libro[i],autore[i],anno[i],prezzo[i]);
     }
-        
+}
+
+
+void cercaLibro(char *libro[], char *autore[], int anno[], float prezzo[], char key[], int dim){ //implementa la ricerca nell'array tramite chiave
+    printf("\nCERCA LIBRO\n");
+
+    printf("chiave : %s ",key);
+
+
+
+
+
 
 }
