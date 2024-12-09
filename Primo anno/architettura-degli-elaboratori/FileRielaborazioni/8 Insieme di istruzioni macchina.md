@@ -82,8 +82,13 @@ L'area di attivazione in assembly è quella porzione di memoria usata per gestir
 Call INDIRIZZO
 **Per rientrare:**
 Return
+**Parametri**
+Posso passare i parametri in 2 modi diversi:
+1) usando i registri: metto un parametro in un registro (quindi quando finisco i registri finisco i parametri da poter usare)
+2) usando uno Stack (pila): cosi impilo i parametri nella pila (parametri virtualmente illimitati)
 
 Le istruzioni di assembly cambiano in base all'architettura della CPU ad esempio una CPU a 32 bit ha 3 forme di istruzioni: --> **esame**
+
 - **Formato con operandi in registro**
 	- Sono quelle istruzione che operando sui registri della CPU, un'esempio è l'istruzione ADD R1,R2 
 - **Formato con operando immediato** 
@@ -91,4 +96,64 @@ Le istruzioni di assembly cambiano in base all'architettura della CPU ad esempio
 	 mov R1,#5 dove l'operando #5 viene fornito in modo immediato
 - **Formato per chiamata**
 	- Sono quelle istruzioni in cui il valore immediato è fornito sin da subito (non ci sono esempi immediati)
+
+**Register Transfer notation**: la notazione di trasferimento del registro in assembly è il metodo utilizzato per descrivere il movimento dei dati nei registri della CPU,indica in modo specifico come i valori vengono manipolati i dati nel passaggio da un registro ad un'altro. 
+- $R_1 \leftarrow [R_2]$ la freccia indica un trasferimento di valore
+Inoltre viene usato per specificare il funzionamento delle delle operazioni aritmetico-logiche
+- $C \leftarrow [A] + [B]$ 
+Le parentesi quadre ([ ]) servono a indicare il valore contenuto in un registro
+
+Spesso può capitare di dover salvare/caricare 1 byte (8 bit) e esistono 2 istruzioni che lo permettono:
+
+LoadByte      Rdst, LOCBYTE -> legge 8 bit e li salva nel registro
+	       registro, indirizzo di memoria
+
+StoreByte     Rsrc, LOCBYTE -> salva 8 bit di Rsrc nella locazione di memoria indicata da LOCBYTE
+ 
+
+Esistono anche delle istruzioni per moltiplicare e dividere degli operandi (anche se queste istruzioni non sono disponibili in tutti i processori)
+
+Multiply   Rk, Ri, Rj
+moltiplica Ri e Rj e salva in Rk
+
+
+Divide Rk, Ri, Rj
+divide Ri e Rj e mette il quoziente in Rk (il resto non viene calcolato)
+
+
+**Differenze tra CISC e RISC -> esame**
+![[Pasted image 20241208210002.png]]
+
+
+**Come detto in precedenza su CISC esiste l'istruzione** 
+Move destinazione, sorgente
+
+●L’operando destinazione può essere il nome di un registro o un indirizzo di memoria 
+
+●L’operando sorgente può essere il nome di un registro, un indirizzo di memoria o un valore immediato 
+
+●Nel caso che il sorgente sia un registro o un indirizzo di memoria l’istruzione esegue la seguente funzione espressa in **RTN**: destinazione ← [sorgente] 
+
+●Nel caso che il sorgente sia un valore immediato l’istruzione esegue la seguente funzione espressa in **RTN**: destinazione ← sorgente
+
+Posso anche **incrementare di 1**, ad esempio:
+(Registro)+ 
+
+es. Move ELEMENTO, (SP)+
+
+prende il valore di SP e lo mette in ELEMENTO, dopo incrementa SP di 1
+(può essere usato nell'operazione di POP)
+
+Analogamente posso **decrementare di 1**, ad esempio:
+-(registro)
+
+es. Move -(SP), NUOVOELEMENTO
+
+in questo caso prima decrementa SP e poi fa l'operazione
+(può essere usato nell'operazione di PUSH)
+
+![[Pasted image 20241208211135.png]]
+
+
+
 

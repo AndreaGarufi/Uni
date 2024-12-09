@@ -4,17 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "bd7b51b123a5fedc",
+        "id": "ee1505fdaf4e673f",
         "type": "tabs",
         "children": [
           {
-            "id": "ab05fcd81ac9b3eb",
+            "id": "be6735629900cc37",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/9 Circuiti Integrati.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "9 Circuiti Integrati"
+            }
+          },
+          {
+            "id": "53f2d1ace23aa706",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "architettura-degli-elaboratori/FileCondivisiTeams/9 Tecnologia-microelettronica.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "9 Tecnologia-microelettronica"
+            }
+          },
+          {
+            "id": "1c534b04225bffc1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "29 novembre 2024 parte 2"
             }
           }
         ]
@@ -166,32 +196,37 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ab05fcd81ac9b3eb",
+  "active": "be6735629900cc37",
   "lastOpenFiles": [
+    "architettura-degli-elaboratori/FileCondivisiTeams/9 Tecnologia-microelettronica.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/9 Circuiti Integrati.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
+    "Modelli/Pasted image 20241209144036.png",
+    "architettura-degli-elaboratori/FileRielaborazioni/appunti 29_11_24 parte 1.md",
+    "Modelli/Pasted image 20241209113431.png",
+    "architettura-degli-elaboratori/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
+    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/8 Insieme di istruzioni macchina.pdf",
+    "architettura-degli-elaboratori/FileCondivisiTeams/8 Insieme-di-istruzioni-macchina.pdf",
+    "architettura-degli-elaboratori/FileRielaborazioni/27 novembre 2024.md",
+    "Modelli/Pasted image 20241208211135.png",
+    "Modelli/Pasted image 20241208210002.png",
+    "11_Insieme-di-istruzioni-macchina.pdf.md",
+    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/strutture/tempCodeRunnerFile.exe",
     "programmazione-1/C Università/output/strutture/prova.exe",
     "programmazione-1/C Università/output/strutture/prova.c",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
-    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "programmazione-1/C Università/output/strutture/output",
     "programmazione-1/C Università/output/strutture/tempCodeRunnerFile.c",
-    "programmazione-1/FileCondivisiTeams/7) Allocazione della Memoria.pdf",
-    "programmazione-1/FileCondivisiTeams/6) Allocazione Dinamica Memoria.pdf",
     "Modelli/Pasted image 20241204175806.png",
     "Modelli/Pasted image 20241204175319.png",
     "Modelli/Pasted image 20241204174939.png",
     "Modelli/Pasted image 20241204153415.png",
-    "programmazione-1/C Università/output/prova.exe",
     "Modelli/Pasted image 20241130202515.png",
     "Modelli/Pasted image 20241130201548.png",
-    "Modelli/Pasted image 20241130201210.png",
-    "Pasted image 20241130194603.png",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/27 novembre 2024.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/appunti 29_11_24 parte 1.md",
     "architettura-degli-elaboratori/FileRielaborazioni/2 Pipelining.md",
     "architettura-degli-elaboratori/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "architettura-degli-elaboratori/FileRielaborazioni/3 Struttura Processore.md",
@@ -199,11 +234,8 @@
     "architettura-degli-elaboratori/FileRielaborazioni/5 Algebra Booleana.md",
     "architettura-degli-elaboratori/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "architettura-degli-elaboratori/FileRielaborazioni/1 Introduzione e componenti PC.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti 25_11_24.md",
-    "Modelli/Pasted image 20241129214231.png",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
-    "Modelli/Pasted image 20241129151250.png",
     "programmazione-1/PUNTATORI (importante).md",
     "01_Parte1.md",
     "strutture-discrete/TUTTI I TEOREMI.md",
@@ -211,8 +243,6 @@
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Introduzione e componenti PC.md",
     "ExcelProof1.png.md",
-    "Tips.md",
-    "strutture-discrete/FileRielaborazioni/(vecchio) Logica Proposizionale, Teoria degli Insiemi.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
