@@ -39,23 +39,33 @@ int main(){
     char chiave[50];
 
     int operazione = 0;
-    printf("Inserisci 1 per aggiungere un libro, 2 per stampare l'elenco dei libri in ordine alfabetico, 3 per cercare un libro, -1 per uscire -> ");
     
-    
-    scanf("%d",&operazione);
-    switch(operazione){
+    do{
+        printf("\nInserisci 1 per aggiungere un libro, 2 per stampare l'elenco dei libri in ordine alfabetico, 3 per cercare un libro, -1 per uscire -> ");
+        scanf("%d",&operazione);
+        switch(operazione){
 
-        case 1: dati(datiLibro.nome,datiLibro.autore,datiLibro.anno,datiLibro.prezzo);
-                break;
-        case 2: stampaAlfabetico(datiLibro.nome,datiLibro.autore,datiLibro.anno,datiLibro.prezzo);
-                break;
-        case 3: printf("Inserisci il libro da cercare -> ");
-                scanf(" %[^\n]",chiave);
-                cercaLibro(datiLibro.nome,datiLibro.autore,datiLibro.anno,datiLibro.prezzo,chiave,50);
-    }
+            case 1: dati(datiLibro.nome,datiLibro.autore,datiLibro.anno,datiLibro.prezzo);
+                    operazione = 0;
+                    break;
+            case 2: stampaAlfabetico(datiLibro.nome,datiLibro.autore,datiLibro.anno,datiLibro.prezzo);
+                    operazione = 0;
+                    break;
+            case 3: printf("Inserisci il libro da cercare -> ");
+                    scanf(" %[^\n]",chiave);
+                    chiave[0] = toupper(chiave[0]);
+                    cercaLibro(datiLibro.nome,datiLibro.autore,datiLibro.anno,datiLibro.prezzo,chiave,50);
+                    operazione = 0;
+                    break;
+            default: printf("inserisci un numero valido\n");
+                    
+                    break;
+        }        
+    }while(operazione != -1);
+
             
-    
-    /*for(int i = 0; i < quantita;i++){       //stampa delle stringhe + con gli altri dati
+    /*printf("\nPROVA\n");
+    for(int i = 0; i < quantita;i++){       //stampa delle stringhe + con gli altri dati
         printf("\nNome Libro: %s \nNome Autore: %s \nAnno Pubblicazione: %d \nPrezzo: %.2f" ,datiLibro.nome[i],datiLibro.autore[i],datiLibro.anno[i],datiLibro.prezzo[i]);
         puts("");
     } */       
@@ -75,29 +85,30 @@ void dati(char *libro[], char *autore[], int anno[], float prezzo[]){   //qui pa
     
     
     for(int i = 0; i < quantita; i++){
-        printf("Inserisci i dati del libro numero %d :\nNome Libro -> ",i+1);
-        scanf(" %[^\n]",tempLibro); //nome libro
+            printf("Inserisci i dati del libro numero %d :\nNome Libro -> ",i+1);
+            scanf(" %[^\n]",tempLibro); //nome libro
 
-        printf("\nNome Autore -> ");    
-        scanf(" %[^\n]",tempAutore); // nome autore
+            printf("\nNome Autore -> ");    
+            scanf(" %[^\n]",tempAutore); // nome autore
 
-        printf("\nAnno Pubblicazione -> ");    
-        scanf("%d",&anno[i]); // Anno Pubblicazione
+            printf("\nAnno Pubblicazione -> ");    
+            scanf("%d",&anno[i]); // Anno Pubblicazione
 
-        printf("\nPrezzo -> ");    
-        scanf("%f",&prezzo[i]); // Prezzo
+            printf("\nPrezzo -> ");    
+            scanf("%f",&prezzo[i]); // Prezzo
 
-        puts("");
-        
+            puts("");
+            
 
-        libro[i] = malloc(strlen(tempLibro) + 1);
-        autore[i] = malloc(strlen(tempAutore) + 1);
-        if(libro[i] == NULL || autore[i] == NULL){
-            printf("Abbiamo superato i Ghilowatt");
-        }else{
-            strcpy(libro[i],tempLibro);
-            strcpy(autore[i],tempAutore);
-        }
+            libro[i] = malloc(strlen(tempLibro) + 1);
+            autore[i] = malloc(strlen(tempAutore) + 1);
+            if(libro[i] == NULL || autore[i] == NULL){
+                printf("Abbiamo superato i Ghilowatt");
+            }else{
+                strcpy(libro[i],tempLibro);
+                strcpy(autore[i],tempAutore);
+            }
+
     }
 
     for(int i = 0; i < quantita;i++){       //stampa delle stringhe + con gli altri dati
@@ -148,11 +159,24 @@ void stampaAlfabetico(char *libro[], char *autore[], int anno[], float prezzo[])
     }
 }
 
-
-void cercaLibro(char *libro[], char *autore[], int anno[], float prezzo[], char key[], int dim){ //implementa la ricerca nell'array tramite chiave
+void cercaLibro(char *libro[], char *autore[], int anno[], float prezzo[], char key[], int dim){
     printf("\nCERCA LIBRO\n");
 
     printf("chiave : %s ",key);
+    int g = 0;
+    for(int i = 0; i < quantita; i++){
+
+        if(strcmp(key,libro[i]) == 0){
+            printf("-> Corrispondenza trovata: stampa dettagli: \n");
+            printf("\nNome Libro %s \nNome Autore %s \nAnno Pubblicazione %d \nPrezzo(EUR) %.2f \n",libro[i],autore[i],anno[i],prezzo[i]);
+            break;
+        }else{
+            g++;
+        }
+    }
+    if(g == quantita){
+        printf("-> Nessuna corrispondenza trovata.\n");
+    }
 
 
 
@@ -160,3 +184,7 @@ void cercaLibro(char *libro[], char *autore[], int anno[], float prezzo[], char 
 
 
 }
+
+//SISTEMA IL FATTO CHE SE INSERISCO 2 LIBRI VENGONO INSERITI E STAMPATI GIUSTI, SE INSERISCO UN TERZO LIBRO E LO STAMPO/CERCO I LIBRI VECCHI SI ELIMINANO
+//trovato problema: si sovrascrivono
+//forse serve un altro ciclo for nell'inserimento dati libri

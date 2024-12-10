@@ -246,4 +246,58 @@ Quanto appena visto, suggerisce una dimostrazione costruttiva del seguente teore
 **Teorema**
  Siano a, b ∈ N non entrambi uguali a 0, allora esistono h, k ∈ Z tali che
 MCD(a,b) = a · h + b · k
-**slide 54** 
+
+**NUMERI PRIMI**
+**Definizione numero primo**
+si definisce Numero Primo un intero relativo p tale che p ha come divisori solo quelli banali (se stesso e 1) e tale che p $\neq$ ± 1
+
+**Definizione numero coprimo**
+Due numeri a,b ∈ Z si dicono coprimi se MCD(a,b) = 1
+
+- Sappiamo allora che esistono h,k ∈ Z tali che a · h + b · k = 1
+- Vale anche il viceversa, ovvero il seguente teorema 
+**Teorema** 
+Siano a, b  ∈ N non entrambi uguali a 0, se esistono h,k ∈ Z tali che a · h + b · k = 1 allora MCD(a, b) = 1
+
+**proprietà numeri coprimi**
+1) Due numeri interi consecutivi sono coprimi
+2) Siano a,b,c ∈ Z tali che c | a · b **se c, a coprimi**. Allora c | b
+3) Siano a,b,c ∈ Z tali che a | c e b | c , **se a e b sono coprimi** allora a · b | c
+
+la seconda e terza proprietà hanno l'ipotesi della coprimalità fondamentale, infatti se non sono coprimi queste 2 proprietà non valgono
+es. 9 | 3 · 6 ma 9 $\nmid$ 3 e $\nmid$ 6
+
+(vedi dimostrazioni slide 58)
+
+**Teorema fattorizzazione degli interi**
+
+Ogni intero n > 1 si può esprimere come prodotto di numeri primi positivi ed in modo unico a meno dell'ordine dei fattori
+
+unicità nel senso che 84 = 2 x 2 x 3 x 7 e il massimo che si può fare è cambiare l'ordine dei fattori: 84 = 2 x 3 x 2 x 7, non c'è altro modo di avere 84 con diversi numeri primi
+
+**Dimostrazione**
+verrà dimostrato in 2 passi:
+1) Prima dimostriamo che dato un qualunque intero naturale n > 1 esiste una fattorizzazione di n;
+2) successivamente, dimostriamo che tale fattorizzazione è unica.
+
+1) Se, per assurdo, esistessero interi > 1 che non siano prodotto di numeri primi positivi, potremmo costruire l’insieme
+			 S = {n : n ∈ N, non prodotto di numeri primi} 
+			 
+Per l’assioma di buon ordinamento, possiamo scegliere il minimo dell’insieme S, denotiamolo con s. Per definizione, s non è primo perché se lo fosse sarebbe prodotto ( con un solo fattore) di primi positivi (se stesso) e quindi non sarebbe in S. Quindi, s ha divisori diversi da quelli banali e quindi almeno un divisore positivo 1 < d < s. Allora, esiste c ∈ N tale che s = d · c, e anche 1 < c < s. Poiché, c ed d sono minori di s, che ricordiamo è il più piccolo elemento in S, allora c e d sono prodotti di primi positivi, e quindi anche s lo è. 
+
+2) Sia 
+ $n = p_1 · p_2 · . . . · p_r = q_1 · q_2 · . . . · q_s$
+ 
+ con $p_i$ e $q_j$ numeri primi positivi. Dobbiamo dimostrare che r = s e che possiamo riordinare i fattori primi ed avere $p_i =q_i$ per ogni i. Dimostriamolo per induzione su r .
+ - Caso base: r = 1. Se $n = p_1$ allora n è primo, e quindi non ha divisori diversi da quelli banali, ossia se stesso e ±1. Quindi, da $p_1 = q_1 · q_2 · . . . · q_s$ otteniamo che 
+   $s = 1$ e $q_1 = p_1$
+ 
+ - Caso induttivo: supponiamo la tesi sia vera per r e dimostriamola per r + 1. Se 
+ 
+   $n = p_1 · p_2 · . . . · p_r · p_{r + 1} = q_1 · q_2 · . . . · q_s$
+   
+   abbiamo che $q_1$ è un divisore di $p_1 · p_2 · . . . · p_r · p_{r +1}$ e quindi, per quanto precedentemente visto, deve dividere almeno uno dei fattori. Ma sono tutti fattori primi, quindi, $q_1$ deve essere uguale ad almeno uno dei fattori, che, a meno di riordinare il prodotto, possiamo assumere sia $p_1$. Dividendo membro a membro per $p_1$ otteniamo $p_2 · . . . · p_r · p_r + 1 = q_2 · . . . · q_s$
+
+   Dal momento che (**continua slide 62**)
+   
+   
