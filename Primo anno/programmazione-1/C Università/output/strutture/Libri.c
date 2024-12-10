@@ -77,43 +77,53 @@ void dati(char *libro[], char *autore[], int anno[], float prezzo[]){   //qui pa
 
     printf("\nDATI LIBRI\n");
 
+    int nuoviLibri = 0;
+
     printf("Quanti libri vuoi inserire? -> ");
-    scanf("%d",&quantita);
+    scanf("%d",&nuoviLibri);
+
+    if (quantita + nuoviLibri > 100) {
+        printf("Errore: Non c'è spazio sufficiente per inserire tutti i libri. Puoi aggiungere massimo %d libri.\n", 100 - quantita);
+        return;
+    }    
 
     char tempLibro[50] = {0};
     char tempAutore[50] = {0};
     
     
-    for(int i = 0; i < quantita; i++){
-            printf("Inserisci i dati del libro numero %d :\nNome Libro -> ",i+1);
-            scanf(" %[^\n]",tempLibro); //nome libro
+    for(int i = 0; i < nuoviLibri; i++){
+        printf("Inserisci i dati del libro numero %d :\nNome Libro -> ",i+1);
+        scanf(" %[^\n]",tempLibro); //nome libro
 
-            printf("\nNome Autore -> ");    
-            scanf(" %[^\n]",tempAutore); // nome autore
+        printf("\nNome Autore -> ");
+        scanf(" %[^\n]",tempAutore); // nome autore
 
-            printf("\nAnno Pubblicazione -> ");    
-            scanf("%d",&anno[i]); // Anno Pubblicazione
+        printf("\nAnno Pubblicazione -> ");    
+        scanf("%d",&anno[quantita]); // Anno Pubblicazione
 
-            printf("\nPrezzo -> ");    
-            scanf("%f",&prezzo[i]); // Prezzo
+        printf("\nPrezzo -> ");    
+        scanf("%f",&prezzo[quantita]); // Prezzo
 
-            puts("");
+        puts("");
             
 
-            libro[i] = malloc(strlen(tempLibro) + 1);
-            autore[i] = malloc(strlen(tempAutore) + 1);
-            if(libro[i] == NULL || autore[i] == NULL){
-                printf("Abbiamo superato i Ghilowatt");
-            }else{
-                strcpy(libro[i],tempLibro);
-                strcpy(autore[i],tempAutore);
-            }
+        libro[quantita] = malloc(strlen(tempLibro) + 1);
+        autore[quantita] = malloc(strlen(tempAutore) + 1);
+        if(libro[quantita] == NULL || autore[quantita] == NULL){
+            printf("Abbiamo superato i Ghilowatt");
+        }else{
+            strcpy(libro[quantita],tempLibro);
+            strcpy(autore[quantita],tempAutore);
+        }
+        
+        libro[quantita][0] = toupper(libro[quantita][0]); //scrive la prima lettera maiuscola
+        autore[quantita][0] = toupper(autore[quantita][0]);
+        quantita++;
 
     }
 
     for(int i = 0; i < quantita;i++){       //stampa delle stringhe + con gli altri dati
-        libro[i][0] = toupper(libro[i][0]); //scrive la prima lettera maiuscola
-        autore[i][0] = toupper(autore[i][0]);
+        
         printf("\nNome Libro: %s \nNome Autore: %s \nAnno Pubblicazione: %d \nPrezzo: %.2f" ,libro[i],autore[i],anno[i],prezzo[i]);
         puts("");
     }

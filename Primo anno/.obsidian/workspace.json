@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "47ddb8648378b489",
+        "id": "d499cb5734dc88df",
         "type": "tabs",
         "children": [
           {
-            "id": "970b5dab334fe3ac",
+            "id": "2559eea326c8f299",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
-                "mode": "source",
-                "source": false
+                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
               },
-              "icon": "lucide-file",
-              "title": "Parte 2 RIELABORAZIONE"
+              "icon": "lucide-file-text",
+              "title": "Introduzione a C programmazione 1 (ottava edizione)"
             }
           }
         ]
@@ -170,67 +168,31 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "f4728810fd55e383",
-    "type": "floating",
-    "children": [
-      {
-        "id": "041c7ceb30148146",
-        "type": "window",
-        "children": [
-          {
-            "id": "239e9b1c0d58e031",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "6bbf7009590a716a",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "Parte2-1"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 107,
-        "y": 0,
-        "width": 1322,
-        "height": 824,
-        "maximize": true,
-        "zoom": 1
-      }
-    ]
-  },
-  "active": "970b5dab334fe3ac",
+  "active": "2559eea326c8f299",
   "lastOpenFiles": [
-    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
+    "programmazione-1/C Università/output/file/file1/file0.txt",
+    "programmazione-1/C Università/output/file/file1/file0.bat",
+    "programmazione-1/C Università/output/file/file2/clients.txt",
+    "programmazione-1/C Università/output/file/file2/fileProva.c",
+    "programmazione-1/C Università/output/file/file2/fileProva.exe",
+    "programmazione-1/C Università/output/file/file2",
+    "programmazione-1/C Università/output/file/file1/file2/clients.txt",
+    "programmazione-1/C Università/output/file/file1/file2/fileProva.exe",
+    "programmazione-1/C Università/output/file/file1/file2/fileProva.c",
+    "programmazione-1/C Università/output/file/file1/file2",
+    "programmazione-1/C Università/output/file/file1/fileInfiniti.c",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
-    "architettura-degli-elaboratori/FileCondivisiTeams/9 Tecnologia-microelettronica.pdf",
     "Modelli/Pasted image 20241209144036.png",
     "architettura-degli-elaboratori/FileRielaborazioni/appunti 29_11_24 parte 1.md",
     "Modelli/Pasted image 20241209113431.png",
     "architettura-degli-elaboratori/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/PDFs/8 Insieme di istruzioni macchina.pdf",
-    "architettura-degli-elaboratori/FileCondivisiTeams/8 Insieme-di-istruzioni-macchina.pdf",
     "architettura-degli-elaboratori/FileRielaborazioni/27 novembre 2024.md",
     "Modelli/Pasted image 20241208211135.png",
     "Modelli/Pasted image 20241208210002.png",
     "11_Insieme-di-istruzioni-macchina.pdf.md",
     "programmazione-1/Tips Algoritmi.md",
-    "programmazione-1/C Università/output/strutture/tempCodeRunnerFile.exe",
-    "programmazione-1/C Università/output/strutture/prova.exe",
-    "programmazione-1/C Università/output/strutture/prova.c",
-    "programmazione-1/C Università/output/strutture/output",
-    "programmazione-1/C Università/output/strutture/tempCodeRunnerFile.c",
     "Modelli/Pasted image 20241204175806.png",
     "Modelli/Pasted image 20241204175319.png",
     "Modelli/Pasted image 20241204174939.png",
