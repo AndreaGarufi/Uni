@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d499cb5734dc88df",
+        "id": "410c52b2426c6a4e",
         "type": "tabs",
         "children": [
           {
-            "id": "2559eea326c8f299",
+            "id": "77fadbcdf52e6075",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -168,19 +168,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2559eea326c8f299",
+  "active": "77fadbcdf52e6075",
   "lastOpenFiles": [
-    "programmazione-1/C Università/output/file/file1/file0.txt",
-    "programmazione-1/C Università/output/file/file1/file0.bat",
-    "programmazione-1/C Università/output/file/file2/clients.txt",
-    "programmazione-1/C Università/output/file/file2/fileProva.c",
-    "programmazione-1/C Università/output/file/file2/fileProva.exe",
-    "programmazione-1/C Università/output/file/file2",
-    "programmazione-1/C Università/output/file/file1/file2/clients.txt",
-    "programmazione-1/C Università/output/file/file1/file2/fileProva.exe",
-    "programmazione-1/C Università/output/file/file1/file2/fileProva.c",
-    "programmazione-1/C Università/output/file/file1/file2",
-    "programmazione-1/C Università/output/file/file1/fileInfiniti.c",
+    "programmazione-1/C Università/output/BigPrograms/BlackJack/BlackJack.exe",
+    "programmazione-1/C Università/output/BigPrograms/BlackJack/conto.txt",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "programmazione-1/C Università/output/file/file1/file811.bat",
+    "programmazione-1/C Università/output/file/file1/file810.bat",
+    "programmazione-1/C Università/output/file/file1/file809.bat",
+    "programmazione-1/C Università/output/file/file1/file808.bat",
+    "programmazione-1/C Università/output/file/file1/file807.bat",
+    "programmazione-1/C Università/output/file/file1/file806.bat",
+    "programmazione-1/C Università/output/file/file1/file805.bat",
+    "programmazione-1/C Università/output/file/file1/file804.bat",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
     "architettura-degli-elaboratori/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
