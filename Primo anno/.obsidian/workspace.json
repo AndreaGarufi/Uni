@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "410c52b2426c6a4e",
+        "id": "f376fabe047840eb",
         "type": "tabs",
         "children": [
           {
-            "id": "77fadbcdf52e6075",
+            "id": "24792da7dad48d2a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
+                "file": "programmazione-1/fseek, fwrite,fread.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Introduzione a C programmazione 1 (ottava edizione)"
+              "icon": "lucide-file",
+              "title": "fseek, fwrite,fread"
             }
           }
         ]
@@ -168,20 +170,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "77fadbcdf52e6075",
+  "active": "24792da7dad48d2a",
   "lastOpenFiles": [
+    "programmazione-1/C Università/output/file/file4/output",
+    "programmazione-1/C Università/output/file/file4/tempCodeRunnerFile.c",
+    "programmazione-1/C Università/output/file/file4/array.txt",
+    "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
+    "programmazione-1/fseek, fwrite,fread.md",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/BigPrograms/BlackJack/BlackJack.exe",
     "programmazione-1/C Università/output/BigPrograms/BlackJack/conto.txt",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/file/file1/file811.bat",
     "programmazione-1/C Università/output/file/file1/file810.bat",
     "programmazione-1/C Università/output/file/file1/file809.bat",
     "programmazione-1/C Università/output/file/file1/file808.bat",
-    "programmazione-1/C Università/output/file/file1/file807.bat",
-    "programmazione-1/C Università/output/file/file1/file806.bat",
-    "programmazione-1/C Università/output/file/file1/file805.bat",
-    "programmazione-1/C Università/output/file/file1/file804.bat",
-    "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
     "architettura-degli-elaboratori/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "Modelli/Pasted image 20241209144036.png",
@@ -215,7 +218,6 @@
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "programmazione-1/Traduzione e linguaggi algoritmi.md",
     "Introduzione e componenti PC.md",
-    "ExcelProof1.png.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
