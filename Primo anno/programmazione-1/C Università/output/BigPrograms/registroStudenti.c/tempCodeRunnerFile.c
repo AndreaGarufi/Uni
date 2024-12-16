@@ -1,1 +1,1 @@
-char nome[50] = {""};
+cou

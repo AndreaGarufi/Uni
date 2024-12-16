@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d54630c960cd576c",
+        "id": "102344bf6b93284c",
         "type": "tabs",
         "children": [
           {
-            "id": "7bc9f3e3e9faf8fc",
+            "id": "a4e412e9ad976f48",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -170,10 +170,48 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7bc9f3e3e9faf8fc",
+  "floating": {
+    "id": "7168743c09c4c7fc",
+    "type": "floating",
+    "children": [
+      {
+        "id": "a7b6775ec53e2da2",
+        "type": "window",
+        "children": [
+          {
+            "id": "ceaad68885616e8f",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "bf8894ee9b8bdcb1",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Parte2-1"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 407,
+        "y": 208,
+        "width": 481,
+        "height": 481,
+        "maximize": true,
+        "zoom": 1
+      }
+    ]
+  },
+  "active": "a4e412e9ad976f48",
   "lastOpenFiles": [
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "Modelli/Pasted image 20241215102619.png",
     "Modelli/Pasted image 20241215102503.png",
     "Modelli/Pasted image 20241215102009.png",
@@ -182,7 +220,6 @@
     "programmazione-1/C Università/output/file/file4/output",
     "programmazione-1/C Università/output/file/file4/tempCodeRunnerFile.c",
     "programmazione-1/C Università/output/file/file4/array.txt",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/BigPrograms/BlackJack/BlackJack.exe",
     "programmazione-1/C Università/output/BigPrograms/BlackJack/conto.txt",
     "programmazione-1/C Università/output/file/file1/file811.bat",

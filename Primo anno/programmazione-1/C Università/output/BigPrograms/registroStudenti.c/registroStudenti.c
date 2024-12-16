@@ -28,7 +28,7 @@ typedef struct{
 }prodotto;
 
 int visualizza(prodotto array[100], int dim, prodotto dati); //dim indica la quantita di prodotti presenti nell'array (ogni elemento dell'array contiene una struct prodotto [con tutti i suoi dati dentro])
-int aggiungi(prodotto array[100], int dim, prodotto dati);
+int aggiungi(prodotto array[100], int *dim, prodotto dati);
 int aggiorna(prodotto array[100], int dim, prodotto dati);
 int salva();
 
@@ -38,6 +38,7 @@ int main(){
     prodotto dati;
     prodotto arrayProdotto[100];
     int prodotti = 0;
+    int *prodottiPtr = NULL;
 
     printf("INVENTARIO\n");
 
@@ -47,7 +48,8 @@ int main(){
         switch(operazione){
             case 1: visualizza(arrayProdotto,prodotti,dati);
                 break;
-            case 2: aggiungi(arrayProdotto,prodotti,dati);
+            case 2: aggiungi(arrayProdotto,&prodotti,dati);
+                //printf("\n%d\n",prodotti);
                 break;
             case 3: aggiorna(arrayProdotto,prodotti,dati);
                 break;
@@ -80,25 +82,27 @@ int visualizza(prodotto array[100], int dim, prodotto dati){
     return 0;
 }
 
-int aggiungi(prodotto array[100], int dim, prodotto dati){
+int aggiungi(prodotto array[100], int *dim, prodotto dati){
 
+    int counter = *dim;
+    printf("%d counter",counter);
     printf("\nAGGIUNGI\n");
 
-    if(dim == 0){
+    if(counter == 0){
         printf("Non ci sono prodotti:\nAggiungili:\n");
 
         printf("Inserisci il NOME PRODOTTO: --> ");
         scanf(" %[^\n]",dati.nome);     //sistemare l'inseirimento che non viene preso e sistemare il passggio di "prodotti" aka dim per riferiemnto
-
-        
-
+        counter++;
     }else{
-        for(int i = 0; i < dim; i++){
+        for(int i = 0; i < counter; i++){
             printf("Inserisci il prodotto\n");
 
             break;
         }
     }
+    dim = &counter;
+    printf("\ncontatore %d",counter);
     return 0;
 }
 

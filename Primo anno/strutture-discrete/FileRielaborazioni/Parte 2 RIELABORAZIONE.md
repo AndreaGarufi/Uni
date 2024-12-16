@@ -338,6 +338,84 @@ quindi questo è un **assurdo**
 **Come si calcolano tutti i numeri primi minori o uguali ad un numero prefissato ?**
 Posso usare il **crivello di Eratostene**
 
+ **Come funziona?**
+ Supponiamo di voler calcolare tutti i numeri primi tra 2 e n.
+ 1. Scriviamo in sequenza tutti i numeri naturali compresi tra 2 e n
+ 2. partiamo dal numero 2 e cancelliamo dalla sequenza tutti i multipli di 2.
+ 3. ad ogni passo successivo prendiamo il primo numero che non è stato cancellato e cancelliamo tutti i suoi multipli
+ 4. quando abbiamo cancellato tutti i multipli del numero più grande che sia minore o uguale a $\sqrt{n}$ ci fermiamo
+ 5. tutti i numeri rimasti sono compresi tra 2 e n
+
+(Guarda esempio slide 68-72)
+
+
+
+**CRITERI DI DIVISIBILITA'**
+
+Esistono delle regole molto semplici per verificare, in alcuni casi speciali, se un numero a divide un numero b.
+
+Elencherò tutte le divisibità che spiegherò:
+1. **Divisibilità per 2**
+2. **Divisibilità per 3**
+3. **Divisibilità per 5**
+4. **Divisibilità per 7**
+5. **Divisibiltà per altri numeri**
+6. **Divisibiltà per 9**
+
+
+
+7) **Divisibilità per 2**:
+   Un numero n è divisibile per 2 **se e solo se è pari**
+   
+2) **Divisibilità per 3**:
+   Un numero n è divisibile per 3 **se e solo se la somma delle sue cifre è divisibile per 3.**
+   Si può reiterare il procedimento fino ad arrivare a 3,6,9 
+   es. 1590 = 1+5+9+0 = 15 = 1+5 = 6 -> è divisibile per 3
+   
+3) **Divisibilità per 5**:
+   Un numero n è divisibile per 5 **se e solo se l'ultima cifra è 0 o 5**
+   
+4) **Divisibilità per 7**:
+   Un numero è divisibile per 7 **se e solo se dopo aver diviso 7 per 10, q - 2r è divisibile per 7 (o che venga 0)**
+   Si può reiterare il procedimento fino ad arrivare ad un numero facilmente divisibile per 7
+   es. 84/10 -> 8 - 2 · 4 = 0 -> è divisibile per 7
+   581/10 -> 58 - 2 · 1 = 56 -> è divisibile per 7
+   582/10 -> 58 - 2 · 2 = 54 -> non è divisibile per 7
+   
+5) **Divisibiltà per altri numeri**
+   Per altri numeri primi vale la stessa cosa del 7 solo che cambia il numero con cui moltiplichiamo il resto quindi -> q + a · r è divisibile per p:
+   
+
+| p   | a   |
+| --- | --- |
+| 7   | -2  |
+| 13  | 4   |
+| 17  | -5  |
+| 19  | 2   |
+| 23  | 7   |
+| 11  | -1  |
+- 13 divide n se q + 4r è divisibile per 13
+- 17 divide n se q − 5r è divisibile per 17 
+- 19 divide n se q + 2r è divisibile per 19 
+- 23 divide n se q + 7r è divisibile per 23
+- 11 divide n se q - r è divisibile per 11
+
+
+
+**Radice Numerica**
+
+**Definizione**
+dato n ∈ N la radice numeri di n, chiamiamola ρ(n) è la somma delle sue cifre reiterata sino ad ottenere una sola cifra:
+198 = 18 = 9 -> ρ(198) = 9                                       (ρ(n) -> ro di enne)
+
+
+**Divisibiltà per 9**
+Un numero n è divisibile per 9 **se e solo se la somma delle sue cifre è un numero divisibile per 9, ossia se  ρ(n) = 9**
+
+
+**Adesso scopriamo perché $\sqrt{2}$ non è un numero razionale**
+
+
 
 
 
