@@ -4,6 +4,7 @@
         "type_traits": "c",
         "stdbool.h": "c",
         "stdio.h": "c",
-        "cstdlib": "c"
+        "cstdlib": "c",
+        "stdlib.h": "c"
     }
 }

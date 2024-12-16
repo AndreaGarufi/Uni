@@ -296,8 +296,48 @@ Per l’assioma di buon ordinamento, possiamo scegliere il minimo dell’insieme
  
    $n = p_1 · p_2 · . . . · p_r · p_{r + 1} = q_1 · q_2 · . . . · q_s$
    
-   abbiamo che $q_1$ è un divisore di $p_1 · p_2 · . . . · p_r · p_{r +1}$ e quindi, per quanto precedentemente visto, deve dividere almeno uno dei fattori. Ma sono tutti fattori primi, quindi, $q_1$ deve essere uguale ad almeno uno dei fattori, che, a meno di riordinare il prodotto, possiamo assumere sia $p_1$. Dividendo membro a membro per $p_1$ otteniamo $p_2 · . . . · p_r · p_r + 1 = q_2 · . . . · q_s$
+   abbiamo che $q_1$ è un divisore di $p_1 · p_2 · . . . · p_r · p_{r +1}$ e quindi, per quanto precedentemente visto, deve dividere almeno uno dei fattori. Ma sono tutti fattori primi, quindi, $q_1$ deve essere uguale ad almeno uno dei fattori, che, a meno di riordinare il prodotto, possiamo assumere sia $p_1$. Dividendo membro a membro per $p_1$ otteniamo $p_2 · . . . · p_r · p_{r + 1} = q_2 · . . . · q_s$
 
-   Dal momento che (**continua slide 62**)
+   Dal momento che:
+   $p_2 · . . . · p_r · p_{r + 1} = q_2 · . . . · q_s$
+   e i fattori del primo membro sono r possiamo applicare l'ipotesi induttiva
+   Abbiamo allora che il numero dei fattori a primo membro è uguale al numero dei fattori a secondo membro, ossia r = s - 1 e quindi $q_2,.....,q_s$ a meno dell'ordine 
+   - poiché anche $p_1 = q_1$ il teorema è dimostrato
+
+
+**Teorema di Euclide**
+I numeri primi sono infiniti
+**Dimostrazione**
+![[Pasted image 20241215101727.png]]
+
+Un altro esempio del fatto che i numeri primi sono infiniti lo da il:
+**Teorema di Bertrand-Chebyshev**
+Per ogni n ≥ 2 esiste un numero primo p tale che n < p < 2n.
+
+
+
+I numeri primi non solo sono infiniti ma anche distribuiti in maniera frequente, infatti vale il: 
+**Teorema della densità dei numeri primi**
+Sia n ∈ N e sia π(n) il numero di "numeri primi" minori o uguali ad n. Allora:
+![[Pasted image 20241215102009.png|180]]
+![[Pasted image 20241215102503.png]]
+
    
-   
+   ![[Pasted image 20241215102619.png]]
+
+**Come si verifica se un numero n è primo?**
+
+Bisogna capire se ha altri divisori oltre a quelli banali: 
+Posso controllare tutti i numeri interi compresi tra 2 e $\sqrt{n}$ 
+infatti se il più piccolo divisore di n, chiamiamolo h, fosse maggiore di $\sqrt{n}$ avremmo:
+
+n = h · q > $\sqrt{n}$ · $\sqrt{n}$ = n
+quindi questo è un **assurdo**
+
+
+**Come si calcolano tutti i numeri primi minori o uguali ad un numero prefissato ?**
+Posso usare il **crivello di Eratostene**
+
+
+
+
