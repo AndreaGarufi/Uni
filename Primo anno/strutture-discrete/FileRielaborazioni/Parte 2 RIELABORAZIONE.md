@@ -443,4 +443,43 @@ Congruenza -> a ≡ b(mod m) ->(a è congruo b modulo m)
 es. 12 ≡ 9(mod 9): infatti 12 mod 3 = 0 e 9 mod 3 = 0
 -15 ≡ 9(mod 4): infatti -15 mod 4 = 1 e 9 mod 4 = 1
 
-continua da slide 91
+**PROPRIETA' DELLA CONGRUENZA**
+**Riflessiva**: Per ogni a ∈ Z è vero che a ≡ a(mod m)? Si, perché 0 = a − a è multiplo di m (lo 0 è multiplo di qualunque numero.)
+
+**Simmetrica**: Se a ≡ b(mod m) allora a − b = km per qualche k ∈ Z e quindi, moltiplicando per −1 otteniamo b − a = (−k)m ossia b ≡ a(mod m)
+
+**Transitiva**: Se a ≡ b(mod m) e b ≡ c(mod m) abbiamo che esistono h, k ∈ Z tali che a − b = hm e b − c = km. Sommando membro a membro le ultime due uguaglianze otteniamo: a − c = (h + k)m e quindi a ≡ c(mod m).
+
+ **Proprietà  ->** se a ≡ b(mod m) allora a ≡ b(mod( −m)
+
+**Congruenze:
+modulo 0 -> a ≡ b(mod( 0) se e solo se a-b = 0
+modulo 1 -> qualsiasi numero è congruo ad un altro se il modulo è 1
+modulo 2 -> a ≡ b(mod( 2) se e solo se a-b è un numero pari**
+
+Nella **classe di equivalenza** rispetto alla congruenza modulo $m$, ci stanno **tutti gli interi** che hanno lo **stesso resto** quando vengono divisi per $m$. E si denota con $[a]_m$
+
+**Congruenze aritmetiche**
+**Dato a ∈ Z come facciamo a stabilire in quale classe resto sta?**
+$[a]_m = [r ]_m$ dove r è il resto della divisione di a per m. Quindi se m = 5 e a = 22 allora eseguendo la divisione abbiamo 22 : 5 = 4 con resto di 2, ottenendo che $[22]_5 = [2]_5$ 
+
+**Teorema**
+Dato m ∈ N e dati a, b ∈ Z tali che a ≡ b(mod m), allora comunque prendiamo c, d ∈ Z tali che c ≡ d(mod m) abbiamo
+1) a + c ≡ b + d(mod m) 
+2) a · c ≡ b · d(mod m)
+
+Grazie a questo teorema **sappiamo che se ad una congruenza sommiamo o moltiplichiamo una stessa quantità la congruenza rimane**
+
+**Proprietà**
+1) (a + b) mod m = (a mod m + b mod m)
+2) a · b) mod m = ((a mod m) · (b mod m))
+3) $a^n$ ≡ $(a\,\, mod\,\, m)^n$ 
+4) $a^h · b^k\,\, mod\,\, m = (a\,\, mod\,\, m)^h · (b\,\, mod\,\, m)^k$ 
+
+es 1) 60 mod 7 = (50 +10) mod 7
+es 2) 60 mod 7 = (6 · 10) mod 7
+es 3) $13^2$ mod 10 = (13 mod 10)$^2$ 
+es 4) 41503 mod 5 = ($11^2$ mod 5) · ($7^3$ mod 5)    
+
+(nella slide 100 è scritto diverso c'è un altro mod 5 dopo (chiedi a girlando))
+

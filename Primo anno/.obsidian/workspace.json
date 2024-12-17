@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7b2e0e3a19629713",
+        "id": "e3e987b219d68855",
         "type": "tabs",
         "children": [
           {
-            "id": "c880d3b806a21cd7",
+            "id": "b58915de80df7f8b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -40,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTime"
+                "sortOrder": "byCreatedTimeReverse"
               },
               "icon": "lucide-folder-closed",
               "title": "Esplora risorse"
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234.50260543823242
+    "width": 266.5
   },
   "right": {
     "id": "e5cbad16aa00cfb4",
@@ -171,19 +171,19 @@
     }
   },
   "floating": {
-    "id": "d29d03227c432fff",
+    "id": "26f192c911f29efe",
     "type": "floating",
     "children": [
       {
-        "id": "26aae693c79801ce",
+        "id": "a4f29281b1e6aca1",
         "type": "window",
         "children": [
           {
-            "id": "ba495fd93694c833",
+            "id": "9ce35ac41a7c3d20",
             "type": "tabs",
             "children": [
               {
-                "id": "2b2bc25762c6cb4a",
+                "id": "4255fd6e1f23057b",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -198,28 +198,29 @@
           }
         ],
         "direction": "vertical",
-        "x": -1009,
-        "y": -103,
-        "width": 1058,
+        "x": -1164,
+        "y": -192,
+        "width": 1032,
         "height": 659,
         "maximize": true,
         "zoom": 1
       }
     ]
   },
-  "active": "c880d3b806a21cd7",
+  "active": "b58915de80df7f8b",
   "lastOpenFiles": [
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+    "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "architettura-degli-elaboratori/Laboratorio/2.0-IstruzioniMacchina.pdf",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/somma.s",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/istruzion2.s",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/istruzion3.s",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/Istruzioni1.s",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/BigPrograms/Libri.exe",
     "programmazione-1/C Università/output/BigPrograms/Libri.c",
     "architettura-degli-elaboratori/Laboratorio/Assembly/assembly3",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/numero2",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/assembly",
-    "architettura-degli-elaboratori/Laboratorio/Assembly",
-    "architettura-degli-elaboratori/Laboratorio/Nuova cartella",
-    "architettura-degli-elaboratori/Teoria/FileCondivisiTeams/9 Tecnologia-microelettronica.pdf",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/appunti 29_11_24 parte 1.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
@@ -249,7 +250,6 @@
     "programmazione-1/Tips Algoritmi.md",
     "Modelli/Pasted image 20241204175806.png",
     "Modelli/Pasted image 20241204175319.png",
-    "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "architettura-degli-elaboratori/FileRielaborazioni/2 Pipelining.md",
     "architettura-degli-elaboratori/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "architettura-degli-elaboratori/FileRielaborazioni/3 Struttura Processore.md",

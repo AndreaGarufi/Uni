@@ -43,7 +43,7 @@ int main(){
     printf("INVENTARIO\n");
 
     do{
-        printf("\nSeleziona:\n1 per visualizzare l'inventario\n2 per aggiungere un prodotto\n3 per aggiornare la quantita' di un prodotto esistente\n4 per salvare l'inventario su un file\n-1 per uscire\n");
+        printf("\n\nSeleziona:\n1 per visualizzare l'inventario\n2 per aggiungere un prodotto\n3 per aggiornare la quantita' di un prodotto esistente\n4 per salvare l'inventario su un file\n-1 per uscire\n\n");
         scanf("%d",&operazione);
         switch(operazione){
             case 1: visualizza(arrayProdotto,prodotti,dati);
@@ -114,9 +114,27 @@ int aggiungi(prodotto array[100], int *dim, prodotto dati, char a[50],int *codic
         counter++;
     }else{
         for(int i = 0; i < counter; i++){           //per ora funziona solo l'inserimento di un prodotto, se ne devono inserire anche altri quindi sistema questo else
-            printf("Inserisci il prodotto\n");
-            scanf(" %[^\n]",dati.nome);
 
+            printf("Inserisci il NOME PRODOTTO: --> ");
+            scanf(" %[^\n]",a);
+            for(int i = 0; i < 50; i++){
+                dati.nome[i] = a[i];
+            }
+
+            printf("Inserisci il CODICE PRODOTTO --> ");
+            scanf("%d",codicePtr);
+
+            printf("Inserisci il PREZZO(EUR) --> ");
+            scanf("%f",prezzoPtr);     
+
+            printf("Inserisci la QUANTITA' --> ");
+            scanf("%d",quantitaPtr);
+
+
+            dati.codiceProdotto = *codicePtr;
+            dati.prezzo = *prezzoPtr;
+            dati.quantita = *quantitaPtr;
+            
             counter++;
             break;
         }
