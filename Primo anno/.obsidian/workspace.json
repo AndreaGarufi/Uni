@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "102344bf6b93284c",
+        "id": "7b2e0e3a19629713",
         "type": "tabs",
         "children": [
           {
-            "id": "a4e412e9ad976f48",
+            "id": "c880d3b806a21cd7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -171,19 +171,19 @@
     }
   },
   "floating": {
-    "id": "7168743c09c4c7fc",
+    "id": "d29d03227c432fff",
     "type": "floating",
     "children": [
       {
-        "id": "a7b6775ec53e2da2",
+        "id": "26aae693c79801ce",
         "type": "window",
         "children": [
           {
-            "id": "ceaad68885616e8f",
+            "id": "ba495fd93694c833",
             "type": "tabs",
             "children": [
               {
-                "id": "bf8894ee9b8bdcb1",
+                "id": "2b2bc25762c6cb4a",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -198,33 +198,44 @@
           }
         ],
         "direction": "vertical",
-        "x": 407,
-        "y": 208,
-        "width": 481,
-        "height": 481,
+        "x": -1009,
+        "y": -103,
+        "width": 1058,
+        "height": 659,
         "maximize": true,
         "zoom": 1
       }
     ]
   },
-  "active": "a4e412e9ad976f48",
+  "active": "c880d3b806a21cd7",
   "lastOpenFiles": [
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "programmazione-1/C Università/output/BigPrograms/Libri.exe",
+    "programmazione-1/C Università/output/BigPrograms/Libri.c",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/assembly3",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/numero2",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/assembly",
+    "architettura-degli-elaboratori/Laboratorio/Assembly",
+    "architettura-degli-elaboratori/Laboratorio/Nuova cartella",
+    "architettura-degli-elaboratori/Teoria/FileCondivisiTeams/9 Tecnologia-microelettronica.pdf",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/appunti 29_11_24 parte 1.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/29 novembre 2024 parte 2.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "Modelli/Pasted image 20241215102619.png",
     "Modelli/Pasted image 20241215102503.png",
     "Modelli/Pasted image 20241215102009.png",
     "Modelli/Pasted image 20241215101727.png",
     "programmazione-1/fseek, fwrite,fread.md",
-    "programmazione-1/C Università/output/file/file4/output",
-    "programmazione-1/C Università/output/file/file4/tempCodeRunnerFile.c",
-    "programmazione-1/C Università/output/file/file4/array.txt",
-    "programmazione-1/C Università/output/BigPrograms/BlackJack/BlackJack.exe",
-    "programmazione-1/C Università/output/BigPrograms/BlackJack/conto.txt",
-    "programmazione-1/C Università/output/file/file1/file811.bat",
-    "programmazione-1/C Università/output/file/file1/file810.bat",
-    "programmazione-1/C Università/output/file/file1/file809.bat",
     "architettura-degli-elaboratori/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "Modelli/Pasted image 20241209144036.png",
@@ -243,17 +254,6 @@
     "architettura-degli-elaboratori/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "architettura-degli-elaboratori/FileRielaborazioni/3 Struttura Processore.md",
     "architettura-degli-elaboratori/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/5 Algebra Booleana.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/6 Circuiti Aritmetici.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/1 Introduzione e componenti PC.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/appunti 25_11_24.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/appunti.md",
-    "programmazione-1/PUNTATORI (importante).md",
-    "01_Parte1.md",
-    "strutture-discrete/TUTTI I TEOREMI.md",
-    "strutture-discrete/FileRielaborazioni/Tips.md",
-    "programmazione-1/Traduzione e linguaggi algoritmi.md",
-    "Introduzione e componenti PC.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }

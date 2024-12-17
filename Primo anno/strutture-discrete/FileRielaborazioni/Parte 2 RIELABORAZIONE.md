@@ -415,7 +415,32 @@ Un numero n è divisibile per 9 **se e solo se la somma delle sue cifre è un nu
 
 **Adesso scopriamo perché $\sqrt{2}$ non è un numero razionale**
 
+Dimostriamo ragionando per assurdo:
+- Assumiamo che esistano 2 numeri, a e b tali che $\sqrt{2} = \frac{a}{b}$
+- Assumiamo che la frazione sia ridotta, ovvero il MCD(a,b) sia 1. Se non fosse cosi potremmo dividere numeratore e denominatore per il loro MCD ed ottenere lo stesso valore
+- Allora, almeno uno dei 2 numeri deve essere dispari
+- Elevando al quadrato otteniamo
+
+  $2b^2 = a^2$
+
+- Quindi il quadrato di a è pari ed allora anche a pari, ovvero esiste k tale che a = 2k
+- Avremo allora
+  $2b^2 = a^2 = 4k^2$ e quindi $b^2 = 2k^2$
+- Allora anche b è pari, che contraddice la nostra ipotesi iniziale
 
 
 
+**ARITMETICA MODULARE**
 
+L'aritmetica modulare riguarda il calcolo sui resti delle divisioni tra interi rispetto ad un divisore fissato.
+
+il resto (r) è denotato da: **n mod m** (n è la base, m è il modulo)
+
+se 2 numeri hanno lo stesso modulo e stesso resto si dicono congruenti.
+a mod m = b mod m
+Congruenza -> a ≡ b(mod m) ->(a è congruo b modulo m)
+
+es. 12 ≡ 9(mod 9): infatti 12 mod 3 = 0 e 9 mod 3 = 0
+-15 ≡ 9(mod 4): infatti -15 mod 4 = 1 e 9 mod 4 = 1
+
+continua da slide 91

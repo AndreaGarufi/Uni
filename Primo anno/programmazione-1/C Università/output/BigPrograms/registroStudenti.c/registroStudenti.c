@@ -28,7 +28,7 @@ typedef struct{
 }prodotto;
 
 int visualizza(prodotto array[100], int dim, prodotto dati); //dim indica la quantita di prodotti presenti nell'array (ogni elemento dell'array contiene una struct prodotto [con tutti i suoi dati dentro])
-int aggiungi(prodotto array[100], int *dim, prodotto dati);
+int aggiungi(prodotto array[100], int *dim, prodotto dati, char a[50],int *codicePtr, float *prezzoPtr, int *quantitaPtr);
 int aggiorna(prodotto array[100], int dim, prodotto dati);
 int salva();
 
@@ -39,7 +39,7 @@ int main(){
     prodotto arrayProdotto[100];
     int prodotti = 0;
     int *prodottiPtr = NULL;
-
+    
     printf("INVENTARIO\n");
 
     do{
@@ -48,8 +48,8 @@ int main(){
         switch(operazione){
             case 1: visualizza(arrayProdotto,prodotti,dati);
                 break;
-            case 2: aggiungi(arrayProdotto,&prodotti,dati);
-                //printf("\n%d\n",prodotti);
+            case 2: prodotti = aggiungi(arrayProdotto,&prodotti,dati,dati.nome,&dati.codiceProdotto,&dati.prezzo,&dati.quantita);
+                //printf("(MAIN)Codice: %d\n" ,dati.codiceProdotto);
                 break;
             case 3: aggiorna(arrayProdotto,prodotti,dati);
                 break;
@@ -68,7 +68,6 @@ int main(){
 }
 
 int visualizza(prodotto array[100], int dim, prodotto dati){
-    int codice = 0;
 
     printf("\nVISUALIZZA\n");
     
@@ -76,34 +75,54 @@ int visualizza(prodotto array[100], int dim, prodotto dati){
         printf("Non ci sono prodotti\n");
     }else{
         for(int i = 0;i < dim; i++){
-            printf("Nome Prodotto: %s\nCodice: %d\nPrezzo: %.2f\nQuantita': %d\n" ,dati.nome[50],dati.codiceProdotto,dati.prezzo,dati.quantita);
+            printf("Nome Prodotto: %s\nCodice: %d\nPrezzo: %.2f\nQuantita': %d\n" ,dati.nome,dati.codiceProdotto,dati.prezzo,dati.quantita);
         }
     }
     return 0;
 }
 
-int aggiungi(prodotto array[100], int *dim, prodotto dati){
+int aggiungi(prodotto array[100], int *dim, prodotto dati, char a[50],int *codicePtr, float *prezzoPtr, int *quantitaPtr){
 
     int counter = *dim;
-    printf("%d counter",counter);
+
     printf("\nAGGIUNGI\n");
 
     if(counter == 0){
         printf("Non ci sono prodotti:\nAggiungili:\n");
 
         printf("Inserisci il NOME PRODOTTO: --> ");
-        scanf(" %[^\n]",dati.nome);     //sistemare l'inseirimento che non viene preso e sistemare il passggio di "prodotti" aka dim per riferiemnto
+        scanf(" %[^\n]",a);
+        for(int i = 0; i < 50; i++){
+            dati.nome[i] = a[i];
+        }
+
+        printf("Inserisci il CODICE PRODOTTO --> ");
+        scanf("%d",codicePtr);
+
+        printf("Inserisci il PREZZO(EUR) --> ");
+        scanf("%f",prezzoPtr);     
+
+        printf("Inserisci la QUANTITA' --> ");
+        scanf("%d",quantitaPtr);
+
+
+        dati.codiceProdotto = *codicePtr;
+        dati.prezzo = *prezzoPtr;
+        dati.quantita = *quantitaPtr;
+        
+        //printf("Nome Prodotto: %s, codice: %d, prezzo %.2f, qunatita': %d" ,dati.nome,dati.codiceProdotto,dati.prezzo,dati.quantita);
         counter++;
     }else{
-        for(int i = 0; i < counter; i++){
+        for(int i = 0; i < counter; i++){           //per ora funziona solo l'inserimento di un prodotto, se ne devono inserire anche altri quindi sistema questo else
             printf("Inserisci il prodotto\n");
+            scanf(" %[^\n]",dati.nome);
 
+            counter++;
             break;
         }
     }
-    dim = &counter;
-    printf("\ncontatore %d",counter);
-    return 0;
+
+    return counter;
 }
 
 int aggiorna(prodotto array[100], int dim, prodotto dati){
