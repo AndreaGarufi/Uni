@@ -436,8 +436,8 @@ L'aritmetica modulare riguarda il calcolo sui resti delle divisioni tra interi r
 
 il resto (r) è denotato da: **n mod m** (n è la base, m è il modulo)
 
-se 2 numeri hanno lo stesso modulo e stesso resto si dicono congruenti.
-a mod m = b mod m
+**se 2 numeri hanno lo stesso modulo e stesso resto si dicono congruenti.**
+**a mod m = b mod m**
 Congruenza -> a ≡ b(mod m) ->(a è congruo b modulo m)
 
 es. 12 ≡ 9(mod 9): infatti 12 mod 3 = 0 e 9 mod 3 = 0
@@ -469,6 +469,7 @@ Dato m ∈ N e dati a, b ∈ Z tali che a ≡ b(mod m), allora comunque prendiam
 2) a · c ≡ b · d(mod m)
 
 Grazie a questo teorema **sappiamo che se ad una congruenza sommiamo o moltiplichiamo una stessa quantità la congruenza rimane**
+**Se sottraiamo ad ambo i membri uno stesso numero la congruenza riamane, ma se dividiamo per uno stesso numero la congruenza potrebbe non valere più**
 
 **Proprietà**
 1) (a + b) mod m = (a mod m + b mod m)
@@ -482,4 +483,44 @@ es 3) $13^2$ mod 10 = (13 mod 10)$^2$
 es 4) 41503 mod 5 = ($11^2$ mod 5) · ($7^3$ mod 5)    
 
 (nella slide 100 è scritto diverso c'è un altro mod 5 dopo (chiedi a girlando))
+
+Possiamo dire:
+- Dati 2 numeri consecutivi, almeno uno dei due numeri è divisibile per 2. E questo già lo sapevamo. 
+- Dati 3 numeri consecutivi, esattamente uno dei tre numeri è divisibile per 3 ed almeno uno è divisibile per 2. Quindi, il prodotto di 3 numeri consecutivi è sempre divisibile per 6. 
+- Dati 5 numeri consecutivi, esattamente uno dei cinque numeri è divisibile per 5, almeno uno è divisibile per 3 ed almeno 2 sono divisibili per 2. Quindi, il prodotto di 5 numeri consecutivi è sempre divisibile per 60 
+- etc.
+
+
+**Teorema (Esistenza dell’inverso modulare)** 
+Siano a, b ∈ N entrambi maggiori di zero. Allora, esiste un elemento x ∈ N tale che 
+a · x ≡ 1(mod b) se e solo se a e b sono coprimi
+es.
+a = 5, b = 3 : $a^{-1}$ = 2, infatti 2 · 5 mod 3 = 10 mod 3 = 1.
+
+
+
+**FUNZIONE DI EULERO**
+
+Sia n > 0
+**vogliamo contare quanti numeri precedono n e sono coprimi**
+Definiamo allora la funzione 
+		φ(n) = |{x : x ∈ N, 0 < x ≤ n e MCD(n,x) = 1}|
+
+es.
+n = 1 : φ(1) = 1 poiché 0 < 1 ≤ 1 e MCD(1, 1) = 1
+n = 2 : φ(2) = 1 poiché 0 < 1 ≤ 2 e MCD(2, 1) = 1, mentre MCD(2, 2) = 2
+n = 3 : φ(3) = 2 poiché MCD(3, 1) = 1, e MCD(3, 2) = 1 
+n = 4 : φ(4) = 2 poiché MCD(4, 1) = 1, e MCD(4, 3) = 1
+n = 5 : φ(5) = 4 poiché MCD(5, x) = 1, per x = 1, 2, 3, 4
+
+Come calcolarla: 
+**se n è primo** allora φ(n) = n -1
+ φ(11) = 11-1 = 10
+
+**Per un generico n** φ(n) = $n^{k_1}$ - $n^{k_2-1}$ ecc...
+Quindi devo scomporre n in fattori primi 
+φ(16) = $2^4$ - $2^3$
+φ(10) = (2 - 1) · (5 - 1) = 1 · 4 = 4                                                                   (10 = 2 · 5)
+
+continua da slide 117
 
