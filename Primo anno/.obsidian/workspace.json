@@ -202,13 +202,14 @@
         "y": -192,
         "width": 1032,
         "height": 659,
-        "maximize": true,
+        "maximize": false,
         "zoom": 1
       }
     ]
   },
   "active": "b58915de80df7f8b",
   "lastOpenFiles": [
+    "architettura-degli-elaboratori/Laboratorio/Assembly/esercizio2NonCompleto.s",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
