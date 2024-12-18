@@ -1,17 +1,14 @@
-          ;sommarei numeri 2,3,4,1 e salvare in memoria il risultato
+          ;sommarei numeri 9 + 1 e 9 - 1 e salvare in memoria il risultato
 
-numa      DCD     9
-numb      DCD     1
+numa      equ     9
+numb      equ     1
 
 
-risultato fill    4
+risultati fill    8 ;alloca 8 byte per i risultati
           ;leggiamo i dati
           mov     r1,#numa
-          ldr     r1,[r1]
 
           mov     r2,#numb
-          ldr     r2,[r2]
-
 
           ;facciamo le operazioni
           add     r3,r1,r2
@@ -20,5 +17,8 @@ risultato fill    4
 
 
           ;salviamo il risultato in memoria
+          mov     r5,#risultati
+          str     r3,[r5]
+          str     r4,[r5,#4] ;indirizzamento con spiazzamento (mi sposto di #4 byte nel registro cosi salvo il secondo valore)
 
           end

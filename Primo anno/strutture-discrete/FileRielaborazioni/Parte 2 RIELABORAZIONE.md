@@ -522,5 +522,22 @@ Quindi devo scomporre n in fattori primi
 φ(16) = $2^4$ - $2^3$
 φ(10) = (2 - 1) · (5 - 1) = 1 · 4 = 4                                                                   (10 = 2 · 5)
 
-continua da slide 117
 
+**Teorema (derivante dal teorema di Eulero)** 
+Se p è primo e MCD(a, p) = 1, ovvero a non è un multiplo di p, allora ap−1 ≡ 1(mod p). 
+Esempi: 
+p = 3, a = 10 : 102 mod 3 = 100 mod 3 = 1 e quindi 102 ≡ 1(mod3). 
+p = 5, a = 12 : 124 mod 5 = 20736 mod 5 = 1 e quindi 124 ≡ 1(mod5). 
+p = 17, a = 40 : 4016 mod 17 = 1 e quindi 4016 ≡ 1(mod17).
+
+**Teorema (derivante dal teorema di Eulero)**
+
+Se MCD(a, n) = 1, allora per ogni x > 0 
+$a^x$ ≡ $a^{x\,\, mod\,\, φ(n)}$ (mod n)
+
+Esempio:
+
+$12^{50}$ ≡ $12^{50\,\, mod\,\, φ(5)}$ (mod 5) ≡ $12^{50\,\, mod\,\, 4}$(mod 5) ≡ $12^2$ (mod 5) ≡ 4(mod 5) quindi 
+$12^{50}$(mod 5) = 4.
+
+continua da slide 130 (ma prima fai esercizi con mod) (nelle note "criteri di divisibilita ci sono un po di inversi di modularità")

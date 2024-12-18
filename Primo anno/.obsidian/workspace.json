@@ -198,20 +198,21 @@
           }
         ],
         "direction": "vertical",
-        "x": -1164,
-        "y": -192,
-        "width": 1032,
-        "height": 659,
-        "maximize": false,
+        "x": 166,
+        "y": 89,
+        "width": 1025,
+        "height": 801,
+        "maximize": true,
         "zoom": 1
       }
     ]
   },
   "active": "b58915de80df7f8b",
   "lastOpenFiles": [
-    "architettura-degli-elaboratori/Laboratorio/Assembly/esercizio2NonCompleto.s",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+    "strutture-discrete/FileCondivisiTeams/Parte0.pdf",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/esercizio2NonCompleto.s",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "architettura-degli-elaboratori/Laboratorio/2.0-IstruzioniMacchina.pdf",
     "architettura-degli-elaboratori/Laboratorio/Assembly/somma.s",
@@ -220,8 +221,6 @@
     "architettura-degli-elaboratori/Laboratorio/Assembly/Istruzioni1.s",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/BigPrograms/Libri.exe",
-    "programmazione-1/C Università/output/BigPrograms/Libri.c",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/assembly3",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/appunti 29_11_24 parte 1.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
