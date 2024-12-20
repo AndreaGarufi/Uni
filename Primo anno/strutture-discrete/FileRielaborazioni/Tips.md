@@ -39,3 +39,35 @@ $\mathcal{F}_U$ = ??? famiglia più piccola che contiene $F$ ed è chiusa rispet
 2. Elimina le implicazioni p ⇒ q dalla formula sostituendole con ¬p ∨ q
 3. Sposta le negazioni a ridosso delle variabili proposizionali ed elimina le doppie negazioni.
 4. Di Bella move: ![[Pasted image 20241020173502.png]]Questo passaggio consiste nel trasformare il tutto in moltiplicazione e somme per rendere tutto più intuitivo.
+
+
+##### Come calcolare i moduli
+
+**+n mod +m**
+Quando sia n che m sono positivi, il calcolo del modulo è semplice:
+
+- Dividi n per m.
+- Prendi il resto della divisione
+
+es. 12 mod 5 = 12/5 = 2(q) -> 2 x 5 = 10 -> 12 - 10 = 2 (r)
+
+**-n mod +m**
+Quando n è negativo e m è positivo, il calcolo del modulo può sembrare un po' più complicato, ma si fa come segue:
+
+- Dividi −n per m.
+- Trova il resto, ma assicurati che il risultato sia positivo. Se il resto è negativo, aggiungi m per renderlo positivo.
+
+es. -17 mod 2 = -17/2 = -8(q) -> -8 x 2 = -16 (dal -16 al -17 ci sta -1, ma dato che r è negativo sommo m) -> -1 + 2 = 1(r) 
+
+**+n mod -m**
+
+Quando n è positivo e m è negativo, il calcolo segue la stessa logica di +n mod +m, ma tenendo presente che il risultato del modulo con un divisore negativo sarà negativo, per convenzione.
+
+es. 13 mod -4 = -3(q) -> (-3) x (-4) = -12 -> 13 -12 = 1(r)
+
+**-n mod -m**
+
+Quando sia n che m sono negativi, il calcolo del modulo segue una logica simile a quella con due numeri positivi, ma il risultato finale sarà negativo per convenzione.
+
+es. -13 mod -4 = +3(q) -> 3 x (-4) = -12 -> -13 - (-12) = -1
+

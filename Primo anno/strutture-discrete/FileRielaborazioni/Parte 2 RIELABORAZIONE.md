@@ -540,4 +540,6 @@ Esempio:
 $12^{50}$ ≡ $12^{50\,\, mod\,\, φ(5)}$ (mod 5) ≡ $12^{50\,\, mod\,\, 4}$(mod 5) ≡ $12^2$ (mod 5) ≡ 4(mod 5) quindi 
 $12^{50}$(mod 5) = 4.
 
-continua da slide 130 (ma prima fai esercizi con mod) (nelle note "criteri di divisibilita ci sono un po di inversi di modularità")
+[[Tips#Come calcolare i moduli]]
+
+continua da slide 130  (nelle note "criteri di divisibilita ci sono un po di inversi di modularità")
