@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "beed451c0ff7e8f9",
+        "id": "1366d648d3d8a628",
         "type": "tabs",
         "children": [
           {
-            "id": "073173610df8b6b8",
+            "id": "b88db704a9aa4196",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Istruzioni Assembly"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -170,8 +166,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "073173610df8b6b8",
+  "active": "b88db704a9aa4196",
   "lastOpenFiles": [
+    "programmazione-1/C Università/output/liste/ListeProva2ByGIRLY.exe",
+    "programmazione-1/C Università/output/liste/ListeProva2ByGIRLY.c",
+    "programmazione-1/C Università/output/liste/ListeProva2ByAGI.c",
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
     "programmazione-1/FileCondivisiTeams/10) uso degli argomenti da riga di comando.pdf",
     "programmazione-1/FileCondivisiTeams/9) compilazione_separata.pdf",
@@ -181,8 +180,6 @@
     "programmazione-1/FileCondivisiTeams/7) Allocazione della Memoria.pdf",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/liste/listeProva.exe",
-    "programmazione-1/C Università/output/BigPrograms/registroStudenti.c/a.exe",
-    "programmazione-1/C Università/output/liste/a.exe",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
@@ -217,7 +214,6 @@
     "Modelli/Pasted image 20241204175319.png",
     "architettura-degli-elaboratori/FileRielaborazioni/2 Pipelining.md",
     "architettura-degli-elaboratori/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/3 Struttura Processore.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }

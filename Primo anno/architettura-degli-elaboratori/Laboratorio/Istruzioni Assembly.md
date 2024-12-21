@@ -14,3 +14,18 @@ num2 EQU 10
 
 cmp r3,#costante           (o anche cmp r3,#10 senza dichiarare la variabile)
 
+
+
+### **`CMP` (Compare)**
+
+- Confronta due valori sottraendo il secondo valore dal primo e aggiorna i flag.
+- **Sintassi**:
+    
+    assembly
+    
+    Copia codice
+    
+    `CMP Rn, Operand2`
+    
+- **Effetto**: Aggiorna i flag senza salvare il risultato della sottrazione.
+
