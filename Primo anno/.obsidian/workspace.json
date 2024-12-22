@@ -11,10 +11,14 @@
             "id": "f4a74df944d67e0e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Parte 2 RIELABORAZIONE"
             }
           }
         ]
@@ -166,17 +170,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
+  "floating": {
+    "id": "d699df135a329623",
+    "type": "floating",
+    "children": [
+      {
+        "id": "3cdf685c4fc19f44",
+        "type": "window",
+        "children": [
+          {
+            "id": "a0a1b16b33a7bb8d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f194f4a3d895f667",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Parte2-1"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 256,
+        "y": 12,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 1.5
+      }
+    ]
+  },
   "active": "f4a74df944d67e0e",
   "lastOpenFiles": [
-    "strutture-discrete/FileRielaborazioni/Tips.md",
+    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+    "strutture-discrete/FileRielaborazioni/Tips.md",
     "strutture-discrete/Esempi di esercizi.md",
     "Modelli/Pasted_image_20241222101833.png",
     "Modelli/Pasted_image_20241222110302.png",
     "strutture-discrete/TUTTI GLI ESERCIZI.md",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "strutture-discrete/Esercizi note/Esercizi inverso di modularità 13_11_24_241218_211151.pdf",
     "strutture-discrete/Esercizi note/Esercizi criteri di divisibilità 6_11_24_241106_163142.pdf",
     "programmazione-1/FileCondivisiTeams/6) Allocazione Dinamica Memoria.pdf",

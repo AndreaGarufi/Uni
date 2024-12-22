@@ -543,5 +543,34 @@ $12^{50}$(mod 5) = 4.
 $(n\,\, mod\,\, m)^{φ(m)−1}\,\, mod\,\, m$
 es. $(12\,\, mod\,\, 13)^{φ(13)−1}\,\, mod\,\, 13$
 
-esercitati su moduli con potenze alte e usa la regola del teorema (derivante dal teorema di eulero)
-**(nelle note "criteri di divisibilita ci sono un po di inversi di modularità")**
+Le applicazioni dell'aritmetica modulare sono molte, soprattutto in ambito informatico come ad esempio:
+
+- La prova del 9 
+- Codici ISBN e carte di credito 
+- Cifrari a trasposizione 
+- Hashing
+
+**Sono da slide 135 a 147 (leggi quelle slide)**
+
+
+
+**TEORIA DEI NUMERI**
+
+**Si occupa delle proprietà dei numeri interi** (molte di queste le abbiamo già viste in precedenza)
+Qui ci sono alcuni dei problemi aperti più famosi (avranno a che fare con frequenze numeriche)
+
+**I numeri primi di Mersenne sono numeri primi della forma:**
+$M_p = 2^p − 1$
+
+es. 
+
+$M_2 = 2^2 − 1=3$
+$M_3 = 2^3 − 1=7$
+$M_5 = 2^5 − 1=31$
+
+Ad oggi si conoscono solo 52 numeri primi di Mersenne (hanno fino a 40 milioni di cifre o più). I numeri di Mersenne sono legati ai numeri perfetti
+**Non si sa se i numeri di Mersenne sono infiniti**
+
+**Numeri Perfetti: Funzione "Sigma"**
+
+slide 152
