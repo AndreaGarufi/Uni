@@ -71,3 +71,7 @@ Quando sia n che m sono negativi, il calcolo del modulo segue una logica simile 
 
 es. -13 mod -4 = +3(q) -> 3 x (-4) = -12 -> -13 - (-12) = -1
 
+Se $n$ è più piccolo di $m$ il risultato è uguale ad $n$
+**Esempio**:
+$5 \mod 8 = 5$ 
+

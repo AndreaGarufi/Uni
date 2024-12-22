@@ -362,8 +362,6 @@ Elencherò tutte le divisibità che spiegherò:
 5. **Divisibiltà per altri numeri**
 6. **Divisibiltà per 9**
 
-
-
 7) **Divisibilità per 2**:
    Un numero n è divisibile per 2 **se e solo se è pari**
    
@@ -376,7 +374,7 @@ Elencherò tutte le divisibità che spiegherò:
    Un numero n è divisibile per 5 **se e solo se l'ultima cifra è 0 o 5**
    
 4) **Divisibilità per 7**:
-   Un numero è divisibile per 7 **se e solo se dopo aver diviso 7 per 10, q - 2r è divisibile per 7 (o che venga 0)**
+   Un numero è divisibile per 7 **se e solo se dopo aver diviso n per 10, q - 2r è divisibile per 7 (o che venga 0)**
    Si può reiterare il procedimento fino ad arrivare ad un numero facilmente divisibile per 7
    es. 84/10 -> 8 - 2 · 4 = 0 -> è divisibile per 7
    581/10 -> 58 - 2 · 1 = 56 -> è divisibile per 7
@@ -385,7 +383,6 @@ Elencherò tutte le divisibità che spiegherò:
 5) **Divisibiltà per altri numeri**
    Per altri numeri primi vale la stessa cosa del 7 solo che cambia il numero con cui moltiplichiamo il resto quindi -> q + a · r è divisibile per p:
    
-
 | p   | a   |
 | --- | --- |
 | 7   | -2  |
@@ -399,8 +396,6 @@ Elencherò tutte le divisibità che spiegherò:
 - 19 divide n se q + 2r è divisibile per 19 
 - 23 divide n se q + 7r è divisibile per 23
 - 11 divide n se q - r è divisibile per 11
-
-
 
 **Radice Numerica**
 
@@ -517,10 +512,10 @@ Come calcolarla:
 **se n è primo** allora φ(n) = n -1
  φ(11) = 11-1 = 10
 
-**Per un generico n** φ(n) = $n^{k_1}$ - $n^{k_2-1}$ ecc...
+**Per un generico n** φ(n) = $n^{k_1}$ - $n^{k_2-1}$
 Quindi devo scomporre n in fattori primi 
 φ(16) = $2^4$ - $2^3$
-φ(10) = (2 - 1) · (5 - 1) = 1 · 4 = 4                                                                   (10 = 2 · 5)
+φ(10) = (2 - 1) · (5 - 1) = 1 · 4 = 4                                                                (10 = 2 · 5)
 
 
 **Teorema (derivante dal teorema di Eulero)** 
