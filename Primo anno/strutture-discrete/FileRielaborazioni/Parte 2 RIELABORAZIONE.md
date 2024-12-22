@@ -542,4 +542,11 @@ $12^{50}$(mod 5) = 4.
 
 [[Tips#Come calcolare i moduli]]
 
-continua da slide 130  (nelle note "criteri di divisibilita ci sono un po di inversi di modularità")
+**CALCOLO DELL'INVERSO MODULARE**
+
+**se n ed m sono coprimi**, l'inverso modulare è possibile e si calcola cosi:
+$(n\,\, mod\,\, m)^{φ(m)−1}\,\, mod\,\, m$
+es. $(12\,\, mod\,\, 13)^{φ(13)−1}\,\, mod\,\, 13$
+
+esercitati su moduli con potenze alte e usa la regola del teorema (derivante dal teorema di eulero)
+**(nelle note "criteri di divisibilita ci sono un po di inversi di modularità")**

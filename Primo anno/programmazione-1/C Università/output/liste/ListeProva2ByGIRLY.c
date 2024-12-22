@@ -32,7 +32,7 @@ int main(){
     //     if(i == 5){
     //         newPtr->nextPtr = NULL;                                 //qui assegna il puntatore a NULL
     //     }
-    // }
+    // } 
 
     for(int i = 0; i<5;i++){
         printf("Inserisci il %d codice: ",i+1);

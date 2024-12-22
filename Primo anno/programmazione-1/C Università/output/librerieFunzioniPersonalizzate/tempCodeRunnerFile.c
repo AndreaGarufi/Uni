@@ -1,0 +1,2 @@
+
+printf("SOMMA %d ",sommaTOT);
