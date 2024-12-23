@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "adf82cd3526d38ca",
+        "id": "088fef955bf43016",
         "type": "tabs",
         "children": [
           {
-            "id": "f4a74df944d67e0e",
+            "id": "cd9d9b9e580e46e3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -171,19 +171,19 @@
     }
   },
   "floating": {
-    "id": "d699df135a329623",
+    "id": "4f3724af451fc62e",
     "type": "floating",
     "children": [
       {
-        "id": "3cdf685c4fc19f44",
+        "id": "c7ff537038fd4508",
         "type": "window",
         "children": [
           {
-            "id": "a0a1b16b33a7bb8d",
+            "id": "10b755b8331b3705",
             "type": "tabs",
             "children": [
               {
-                "id": "f194f4a3d895f667",
+                "id": "5cfe39a78c848569",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -198,34 +198,35 @@
           }
         ],
         "direction": "vertical",
-        "x": 256,
-        "y": 12,
-        "width": 1024,
-        "height": 800,
+        "x": 523,
+        "y": 594,
+        "width": 973,
+        "height": 603,
         "maximize": true,
         "zoom": 1.5
       }
     ]
   },
-  "active": "f4a74df944d67e0e",
+  "active": "cd9d9b9e580e46e3",
   "lastOpenFiles": [
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
-    "strutture-discrete/FileRielaborazioni/Tips.md",
+    "Pasted image 20241223110625.png",
     "strutture-discrete/Esempi di esercizi.md",
+    "programmazione-1/FileCondivisiTeams/10) uso degli argomenti da riga di comando.pdf",
+    "programmazione-1/C Università/output/ProveEsameProg1/MatriceChar.exe",
+    "programmazione-1/C Università/output/ProveEsameProg1/matrice.exe",
+    "programmazione-1/C Università/output/ProveEsameProg1/MatriceChar.c",
+    "programmazione-1/C Università/output/ProveEsameProg1",
+    "programmazione-1/C Università/output/argomentiMain/args.exe",
+    "programmazione-1/C Università/output/argomentiMain/argomentiMain.exe",
+    "strutture-discrete/FileRielaborazioni/Tips.md",
     "Modelli/Pasted_image_20241222101833.png",
     "Modelli/Pasted_image_20241222110302.png",
     "strutture-discrete/TUTTI GLI ESERCIZI.md",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "strutture-discrete/Esercizi note/Esercizi inverso di modularità 13_11_24_241218_211151.pdf",
-    "strutture-discrete/Esercizi note/Esercizi criteri di divisibilità 6_11_24_241106_163142.pdf",
-    "programmazione-1/FileCondivisiTeams/6) Allocazione Dinamica Memoria.pdf",
-    "programmazione-1/C Università/output/array/arrayMalloc.exe",
-    "programmazione-1/FileCondivisiTeams/10) uso degli argomenti da riga di comando.pdf",
-    "programmazione-1/C Università/output/argomentiMain/argomentiMain.c",
-    "programmazione-1/C Università/output/argomentiMain",
-    "programmazione-1/FileCondivisiTeams/9) compilazione_separata.pdf",
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/appunti 29_11_24 parte 1.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
@@ -251,7 +252,6 @@
     "architettura-degli-elaboratori/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
     "architettura-degli-elaboratori/FileRielaborazioni/27 novembre 2024.md",
     "Modelli/Pasted image 20241208211135.png",
-    "Modelli/Pasted image 20241208210002.png",
     "11_Insieme-di-istruzioni-macchina.pdf.md",
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/Senza nome.canvas"

@@ -508,16 +508,15 @@ n = 3 : φ(3) = 2 poiché MCD(3, 1) = 1, e MCD(3, 2) = 1
 n = 4 : φ(4) = 2 poiché MCD(4, 1) = 1, e MCD(4, 3) = 1
 n = 5 : φ(5) = 4 poiché MCD(5, x) = 1, per x = 1, 2, 3, 4
 
-Come calcolarla: 
-**se n è primo** allora φ(n) = n -1
- φ(11) = 11-1 = 10
+##### Calcolo della phi:
+1. **Per n numero primo** allora $φ(n) = n -1$
+	- **Esempio:** $φ(11) = 11-1 = 10$
+1. **Con n multiplo di un numero primo** φ(n) = $n^{k_1}$ - $n^{k_2-1}$
+	-  **Esempio:** φ(16) = $2^4$ - $2^3$
+2. **Con n prodotto di numeri primi** $φ(n) = φ(k)\timesφ(q)...$ ($k$ e $q$ sono numeri primi)
+	- **Esempio:** $φ(10) = φ(2\times5) = (2 - 1) · (5 - 1) = 1 · 4 = 4$
 
-**Per un generico n** φ(n) = $n^{k_1}$ - $n^{k_2-1}$
-Quindi devo scomporre n in fattori primi 
-φ(16) = $2^4$ - $2^3$
-φ(10) = (2 - 1) · (5 - 1) = 1 · 4 = 4                                                                (10 = 2 · 5)
-
-
+ 
 **Teorema (derivante dal teorema di Eulero)** 
 Se p è primo e MCD(a, p) = 1, ovvero a non è un multiplo di p, allora ap−1 ≡ 1(mod p). 
 Esempi: 
@@ -558,6 +557,11 @@ Le applicazioni dell'aritmetica modulare sono molte, soprattutto in ambito infor
 
 **Si occupa delle proprietà dei numeri interi** (molte di queste le abbiamo già viste in precedenza)
 Qui ci sono alcuni dei problemi aperti più famosi (avranno a che fare con frequenze numeriche)
+**vedremo:
+1) **Numeri di Mersenne**
+2) **Numeri Perfetti**
+3) **Numeri Primi Gemelli**
+
 
 **I numeri primi di Mersenne sono numeri primi della forma:**
 $M_p = 2^p − 1$
@@ -573,4 +577,41 @@ Ad oggi si conoscono solo 52 numeri primi di Mersenne (hanno fino a 40 milioni d
 
 **Numeri Perfetti: Funzione "Sigma"**
 
-slide 152
+Dato n definiamo la seguente funzione:
+![[Pasted image 20241223110625.png|200]]
+
+La funzione **sigma** **restituisce la SOMMA di tutti i divisori positivi di un numero n**
+es.
+σ(1) = 1,  σ(2) = 3,  σ(4) = 7
+
+ha tante proprietà ma la più semplice e intuitiva è che se **n è primo** allora σ(n) = n+1
+
+**Numeri Perfetti**
+Un numero **n** ∈ N si dice **perfetto se σ(n) = 2n**
+
+Il primo numero perfetto è 6 , infatti σ(6) = 1+2+3+6 = 12 
+
+si capì che se $2^n - 1$ è primo allora:
+		$2^{n-1}·(2^n -1)$ 
+è perfetto
+es. $2^{3-1}·(2^3 -1)$  = 4 · 7 = 28 (28 è il secondo numero perfetto)
+
+**I principali problemi ancora aperti sono:** 
+1. **Esistono numeri perfetti dispari?**
+2. **I numeri perfetti sono infiniti oppure no?**
+
+(curiosità: tutti i numeri perfetti pari finiscono o per 6 o per 8)
+
+**Numeri primi gemelli**
+
+**2 numeri primi si dicono gemelli se la loro differenza è uguale a 2**
+$|p_1 - p_2| = 2$
+
+es. (3,5),(5,7)(17,19)...
+
+abbiamo che $p_1 < p_2$ e il numero $p_1 + 1$ è detto separatore della coppia di gemelli
+(i numeri primi che distano 4 si dicono "primi cugini")
+**Anche qui il problema è se siano infiniti oppure no**
+c'è anche una congettura irrisolta: Per ogni intero k ≥ 1, esistono infinite coppie di numeri primi consecutivi la cui differenza è 2k?
+
+
