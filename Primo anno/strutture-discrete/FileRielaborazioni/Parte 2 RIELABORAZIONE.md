@@ -561,6 +561,7 @@ Qui ci sono alcuni dei problemi aperti più famosi (avranno a che fare con frequ
 1) **Numeri di Mersenne**
 2) **Numeri Perfetti**
 3) **Numeri Primi Gemelli**
+4) **Congettura di Goldbach**
 
 
 **I numeri primi di Mersenne sono numeri primi della forma:**
@@ -614,4 +615,93 @@ abbiamo che $p_1 < p_2$ e il numero $p_1 + 1$ è detto separatore della coppia d
 **Anche qui il problema è se siano infiniti oppure no**
 c'è anche una congettura irrisolta: Per ogni intero k ≥ 1, esistono infinite coppie di numeri primi consecutivi la cui differenza è 2k?
 
+**Congettura di Goldbach**
+
+La congettura afferma che ogni numero maggiore di 4 può essere scritto come somma di 2 numeri primi
+es. 6 = 3+3, 12 = 7+3+2, 10 = 3+7
+
+**ad oggi non è stata dimostrata ne si è trovato un numero pari che non si possa scrivere come somma di 2 numeri primi**
+
+ - **Sappiamo che per ogni intero x ≥ 2 esiste un intero d ≥ 0 tale che** 
+   **x-d e x+d sono entrambi numeri primi**
+   d è la distanza di Goldbach: vale 0 per i numeri primi (sono già primi)
+   es. d(2) = 0, d(3) = 0, d(4) = 1 (4 -1 = 3, 4+1 = 5)
+
+Si dicono "Interprimi" i numeri che sono il punto di mezzo di 2 numeri primi
+
+I = {4, 6, 9, 12, 15, 18, 21, 26, 30, 34, . . .}
+
+Grazie ai computer moderni si è verificata la congettura fino a interi pari a circa $10^{17}$
+Si assume la sua veridicità (grazie al teorema sulla densità dei numeri primi)
+
+
+**Congettura di Collatz**
+
+Si basa su un algoritmo iterativo:
+
+![[Pasted image 20241223185728.png|250]]
+
+congettura di Collatz L’algoritmo è il seguente
+
+Algoritmo di Collatz 
+**Leggi un intero** x ≥ 1 
+**while** (x > 1) **do**
+**if** x mod 2 == 0 x = x/2; 
+**else** x = 3 ∗ x + 1; 
+**end_while**
+
+**Il problema è: l' algoritmo si ferma sempre oppure esiste un x partendo dal quale non si raggiunge mai il valore 1?**
+
+es.
+n = 1 :→ 1 
+n = 2 :→ 2, 1 
+n = 3 :→ 3, 10, 5, 16, 8, 4, 2, 1 
+n = 4 :→ 4, 2, 1 n = 5 :→ 5, 16, 8, 4, 2, 1 
+n = 6 :→ 6, 3, 10, 5, 16, 8, 4, 2, 1 
+n = 7 :→ 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1 
+n = 8 :→ 8, 4, 2, 1 
+n = 9 :→ 9, 28, 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1 
+n = 10 :→ 10, 5, 16, 8, 4, 2, 1
+		$\uparrow$  Questa è la sequenza che si genera ed è detta **traiettoria**
+
+Da queste traiettorie si possono ricavare molti dati, come il numero massimo, i record di numeri massimi, la lunghezza ecc..
+
+Esiste un algoritmo semplificato:
+Algoritmo di Collatz (semplificato)
+**Leggi un intero** x ≥ 1 
+**while** (x > 1) **do**
+**if** x mod 2 == 0 x = x/2; 
+**else** x = (3 ∗ x + 1)/2; 
+**end_while**
+
+ (cambia che c'è un /2 nella riga dell'else)
+in questo modo le traiettorie si accorciano:
+es. n = 1 :→ 1
+n = 2 :→ 2, 1 
+n = 3 :→ 3, 5, 8, 4, 2, 1 
+n = 4 :→ 4, 2, 1 
+n = 5 :→ 5, 8, 4, 2, 1 
+n = 6 :→ 6, 3, 5, 8, 4, 2, 1 
+n = 7 :→ 7, 11, 17, 26, 13, 20, 10, 5, 8, 4, 2, 1
+
+La congettura si può riformulare in questo modo: dato un intero n ≥ 1 l’algoritmo raggiunge sempre una potenza di 2? (ci fermiamo quando raggiungiamo una potenza di 2)
+
+in questo modo le traiettorie si accorciano:
+n = 1 :→ 1 
+n = 2 :→ **2** 
+n = 3 :→ 3, 10, 5, **16** 
+n = 4 :→ **4** 
+n = 5 :→ 5, **16**
+n = 6 :→ 6, 3, 10, 5, **16** 
+n = 7 :→ 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, **16** 
+n = 8 :→ **8** 
+n = 9 :→ 9, 28, 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, **16**
+n = 10 :→ 10, 5, **16** 
+n = 11 :→ 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, **16** 
+n = 12 :→ 12, 6, 3, 10, 5, **16** 
+n = 13 :→ 13, 40, 20, 10, 5, **16**
+n = 14 :→ 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, **16**
+n = 15 :→ 15, 46, 23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, **16**
+
+slide 172 (dopo 85,256)
 

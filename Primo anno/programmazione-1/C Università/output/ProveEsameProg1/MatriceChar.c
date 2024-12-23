@@ -37,23 +37,81 @@ mediante opportuni parametri formali;
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(int argc, char **argv){
-    
+struct parametri{
+    int parK;
+    char parW;
+    int parN;
+    int parM;
+};
+typedef struct parametri parametri;
+
+int readInput(int dim, char *vettore[], parametri dati,parametri *ptr);
+
+char** allocateS(char **s,int N, int M);
+
+int main(int argc, char *argv[]){
+
+    parametri dati;
+    parametri *puntatore = malloc(sizeof(parametri));
+
+    puntatore->parK = 0;
+
+    readInput(argc,argv,dati,puntatore);
+    printf("(VALORI PASSATI DA RIGA DI COMANDO %d,%c,%d,%d)\n",puntatore->parK,puntatore->parW,puntatore->parN,puntatore->parM);
+
+    int N = puntatore->parK;
+    int M = puntatore->parK;
+
+    char **S = allocateS(S,N,M);
+
+
+
+    printf("\nEND");
+
+}
+int readInput(int dim, char *vettore[], parametri dati,parametri *ptr){
+
+
     int k = 0;
     char w = '\0';
-    int N = 0,M = 0;
+    int N = 0;
+    int M = 0;
 
-    printf("argomenti passati: %d ",argc);
+    printf("argomenti passati: %d ",dim);
 
-    k = argv[1];
-    w = argv[2];
-    N = argv[3];
-    M = argv[4];
+    k = atoi(vettore[1]);        //atoi converte ascii in int
+    w = vettore[2][0];
+    N = atoi(vettore[3]);
+    M = atoi(vettore[4]);
 
-    for(int i = 0; i < 4; i++){
-        printf("%c , %c ,%c ,%c",argv[1],argv[2],argv[3],argv[4]);
+    if(k < 10 || k > 15){
+        fprintf(stderr,"-1");
+        exit(-1);
+    }else{
+        for (int i = 0; i < dim; i++) {
+        printf("%s\n",vettore[i]);
+        }
     }
 
+    ptr->parK = k;
+    ptr->parW = w;
+    ptr->parN = N;
+    ptr->parM = M;
 
+    return ptr->parK,ptr->parW,ptr->parN,ptr->parM;
+
+}
+
+char** allocateS(char **s,int N, int M){
+    printf("MELOX");
+
+    s = (char**) malloc(sizeof(char)*N);
+                                                //sbagliata
+    for(int i = 0; i < M;i++){
+        s[i] = malloc(sizeof(char)*5);
+    }
+
+    return s;
 }

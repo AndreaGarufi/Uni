@@ -198,10 +198,10 @@
           }
         ],
         "direction": "vertical",
-        "x": 523,
-        "y": 594,
-        "width": 973,
-        "height": 603,
+        "x": 418,
+        "y": 220,
+        "width": 974,
+        "height": 604,
         "maximize": true,
         "zoom": 1.5
       }
@@ -211,10 +211,11 @@
   "lastOpenFiles": [
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 2 RIELABORAZIONE.md",
+    "Pasted image 20241223185728.png",
+    "programmazione-1/C Università/output/ProveEsameProg1/MatriceChar.exe",
     "Pasted image 20241223110625.png",
     "strutture-discrete/Esempi di esercizi.md",
     "programmazione-1/FileCondivisiTeams/10) uso degli argomenti da riga di comando.pdf",
-    "programmazione-1/C Università/output/ProveEsameProg1/MatriceChar.exe",
     "programmazione-1/C Università/output/ProveEsameProg1/matrice.exe",
     "programmazione-1/C Università/output/ProveEsameProg1/MatriceChar.c",
     "programmazione-1/C Università/output/ProveEsameProg1",
@@ -251,7 +252,6 @@
     "Modelli/Pasted image 20241209113431.png",
     "architettura-degli-elaboratori/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
     "architettura-degli-elaboratori/FileRielaborazioni/27 novembre 2024.md",
-    "Modelli/Pasted image 20241208211135.png",
     "11_Insieme-di-istruzioni-macchina.pdf.md",
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/Senza nome.canvas"
