@@ -38,6 +38,7 @@ mediante opportuni parametri formali;
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 struct parametri{
     int parK;
@@ -49,7 +50,12 @@ typedef struct parametri parametri;
 
 int readInput(int dim, char *vettore[], parametri dati,parametri *ptr);
 
-char** allocateS(char **s,int N, int M);
+char*** allocateS(char ***s,int N, int M, int K);
+
+char* genString(int dimString);
+
+char*** fills(char ***s, char *stringaK, int N, int M);
+
 
 int main(int argc, char *argv[]){
 
@@ -61,11 +67,24 @@ int main(int argc, char *argv[]){
     readInput(argc,argv,dati,puntatore);
     printf("(VALORI PASSATI DA RIGA DI COMANDO %d,%c,%d,%d)\n",puntatore->parK,puntatore->parW,puntatore->parN,puntatore->parM);
 
-    int N = puntatore->parK;
-    int M = puntatore->parK;
+    int K = puntatore->parK;
+    int N = puntatore->parN;
+    int M = puntatore->parM;
+    char *stringa = malloc(sizeof(char) * K);
 
-    char **S = allocateS(S,N,M);
+    printf("Allocazione spazio per la matrice...\n");
+    printf("Generazione stringa di lunghezza K...\n");
+    printf("Riempimento Matrice di Stringhe...\n");
+    char ***S = allocateS(S,N,M,K);
 
+    printf("STAMPA MATRIX\n");
+
+    for(int i = 0; i<N;i++){
+        for(int j = 0;j<M;j++){
+            printf("%10s",S[i][j]);
+        }
+        puts("");
+    }    
 
 
     printf("\nEND");
@@ -79,7 +98,7 @@ int readInput(int dim, char *vettore[], parametri dati,parametri *ptr){
     int N = 0;
     int M = 0;
 
-    printf("argomenti passati: %d ",dim);
+    printf("\nargomenti passati: %d ",dim);
 
     k = atoi(vettore[1]);        //atoi converte ascii in int
     w = vettore[2][0];
@@ -89,10 +108,6 @@ int readInput(int dim, char *vettore[], parametri dati,parametri *ptr){
     if(k < 10 || k > 15){
         fprintf(stderr,"-1");
         exit(-1);
-    }else{
-        for (int i = 0; i < dim; i++) {
-        printf("%s\n",vettore[i]);
-        }
     }
 
     ptr->parK = k;
@@ -104,14 +119,47 @@ int readInput(int dim, char *vettore[], parametri dati,parametri *ptr){
 
 }
 
-char** allocateS(char **s,int N, int M){
-    printf("MELOX");
+char*** allocateS(char ***s,int N, int M,int K){
+    printf("\nALLOCATE S");
 
-    s = (char**) malloc(sizeof(char)*N);
-                                                //sbagliata
-    for(int i = 0; i < M;i++){
-        s[i] = malloc(sizeof(char)*5);
+    s = malloc(sizeof(char**) * N);
+
+    for(int i = 0; i < N; i++){
+        s[i] = malloc(sizeof(char*) * M);
+        for(int j = 0; j < M; j++){
+            s[i][j] = malloc(sizeof(char) * K);
+            
+            fills(s,genString(K),N,M);
+        }
     }
 
+    return s;
+}
+
+char* genString(int dimString){
+    printf("\nGEN STRINGK");
+
+    char* string = malloc(sizeof(char) * dimString);
+
+    for(int i = 0; i < dimString-1; i++){
+
+        int s = 65 + rand() % 90;
+        char lettere = (char)s;
+        string[i] = lettere;
+    }
+    string[dimString] = '\0';
+
+    return string;
+}
+
+char*** fills(char ***s, char *stringaK, int N, int M){
+
+    printf("\nFILL");
+    for(int i = 0; i < N;i++){
+        for(int j = 0; j < M; j++){
+            strcpy(s[i][j],stringaK);
+        }    
+    }
+    
     return s;
 }
