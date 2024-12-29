@@ -61,6 +61,78 @@ Notiamo come prima cosa che affinché esista un'applicazione iniettiva da A in B
 
 **per riassumere il numero di scelte totali è $\frac{n!}{(n-k)!}$**  
 
+**Esempio**
+
+- Quante squadre di calcio diverse posso formare da un gruppo di 50 studenti?
+- risposta (applico la formula $\frac{n!}{(n-k)!}$ ): $D_{50,11}$ = 50  · 49 · . . . · 40 ≈ $1,5 · 10^{18}$ 
+
+**Le permutazioni o sostituzioni è il numero di disposizioni semplici di n cioè** $D_{n,n}$
+ovvero n!
+
+Se si prende B = A, spesso si indicano le permutazioni di classe n con il simbolo $P_n$ o $S_n$ nel caso si chiamino sostituzioni (sono la stessa cosa)
+Possiamo vedere una permutazione come un ri-odinamento di n elementi:
+es. A = {1,2,3}
+
+$P_3$ = {(1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), (3, 2, 1)}
+
+$|P_3|$ = 3! = 6
+
+**Combinazioni**
+**Una combinazione** è un sottoinsieme di $k$ elementi scelti da un insieme di $n$ elementi, **senza tener conto dell'ordine** degli elementi.
+
+In altre parole, due sottoinsiemi con gli stessi elementi ma in ordine diverso sono considerati la stessa combinazione.
+
+si denotano con $C_{n,k}$ e i suoi valori sono i coefficienti binomiali: $\binom{n}{k}$ 
+
+![[Pasted image 20241228152423.png||300]]
+
+**Esempi**
+
+![[Pasted image 20241228152951.png]]
+
+**Teorema binomiale**
+Siano a e b numeri reali. Allora vale l'uguaglianza:
+
+![[Pasted image 20241228155756.png|350]]
 
 
+Dato un insieme di n > 1 variabili, {$x_0, x_1, . . . , x_{n−1}$} e preso un un intero k, i monomi di grado k sono:
+![[Pasted image 20241229100936.png|200]]
+
+**Esempio**
+![[Pasted image 20241229101511.png]]
+
+
+**Per riassumere tutto in breve...**
+![[Pasted image 20241229101609.png]]
+
+https://uni-notes-girlando.netlify.app/Primo-anno/strutture-discrete/FileRielaborazioni/03_Parte3
+$\uparrow$
+qui tutta questa parte è spiegata bene se non capisci qui prova sul sito di Girlando
+
+**Pigeonhole principle**
+
+Nella sua forma più semplice, il Principio afferma che:
+se dobbiamo fare entrare n + 1 piccioni in una piccionaia che contiene n cassette, allora almeno una cassetta dovrà contenere più di un piccione. 
+
+**Esempio** 
+Coppia di calzini:
+- Immaginiamo di avere il cassetto di un comodino pieno di calzini, neri e blu
+- Vogliamo, prendere al buio il numero minimo di calzini sufficiente ad avere una coppia completa
+- Immaginiamo che ogni colore sia un "cassetto". Se prendiamo 3 calzini, almeno 2 calzini saranno dello stesso colore.
+- infatti in questo caso possiamo avere o 3 calzini dello stesso colore, oppure 2 di un colore ed il terzo dell'altro colore
+
+
+**Esempio**
+Capelli Catanesi
+- Un essere umano ha, in media, circa 110000 capelli sulla testa. Qualcuno arriva sino a 150000 mila. Se vogliamo esagerare, possiamo pensare che ci siano persone che abbiano sino a 200000 capelli in testa.
+- Domanda: esistono a Catania due persone con lo stesso numero di capelli in testa?
+- Risposta: si. Ed ecco la prova:
+    - Catania città ha più di 300000 abitanti. 
+    - Dal momento che il numero di abitanti è superiore al numero massimo di capelli possibile, esisteranno sicuramente almeno 2 abitanti di Catania che hanno lo stesso numero di capelli in testa.
+
+(da slide 33 a 41 ci sono vari esempi e esercizi [[Parte3.pdf]])
+
+-------------------
+**CALCOLO COMBINATORIO E PROBABILITA' DISCRETE**
 
