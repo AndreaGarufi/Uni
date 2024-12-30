@@ -11,10 +11,12 @@
             "id": "48c9a604173fbdc5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Introduzione a C programmazione 1 (ottava edizione)"
             }
           }
         ]
@@ -168,6 +170,7 @@
   },
   "active": "48c9a604173fbdc5",
   "lastOpenFiles": [
+    "strutture-discrete/Esercizi note/Calcolo combinatorio 9_12_24_241211_162049.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",

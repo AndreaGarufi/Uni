@@ -49,41 +49,21 @@ int main(){
     newPtr = testaPtr;
     int i = 0;
 
-    while(newPtr->nextPtr != NULL){
+    while(newPtr != NULL){
         i++;
         printf("NUMERO NODO %d -> %d\n",i,newPtr->numero);
         //ptr = newPtr;     //cosi ho un modo per avere un puntatore al nodo precedente
         newPtr = newPtr->nextPtr;
     }
-    printf("NUMERO NODO %d -> %d\n",i + 1,newPtr->numero);
 
 
-    printf("\nSTAMPA DELLA LISTA ORDINATA TRAMITE INSERTION SORT...\n");
-    int insert = 0;
+    printf("\nSTAMPA DELLA LISTA ORDINATA TRAMITE SELECTION SORT...\n");
 
-    newPtr = testaPtr->nextPtr;
-    Lptr = testaPtr;
-
-    while(newPtr->nextPtr != NULL){
-
-        printf("CICLO INFINITO");
-
-        insert = newPtr->numero;
-        Lptr = testaPtr;
-
-        while(Lptr != NULL && Lptr->numero > insert){
-            printf("ENTRA?");
-            
-            newPtr->numero = Lptr->numero;
-            Lptr = newPtr;
-            newPtr = newPtr->nextPtr;
-        }
-        Lptr->numero = insert;
-    }
+    
     
     newPtr = testaPtr;
     i = 0;
-    while(newPtr->nextPtr != NULL){
+    while(newPtr != NULL){
         i++;
         printf("NUMERO NODO %d -> %d\n",i,newPtr->numero);
         newPtr = newPtr->nextPtr;
