@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "918b854a54ca23fa",
+        "id": "141bbdacf3aa535f",
         "type": "tabs",
         "children": [
           {
-            "id": "48c9a604173fbdc5",
+            "id": "3aed2c1fa6487ad2",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
+                "file": "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Introduzione a C programmazione 1 (ottava edizione)"
+              "icon": "lucide-file",
+              "title": "Parte 3 -RIELABORAZIONE"
             }
           }
         ]
@@ -168,12 +170,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "48c9a604173fbdc5",
+  "floating": {
+    "id": "6fc254f4620604d6",
+    "type": "floating",
+    "children": [
+      {
+        "id": "b853137c9bb4888e",
+        "type": "window",
+        "children": [
+          {
+            "id": "afa2784010bb5084",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f965a8ac91d744c6",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "strutture-discrete/FileCondivisiTeams/Parte3.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Parte3"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 676,
+        "y": 220,
+        "width": 780,
+        "height": 484,
+        "maximize": true,
+        "zoom": 1.5
+      }
+    ]
+  },
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "strutture-discrete/Esercizi note/Calcolo combinatorio 9_12_24_241211_162049.pdf",
-    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
+    "Modelli/Pasted image 20250102111747.png",
     "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
+    "Modelli/Pasted image 20250102111443.png",
+    "Modelli/Pasted image 20250102104058.png",
+    "Modelli/Pasted image 20250102102516.png",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "strutture-discrete/Esercizi note/Calcolo combinatorio 9_12_24_241211_162049.pdf",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "Modelli/Pasted image 20241229101609.png",
     "Modelli/Pasted image 20241229101605.png",
@@ -182,8 +226,6 @@
     "Modelli/Pasted image 20241229100417.png",
     "Modelli/Pasted image 20241228155756.png",
     "Modelli/Pasted image 20241228152951.png",
-    "Modelli/Pasted image 20241228152423.png",
-    "Modelli/Pasted image 20241228152023.png",
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/FileCondivisiTeams/6) Allocazione Dinamica Memoria.pdf",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
@@ -191,14 +233,11 @@
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "architettura-degli-elaboratori/Teoria/FileCondivisiTeams/7 Circuiti-aritmetici.pdf",
     "Senza nome.md",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/Ordinamenti/mergeSort.c",
     "programmazione-1/C Università/output/Ordinamenti/SelectionSort.exe",
     "programmazione-1/C Università/output/Ordinamenti/SelectionSort.c",
     "programmazione-1/C Università/output/Ordinamenti/InsertionSort.exe",
-    "programmazione-1/C Università/output/Ordinamenti/InsertionSort.c",
     "programmazione-1/Matrice stringa tridimensionale.md",
-    "Modelli/Pasted image 20241226100702.png",
     "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/Esempi di esercizi.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",

@@ -136,3 +136,99 @@ Capelli Catanesi
 -------------------
 **CALCOLO COMBINATORIO E PROBABILITA' DISCRETE**
 
+Le probabilità sono definite su uno spazio di campioni S, i cui elementi sono detti eventi elementari. 
+Ogni evento elementare è l’esito di un esperimento ed è un sottoinsieme dello spazio dei campioni. 
+S stesso è l’evento certo, mentre ∅ è l’evento nullo Due eventi E1 e E2 sono mutuamente esclusivi se E1 ∩ E2 = ∅
+
+**Esempio** 
+Per l'esperimento del lancio di 2 monete, spazio dei campioni è costituito da tutte le possibili coppie S = {TT , TC, CT , CC}. L’evento "si ottiene una testa ed una croce" è E = {TC, CT}
+
+La definizione classica della probabilità del verificarsi di un evento A è uguale al rapporto tra il numero di casi favorevoli ($f_A$) ed il numero di casi totali (n)
+
+Probabilità di A = $\frac{f_A}{n}$ 
+
+**notiamo che questa definizione assume che tutti gli eventi hanno la stessa probabilità di accadere** (si dice quindi che è una definizione circolare)
+
+es. lancio dei dadi: ogni numero ha la stessa probabilità di uscire
+**Questa definizione quindi non considera la possibilità di eventi non equiprobabili**
+
+
+Semplificando il discorso, assumiamo di ripetere un esperimento n volte e verifichiamo quante volte si è verificato l’esito studiato. Per esempio, lanciamo il dado 10 volte e vediamo quante volte è uscito un numero inferiore a 3. Definiamo la probabilità dell’evento come il limite del rapporto tra il numero di volte in cui si è verificato l’esito fA ed il numero degli esperimenti n
+
+In questo caso la formula è:
+
+Probabilità di A =$\lim_{n \to \infty} \frac{f_A}{n}$
+
+Questa definizione (che si chiama frequentista) ha un problema di fondo insuperabile:
+**Non tutti gli esperimenti sono ripetibili e quindi alcune probabilità non sarebbero calcolabili** 
+Per esempio, qual è la probabilità che entro i prossimi 100 anni un meteoroide colpisca la terra generando la quasi estinzione della vita come accadde ai tempi dei dinosauri?
+
+allora nasce una definizione assiomatica che però non ci da delle metodologie di calcolo dei valori di probabilità 
+
+**TEORIA DELLA PROBABILITA'**
+
+Assiomi della teoria della probabilità (P) 
+Una distribuzione di probabilità P in uno spazio di campioni S associa agli eventi numeri reali, soddisfacendo i seguenti assiomi:
+
+Siano A e B due eventi qualsiasi (sottoinsiemi di S)
+1) **A1** 0 ≤ P(A) ≤ 1  -> la probabilità di A è compresa tra 0 e 1
+2) **A2** P(S) = 1 e P(∅) = 0 -> probabilità di tutti gli eventi = 1, probabilità di nessun evento = 0
+3) **A3** P(A ∪ B) = P(A) + P(B) − P(A ∩ B)
+
+- L’assioma (A3) può essere riscritto utilizzando il formalismo logico, in questo modo:
+  P(A ∨ B) = P(A) + P(B) − P(A ∧ B) 
+  
+- ossia: **"La probabilità che si verifichi A oppure B è la probabilità che si verifichi A più la probabilità che si verifichi B meno la probabilità che si verifichino entrambi."** 
+ 
+- Se due eventi A e B sono mutuamente esclusivi ovvero se A ∩ B = ∅, si ha allora:
+  P(A ∨ B) = P(A) + P(B) 
+  
+- In particolare, quindi, abbiamo 
+  P(A ∨ ¬A) = P(S) = 1 
+  
+- e quindi P(¬A) = 1 − P(A) 
+
+- ovvero, la probabilità che un evento non si verifichi è uguale a -> 1 meno la probabilità che l’evento si verifichi. 
+- La distribuzione di probabilità è detta uniforme se tutti gli eventi sono equiprobabili.
+
+Talvolta può capitare che la probabilità un evento A sia condizionata da un altro evento B, questa è la formula della **probabilità condizionata**:
+![[Pasted image 20250102102516.png|250]]
+P(A|B) ->"La probabilità che $B$ si verifichi, sapendo che $A$ si è verificato"
+
+Invece se 2 eventi sono indipendenti tra loro abbiamo:
+                        P(A ∧ B) = P(A) · P(B)
+
+**Il concetto di indipendenza è spesso dimenticato causando errori molto gravi**. Per esempio, errore comune, per chi gioca al "lotto", è pensare che se un numero non esce da tante estrazioni, allora la probabilità di uscire alla prossima è più alta. Niente di più falso, perché la probabilità rimane la stessa, essendo le estrazioni eventi indipendenti.
+
+**Esempio**
+Se lanciamo un dado 3 volte la probabilità di ottenere [2,1,6] è più alta di quella di ottenere [3,3,3]?
+Risposta: **NO** 
+tutti questi numeri hanno probabilità $\frac{1}{6}$ di uscire, quindi P([2,1,6]) = $\frac{1}{6} · \frac{1}{6} · \frac{1}{6} = \frac{1}{216}$ 
+stessa cosa vale per P([3,3,3])
+
+Dalla probabilità condizionata deriva la regola di Bayes (di Siwa), (infatti la formula è simile)
+
+**Regola di Bayes**
+![[Pasted image 20250102104058.png|250]]
+la regola di Bayes è utile nell'ambito informatico e dell'Intelligenza Artificiale in particolare
+
+ **Teorema della Probabilità Totale**
+ Sia A un evento e siano $B_1,B_2.....B_n$ n eventi mutuamente esclusivi, tali che P($B_i$) $\neq$ 0 per ogni i ed inoltre P($B_1 ∨ B_2 ∨ .... B_n$) = 1 
+ ovvero gli eventi sono esaustivi
+ Allora
+![[Pasted image 20250102111443.png]]
+**Esempio**
+![[Pasted image 20250102111747.png]]
+
+
+
+**Problemi d'urna**
+
+I problemi d'urna sono tutti quei problemi in cui si studia l'estrazione di oggetti (palline, biglie, carte, ecc.) da un'urna o da un insieme, con determinate condizioni
+es. lancio dei dadi, estrazione del lotto ecc...
+La condizione comune è che il gioco non sia truccato e che ogni estrazione è indipendente dalle precedenti
+
+**Si possono ordinare in 4 modi combinando questi 2 criteri**
+1) Estrazioni ordinate oppure non ordinate, ovvero se l'ordine di estrazione è importante oppure no
+2) Estrazione con reinserimento oppure no, ovvero se ad ogni estrazione la pallina estratta viene reinserita nell'urna
+
