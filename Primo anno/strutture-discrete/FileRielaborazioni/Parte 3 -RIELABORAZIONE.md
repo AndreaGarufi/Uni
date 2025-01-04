@@ -232,3 +232,84 @@ La condizione comune è che il gioco non sia truccato e che ogni estrazione è i
 1) Estrazioni ordinate oppure non ordinate, ovvero se l'ordine di estrazione è importante oppure no
 2) Estrazione con reinserimento oppure no, ovvero se ad ogni estrazione la pallina estratta viene reinserita nell'urna
 
+Supponiamo di estrarre k palline da un urna contenente n palline
+Nei 4 casi possibili, il numero totale è:
+- $D^r_{n,k}=n^k$ -> numero di disposizioni con ripetizione, se l'ordine è importante e la pallina viene reinserita dopo ogni estrazione
+- $D_{n,k}=\frac {n!}{(n-k)!}$ -> numero delle disposizioni semplici, se l'ordine è importante ma la pallina estratta non viene reinserita
+- $C_{n,k}=\binom{n}{k}=\frac {n!}{n!(n-k)!}$ -> combinazioni semplici, se l'ordine non è importante e la pallina estratta non viene reinserita
+- $C^r_{n,k}=\frac {n+k-1!}{k!(n-1)!}$ -> combinazioni con ripetizione, se l'ordine non è importante e la pallina viene reinserita
+
+![[Pasted image 20250102165350.png]]
+
+------
+Guarda altri esempi d'urna da slide 65 a 75, esercizi da slide 76 a 78
+
+---
+
+**Variabile casuale e valore atteso**
+Una variabile casuale è una funzione X che associa un numero reale ad un evento. Definiamo quindi un evento come il fatto che la variabile X assume un valore x ovvero 
+X = x
+
+Possiamo allora definire il valore medio e valore atteso di una variabile:
+![[Pasted image 20250103174940.png|300]]
+
+**Esempio**
+Se la variabile casuale X contiene il valore ottenuto dopo il lancio di un dado
+Abbiamo che:
+![[Pasted image 20250103175357.png]]
+
+**Proprietà del valore atteso**
+- Il valore atteso ha una proprietà di linearità
+
+1) Ovvero se abbiamo due variabili casuali X e Y e consideriamo la variabile casuale "somma" X+Y allora
+ ![[Pasted image 20250103175607.png|250]]
+**Esempio**
+Se lanciamo due dadi, il valore atteso della somma è:
+![[Pasted image 20250103175807.png|350]]
+
+**Prova di Bernoulli**
+
+Questa prova ha solamente 2 risultati: **successo o fallimento**
+Abbiamo quindi un esperimento con 2 uscite:
+1) successo con probabilità p
+2) insuccesso con probabilità q = 1-p
+
+- Tutti i tentativi sono indipendenti l'uno dall'altro e la probabilità rimane costante
+
+Il numero atteso dei numeri di tentativi da fare per ottenere "successo" è dato da $\frac{1}{p}$
+ne segue che minore è la probabilità di successo, più tentativi si dovranno fare
+
+**Esempi:**
+![[Pasted image 20250103181608.png]]
+
+
+
+**LEGGE DEI GRANDI NUMERI (Teorema di Bernoulli)** 
+
+ **La legge dei grandi numeri** detta anche **teorema di Bernoulli** ci garantisce che la media dei risultati ottenuti dopo un grande numero di tentativi si avvicina al valore atteso, ad esempio se lanciamo un dado 1000 volte la media si avvicinerà a 3,5 e se lanciamo all’infinito un dado, la media ottenuta sarà esattamente 3,5
+
+
+ESERICIZI PAG 76-78 83 94-96
+
+**CASO STUDIO: GIOCHI E PARADOSSI PROBABILISTICI**
+
+**Qui vediamo 4 degli esempi più famosi**
+1) Il paradosso dei 2 bambini (proposto da M. Gardner nel 1959)
+2) Il paradosso delle 3 carte o delle 3 scatole
+3) Il paradosso dei 3 prigionieri (proposto da M. Gardner nel 1959)
+4) Il paradosso Monty Hall (1975, 1990)
+
+
+**Paradosso dei 2 bambini**
+
+"Il professore di Probabilità ha due bambini. Non sono due femmine. Qual è la probabilità che entrambi i bambini siano maschi?"
+
+I casi possibili sono:
+M M
+F M
+M F
+
+(F F non può essere perché ha detto che non sono due femmine)
+quindi la possibilità che entrambi i figli siano maschi è 1 su 3 
+
+valli a guardare a slide 102 in poi

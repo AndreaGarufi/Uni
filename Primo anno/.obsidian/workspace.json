@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "141bbdacf3aa535f",
+        "id": "894705aad282ffe3",
         "type": "tabs",
         "children": [
           {
-            "id": "3aed2c1fa6487ad2",
+            "id": "6d35157fa6156634",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -170,62 +170,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "6fc254f4620604d6",
-    "type": "floating",
-    "children": [
-      {
-        "id": "b853137c9bb4888e",
-        "type": "window",
-        "children": [
-          {
-            "id": "afa2784010bb5084",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "f965a8ac91d744c6",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "strutture-discrete/FileCondivisiTeams/Parte3.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "Parte3"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 676,
-        "y": 220,
-        "width": 780,
-        "height": 484,
-        "maximize": true,
-        "zoom": 1.5
-      }
-    ]
-  },
-  "active": "59476c80b7c5f8bb",
+  "active": "6d35157fa6156634",
   "lastOpenFiles": [
-    "Modelli/Pasted image 20250102111747.png",
     "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
+    "Modelli/Pasted image 20250103181608.png",
+    "Modelli/Pasted image 20250103180901.png",
+    "Modelli/Pasted image 20250103175807.png",
+    "Modelli/Pasted image 20250103175607.png",
+    "Modelli/Pasted image 20250103175357.png",
+    "Modelli/Pasted image 20250103174940.png",
+    "Modelli/Pasted image 20250102165514.png",
+    "Modelli/Pasted image 20250102165350.png",
+    "Modelli/Pasted image 20250102111747.png",
     "Modelli/Pasted image 20250102111443.png",
-    "Modelli/Pasted image 20250102104058.png",
-    "Modelli/Pasted image 20250102102516.png",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "strutture-discrete/Esercizi note/Calcolo combinatorio 9_12_24_241211_162049.pdf",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
-    "Modelli/Pasted image 20241229101609.png",
-    "Modelli/Pasted image 20241229101605.png",
-    "Modelli/Pasted image 20241229101511.png",
-    "Modelli/Pasted image 20241229100936.png",
-    "Modelli/Pasted image 20241229100417.png",
-    "Modelli/Pasted image 20241228155756.png",
-    "Modelli/Pasted image 20241228152951.png",
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/FileCondivisiTeams/6) Allocazione Dinamica Memoria.pdf",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
@@ -244,7 +207,6 @@
     "strutture-discrete/TUTTI GLI ESERCIZI.md",
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/appunti 29_11_24 parte 1.md",
-    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
