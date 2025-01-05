@@ -288,9 +288,6 @@ ne segue che minore è la probabilità di successo, più tentativi si dovranno f
 
  **La legge dei grandi numeri** detta anche **teorema di Bernoulli** ci garantisce che la media dei risultati ottenuti dopo un grande numero di tentativi si avvicina al valore atteso, ad esempio se lanciamo un dado 1000 volte la media si avvicinerà a 3,5 e se lanciamo all’infinito un dado, la media ottenuta sarà esattamente 3,5
 
-
-ESERICIZI PAG 76-78 83 94-96
-
 **CASO STUDIO: GIOCHI E PARADOSSI PROBABILISTICI**
 
 **Qui vediamo 4 degli esempi più famosi**
@@ -313,3 +310,7 @@ M F
 quindi la possibilità che entrambi i figli siano maschi è 1 su 3 
 
 valli a guardare a slide 102 in poi
+
+
+
+ESERICIZI PAG 76-78 83 94-96

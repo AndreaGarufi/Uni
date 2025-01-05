@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "894705aad282ffe3",
+        "id": "be0d8b2cc15eb9b7",
         "type": "tabs",
         "children": [
           {
-            "id": "6d35157fa6156634",
+            "id": "f801402d94cff228",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
+                "file": "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Parte 3 -RIELABORAZIONE"
+              "title": "Parte 4 -RIELABORAZIONE"
             }
           }
         ]
@@ -170,21 +170,61 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6d35157fa6156634",
+  "floating": {
+    "id": "571a19025d7e6952",
+    "type": "floating",
+    "children": [
+      {
+        "id": "2e9f9cbeadef0e8a",
+        "type": "window",
+        "children": [
+          {
+            "id": "084d125f90ff8c05",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "201c8c2ddf221578",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "strutture-discrete/FileCondivisiTeams/Parte4.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Parte4"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 256,
+        "y": 12,
+        "width": 1024,
+        "height": 800,
+        "maximize": true,
+        "zoom": 1.5
+      }
+    ]
+  },
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
+    "Modelli/Pasted image 20250105154139.png",
+    "Modelli/Pasted image 20250105153947.png",
+    "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "Modelli/Pasted image 20250105153126.png",
+    "Modelli/Pasted image 20250105151243.png",
+    "Modelli/Pasted image 20250105151158.png",
+    "Modelli/Pasted image 20250105150932.png",
+    "Modelli/Pasted image 20250105150541.png",
+    "Modelli/Pasted image 20250105145637.png",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
+    "Modelli/Pasted image 20250105145043.png",
+    "Modelli/Pasted image 20250105145017.png",
+    "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "Modelli/Pasted image 20250103181608.png",
-    "Modelli/Pasted image 20250103180901.png",
-    "Modelli/Pasted image 20250103175807.png",
-    "Modelli/Pasted image 20250103175607.png",
-    "Modelli/Pasted image 20250103175357.png",
-    "Modelli/Pasted image 20250103174940.png",
-    "Modelli/Pasted image 20250102165514.png",
-    "Modelli/Pasted image 20250102165350.png",
-    "Modelli/Pasted image 20250102111747.png",
-    "Modelli/Pasted image 20250102111443.png",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "strutture-discrete/Esercizi note/Calcolo combinatorio 9_12_24_241211_162049.pdf",
@@ -199,7 +239,6 @@
     "programmazione-1/C Università/output/Ordinamenti/mergeSort.c",
     "programmazione-1/C Università/output/Ordinamenti/SelectionSort.exe",
     "programmazione-1/C Università/output/Ordinamenti/SelectionSort.c",
-    "programmazione-1/C Università/output/Ordinamenti/InsertionSort.exe",
     "programmazione-1/Matrice stringa tridimensionale.md",
     "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/Esempi di esercizi.md",
@@ -216,7 +255,6 @@
     "programmazione-1/fseek, fwrite,fread.md",
     "architettura-degli-elaboratori/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/appunti 29_11_24 parte 1.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
