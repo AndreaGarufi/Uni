@@ -171,19 +171,19 @@
     }
   },
   "floating": {
-    "id": "571a19025d7e6952",
+    "id": "a85271c00b1cfa65",
     "type": "floating",
     "children": [
       {
-        "id": "2e9f9cbeadef0e8a",
+        "id": "20d0f5f13f9840cf",
         "type": "window",
         "children": [
           {
-            "id": "084d125f90ff8c05",
+            "id": "25cf5e44403feb6d",
             "type": "tabs",
             "children": [
               {
-                "id": "201c8c2ddf221578",
+                "id": "9d77978767cc9288",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -198,10 +198,10 @@
           }
         ],
         "direction": "vertical",
-        "x": 256,
-        "y": 12,
-        "width": 1024,
-        "height": 800,
+        "x": -20,
+        "y": -27,
+        "width": 973,
+        "height": 603,
         "maximize": true,
         "zoom": 1.5
       }
@@ -209,22 +209,22 @@
   },
   "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "Modelli/Pasted image 20250105154139.png",
-    "Modelli/Pasted image 20250105153947.png",
+    "Modelli/Pasted image 20250105195941.png",
     "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "Modelli/Pasted image 20250105153126.png",
-    "Modelli/Pasted image 20250105151243.png",
-    "Modelli/Pasted image 20250105151158.png",
-    "Modelli/Pasted image 20250105150932.png",
-    "Modelli/Pasted image 20250105150541.png",
-    "Modelli/Pasted image 20250105145637.png",
+    "Modelli/Pasted image 20250105195428.png",
+    "Modelli/Pasted image 20250105195406.png",
+    "Modelli/Pasted image 20250105194934.png",
+    "Modelli/Pasted image 20250105194825.png",
+    "Modelli/Pasted image 20250105194229.png",
+    "Modelli/Pasted image 20250105190329.png",
+    "Modelli/Pasted image 20250105185346.png",
+    "Modelli/Pasted image 20250105185025.png",
+    "Modelli/Pasted image 20250105184540.png",
+    "Modelli/Pasted image 20250105154139.png",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
-    "Modelli/Pasted image 20250105145043.png",
-    "Modelli/Pasted image 20250105145017.png",
     "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
-    "Modelli/Pasted image 20250103181608.png",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "strutture-discrete/Esercizi note/Calcolo combinatorio 9_12_24_241211_162049.pdf",

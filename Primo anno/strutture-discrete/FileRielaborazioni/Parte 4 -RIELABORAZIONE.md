@@ -55,7 +55,7 @@ Un grafo semplice non orientato può collegare al massimo 2 nodi tra loro
 
 
 **Definizione**
-**Grafo semplice orientato**
+**Grafo semplice orientato (digrafo)**
 Un grafo semplice orientato, denotato con G = (V,E) è praticamente uguale al grafo non orientato solo che qua conta la direzione: infatti ci sono delle frecce tra i 2 nodi che ne indicano il verso
 ![[Pasted image 20250105153947.png|250]]
 
@@ -63,4 +63,63 @@ Un grafo semplice orientato, denotato con G = (V,E) è praticamente uguale al gr
 ![[Pasted image 20250105154139.png|550]]
 
 nei multigrafi possiamo avere un arco che collega lo stesso nodo, questo si chiama cappio
+
+**Grado di un nodo**
+Dato un grafo G = {V,E} **il grado di un nodo v ∈ V, denotato con δ(v) (delta di v), è il numero di archi ad esso incidenti.**
+
+Se G è un digrafo (grafo ordinato), abbiamo 2 nozioni diverse del grado di un nodo:
+1) Grado in ingresso  $δ^-(v)$ è il numero di archi orientati che "entrano" nel nodo
+2) Grado in uscita $δ^+(v)$ è il numero di archi orientati che "escono" dal nodo
+
+**Esempio**
+![[Pasted image 20250105185346.png]]
+
+**Teorema delle strette di mano**
+Sia G = {V,E} un <u>grafo non orientato</u>, allora la somma dei gradi di ogni vertice è uguale al doppio del numero degli archi ossia -> 2|E|
+
+- Corollario: Sia G = {V, E} un <u>grafo non orientato</u>, il numero dei vertici di grado dispari è un numero pari
+
+
+######  **Grafi Regolari**
+Sia G = {V,E} un <u>grafo non orientato</u> 
+
+**Se tutti i nodi del grafo hanno lo stesso grado r allora il grafo è regolare di grado r**
+
+ne deduciamo che:                                                                            (|V| = numero di nodi)
+1) $\lvert V \rvert = \frac{2 \lvert E \rvert}{r}$
+2) Se r è dispari allora |V| è pari, ovvero un grafo regolare di grado dispari contiene un numero pari di nodi
+
+
+###### **Grafi Completi**
+Sia G = {V,E} <u>un grafo non orientato</u>, **Diciamo che G è completo se ogni coppia di nodi è connessa da un SOLO arco**
+ne deduciamo che il numero di archi del grafo completo è $\binom{|V|}{2}$ ovvero il numero di tutte le possibili coppie di nodi
+Un grafo completo con n nodi viene denotato con $K_n$
+![[Pasted image 20250105190329.png|600]]
+
+
+###### **Torneo**
+Sia G = {V,E} un <u>grafo completo</u>. **Il grafo orientato attenuto assegnando uno dei due possibili versi ad ogni arco di G si dice torneo**
+In pratica è un grafo completo in cui agli archi viene data una direzione
+ma <u>non</u> sono grafi orientati completi
+![[Pasted image 20250105194229.png|250]]
+
+
+###### **Grafi Orientati Completi**
+Sia G = {V,E} un digrafo. **G è completo se ogni coppia di nodi è connessa da un arco (i,j) e (j,i)** quindi bisogna avere "andata e ritorno"
+![[Pasted image 20250105194825.png|300]]
+
+
+###### **Grafi Bipartiti**
+Sia G = {V,E} un <u>grafo non orientato</u>. **Diciamo che G è bipartito se possiamo partizionare l'insieme dei nodi in 2 insiemi, $V_1$ e $V_2$ in maniera che tutti gli archi di G hanno come estremi un nodo in $V_1$ e l'altro in $V_2$** 
+![[Pasted image 20250105195406.png|500]]
+
+###### **Grafi Bipartiti Completi**
+Un grafo Bipartito G = {V,E} si dice completo se data la partizione dei vertici $V_1$ e $V_2$ esiste un arco per ogni coppia di nodi $v ∈ V_1$ e $u ∈ V_2$
+Un grafo bipartito completo si indica con $k_{n,m}$ dove n = |$V_1$| e m = |$V_2$|
+![[Pasted image 20250105195941.png|350]]
+
+
+###### **Sottografo**
+slide 32
+
 
