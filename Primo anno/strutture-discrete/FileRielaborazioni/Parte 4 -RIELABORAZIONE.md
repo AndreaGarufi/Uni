@@ -4,6 +4,19 @@
 ![[Pasted image 20250105145043.png|500]]
 
 
+**INDICE**
+[[#**Grafi Regolari**]]
+[[#**Grafi Completi**]]
+[[#**Torneo**]]
+[[#**Grafi Orientati Completi**]]
+[[#**Grafi Bipartiti**]]
+[[#**Grafi Bipartiti Completi**]]
+[[#**Sottografo**]]
+[[#**Sottografo Indotto**]]
+[[#**Grafi Isomorfi**]]
+
+
+
 Introduciamo il problema delle strette di mano:
 
 Roberto e la moglie Giulia hanno organizzato una cena a casa loro ed invitano altre 4 coppie sposate di amici. 

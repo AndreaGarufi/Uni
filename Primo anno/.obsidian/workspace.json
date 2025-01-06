@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "68a3c957eec10b9a",
+        "id": "17df62e2b5b5c70c",
         "type": "tabs",
         "children": [
           {
-            "id": "c3c452a44e145125",
+            "id": "37933f098788f5ec",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -170,48 +170,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "a08e8c6e47e2e3bc",
-    "type": "floating",
-    "children": [
-      {
-        "id": "8be0fadc1be7b0c5",
-        "type": "window",
-        "children": [
-          {
-            "id": "dd5b644ef1bd79b8",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "c3fa7b65ca55e977",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "strutture-discrete/FileCondivisiTeams/Parte4.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "Parte4"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": -60,
-        "y": -18,
-        "width": 973,
-        "height": 603,
-        "maximize": true,
-        "zoom": 1.5
-      }
-    ]
-  },
-  "active": "59476c80b7c5f8bb",
+  "active": "37933f098788f5ec",
   "lastOpenFiles": [
-    "Modelli/Pasted image 20250106111929.png",
-    "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
+    "Modelli/Pasted image 20250106163921.png",
+    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
+    "strutture-discrete/FileRielaborazioni/Tips.md",
+    "strutture-discrete/Esempi di esercizi.md",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
+    "Modelli/Pasted image 20250106111929.png",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "Modelli/Pasted image 20250106110805.png",
@@ -225,7 +193,6 @@
     "Modelli/Pasted image 20250105194934.png",
     "Modelli/Pasted image 20250105194825.png",
     "Modelli/Pasted image 20250105194229.png",
-    "Modelli/Pasted image 20250105190329.png",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
@@ -239,11 +206,7 @@
     "Senza nome.md",
     "programmazione-1/C Università/output/Ordinamenti/mergeSort.c",
     "programmazione-1/C Università/output/Ordinamenti/SelectionSort.exe",
-    "programmazione-1/C Università/output/Ordinamenti/SelectionSort.c",
     "programmazione-1/Matrice stringa tridimensionale.md",
-    "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
-    "strutture-discrete/Esempi di esercizi.md",
-    "strutture-discrete/FileRielaborazioni/Tips.md",
     "strutture-discrete/TUTTI GLI ESERCIZI.md",
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/appunti 29_11_24 parte 1.md",

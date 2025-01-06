@@ -458,13 +458,16 @@ Nella **classe di equivalenza** rispetto alla congruenza modulo $m$, ci stanno *
 **Dato a ∈ Z come facciamo a stabilire in quale classe resto sta?**
 $[a]_m = [r ]_m$ dove r è il resto della divisione di a per m. Quindi se m = 5 e a = 22 allora eseguendo la divisione abbiamo 22 : 5 = 4 con resto di 2, ottenendo che $[22]_5 = [2]_5$ 
 
-**Teorema**
+**Teorema Invarianza rispetto a somma e prodotto**
 Dato m ∈ N e dati a, b ∈ Z tali che a ≡ b(mod m), allora comunque prendiamo c, d ∈ Z tali che c ≡ d(mod m) abbiamo
 1) a + c ≡ b + d(mod m) 
 2) a · c ≡ b · d(mod m)
 
 Grazie a questo teorema **sappiamo che se ad una congruenza sommiamo o moltiplichiamo una stessa quantità la congruenza rimane**
 **Se sottraiamo ad ambo i membri uno stesso numero la congruenza riamane, ma se dividiamo per uno stesso numero la congruenza potrebbe non valere più**
+
+**Dimostrazione fatta da Girlando**
+![[Pasted image 20250106163921.png]]
 
 **Proprietà**
 1) (a + b) mod m = (a mod m + b mod m)
