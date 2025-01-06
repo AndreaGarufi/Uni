@@ -120,6 +120,35 @@ Un grafo bipartito completo si indica con $k_{n,m}$ dove n = |$V_1$| e m = |$V_2
 
 
 ###### **Sottografo**
-slide 32
+Sia G = {V,E} un grafo non orientato. Diciamo che **G' = {V',E'} è un sotto grafo di G se**:
+1) **V' ⊆ V**
+2) **E' ⊆ E** 
+(In pratica un parte più piccola del grafo)
+**Stessa cosa vale anche per i grafi orientati**
+![[Pasted image 20250106110336.png|500]]
+![[Pasted image 20250106110441.png|500]]
 
 
+###### **Sottografo Indotto**
+Sia G = {V,E} un grafo (o digrafo). Sia V ′ ⊆ V. **Il sottografo indotto da V' è il sottografo**
+**G = {V',E'} ottenuto eliminando da G tutti i vertici non appartenenti a V' e tutti gli archi incidenti ad almeno uno dei vertici eliminati**
+![[Pasted image 20250106110805.png]]
+
+
+###### **Grafi Isomorfi**
+Chiediamoci in che senso due grafi possono essere considerati uguali? Ricordiamo che la proprietà caratteristica di un grafo è il modo in cui i vertici sono collegati dagli archi
+
+**Definizione** **(complicata (slide Cutello))**
+**Isomorfismo tra grafi (sono uguali)**
+Due grafi, sia entrambi orientati che entrambi non orientati, $G_1$ = ($V_1, E_1$) e $G_2$ = ($V_2, E_2$) si dicono isomorfi se esiste una applicazione biunivoca f dall’insieme dei vertici V1 nell’insieme dei vertici $V_2$ tale che (f (u), f (v)) è un arco di $E_2$ se e solo se (u, v) è un arco di $E_1$. La biiezione f è detta isomorfismo
+**Esempio:**
+![[Pasted image 20250106111929.png|600]]
+
+
+
+**Definizione** **(semplice (chatGPT))**
+Due **grafi** si dicono **isomorfi** se hanno lo stesso numero di nodi e archi e c'è una corrispondenza biunivoca tra i nodi dei due grafi che preserva le connessioni. In altre parole, i grafi sono strutturalmente identici, anche se i nodi hanno etichette diverse.
+**Esempio**:  
+Se il grafo $G_1$​ ha i nodi **A,B,C** e gli archi **(A,B),(B,C)(A, B)** e il grafo $G_2$​ ha i nodi **1,2,3** e gli archi **(1,2),(2,3)** i due grafi sono isomorfi. La corrispondenza potrebbe essere A↔1, B↔2, C↔3
+
+slide 37

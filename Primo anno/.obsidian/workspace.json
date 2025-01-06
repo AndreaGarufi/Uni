@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "be0d8b2cc15eb9b7",
+        "id": "68a3c957eec10b9a",
         "type": "tabs",
         "children": [
           {
-            "id": "f801402d94cff228",
+            "id": "c3c452a44e145125",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -171,19 +171,19 @@
     }
   },
   "floating": {
-    "id": "a85271c00b1cfa65",
+    "id": "a08e8c6e47e2e3bc",
     "type": "floating",
     "children": [
       {
-        "id": "20d0f5f13f9840cf",
+        "id": "8be0fadc1be7b0c5",
         "type": "window",
         "children": [
           {
-            "id": "25cf5e44403feb6d",
+            "id": "dd5b644ef1bd79b8",
             "type": "tabs",
             "children": [
               {
-                "id": "9d77978767cc9288",
+                "id": "c3fa7b65ca55e977",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -198,8 +198,8 @@
           }
         ],
         "direction": "vertical",
-        "x": -20,
-        "y": -27,
+        "x": -60,
+        "y": -18,
         "width": 973,
         "height": 603,
         "maximize": true,
@@ -209,31 +209,32 @@
   },
   "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "Modelli/Pasted image 20250105195941.png",
+    "Modelli/Pasted image 20250106111929.png",
     "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/29 novembre 2024 parte 2.md",
+    "Modelli/Pasted image 20250106110805.png",
+    "Modelli/Pasted image 20250106110441.png",
+    "Modelli/Pasted image 20250106110336.png",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "programmazione-1/fseek, fwrite,fread.md",
+    "Modelli/Pasted image 20250105195941.png",
     "Modelli/Pasted image 20250105195428.png",
     "Modelli/Pasted image 20250105195406.png",
     "Modelli/Pasted image 20250105194934.png",
     "Modelli/Pasted image 20250105194825.png",
     "Modelli/Pasted image 20250105194229.png",
     "Modelli/Pasted image 20250105190329.png",
-    "Modelli/Pasted image 20250105185346.png",
-    "Modelli/Pasted image 20250105185025.png",
-    "Modelli/Pasted image 20250105184540.png",
-    "Modelli/Pasted image 20250105154139.png",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
-    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "strutture-discrete/Esercizi note/Calcolo combinatorio 9_12_24_241211_162049.pdf",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/FileCondivisiTeams/6) Allocazione Dinamica Memoria.pdf",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
-    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "architettura-degli-elaboratori/Teoria/FileCondivisiTeams/7 Circuiti-aritmetici.pdf",
     "Senza nome.md",
     "programmazione-1/C Università/output/Ordinamenti/mergeSort.c",
@@ -252,7 +253,6 @@
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
-    "programmazione-1/fseek, fwrite,fread.md",
     "architettura-degli-elaboratori/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "programmazione-1/Senza nome.canvas"

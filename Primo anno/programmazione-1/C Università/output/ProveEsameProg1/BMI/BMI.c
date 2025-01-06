@@ -57,7 +57,6 @@ E.*/
 #include <stdlib.h>
 #include <stdbool.h>
 
-void readInput(int dim, char *argv[]);
 
 
 struct datiPersone{     //struct contenente i dati delle persone da leggere da file di input e creare poi la lista come indicato nel pdf
@@ -70,16 +69,28 @@ struct datiPersone{     //struct contenente i dati delle persone da leggere da f
 
     struct datiPersone *nextPtr;
 };
+typedef struct datiPersone datiPersone;
+
+void readInput(int dim, char *argv[]);
+datiPersone *readFile(char nomeFile[], int dim);
 
 int main(int argc, char *argv[]){
 
 readInput(argc,argv);
 
+datiPersone *testaPtr = NULL;
+
+char nomeFile[18] = {0};
+strcpy(nomeFile,argv[1]);
+
+testaPtr = readFile(nomeFile,18);
+
 }
 
 void readInput(int argc, char *argv[]){
+    printf("\nREAD INPUT\n");
 
-        printf("Parametri passati (%d):",argc-1);
+    printf("Parametri passati (%d):",argc-1);
 
     for(int i = 1; i < argc; i++){
         puts("");
@@ -100,4 +111,71 @@ void readInput(int argc, char *argv[]){
     }else{
         printf("Parametri inseriti OK\n");
     }
+}
+datiPersone *readFile(char nomeFile[], int dim){
+    printf("\nREAD FILE\n");
+
+    datiPersone dati;
+    FILE *filePtr = NULL;
+
+    if((filePtr = fopen("file_di_input.txt","r")) == NULL){
+        printf("nFILE NON APERTO\n");
+    }else{
+        printf("\nFILE APERTO CORRETTAMENTE\n");
+    }
+
+    fseek(filePtr,0,SEEK_SET);  //mi sposto all'inizio del file per cominciare a prendere i dati da inserire nella lista
+    puts("");
+    /*while(fscanf(filePtr,"%249s %249s %d %d %d %c",dati.nome,dati.cognome,&dati.eta,&dati.peso,&dati.altezza,&dati.sesso) == 6){    //se scanf legge 6 dati ritorna il 6 quindi quando il 6 non ritorna esce dal ciclo    
+        printf("%s %s %d %d %d %c \n",dati.nome,dati.cognome,dati.eta,dati.peso,dati.altezza,dati.sesso);
+    }*/
+
+    datiPersone *headPtr = NULL;
+    datiPersone *newPtr = NULL;
+
+    for(int i = 0; i < 10; i++){      
+        if(i == 0){
+            headPtr = malloc(sizeof(datiPersone)); //creazione primo nodo della lista
+            }else if(i == 1){
+                newPtr = headPtr->nextPtr = malloc(sizeof(datiPersone));  // creazione del secondo nodo (questo avviene al secondo ciclo)
+                }else{
+                    newPtr = newPtr->nextPtr = malloc(sizeof(datiPersone));  // creazione altri nodi
+                }
+                if(i == 9){
+                    printf("\ncreazione 10 nodi\n\n");
+                }
+    }
+
+    newPtr = headPtr;
+    
+    //riempimento delle liste
+        
+        while(newPtr != NULL){
+            while(fscanf(filePtr,"%249s %249s %d %d %d %c",dati.nome,dati.cognome,&dati.eta,&dati.peso,&dati.altezza,&dati.sesso) == 6){    //se scanf legge 6 dati ritorna il 6 quindi quando il 6 non ritorna esce dal ciclo    
+                strcpy(newPtr->nome, dati.nome);
+                strcpy(newPtr->cognome, dati.cognome);
+                newPtr->eta = dati.eta;
+                newPtr->peso = dati.peso;
+                newPtr->altezza = dati.altezza;
+                newPtr->sesso = dati.sesso;
+
+                newPtr = newPtr->nextPtr;
+        }
+    }
+
+    int i = 0;
+    newPtr = headPtr;
+    while(newPtr != NULL){
+        i++;
+        printf("NUMERO NODO %d -> %s %s %d %d %d %c\n",i,newPtr->nome,newPtr->cognome,newPtr->eta,newPtr->peso,newPtr->altezza,newPtr->sesso);
+        newPtr = newPtr->nextPtr;
+    }
+
+
+
+    printf("\nORIDNAMENTO IN BASE ALL'ETA'...");            //o fai un bubble sort o un insertion sort o un selection sort
+
+
+
+    fclose(filePtr);
 }
