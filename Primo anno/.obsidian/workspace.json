@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "17df62e2b5b5c70c",
+        "id": "731cd096493c3307",
         "type": "tabs",
         "children": [
           {
-            "id": "37933f098788f5ec",
+            "id": "77a4f692f3e317b4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -170,29 +170,65 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "37933f098788f5ec",
+  "floating": {
+    "id": "e6285be12b4c64aa",
+    "type": "floating",
+    "children": [
+      {
+        "id": "95cb3d778d3f8288",
+        "type": "window",
+        "children": [
+          {
+            "id": "e26c4d45bac32dee",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "760afeb41b685803",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "strutture-discrete/FileCondivisiTeams/Parte4.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Parte4"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": -145,
+        "y": 26,
+        "width": 973,
+        "height": 603,
+        "maximize": true,
+        "zoom": 1.5
+      }
+    ]
+  },
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
+    "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "Modelli/Pasted image 20250107112906.png",
+    "Modelli/Pasted image 20250107112740.png",
+    "Modelli/Pasted image 20250107112312.png",
+    "Modelli/Pasted image 20250107112111.png",
+    "Modelli/Pasted image 20250107111240.png",
+    "Modelli/Pasted image 20250107111211.png",
     "Modelli/Pasted image 20250106163921.png",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "strutture-discrete/Esempi di esercizi.md",
-    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
     "Modelli/Pasted image 20250106111929.png",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "Modelli/Pasted image 20250106110805.png",
     "Modelli/Pasted image 20250106110441.png",
-    "Modelli/Pasted image 20250106110336.png",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/fseek, fwrite,fread.md",
-    "Modelli/Pasted image 20250105195941.png",
-    "Modelli/Pasted image 20250105195428.png",
-    "Modelli/Pasted image 20250105195406.png",
-    "Modelli/Pasted image 20250105194934.png",
-    "Modelli/Pasted image 20250105194825.png",
-    "Modelli/Pasted image 20250105194229.png",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",

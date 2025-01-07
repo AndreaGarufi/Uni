@@ -4,7 +4,7 @@
 ![[Pasted image 20250105145043.png|500]]
 
 
-**INDICE**
+**INDICE SULLE TIPOLOGIE DI GRAFI**
 [[#**Grafi Regolari**]]
 [[#**Grafi Completi**]]
 [[#**Torneo**]]
@@ -92,7 +92,7 @@ Sia G = {V,E} un <u>grafo non orientato</u>, allora la somma dei gradi di ogni v
 
 - Corollario: Sia G = {V, E} un <u>grafo non orientato</u>, il numero dei vertici di grado dispari è un numero pari
 
-
+---
 ######  **Grafi Regolari**
 Sia G = {V,E} un <u>grafo non orientato</u> 
 
@@ -102,36 +102,37 @@ ne deduciamo che:                                                               
 1) $\lvert V \rvert = \frac{2 \lvert E \rvert}{r}$
 2) Se r è dispari allora |V| è pari, ovvero un grafo regolare di grado dispari contiene un numero pari di nodi
 
-
+---
 ###### **Grafi Completi**
 Sia G = {V,E} <u>un grafo non orientato</u>, **Diciamo che G è completo se ogni coppia di nodi è connessa da un SOLO arco**
 ne deduciamo che il numero di archi del grafo completo è $\binom{|V|}{2}$ ovvero il numero di tutte le possibili coppie di nodi
 Un grafo completo con n nodi viene denotato con $K_n$
 ![[Pasted image 20250105190329.png|600]]
 
-
+---
 ###### **Torneo**
 Sia G = {V,E} un <u>grafo completo</u>. **Il grafo orientato attenuto assegnando uno dei due possibili versi ad ogni arco di G si dice torneo**
 In pratica è un grafo completo in cui agli archi viene data una direzione
 ma <u>non</u> sono grafi orientati completi
 ![[Pasted image 20250105194229.png|250]]
 
-
+---
 ###### **Grafi Orientati Completi**
 Sia G = {V,E} un digrafo. **G è completo se ogni coppia di nodi è connessa da un arco (i,j) e (j,i)** quindi bisogna avere "andata e ritorno"
 ![[Pasted image 20250105194825.png|300]]
 
-
+---
 ###### **Grafi Bipartiti**
 Sia G = {V,E} un <u>grafo non orientato</u>. **Diciamo che G è bipartito se possiamo partizionare l'insieme dei nodi in 2 insiemi, $V_1$ e $V_2$ in maniera che tutti gli archi di G hanno come estremi un nodo in $V_1$ e l'altro in $V_2$** 
 ![[Pasted image 20250105195406.png|500]]
 
+---
 ###### **Grafi Bipartiti Completi**
 Un grafo Bipartito G = {V,E} si dice completo se data la partizione dei vertici $V_1$ e $V_2$ esiste un arco per ogni coppia di nodi $v ∈ V_1$ e $u ∈ V_2$
 Un grafo bipartito completo si indica con $k_{n,m}$ dove n = |$V_1$| e m = |$V_2$|
 ![[Pasted image 20250105195941.png|350]]
 
-
+---
 ###### **Sottografo**
 Sia G = {V,E} un grafo non orientato. Diciamo che **G' = {V',E'} è un sotto grafo di G se**:
 1) **V' ⊆ V**
@@ -141,12 +142,13 @@ Sia G = {V,E} un grafo non orientato. Diciamo che **G' = {V',E'} è un sotto gra
 ![[Pasted image 20250106110336.png|500]]
 ![[Pasted image 20250106110441.png|500]]
 
-
+---
 ###### **Sottografo Indotto**
 Sia G = {V,E} un grafo (o digrafo). Sia V ′ ⊆ V. **Il sottografo indotto da V' è il sottografo**
 **G = {V',E'} ottenuto eliminando da G tutti i vertici non appartenenti a V' e tutti gli archi incidenti ad almeno uno dei vertici eliminati**
 ![[Pasted image 20250106110805.png]]
 
+---
 
 ###### **Grafi Isomorfi**
 Chiediamoci in che senso due grafi possono essere considerati uguali? Ricordiamo che la proprietà caratteristica di un grafo è il modo in cui i vertici sono collegati dagli archi
@@ -164,4 +166,47 @@ Due **grafi** si dicono **isomorfi** se hanno lo stesso numero di nodi e archi e
 **Esempio**:  
 Se il grafo $G_1$​ ha i nodi **A,B,C** e gli archi **(A,B),(B,C)(A, B)** e il grafo $G_2$​ ha i nodi **1,2,3** e gli archi **(1,2),(2,3)** i due grafi sono isomorfi. La corrispondenza potrebbe essere A↔1, B↔2, C↔3
 
-slide 37
+- Ovviamente se i due grafi sono isomorfi allora:
+  $|V_1| = |V_2| e |E_1| = |E_2|$
+- Sappiamo anche che dato che f(u) = v allora anche δ(u) = δ(v) (vale anche per grafi orientati)
+- Se due grafi sono isomorfi allora esistono almeno altri 2 sottografi isomorfi a loro volta
+- **Se 2 grafi hanno gli stessi nodi e stessi archi non per forza sono isomorfi**
+
+**Grafi non isomorfi esempio:**
+![[Pasted image 20250107111211.png|400]]
+1) l grafo $G_1$ ha un vertice c tale che δ(c) = 1. Tutti i vertici di $G_2$, invece, hanno grado maggiore o uguale a 2
+2) Il sottografo di $G_1$ ottenuto eliminando il vertice c è un $K_4$ ovvero un grafo completo con 4 vertici. Nessuno dei 5 sottografi di $G_2$ con 4 vertici è un grafo completo
+
+**Grafi orientati non isomorfi esempio:**
+![[Pasted image 20250107111240.png|400]]
+1) Non sono isomorfi perché nel grafo $G_1$ il vertice 2 ha grado in uscita 2 mentre nessun vertice in $G_2$ ha lo stesso grado in uscita
+2) Notiamo anche che se invertiamo il verso dell’arco (2, 1) in $G_1$ e quindi otteniamo un arco che va da 1 a 2 allora i due grafi diventano isomorfi
+
+---
+
+###### **Grafi Omeomorfi**
+In che senso due grafi hanno la stessa forma? Diamo intanto queste denifizioni
+
+**Definizione suddivisione di un arco (grafo non orientato)**
+Sia G = {V,E} un <u>grafo non orientato</u> e sia e = {u,v} un arco di G
+Una suddivisione dell'arco e = {u,v} è ottenuta introducendo un nuovo nodo w e sostituendo in G l'arco (u,v) con gli archi e$_1$ = {u,w} e  e$_2$ = {w,u}
+
+![[Pasted image 20250107112111.png|350]]
+
+**Vale la stessa cosa anche sui grafi orientati**
+![[Pasted image 20250107112312.png|460]]
+
+
+**Omeomorfismo tra grafi**
+**Definizione**
+Due <u>grafi non orientati</u> $G_1 = (V_1, E_1) e G_2 = (V_2, E_2)$ si dicono omeomorfi se attraverso una serie di suddivisioni di archi di $G_1$ e $G_2$ si possono ottenere 2 grafi $G'_1$ e $G'_2$ che sono isomorfi
+
+![[Pasted image 20250107112740.png|400]]
+
+
+
+**La definizione di omeomorfismo si estende ai grafi orientati tenendo però presente la suddivisione di archi orientati in due o più archi orientati**
+
+![[Pasted image 20250107112906.png|400]]
+
+slide 44
