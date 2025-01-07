@@ -129,9 +129,6 @@ datiPersone *readFile(char nomeFile[], int dim){
 
     fseek(filePtr,0,SEEK_SET);  //mi sposto all'inizio del file per cominciare a prendere i dati da inserire nella lista
     puts("");
-    /*while(fscanf(filePtr,"%249s %249s %d %d %d %c",dati.nome,dati.cognome,&dati.eta,&dati.peso,&dati.altezza,&dati.sesso) == 6){    //se scanf legge 6 dati ritorna il 6 quindi quando il 6 non ritorna esce dal ciclo    
-        printf("%s %s %d %d %d %c \n",dati.nome,dati.cognome,dati.eta,dati.peso,dati.altezza,dati.sesso);
-    }*/
 
     datiPersone *headPtr = NULL;
     datiPersone *newPtr = NULL;
@@ -175,9 +172,23 @@ datiPersone *readFile(char nomeFile[], int dim){
     }
 
 
-
     printf("\nORIDNAMENTO IN BASE ALL'ETA'...");            //implementa bubble sort lista
 
+    //bubble sort
+    datiPersone *successivoPtr = NULL;
+
+    while(1){
+        int scamnbiato = 0;
+        newPtr = headPtr;
+        successivoPtr = newPtr->nextPtr;
+
+        while(successivoPtr != NULL){
+            if(newPtr->eta > successivoPtr->eta){
+                
+            }
+        }
+
+    }
 
     fclose(filePtr);
 }

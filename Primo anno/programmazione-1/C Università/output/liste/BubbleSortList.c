@@ -8,7 +8,7 @@ struct listaEta{
 };
 typedef struct listaEta listaEta;
 
-
+void bubbleSortLista(listaEta *headPtr);
 
 int main(){
     srand(time(NULL));
@@ -54,38 +54,61 @@ int main(){
 
     listaEta *successivoPtr = NULL;
 
-    /*while(newPtr->nextPtr != NULL){
-
-        newPtr = testaPtr;
+    //BUBBLE SORT (con questa bubble sort scambio i valori in ordine crescente, ma se ci fossero più variabili nella lista quelle rimarrebbero cosi come sono)
+    while (1) { // Ciclo esterno infinito, controllo manuale
+        int scambiato = 0; // Aggiunto: Variabile per verificare se ci sono stati scambi
+        newPtr = testaPtr; 
         successivoPtr = newPtr->nextPtr;
 
-        while(successivoPtr != NULL){
-
-            if(newPtr->eta > successivoPtr->eta){
+        while (successivoPtr != NULL) { 
+            if (newPtr->eta > successivoPtr->eta) {
+                
                 int temp = newPtr->eta;
                 newPtr->eta = successivoPtr->eta;
                 successivoPtr->eta = temp;
-            }
-            newPtr = successivoPtr;
-            successivoPtr = successivoPtr->nextPtr;
 
+                scambiato = 1; // Aggiunto: Segnala che è avvenuto uno scambio
+            }
+            newPtr = successivoPtr; 
+            successivoPtr = successivoPtr->nextPtr;
         }
 
-    }*/
+        if (scambiato == 0) { 
+            break; // Aggiunto: Esce dal ciclo esterno se non ci sono stati scambi
+        }
+    }
 
-   while (1) { // Ciclo esterno infinito, controllo manuale
+    newPtr = testaPtr;
+    i = 1;
+    while(newPtr != NULL){
+        printf("nodo numero %d -> eta' -> %d\n",i,newPtr->eta);
+        newPtr = newPtr->nextPtr;
+        i++;
+    }  
+
+    bubbleSortLista(testaPtr);
+
+}
+
+void bubbleSortLista(listaEta *headPtr){
+
+    printf("\nBubble Sort Per Spostare Tutta La Lista\n");
+    listaEta *newPtr = NULL;
+    listaEta *successivoPtr = NULL;
+
+    while (1) { // Ciclo esterno infinito, controllo manuale
     int scambiato = 0; // Aggiunto: Variabile per verificare se ci sono stati scambi
-    newPtr = testaPtr; 
+    newPtr = headPtr; 
     successivoPtr = newPtr->nextPtr;
 
     while (successivoPtr != NULL) { 
         if (newPtr->eta > successivoPtr->eta) {
             
-            int temp = newPtr->eta;
-            newPtr->eta = successivoPtr->eta;
+            /*int temp = newPtr->eta;
+            newPtr->eta = successivoPtr->eta;                                                   //fai in modo di spostare tutta la lista, credo vada fatto semplicemento lo stesso scambio ma usando i puntatori, quindi andrà creato un terzo puntatore di appoggio
             successivoPtr->eta = temp;
 
-            scambiato = 1; // Aggiunto: Segnala che è avvenuto uno scambio
+            scambiato = 1; // Aggiunto: Segnala che è avvenuto uno scambio*/
         }
         newPtr = successivoPtr; 
         successivoPtr = successivoPtr->nextPtr;
@@ -96,12 +119,13 @@ int main(){
     }
 }
 
-    newPtr = testaPtr;
-    i = 1;
+    newPtr = headPtr;
+    int i = 1;
     while(newPtr != NULL){
         printf("nodo numero %d -> eta' -> %d\n",i,newPtr->eta);
         newPtr = newPtr->nextPtr;
         i++;
-    }    
+    } 
+
 
 }

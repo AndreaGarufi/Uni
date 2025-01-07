@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "731cd096493c3307",
+        "id": "51384947e819e96b",
         "type": "tabs",
         "children": [
           {
-            "id": "77a4f692f3e317b4",
+            "id": "09a24c80852d92f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -175,15 +175,15 @@
     "type": "floating",
     "children": [
       {
-        "id": "95cb3d778d3f8288",
+        "id": "97bde1271079a00a",
         "type": "window",
         "children": [
           {
-            "id": "e26c4d45bac32dee",
+            "id": "436ee35e02198925",
             "type": "tabs",
             "children": [
               {
-                "id": "760afeb41b685803",
+                "id": "a9cce0d72215cd1a",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -198,8 +198,8 @@
           }
         ],
         "direction": "vertical",
-        "x": -145,
-        "y": 26,
+        "x": 464,
+        "y": 187,
         "width": 973,
         "height": 603,
         "maximize": true,
@@ -207,29 +207,30 @@
       }
     ]
   },
-  "active": "760afeb41b685803",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
     "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "Modelli/Pasted image 20250107221651.png",
+    "Modelli/Pasted image 20250107221354.png",
+    "Modelli/Pasted image 20250107220844.png",
+    "Modelli/Pasted image 20250107220715.png",
+    "Modelli/Pasted image 20250107220503.png",
+    "Modelli/Pasted image 20250107220424.png",
+    "programmazione-1/C Università/output/liste/BubbleSortList.exe",
+    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "Modelli/Pasted image 20250107112906.png",
     "Modelli/Pasted image 20250107112740.png",
     "Modelli/Pasted image 20250107112312.png",
     "Modelli/Pasted image 20250107112111.png",
-    "Modelli/Pasted image 20250107111240.png",
-    "Modelli/Pasted image 20250107111211.png",
-    "Modelli/Pasted image 20250106163921.png",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "strutture-discrete/Esempi di esercizi.md",
-    "Modelli/Pasted image 20250106111929.png",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/29 novembre 2024 parte 2.md",
-    "Modelli/Pasted image 20250106110805.png",
-    "Modelli/Pasted image 20250106110441.png",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/fseek, fwrite,fread.md",
-    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "strutture-discrete/Esercizi note/Calcolo combinatorio 9_12_24_241211_162049.pdf",
@@ -241,7 +242,6 @@
     "architettura-degli-elaboratori/Teoria/FileCondivisiTeams/7 Circuiti-aritmetici.pdf",
     "Senza nome.md",
     "programmazione-1/C Università/output/Ordinamenti/mergeSort.c",
-    "programmazione-1/C Università/output/Ordinamenti/SelectionSort.exe",
     "programmazione-1/Matrice stringa tridimensionale.md",
     "strutture-discrete/TUTTI GLI ESERCIZI.md",
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",

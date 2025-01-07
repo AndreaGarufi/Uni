@@ -16,6 +16,11 @@
 [[#**Grafi Isomorfi**]]
 [[#**Grafi Omeomorfi**]]
 
+[[#**Percorso**|#**Percorsi,cammini,circuiti,cicli**]]
+[[#**Grafi Aciclici**]]
+[[#**Nodi connessi**]]
+
+
 
 Introduciamo il problema delle strette di mano:
 
@@ -209,4 +214,42 @@ Due <u>grafi non orientati</u> $G_1 = (V_1, E_1) e G_2 = (V_2, E_2)$ si dicono o
 
 ![[Pasted image 20250107112906.png|400]]
 
-slide 44
+---
+
+###### **Percorso**
+Un **percorso in un grafo** è una sequenza di **nodi (o vertici)**, adiacenti, collegati tra loro da **archi** (o linee). Può essere visto come un "cammino" che parte da un nodo iniziale e passa attraverso altri nodi seguendo gli archi.
+
+in un percorso da $v_1$ fino a $v_k$ , $v_1$ è detto nodo origine e $v_k$ è detto nodo destinazione 
+
+La lunghezza di un percorso è il numero di archi che lo compongono
+![[Pasted image 20250107220424.png]]
+
+**vale lo stesso discorso per i grafi orientati**
+![[Pasted image 20250107220503.png]]
+
+
+**Cammino**
+
+E' uguale al percorso ma se tutti i nodi sono diversi viene detto cammino
+![[Pasted image 20250107220715.png]]
+
+
+**Circuito**
+Si dice circuito un <u>percorso</u> in cui il nodo d'origine è lo stesso di destinazione
+![[Pasted image 20250107220844.png]]
+
+**Ciclo**
+Si dice ciclo un <u>cammino</u> in cui il nodo d'origine è lo stesso di destinazione
+![[Pasted image 20250107221354.png]]
+Se il grafo è non orientato servono minimo 3 nodi, se è orientato ne bastano 2
+
+---
+###### **Grafi Aciclici**
+Un grafo (digrafo) G = {V,E} si dice aciclico se non possiede cicli
+![[Pasted image 20250107221651.png|500]]
+
+---
+###### **Nodi connessi**
+Dato un grafo G = {V,E}, diciamo che 2 vertici u,v sono connessi se esiste un cammino da u a v
+**Definizione**
+slide 53
