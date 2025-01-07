@@ -14,7 +14,7 @@
 [[#**Sottografo**]]
 [[#**Sottografo Indotto**]]
 [[#**Grafi Isomorfi**]]
-
+[[#**Grafi Omeomorfi**]]
 
 
 Introduciamo il problema delle strette di mano:

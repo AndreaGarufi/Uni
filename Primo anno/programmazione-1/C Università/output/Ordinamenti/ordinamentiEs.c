@@ -49,7 +49,7 @@ void bubbleSort(int dim){
         a[i] = rand() % 99;
         printf("%d ",a[i]);
     }
-
+    //bubble sort
     for(int i = 0; i < dim; i++){
 
         for(int j = 0; j < dim - 1; j++){

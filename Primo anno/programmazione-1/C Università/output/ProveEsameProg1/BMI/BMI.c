@@ -52,11 +52,12 @@ del file da leggere e restituisce un riferimento alla testa della lista concaten
 - writeFile: funzione per la scrittura del contenuto di una lista su file come specificato nel punto
 E.*/
 
+//.\a.exe file_di_input.txt file_di_output.txt  <--- inserire da riga di comando per avviarlo correttamente
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
-
 
 
 struct datiPersone{     //struct contenente i dati delle persone da leggere da file di input e creare poi la lista come indicato nel pdf
@@ -74,6 +75,8 @@ typedef struct datiPersone datiPersone;
 void readInput(int dim, char *argv[]);
 datiPersone *readFile(char nomeFile[], int dim);
 
+
+//inizio main
 int main(int argc, char *argv[]){
 
 readInput(argc,argv);
@@ -173,8 +176,7 @@ datiPersone *readFile(char nomeFile[], int dim){
 
 
 
-    printf("\nORIDNAMENTO IN BASE ALL'ETA'...");            //o fai un bubble sort o un insertion sort o un selection sort
-
+    printf("\nORIDNAMENTO IN BASE ALL'ETA'...");            //implementa bubble sort lista
 
 
     fclose(filePtr);
