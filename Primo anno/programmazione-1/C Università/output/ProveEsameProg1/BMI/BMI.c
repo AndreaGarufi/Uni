@@ -58,6 +58,7 @@ E.*/
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <math.h>
 
 
 struct datiPersone{     //struct contenente i dati delle persone da leggere da file di input e creare poi la lista come indicato nel pdf
@@ -72,9 +73,21 @@ struct datiPersone{     //struct contenente i dati delle persone da leggere da f
 };
 typedef struct datiPersone datiPersone;
 
+struct B{     //struct contenente i dati delle 3 persone con IMC più alto come indicato nel pdf
+    char nome[255];
+    char cognome[255];
+    int eta;
+    int peso;
+    int altezza;
+    char sesso;
+
+    struct B *nextPtr;
+};
+typedef struct B B; 
+
 void readInput(int dim, char *argv[]);
 datiPersone *readFile(char nomeFile[], int dim);
-
+void imc(datiPersone *headPtr);
 
 //inizio main
 int main(int argc, char *argv[]){
@@ -88,6 +101,7 @@ strcpy(nomeFile,argv[1]);
 
 testaPtr = readFile(nomeFile,18);
 
+imc(testaPtr);
 }
 
 void readInput(int argc, char *argv[]){
@@ -115,6 +129,7 @@ void readInput(int argc, char *argv[]){
         printf("Parametri inseriti OK\n");
     }
 }
+
 datiPersone *readFile(char nomeFile[], int dim){
     printf("\nREAD FILE\n");
 
@@ -172,23 +187,108 @@ datiPersone *readFile(char nomeFile[], int dim){
     }
 
 
-    printf("\nORIDNAMENTO IN BASE ALL'ETA'...");            //implementa bubble sort lista
+    printf("\nORIDNAMENTO IN BASE ALL'ETA'...\n");            //implementa bubble sort lista
 
     //bubble sort
     datiPersone *successivoPtr = NULL;
 
-    while(1){
-        int scamnbiato = 0;
-        newPtr = headPtr;
-        successivoPtr = newPtr->nextPtr;
+while (1) { 
+    int scambiato = 0; 
+    datiPersone *precedentePtr = NULL; // Per tenere traccia del nodo precedente
+    datiPersone *newPtr = headPtr; 
+    datiPersone *successivoPtr = newPtr->nextPtr;
 
-        while(successivoPtr != NULL){
-            if(newPtr->eta > successivoPtr->eta){
-                
+    while (successivoPtr != NULL) { 
+        if (newPtr->eta > successivoPtr->eta) {
+            // Gestione dello scambio
+            if (precedentePtr == NULL) {
+                // Se stiamo scambiando il primo nodo
+                headPtr = successivoPtr;
+            } else {
+                // Collegamento del nodo precedente al successivo
+                precedentePtr->nextPtr = successivoPtr;
             }
-        }
 
+            // Scambio dei puntatori nextPtr
+            newPtr->nextPtr = successivoPtr->nextPtr;
+            successivoPtr->nextPtr = newPtr;
+
+            // Segnala che è avvenuto uno scambio
+            scambiato = 1;
+
+            // Aggiorna i puntatori per il prossimo ciclo
+            precedentePtr = successivoPtr;
+            successivoPtr = newPtr->nextPtr;
+        } else {
+            // Avanza i puntatori se non c'è stato scambio
+            precedentePtr = newPtr;
+            newPtr = successivoPtr;
+            successivoPtr = successivoPtr->nextPtr;
+        }
     }
 
-    fclose(filePtr);
+    if (scambiato == 0) { 
+        break; 
+    }
 }
+
+    newPtr = headPtr;
+    i = 1;
+    while(newPtr != NULL){
+        printf("NUMERO NODO %d -> %s %s %d %d %d %c\n",i,newPtr->nome,newPtr->cognome,newPtr->eta,newPtr->peso,newPtr->altezza,newPtr->sesso);        
+        newPtr = newPtr->nextPtr;
+        i++;
+    } 
+
+    fclose(filePtr);
+
+    return headPtr;
+}
+
+void imc(datiPersone *headPtr){
+    printf("\nIMC\n");
+
+    int imc = 0;
+    int pesoIMC = 0;
+    int altezzaIMC = 0;
+    int arrayIMC[10] = {0};
+    int massimo = 0;
+
+    datiPersone *newPtr = headPtr;
+    
+        /*pesoIMC = newPtr->peso;
+        altezzaIMC = newPtr->altezza;               
+        imc = pesoIMC/pow((altezzaIMC/100),2);*/                //funziona in entrambi i modi
+        printf("\nIndici di massa corporea\n");
+        for(int i = 0; i < 10; i++){
+            if(newPtr == NULL){
+                break;
+            } 
+            imc = (newPtr->peso)/pow((newPtr->altezza)/100,2);
+        
+            arrayIMC[i] = imc;
+            newPtr = newPtr->nextPtr;
+            printf("%d ",arrayIMC[i]);
+        }
+
+       
+        for(int i = 0; i < 10; i++){
+
+            for(int j = 0; j < 9;j++){
+
+                if(arrayIMC[j] > arrayIMC[j+1]){
+                    int temp = arrayIMC[j];
+                    arrayIMC[j] = arrayIMC[j+1];
+                    arrayIMC[j+1] = temp;
+                }
+            }
+            
+        }
+
+        printf("\nIl massimo IMC e': %d, gli altri 2 piu' alti sono: %d, %d\n",arrayIMC[9],arrayIMC[8],arrayIMC[7]);
+
+       newPtr = headPtr;
+
+
+}
+

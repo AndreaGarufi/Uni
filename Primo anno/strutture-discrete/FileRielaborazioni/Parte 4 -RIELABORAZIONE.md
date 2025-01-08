@@ -19,7 +19,8 @@
 [[#**Percorso**|#**Percorsi,cammini,circuiti,cicli**]]
 [[#**Grafi Aciclici**]]
 [[#**Nodi connessi**]]
-
+[[#**Grafo Connesso**]]
+[[#**Grafi k-connessi**]] 
 
 
 Introduciamo il problema delle strette di mano:
@@ -251,5 +252,109 @@ Un grafo (digrafo) G = {V,E} si dice aciclico se non possiede cicli
 ---
 ###### **Nodi connessi**
 Dato un grafo G = {V,E}, diciamo che 2 vertici u,v sono connessi se esiste un cammino da u a v
+Si può dimostrare facilmente che la connessione tra nodi è una relazione di equivalenza. 
+Quindi l’insieme V si può partizionare in classi di equivalenza, dove in ogni classe ci sono nodi collegati da un cammino
+
+**Definizione Componenti Connesse (difficile slide Cutello)**
+Sia G = {V,E} un grafo e sia V = $V_1 ∪ V_2 ∪ · · · ∪ V_k$  la partizione indotta dalla relazione di connessione tra i nodi. Sia G = {$V_i,E_i$} il sottografo indotto da $V_i$ per ogni i = 1...k. Tali sottografi si chiamano componenti connesse di G
+
+**Definizione Componenti Connesse (semplice chatGPT)**
+Quando il grafo non è connesso, si può dividere il grafo in gruppi di vertici che sono connessi tra loro, ma non connessi agli altri gruppi. Questi gruppi si chiamano <u>componenti connesse</u>
+
+**Esempi**
+![[Pasted image 20250108114343.png|500]]
+
+---
+
+###### **Grafo Connesso** 
+**Definizione grafo connesso**
+Un grafo si dice connesso se ha una sola componente connessa. (è un unico pezzo)
+
+**Definizione digrafo debolmente connesso**
+un digrafo G = {V,E} si dice debolmente connesso se il grafo non orientato ottenuto eliminando da G l'orientamento degli archi è connesso
+**Esempio**
+![[Pasted image 20250108114616.png|500]]
+
+**Un digrafo (grafo orientato) è fortemente connesso se esiste un percorso "in entrambi i sensi di marcia" tra i nodi: es. u->v   v->u 
+Quindi si dice che è fortemente connesso quando ha una sola componente fortemente connessa**
+
+In un grafo orientato quando ho un ciclo ho una componente fortemente connessa
+![[Pasted image 20250108115131.png|180]]
+Componenti fortemente connesse = {1,5,4,2,1}, {6,3,7,6,3}
+
+###### **Grafi k-connessi**
 **Definizione**
-slide 53
+Sia dato un grafo G = {V,E}
+Il grafo G si dice **k-connesso rispetto agli archi** se dati due nodi u,v esistono k cammini ad archi disgiunti tra u,v
+Il grafo G si dice **k-connesso rispetto ai nodi** se dati due vertici u, v esistono k cammini a nodi disgiunti tra u, v
+
+---
+---
+
+##### **Problema per gli informatici**
+
+- I grafi sono una struttura matematica che presenta enormi vantaggi quando si tratta di progettare software per risolvere particolari problemi
+- Ma se vogliamo usare la nozione di grafo come "struttura dati" dobbiamo trovare un modo per rappresentare un grafo, utilizzando le strutture dati tipicamente disponibili in un linguaggio di programmazione
+- La scelta, come vedremo, è abbastanza naturale, ossia utilizzare array bidimensionali (matrici) o array di arrays (liste) per rappresentare un grafo
+
+##### **Rappresentazione di un grafo come matrice**
+Sia dato un grafo G = {V,E} con |V | = n
+
+Supponiamo allora che V = {1, 2, . . . , n}. Costruiamo una matrice quadrata M di dimensione n × n così fatta:
+M[i, j] = 1 se i vertici i e j sono connessi da un arco
+M[i, j] = 0 se i vertici i e j non sono connessi da un arco
+Questa è la matrice di adiacenza al grafo
+
+**Esempio grafo non orientato**
+- Il grafo contiene 6 vertici, quindi costruiamo una matrice M di dimensione 6 × 6
+- **Le righe della matrice corrispondono ai nodi del grafo** 
+- **Le colonne della matrice corrispondono agli archi del grafo**
+- La matrice è a valori 0-1 e la somma degli 1 in ogni riga è il grado del nodo corrispondente
+![[Pasted image 20250108141948.png]]
+
+Notiamo inoltre che la diagonale principale ha solo valori 0 poiché non vi è un arco da un vertice a se stesso
+
+Dato che il grafo non è orientato, la matrice è simmetrica, ossia, per ogni i e j M[i, j] = M[j, i].
+
+**Esempio grafo orientato**
+In questo caso abbiamo un grafo con 7 vertici e quindi la matrice avrà dimensione 7 × 7
+![[Pasted image 20250108142256.png|600]]
+
+Rimane tutto uguale a prima ma questa volta la matrice non è simmetrica
+
+**Matrici e Componenti Connesse**
+![[Pasted image 20250108142729.png]]
+
+- Come si può vedere, M2 e M3 consistono di blocchi quadrati di dimensione diverse 
+- Ogni blocco corrisponde ad una componente connessa ed ha dimensione k × k se k è il numero di vertici della componente 
+- Gli altri blocchi sono fatti tutti di 0
+- Ovviamente il motivo è che i vertici di una componente non sono connessi da archi con vertici di altre componenti
+
+
+Grazie al **Pigeonhole Principle** sappiamo che vale questo teorema sui grafi
+**Teorema (questa è una condizione sufficiente ma non necessaria)**
+Sia G = {V,E} un <u>grafo orientato</u> e per ogni nodo i ∈ V siano $δ^+(i)$ e $δ^−(i)$ rispettivamente il grado in uscita ed in entrata di i
+Se:
+1) per ogni i ∈ V $δ^+(i)$ > 0 
+2) oppure se 2 per ogni i ∈ $V δ^−(i)$ > 0
+allora G contiene un ciclo
+**Dimostrazione** (dimostriamo solo il primo caso perché per il secondo è analogo)
+Se prendiamo un nodo $i_0$ sappiamo che il $δ^+(v)$ è > 0 quindi è collegato ad un altro nodo $i_1$ che a sua volta sarà collegato ad un altro nodo $i_2$ e cosi via, per avere un ciclo abbiamo bisogno che tutti i nodi siano collegati tra loro, quindi per il Pigeonhole Principle sappiamo che c'è un ciclo perché se ogni nodo ha grado in uscita > 0 saranno tutti connessi
+
+**Esempio**
+![[Pasted image 20250108144134.png]]
+
+
+**Esempio condizione sufficiente ma non necessaria**
+![[Pasted image 20250108144357.png]]
+
+Questo teorema può però diventare necessario anche se per i sottografi, infatti se lo riscriviamo cosi:
+**Teorema**
+Sia G = (V , E) un grafo orientato. Allora G possiede un ciclo se e solo se esiste un sottoinsieme V ′ ⊆ V , tale che il sottografo indotto G = (V ′, E′) verifica la seguente proprietà: per ogni vertice i ∈ V ′ siano $δ^+(i) e δ^−(i)$ rispettivamente il grado in uscita ed in entrata di i in G′ 
+1)  allora 1 per ogni i ∈ V , $δ^+(i)$ > 0
+2) oppure 2 per ogni i ∈ V , $δ^−(i)$ > 0
+
+è sostanzialmente lo stesso teorema ma applicato ai sottografi, questo ci da un algoritmo anche se poco efficiente per vedere se in un sottografo è presente un ciclo
+slide 76
+
+

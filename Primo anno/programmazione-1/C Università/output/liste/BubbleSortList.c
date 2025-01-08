@@ -96,26 +96,43 @@ void bubbleSortLista(listaEta *headPtr){
     listaEta *newPtr = NULL;
     listaEta *successivoPtr = NULL;
 
-    while (1) { // Ciclo esterno infinito, controllo manuale
-    int scambiato = 0; // Aggiunto: Variabile per verificare se ci sono stati scambi
-    newPtr = headPtr; 
-    successivoPtr = newPtr->nextPtr;
+while (1) { 
+    int scambiato = 0; 
+    listaEta *precedentePtr = NULL; // Per tenere traccia del nodo precedente
+    listaEta *newPtr = headPtr; 
+    listaEta *successivoPtr = newPtr->nextPtr;
 
     while (successivoPtr != NULL) { 
         if (newPtr->eta > successivoPtr->eta) {
-            
-            /*int temp = newPtr->eta;
-            newPtr->eta = successivoPtr->eta;                                                   //fai in modo di spostare tutta la lista, credo vada fatto semplicemento lo stesso scambio ma usando i puntatori, quindi andrà creato un terzo puntatore di appoggio
-            successivoPtr->eta = temp;
+            // Gestione dello scambio
+            if (precedentePtr == NULL) {
+                // Se stiamo scambiando il primo nodo
+                headPtr = successivoPtr;
+            } else {
+                // Collegamento del nodo precedente al successivo
+                precedentePtr->nextPtr = successivoPtr;
+            }
 
-            scambiato = 1; // Aggiunto: Segnala che è avvenuto uno scambio*/
+            // Scambio dei puntatori nextPtr
+            newPtr->nextPtr = successivoPtr->nextPtr;
+            successivoPtr->nextPtr = newPtr;
+
+            // Segnala che è avvenuto uno scambio
+            scambiato = 1;
+
+            // Aggiorna i puntatori per il prossimo ciclo
+            precedentePtr = successivoPtr;
+            successivoPtr = newPtr->nextPtr;
+        } else {
+            // Avanza i puntatori se non c'è stato scambio
+            precedentePtr = newPtr;
+            newPtr = successivoPtr;
+            successivoPtr = successivoPtr->nextPtr;
         }
-        newPtr = successivoPtr; 
-        successivoPtr = successivoPtr->nextPtr;
     }
 
     if (scambiato == 0) { 
-        break; // Aggiunto: Esce dal ciclo esterno se non ci sono stati scambi
+        break; 
     }
 }
 

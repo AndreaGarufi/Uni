@@ -7,6 +7,7 @@
         "cstdlib": "c",
         "stdlib.h": "c",
         "somma.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "cmath": "c"
     }
 }
