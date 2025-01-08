@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fd3b6a8e73f97087",
+        "id": "3b5fc37fc498a5f8",
         "type": "tabs",
         "children": [
           {
-            "id": "21e73d67aa7a90e5",
+            "id": "1ed880a481dfaba2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Parte 4 -RIELABORAZIONE"
             }
           }
         ]
@@ -166,13 +170,52 @@
       "obsidian-git:Open Git source control": false
     }
   },
+  "floating": {
+    "id": "3768e82060beca21",
+    "type": "floating",
+    "children": [
+      {
+        "id": "7abdbc23f5b3710c",
+        "type": "window",
+        "children": [
+          {
+            "id": "ad56ecf892891406",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "21e73d67aa7a90e5",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "strutture-discrete/FileCondivisiTeams/Parte4.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Parte4"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": -31,
+        "y": -20,
+        "width": 974,
+        "height": 604,
+        "maximize": true,
+        "zoom": 1.5
+      }
+    ]
+  },
   "active": "21e73d67aa7a90e5",
   "lastOpenFiles": [
-    "Modelli/Imgs/Pasted image 20241004212308.png",
     "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf",
+    "Modelli/Imgs/Pasted image 20241004212308.png",
     "Modelli/Pasted image 20250102102516.png",
     "Modelli/Pasted image 20241229101609.png",
-    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "Modelli/Pasted image 20250108144357.png",
     "Modelli/Pasted image 20250108144134.png",
     "Modelli/Pasted image 20250108142729.png",
@@ -180,7 +223,6 @@
     "Modelli/Pasted image 20250108141948.png",
     "Modelli/Pasted image 20250108141823.png",
     "Modelli/Pasted image 20250108115131.png",
-    "Modelli/Pasted image 20250108114616.png",
     "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/C Università/output/liste/BubbleSortList.exe",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
@@ -201,7 +243,6 @@
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
     "architettura-degli-elaboratori/Teoria/FileCondivisiTeams/7 Circuiti-aritmetici.pdf",
     "Senza nome.md",
-    "programmazione-1/C Università/output/Ordinamenti/mergeSort.c",
     "programmazione-1/Matrice stringa tridimensionale.md",
     "strutture-discrete/TUTTI GLI ESERCIZI.md",
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
@@ -211,7 +252,6 @@
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
-    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "programmazione-1/Senza nome.canvas"

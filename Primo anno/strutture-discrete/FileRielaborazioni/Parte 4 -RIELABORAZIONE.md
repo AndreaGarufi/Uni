@@ -21,6 +21,7 @@
 [[#**Nodi connessi**]]
 [[#**Grafo Connesso**]]
 [[#**Grafi k-connessi**]] 
+[[#**Rappresentazione di un grafo come matrice**]]
 
 
 Introduciamo il problema delle strette di mano:
@@ -295,7 +296,7 @@ Il grafo G si dice **k-connesso rispetto ai nodi** se dati due vertici u, v esis
 
 - I grafi sono una struttura matematica che presenta enormi vantaggi quando si tratta di progettare software per risolvere particolari problemi
 - Ma se vogliamo usare la nozione di grafo come "struttura dati" dobbiamo trovare un modo per rappresentare un grafo, utilizzando le strutture dati tipicamente disponibili in un linguaggio di programmazione
-- La scelta, come vedremo, è abbastanza naturale, ossia utilizzare array bidimensionali (matrici) o array di arrays (liste) per rappresentare un grafo
+- La scelta, come vedremo, è abbastanza naturale, ossia utilizzare array bidimensionali (**matrici**) o array di arrays (**liste**) per rappresentare un grafo
 
 ##### **Rappresentazione di un grafo come matrice**
 Sia dato un grafo G = {V,E} con |V | = n
@@ -354,7 +355,30 @@ Sia G = (V , E) un grafo orientato. Allora G possiede un ciclo se e solo se esis
 1)  allora 1 per ogni i ∈ V , $δ^+(i)$ > 0
 2) oppure 2 per ogni i ∈ V , $δ^−(i)$ > 0
 
-è sostanzialmente lo stesso teorema ma applicato ai sottografi, questo ci da un algoritmo anche se poco efficiente per vedere se in un sottografo è presente un ciclo
-slide 76
+è sostanzialmente lo stesso teorema ma applicato ai sottografi (quindi ha anche la stessa dimostrazione)
 
+---
 
+**Percorsi tra nodi**
+
+La matrice ci dice se esiste un percorso di lunghezza 1 (nodi direttamente collegati) tra 2 nodi, ma se volessimo trovare percorsi più lunghi?
+nella foto tra il nodo 4 e 2 esistono 2 percorsi di lunghezza 2 e tra i nodi 6 e 5 ne esiste 1 di lunghezza 1
+![[Pasted image 20250108222913.png|200]]
+
+**Come trovare tali percorsi più lunghi di 1?**
+
+**Ci basta moltiplicare la matrice M per se stessa** quindi M x M cosi troviamo quanti percorsi 
+![[Pasted image 20250108223425.png]]
+$M^2[3,5]$ = 2 quindi ci sono due cammini di lunghezza 2 tra 3 e 5
+
+**Ma sono giusti i valori nella diagonale principale?**
+Vediamo un esempio con un grafo orientato
+- Nell’esempio, tra i nodi 1 e 4 non esiste un percorso di lunghezza 1, però ne esiste uno di lunghezza 2. 
+- Analogamente, tra i nodi 5 e 2 non esiste un percorso di lunghezza 1, però ne esiste uno di lunghezza 2
+![[Pasted image 20250108223654.png|500]]
+
+Se calcoliamo il prodotto M x M troviamo il numero di percorsi di lunghezza 2 per ogni coppia di nodi
+![[Pasted image 20250108224007.png|700]]
+(se ti vai a guardare ad esempio il punto 1,3 indica che c'è un percorso di lunghezza 2 tra 1 e 3 (1->2->3))
+
+slide 84
