@@ -449,4 +449,40 @@ Un grafo si dice Hamiltoniano, se possiede un ciclo Hamiltoniano
 Sapere se in un grafo c'è un cammino hamiltoniano è un problema impossibile (non esistono algoritmi veloci)
 
 ##### **Grafi Pesati**
-slide 102
+In molte applicazioni in cui si usano i grafi come strutture dati, risulta naturale e necessario introdurre un concetto di peso, o costo, sugli archi oppure sui vertici.
+
+**Definizione difficile (slide Cutello)**
+n grafo (digrafo) G = (V , E) si dice pesato se è data un’applicazione 
+$c : E \to \mathbb{R}$  
+oppure 
+$c : E \to \mathbb{R}$
+
+**Definizione semplice (chatGPT)**
+Un grafo è pesato quando è presente una funzione, indicata come ccc, che associa numeri reali:
+
+1. **Agli archi**: $c : E \to \mathbb{R}$, cioè a ogni arco e ∈ E viene assegnato un numero reale (per esempio, il peso può rappresentare una distanza, un costo o un tempo).
+    
+2. **Ai vertici**:$c : V \to \mathbb{R}$, cioè a ogni vertice v ∈ V viene assegnato un numero reale (potrebbe rappresentare un valore come una priorità o un'etichetta)
+
+I pesi (costi, valori) possono essere associati agli archi, ai nodi od ad entrambi. Nella rappresentazione grafica di un grafo, il peso di un arco o di un nodo si scrive vicino all’arco o al nodo
+
+**Quindi il costo dipende dall'unita di misura usata per valutarlo**
+![[Pasted image 20250109160042.png|500]]
+
+Dato un grafo o digrafo pesato con $c : E \to \mathbb{R}$ (1) o con $c : V \to \mathbb{R}$ (2) il costo α di un cammino p 
+($v_1,v_2...v_k$) è:
+
+1) la somma dei costi associati ai suoi archi, cioè $α = c(v_1, v_2) + c(v_2,v_3) + . . . + c(v_k−1, v_k )$
+
+2) oppure la somma dei costi associati ai suoi vertici, $cioè α = c(v_1) + c(v_2) + . . . + c(v_k)$
+
+**Esempio**
+![[Pasted image 20250109181630.png|600]]
+
+**Cammini Minimi e cammini Massimi**
+In un <u>grafo pesato</u> **un cammino minimo** è quel cammino da v a w che ha costo minimo rispetto alla funzione usata
+In un <u>grafo pesato</u> **un cammino massimo** è quel cammino da v a w che ha costo massimo rispetto alla funzione usata
+
+anche i grafi pesati si possono rappresentare con una matrice semplicemente al posto degli 1 (quindi se c'è un arco) mettiamo direttamente il peso dell'arco
+
+esercizi slide 111
