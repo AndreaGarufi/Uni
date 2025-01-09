@@ -1,4 +1,4 @@
-## **SCAMBIO DI NUMERI**
+### **SCAMBIO DI NUMERI**
 Per scambiare 2 numeri ho bisogno di una terza variabile temporanea:
 ![[Pasted image 20241011134142.png|300]]
 
@@ -8,7 +8,7 @@ Stampa le prime n+1 potenze del numero 2
 
 
 
-## **BUBBLE SORT PER ORDINARE GLI ELEMENTI DI UN ARRAY**
+### **BUBBLE SORT PER ORDINARE GLI ELEMENTI DI UN ARRAY**
 
 LIBRO PAG 243-244
 
@@ -155,7 +155,7 @@ dove la variabile extra hold memorizza temporaneamente uno dei due valori da sca
 ![[Pasted image 20241105114731.png]]
 Se, ad esempio, a[i] è 7 e a[i + 1] è 5, dopo la prima assegnazione entrambi i valori saranno 5 e il valore 7 sarà perduto. Da qui la necessità di una variabile extra hold. Il principale pregio del bubble sort consiste nella facilità di programmarlo. Tuttavia, esso opera lentamente, poiché ogni scambio sposta un elemento solo di una posizione verso la sua destina- zione finale. Questo risulta evidente quando si ordinano array grandi. Negli esercizi esamineremo versioni più efficienti del bubble sort. Sono state sviluppate tecniche di ordinamento di gran lunga più efficienti del bubble sort. Analizzeremo altri algoritmi nell’Appendice D. I corsi più avanzati di informatica analizzano più approfonditamente l’ordinamento e la ricerca di elementi in array.
 
-## **RICERCA TRAMITE CHIAVE NELL' ARRAY**
+### **RICERCA TRAMITE CHIAVE NELL' ARRAY**
 LIBRO PAG 250...
 
 1 #include <stdio.h>
@@ -255,7 +255,7 @@ int linear_search_ricorsiva(int a[], int key, int low, int high){
 
 }
 
-## **RICERCA BINARIA NELL' ARRAY**
+### **RICERCA BINARIA NELL' ARRAY**
 ![[Pasted image 20241106204157.png|1000]]
 
 #### **CODICE PER COPIA INCOLLA**
@@ -366,7 +366,7 @@ int ricerca_binaria_ricorsiva(int a[],int key, int low,int high){
 }
 
 
-## **INVERTIRE I NUMERI USANDO ARRAY**
+### **INVERTIRE I NUMERI USANDO ARRAY**
 ![[Pasted image 20241105120250.png]]
 in pratica scorro l'array al contrario e lo stampo
 #### **CODICE PER COPIA INCOLLA**
@@ -386,7 +386,7 @@ int main() {
 
 }
 
-## **PALINDROMO**
+### **PALINDROMO**
 ![[Pasted image 20241107193836.png]]
 
 ##### **CODICE PER COPIA E INCOLLA**
@@ -413,3 +413,99 @@ int palindromo(char a[], int n){
     return 1;  
 
 }
+
+
+# **ALGORITMI E TIPS LISTE**
+
+## **COME CREAZRE UNA LISTA**
+
+![[Pasted image 20250109095035.png]]
+
+    for(int i = 0; i < dim; i++){       //(usando 2 puntatori)
+
+        if(i == 0){
+
+            testaPtr = malloc(sizeof(listaEta));          //creazione primo nodo
+
+        }else if(i == 1){
+
+            newPtr = testaPtr->nextPtr = malloc(sizeof(listaEta)); //creazione                                                                   secondo nodo
+        }else{
+            newPtr = newPtr->nextPtr = malloc(sizeof(listaEta));    //creazione                                                                   altri nodi
+        }
+
+    }
+    
+## **COME STAMPARE UNA LISTA**
+![[Pasted image 20250109095114.png]]
+    
+    newPtr = testaPtr;
+
+    i = 0;
+
+    while(newPtr != NULL){
+
+        i++;
+
+        printf("NUMERO NODO %d -> %d\n",i,newPtr->numero);
+
+        newPtr = newPtr->nextPtr;
+
+    }
+
+
+
+## **BUBBLE SORT LISTA**
+![[Pasted image 20250109095210.png]]
+
+// Accetta come parametro il puntatore al primo elemento
+
+// della lista; la ordina utilizzando l'algoritmo "bubble
+
+// sort" e restituisce il puntatore al primo elemento
+
+// della lista.
+
+
+struct nodo * bubble_sort(struct nodo *primo) {
+
+	struct nodo *p, *ultimo;
+
+	int flag, appo;
+
+	ultimo = NULL;
+
+	flag = 1;
+
+	while (flag == 1) {
+
+	p = primo;
+	
+	flag = 0;
+	
+	while (p->next != ultimo) {
+	
+		if (p->info > (p->next)->info) {
+		
+		appo = p->info;
+		
+		p->info = (p->next)->info;
+		
+		(p->next)->info = appo;
+		
+		flag = 1;
+	
+	}
+	
+	p = p->next;
+	
+	}
+	
+	ultimo = p;
+
+}
+
+	return(primo);
+
+}
+

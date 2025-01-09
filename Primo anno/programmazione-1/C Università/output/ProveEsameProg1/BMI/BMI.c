@@ -289,6 +289,5 @@ void imc(datiPersone *headPtr){
 
        newPtr = headPtr;
 
-
 }
 

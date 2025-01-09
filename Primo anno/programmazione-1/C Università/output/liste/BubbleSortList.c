@@ -21,14 +21,14 @@ int main(){
 
     printf("\nDimensione Lista -> %d\n",dim);
 
-    for(int i = 0; i < dim; i++){
+    for(int i = 0; i < dim; i++){       //(usando 2 puntatori)
 
         if(i == 0){
-            testaPtr = malloc(sizeof(listaEta));
+            testaPtr = malloc(sizeof(listaEta));                    //creazione primo nodo
         }else if(i == 1){
-            newPtr = testaPtr->nextPtr = malloc(sizeof(listaEta));
+            newPtr = testaPtr->nextPtr = malloc(sizeof(listaEta));  //creazione secondo nodo
         }else{
-            newPtr = newPtr->nextPtr = malloc(sizeof(listaEta));
+            newPtr = newPtr->nextPtr = malloc(sizeof(listaEta));    //creazione altri nodi
         }
 
     }

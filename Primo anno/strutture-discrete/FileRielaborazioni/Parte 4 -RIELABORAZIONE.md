@@ -381,4 +381,5 @@ Se calcoliamo il prodotto M x M troviamo il numero di percorsi di lunghezza 2 pe
 ![[Pasted image 20250108224007.png|700]]
 (se ti vai a guardare ad esempio il punto 1,3 indica che c'è un percorso di lunghezza 2 tra 1 e 3 (1->2->3))
 
+**E se volessimo trovare i percorsi di lunghezza 3?** 
 slide 84
