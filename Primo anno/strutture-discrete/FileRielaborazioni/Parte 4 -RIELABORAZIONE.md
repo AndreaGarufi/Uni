@@ -21,8 +21,13 @@
 [[#**Nodi connessi**]]
 [[#**Grafo Connesso**]]
 [[#**Grafi k-connessi**]] 
-[[#**Rappresentazione di un grafo come matrice**]]
 
+[[#**Rappresentazione di un grafo come matrice**]]
+[[#**Rappresentazione di un grafo con liste di adiacenza**]]
+
+[[#**Circuito Euleriano**]]
+[[#**Cammino Hamiltoniano**]]
+[[#**Grafi Pesati**]]
 
 Introduciamo il problema delle strette di mano:
 
@@ -382,4 +387,66 @@ Se calcoliamo il prodotto M x M troviamo il numero di percorsi di lunghezza 2 pe
 (se ti vai a guardare ad esempio il punto 1,3 indica che c'è un percorso di lunghezza 2 tra 1 e 3 (1->2->3))
 
 **E se volessimo trovare i percorsi di lunghezza 3?** 
-slide 84
+
+Se abbiamo la matrice di adiacenza $M$ , $M^2$ ci dice quanti sono i percorsi di lunghezza 2 tra due nodi, quindi se vogliamo trovare quanti sono i percorsi di lunghezza 3 dal nodo $i$ al nodo $j$ , cerchiamo i percorsi di lunghezza 2 da $i$ ad ogni altro nodo $k$ e poi verifichiamo se c’è un arco che porta da $k$ a $j$
+
+$i$ -> "nodo n" -> $k$ -> $j$ 
+![[Pasted image 20250109095831.png]]
+
+Per generalizzare quanto visto abbiamo questo teorema
+
+**Teorema**
+Sia dato un grafo (digrafo) G = {V,E} e sia M la sua matrice di adiacenza. Il numero di percorsi di lunghezza k ≥ 1 per ogni coppia di vertici i e j è dato dal valore della matrice
+$M^k[i,j]$ 
+
+##### **Rappresentazione di un grafo con liste di adiacenza** 
+Rappresentare un grafo con una matrice e semplice ed è veloce cercare un determinato elemento, ma se il grafo è molto grande la matrice diventa enorme, in più se il grafo ha pochi archi, la matrice avrà molti 0 all'interno, che quindi occupano memoria senza contenere informazione, ecco perché usiamo le liste (occupano meno memoria ma è più difficile trovare gli elementi)
+
+Dato un grafo (digrafo) G = {V,E} con |V| = n , gli associamo una **lista di adiacenza** di dimensione n, ossia il numero dei nodi, ed ogni elemento della lista è a sua volta una lista (di solito concatenata), dove mettiamo in sequenza non ordinata, tutti i vertici collegati al vertice corrispondente
+![[Pasted image 20250109100732.png|650]]
+
+**Esempio**
+Se avessimo un grafo con 7 vertici e 9 archi, la matrice avrebbe 49 entrate, mentre una lista solo n + |E| quindi 7 + 9 = 16 valori
+![[Pasted image 20250109100932.png|500]]
+
+
+##### **Circuito Euleriano**
+**Definizione**
+Sia G = {V,E} un grafo connesso. Un circuito Euleriano di G è un circuito che passa per ogni arco di G esattamente una ed una sola volta
+Un grafo si dice Euleriano se possiede un ciclo Euleriano
+
+*Attenzione ->* passa da ogni arco 1 sola volta, ma può passare più volte su un nodo (ecco perché si chiama circuito e non cammino)
+![[Pasted image 20250109101812.png|200]]
+Il grafo ha un Circuito Euleriano -> 1-2-3-5-4-3-6-4-1
+
+**Teorema di Eulero**
+Un grafo G = {V,E} è euleriano se e solo se è connesso ed i suoi nodi hanno grado pari
+
+##### **Cammino Euleriano**
+Se si parla di cammino vale il seguente teorema
+
+**Teorema**
+Un grafo G = {V,E} possiede un cammino euleriano se e solo se è connesso ed i suoi vertici, tranne al più 2 hanno tutti grado pari. I 2 vertici di grado dispari, saranno il primo e l'ultimo vertice del cammino
+![[Pasted image 20250109111055.png|300]]
+l grafo in figura ha infatti 2 vertici di grado dispari 1 e 3 ma possiede un cammino che passa per tutti gli archi una ed una sola volta: A − B − C − D − E − A − C
+
+##### **Cammino Hamiltoniano**
+- Il Teorema di Eulero appena visto, risponde alla domanda: "Esiste un percorso di G che passa per ogni arco esattamente una sola volta ?" 
+- La domanda complementare è ovviamente: "Esiste un cammino di G che passa per ogni vertice esattamente una sola volta ?" 
+- In questo caso parliamo di "cammino" e non di "percorso" perché non può esserci ripetizione di vertici
+
+Fu proposto da (Sir Lewis) Hamilton e il suo problema utilizzava un dodecaedro con 12 facce 20 vertici e 30 spigoli.
+Ogni vertice era una città, il problema riguardava se si potesse partire da una città, visitarle tutte e tornare alla città di partenza senza passare 2 volte da una stessa città
+![[Pasted image 20250109111504.png|200]]
+
+Immaginiamo di allargare il dodecaedro e schiacciarlo sul tavolo (come fosse fatto di plastilina) 
+![[Pasted image 20250109111644.png|300]]
+**Definizione**
+Sia G = {V,E} <u>un grafo (digrafo) connesso</u>. Un cammino Hamiltoniano di G è un circuito che passa una ed una sola volta per tutti i vertici di G. Se il cammino è chiuso, ovvero se è un ciclo, tale ciclo si dice Ciclo Hamiltoniano. 
+Un grafo si dice Hamiltoniano, se possiede un ciclo Hamiltoniano
+
+
+Sapere se in un grafo c'è un cammino hamiltoniano è un problema impossibile (non esistono algoritmi veloci)
+
+##### **Grafi Pesati**
+slide 102

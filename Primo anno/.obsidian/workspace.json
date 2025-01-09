@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3168972373490e6d",
+        "id": "a87523c18d789933",
         "type": "tabs",
         "children": [
           {
-            "id": "ce2799c8d6eb6bc4",
+            "id": "507f05203cf2b6c8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "programmazione-1/Tips Algoritmi.md",
+                "file": "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tips Algoritmi"
+              "title": "Parte 4 -RIELABORAZIONE"
             }
           }
         ]
@@ -170,24 +170,60 @@
       "obsidian-git:Open Git source control": false
     }
   },
+  "floating": {
+    "id": "3768e82060beca21",
+    "type": "floating",
+    "children": [
+      {
+        "id": "acce5a7bee903420",
+        "type": "window",
+        "children": [
+          {
+            "id": "b601f4d7362e807b",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "7cc3d5ed8c106c92",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "strutture-discrete/FileCondivisiTeams/Parte4.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Parte4"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": -24,
+        "y": -13,
+        "width": 973,
+        "height": 603,
+        "maximize": true,
+        "zoom": 1.5
+      }
+    ]
+  },
   "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
+    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
+    "Modelli/Pasted image 20250109111644.png",
+    "Modelli/Pasted image 20250109111504.png",
+    "Modelli/Pasted image 20250109111055.png",
+    "Modelli/Pasted image 20250109101812.png",
+    "Modelli/Pasted image 20250109100932.png",
+    "Modelli/Pasted image 20250109100732.png",
+    "Modelli/Pasted image 20250109095831.png",
+    "programmazione-1/Tips Algoritmi.md",
     "Modelli/Pasted image 20250109095210.png",
     "Modelli/Pasted image 20250109095114.png",
     "Modelli/Pasted image 20250109095106.png",
-    "Modelli/Pasted image 20250109095035.png",
-    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf",
-    "Modelli/Imgs/Pasted image 20241004212308.png",
-    "Modelli/Pasted image 20250102102516.png",
-    "Modelli/Pasted image 20241229101609.png",
-    "Modelli/Pasted image 20250108144357.png",
-    "Modelli/Pasted image 20250108144134.png",
-    "Modelli/Pasted image 20250108142729.png",
-    "Modelli/Pasted image 20250108142256.png",
-    "programmazione-1/Tips Algoritmi.md",
     "programmazione-1/C Università/output/liste/BubbleSortList.exe",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
