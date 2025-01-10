@@ -60,29 +60,28 @@ int main(){
     printf("\nSTAMPA DELLA LISTA ORDINATA TRAMITE SELECTION SORT...\n");
 
 
+    newPtr = testaPtr; // Nodo corrente (inizia dal primo nodo)
+    while (newPtr != NULL) {
 
-newPtr = testaPtr; // Nodo corrente (inizia dal primo nodo)
-while (newPtr != NULL) {
+        Lptr = newPtr->nextPtr;     //secondo elemento della lista
+        listaNumeri *minPtr = newPtr; //minimo (primo elemento della lista)
 
-    Lptr = newPtr->nextPtr;     //secondo elemento della lista
-    listaNumeri *minPtr = newPtr; //minimo (primo elemento della lista)
-
-    while (Lptr != NULL) {
-        if (Lptr->numero < minPtr->numero) {
-            minPtr = Lptr; // Aggiorna il puntatore al nodo con il valore minimo
+        while (Lptr != NULL) {
+            if (Lptr->numero < minPtr->numero) {
+                minPtr = Lptr; // Aggiorna il puntatore al nodo con il valore minimo
+            }
+            Lptr = Lptr->nextPtr;
         }
-        Lptr = Lptr->nextPtr;
-    }
 
-    if (minPtr != newPtr) {     //se il minimo trovato è più piccolo del primo allora scambiali, altrimenti si sposta di 1 nella lista
-        int temp = newPtr->numero;
-        newPtr->numero = minPtr->numero;
-        minPtr->numero = temp;
-    }
+        if (minPtr != newPtr) {     //se il minimo trovato è più piccolo del primo allora scambiali, altrimenti si sposta di 1 nella lista
+            int temp = newPtr->numero;
+            newPtr->numero = minPtr->numero;
+            minPtr->numero = temp;
+        }
 
-    
-    newPtr = newPtr->nextPtr;           // Passa al prossimo nodo
-}
+        
+        newPtr = newPtr->nextPtr;           // Passa al prossimo nodo
+    }
     
     newPtr = testaPtr;
     i = 0;

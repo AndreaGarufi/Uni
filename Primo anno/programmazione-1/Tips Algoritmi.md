@@ -8,6 +8,7 @@ Stampa le prime n+1 potenze del numero 2
 
 
 
+# **ORDINAMENTI SU ARRAY**
 ### **BUBBLE SORT PER ORDINARE GLI ELEMENTI DI UN ARRAY**
 
 LIBRO PAG 243-244
@@ -155,6 +156,17 @@ dove la variabile extra hold memorizza temporaneamente uno dei due valori da sca
 ![[Pasted image 20241105114731.png]]
 Se, ad esempio, a[i] è 7 e a[i + 1] è 5, dopo la prima assegnazione entrambi i valori saranno 5 e il valore 7 sarà perduto. Da qui la necessità di una variabile extra hold. Il principale pregio del bubble sort consiste nella facilità di programmarlo. Tuttavia, esso opera lentamente, poiché ogni scambio sposta un elemento solo di una posizione verso la sua destina- zione finale. Questo risulta evidente quando si ordinano array grandi. Negli esercizi esamineremo versioni più efficienti del bubble sort. Sono state sviluppate tecniche di ordinamento di gran lunga più efficienti del bubble sort. Analizzeremo altri algoritmi nell’Appendice D. I corsi più avanzati di informatica analizzano più approfonditamente l’ordinamento e la ricerca di elementi in array.
 
+### **SELECTION SORT ARRAY**
+![[Pasted image 20250110102918.png]]
+
+parte con i = 0 è quello è il "minimo provvisorio" poi continua con una j che parte dal successivo dopo i (j = i +1) confronta il minimo provvisorio con la j (che sarebbe il numero successivo) se j è più piccolo il nuovo minimo diventa il numero in posizione j. Fa questa cosa "dim" volte e cosi ha trovato il primo vero minimo, poi scambia la posizione i con il vero minimo, fa questo processo "dim-1" volte cosi da trovare ogni volta tutti i nuovi minimi e scambiarli.
+
+1) ciclo:
+   i = 0 -> minimo provvisorio = 0 -> (j = i +1), j = 1 -> se array[j] < array[minimo (questo è il minimo provvisorio)] il minimo vero diventa la posizione j -> continua "dim" volte -> finisce il ciclo for interno e scambia il valore in posizione i (0) con il valore minimo trovato nel ciclo interno -> ricomincia il ciclo esterno con i = 1 poi 2 ,3 ... dim-1 (dim-1) perché corrisponderà al massimo (quindi il ciclo interno con la j si ripete "dim-1" volte)
+
+
+
+# **RICERCHE SU ARRAY**
 ### **RICERCA TRAMITE CHIAVE NELL' ARRAY**
 LIBRO PAG 250...
 
@@ -366,6 +378,7 @@ int ricerca_binaria_ricorsiva(int a[],int key, int low,int high){
 }
 
 
+# **ALTRI ALGORITMI**
 ### **INVERTIRE I NUMERI USANDO ARRAY**
 ![[Pasted image 20241105120250.png]]
 in pratica scorro l'array al contrario e lo stampo
@@ -417,7 +430,7 @@ int palindromo(char a[], int n){
 
 # **ALGORITMI E TIPS LISTE**
 
-## **COME CREAZRE UNA LISTA**
+## **COME CREARE UNA LISTA**
 
 ![[Pasted image 20250109095035.png]]
 
@@ -453,9 +466,26 @@ int palindromo(char a[], int n){
 
     }
 
+## **COME FARE LA FREE AD UNA LISTA**
+![[Pasted image 20250110105024.png]]
+    
+    listaOrdine *tempPtr = NULL;
 
+    newPtr = testaPtr;
 
-## **BUBBLE SORT LISTA**
+    while (newPtr != NULL) {
+
+        tempPtr = newPtr->nextPtr;  // Salva il nodo successivo
+
+        free(newPtr);              // Libera il nodo corrente
+
+        newPtr = tempPtr;          // Passa al nodo successivo
+
+    }
+
+    testaPtr = NULL;  // Buona pratica: resettare la testa
+
+## **BUBBLE SORT LISTA (sposta gli elementi non i nodi)**
 ![[Pasted image 20250109095210.png]]
 
 // Accetta come parametro il puntatore al primo elemento
@@ -509,3 +539,8 @@ struct nodo * bubble_sort(struct nodo *primo) {
 
 }
 
+
+## **SELECTION SORT LISTA (sposta gli elementi non i nodi)**
+![[Pasted image 20250110111042.png]]
+
+Il concetto rimane uguale rispetto a quello fatto con gli array, solo che ci sono i while e i puntatori al posto dei for e a[] 

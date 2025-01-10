@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "dc28708da93e2e78",
+        "id": "8293425a7e516d3c",
         "type": "tabs",
         "children": [
           {
-            "id": "f704250443cd59d4",
+            "id": "bdda317e3d85a248",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Programmazione 1 cose da fare.md",
-                "mode": "source",
-                "source": false
+                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
               },
-              "icon": "lucide-file",
-              "title": "Programmazione 1 cose da fare"
+              "icon": "lucide-file-text",
+              "title": "Introduzione a C programmazione 1 (ottava edizione)"
             }
           }
         ]
@@ -170,11 +168,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f704250443cd59d4",
+  "active": "bdda317e3d85a248",
   "lastOpenFiles": [
+    "programmazione-1/Tips Algoritmi.md",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "Modelli/Pasted image 20250110111042.png",
+    "Modelli/Pasted image 20250110105024.png",
+    "Modelli/Pasted image 20250110105019.png",
+    "Modelli/Pasted image 20250110102918.png",
+    "Programmazione 1 cose da fare.md",
+    "programmazione-1/FileCondivisiTeams/6) Allocazione Dinamica Memoria.pdf",
+    "programmazione-1/C Università/output/Ordinamenti/tuttoInsieme.exe",
+    "programmazione-1/Matrice stringa tridimensionale.md",
+    "programmazione-1/C Università/output/Ordinamenti/tuttoInsieme.c",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "Project ideas.md",
-    "Programmazione 1 cose da fare.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
@@ -185,11 +193,6 @@
     "Modelli/Pasted image 20250109111504.png",
     "Modelli/Pasted image 20250109111055.png",
     "Modelli/Pasted image 20250109101812.png",
-    "Modelli/Pasted image 20250109100932.png",
-    "Modelli/Pasted image 20250109100732.png",
-    "Modelli/Pasted image 20250109095831.png",
-    "programmazione-1/Tips Algoritmi.md",
-    "Modelli/Pasted image 20250109095210.png",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf",
     "programmazione-1/C Università/output/liste/BubbleSortList.exe",
@@ -198,16 +201,11 @@
     "strutture-discrete/Esempi di esercizi.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/29 novembre 2024 parte 2.md",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/fseek, fwrite,fread.md",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "strutture-discrete/Esercizi note/Calcolo combinatorio 9_12_24_241211_162049.pdf",
-    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
-    "programmazione-1/FileCondivisiTeams/6) Allocazione Dinamica Memoria.pdf",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
-    "architettura-degli-elaboratori/Teoria/FileCondivisiTeams/7 Circuiti-aritmetici.pdf",
-    "programmazione-1/Matrice stringa tridimensionale.md",
     "strutture-discrete/TUTTI GLI ESERCIZI.md",
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/appunti 29_11_24 parte 1.md",
@@ -217,7 +215,6 @@
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
     "architettura-degli-elaboratori/FileRielaborazioni/9 Circuiti Integrati.md",
-    "architettura-degli-elaboratori/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
