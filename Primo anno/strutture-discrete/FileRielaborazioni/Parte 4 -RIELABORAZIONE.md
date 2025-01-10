@@ -28,6 +28,8 @@
 [[#**Circuito Euleriano**]]
 [[#**Cammino Hamiltoniano**]]
 [[#**Grafi Pesati**]]
+[[#**Grafi Planari**]]
+[[#**Formula di Eulero**]]
 
 Introduciamo il problema delle strette di mano:
 
@@ -292,7 +294,7 @@ Componenti fortemente connesse = {1,5,4,2,1}, {6,3,7,6,3}
 **Definizione**
 Sia dato un grafo G = {V,E}
 Il grafo G si dice **k-connesso rispetto agli archi** se dati due nodi u,v esistono k cammini ad archi disgiunti tra u,v
-Il grafo G si dice **k-connesso rispetto ai nodi** se dati due vertici u, v esistono k cammini a nodi disgiunti tra u, v
+Il grafo G si dice **k-connesso rispetto ai nodi** se dati due nodi u,v esistono k cammini a nodi disgiunti tra u, v
 
 ---
 ---
@@ -479,10 +481,88 @@ Dato un grafo o digrafo pesato con $c : E \to \mathbb{R}$ (1) o con $c : V \to \
 **Esempio**
 ![[Pasted image 20250109181630.png|600]]
 
+---
+
 **Cammini Minimi e cammini Massimi**
 In un <u>grafo pesato</u> **un cammino minimo** è quel cammino da v a w che ha costo minimo rispetto alla funzione usata
 In un <u>grafo pesato</u> **un cammino massimo** è quel cammino da v a w che ha costo massimo rispetto alla funzione usata
 
 anche i grafi pesati si possono rappresentare con una matrice semplicemente al posto degli 1 (quindi se c'è un arco) mettiamo direttamente il peso dell'arco
 
-esercizi slide 111
+---
+##### **Problema del Commesso Viaggiatore (TSP)**
+E' il **problema di trovare un circuito hamiltoniano che minimizza il costo** (distanza) totale per un grafo pesato, dove ad ogni arco è associato un peso positivo
+
+Anche per questo problema non abbiamo un algoritmo veloce, infatti:
+- Se avessi un grafo con 4 vertici partendo da un nodo a caso dovrei trovare tutte le possibili permutazioni (cammini possibili) dei restanti 3 nodi che sono: 3! / 2 = 3 cammini possibili e fin qua è semplice.
+- Ma se avessi un grafo con 30 vertici diventerebbe:![[Pasted image 20250110114601.png]]
+Ecco perché anche questo è un problema impossibile (non esistono algoritmi veloci)
+---
+##### **Grafi Planari**
+Sia G = {V,E} un <u>grafo non orientato</u>. Diciamo che G è planare se può essere raffigurato (disegnato) in un piano in modi che non ci siano archi che si intersecano
+Altrimenti si dice non planare
+![[Pasted image 20250110141755.png]]
+
+---
+**Teorema di Kuratowski**
+Un grafo è planare se e solo se non contiene alcun sottografo che sia omeomorfo a $K_5$ o a $K_{3,3}$
+![[Pasted image 20250110142229.png]]
+
+(vedi da slide 122 a 124)
+
+Quando disegniamo un grafo su un piano senza fare intersecare gli archi (grafo planare) possiamo contarne le facce, ovvero le zone delimitate dagli archi più la zona esterna (virtualmente infinita)
+![[Pasted image 20250110143154.png|500]]
+
+---
+##### **Formula di Eulero**
+Se al numero di nodi lo indichiamo con v, con e il numero di archi e con f le facce, vale la seguente formula detta formula di Eulero:
+$v - e +f =2$ 
+per i grafi di prima:
+grafo con 3 facce -> v = 6 e = 7 f = 3 -> 6 - 7 + 3 = 2
+grafo con 5 facce -> v = 7 e = 10 f = 5 -> 7 -10 +5 = 2
+
+**Vogliamo dimostrare la formula di Eulero ma prima dimostriamo il seguente teorema**
+**Teorema** 
+Sia G = {V,E} un <u>grafo connesso</u> con |V| ≥ 3. Supponiamo che δ(v ) ≥ 2 per ogni v (nodo). Allora G possiede un ciclo
+
+**Dimostrazione**
+Ordiniamo i vertici e chiamiamoli $v_1, v_2, . . . , v_n con n = |V| ≥ 3$. Partiamo allora dal vertice $v_1$ e costruiamo un cammino il più lungo possibile senza ripetizione di vertici. Supponiamo, senza ledere la generalità del discorso, che il cammino più lungo senza ripetizione di vertici sia $v_1, v_2, . . . , v_k$ . Se k = n allora abbiamo trovato un cammino hamiltoniano. In ogni caso, dal vertice $v_k$ possiamo ancora raggiungere un altro vertice, visto che il suo grado è almeno 2. Dal momento che ci siamo fermati, vuol dire che possiamo raggiungere un vertice già visto, quindi uno tra $v_1, . . . , v_{k−2}$ il che dimostra l’esistenza di un ciclo
+
+
+**Dimostriamo anche quest'altro**
+**Teorema**
+Sia G = {V,E} un <u>grafo connesso e aciclico</u>. Allora |E| = |V | − 1
+
+**Dimostrazione**
+Dimostriamo il teorema per induzione su |V .| Il teorema è banalmente vero se |V | ≤ 2. Supponiamo allora |V | ≥ 3. Essendo il grafo connesso ed aciclico, deve esistere un vertice di grado 1 altrimenti il grafo avrebbe un ciclo, per quanto dimostrato prima, oppure sarebbe disconnesso, avendo almeno un vertice con grado 0. Prendiamo allora un vertice v di grado 1 e rimuoviamolo dal grafo assieme all’arco su esso incidente. Il grafo indotto da V \ {v } è connesso, altrimenti dovremmo avere 2 vertici, u, w che sono connessi solo da un cammino passante per v , ossia u, . . . , u′, v , w′, . . . , w ma ciò implicherebbe che v ha grado maggiore di 1. Quindi, tale grafo indotto è connesso ed aciclico e quindi per induzione ha |V | − 2 archi. Aggiungendo v e l’arco ad esso incidente, abbiamo quindi che |E| = |V | − 1
+
+
+**Dimostriamo adesso la formula di Eulero**
+
+**Teorema formula di Eulero** 
+Sia G = {V,E} un grafo planare connesso, con v nodi, e archi e f facce. 
+Allora v − e + f = 2
+
+**Dimostrazione**
+Se il grafo possiede un ciclo, allora togliamo uno degli archi che completa tale ciclo. Il numero di archi e di facce si abbassa allora di una unità. In questo modo, la quantità v − e + f rimane invariata. Ripetiamo tali sottrazioni di archi, sino a quando non eliminiamo tutti i cicli dall’albero, ovviamente mantenendolo connesso. A questo punto, avremo ottenuto un grafo connesso ed aciclico con e = v − 1 e ovviamente f = 1 visto che non ci sono cicli. Quindi, v − e + f = 2
+
+---
+
+##### **Grafi Planari Massimali o Triangolari**
+Un grafo planare si dice massimale, o triangolare, se è planare e se aggiungendo un nuovo arco ad una qualunque coppia di vertici (non connessi da un arco ovviamente), il grafo non è più planare
+![[Pasted image 20250110180503.png|600]]
+
+
+---
+
+##### **Colorazione di un Grafo**
+- Colorare un grafo vuol dire assegnare un’etichetta, un colore, ad ogni vertice del grafo in maniera tale che due vertici collegati da un arco, abbiano colori distinti
+- Un grafo G è k-colorabile se è possibile colorare i suoi vertici, rispettando il vincolo su descritto, utilizzando al più k colori
+- Il numero cromatico di un grafo G, tradizionalmente denotato con χ(G) (chi di G) è il numero minimo di colori necessari per colorare il grafo
+
+**Esempio**
+In figura, possiamo vedere una colorazione del grafo di Petersen con 3 colori
+![[Pasted image 20250110181342.png|170]]
+
+
+
