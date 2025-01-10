@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a51f3fc2987949e5",
+        "id": "e53be4a753901296",
         "type": "tabs",
         "children": [
           {
-            "id": "08eb7b179eb1e09f",
+            "id": "97bc79c2aa383043",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "Parte 4 -RIELABORAZIONE"
             }
-          },
-          {
-            "id": "f6121ce9628614b7",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "strutture-discrete/FileCondivisiTeams/Parte4.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Parte4"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -183,11 +170,51 @@
       "obsidian-git:Open Git source control": false
     }
   },
+  "floating": {
+    "id": "42c4f8214ed11621",
+    "type": "floating",
+    "children": [
+      {
+        "id": "853665a3866552b6",
+        "type": "window",
+        "children": [
+          {
+            "id": "ce4c5fa59aa4a413",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "02b5ee1f7997803a",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "strutture-discrete/FileCondivisiTeams/Parte4.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Parte4"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 94,
+        "y": 304,
+        "width": 873,
+        "height": 548,
+        "maximize": true,
+        "zoom": 2
+      }
+    ]
+  },
   "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "Modelli/Pasted image 20250110181342.png",
     "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "Modelli/Pasted image 20250110215016.png",
+    "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
+    "Modelli/Pasted image 20250110181342.png",
     "Modelli/Pasted image 20250110180503.png",
     "Modelli/Pasted image 20250110143154.png",
     "Modelli/Pasted image 20250110142229.png",
@@ -199,19 +226,16 @@
     "Modelli/Pasted image 20250110111042.png",
     "Modelli/Pasted image 20250110105024.png",
     "Modelli/Pasted image 20250110105019.png",
-    "Modelli/Pasted image 20250110102918.png",
     "programmazione-1/FileCondivisiTeams/6) Allocazione Dinamica Memoria.pdf",
     "programmazione-1/C Università/output/Ordinamenti/tuttoInsieme.exe",
     "programmazione-1/Matrice stringa tridimensionale.md",
     "programmazione-1/C Università/output/Ordinamenti/tuttoInsieme.c",
     "Project ideas.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
-    "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf",
     "programmazione-1/C Università/output/liste/BubbleSortList.exe",
-    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/Esempi di esercizi.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",

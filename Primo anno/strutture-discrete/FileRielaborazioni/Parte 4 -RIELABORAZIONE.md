@@ -30,6 +30,9 @@
 [[#**Grafi Pesati**]]
 [[#**Grafi Planari**]]
 [[#**Formula di Eulero**]]
+[[#**Grafi Planari Massimali o Triangolari**]]
+[[#**Colorazione di un Grafo**]]
+
 
 Introduciamo il problema delle strette di mano:
 
@@ -565,4 +568,19 @@ In figura, possiamo vedere una colorazione del grafo di Petersen con 3 colori
 ![[Pasted image 20250110181342.png|170]]
 
 
+Per un grafo completo $K_n$ per definizione ogni nodo è connesso da un arco quindi se il grafo a n nodi serviranno n colori
+
+
+Se abbiamo un grafo bipartito G = {V,E} sappiamo che i nodi sono posizionati in 2 insiemi $V_1$ e $V_2$ possiamo colorare ogni vertice dello stesso insieme con lo stesso colore, quindi il grafo è 2-colorabile
+![[Pasted image 20250110215016.png|300]]
+
+
+**Una colorazione ottimale di un grafo è una colorazione dei nodi di G che usa il numero minimo di colori, ossia χ(G)**
+Anche per questo problema non esistono algoritmi veloci
+
+Ci sono però alcuni risultati per casi speciali, e risultati che ci danno un limite superiore a χ(G)
+
+---
+
+**Teorema di Brooks**
 
