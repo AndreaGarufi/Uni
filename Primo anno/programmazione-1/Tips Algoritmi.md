@@ -428,6 +428,16 @@ int palindromo(char a[], int n){
 }
 
 
+## **MATRICE 3D**
+Automatica
+`int matriceAutomatica[3][3][3] = {{{1,2,3},{1,2,3},{1,2,3}},{{1,2,3},{1,2,3},{1,2,3}},{{1,2,3},{1,2,3},{1,2,3}}};`
+
+Dinamica
+![[Pasted image 20250110220716.png]]
+
+Successivamente la gestisco similmente a come se fosse una matrice 2D solo che aggiungo un ciclo for in più per la profondità
+Ha 3 *** perché è un puntatore a puntatori a puntatori (l'array è un puntatore), quindi primo * perché è un array che punta agli altri array dentro di lui (corrisponde a questo -> { { {1,2,3},{1,2,3},{1,2,3} },{ {1,2,3},{1,2,3},{1,2,3} },{ {1,2,3},{1,2,3},{1,2,3} } } ossia le graffe più esterne) il secondo * perché punta agli array interni (le seconde graffe) e l'ultimo * per i singoli elementi
+
 # **ALGORITMI E TIPS LISTE**
 
 ## **COME CREARE UNA LISTA**

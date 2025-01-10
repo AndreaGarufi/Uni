@@ -10,7 +10,7 @@ int main(){
     printf("\nInserisci le dimensioni della matrice: righe colonne e profondita' della matrice 3D \n");
     scanf("%d%d%d",&righe,&colonne,&profondita);
 
-    //int matriceAutomatica[3][3][3] = {{{1},{2},{3}},{{4},{5},{6}},{{7},{8},{9}}};   dichiarazione automatica matrice 3D
+    //int matriceAutomatica[3][3][3] = {{1,2,3},{4,5,6},{7,8,9}};   dichiarazione automatica matrice 3D
 
     int ***matrice = generazioneMatrice(righe,colonne,profondita);
 
