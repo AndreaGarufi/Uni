@@ -37,7 +37,9 @@
 [[#**ALBERO LIBERO**]]
 [[#**Alberi Radicati**]]
 
-[[#**PROBLEMI COMBINATORI SU GRAFI**]]
+**PROBLEMI COMBINATORI SU GRAFI**
+[[#**Numero Cromatico**]]
+
 
 
 Introduciamo il problema delle strette di mano:
@@ -657,3 +659,4 @@ attenzione perché l'algoritmo esiste ma non è efficiente, infatti bisogna cont
 - In generale, l’unica cosa che possiamo fare è rinunciare all’ottimalità e provare a trovare una colorazione qualunque, che si spera sia buona e per fare ciò si usano algoritmi di approssimazione
 
 **Algoritmo "greedy" per la colorazione (approssimazione)**
+slide 159
