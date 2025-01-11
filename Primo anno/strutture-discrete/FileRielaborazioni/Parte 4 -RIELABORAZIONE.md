@@ -37,6 +37,8 @@
 [[#**ALBERO LIBERO**]]
 [[#**Alberi Radicati**]]
 
+[[#**PROBLEMI COMBINATORI SU GRAFI**]]
+
 
 Introduciamo il problema delle strette di mano:
 
@@ -642,4 +644,7 @@ Se immaginiamo di prendere un albero e piantare un chiodo su un nodo dell'albero
 ![[Pasted image 20250111153030.png|200]]
 
 
-**PROBLEMI COMBINATORI SU GRAFI**
+
+
+
+#### **PROBLEMI COMBINATORI SU GRAFI**
