@@ -33,6 +33,10 @@
 [[#**Grafi Planari Massimali o Triangolari**]]
 [[#**Colorazione di un Grafo**]]
 
+**ALBERI**
+[[#**ALBERO LIBERO**]]
+[[#**Alberi Radicati**]]
+
 
 Introduciamo il problema delle strette di mano:
 
@@ -583,4 +587,59 @@ Ci sono però alcuni risultati per casi speciali, e risultati che ci danno un li
 ---
 
 **Teorema di Brooks**
+Sia G = {V,E} <u>un grafo connesso</u> con n nodi e siano $δ_1 ≥ δ_2 ≥ · · · ≥ δ_n$ i gradi dei nodi del grafo in ordine decrescente. Allora χ(G) ≤ $δ_1$ + 1
 
+**Dimostrazione**
+Il Teorema si può facilmente dimostrare per induzione. Se togliamo infatti il vertice di grado maggiore $v_1$, rimaniamo con un grafo con un vertice in meno e colorabile, per ipotesi induttiva, con al più $δ_2 + 1 ≤ δ_1 + 1$ colori. Quando aggiungiamo il vertice tolto, il caso peggiore è che i $δ_1$ vertici a lui connessi, siano tutti di colore diverso e quindi gli dobbiamo dare il colore rimasto dei $δ_1 + 1$
+
+**Teorema di Brooks, versione forte**
+Sia G = {V,E} un grafo connesso con n nodi, e siano $δ_1 ≥ δ_2 ≥ · · · ≥ δ_n$ i gradi dei nodi del grafo in ordine decrescente. Se G non è un grafo completo e G non è un ciclo semplice con numero dispari di nodi, allora χ(G) ≤ δ1.
+
+---
+
+Nel corso dei secoli si accorsero che le mappe geografiche potevano essere sempre colorate usando solo 4 colori
+![[Pasted image 20250111145932.png|400]]
+Immaginando che ogni regione sia un nodo diverso.
+![[Pasted image 20250111150032.png|210]]
+Il problema della colorazione di una mappa è equivalente al problema della colorazione di un grafo planare
+
+**Teorema dei 4 colori**
+Sia G = {V,E} un grafo planare, allora χ(G) ≤ 4
+**Esempio**
+![[Pasted image 20250111150920.png|200]]
+A(rosso) 
+B(blu) 
+C(rosso) 
+D(blu) 
+E(rosso)
+F(rosso)
+G(verde)
+
+---
+
+##### **Albero libero**
+**Definizione**
+Un albero libero è un grafo G = {V,E} connesso e aciclico
+
+- Quindi per quanto dimostrato un albero ha |V| - 1 archi
+- Ogni vertice ha grado almeno 1 inoltre almeno 1 vertice ha grado 1 altrimenti ci sarebbe un ciclo
+![[Pasted image 20250111151339.png|400]]
+
+
+**Terminologia**
+![[Pasted image 20250111151505.png|600]]
+
+![[Pasted image 20250111152123.png|650]]
+![[Pasted image 20250111152219.png|300]]
+
+---
+##### **Alberi Radicati**
+
+Se immaginiamo di prendere un albero e piantare un chiodo su un nodo dell'albero in una lavagnetta, l'albero cadrà per gravita, otteniamo cosi un albero radicato o semplicemente albero
+![[Pasted image 20250111152557.png|500]]
+
+![[Pasted image 20250111152923.png]]
+![[Pasted image 20250111153030.png|200]]
+
+
+**PROBLEMI COMBINATORI SU GRAFI**

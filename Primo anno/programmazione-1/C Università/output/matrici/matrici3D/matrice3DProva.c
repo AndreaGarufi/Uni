@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 int ***generazioneMatrice(int r, int c, int p);
+void ***sommaMatrix(int ***matrix,int r, int c, int p);
 
 int main(){
 
@@ -10,11 +11,11 @@ int main(){
     printf("\nInserisci le dimensioni della matrice: righe colonne e profondita' della matrice 3D \n");
     scanf("%d%d%d",&righe,&colonne,&profondita);
 
-    //int matriceAutomatica[3][3][3] = {{1,2,3},{4,5,6},{7,8,9}};   dichiarazione automatica matrice 3D
+    //int matriceAutomatica[3][3][3] = {{{1,2,3},{1,2,3},{1,2,3}},{{1,2,3},{1,2,3},{1,2,3}},{{1,2,3},{1,2,3},{1,2,3}}};   dichiarazione automatica matrice 3D
 
     int ***matrice = generazioneMatrice(righe,colonne,profondita);
 
-    printf("\nStampa della matrice Ritornata\n");
+    printf("\nStampa della matrice Ritornata al main\n");
 
     for (int k = 0; k < profondita; k++) { // Profondità
         printf("Profondita %d:\n", k+1);
@@ -26,6 +27,8 @@ int main(){
         }
         printf("\n"); // Separatore tra livelli
     }
+
+    sommaMatrix(matrice,righe,colonne,profondita);
 
     system("PAUSE");
 
@@ -66,4 +69,19 @@ int ***generazioneMatrice(int r, int c, int p){
     }
 
     return matrix;
+}
+
+void ***sommaMatrix(int ***matrix,int r, int c, int p){
+    printf("\nSOMMA DEI NUMERI NELLA MATRICE...\n");
+
+    int somma = 0;
+
+    for(int i = 0; i < r; i++){
+        for(int j = 0; j < c; j++){
+            for(int k = 0; k < p; k++){
+                somma = somma + matrix[i][j][k];
+            }
+        }
+    }
+    printf("\nLa somma e' -> %d\n",somma);
 }

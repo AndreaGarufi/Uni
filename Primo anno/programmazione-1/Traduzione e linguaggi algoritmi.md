@@ -19,42 +19,42 @@ evoluzione verso:
 **esecuzione** è una serie di valutazioni di funzioni
 matematiche.                                                                                    **<font color="#c00000">POCO USATA</font>
 
-![image1728546329105.png](programmazione-1/Attachments/image1728546329105png.png)
+![image1728546329105.png](image1728546329105png.png)
 
 
 **Programmazione logica:** Descrivere la
 struttura logica del problema anziché il modo
 per risolverlo (logica del primo ordine)                                     <font color="#c00000">POCO USATA</font>
 
-![image1728546329262.png](programmazione-1/Attachments/image1728546329262png.png)
+![image1728546329262.png](image1728546329262png.png)
 
 **Programmazione imperativa:** Sequenza di istruzioni
 da “impartire” al calcolatore (ES: assegnazioni).
 
-![image1728546329264.png](programmazione-1/Attachments/image1728546329264png.png)
+![image1728546329264.png](image1728546329264png.png)
 
 **Programmazione strutturata:** Si basa sul teorema
 di Bohm-Jacopini, quindi sui tre costrutti sequenza,
 selezione, iterazione.
 
-![image1728546329299.png](programmazione-1/Attachments/image1728546329299png.png)
+![image1728546329299.png](image1728546329299png.png)
 
 **Programmazione procedurale:** Insieme di blocchi di
 codice sorgente ben delimitati identificati da nome ed
 eventuali argomenti (funzioni/procedure)
 
-![image1728546329301.png](programmazione-1/Attachments/image1728546329301png.png)
+![image1728546329301.png](image1728546329301png.png)
 
 **Programmazione modulare:** paradigma
 basato sulla modularità, ovvero strutturare
 un programma in moduli ben separati con
 interfaccia ben definita.
 
-![image1728546329312.png](programmazione-1/Attachments/image1728546329312png.png)
+![image1728546329312.png](image1728546329312png.png)
 
 **Programmazione orientata agli oggetti:** Include aspetti di programmazione imperativa, strutturata, procedurale e modulare
 
-![image1728546329314.png](programmazione-1/Attachments/image1728546329314png.png)
+![image1728546329314.png](image1728546329314png.png)
 
 
 
@@ -63,7 +63,7 @@ interfaccia ben definita.
 
 **Sintassi e semantica**
 
-![image1728546329316.png](programmazione-1/Attachments/image1728546329316png.png)
+![image1728546329316.png](image1728546329316png.png)
 
 **Un errore di semantica** In sostanza avviene quando il programma si avvia senza errori ma non da il risultato sperato.)
 
@@ -90,14 +90,14 @@ Esistono **2** tipi di traduttori:
 
 Un **compilatore** prende in input un codice sorgente e lo traduce in codice oggetto. (Crea un eseguibile [tipo C])
 
-![image1728546329343.png](programmazione-1/Attachments/image1728546329343png.png)
+![image1728546329343.png](image1728546329343png.png)
 
 --------------------------------------------------------------------------------
 
 Un **interprete** prende in input un codice sorgente, come il
 compilatore, ma:
 
-![image1728546329356.png](programmazione-1/Attachments/image1728546329356png.png)
+![image1728546329356.png](image1728546329356png.png)
 
 
 
@@ -105,9 +105,9 @@ compilatore, ma:
 
 **Hanno dei pro e dei contro:**
 
-![image1728546329354.png](programmazione-1/Attachments/image1728546329354png.png)
+![image1728546329354.png](image1728546329354png.png)
 
-![image1728546329360.png](programmazione-1/Attachments/image1728546329360png.png)
+![image1728546329360.png](image1728546329360png.png)
 
 
 
