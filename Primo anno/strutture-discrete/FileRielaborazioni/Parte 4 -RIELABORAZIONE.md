@@ -648,3 +648,12 @@ Se immaginiamo di prendere un albero e piantare un chiodo su un nodo dell'albero
 
 
 #### **PROBLEMI COMBINATORI SU GRAFI**
+###### **Numero Cromatico**
+Il numero cromatico è la χ(G) ovvero la colorazione ottimale del grafo, al giorno d'oggi non esistono algoritmi efficienti per risolvere il problema, 
+attenzione perché l'algoritmo esiste ma non è efficiente, infatti bisogna controllare tutte le n! permutazioni (n = |V|) quindi per un grafo da 100 nodi abbiamo: $9^{157}$ permutazioni 
+**ma allora come fare?**
+- Se il grafo è piccolo (n ≤ 10) possiamo anche usare l'algoritmo inefficiente
+- Se il grafo è planare allora χ(G) è al più 4
+- In generale, l’unica cosa che possiamo fare è rinunciare all’ottimalità e provare a trovare una colorazione qualunque, che si spera sia buona e per fare ciò si usano algoritmi di approssimazione
+
+**Algoritmo "greedy" per la colorazione (approssimazione)**

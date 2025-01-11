@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c250e66bf5741320",
+        "id": "bf1e52ab2ca7528b",
         "type": "tabs",
         "children": [
           {
-            "id": "1bd74755255ffb87",
+            "id": "11fbcf0230b9b981",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -53,7 +53,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -198,19 +198,22 @@
           }
         ],
         "direction": "vertical",
-        "x": 394,
-        "y": 102,
-        "width": 873,
-        "height": 547,
+        "x": 608,
+        "y": 119,
+        "width": 700,
+        "height": 438,
         "maximize": true,
         "zoom": 2
       }
     ]
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "11fbcf0230b9b981",
   "lastOpenFiles": [
     "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
+    "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "Modelli/Pasted image 20250111153030.png",
     "Modelli/Pasted image 20250111152923.png",
     "Modelli/Pasted image 20250111152557.png",
@@ -230,10 +233,8 @@
     "programmazione-1/C Università/output/ProveEsameProg1/10_09_24/main.c",
     "programmazione-1/C Università/output/ProveEsameProg1/10_09_24/output",
     "programmazione-1/C Università/output/ProveEsameProg1/10_09_24/input",
-    "programmazione-1/C Università/output/ProveEsameProg1/10_09_24",
     "programmazione-1/Tips Algoritmi.md",
     "[.md",
-    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "programmazione-1/Matrice stringa tridimensionale.md",
     "Project ideas.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
@@ -243,7 +244,6 @@
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/29 novembre 2024 parte 2.md",
     "programmazione-1/fseek, fwrite,fread.md",
-    "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
     "strutture-discrete/TUTTI GLI ESERCIZI.md",
