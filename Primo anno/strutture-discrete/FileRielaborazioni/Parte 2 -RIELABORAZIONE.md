@@ -555,7 +555,6 @@ Le applicazioni dell'aritmetica modulare sono molte, soprattutto in ambito infor
 **Sono da slide 135 a 147 (leggi quelle slide)**
 
 
-
 **TEORIA DEI NUMERI**
 
 **Si occupa delle proprietà dei numeri interi** (molte di queste le abbiamo già viste in precedenza)
@@ -705,6 +704,3 @@ n = 12 :→ 12, 6, 3, 10, 5, **16**
 n = 13 :→ 13, 40, 20, 10, 5, **16**
 n = 14 :→ 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, **16**
 n = 15 :→ 15, 46, 23, 70, 35, 106, 53, 160, 80, 40, 20, 10, 5, **16**
-
-
-

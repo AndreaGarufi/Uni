@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "bf1e52ab2ca7528b",
+        "id": "4f239b664f72a6d0",
         "type": "tabs",
         "children": [
           {
-            "id": "11fbcf0230b9b981",
+            "id": "7b63554b42fe39f4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+                "file": "programmazione-1/Tips Algoritmi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Parte 4 -RIELABORAZIONE"
+              "title": "Tips Algoritmi"
             }
           }
         ]
@@ -170,76 +170,40 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "d8148f59e6dff779",
-    "type": "floating",
-    "children": [
-      {
-        "id": "4ee27658561a0a24",
-        "type": "window",
-        "children": [
-          {
-            "id": "912c4a1a290148e1",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "991f906f0c4c1c34",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "strutture-discrete/FileCondivisiTeams/Parte4.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "Parte4"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 608,
-        "y": 119,
-        "width": 700,
-        "height": 438,
-        "maximize": true,
-        "zoom": 2
-      }
-    ]
-  },
-  "active": "11fbcf0230b9b981",
+  "active": "7b63554b42fe39f4",
   "lastOpenFiles": [
+    "programmazione-1/C Università/output/ci.c",
+    "strutture-discrete/FileRielaborazioni/Tips.md",
+    "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
+    "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
+    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
+    "Modelli/Pasted image 20250112111722.png",
+    "Modelli/Pasted image 20250112111714.png",
+    "Modelli/Pasted image 20250112110715.png",
+    "Modelli/Pasted image 20250112110507.png",
     "Cose da fare.md",
     "Project ideas.md",
-    "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
-    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
-    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
-    "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "Modelli/Pasted image 20250111153030.png",
     "Modelli/Pasted image 20250111152923.png",
     "Modelli/Pasted image 20250111152557.png",
     "Modelli/Pasted image 20250111152219.png",
     "Modelli/Pasted image 20250111152123.png",
     "Modelli/Pasted image 20250111151505.png",
-    "Modelli/Pasted image 20250111151410.png",
-    "Modelli/Pasted image 20250111151339.png",
-    "Modelli/Pasted image 20250111150920.png",
-    "Modelli/Pasted image 20250111150032.png",
     "programmazione-1/C Università/output/ProveEsameProg1/10_09_24.zip",
     "programmazione-1/C Università/output/ProveEsameProg1/10_09_24.rar",
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/C Università/output/ProveEsameProg1/10_09_24/a.exe",
     "programmazione-1/C Università/output/ProveEsameProg1/10_09_24/main.exe",
     "programmazione-1/C Università/output/ProveEsameProg1/10_09_24/main.c",
-    "programmazione-1/C Università/output/ProveEsameProg1/10_09_24/output",
-    "programmazione-1/C Università/output/ProveEsameProg1/10_09_24/input",
     "programmazione-1/Tips Algoritmi.md",
     "[.md",
     "programmazione-1/Matrice stringa tridimensionale.md",
-    "strutture-discrete/FileRielaborazioni/Tips.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
-    "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/Esempi di esercizi.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/29 novembre 2024 parte 2.md",

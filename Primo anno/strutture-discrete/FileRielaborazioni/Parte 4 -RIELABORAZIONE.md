@@ -39,7 +39,8 @@
 
 **PROBLEMI COMBINATORI SU GRAFI**
 [[#**Numero Cromatico**]]
-
+[[#**Questo ed altri sono detti problemi $N P-hard$**|#**Problemi N P-hard**]] 
+[[#**Elenco problemi $N P-hard$**]] 
 
 
 Introduciamo il problema delle strette di mano:
@@ -153,7 +154,7 @@ Sia G = {V,E} un <u>grafo non orientato</u>. **Diciamo che G è bipartito se pos
 
 ---
 ###### **Grafi Bipartiti Completi**
-Un grafo Bipartito G = {V,E} si dice completo se data la partizione dei vertici $V_1$ e $V_2$ esiste un arco per ogni coppia di nodi $v ∈ V_1$ e $u ∈ V_2$
+Un grafo Bipartito G = {V,E} si dice completo se data la partizione dei nodi $V_1$ e $V_2$ esiste un arco per ogni coppia di nodi $v ∈ V_1$ e $u ∈ V_2$
 Un grafo bipartito completo si indica con $k_{n,m}$ dove n = |$V_1$| e m = |$V_2$|
 ![[Pasted image 20250105195941.png|350]]
 
@@ -659,4 +660,43 @@ attenzione perché l'algoritmo esiste ma non è efficiente, infatti bisogna cont
 - In generale, l’unica cosa che possiamo fare è rinunciare all’ottimalità e provare a trovare una colorazione qualunque, che si spera sia buona e per fare ciò si usano algoritmi di approssimazione
 
 **Algoritmo "greedy" per la colorazione (approssimazione)**
-slide 159
+Abbiamo un grafo e cominciamo da un nodo qualunque:
+A lo coloriamo di blu, poi ci spostiamo al nodo B e lo coloriamo di rosso, il nodo C lo possiamo di nuovo colorare di blu continuiamo cosi fino ad ottenere:
+![[Pasted image 20250112110507.png|400]]
+L’algoritmo è "greedy" perché ad ogni passo cerca di fare la scelta migliore, ovvero, nello specifico cerca di usare uno dei colori già usati. 
+Abbiamo risolto il problema generale? 
+Purtroppo no. 
+Siamo stati fortunati, l’ordine dei nodi che abbiamo scelto (la permutazione) è stata buona
+Ma potrebbe capitare una permutazione sfortunata come ad esempio questa:
+![[Pasted image 20250112110715.png|400]]
+
+dove abbiamo usato più colori di prima
+
+##### **Questo ed altri sono detti problemi $N P-hard$**  
+Ovvero problemi per cui non esistono algoritmi "polinomiali" (efficienti) ma solo algoritmi esponenziali o di approssimazione
+
+---
+**Rendere aciclico un grafo**
+Se il grafo contiene dei ciclo vogliamo eliminare il minor numero di nodi in modo da renderlo a ciclico
+Questo problema $N P-hard$ si chiama: Feedback Vertex Set minimo (MFVS)
+- Come trovare un FVS? 
+- Semplice: controlliamo tutte le permutazioni dei vertici del grafo. 
+- Per ogni permutazione, togliamo i vertici uno alla volta seguendo l’ordine della permutazione e ci fermiamo quando otteniamo un grafo aciclico. 
+- Soluzione semplice ma improponibile.
+- Dato che il problema è N P-hard sappiamo di non poter fare di meglio. Possiamo provare con un algoritmo di approssimazione greedy
+
+**Algoritmo greedy per il MFVS**
+![[Pasted image 20250112111714.png|600]]
+![[Pasted image 20250112111722.png|300]]
+
+##### **Elenco problemi $N P-hard$** 
+1) problema dell’esistenza di un ciclo hamiltoniano
+2) problema del commesso viaggiatore
+3) problema della χ(G) (numero cromatico)
+4) problema del Feedback Vertex Set minimo (MFVS)
+5) Problema del massimo insieme indipendente
+6) Problema del vertex cover
+
+**Tutti i problemi visto fino ad ora si possono caratterizzare in questo modo:**
+Trova une permutazione dell’insieme dei vertici .... che ti dia il risultato migliore
+
