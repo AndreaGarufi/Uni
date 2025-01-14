@@ -5,6 +5,7 @@
 
 
 **INDICE SULLE TIPOLOGIE DI GRAFI**
+[[#**Grado di un nodo**]]
 [[#**Grafi Regolari**]]
 [[#**Grafi Completi**]]
 [[#**Torneo**]]
@@ -103,7 +104,7 @@ Un grafo semplice orientato, denotato con G = (V,E) è praticamente uguale al gr
 
 nei multigrafi possiamo avere un arco che collega lo stesso nodo, questo si chiama cappio
 
-**Grado di un nodo**
+##### **Grado di un nodo**
 Dato un grafo G = {V,E} **il grado di un nodo v ∈ V, denotato con δ(v) (delta di v), è il numero di archi ad esso incidenti.**
 
 Se G è un digrafo (grafo ordinato), abbiamo 2 nozioni diverse del grado di un nodo:
@@ -121,7 +122,6 @@ Sia G = {V,E} un <u>grafo non orientato</u>, allora la somma dei gradi di ogni v
 ---
 ######  **Grafi Regolari**
 Sia G = {V,E} un <u>grafo non orientato</u> 
-
 **Se tutti i nodi del grafo hanno lo stesso grado r allora il grafo è regolare di grado r**
 
 ne deduciamo che:                                                                            (|V| = numero di nodi)
@@ -171,17 +171,17 @@ Sia G = {V,E} un grafo non orientato. Diciamo che **G' = {V',E'} è un sotto gra
 ---
 ###### **Sottografo Indotto**
 Sia G = {V,E} un grafo (o digrafo). Sia V ′ ⊆ V. **Il sottografo indotto da V' è il sottografo**
-**G = {V',E'} ottenuto eliminando da G tutti i vertici non appartenenti a V' e tutti gli archi incidenti ad almeno uno dei vertici eliminati**
+**G' = {V',E'} ottenuto eliminando da G tutti i nodi non appartenenti a V' e tutti gli archi incidenti ad almeno uno dei vertici eliminati** 
 ![[Pasted image 20250106110805.png]]
 
 ---
 
 ###### **Grafi Isomorfi**
-Chiediamoci in che senso due grafi possono essere considerati uguali? Ricordiamo che la proprietà caratteristica di un grafo è il modo in cui i vertici sono collegati dagli archi
+Chiediamoci, in che senso due grafi possono essere considerati uguali? Ricordiamo che la proprietà caratteristica di un grafo è il modo in cui i vertici sono collegati dagli archi
 
 **Definizione** **(complicata (slide Cutello))**
 **Isomorfismo tra grafi (sono uguali)**
-Due grafi, sia entrambi orientati che entrambi non orientati, $G_1$ = ($V_1, E_1$) e $G_2$ = ($V_2, E_2$) si dicono isomorfi se esiste una applicazione biunivoca f dall’insieme dei vertici V1 nell’insieme dei vertici $V_2$ tale che (f (u), f (v)) è un arco di $E_2$ se e solo se (u, v) è un arco di $E_1$. La biiezione f è detta isomorfismo
+Due grafi, sia entrambi orientati che entrambi non orientati, $G_1$ = ($V_1, E_1$) e $G_2$ = ($V_2, E_2$) si dicono isomorfi se esiste una applicazione biunivoca f dall’insieme dei nodi $V_1$ nell’insieme dei nodi $V_2$ tale che (f (u), f (v)) è un arco di $E_2$ se e solo se (u, v) è un arco di $E_1$. La biiezione f è detta isomorfismo
 **Esempio:**
 ![[Pasted image 20250106111929.png|600]]
 
@@ -270,7 +270,7 @@ Un grafo (digrafo) G = {V,E} si dice aciclico se non possiede cicli
 ![[Pasted image 20250107221651.png|500]]
 
 ---
-###### **Nodi connessi**
+ ###### **Nodi connessi**
 Dato un grafo G = {V,E}, diciamo che 2 vertici u,v sono connessi se esiste un cammino da u a v
 Si può dimostrare facilmente che la connessione tra nodi è una relazione di equivalenza. 
 Quindi l’insieme V si può partizionare in classi di equivalenza, dove in ogni classe ci sono nodi collegati da un cammino
@@ -356,10 +356,15 @@ Grazie al **Pigeonhole Principle** sappiamo che vale questo teorema sui grafi
 Sia G = {V,E} un <u>grafo orientato</u> e per ogni nodo i ∈ V siano $δ^+(i)$ e $δ^−(i)$ rispettivamente il grado in uscita ed in entrata di i
 Se:
 1) per ogni i ∈ V $δ^+(i)$ > 0 
-2) oppure se 2 per ogni i ∈ $V δ^−(i)$ > 0
+2) oppure se per ogni i ∈ $V δ^−(i)$ > 0
 allora G contiene un ciclo
 **Dimostrazione** (dimostriamo solo il primo caso perché per il secondo è analogo)
 Se prendiamo un nodo $i_0$ sappiamo che il $δ^+(v)$ è > 0 quindi è collegato ad un altro nodo $i_1$ che a sua volta sarà collegato ad un altro nodo $i_2$ e cosi via, per avere un ciclo abbiamo bisogno che tutti i nodi siano collegati tra loro, quindi per il Pigeonhole Principle sappiamo che c'è un ciclo perché se ogni nodo ha grado in uscita > 0 saranno tutti connessi
+
+###### (dimostrazione per come la farei io in un compito:)
+se il grado in uscita di ogni nodo del grafo è > 0, vuol dire che ogni coppia di nodi appartenente a V è collegata da un arco, 
+e cosi fino a raggiungere l'ultimo nodo che anch'esso ha grado in uscita > 0 il che vuol dire che collega uno degli altri nodi del grafo chiudendo il ciclo
+dimostrazione analoga per il grado in entrata.
 
 **Esempio**
 ![[Pasted image 20250108144134.png]]
@@ -456,7 +461,7 @@ Ogni vertice era una città, il problema riguardava se si potesse partire da una
 Immaginiamo di allargare il dodecaedro e schiacciarlo sul tavolo (come fosse fatto di plastilina) 
 ![[Pasted image 20250109111644.png|300]]
 **Definizione**
-Sia G = {V,E} <u>un grafo (digrafo) connesso</u>. Un cammino Hamiltoniano di G è un circuito che passa una ed una sola volta per tutti i vertici di G. Se il cammino è chiuso, ovvero se è un ciclo, tale ciclo si dice Ciclo Hamiltoniano. 
+Sia G = {V,E} <u>un grafo (digrafo) connesso</u>. Un cammino Hamiltoniano di G è un circuito che passa una ed una sola volta per tutti i nodi di G. Se il cammino è chiuso, ovvero se è un ciclo, tale ciclo si dice Ciclo Hamiltoniano. 
 Un grafo si dice Hamiltoniano, se possiede un ciclo Hamiltoniano
 
 
@@ -469,7 +474,7 @@ In molte applicazioni in cui si usano i grafi come strutture dati, risulta natur
 n grafo (digrafo) G = (V , E) si dice pesato se è data un’applicazione 
 $c : E \to \mathbb{R}$  
 oppure 
-$c : E \to \mathbb{R}$
+$c : V \to \mathbb{R}$
 
 **Definizione semplice (chatGPT)**
 Un grafo è pesato quando è presente una funzione, indicata come ccc, che associa numeri reali:
@@ -480,7 +485,7 @@ Un grafo è pesato quando è presente una funzione, indicata come ccc, che assoc
 
 I pesi (costi, valori) possono essere associati agli archi, ai nodi od ad entrambi. Nella rappresentazione grafica di un grafo, il peso di un arco o di un nodo si scrive vicino all’arco o al nodo
 
-**Quindi il costo dipende dall'unita di misura usata per valutarlo**
+**Quindi il costo dipende dal numero e dall'unita di misura usata per valutarlo**
 ![[Pasted image 20250109160042.png|500]]
 
 Dato un grafo o digrafo pesato con $c : E \to \mathbb{R}$ (1) o con $c : V \to \mathbb{R}$ (2) il costo α di un cammino p 
@@ -488,7 +493,7 @@ Dato un grafo o digrafo pesato con $c : E \to \mathbb{R}$ (1) o con $c : V \to \
 
 1) la somma dei costi associati ai suoi archi, cioè $α = c(v_1, v_2) + c(v_2,v_3) + . . . + c(v_k−1, v_k )$
 
-2) oppure la somma dei costi associati ai suoi vertici, $cioè α = c(v_1) + c(v_2) + . . . + c(v_k)$
+2) oppure la somma dei costi associati ai suoi vertici, cioè $α = c(v_1) + c(v_2) + . . . + c(v_k)$
 
 **Esempio**
 ![[Pasted image 20250109181630.png|600]]
@@ -511,7 +516,7 @@ Anche per questo problema non abbiamo un algoritmo veloce, infatti:
 Ecco perché anche questo è un problema impossibile (non esistono algoritmi veloci)
 ---
 ##### **Grafi Planari**
-Sia G = {V,E} un <u>grafo non orientato</u>. Diciamo che G è planare se può essere raffigurato (disegnato) in un piano in modi che non ci siano archi che si intersecano
+Sia G = {V,E} un <u>grafo non orientato</u>. Diciamo che G è planare se può essere raffigurato (disegnato) in un piano in modo che non ci siano archi che si intersecano
 Altrimenti si dice non planare
 ![[Pasted image 20250110141755.png]]
 
@@ -538,15 +543,17 @@ grafo con 5 facce -> v = 7 e = 10 f = 5 -> 7 -10 +5 = 2
 Sia G = {V,E} un <u>grafo connesso</u> con |V| ≥ 3. Supponiamo che δ(v ) ≥ 2 per ogni v (nodo). Allora G possiede un ciclo
 
 **Dimostrazione**
-Ordiniamo i vertici e chiamiamoli $v_1, v_2, . . . , v_n con n = |V| ≥ 3$. Partiamo allora dal vertice $v_1$ e costruiamo un cammino il più lungo possibile senza ripetizione di vertici. Supponiamo, senza ledere la generalità del discorso, che il cammino più lungo senza ripetizione di vertici sia $v_1, v_2, . . . , v_k$ . Se k = n allora abbiamo trovato un cammino hamiltoniano. In ogni caso, dal vertice $v_k$ possiamo ancora raggiungere un altro vertice, visto che il suo grado è almeno 2. Dal momento che ci siamo fermati, vuol dire che possiamo raggiungere un vertice già visto, quindi uno tra $v_1, . . . , v_{k−2}$ il che dimostra l’esistenza di un ciclo
+Ordiniamo i vertici e chiamiamoli $v_1, v_2, . . . , v_n$ con $n = |V| ≥ 3$. Partiamo allora dal vertice $v_1$ e costruiamo un cammino il più lungo possibile senza ripetizione di vertici. Supponiamo, senza ledere la generalità del discorso, che il cammino più lungo senza ripetizione di vertici sia $v_1, v_2, . . . , v_k$ . Se k = n allora abbiamo trovato un cammino hamiltoniano. In ogni caso, dal vertice $v_k$ possiamo ancora raggiungere un altro vertice, visto che il suo grado è almeno 2. Dal momento che ci siamo fermati, vuol dire che possiamo raggiungere un vertice già visto, quindi uno tra $v_1, . . . , v_{k−2}$ il che dimostra l’esistenza di un ciclo
 
+###### (dimostrazione che farei io in un compito)
+Chiamiamo |V| = n. Se costruiamo un cammino dal nodo $v_1$ fino a $v_k$, se k = n allora abbiamo un ciclo perché ogni nodo ha grado ≥ 2 quindi $v_k$ dovrà essere connesso ad un altro nodo, quindi questo dimostra l'esistenza di un ciclo
 
-**Dimostriamo anche quest'altro**
+##### **Dimostriamo anche quest'altro**
 **Teorema**
-Sia G = {V,E} un <u>grafo connesso e aciclico</u>. Allora |E| = |V | − 1
+Sia G = {V,E} un <u>grafo connesso e aciclico</u>. Allora |E| = |V| − 1
 
 **Dimostrazione**
-Dimostriamo il teorema per induzione su |V .| Il teorema è banalmente vero se |V | ≤ 2. Supponiamo allora |V | ≥ 3. Essendo il grafo connesso ed aciclico, deve esistere un vertice di grado 1 altrimenti il grafo avrebbe un ciclo, per quanto dimostrato prima, oppure sarebbe disconnesso, avendo almeno un vertice con grado 0. Prendiamo allora un vertice v di grado 1 e rimuoviamolo dal grafo assieme all’arco su esso incidente. Il grafo indotto da V \ {v } è connesso, altrimenti dovremmo avere 2 vertici, u, w che sono connessi solo da un cammino passante per v , ossia u, . . . , u′, v , w′, . . . , w ma ciò implicherebbe che v ha grado maggiore di 1. Quindi, tale grafo indotto è connesso ed aciclico e quindi per induzione ha |V | − 2 archi. Aggiungendo v e l’arco ad esso incidente, abbiamo quindi che |E| = |V | − 1
+Dimostriamo il teorema per induzione su |V|. Il teorema è banalmente vero se |V| ≤ 2. Supponiamo allora |V| ≥ 3. Essendo il grafo connesso ed aciclico, deve esistere un vertice di grado 1 altrimenti il grafo avrebbe un ciclo, per quanto dimostrato prima, oppure sarebbe disconnesso, avendo almeno un vertice con grado 0. Prendiamo allora un vertice v di grado 1 e rimuoviamolo dal grafo assieme all’arco su esso incidente. Il grafo indotto da V \ {v } è connesso, altrimenti dovremmo avere 2 vertici, u, w che sono connessi solo da un cammino passante per v , ossia u, . . . , u′, v , w′, . . . , w ma ciò implicherebbe che v ha grado maggiore di 1. Quindi, tale grafo indotto è connesso ed aciclico e quindi per induzione ha |V| − 2 archi. Aggiungendo v e l’arco ad esso incidente, abbiamo quindi che |E| = |V| − 1
 
 
 **Dimostriamo adesso la formula di Eulero**
@@ -556,14 +563,14 @@ Sia G = {V,E} un grafo planare connesso, con v nodi, e archi e f facce.
 Allora v − e + f = 2
 
 **Dimostrazione**
-Se il grafo possiede un ciclo, allora togliamo uno degli archi che completa tale ciclo. Il numero di archi e di facce si abbassa allora di una unità. In questo modo, la quantità v − e + f rimane invariata. Ripetiamo tali sottrazioni di archi, sino a quando non eliminiamo tutti i cicli dall’albero, ovviamente mantenendolo connesso. A questo punto, avremo ottenuto un grafo connesso ed aciclico con e = v − 1 e ovviamente f = 1 visto che non ci sono cicli. Quindi, v − e + f = 2
+Se il grafo possiede un ciclo, allora togliamo uno degli archi che completa tale ciclo. Il numero di archi e di facce si abbassa allora di una unità. In questo modo, la quantità v − e + f rimane invariata. Ripetiamo tali sottrazioni di archi, sino a quando non eliminiamo tutti i cicli dal grafo, ovviamente mantenendolo connesso. A questo punto, avremo ottenuto un grafo connesso ed aciclico con e = v − 1 e ovviamente f = 1 visto che non ci sono cicli. Quindi, v − e + f = 2
 
 ---
 
 ##### **Grafi Planari Massimali o Triangolari**
 Un grafo planare si dice massimale, o triangolare, se è planare e se aggiungendo un nuovo arco ad una qualunque coppia di vertici (non connessi da un arco ovviamente), il grafo non è più planare
 ![[Pasted image 20250110180503.png|600]]
-
+**Per sapere quanti archi ha in totale un grafo planare (e quindi sapere anche qual è il massimale per quel grafo) dobbiamo fare 3 |V| -6** 
 
 ---
 

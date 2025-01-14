@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "4f239b664f72a6d0",
+        "id": "5935ee9afacbc049",
         "type": "tabs",
         "children": [
           {
-            "id": "7b63554b42fe39f4",
+            "id": "82bab9ee972a624e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "programmazione-1/Tips Algoritmi.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Tips Algoritmi"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -170,37 +166,38 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7b63554b42fe39f4",
+  "active": "82bab9ee972a624e",
   "lastOpenFiles": [
-    "programmazione-1/C Università/output/ci.c",
-    "strutture-discrete/FileRielaborazioni/Tips.md",
+    "Cose da fare.md",
+    "programmazione-1/Tips Algoritmi.md",
+    "programmazione-1/C Università/output/liste/cancellazioniInserimenti.exe",
+    "programmazione-1/C Università/output/liste/a.exe",
+    "programmazione-1/C Università/output/liste/tempCodeRunnerFile.c",
+    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
+    "strutture-discrete/Esercizi note/fotoG/20250113_163816.jpg",
+    "strutture-discrete/Esercizi note/fotoG/20250113_163055.jpg",
+    "strutture-discrete/Esercizi note/fotoG/20250113_162628.jpg",
+    "strutture-discrete/Esercizi note/fotoG/20250113_162231.jpg",
+    "strutture-discrete/Esercizi note/fotoG/20250113_161554.jpg",
+    "strutture-discrete/Esercizi note/fotoG/20250113_160649.jpg",
+    "strutture-discrete/Esercizi note/fotoG/20250113_155634.jpg",
+    "strutture-discrete/Esercizi note/Esercizi grafi compito.md",
+    "programmazione-1/FileCondivisiTeams/Calendario delle lezioni (1) 1.docx",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
+    "strutture-discrete/Esercizi note/fotoG/20250113_152701.jpg",
+    "strutture-discrete/Esercizi note/fotoG/20250113_155622.jpg",
+    "strutture-discrete/Esercizi note/fotoG/20250113_155102.jpg",
+    "strutture-discrete/Esercizi note/fotoG",
+    "strutture-discrete/FileRielaborazioni/Tips.md",
+    "strutture-discrete/FileRielaborazioni/Sunto.md",
+    "programmazione-1/C Università/output/ci.c",
     "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
-    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
-    "Modelli/Pasted image 20250112111722.png",
-    "Modelli/Pasted image 20250112111714.png",
-    "Modelli/Pasted image 20250112110715.png",
-    "Modelli/Pasted image 20250112110507.png",
-    "Cose da fare.md",
     "Project ideas.md",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
-    "Modelli/Pasted image 20250111153030.png",
-    "Modelli/Pasted image 20250111152923.png",
-    "Modelli/Pasted image 20250111152557.png",
-    "Modelli/Pasted image 20250111152219.png",
-    "Modelli/Pasted image 20250111152123.png",
-    "Modelli/Pasted image 20250111151505.png",
-    "programmazione-1/C Università/output/ProveEsameProg1/10_09_24.zip",
-    "programmazione-1/C Università/output/ProveEsameProg1/10_09_24.rar",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
-    "programmazione-1/C Università/output/ProveEsameProg1/10_09_24/a.exe",
-    "programmazione-1/C Università/output/ProveEsameProg1/10_09_24/main.exe",
-    "programmazione-1/C Università/output/ProveEsameProg1/10_09_24/main.c",
-    "programmazione-1/Tips Algoritmi.md",
     "[.md",
     "programmazione-1/Matrice stringa tridimensionale.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
@@ -216,8 +213,6 @@
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
-    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
-    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }

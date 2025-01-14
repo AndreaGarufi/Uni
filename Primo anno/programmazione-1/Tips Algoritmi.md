@@ -554,3 +554,18 @@ struct nodo * bubble_sort(struct nodo *primo) {
 ![[Pasted image 20250110111042.png]]
 
 Il concetto rimane uguale rispetto a quello fatto con gli array, solo che ci sono i while e i puntatori al posto dei for e a[] 
+
+## **TESTA DELLA LISTA PER RIFERIMENTO (E ALTRO)**
+Se devo agire sul nodo testa della lista (come ad esempio se devo cancellare la testa o aggiungere un nodo in testa) devo passare la testa per riferimento, ovvero nella funzione 
+-> `lista *aggiuntaInTesta(lista **testaPtr);`
+(poi nel main devo passare l'indirizzo -> `aggiuntaInTesta(&testaPtr));` )
+
+Mentre se devo agire sul resto della lista (aggiungendo nodi, cancellando nel mezzo, cancellando in coda ecc...) posso anche passare la testaPtr per valore
+N.B. se devi fare una cancellazione in coda è meglio passare lo stesso la testa per riferimento perché se la lista è formata da un solo nodo la testa corrisponderà alla coda e quindi dovrà essere cancellata
+
+### **Inserimento in testa**
+### **Inserimento in mezzo**
+### **Cancellazione in testa**
+### **Cancellazione in mezzo**
+### **Cancellazione in coda**
+## **INSERIMENTO ORDINATO NELLA LISTA**

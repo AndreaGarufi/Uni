@@ -19,6 +19,10 @@ char *genString(char string[],int k,int N,int M);
 
 char ***fillS(char ***s,int k,int N,int M);
 
+char ***sortS(char ***s,int k,int N,int M);
+
+void printMatrix(char ***s, int k, int N,int M);
+
 int main(int argc,char **argv){
 
     parametri input = readInput(argc,argv);
@@ -28,6 +32,10 @@ int main(int argc,char **argv){
     char ***S = allocateS(S,input.k,input.N,input.M);
 
     S = fillS(S,input.k,input.N,input.M);
+
+    S = sortS(S,input.k,input.N,input.M);
+
+    printMatrix(S,input.k,input.N,input.M);
 
 
 }  
@@ -106,13 +114,45 @@ char ***fillS(char ***s,int k,int N,int M){
         char string[k];
 
         for(int i = 0; i < M; i++){
-        for(int j = 0; j < N;j++){
-            for(int h = 0; h < k;h++){
-                s[i][j] = genString(string,k,N,M);
+            for(int j = 0; j < N;j++){
+                for(int h = 0; h < k;h++){
+                    s[i][j] = genString(string,k,N,M);
                 //printf("%s ",s[i][j]);
+                }
+            }
+        }
+}
+
+char ***sortS(char ***s,int k,int N,int M){
+
+    printf("\nSorting...\n");
+
+    for (int i = 0; i < N; i++) {          // Per ogni riga
+        for (int pass = 0; pass < M - 1; pass++) {  // Bubble sort
+            for (int j = 0; j < M - 1; j++) {
+                if (strcmp(s[i][j], s[i][j + 1]) > 0) {  // Confronta elementi della stessa riga
+                    char *temp = s[i][j];
+                    s[i][j] = s[i][j + 1];
+                    s[i][j + 1] = temp;
+                }
             }
         }
     }
+    printf("MELOX");
+
+    return s;
+
 }
 
-//fare punto D
+void printMatrix(char ***s, int k, int N,int M){
+
+    printf("\nStampa matrice\n");
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            printf("%s ", s[i][j]); // Stampa la stringa
+        }
+        printf("\n"); // Nuova riga dopo ogni riga della matrice
+    }   
+
+}
