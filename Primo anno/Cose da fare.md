@@ -11,10 +11,14 @@ finisci slide Cutello ->**FATTO**
 
 14/01/25
 programmazione 1 
-implementa inserimento in testa(**fatto**), inserimento in mezzo(**fatto**), inserimento ordinato, cancellazione in testa(**fatto**), cancellazione in mezzo, canzellazione in coda
+implementa inserimento in testa(**fatto**), inserimento in mezzo, inserimento ordinato, cancellazione in testa(**fatto**), cancellazione in mezzo (**fatto**), cancellazione in coda (**fatto**)
 
 15/01/25
 programmazione 1 
-svolgi prova girlando (è nel desktop)(**Quasi fatto**), fai esercizio chatGPT
+svolgi prova girlando (è nel desktop)(**fatto**), fai esercizio chatGPT(**iniziato**)
 spiega le cose fatte il 14/01/25 nella nota tips algoritmi (**fatto** **Inserimento in testa,**canc in testa e canc in mezzo)
 
+16/01/25
+programmazione 1 
+inserimento in mezzo, **inserimento ordinato** e spiegali in algoritmi tips
+continua compito chat gpt

@@ -12,7 +12,7 @@ struct lista{
 typedef struct lista lista;
 
 lista *inTesta(lista **headPtr);
-lista *cancInMezzo(lista *headPtr, int dim);
+lista *cancInMezzo(lista **headPtr, int dim);
 lista *cancInTesta(lista **headPtr);
 lista *cancInCoda(lista **headPtr);
 
@@ -63,12 +63,13 @@ int main(){
             break;
             case 4: cancInTesta(&testaPtr);
             break;
-            case 5: cancInMezzo(testaPtr,dim);
+            case 5: cancInMezzo(&testaPtr,dim);
             dim--;
             break;
             case 6: cancInCoda(&testaPtr);
+            break;
             case 7:
-                printf("\n-------lista-------\n");
+                printf("\n-------lista------\n");
                 newPtr = testaPtr;
                 while(newPtr != NULL){
                     printf("\n%d\n",newPtr->numero);
@@ -110,15 +111,15 @@ lista *inTesta(lista **headPtr){
     
 }
 
-lista *cancInMezzo(lista *headPtr, int dim){
+lista *cancInMezzo(lista **headPtr, int dim){
     puts("\nInserimento in mezzo\n");
 
-    if(headPtr->nextPtr == NULL){   //vuol dire che ho un solo nodo
+    if((*headPtr)->nextPtr == NULL){   //vuol dire che ho un solo nodo
         free(headPtr);
         return 0;
     }
 
-    lista *newPtr = headPtr;
+    lista *newPtr = *headPtr;
     lista *lastPtr = NULL;
     int nodo = 1 + (rand() %(dim-1));
 
@@ -136,7 +137,7 @@ lista *cancInMezzo(lista *headPtr, int dim){
     lastPtr->nextPtr = newPtr->nextPtr;    //collegamento al nodo successivo a quello che verra cancellato
     free(newPtr);                           //cancellazione del nodo
 
-    newPtr = headPtr;
+    newPtr = *headPtr;
     printf("\n-------lista-------\n");
     while(newPtr != NULL){
         printf("\n%d\n",newPtr->numero);
@@ -145,7 +146,7 @@ lista *cancInMezzo(lista *headPtr, int dim){
     printf("\n-------lista-------\n");
     puts("");
 
-    return headPtr;
+    return *headPtr;
 }
 
 lista *cancInTesta(lista **headPtr){
@@ -155,7 +156,7 @@ lista *cancInTesta(lista **headPtr){
         printf("\nLista gia vuota\n");
         return 0;
     }
-    if((*headPtr)->nextPtr == NULL){
+    if((*headPtr)->nextPtr == NULL){        //se ho un solo nodo
         free(*headPtr);
         return 0;
     }
@@ -179,5 +180,39 @@ lista *cancInTesta(lista **headPtr){
 
 lista *cancInCoda(lista **headPtr){
     printf("\nCancellazione in coda\n");
+
+    if(*headPtr == NULL){
+        printf("\nLista vuota\n");
+        return NULL;
+    }
+
+    if((*headPtr)->nextPtr == NULL){   //ho un solo nodo
+        free(*headPtr);
+        return NULL;
+    }
+    lista *newPtr = *headPtr;
+    lista *lastPtr = NULL;
+
+    while(newPtr != NULL){
+        if(newPtr->nextPtr == NULL){     //mi trovo nell'ultimo nodo
+        lastPtr->nextPtr = NULL;
+            free(newPtr);
+            break;
+        }
+        lastPtr = newPtr;
+        newPtr = newPtr->nextPtr;
+    }
+
+    newPtr = *headPtr;
+    printf("\n-------lista-------\n");
+    while(newPtr != NULL){
+        printf("\n%d\n",newPtr->numero);
+        newPtr = newPtr->nextPtr;
+    }
+    printf("\n-------lista-------\n");
+    puts("");
+
+    return *headPtr;   
+
 }
 

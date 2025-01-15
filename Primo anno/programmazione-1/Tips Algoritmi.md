@@ -578,7 +578,7 @@ Mi basta usare un nuovo puntatore di appoggio per la nuova testa (che sarà il s
 Dopo elimino la testa con `free(*headPtr);`, infine assegno faccio puntare headPtr alla nuova testa (secondo nodo).
 In questo caso dato **che agisco sulla testa ho bisogno di passarla per riferimento** altrimenti viene cambiata solo nella funzione e non nel resto del programma
 ### **Cancellazione in mezzo**
-![[Pasted image 20250115113102.png]]
+![[Pasted image 20250115184107.png]]
 **Qui devo gestire anche il caso in cui ho un solo nodo e quindi devo cancellare la testa**.
 Decido quale nodo cancellare e in base a quello scorro tutti i nodi finché non arrivo a quello che mi interessa, dopo di che devo collegare il nodo precedente a quello da eliminare con quello successivo tramite -> `lastPtr->newPtr = newPtr->nextPtr` 
 Ovviamente quando scorro la lista ho sempre bisogno di tenere un collegamento al precedente (`lastPtr = newPtr`) e scorrere avanti (`newPtr = newPtr->nextPtr`)cosi se al prossimo ciclo trovo il nodo da cancellare ho già il collegamento al precedente.
@@ -588,7 +588,13 @@ la condizione "if" mi serve per capire quale sia il nodo da cancellare, può ess
 `}`)
 con break esco dal while e nel ciclo precedente avevo salvato il nodo precedente a questo da cancellare, quindi devo solo collegarlo al successivo ed eliminare il corrente con `free(newPtr)`
 dopo di ché ritorno la testa della lista
+In questo caso dato **che è possibile agire sulla testa ho bisogno di passarla per riferimento** altrimenti viene cambiata solo nella funzione e non nel resto del programma
 
 ### **Cancellazione in coda**
-
+![[Pasted image 20250115184202.png]]
+Per cancellare in coda ho bisogno di gestire il caso in cui la lista sia vuota (primo if) o ci sia solo la testa (secondo if), dopo di ciò ho bisogno di un puntatore al precedente perché quando verrà eliminato il nodo in coda bisogna porre a NULL nextPtr del nodo precedente alla coda.
+Opero con un while che scorre tutta la lista e un if:
+`if(newPtr->nextPtr == NULL)` vuol dire che mi trovo nell'ultimo nodo (che devo cancellare), quindi pongo `lastPtr->nextPtr == NULL` (essendo la nuova coda va posto a NULL il suo nextPtr) e poi con la `free(newPtr)` elimino il nodo.
+Fuori dall'if (come fatto per la cancellazione in mezzo) nel ciclo precedente a quello in cui l'if sarà vero avrò salvato in lastPtr il nodo precedente alla coda (dopo mi muovo di un nodo nella lista e ricomincia il while)
+In questo caso dato **che è possibile agire sulla testa ho bisogno di passarla per riferimento** altrimenti viene cambiata solo nella funzione e non nel resto del programma
 ## **INSERIMENTO ORDINATO NELLA LISTA**

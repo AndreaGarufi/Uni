@@ -107,7 +107,6 @@ char *sort(char s3[], char s4[], size_t n){
     puts("");
     size_t N = n*2;
     char *s5 = (char*)malloc(sizeof(char)*N);
-    //printf("%zu",strlen(s5));
 
     for(int i = 0; i < n; i++){
         s5[i] = s3[i];
@@ -117,7 +116,16 @@ char *sort(char s3[], char s4[], size_t n){
     }
     s5[N] = '\0';
 
-    //fare ordinamento
+    //bubble sort
+    for(int i = 0; i < N-1; i++){
+        for(int j = 0; j < N-1;j++){
+            if(s5[j] > s5[j+1]){
+                char temp = s5[j];
+                s5[j] = s5[j+1];
+                s5[j+1] = temp;
+            }
+        }
+    }
 
     return s5;
 }
