@@ -15,5 +15,6 @@ implementa inserimento in testa(**fatto**), inserimento in mezzo(**fatto**), ins
 
 15/01/25
 programmazione 1 
-svolgi prova girlando (è nel desktop), fai esercizio chatGPT
-spiega le cose fatte il 14/01/25 nella nota tips algoritmi
+svolgi prova girlando (è nel desktop)(**Quasi fatto**), fai esercizio chatGPT
+spiega le cose fatte il 14/01/25 nella nota tips algoritmi (**fatto** **Inserimento in testa,**canc in testa e canc in mezzo)
+

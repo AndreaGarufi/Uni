@@ -12,7 +12,7 @@ struct lista{
 typedef struct lista lista;
 
 lista *inTesta(lista **headPtr);
-lista *inMezzo(lista *headPtr, int dim);
+lista *cancInMezzo(lista *headPtr, int dim);
 lista *cancInTesta(lista **headPtr);
 lista *cancInCoda(lista **headPtr);
 
@@ -61,10 +61,10 @@ int main(){
             case 1: inTesta(&testaPtr);
             dim++;
             break;
-            case 2: inMezzo(testaPtr,dim);
-            dim--;
-            break;
             case 4: cancInTesta(&testaPtr);
+            break;
+            case 5: cancInMezzo(testaPtr,dim);
+            dim--;
             break;
             case 6: cancInCoda(&testaPtr);
             case 7:
@@ -110,7 +110,7 @@ lista *inTesta(lista **headPtr){
     
 }
 
-lista *inMezzo(lista *headPtr, int dim){
+lista *cancInMezzo(lista *headPtr, int dim){
     puts("\nInserimento in mezzo\n");
 
     if(headPtr->nextPtr == NULL){   //vuol dire che ho un solo nodo

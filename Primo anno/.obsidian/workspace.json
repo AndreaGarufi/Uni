@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5935ee9afacbc049",
+        "id": "8dcd499d53ad3f90",
         "type": "tabs",
         "children": [
           {
-            "id": "82bab9ee972a624e",
+            "id": "9ebac9609feeb461",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Cose da fare.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Cose da fare"
             }
           }
         ]
@@ -166,14 +170,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "82bab9ee972a624e",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
-    "Cose da fare.md",
     "programmazione-1/Tips Algoritmi.md",
+    "Cose da fare.md",
+    "Modelli/Pasted image 20250115114254.png",
+    "Modelli/Pasted image 20250115113102.png",
+    "Modelli/Pasted image 20250115112105.png",
+    "programmazione-1/C Università/output/ProveEsameProg1/a.exe",
+    "programmazione-1/C Università/output/ProveEsameProg1/10_01_23.exe",
+    "programmazione-1/C Università/output/ProveEsameProg1/10_01_23.c",
+    "programmazione-1/C Università/output/ProveEsameProg1/10_01_23",
+    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "programmazione-1/C Università/output/liste/cancellazioniInserimenti.exe",
     "programmazione-1/C Università/output/liste/a.exe",
     "programmazione-1/C Università/output/liste/tempCodeRunnerFile.c",
-    "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
     "strutture-discrete/Esercizi note/fotoG/20250113_163816.jpg",
     "strutture-discrete/Esercizi note/fotoG/20250113_163055.jpg",
@@ -185,19 +196,12 @@
     "strutture-discrete/Esercizi note/Esercizi grafi compito.md",
     "programmazione-1/FileCondivisiTeams/Calendario delle lezioni (1) 1.docx",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
-    "strutture-discrete/Esercizi note/fotoG/20250113_152701.jpg",
-    "strutture-discrete/Esercizi note/fotoG/20250113_155622.jpg",
-    "strutture-discrete/Esercizi note/fotoG/20250113_155102.jpg",
-    "strutture-discrete/Esercizi note/fotoG",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "strutture-discrete/FileRielaborazioni/Sunto.md",
-    "programmazione-1/C Università/output/ci.c",
     "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "Project ideas.md",
-    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "[.md",
     "programmazione-1/Matrice stringa tridimensionale.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
