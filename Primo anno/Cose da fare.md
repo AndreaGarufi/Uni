@@ -21,4 +21,8 @@ spiega le cose fatte il 14/01/25 nella nota tips algoritmi (**fatto** **Inserime
 16/01/25
 programmazione 1 
 inserimento in mezzo, **inserimento ordinato** e spiegali in algoritmi tips
-continua compito chat gpt
+
+17/01/25
+programmazione 1
+inserimento in mezzo, **inserimento ordinato** e spiegali in algoritmi tips
+svolgi prova strutture 4 dicembre (parte 1 e parte 2)

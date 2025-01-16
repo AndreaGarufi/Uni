@@ -555,6 +555,10 @@ Sia G = {V,E} un <u>grafo connesso e aciclico</u>. Allora |E| = |V| − 1
 **Dimostrazione**
 Dimostriamo il teorema per induzione su |V|. Il teorema è banalmente vero se |V| ≤ 2. Supponiamo allora |V| ≥ 3. Essendo il grafo connesso ed aciclico, deve esistere un vertice di grado 1 altrimenti il grafo avrebbe un ciclo, per quanto dimostrato prima, oppure sarebbe disconnesso, avendo almeno un vertice con grado 0. Prendiamo allora un vertice v di grado 1 e rimuoviamolo dal grafo assieme all’arco su esso incidente. Il grafo indotto da V \ {v } è connesso, altrimenti dovremmo avere 2 vertici, u, w che sono connessi solo da un cammino passante per v , ossia u, . . . , u′, v , w′, . . . , w ma ciò implicherebbe che v ha grado maggiore di 1. Quindi, tale grafo indotto è connesso ed aciclico e quindi per induzione ha |V| − 2 archi. Aggiungendo v e l’arco ad esso incidente, abbiamo quindi che |E| = |V| − 1
 
+##### Dimostrazione che farei io in un compito
+caso banale: il teorema è banalmente vero se |V| ≤ 2.
+passo induttivo: supponiamo per |V| ≥ 3, essendo che il grafo è connesso ma aciclico, vuol dire che ci sarà un nodo di grado 1, quindi se rimuoviamo quel nodo e l'arco ad esso incidente, 
+**continuala**
 
 **Dimostriamo adesso la formula di Eulero**
 

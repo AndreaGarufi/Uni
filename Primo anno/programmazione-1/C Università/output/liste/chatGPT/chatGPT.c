@@ -22,6 +22,7 @@ typedef struct studente studente;
 
 studente decodeParameters(int argc, char **argv);
 studente *CreateList(int eta, char nome[], int media);
+studente *readFile();
 
 int main(int argc, char **argv){
 
@@ -64,8 +65,15 @@ studente decodeParameters(int argc, char **argv){
 
 studente *CreateList(int eta, char nome[], int media){      //crea la lista se nel file non è scritto nulla, altrimenti fai inserimenti in coda
     puts("\nCrea Lista\n");
+
+    FILE *filePtr = NULL;   
+    int eta = 0,media = 0;
+    char nome[35]
+
 }
 
-
+studente *readFile(){
+    printf("\nLettura File\n");
+}
 
 

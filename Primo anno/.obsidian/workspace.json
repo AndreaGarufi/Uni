@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ebcda1b03a3f7b9f",
+        "id": "d7ab2d4b236a1fbb",
         "type": "tabs",
         "children": [
           {
-            "id": "9b120c8207691f20",
+            "id": "4d431f05f5380690",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Cose da fare.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Cose da fare"
             }
           }
         ]
@@ -166,15 +170,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9b120c8207691f20",
+  "active": "4d431f05f5380690",
   "lastOpenFiles": [
+    "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
+    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
+    "Modelli/Pasted image 20250116092009.png",
+    "programmazione-1/Tips Algoritmi.md",
+    "programmazione-1/fseek, fwrite,fread.md",
+    "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "Cose da fare.md",
     "programmazione-1/C Università/output/liste/chatGPT/a.exe",
     "programmazione-1/C Università/output/liste/chatGPT/chatGPT.c",
     "programmazione-1/C Università/output/liste/chatGPT",
     "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
-    "programmazione-1/Tips Algoritmi.md",
     "Modelli/Pasted image 20250115184202.png",
     "Modelli/Pasted image 20250115184107.png",
     "Modelli/Pasted image 20250115114254.png",
@@ -185,18 +194,14 @@
     "programmazione-1/C Università/output/ProveEsameProg1/10_01_23.c",
     "programmazione-1/C Università/output/ProveEsameProg1/10_01_23",
     "programmazione-1/C Università/output/liste/cancellazioniInserimenti.exe",
-    "programmazione-1/C Università/output/liste/a.exe",
     "strutture-discrete/Esercizi note/fotoG/20250113_163816.jpg",
     "strutture-discrete/Esercizi note/fotoG/20250113_163055.jpg",
     "strutture-discrete/Esercizi note/fotoG/20250113_162628.jpg",
     "strutture-discrete/Esercizi note/fotoG/20250113_162231.jpg",
-    "strutture-discrete/Esercizi note/fotoG/20250113_161554.jpg",
     "strutture-discrete/Esercizi note/Esercizi grafi compito.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "strutture-discrete/FileRielaborazioni/Sunto.md",
-    "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "Project ideas.md",
     "[.md",
     "programmazione-1/Matrice stringa tridimensionale.md",
@@ -204,7 +209,6 @@
     "strutture-discrete/Esempi di esercizi.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/29 novembre 2024 parte 2.md",
-    "programmazione-1/fseek, fwrite,fread.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
     "strutture-discrete/TUTTI GLI ESERCIZI.md",

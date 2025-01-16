@@ -94,6 +94,8 @@ si denotano con $C_{n,k}$ e i suoi valori sono i coefficienti binomiali: $\binom
 Siano a e b numeri reali. Allora vale l'uguaglianza:
 
 ![[Pasted image 20241228155756.png|350]]
+![[Pasted image 20250116092009.png]]
+
 
 
 Dato un insieme di n > 1 variabili, {$x_0, x_1, . . . , x_{n−1}$} e preso un un intero k, i monomi di grado k sono:
