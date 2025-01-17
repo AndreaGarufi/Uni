@@ -26,4 +26,10 @@ inserimento in mezzo, **inserimento ordinato** e spiegali in algoritmi tips
 programmazione 1
 inserimento in mezzo, **inserimento ordinato FATTO** e spiegali in algoritmi tips
 svolgi prova strutture 4 dicembre (parte 1 e parte 2)
-studia macchina di von Newman
+studia macchina di von Newman (**fatto fino a I/O**)
+
+18/01/25 
+architettura
+studia processore (nota 1)
+prog 1
+completa la verifica per come la sai fare tu 

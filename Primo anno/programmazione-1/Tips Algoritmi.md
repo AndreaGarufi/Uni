@@ -570,6 +570,9 @@ cosi nextPtr della nuova testa punta alla vecchi testa (headPtr) poi non mi rest
 In questo caso dato **che agisco sulla testa ho bisogno di passarla per riferimento** altrimenti viene cambiata solo nella funzione e non nel resto del programma 
 
 ### **Inserimento in mezzo**
+![[Pasted image 20250117170344.png]]
+Per inserire in mezzo mi basta allocare il nuovo nodo inserire dentro i dati e collegarlo al nextPtr del nodo precedente.
+Per avere il nodo precedente faccio un while e attraverso un currentPtr mi segno il corrente, con lastPtr mi segno il precedente e poi inserisco il nuovo nodo in mezzo
 
 ### **Cancellazione in testa**
 ![[Pasted image 20250115114254.png]]
@@ -605,6 +608,8 @@ dal while avendo però salvato un riferimento al nodo precedente nell'ultimo cic
 1) 3->5->7    <-lista     numero1 = 4 (inserito dall'utente, questo è il criterio di ordinamento)
 2) (dopo il while) lastPtr = 3, currentPtr = 5  (devo inserire 4 in mezzo)
 3) 3->4->5->7 (faccio questo attraverso le istruzioni nell'else)
+
+
 
 
 

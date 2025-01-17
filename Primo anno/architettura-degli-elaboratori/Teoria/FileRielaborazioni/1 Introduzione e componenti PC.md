@@ -48,7 +48,7 @@ Come possiamo ben notare un programma eseguibile dalla macchina von Neumann cons
 
 3. **Decodifica dell'istruzione**: Una volta che l'istruzione è stata caricata, il processore la decodifica, per capire di che tipo di istruzione si tratta
 
-4. **Invio all'ALU**: Se l'istruzione richiede un'operazione aritmetica o logica, la unità logico-aritmetica (ALU) riceve l'istruzione e i dati necessari per eseguire l'operazione.
+4. **Invio all'ALU**: Se l'istruzione richiede un'operazione aritmetica o logica, l' unità logico-aritmetica (ALU) riceve l'istruzione e i dati necessari per eseguire l'operazione.
 
 5. **Accesso ai dati**: Se l'istruzione da eseguire richiede dei dati la control unit li recupera dalla memoria. Se l'istruzione è del tipo SOM(M1, M2) ad esempio, significa che M1 e M2 sono indirizzi in memoria da cui vengono presi i dati. 
 
@@ -66,7 +66,7 @@ Il modello di elaboratore dalla quale Von Neumann prese spunto fu:
 Una **macchina di Turing (o MdT)**  è stata inventata da Alan Turing nel 1936. Questo modello è fondamentale nella teoria della computabilità e fornisce una rappresentazione astratta di come funzionano i calcolatori. Formalmente viene definita in questo modo:
 ![[Pasted image 20241005110025.png  |  center]]
 Di seguito una descrizione di tutti i componenti:
-- **Nastro:** Un'unità di memoria esterna infinita, suddivisa in celle, ogni cella contiene un simbolo oppure è vuota.
+- **Nastro:** Un'unità di memoria esterna virtualmente infinita, suddivisa in celle, ogni cella contiene un simbolo oppure è vuota.
 - **Testina di lettura/scrittura (TLS) :** Un dispositivo che interagisce direttamente con il nastro.
 - **Unità di memoria interna:** Una struttura che memorizza lo stato interno della macchina.
 - **Unità di calcolo:** Un componente che esegue le operazioni di base.
@@ -123,7 +123,7 @@ Da tutto questo Turing formula la seguente Tesi: "*ogni funzione parziale calcol
 
 Per la fase di **BOOTSTRAP** (avvio) il computer ha bisogno di caricare dei dati per il corretto avviamento e questi dati sono contenuti nel **BIOS** che è una **ROM** (Read Only Memory) ovvero una memoria di sola lettura che non perde i dati allo spegnimento del computer. I programmi contenuti nelle ROM sono detti Firmware.
 
-Esiste una tipologia di RAM **più veloce** della DRAM (questa è la RAM normale,8,16,32 GB ecc..) **chiamata SRAM (Static RAM)** che è molto più veloce ma anche più costosa, i micro condensatori vengono sostituiti dai dai micro flip-flop. **Queste sono le MEMORIE CACHE**
+Esiste una tipologia di RAM **più veloce** della DRAM (questa è la RAM normale,8,16,32 GB ecc..) **chiamata SRAM (Static RAM)** che è molto più veloce ma anche più costosa, i micro condensatori vengono sostituiti dai micro flip-flop. **Queste sono le MEMORIE CACHE**
 
 ![[Pasted image 20241012123225.png|600]]
 

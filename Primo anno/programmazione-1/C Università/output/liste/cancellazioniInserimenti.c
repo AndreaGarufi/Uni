@@ -1,4 +1,4 @@
-/*implementa inserimento in testa, inserimento in mezzo, inserimento ordinato 
+/*implementa inserimento in testa, inserimento in mezzo (dentro la funzione inserimentoOrdinato), inserimento ordinato 
 cancellazione in testa, cancellazione in mezzo, canzellazione in coda*/
 
 #include <stdio.h>
@@ -253,7 +253,7 @@ lista *inserimentOrdinato(lista **headPtr,bool flag){
         flag = true;                                //questo flag serve a far capire a "inTesta" se inserire un numero a random oppure inserire numero1
         *headPtr = inTesta(headPtr,numero1,flag);
     }else{
-        lista *newNodePtr = malloc(sizeof(lista));
+        lista *newNodePtr = malloc(sizeof(lista));          //corrisponde ad un inserimento in mezzo
         newNodePtr->numero = numero1;
         newNodePtr->nextPtr = lastPtr->nextPtr;
         lastPtr->nextPtr = newNodePtr;
