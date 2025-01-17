@@ -4,6 +4,7 @@ cancellazione in testa, cancellazione in mezzo, canzellazione in coda*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 
 struct lista{
     int numero;
@@ -11,19 +12,24 @@ struct lista{
 };
 typedef struct lista lista;
 
-lista *inTesta(lista **headPtr);
+lista *inTesta(lista **headPtr,int n,bool flag);
 lista *cancInMezzo(lista **headPtr, int dim);
 lista *cancInTesta(lista **headPtr);
 lista *cancInCoda(lista **headPtr);
+lista *inserimentOrdinato(lista **headPtr,bool flag);
 
 int main(){
     srand(time(NULL));
 
     lista *testaPtr = NULL;
     lista *newPtr = NULL;
+    lista dati;
 
     int operazione = 0;
     int nodi = 0;
+
+    int n = 0;
+    bool flag = false;
 
     printf("\nCreazione random dei nodi...\n");
     int dim = 2 + rand() % 7;
@@ -58,15 +64,20 @@ int main(){
         puts("");
 
         switch(operazione){
-            case 1: inTesta(&testaPtr);
+            case 1: inTesta(&testaPtr,n,flag);
+            dim++;
+            break;
+            case 3: inserimentOrdinato(&testaPtr,flag);
             dim++;
             break;
             case 4: cancInTesta(&testaPtr);
+            dim--;
             break;
             case 5: cancInMezzo(&testaPtr,dim);
             dim--;
             break;
             case 6: cancInCoda(&testaPtr);
+            dim--;
             break;
             case 7:
                 printf("\n-------lista------\n");
@@ -87,8 +98,8 @@ int main(){
 
 }
 
-lista *inTesta(lista **headPtr){
-    puts("\nInserimento in testa\n");
+lista *inTesta(lista **headPtr,int n,bool flag){            //i secondi 2 parametri servono nel caso in cui inserimento ordinato chiama questa funzione
+    puts("\nInserimento in testa\n");   
 
     lista *newTestaPtr = malloc(sizeof(lista));
     lista *newPtr = NULL;
@@ -96,7 +107,13 @@ lista *inTesta(lista **headPtr){
     newTestaPtr->nextPtr = *headPtr;
 
     *headPtr = newTestaPtr;
-    (*headPtr)->numero = 100 + rand() % 110;   //numeri per inserimenti in testa
+    if(flag == true){               //questo if gestisce il caso in cui venga chiamata inTesta da inserimentOrdinato
+        (*headPtr)->numero = n;
+        flag = false;
+    }else{
+        (*headPtr)->numero = 100 + rand() % 110;   //numeri per inserimenti in testa
+    }
+    
 
     newPtr = *headPtr;
     printf("\n-------lista-------\n");
@@ -216,3 +233,42 @@ lista *cancInCoda(lista **headPtr){
 
 }
 
+lista *inserimentOrdinato(lista **headPtr,bool flag){
+    printf("\nInserimento ordinato in base a numero (crescente)\n");
+
+    int numero1 = 0;
+    printf("\nInserisci il numero da inserire ordinato\n");
+    scanf("%d",&numero1);
+
+    lista *currentPtr = *headPtr;
+    lista *lastPtr = NULL;                                       //riferimento al nodo precedente
+    
+
+    while(currentPtr != NULL && currentPtr->numero < numero1){  //scorro la lista finché currentPtr è != NULL e 
+        lastPtr = currentPtr;                                   //finché il numero del nodo corrente è maggiore del numero da inserire
+        currentPtr = currentPtr->nextPtr;
+    }
+
+    if(lastPtr == NULL){        //lista vuota oppure la testa è più grande del numero da inserire
+        flag = true;                                //questo flag serve a far capire a "inTesta" se inserire un numero a random oppure inserire numero1
+        *headPtr = inTesta(headPtr,numero1,flag);
+    }else{
+        lista *newNodePtr = malloc(sizeof(lista));
+        newNodePtr->numero = numero1;
+        newNodePtr->nextPtr = lastPtr->nextPtr;
+        lastPtr->nextPtr = newNodePtr;
+    }
+    printf("\nStampa lista dopo l'inserimento\n");
+    
+    lista *newPtr = *headPtr;
+    printf("\n-------lista-------\n");
+    while(newPtr != NULL){
+        printf("\n%d\n",newPtr->numero);
+        newPtr = newPtr->nextPtr;
+    }
+    printf("\n-------lista-------\n");
+    puts("");
+
+    return *headPtr;
+
+}

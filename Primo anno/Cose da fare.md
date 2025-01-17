@@ -24,5 +24,6 @@ inserimento in mezzo, **inserimento ordinato** e spiegali in algoritmi tips
 
 17/01/25
 programmazione 1
-inserimento in mezzo, **inserimento ordinato** e spiegali in algoritmi tips
+inserimento in mezzo, **inserimento ordinato FATTO** e spiegali in algoritmi tips
 svolgi prova strutture 4 dicembre (parte 1 e parte 2)
+studia macchina di von Newman
