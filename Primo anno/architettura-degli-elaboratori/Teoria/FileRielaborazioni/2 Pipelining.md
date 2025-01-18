@@ -8,7 +8,7 @@
 
 • Per gestire l’esecuzione in pipeline di più istruzioni, è necessario mantenere delle informazioni tra uno stadio e l’altro 
 
-• Queste informazioni vengono mantenuti nei **buffer interstadi** 
+• Queste informazioni vengono mantenute nei **buffer interstadi** 
 
 • I buffer interstadi contengono 
 	• i rispettivi registri interstadio (RA, RB, PC_Temp, etc.) 
@@ -39,9 +39,9 @@ Si verifica quando un istruzione cerca di scrivere un registro prima che un'altr
 
 Esistono delle **tecniche per evitare queste dipendenze:**
 
-**Nop** --> è un istruzione vuota o inattiva che non esegue operazioni, occupa uno slot nel flusso delle istruzioni senza effettuare alcun calcolo o modifica nello stato del processore. è utilizzata per allineare le operazioni nella CPU . (serve per temporeggiare creando dei ritardi controllati) 
+**Nop** --> è un istruzione vuota o inattiva che non esegue operazioni, occupa uno slot nel flusso delle istruzioni senza effettuare alcun calcolo o modifica nello stato del processore. E' utilizzata per allineare le operazioni nella CPU . (serve per temporeggiare creando dei ritardi controllati) 
 
-**Forwarding** --> bypassa la fase di store nei registri degli operandi (fa passare direttamente il risultato di un operazione direttamente alla istruzione successiva, quindi non fa la fase di store)
+**Forwarding** --> bypassa la fase di store nei registri degli operandi (fa passare direttamente il risultato di un operazione all' istruzione successiva, quindi non fa la fase di store)
 Il beneficio rispetto al NOP è che evita i ritardi (quindi migliora le performance della CPU)
 
 **Stallo** --> mette in attesa l'istruzione dipendente
@@ -60,7 +60,7 @@ I principali ritardi della memoria si verificano perché:
 
 Il problema sta nel fatto che **la CPU deve aspettare che i dati contenuti nella memoria arrivino** e quindi non può procedere rallentando la pipeline
 
-Esistono delle **tecniche per rallentare questi ritardi:**
+Esistono delle **tecniche per diminuire questi ritardi:**
 1) **Gerarchia della cache** --> si usano 3 livelli di cache (L1 L2 L3) dalla più veloce e vicina alla CPU alla più lenta posta sulla scheda madre.
 2) **Pre-fetching** --> carica in anticipo i dati nella cache [[1 Introduzione e componenti PC#**PREFETCH**|Pre-fetching spiegazione]]
 3) **Produrre memoria a bassa latenza** --> che siano cache o RAM più sono veloci meglio è.
@@ -79,6 +79,7 @@ La tecnica più importante è sicuramente la **branch prediction** (esecuzione s
 La pipeline può andare in **stallo** quando una risorsa hardware è richiesta da più istruzioni contemporaneamente.
 lo stallo è un problema critico che **si verifica quando la pipeline viene interrotta a causa delle dipendenze da dato, o per altri problemi come le risorse limitate** (le risorse devono essere condivise. se non ci fossero le risorse condivise, quindi senza accesso concorrente alle risorse non ci sarebbero stalli nella pipeline)).
 alcuni processi possono non rilasciare più una risorsa (qui è colpa del programmatore) e quindi creare stalli.
+
 ![[Pasted image 20241110145725.png]]
 ![[Pasted image 20241110145739.png]]
 ![[Pasted image 20241110145752.png]]

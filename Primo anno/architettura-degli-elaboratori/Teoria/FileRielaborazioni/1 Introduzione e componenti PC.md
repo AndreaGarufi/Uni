@@ -205,19 +205,19 @@ Tra gli standard di connessione più diffusi ricordiamo lo standard USB (Univers
 # <font color="#000000">PROCESSORE</font>
 **Un processore è un singolo circuito integrato in grado di effettuare operazioni decisionali, di calcolo o di elaborazione dell'informazione**; spesso il processore è indicato con la sigla CPU (Central Processor Unit).
 
-Il processore può essere visto come **suddiviso in tre unità funzionali**, l’**CU** (unità di controllo), l'**area dei registri** e l'**ALU** (unità aritmetico-logica).
+Il processore può essere **suddiviso in tre unità funzionali**, la **CU** (unità di controllo), l'**area dei registri** e l'**ALU** (unità aritmetico-logica).
 (Nella realtà ci sono più componenti come l FPU Float Point Unit, per il calcoli in virgola mobile che sono trattati diversamente dai numeri naturali, e ci sono anche varie unità di calcolo per istruzioni più complesse).
 
-La CU si affaccia sul bus, lo arbitra impostando i valori sulle linee ABus, DBus e CBus, legge il DBus e il CBus, legge dalla memoria (e dall'I/O) i dati o li aggiorna in memoria (o nell'I/O) dopo aver compiuto operazioni
+**La CU si affaccia sul bus, lo arbitra** impostando i valori sulle linee ABus, DBus e CBus, legge il DBus e il CBus, legge dalla memoria (e dall'I/O) i dati o li aggiorna in memoria (o nell'I/O) dopo aver compiuto operazioni
 ![[Pasted image 20241016220122.png|550]]
 
-**I registri contengono i dati letti dall'UC**   <font color="#000000">sul bus per predisporli all'esecuzione delle istruzioni che avverranno nell'ALU</font>**; oppure contengono i risultati delle operazioni compiute dall'ALU** <font color="#000000">in attesa di essere passati allUC e quindi sul bus.</font>
+**I registri contengono i dati letti dalla CU**  <font color="#000000">sul bus per predisporli all'esecuzione delle istruzioni che avverranno nell'ALU</font>**; oppure contengono i risultati delle operazioni compiute dall'ALU** <font color="#000000">in attesa di essere passati alla CU e quindi sul bus.</font>
 
-**L’ALU è l'unità di esecuzione effettiva del processore**, <font color="#000000">all'interno della quale si trovano microprogrammi cablati direttamente in hardware, scritti nel cosiddetto microcodice con relative microistruzioni.</font>
+**L’ALU è l'unità di esecuzione effettiva del processore**, <font color="#000000">all'interno della quale si trovano microprogrammi, scritti nel cosiddetto microcodice con relative microistruzioni.</font>
 
-##### **Instraction set e funzionamento operazioni**
+##### **Instruction set e funzionamento operazioni**
 
-**Ogni processore viene progettato con un set di istruzioni specifico denominato ISA (Instruction Set** Architecture o Instruction Set), in corrispondenza di ognuna delle quali è implementato un preciso microprogramma in ALU. 
+**Ogni processore viene progettato con un set di istruzioni specifico denominato ISA (Instruction Set** Architecture o Instruction Set), in corrispondenza di ognuna delle quali è implementato un preciso microprogramma.
 
 • **Ogni istruzione dell'ISA è contraddistinta da un numero specifico, denominato Op. Code** (**Operation Code**, contraddistingue in **modo univoco ogni IS**) e ogni istruzione dotata di Op.Code necessita di un numero preciso e definito di parametri (operandi) che, assieme all'Op. Code, determinano la lunghezza dell'istruzione (in byte). 
 
@@ -258,7 +258,7 @@ Si tratta di architetture che facilitano la portabilità del software, dato che 
 ![[Pasted image 20241019103355.png]]
 
 
-**RISC** (Reducted Instruction Set Code)
+**RISC** (Reduced Instruction Set Code)
 **Il set di istruzioni di una architettura RISC è limitato**, contiene istruzioni di lunghezza costante (con un numero di operandi fisso), con fase di decode breve e senza microprogrammi da eseguire nel processore: ogni istruzione è eseguita direttamente in hardware con pochi cicli di clock. 
 In questo modo una elaborazione RISC appare nettamente più veloce (almeno di un ordine 10).
 ![[Pasted image 20241019103636.png|450]]
@@ -268,13 +268,13 @@ In sostanza un'istruzione CISC - con molti passi nel data path - equivale a nume
 
 
 
-| Architettura | Vantaggi                                                                        | Svantaggi                                                                         | Uso                                                |
-| ------------ | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------- |
-| CISC         | Portabilità <br>dei programmi,<br>Facilità di <br>programmazione<br>in Assembli | Tempi di <br>esecuzione<br>lenti<br>                                              | Si utilizzavano<br>nei vecchi Personal<br>computer |
-| RISC         | Tempi di <br>esecuzione<br>veloci                                               | Portabilità <br>dei programmi,<br>Difficoltà di <br>programmazione<br>in Assembly | Si utilizzavano nei <br>vecchi server              |
+| Architettura | Vantaggi                                                                        | Svantaggi                                                                             | Uso                                                |
+| ------------ | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| CISC         | Portabilità <br>dei programmi,<br>Facilità di <br>programmazione<br>in Assembly | Tempi di <br>esecuzione<br>lenti<br>                                                  | Si utilizzavano<br>nei vecchi Personal<br>computer |
+| RISC         | Tempi di <br>esecuzione<br>veloci                                               | Non Portabilità <br>dei programmi,<br>Difficoltà di <br>programmazione<br>in Assembly | Si utilizzavano nei <br>vecchi server              |
 Nessuna delle due è ideale.
 Oggi i processori sono Ibridi, ovvero basati su CISC ma con sottosistemi RISC, cercando di ottenere i vantaggi di uno e dell'altro.
-Queste architetture moderne si chiamano **CRISC** (Complex Reducted Instruction Set Code).
+Queste architetture moderne si chiamano **CRISC** (Complex Reduced Instruction Set Code).
 
 **CACHE** 
 Un modo ingegnoso per diminuire gli accessi al bus e alla memoria, è quello di dotare il calcolatore di una memoria «tampone» (Cache Memory) tra il processore e il bus.
@@ -316,7 +316,7 @@ Writeback permette di scrivere il risultato di un operazione nei registri o nell
 Così, una Pipeline a 5 stadi trasporta cinque istruzioni in catena di montaggio. 
 • La Pipeline sopperisce così alle attese di CPU veloci nei confronti di memorie lente (collo di bottiglia di von Neumann). 
 • Una volta dotato di Pipeline, in un processore si è notato che lo stadio di esecuzione è il più lento: lo stadio precedente fornisce più valori di quanto lo stadio di esecuzione, implementato nell'ALU, può elaborare. 
-• Ecco allora che sui processori sono montate più ALU in modo da servire velocemente (più cores = "più CPU" )
+• Ecco allora che sui processori sono montate più ALU in modo da servire velocemente (più cores = "più ALU" )
 
 **Ci sono anche dei pericoli usando le pipeline** [[Pipelining e come è fatto_funziona il processore#**TIPI DI CONFLITTI|Tipi di conflitti in dettaglio]]
 1. **DATA HAZARDS**: si verifica quando un istruzione richiede dei dati che vengono forniti da un altra istruzione che non ha ancora finito (ritardi di elaborazione o blocchi)

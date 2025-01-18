@@ -33,3 +33,7 @@ architettura
 studia processore (nota 1)
 prog 1
 completa la verifica per come la sai fare tu 
+
+19/01/25
+architettura
+studia 3 struttura porcessore
