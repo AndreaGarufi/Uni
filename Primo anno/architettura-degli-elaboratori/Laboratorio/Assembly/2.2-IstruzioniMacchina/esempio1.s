@@ -12,20 +12,23 @@ numero    dcd     3
           mov     r2,#numero
           ldr     r2,[r2]
           mov     r10,#risultati
-          mov     r6,#0 ;voto 1
-          mov     r7,#0 ;voto 2
-          mov     r8,#0 ;voto 3
+          mov     r6,#0 ;alunno 1
+          mov     r7,#0 ;alunno 2
+          mov     r8,#0 ;alunno 3
 
 ciclo     add     r1,r1,#4
           ldr     r3,[r1]
           add     r6,r6,r3
+          
           add     r1,r1,#4
           ldr     r3,[r1]
           add     r7,r7,r3
+
           add     r1,r1,#4
           ldr     r3,[r1]
           add     r8,r8,r3
           add     r1,r1,#4
+          
           subs    r2,r2,#1
           bgt     ciclo
           str     r6,[r10]

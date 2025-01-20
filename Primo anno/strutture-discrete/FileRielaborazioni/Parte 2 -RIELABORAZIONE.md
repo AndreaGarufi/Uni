@@ -210,7 +210,11 @@ Siano a, b ∈ Z non entrambi nulli, si chiama Massimo Comune Divisore fra a e b
 - Se x è un divisore comune di a e b, ovvero x | a e x | b, allora x | d cioè d è multiplo di ogni altro divisore comune di a e b
 
 **ALGORITMO DI EUCLIDE**
+**Definizione semplice (chatGPT)**
+![[Pasted image 20250120211548.png|500]]
 
+
+**Definizione difficile (slide Cutello)**
 è un modo più facile per calcolare il MCD.
 L’algoritmo si basa su questa osservazione (che è anche la dimostrazione per induzione della sua correttezza ). 
 Siano a, b ∈ N e sia b ≤ a. Allora

@@ -37,3 +37,7 @@ completa la verifica per come la sai fare tu
 19/01/25
 architettura
 studia 3 struttura porcessore
+
+21/01/25
+continua assembly dal secondo esercizio del 2.2
+svolgi prova simulazione team prog-1
