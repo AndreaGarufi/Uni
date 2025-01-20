@@ -13,7 +13,7 @@ Capace di caricare ed eseguire le istruzioni elementari che costituiscono i prog
 
 ●**GENERATORE DI INDIRIZZI**: aggiorna il contenuto di PC 
 
-●**INTERFACCIA PROCESSORE MEMORIA** gestisce il trasferimento di dei dati tra memoria e CPU
+●**INTERFACCIA PROCESSORE MEMORIA** gestisce il trasferimento dei dati tra memoria e CPU
 
 **Il banco dei registri** è un blocco di memoria piccolo e veloce, e consiste in vari registri con circuiti di lettura e scrittura (lettura simultanea di 2 registri e scrittura su un terzo registro)
 
