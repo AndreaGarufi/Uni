@@ -87,6 +87,15 @@ Ecco la lista con la spiegazione di ciascun comando:
     - **Set (1):** Se il bit più significativo (MSB) del risultato della sottrazione è **1**, indicando un risultato negativo (nell'aritmetica a complemento a due).
     - **Cleared (0):** Se il MSB del risultato è **0**, indicando un risultato positivo o zero.
 
+- **Flag C (Carry)**:
+    - **Set (1)**: Non c'è stato un prestito (cioè il **minuendo era maggiore o uguale al sottraendo** (10-4 -> 10 = minuendo 4 = sottraendo))
+    - **Cleared (0)**: C'è stato un prestito (cioè il **minuendo era minore del sottraendo**).
+
+- **Flag V (Overflow)**:
+    - **Set (1)**: Se si verifica un overflow, cioè il risultato non può essere rappresentato correttamente nel numero di bit disponibili (ad esempio, somma di due numeri negativi che dà un numero positivo o viceversa).
+    - **Cleared (0)**: Se non si verifica overflow.
+
+
 ---
 
 ### **14. END**
