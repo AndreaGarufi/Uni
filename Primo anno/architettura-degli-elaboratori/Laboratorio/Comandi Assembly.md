@@ -77,7 +77,15 @@ Ecco la lista con la spiegazione di ciascun comando:
 
 ### **13. CMP R1, [R2,#5]**
 - **Tipo:** Istruzione di Confronto.
-- **Spiegazione:** Confronta il valore di `R1` con il valore caricato dall'indirizzo `R2 + 5` e aggiorna i flag dello Status Processor (PS).
+- **Spiegazione:** Confronta il valore di `R1` con il valore caricato dall'indirizzo `R2 + 5` e aggiorna il flag Z e N. (esegue una sottrazione implicita senza salvare il risultato)
+
+- - **Flag Z (Zero):**
+    - **Set (1):** Se il risultato della sottrazione è **zero** (gli operandi sono uguali).
+    - **Cleared (0):** Se il risultato della sottrazione è **diverso da zero**.
+
+- **Flag N (Negative):**
+    - **Set (1):** Se il bit più significativo (MSB) del risultato della sottrazione è **1**, indicando un risultato negativo (nell'aritmetica a complemento a due).
+    - **Cleared (0):** Se il MSB del risultato è **0**, indicando un risultato positivo o zero.
 
 ---
 
@@ -89,7 +97,7 @@ Ecco la lista con la spiegazione di ciascun comando:
 
 ### **15. B**
 - **Tipo:** Istruzione di Salto.
-- **Spiegazione:** Salta incondizionatamente all'indirizzo specificato.
+- **Spiegazione:** Salta incondizionatamente all'punto specificato.
 
 ---
 
@@ -125,7 +133,7 @@ Ecco la lista con la spiegazione di ciascun comando:
 
 ### **21. BEQ**
 - **Tipo:** Istruzione di Salto Condizionato.
-- **Spiegazione:** Salta se il risultato precedente era uguale a zero (flag Z settato).
+- **Spiegazione:** Salta se il risultato precedente era uguale a zero (verifica lo stato del flag Z).
 
 ---
 

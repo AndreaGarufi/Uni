@@ -30,14 +30,18 @@ studia macchina di von Newman (**fatto fino a I/O**)
 
 18/01/25 
 architettura
-studia processore (nota 1)
+studia processore (nota 1) **fatto**
 prog 1
 completa la verifica per come la sai fare tu 
 
 19/01/25
 architettura
-studia 3 struttura porcessore
+studia 3 struttura porcessore **fatto**
 
 21/01/25
 continua assembly dal secondo esercizio del 2.2
-svolgi prova simulazione team prog-1
+svolgi prova simulazione team prog-1 **fatto**
+
+22/01/25
+prog-1
+svolgi prova mandata da girlando
