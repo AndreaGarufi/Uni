@@ -45,3 +45,5 @@ svolgi prova simulazione team prog-1 **fatto**
 22/01/25
 prog-1
 svolgi prova mandata da girlando
+architettura 
+fai esercizi 2.3 assembly

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0902dba4380b962e",
+        "id": "01103f9b611b66a9",
         "type": "tabs",
         "children": [
           {
-            "id": "61cd07877894649e",
+            "id": "83d4ce5578524701",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+                "file": "programmazione-1/Tips Algoritmi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Comandi Assembly"
+              "title": "Tips Algoritmi"
             }
           }
         ]
@@ -170,14 +170,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "61cd07877894649e",
+  "active": "83d4ce5578524701",
   "lastOpenFiles": [
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "Cose da fare.md",
+    "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.2/2.2es 4.s",
     "strutture-discrete/Esempi di esercizi.md",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
-    "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.2/2.2es 3.s",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.2/2.2es 2.s",
-    "Cose da fare.md",
     "Modelli/Pasted image 20250120211548.png",
     "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
@@ -189,7 +191,6 @@
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.0es 2.s",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.0es 1.s",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.1",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.0/2.0es 2.s",
     "Modelli/Pasted image 20241229113429.png",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
