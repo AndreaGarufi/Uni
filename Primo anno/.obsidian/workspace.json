@@ -11,10 +11,14 @@
             "id": "6ab3306d9cd09886",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Cose da fare.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Cose da fare"
             }
           }
         ]
