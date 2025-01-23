@@ -44,6 +44,9 @@ svolgi prova simulazione team prog-1 **fatto**
 
 22/01/25
 prog-1
-svolgi prova mandata da girlando
+svolgi prova mandata da girlando **fatto**
+
+23/01/24
 architettura 
-fai esercizi 2.3 assembly
+fai esercizi 2.3 assembly (finisci il 2.3 n 1)
+studia rielaborazioni n 6,8,9
