@@ -144,6 +144,50 @@ Ecco la lista con la spiegazione di ciascun comando:
 - **Tipo:** Istruzione di Salto Condizionato.
 - **Spiegazione:** Salta se il risultato precedente era uguale a zero (verifica lo stato del flag Z).
 
+### **22. STM**
+- **Tipo:** Istruzione di gestione Pila (PUSH)
+- **Spiegazione:** è utilizzata per salvare un insieme di registri sullo stack
+
+| STM[codice] SP[!] {lista di registri} |
+| ------------------------------------- |
+- I codici sono questi:
+
+| Codice | Significato      |
+| ------ | ---------------- |
+| FD     | Full descending  |
+| FA     | Full ascending   |
+| ED     | Empty descending |
+| EA     | Empty ascending  |
+- Il "**!**" serve ad aggiornare lo stack pointer **SP**
+##### **Esempio**
+stmfd sp!,{r1,r2,r0,r3,r4,r5,r6,r7}
+- **`sp`**: Indica il registro stack pointer (puntatore allo stack).
+- **`!`**: Aggiorna il valore di `sp` dopo aver memorizzato i registri (in-place update).
+- **`FD`** : Lo stack cresce "verso il basso" (valori di indirizzo decrescenti) nella modalità **Full Descending**.
+- **`{r1, r2, r0, ...}`**: Elenca i registri da salvare sullo stack, in ordine specificato
+
+### **23. LDM**
+- **Tipo:** Istruzione di gestione Pila (POP)
+- **Spiegazione:** viene utilizzata per **caricare** (ripristinare) un insieme di registri dallo stack
+
+| ldmfd sp!, {r0,r1,r2,r3,r4,r5,r6,r7} |
+| ------------------------------------ |
+- I codici sono questi:
+
+| Codice | Significato      |
+| ------ | ---------------- |
+| FD     | Full descending  |
+| FA     | Full ascending   |
+| ED     | Empty descending |
+| EA     | Empty ascending  |
+- Il "**!**" serve ad aggiornare lo stack pointer **SP**
+##### **Esempio**
+ldmfd sp!, {r0,r1,r2,r3,r4,r5,r6,r7}
+- **`sp`**: Indica il registro stack pointer (puntatore allo stack).
+- **`!`**: Aggiorna il valore di `sp` dopo aver caricato i registri (in-place update).
+- **`FD`**: Lo stack segue la modalità **Full Descending**, che implica che i dati vengono letti da indirizzi **crescenti** man mano che `sp` viene aggiornato.
+- **`{r0, r1, r2, ...}`**: Elenca i registri che vengono caricati dallo stack, nell'ordine specificato.
+
 ---
 
 Questi comandi rappresentano un mix di direttive assembly e istruzioni ARM che coprono operazioni aritmetiche, trasferimenti di memoria, confronti, salti e gestione del flusso del programma.

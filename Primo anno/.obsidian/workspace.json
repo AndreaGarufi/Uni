@@ -4,21 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "b82c1a4e8d0d82b0",
+        "id": "8d085ba788a1b96e",
         "type": "tabs",
         "children": [
           {
-            "id": "e6afacd7bc6a2889",
+            "id": "3b60da85643a607f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cose da fare.md",
+                "file": "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cose da fare"
+              "title": "Comandi Assembly"
+            }
+          },
+          {
+            "id": "577a41053aa5f0c2",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "architettura-degli-elaboratori/Laboratorio/Assembly/2.3-IstruzioniMacchina/2.3-IstruzioniMacchina.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "2.3-IstruzioniMacchina"
             }
           }
         ]
@@ -170,8 +182,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e6afacd7bc6a2889",
+  "active": "3b60da85643a607f",
   "lastOpenFiles": [
+    "architettura-degli-elaboratori/Laboratorio/Assembly/2.3-IstruzioniMacchina/2.3-IstruzioniMacchina.pdf",
+    "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "Cose da fare.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
@@ -179,9 +194,6 @@
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.pdf",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/2.3-IstruzioniMacchina/2.3-IstruzioniMacchina.pdf",
-    "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
-    "Cose da fare.md",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.3/2.3es 1.s",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.3",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/Nuova cartella",
@@ -217,7 +229,6 @@
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "strutture-discrete/FileRielaborazioni/Sunto.md",
     "Project ideas.md",
-    "[.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }

@@ -8,7 +8,7 @@ Nb        equ     10
 Nc        equ     15
 risultato fill    4
 
-          mov     r1,#30
+          mov     r1,#30    ;simulo una pila
           mov     r2,#23
           mov     r3,#12
           mov     r4,#8
