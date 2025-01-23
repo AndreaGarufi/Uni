@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ef853fe45935741d",
+        "id": "8c23fb69b6e68396",
         "type": "tabs",
         "children": [
           {
-            "id": "edb89d2e9dc06a54",
+            "id": "6ab3306d9cd09886",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -166,8 +166,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "edb89d2e9dc06a54",
+  "active": "6ab3306d9cd09886",
   "lastOpenFiles": [
+    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
     "architettura-degli-elaboratori/Laboratorio/Assembly/2.3-IstruzioniMacchina/2.3-IstruzioniMacchina.pdf",
     "Cose da fare.md",
@@ -191,7 +192,6 @@
     "Modelli/Pasted image 20250120211548.png",
     "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
     "Modelli/Pasted image 20241229113429.png",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
