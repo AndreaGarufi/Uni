@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8c23fb69b6e68396",
+        "id": "c92f4c4501c778fa",
         "type": "tabs",
         "children": [
           {
-            "id": "6ab3306d9cd09886",
+            "id": "8224e4f2fc30e228",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cose da fare.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Cose da fare"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -170,12 +166,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ab3306d9cd09886",
+  "active": "8224e4f2fc30e228",
   "lastOpenFiles": [
-    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
-    "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/2.3-IstruzioniMacchina/2.3-IstruzioniMacchina.pdf",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/2.4-IstruzioniMacchina/2.4-IstruzioniMacchina.pdf",
     "Cose da fare.md",
+    "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
+    "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
+    "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/2.3-IstruzioniMacchina/2.3-IstruzioniMacchina.pdf",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
@@ -187,14 +187,11 @@
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.3",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/Nuova cartella",
     "programmazione-1/Tips Algoritmi.md",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.2/2.2es 4.s",
     "strutture-discrete/Esempi di esercizi.md",
     "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.2/2.2es 3.s",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.2/2.2es 2.s",
     "Modelli/Pasted image 20250120211548.png",
-    "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
     "Modelli/Pasted image 20241229113429.png",
@@ -206,7 +203,6 @@
     "Modelli/Pasted image 20241222110302.png",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "Modelli/Pasted image 20250117170344.png",
-    "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "programmazione-1/Matrice stringa tridimensionale.md",
     "Modelli/Pasted image 20250117100855.png",
     "Modelli/Pasted image 20250116092009.png",

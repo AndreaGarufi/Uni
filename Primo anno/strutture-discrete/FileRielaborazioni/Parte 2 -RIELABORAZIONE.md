@@ -647,7 +647,7 @@ Si basa su un algoritmo iterativo:
 
 ![[Pasted image 20241223185728.png|250]]
 
-congettura di Collatz L’algoritmo è il seguente
+L’algoritmo è il seguente
 
 Algoritmo di Collatz 
 **Leggi un intero** x ≥ 1 

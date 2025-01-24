@@ -46,6 +46,10 @@ svolgi prova simulazione team prog-1 **fatto**
 prog-1
 svolgi prova mandata da girlando **fatto**
 
+23/01/24
+strutture
+ripassa congettura di collatz
+
 24/01/24
 prog-1
 fai prova mandata da girlando
