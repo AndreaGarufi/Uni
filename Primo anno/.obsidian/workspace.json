@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c92f4c4501c778fa",
+        "id": "dacc55b36a6ca544",
         "type": "tabs",
         "children": [
           {
-            "id": "8224e4f2fc30e228",
+            "id": "601da435abca0b1d",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -148,7 +148,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -166,12 +166,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8224e4f2fc30e228",
+  "active": "601da435abca0b1d",
   "lastOpenFiles": [
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/2.4-IstruzioniMacchina/2.4-IstruzioniMacchina.pdf",
-    "Cose da fare.md",
     "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/2.4-IstruzioniMacchina/2.4-IstruzioniMacchina.pdf",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.4/2.4es 2.s",
+    "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
+    "Modelli/Pasted image 20250124175518.png",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.4/2.4es 1.s",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.4",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/Nuova cartella",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "Cose da fare.md",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
@@ -184,13 +190,8 @@
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.pdf",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.3/2.3es 1.s",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.3",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/Nuova cartella",
     "programmazione-1/Tips Algoritmi.md",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.2/2.2es 4.s",
     "strutture-discrete/Esempi di esercizi.md",
-    "strutture-discrete/FileCondivisiTeams/Parte2-1.pdf",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.2/2.2es 3.s",
     "Modelli/Pasted image 20250120211548.png",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
@@ -208,7 +209,6 @@
     "Modelli/Pasted image 20250116092009.png",
     "programmazione-1/fseek, fwrite,fread.md",
     "Modelli/Pasted image 20250115184202.png",
-    "Modelli/Pasted image 20250115184107.png",
     "strutture-discrete/Esercizi note/Esercizi grafi compito.md",
     "strutture-discrete/FileRielaborazioni/Tips.md",
     "strutture-discrete/FileRielaborazioni/Sunto.md",

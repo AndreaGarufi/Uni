@@ -188,6 +188,49 @@ ldmfd sp!, {r0,r1,r2,r3,r4,r5,r6,r7}
 - **`FD`**: Lo stack segue la modalità **Full Descending**, che implica che i dati vengono letti da indirizzi **crescenti** man mano che `sp` viene aggiornato.
 - **`{r0, r1, r2, ...}`**: Elenca i registri che vengono caricati dallo stack, nell'ordine specificato.
 
+### **24. AND**
+- **Tipo:** Istruzione per operazioni logiche 
+- **Spiegazione:** esegue l'**AND** bit a bit del contenuto di 2 registri 
+**Esempio** 
+**and r3,r2,r1**          r1 = 10 (1010) r2 = 41 (101001)
+![[Pasted image 20250124175518.png]]
+
+### **25. ORR**
+- **Tipo:** Istruzione per operazioni logiche 
+- **Spiegazione:** esegue l'**OR** bit a bit del contenuto di 2 registri 
+**Esempio**
+**orr r3,r2,r1**          r1 = 10 (1010) r2 = 41 (101001)
+
+### **26. EOR** 
+- **Tipo:** Istruzione per operazioni logiche 
+- **Spiegazione:** esegue lo **XOR** bit a bit del contenuto di 2 registri (XOR restituisce **1** solo se i due bit sono **diversi**.)
+**Esempio**
+**eor r3,r2,r1**          r1 = 10 (1010) r2 = 41 (101001)
+
+### **27. LSL** 
+- **Tipo:** Istruzione per operazioni logiche 
+- **Spiegazione:** Shift logico a sinistra. Scorre il contenuto di Rj a sinistra di un numero di posizioni di bit dato dall’operando contatore e pone il risultato in Ri. Gli spazi vuoti si riempiono con 0 **(equivale a fare una moltiplicazione per 2, il valore che usiamo indica l'esponente lsl r1,#1 -> sto moltiplicando per $2^1$)**
+
+### **27. LSR** 
+- **Tipo:** Istruzione per operazioni logiche 
+- **Spiegazione:** Shift logico a destra. Scorre il contenuto di Rj a destra di un numero di posizioni di bit dato dall’operando contatore e pone il risultato in Ri. Gli spazi vuoti si riempiono con 0 **(equivale a fare una divisione per 2, il valore che usiamo indica l'esponente lsl r1,#1 -> sto dividendo per $2^1$)
+
+### **28. ASR** 
+- **Tipo:** Istruzione per operazioni logiche 
+- **Spiegazione:** Shift aritmetico a destra. Scorre il contenuto di Rj a sinistra di un numero di posizioni di bit dato dall’operando contatore e pone il risultato in Ri. Riempie le posizioni lasciate libere con il valore del bit più significativo
+
+### **29. ROR** 
+- **Tipo:** Istruzione per operazioni logiche 
+- **Spiegazione:** Rotazione verso destra
+
+### **30. LDRB** 
+- **Tipo:** Istruzione di carcicamento
+- **Spiegazione:** Legge un singolo byte dalla memoria e lo registra negli 8 bit meno significativi del registro destinazione mettendo a 0 gli altri bit
+
+### **31. STRB** 
+- **Tipo:** Istruzione di salvataggio
+- **Spiegazione:** Salva gli 8 bit meno significativi del registro sorgente nella locazione di memoria specificata
+
 ---
 
 Questi comandi rappresentano un mix di direttive assembly e istruzioni ARM che coprono operazioni aritmetiche, trasferimenti di memoria, confronti, salti e gestione del flusso del programma.
