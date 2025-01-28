@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "065c3752c47716f7",
+        "id": "cc535689f5cbcda3",
         "type": "tabs",
         "children": [
           {
-            "id": "538f118e23caa64e",
+            "id": "6d40b10046e540a4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "programmazione-1/Tips Algoritmi.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Tips Algoritmi"
             }
           }
         ]
@@ -166,30 +170,30 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "538f118e23caa64e",
+  "active": "6d40b10046e540a4",
   "lastOpenFiles": [
-    "Cose da fare.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/2.5-IstruzioniMacchina/esEsame8.s",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/esercizi extra/sommaNumeri Pari e maggiori di 6.s",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/esercizi extra",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/Nuova cartella",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
+    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
+    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.4/2.4es 4.s",
+    "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
+    "Cose da fare.md",
     "architettura-degli-elaboratori/Laboratorio/Assembly/2.4-IstruzioniMacchina/2.4-IstruzioniMacchina.pdf",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.4/2.4es 3.s",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.4/2.4es 2.s",
     "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "Modelli/Pasted image 20250124175518.png",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.4/2.4es 1.s",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.4",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/Nuova cartella",
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/2.3-IstruzioniMacchina/2.3-IstruzioniMacchina.pdf",
-    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
-    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
-    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
-    "architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.pdf",
     "programmazione-1/Tips Algoritmi.md",
     "strutture-discrete/Esempi di esercizi.md",
     "Modelli/Pasted image 20250120211548.png",

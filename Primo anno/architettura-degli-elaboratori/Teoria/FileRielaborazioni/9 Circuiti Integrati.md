@@ -99,7 +99,7 @@ Circuito integrato: CI in italiano sono dispositivi elettronici che combinano di
 - Mixed
 Chiaramente la funzione d'onda generata da questi circuiti cambia. Esistono vari tipi di circuiti integrati a seconda della scala di integrazione (guarda slide 18)
 
-il **decodificatore** è un circuito logico che prende un input un segnalo e lo decodifica in segnali di uscita leggibili da altre componenti
+il **decodificatore** è un circuito logico che prende un input un segnale e lo decodifica in segnali di uscita leggibili da altre componenti
 
 il multiplatore è un circuito digitale che seleziona uno tra i diversi ingressi e lo invia in uscita, basandosi sui segnali di controllo che gli arrivano, ciò permette a più fonti di condividere la stessa linea di connessione
 

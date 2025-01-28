@@ -1,9 +1,9 @@
 Per SOMMARE numeri binari ad 1 bit:
 ![[Pasted image 20241128154058.png|500]]
 
-**Il RIPORTO IN USCITA della cifre precedente viene assegnato come RIPORTO IN ENTRATA alla successiva**
+**Il RIPORTO IN USCITA della cifra precedente viene assegnato come RIPORTO IN ENTRATA alla successiva**
 
-Un addizionatore a 2 bit può essere espresso come 2 funzioni logiche a 3 ingressi (2 bit da sommare e 1 riporto) in cui la prima somma i 2 bit e la seconda calcola il riporto
+Un addizionatore a 2 bit può essere espresso come 2 funzioni logiche a 3 ingressi (2 bit da sommare e 1 riporto) in cui la prima, somma i 2 bit e la seconda calcola il riporto
 
 **abbiamo diversi tipi di addizionatori:**
 
@@ -11,7 +11,10 @@ Un addizionatore a 2 bit può essere espresso come 2 funzioni logiche a 3 ingres
 addizonatore a 1 bit è un circuito logico che somma 2 bit (A e B) considerando anche un possibile riporto in ingresso e uscita, produce 2 uscite (il valore della somma e il bit di riporto).
 **calcola il riporto ma non lo considera nelle operazioni**
 
-la somma si può ottenere utilizzando 2 porte XOR ([[5 Algebra Booleana#^26fdc9]]) la prima calcola A $\oplus$ B, la seconda prende il valore trovato prima + il riporto dell'operazione precedente (queste cose si utilizzano nelle ALU dei processori più datati)
+E' formato da una porta XOR e una AND
+**Formule logiche**:
+- La somma S è calcolata utilizzando una porta XOR: S=A⊕B
+- Il riporto C è calcolato utilizzando una porta AND: C=A⋅B
 
 
 ## **FULL ADDER**

@@ -14,9 +14,9 @@ costante2 equ     10
 ciclo     subs    r2,r2,#1
           blt     esci
           ldr     r4,[r1],#4
-          cmp     r4,#costante1
+          cmp     r4,#costante1 ;1
           beq     ciclo
-          cmp     r4,#costante2
+          cmp     r4,#costante2 ;10
           beq     ciclo
           add     r5,r5,#1
           b       ciclo
