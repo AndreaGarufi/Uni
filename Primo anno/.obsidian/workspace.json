@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "programmazione-1/Tips Algoritmi.md",
+                "file": "strutture-discrete/FileRielaborazioni/Tips.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tips Algoritmi"
+              "title": "Tips"
             }
           }
         ]
@@ -172,6 +172,11 @@
   },
   "active": "6d40b10046e540a4",
   "lastOpenFiles": [
+    "Modelli/Pasted image 20241020173502.png",
+    "strutture-discrete/FileRielaborazioni/Tips.md",
+    "programmazione-1/Tips Algoritmi.md",
+    "programmazione-1/C Università/output/a.exe",
+    "programmazione-1/C Università/output/selectionSortProva.c",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
     "architettura-degli-elaboratori/Laboratorio/Assembly/2.5-IstruzioniMacchina/esEsame8.s",
@@ -186,15 +191,12 @@
     "architettura-degli-elaboratori/Laboratorio/Assembly/2.4-IstruzioniMacchina/2.4-IstruzioniMacchina.pdf",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.4/2.4es 3.s",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.4/2.4es 2.s",
-    "strutture-discrete/FileCondivisiTeams/Parte3.pdf",
     "Modelli/Pasted image 20250124175518.png",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/2.4/2.4es 1.s",
     "strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
-    "programmazione-1/Tips Algoritmi.md",
     "strutture-discrete/Esempi di esercizi.md",
     "Modelli/Pasted image 20250120211548.png",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
@@ -214,7 +216,6 @@
     "programmazione-1/fseek, fwrite,fread.md",
     "Modelli/Pasted image 20250115184202.png",
     "strutture-discrete/Esercizi note/Esercizi grafi compito.md",
-    "strutture-discrete/FileRielaborazioni/Tips.md",
     "strutture-discrete/FileRielaborazioni/Sunto.md",
     "Project ideas.md",
     "programmazione-1/Senza nome.canvas"
