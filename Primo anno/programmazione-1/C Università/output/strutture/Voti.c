@@ -98,17 +98,3 @@ void media(float v[],int dimv){        //*n[] vettore con i nomi, v[] vettore co
     printf("La media dei voti di tutti gli studenti e': %.2f",media); 
 
 }
-
-
-
-for(int i = 0; i < dim-1; i++){
-    int minimo = i; 
-    for(int j = i+1; j < dim; j++){
-        if(a[j] < a[minimo]){
-            minimo = j;
-        }
-    }
-    int temp = a[i];
-    a[i] = a[minimo];
-    a[minimo] = temp;
-}

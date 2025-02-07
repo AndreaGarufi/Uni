@@ -32,20 +32,6 @@
               "icon": "lucide-file",
               "title": "Appunti pre-esame da ricordare"
             }
-          },
-          {
-            "id": "6cbe29ece8b5a044",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "programmazione-1/Tips Algoritmi.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Tips Algoritmi"
-            }
           }
         ],
         "currentTab": 1
@@ -202,6 +188,7 @@
   "lastOpenFiles": [
     "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
     "programmazione-1/Appunti pre-esame da ricordare.md",
+    "programmazione-1/PUNTATORI (importante).md",
     "programmazione-1/Tips Algoritmi.md",
     "Cose da fare.md",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
@@ -244,7 +231,6 @@
     "6 novembre 2024.pdf.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "programmazione-1/Matrice stringa tridimensionale.md",
-    "programmazione-1/fseek, fwrite,fread.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
