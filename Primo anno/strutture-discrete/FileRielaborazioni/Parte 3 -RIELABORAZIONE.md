@@ -111,7 +111,7 @@ Dato un insieme di n > 1 variabili, {$x_0, x_1, . . . , x_{n−1}$} e preso un u
 https://uni-notes-girlando.netlify.app/Primo-anno/strutture-discrete/FileRielaborazioni/03_Parte3
 $\uparrow$
 qui tutta questa parte è spiegata bene se non capisci qui prova sul sito di Girlando
-
+ 
 **Pigeonhole principle**
 
 Nella sua forma più semplice, il Principio afferma che:

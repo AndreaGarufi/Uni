@@ -523,7 +523,7 @@ Altrimenti si dice non planare
 ---
 **Teorema di Kuratowski**
 Un grafo è planare se e solo se non contiene alcun sottografo che sia omeomorfo a $K_5$ o a $K_{3,3}$
-![[Pasted image 20250110142229.png]]
+ 
 
 (vedi da slide 122 a 124)
 

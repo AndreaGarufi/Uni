@@ -389,7 +389,6 @@ La cardinalità di un insieme è definita come il numero di elementi che apparte
 
 ---
 ##### Proprietà delle relazioni
-Sia dato un insieme U diremo che una relazione $R(x, y)$ definita in $U×U$ è:
 - ***Riflessiva***: se $∀x∈U$ risulta vero che $R(x, x)$.
 - ***Simmetrica***: se $∀x, y ∈ U$ risulta vero che $R(x, y)$ e anche $R(y, x)$;
 - ***Transitiva***: se $∀x,y,z ∈ U$ risulta vero che $R(x, y)$ e $R(y, z)$ allora ci deve essere anche una $R(x, z)$ 

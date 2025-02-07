@@ -1,2 +1,2 @@
-25/01/24
-architettura studia pdf 6 e finisci ultimo esercizio 2.4
+06/02/2025
+fai es n 2 pw 4.1
