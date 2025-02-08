@@ -103,4 +103,25 @@ es. `aptr = aptr +1;` cosi incremento di 4 byte (4 per int, 8 per double ecc...)
 Quindi : Quando l’indirizzo di una variabile viene passato a una funzione (&), si può usare nella funzione l’operatore di indirezione ( * ) per modificare il valore in quella locazione nella memoria della funzione chiamante.
 
 
-## **Capitolo VII,5** **- Allocazione Dinamica **
+## **Capitolo VII,5** **- Allocazione Dinamica** 
+Se non sappiamo quanto dovrà essere lungo un array ad esempio, oppure vogliamo che finito il suo lavoro venga tolto dalla memoria per risparmiare spazio dobbiamo **allocarlo dinamicamente attraverso l'uso di malloc calloc o realloc e infine l'uso della free**, normalmente nella dichiarazione statica o automatica le variabili vengono caricate nello stack (un area di memoria che viene gestita dal sistema operativo) mentre quando allochiamo dinamicamente le variabili vengono poste nello heap (un area di memoria gestita dal programmatore) che quindi va poi opportunamente liberata.
+**Malloc** -> `malloc(sizeof(tipo) * dimByte)` -> `int *y = malloc(sizeof(int) * 14);` 
+			sintassi malloc                                   Esempio
+Malloc alloca memoria in base alla dimensione del tipo e la dimensione fornita dal programmatore
+
+**Calloc** -> `calloc(dimByte * sizeof(int))` -> `int *x = calloc(14,sizeof(int));` 
+			sintassi calloc                                   Esempio
+Calloc alloca memoria in base alla dimensione fornita dal programmatore e alla dimensione del tipo, in più inizializza a 0 tutta la memoria allocata
+
+**Realloc** -> `realloc(*ptr, dimByte)` -> `x = realloc(x,20 * sizeof(int));` 
+			sintassi realloc                                   Esempio
+Realloc ridimensiona una memoria già allocata precedentemente 
+
+**Free** -> `free(*ptr)` -> `free(x);`
+	    sintassi free    Esempio
+Free libera la memoria allocata precedentemente
+
+## **Capitolo X - Strutture**
+
+
+

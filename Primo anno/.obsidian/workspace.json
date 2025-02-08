@@ -4,37 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "ff5f274d8419f083",
+        "id": "a250fe69fecc1344",
         "type": "tabs",
         "children": [
           {
-            "id": "102a9116e3b10bfd",
+            "id": "28ea65116cb76399",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Introduzione a C programmazione 1 (ottava edizione)"
-            }
-          },
-          {
-            "id": "2b185b178f62dbe7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "programmazione-1/Appunti pre-esame da ricordare.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Appunti pre-esame da ricordare"
+              "title": "Nuova scheda"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,13 +167,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2b185b178f62dbe7",
+  "active": "28ea65116cb76399",
   "lastOpenFiles": [
-    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "programmazione-1/FileCondivisiTeams/6) Allocazione Dinamica Memoria.pdf",
     "programmazione-1/Appunti pre-esame da ricordare.md",
+    "programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
+    "Cose da fare.md",
     "programmazione-1/PUNTATORI (importante).md",
     "programmazione-1/Tips Algoritmi.md",
-    "Cose da fare.md",
     "strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "strutture-discrete/FileCondivisiTeams/Parte4.pdf",
@@ -219,7 +203,6 @@
     "architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
     "architettura-degli-elaboratori/Laboratorio/Assembly/2.5-IstruzioniMacchina/esEsame8.s",
     "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/esercizi extra/sommaNumeri Pari e maggiori di 6.s",
-    "architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/esercizi extra",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
