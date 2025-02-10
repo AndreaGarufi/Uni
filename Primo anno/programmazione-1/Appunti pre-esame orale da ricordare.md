@@ -103,7 +103,7 @@ es. `aptr = aptr +1;` cosi incremento di 4 byte (4 per int, 8 per double ecc...)
 Quindi : Quando l’indirizzo di una variabile viene passato a una funzione (&), si può usare nella funzione l’operatore di indirezione ( * ) per modificare il valore in quella locazione nella memoria della funzione chiamante.
 
 
-## **Capitolo VII,5** **- Allocazione Dinamica** 
+## **Capitolo VII+** **- Allocazione Dinamica** 
 Se non sappiamo quanto dovrà essere lungo un array ad esempio, oppure vogliamo che finito il suo lavoro venga tolto dalla memoria per risparmiare spazio dobbiamo **allocarlo dinamicamente attraverso l'uso di malloc calloc o realloc e infine l'uso della free**, normalmente nella dichiarazione statica o automatica le variabili vengono caricate nello stack (un area di memoria che viene gestita dal sistema operativo) mentre quando allochiamo dinamicamente le variabili vengono poste nello heap (un area di memoria gestita dal programmatore) che quindi va poi opportunamente liberata.
 **Malloc** -> `malloc(sizeof(tipo) * dimByte)` -> `int *y = malloc(sizeof(int) * 14);` 
 			sintassi malloc                                   Esempio
@@ -122,6 +122,58 @@ Realloc ridimensiona una memoria già allocata precedentemente
 Free libera la memoria allocata precedentemente
 
 ## **Capitolo X - Strutture**
+**Una struttura è un insieme di dati** (memorizzati in maniera NON contigua in memoria) **che possono avere tipo diverso**, le variabili al suo interno si chiamano membri della struttura e per fare riferimento alla struttura possiamo dichiarare della variabili del tipo della struttura stessa
+
+Per accedere ai membri della struttura esistono 2 operatori:     1) .    2) -> 
+chiamati **operatore punto e operatore freccia**.
+
+l'**operatore punto** può accedere ad un membro utilizzando una variabile di tipo struttura
+es. `printf("%d",dati.codice);` -> dati è la variabile di tipo struttura e codice è un membro di quella struttura.
+
+l'**operatore freccia** accede ad un membro della struttura attraverso l'uso di un puntatore di tipo struttura
+es. `printf("%d",datiPtr->codice);` -> datiPtr è il puntatore di tipo struttura e codice è un membro di quella struttura.
+
+La parola chiave **typedef** fornisce un meccanismo per creare sinonimi (o alias) per tipi di dati precedentemente definiti.
+`typedef struct nomeStruttura nomeAliasStruttura;`
+
+Le **unioni** sono simili alle strutture, solo che queste condividono lo stesso spazio di memoria:
+`union Dati {`
+    `int intero;`
+    `float decimale;`
+    `char carattere;`
+`};`
+`union Dati valore;`
+`valore.intero = 10;  // Ora la memoria contiene un intero`
+`valore.decimale = 3.14;  // Ora la memoria contiene un float (e sovrascrive l'intero)`
+
+- Nelle **strutture**, ogni membro ha il proprio spazio di memoria.
+- Nelle **unioni**, tutti i membri condividono lo stesso spazio, quindi modificare un membro altera il valore degli altri.
+
+## **Capitolo XI - Elaborazione di file**
+Esistono 3 stream:
+1) standard input (stdin)
+2) standard output (stdout)
+3) standard error (stderr)
+
+Per creare un file abbiamo bisogno di un puntatore alla struttura FILE, ogni file aperto contemporaneamente deve avere il suo puntatore per fare riferimento a quel file.
+Per aprire un file si ha bisogno della funzione fopen("nomeFile","lettera") dove appunto si inserisce il nome del file o il suo percorso e una lettera che indica l'operazione che si deve fare:
+![[Pasted image 20250210095653.png]]
+es. `filePtr = fopen("persone.txt","r")` -> apre il file e filePtr è il riferimento, il file è persone.txt aperto in modalità lettura (r)
+
+Ogni file finisce con un carattere di **end-of-file**, in un certo senso è come se fosse il fine stringa delle stringhe, anche se l'end-of-file non è un vero e proprio carattere ma un segnale che indica che il file è finito
+
+Per spostarsi all'interno di un file si utilizza un cursore, esistono quindi diverse funzioni che permettono di spostarlo come rewind o fseek o anche in un certo senso fscanf.
+
+**fscanf** è una funzione uguale allo scanf solo che si usa per prendere dati da un file, analogamente **fprintf** scrive dati su un file.
 
 
+## **Capitolo XII - Strutture Di Dati**
+Per le liste collegate le code e le pile abbiamo prima bisogno di sapere cosa sono le strutture autoreferenziali: sono strutture con un membro puntatore che puntano ad un'altra struttura dello stesso tipo.
+Una lista collegata è una sequenza lineare di strutture autoreferenziali dove ogni membro puntatore è collegato ad un altra struttura.
+Si accede a questa lista tramite un puntatore che identifica la testa della lista e a tutti gli altri nodi tramite il membro puntatore che li collega, una cosa molto utile delle liste è che può modificare la sua lunghezza durante il corso dell'esecuzione, aggiungendo o eliminando nodi.
+Sulle liste possiamo fare operazioni di vario tipo, possiamo aggiungere/eliminare in coda o intesta o in mezzo, quindi si è più liberi, cosa che invece non vale per pile e code.
+
+**Lista collegata** -> inserimenti/eliminazioni in qualsiasi punto
+**Pila** -> LIFO -> Last In First Out -> cioè l'ultimo elemento inserito è il primo a essere rimosso (si utilizzano spesso funzioni di **push** per aggiungere un elemento in cima e **pop** per toglierlo)
+**Coda** -> FIFO -> First In First Out -> cioè il primo elemento inserito è il primo a essere rimosso
 
