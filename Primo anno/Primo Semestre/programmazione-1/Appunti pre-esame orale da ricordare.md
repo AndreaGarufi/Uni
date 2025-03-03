@@ -6,7 +6,7 @@ Se devo passare per riferimento -> `funzione(&variabile);` (dentro la funzione p
 
 ## **Capitolo VI - Array**
 Un **array è una struttura di dati contigua** in memoria **tutte dello stesso tipo**. Un **array non è altro che un puntatore al primo elemento di se stesso**, **il tipo di un array dipende dal tipo di valore che devo mettere dentro** (int, float, char, struct ecc...)
-Sugli array si possono fare degli ordinamenti in base ad un criterio specifico, i più famosi (anche se poco efficienti ma semplici) sono il **bubble sort e selection sort**
+Sugli array si possono fare degli ordinamenti in base ad un criterio specifico, i più famosi (anche se poco efficienti ma semplici) sono il **bubble sort il selection sort e l'insertion sort**
 
 **BUBBLE SORT**
 `for(int i = 0; i < dim-1; i++){`
@@ -39,6 +39,22 @@ Ordina l'array in maniera crescente (appunti più dettagliati -> [[Tips Algoritm
 `}`
 
 Ordina l'array in maniera crescente (appunti più dettagliati -> [[Tips Algoritmi#**SELECTION SORT ARRAY**|Selection Sort Array]])
+
+**INSERTION SORT**
+`for (int i = 1; i < n; i++) {`
+    `int elemento = arr[i];`  
+    `int j = i - 1;`
+    
+	    // Sposta gli elementi maggiori di "elemento" a destra
+	    while (j >= 0 && arr[j] > elemento) {
+	        arr[j + 1] = arr[j];
+	        j--;
+	    }
+    
+    arr[j + 1] = elemento;  // Inserisce l'elemento nella posizione corretta
+`}`
+
+Ordina l'array confrontando l'elemento temporaneo nel primo for con l'elemento in posizione j che sarà l'elemento precedente
 
 ---
 

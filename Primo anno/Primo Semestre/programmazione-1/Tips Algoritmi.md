@@ -377,6 +377,14 @@ int ricerca_binaria_ricorsiva(int a[],int key, int low,int high){
     return -1;
 }
 
+La ricerca binaria si basa sul **divide et impera**: invece di controllare tutti gli elementi di un array uno per uno (come nella ricerca lineare), il metodo divide ripetutamente l'array a metà fino a trovare l'elemento cercato.
+### **Idea principale:**
+1. L'array deve essere **ordinato**.
+2. Si confronta l'elemento cercato con l'elemento centrale.
+    - Se è uguale, lo si ha trovato.
+    - Se è minore, si cerca nella metà sinistra.
+    - Se è maggiore, si cerca nella metà destra.
+3. Il processo si ripete fino a trovare l'elemento o fino a ridurre la ricerca a un intervallo vuoto.
 
 # **ALTRI ALGORITMI**
 ### **INVERTIRE I NUMERI USANDO ARRAY**
@@ -605,9 +613,9 @@ In questo caso dato **che è possibile agire sulla testa ho bisogno di passarla 
 L'inserimento ordinato ordina in base ad un criterio o valore scelto (in questo caso è numero1), qui è stato ordinato in maniera crescente, ovvero il numero che inserisce l'utente deve essere messo prima dei numeri più grandi di lui.
 Mi serve un currentPtr che scorra la lista partendo dalla testa e mi serve tenere a mente un precedente di currentPtr: finché currentPtr != NULL e finché il numero di currentPtr è più piccolo del numero inserito dall'utente, cicla. Quando questa condizione non è verificata esce
 dal while avendo però salvato un riferimento al nodo precedente nell'ultimo ciclo. Abbiamo perciò trovato dove posizionare il nuovo nodo, dopo devo fare un `if(lastPtr == NULL)` perché se entrerò in questo if vorrà dire che o la lista è vuota o la testa è più grande del numero da inserire e quindi bisognerà inserire il numero dell'utente in testa (richiamando la funzione "inTesta"), altrimenti (else) creo il nuovo nodo, inserisco il numero dell'utente nel nodo e poi il nextPtr del nuovo nodo è uguale a nextPtr di lastPtr (il precedente di prima, `newNodePtr->nextPtr = lastPtr->nextPtr;`) mentre dopo lastPtr->nextPtr sarà uguale al nuovo nodo (ho a tutti gli effetti fatto un inserimento in mezzo). 
-1) 3->5->7    <-lista     numero1 = 4 (inserito dall'utente, questo è il criterio di ordinamento)
-2) (dopo il while) lastPtr = 3, currentPtr = 5  (devo inserire 4 in mezzo)
-3) 3->4->5->7 (faccio questo attraverso le istruzioni nell'else)
+4) 3->5->7    <-lista     numero1 = 4 (inserito dall'utente, questo è il criterio di ordinamento)
+5) (dopo il while) lastPtr = 3, currentPtr = 5  (devo inserire 4 in mezzo)
+6) 3->4->5->7 (faccio questo attraverso le istruzioni nell'else)
 
 
 

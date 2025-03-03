@@ -204,3 +204,4 @@ void writeOutput(persona *array,int dim){
     fclose(filePtr);
 
 }
+
