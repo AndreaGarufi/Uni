@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "62111a144b080697",
+        "id": "08ae16b3e704ed2e",
         "type": "tabs",
         "children": [
           {
-            "id": "19bd53b1cf2f51bd",
+            "id": "78ca58b1e65c824d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo Semestre/Fondamenti di Informatica/Caratteri stringhe linguaggi operazioni 3_03_25.pdf"
+                "file": "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Caratteri stringhe linguaggi operazioni 3_03_25"
+              "icon": "lucide-file",
+              "title": "Programmazione a Oggetti (OOP)"
             }
           }
         ]
@@ -169,9 +171,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19bd53b1cf2f51bd",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
+    "Secondo Semestre/Modelli/Pasted image 20250304210643.png",
+    "ORARIO_LEZIONI_NUOVO.jpeg",
+    "ORARIO_LEZIONI-VECCHIO.jpg",
+    "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Fondamenti di Informatica/Caratteri stringhe linguaggi operazioni 3_03_25.pdf",
+    "Secondo Semestre/Modelli/Pasted image 20250304204620.png",
+    "Secondo Semestre/Modelli/Pasted image 20250304205820.png",
+    "Secondo Semestre/Modelli/Pasted image 20250304205723.png",
+    "Secondo Semestre/Modelli/Pasted image 20250304205607.png",
+    "Pasted image 20250304205124.png",
+    "Pasted image 20250304205135.png",
+    "Secondo Semestre/Modelli/Pasted image 20250304205305.png",
+    "Secondo Semestre/Programmazione-2",
+    "Secondo Semestre/Modelli",
     "Secondo Semestre/Fondamenti di Informatica/Senza nome.md",
     "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
     "Secondo Semestre/Fondamenti di Informatica",
@@ -186,21 +201,9 @@
     "Primo Semestre/programmazione-1/FileCondivisiTeams/6) Allocazione Dinamica Memoria.pdf",
     "Cose da fare.md",
     "Primo Semestre/programmazione-1/PUNTATORI (importante).md",
-    "Primo Semestre/strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "Primo Semestre/strutture-discrete/FileCondivisiTeams/Parte4.pdf",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
-    "Primo Semestre/strutture-discrete/FileCondivisiTeams/Parte3.pdf",
-    "Primo Semestre/strutture-discrete/Esercizi note/fotoG/20250113_163816.jpg",
-    "Primo Semestre/strutture-discrete/Esercizi note/fotoG/20250113_163055.jpg",
-    "Primo Semestre/strutture-discrete/Esercizi note/fotoG/20250113_162628.jpg",
-    "Primo Semestre/strutture-discrete/Esercizi note/fotoG/20250113_155634.jpg",
-    "Primo Semestre/strutture-discrete/Esercizi note/fotoG/20250113_160649.jpg",
-    "Primo Semestre/strutture-discrete/Esercizi note/fotoG/20250113_161554.jpg",
-    "Primo Semestre/strutture-discrete/Esercizi note/fotoG/20250113_162231.jpg",
-    "Primo Semestre/strutture-discrete/Esercizi note/fotoG/20250113_152701.jpg",
-    "Primo Semestre/strutture-discrete/Esercizi note/fotoG/20250113_155622.jpg",
     "Primo Semestre/strutture-discrete/Esercizi note/Esercizi grafi compito.md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "Primo Semestre/strutture-discrete/Esempi di esercizi.md",
@@ -216,7 +219,6 @@
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
-    "6 novembre 2024.pdf.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
