@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "cf41a521ffdf7889",
+        "id": "1559a6448f5966d9",
         "type": "tabs",
         "children": [
           {
-            "id": "fd452b1d12a75b57",
+            "id": "5c74336a4b27cc48",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/1 Il_linguaggio_C++_Elementi_base.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "1 Il_linguaggio_C++_Elementi_base"
             }
           }
         ]
@@ -167,8 +169,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "5c74336a4b27cc48",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/2 Operatori_ed_espressioni.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/3 La_programmazione_strutturata.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/4 Le_funzioni.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/1 Il_linguaggio_C++_Elementi_base.pdf",
+    "Secondo Semestre/Fondamenti di Informatica/Linguaggi e ASF_ASFD 5_03_25.pdf",
     "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
     "Secondo Semestre/Fondamenti di Informatica/Caratteri stringhe linguaggi operazioni 3_03_25.pdf",
     "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
@@ -186,12 +193,8 @@
     "Secondo Semestre/Modelli/Pasted image 20250304205723.png",
     "Secondo Semestre/Modelli/Pasted image 20250304205607.png",
     "Secondo Semestre/Programmazione-2",
-    "Secondo Semestre/Modelli",
     "Secondo Semestre/Fondamenti di Informatica/Senza nome.md",
     "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
-    "Secondo Semestre/Fondamenti di Informatica",
-    "Secondo Semestre",
-    "Primo Semestre",
     "Primo Semestre/programmazione-1/Tips Algoritmi.md",
     "Senza nome.md",
     "Cose da fare.md",
