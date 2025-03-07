@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ac2370d5ea9cb22e",
+        "id": "cf41a521ffdf7889",
         "type": "tabs",
         "children": [
           {
-            "id": "95fe03cefa237d90",
+            "id": "fd452b1d12a75b57",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -169,6 +169,9 @@
   },
   "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
+    "Secondo Semestre/Fondamenti di Informatica/Caratteri stringhe linguaggi operazioni 3_03_25.pdf",
+    "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/Lezione 01 Introduzione.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams",
     "Secondo Semestre/Modelli/Pasted image 20250306132145.png",
@@ -178,7 +181,6 @@
     "ORARIO_LEZIONI_NUOVO.jpeg",
     "ORARIO_LEZIONI-VECCHIO.jpg",
     "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
-    "Secondo Semestre/Fondamenti di Informatica/Caratteri stringhe linguaggi operazioni 3_03_25.pdf",
     "Secondo Semestre/Modelli/Pasted image 20250304204620.png",
     "Secondo Semestre/Modelli/Pasted image 20250304205820.png",
     "Secondo Semestre/Modelli/Pasted image 20250304205723.png",
@@ -190,10 +192,7 @@
     "Secondo Semestre/Fondamenti di Informatica",
     "Secondo Semestre",
     "Primo Semestre",
-    "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.pdf",
     "Primo Semestre/programmazione-1/Tips Algoritmi.md",
-    "Primo Semestre/programmazione-1/Introduzione a C programmazione 1 (ottava edizione).pdf",
-    "propedeudicita.pdf",
     "Senza nome.md",
     "Cose da fare.md",
     "Primo Semestre/programmazione-1/PUNTATORI (importante).md",
