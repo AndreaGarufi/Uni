@@ -11,6 +11,7 @@ int main(){
         cin >> array[i];
         cout << array[i] << endl;
     }
+   
     
     return 0;
 }

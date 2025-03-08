@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "1559a6448f5966d9",
+        "id": "43d69f1ac6be82c5",
         "type": "tabs",
         "children": [
           {
-            "id": "5c74336a4b27cc48",
+            "id": "937f0b04952865f1",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/1 Il_linguaggio_C++_Elementi_base.pdf"
+                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/4 Le_funzioni.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "1 Il_linguaggio_C++_Elementi_base"
+              "title": "4 Le_funzioni"
             }
           }
         ]
@@ -38,7 +38,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byCreatedTimeReverse",
+                "sortOrder": "alphabetical",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -169,17 +169,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5c74336a4b27cc48",
+  "active": "937f0b04952865f1",
   "lastOpenFiles": [
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/2 Operatori_ed_espressioni.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/3 La_programmazione_strutturata.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/4 Le_funzioni.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/2 Operatori_ed_espressioni.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/1 Il_linguaggio_C++_Elementi_base.pdf",
-    "Secondo Semestre/Fondamenti di Informatica/Linguaggi e ASF_ASFD 5_03_25.pdf",
-    "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
-    "Secondo Semestre/Fondamenti di Informatica/Caratteri stringhe linguaggi operazioni 3_03_25.pdf",
+    "Secondo Semestre/Programmazione-2/c++/a.exe",
     "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/Lezione 01 Introduzione.pdf",
+    "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
+    "Secondo Semestre/Fondamenti di Informatica/Linguaggi e ASF_ASFD 5_03_25.pdf",
+    "Secondo Semestre/Fondamenti di Informatica/Caratteri stringhe linguaggi operazioni 3_03_25.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/0 Introduzione.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams",
     "Secondo Semestre/Modelli/Pasted image 20250306132145.png",
     "Secondo Semestre/Modelli/Pasted image 20250306131230.png",
@@ -192,7 +193,6 @@
     "Secondo Semestre/Modelli/Pasted image 20250304205820.png",
     "Secondo Semestre/Modelli/Pasted image 20250304205723.png",
     "Secondo Semestre/Modelli/Pasted image 20250304205607.png",
-    "Secondo Semestre/Programmazione-2",
     "Secondo Semestre/Fondamenti di Informatica/Senza nome.md",
     "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
     "Primo Semestre/programmazione-1/Tips Algoritmi.md",
