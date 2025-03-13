@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "43d69f1ac6be82c5",
+        "id": "c51b970b191dc949",
         "type": "tabs",
         "children": [
           {
-            "id": "937f0b04952865f1",
+            "id": "9748aa81667feb80",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/4 Le_funzioni.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "4 Le_funzioni"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -169,24 +167,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "937f0b04952865f1",
+  "active": "9748aa81667feb80",
   "lastOpenFiles": [
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/3 La_programmazione_strutturata.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/4 Le_funzioni.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/2 Operatori_ed_espressioni.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/1 Il_linguaggio_C++_Elementi_base.pdf",
-    "Secondo Semestre/Programmazione-2/c++/a.exe",
+    "Secondo Semestre/Analisi-1/Marcellini, Sbordone - Esercitazioni Di Matematica Vol 1-1.pdf",
+    "Secondo Semestre/Senza nome.md",
+    "Secondo Semestre/Analisi-1",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/6 Stringhe.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/0 Introduzione.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/7 Flussi_di_file.pdf",
     "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
     "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/5 Vettori_e_strutture.pdf",
+    "ORARIO_LEZIONI_NUOVO.jpeg",
     "Secondo Semestre/Fondamenti di Informatica/Linguaggi e ASF_ASFD 5_03_25.pdf",
-    "Secondo Semestre/Fondamenti di Informatica/Caratteri stringhe linguaggi operazioni 3_03_25.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/0 Introduzione.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/4 Le_funzioni.pdf",
     "Secondo Semestre/Modelli/Pasted image 20250306132145.png",
     "Secondo Semestre/Modelli/Pasted image 20250306131230.png",
     "Secondo Semestre/Modelli/Pasted image 20250306125803.png",
     "Secondo Semestre/Modelli/Pasted image 20250304210643.png",
-    "ORARIO_LEZIONI_NUOVO.jpeg",
     "ORARIO_LEZIONI-VECCHIO.jpg",
     "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Modelli/Pasted image 20250304204620.png",
@@ -216,7 +214,6 @@
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
