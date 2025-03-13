@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c51b970b191dc949",
+        "id": "87ebc44c51a5dc51",
         "type": "tabs",
         "children": [
           {
-            "id": "9748aa81667feb80",
+            "id": "78872b8c13af6099",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -167,20 +167,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9748aa81667feb80",
+  "active": "78872b8c13af6099",
   "lastOpenFiles": [
-    "Secondo Semestre/Analisi-1/Marcellini, Sbordone - Esercitazioni Di Matematica Vol 1-1.pdf",
-    "Secondo Semestre/Senza nome.md",
-    "Secondo Semestre/Analisi-1",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/6 Stringhe.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/0 Introduzione.pdf",
+    "Secondo Semestre/Fondamenti di Informatica/Linguaggi formali e computazione 10_03_25.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/7 Flussi_di_file.pdf",
-    "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
-    "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/5 Vettori_e_strutture.pdf",
-    "ORARIO_LEZIONI_NUOVO.jpeg",
     "Secondo Semestre/Fondamenti di Informatica/Linguaggi e ASF_ASFD 5_03_25.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/4 Le_funzioni.pdf",
+    "Secondo Semestre/Fondamenti di Informatica/Caratteri stringhe linguaggi operazioni 3_03_25.pdf",
+    "Secondo Semestre/Analisi-1/Marcellini, Sbordone - Esercitazioni Di Matematica Vol 1-1.pdf",
+    "Secondo Semestre/Analisi-1/Accu,radici,potenze,logaritmi,funzioni 10_03_25.pdf",
+    "Secondo Semestre/Analisi-1/Introduzione 3_03_25.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/6 Stringhe.pdf",
+    "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
+    "Secondo Semestre/Programmazione-2/c++/Big Programs/archivioLibri/archivio.txt",
+    "Secondo Semestre/Programmazione-2/c++/Big Programs/archivioLibri/libri.txt",
+    "Secondo Semestre/Senza nome.md",
+    "ORARIO_LEZIONI_NUOVO.jpeg",
     "Secondo Semestre/Modelli/Pasted image 20250306132145.png",
     "Secondo Semestre/Modelli/Pasted image 20250306131230.png",
     "Secondo Semestre/Modelli/Pasted image 20250306125803.png",
