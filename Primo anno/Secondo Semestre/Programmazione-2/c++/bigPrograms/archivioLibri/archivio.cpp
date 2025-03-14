@@ -152,7 +152,7 @@ void MemorizzaArchivio() {
         cout << "Errore nel file" << endl;
         return;
     }
-    
+    file << num_libri << endl;
     for (int i = 0; i < num_libri; i++) {
         file << archivio[i].titolo << endl;
         file << archivio[i].autore << endl;
@@ -172,16 +172,19 @@ void CaricadaFile(){
     }else{
         cout << "File aperto correttamente" << endl;
     }
-
-    //for (int i = 0; i < num_libri; i++) {
-        getline (file,titolo);
-        //getline (file,archivio[i].autore);
-        //getline (file,archivio[i].annoPubblicazione);
-        //getline (file,archivio[i].prezzo);
-        //getline (file,archivio[i].genere);
-    //}
-    //cout << "LIBRI CARICATI" <<endl;
-    cout << titolo <<endl;
+    file >> num_libri;
+    file.get();
+    for (int i = 0; i < num_libri; i++) { 
+        getline (file,archivio[i].titolo);  
+        getline (file,archivio[i].autore);
+        file >> archivio[i].annoPubblicazione;
+        file.get();
+        file >> archivio[i].prezzo;
+        file.get();
+        file.getline (archivio[i].genere,21);
+    }
+    cout << "LIBRI CARICATI" <<endl;
+    cout << archivio[0].titolo <<endl;
 
     file.close();
 

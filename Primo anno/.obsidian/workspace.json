@@ -11,10 +11,12 @@
             "id": "78872b8c13af6099",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/9 Allocazione_dinamica_della_memoria.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "9 Allocazione_dinamica_della_memoria"
             }
           }
         ]
@@ -169,17 +171,17 @@
   },
   "active": "78872b8c13af6099",
   "lastOpenFiles": [
-    "Secondo Semestre/Fondamenti di Informatica/Linguaggi formali e computazione 10_03_25.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/7 Flussi_di_file.pdf",
-    "Secondo Semestre/Fondamenti di Informatica/Linguaggi e ASF_ASFD 5_03_25.pdf",
-    "Secondo Semestre/Fondamenti di Informatica/Caratteri stringhe linguaggi operazioni 3_03_25.pdf",
-    "Secondo Semestre/Analisi-1/Marcellini, Sbordone - Esercitazioni Di Matematica Vol 1-1.pdf",
-    "Secondo Semestre/Analisi-1/Accu,radici,potenze,logaritmi,funzioni 10_03_25.pdf",
-    "Secondo Semestre/Analisi-1/Introduzione 3_03_25.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/6 Stringhe.pdf",
-    "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
-    "Secondo Semestre/Programmazione-2/c++/Big Programs/archivioLibri/archivio.txt",
-    "Secondo Semestre/Programmazione-2/c++/Big Programs/archivioLibri/libri.txt",
+    "Secondo Semestre/Programmazione-2/c++/other/memoriaDinamica.cpp",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/8 Puntatori_e_riferimenti.pdf",
+    "Secondo Semestre/Programmazione-2/c++/other/a.exe",
+    "Secondo Semestre/Programmazione-2/c++/other/riferimenti.cpp",
+    "Secondo Semestre/Programmazione-2/c++/other/hello.exe",
+    "Secondo Semestre/Programmazione-2/c++/other/hello.cpp",
+    "Secondo Semestre/Programmazione-2/c++/other/array.exe",
+    "Secondo Semestre/Programmazione-2/c++/other/array.cpp",
+    "Secondo Semestre/Programmazione-2/c++/bigPrograms/archivioLibri/libri.txt",
+    "Secondo Semestre/Programmazione-2/c++/bigPrograms/archivioLibri/archivio.txt",
+    "Secondo Semestre/Programmazione-2/c++/bigPrograms/archivioLibri/archivio.cpp",
     "Secondo Semestre/Senza nome.md",
     "ORARIO_LEZIONI_NUOVO.jpeg",
     "Secondo Semestre/Modelli/Pasted image 20250306132145.png",
