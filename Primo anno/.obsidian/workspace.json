@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "87ebc44c51a5dc51",
+        "id": "eed36da266c4ac17",
         "type": "tabs",
         "children": [
           {
-            "id": "78872b8c13af6099",
+            "id": "7654da623d870797",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf"
+                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/6 Stringhe.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "[OCR] - Fondamenti di programmazione in c++"
+              "title": "6 Stringhe"
             }
           }
         ]
@@ -76,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 206.50043487548828
   },
   "right": {
     "id": "e5cbad16aa00cfb4",
@@ -169,19 +169,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "78872b8c13af6099",
+  "active": "7654da623d870797",
   "lastOpenFiles": [
-    "Secondo Semestre/Programmazione-2/c++/other/EserciziLibro.cpp",
-    "Secondo Semestre/Programmazione-2/c++/EserciziLibro.cpp",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/9 Allocazione_dinamica_della_memoria.pdf",
-    "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
-    "Secondo Semestre/Programmazione-2/c++/other/memoriaDinamica.cpp",
+    "Secondo Semestre/Programmazione-2/c++/classi/classPersona.cpp",
+    "Secondo Semestre/Programmazione-2/c++/classi/classeBanca.cpp",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/10 Lezione 05 Classi_e_oggetti.pdf",
+    "Secondo Semestre/Programmazione-2/c++/classi/a.exe",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/8 Puntatori_e_riferimenti.pdf",
-    "Secondo Semestre/Programmazione-2/c++/other/a.exe",
-    "Secondo Semestre/Programmazione-2/c++/other/riferimenti.cpp",
-    "Secondo Semestre/Programmazione-2/c++/other/hello.exe",
-    "Secondo Semestre/Programmazione-2/c++/other/hello.cpp",
-    "Secondo Semestre/Programmazione-2/c++/other/array.exe",
+    "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
+    "Secondo Semestre/Fondamenti di Informatica/1 Caratteri stringhe linguaggi operazioni 3_03_25.pdf",
+    "Senza nome.md",
+    "Secondo Semestre/Fondamenti di Informatica/5 Esercizi, ASFND ASFD 17_03_25.pdf",
+    "Secondo Semestre/Fondamenti di Informatica/6 Pumping lemma, Grammatiche 19_03_25.pdf",
+    "Secondo Semestre/Fondamenti di Informatica/7 Grammatiche di chomsky 24_03_25.pdf",
+    "Secondo Semestre/Fondamenti di Informatica/4 Espressioni e linguaggi regolari 12_03_25.pdf",
+    "Secondo Semestre/Analisi-1/Introduzione 3_03_25.pdf",
     "Secondo Semestre/Senza nome.md",
     "ORARIO_LEZIONI_NUOVO.jpeg",
     "Secondo Semestre/Modelli/Pasted image 20250306132145.png",
@@ -194,10 +196,8 @@
     "Secondo Semestre/Modelli/Pasted image 20250304205820.png",
     "Secondo Semestre/Modelli/Pasted image 20250304205723.png",
     "Secondo Semestre/Modelli/Pasted image 20250304205607.png",
-    "Secondo Semestre/Fondamenti di Informatica/Senza nome.md",
     "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
     "Primo Semestre/programmazione-1/Tips Algoritmi.md",
-    "Senza nome.md",
     "Cose da fare.md",
     "Primo Semestre/programmazione-1/PUNTATORI (importante).md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
