@@ -57,6 +57,7 @@ int main(){
         cout << "\nInserisci 1 per depositare, 2 per prelevare, 3 per mostrare il conto\n" << endl;
         cin >> operazione;
         cin.ignore();
+        system("cls");
         switch(operazione){
             case 1:
                 cout << "Quanto vuoi depositare?" << endl;

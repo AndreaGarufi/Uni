@@ -9,6 +9,8 @@
         "memory": "cpp",
         "functional": "cpp",
         "tuple": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "iosfwd": "cpp",
+        "fstream": "cpp"
     }
 }
