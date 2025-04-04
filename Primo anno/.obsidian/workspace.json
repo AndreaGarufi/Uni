@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "f6e69bab57668e57",
+        "id": "aba98c41fed9d652",
         "type": "tabs",
         "children": [
           {
-            "id": "44cc79614e13ff54",
+            "id": "052173bbfa8dc23d",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/11 Lezione 06 ereditarieta e polimorfismo.pdf"
+                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/9 Allocazione_dinamica_della_memoria.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "11 Lezione 06 ereditarieta e polimorfismo"
+              "title": "9 Allocazione_dinamica_della_memoria"
             }
           }
         ]
@@ -169,10 +169,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "44cc79614e13ff54",
+  "active": "052173bbfa8dc23d",
   "lastOpenFiles": [
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/10 Lezione 05 Classi_e_oggetti.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/12 Lezione 07 Template.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/11 Lezione 06 ereditarieta e polimorfismo.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/10 Lezione 05 Classi_e_oggetti.pdf",
     "Secondo Semestre/Fondamenti di Informatica/9 Tipologie di grammatiche 26_03_25.pdf",
     "Secondo Semestre/Fondamenti di Informatica/8 Esercizi grammatiche 25_03_25.pdf",
     "Secondo Semestre/Fondamenti di Informatica/7 Grammatiche di chomsky 24_03_25.pdf",
@@ -181,7 +182,6 @@
     "Secondo Semestre/Programmazione-2/c++/file/bancaFile/a.exe",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/6 Stringhe.pdf",
     "Secondo Semestre/Programmazione-2/c++/file/bancaFile/bancaFile.cpp",
-    "Secondo Semestre/Programmazione-2/c++/file/bancaFile",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Senza nome.md",
     "Secondo Semestre/Senza nome.md",
