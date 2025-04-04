@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "aba98c41fed9d652",
+        "id": "886428d81a02375f",
         "type": "tabs",
         "children": [
           {
-            "id": "052173bbfa8dc23d",
+            "id": "9603879b157ad60f",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/9 Allocazione_dinamica_della_memoria.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "9 Allocazione_dinamica_della_memoria"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -169,19 +167,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "052173bbfa8dc23d",
+  "active": "9603879b157ad60f",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/c++/classi/classi.txt",
+    "Secondo Semestre/Programmazione-2/c++/template/template.txt",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/9 Allocazione_dinamica_della_memoria.pdf",
+    "Secondo Semestre/Programmazione-2/c++/operatori/a.exe",
+    "Secondo Semestre/Programmazione-2/c++/operatori/operatori.cpp",
+    "Secondo Semestre/Programmazione-2/c++/operatori",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/12 Lezione 07 Template.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/11 Lezione 06 ereditarieta e polimorfismo.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/10 Lezione 05 Classi_e_oggetti.pdf",
     "Secondo Semestre/Fondamenti di Informatica/9 Tipologie di grammatiche 26_03_25.pdf",
     "Secondo Semestre/Fondamenti di Informatica/8 Esercizi grammatiche 25_03_25.pdf",
-    "Secondo Semestre/Fondamenti di Informatica/7 Grammatiche di chomsky 24_03_25.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/7 Flussi_di_file.pdf",
-    "Secondo Semestre/Programmazione-2/c++/file/bancaFile/Conto.txt",
-    "Secondo Semestre/Programmazione-2/c++/file/bancaFile/a.exe",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/6 Stringhe.pdf",
-    "Secondo Semestre/Programmazione-2/c++/file/bancaFile/bancaFile.cpp",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Senza nome.md",
     "Secondo Semestre/Senza nome.md",

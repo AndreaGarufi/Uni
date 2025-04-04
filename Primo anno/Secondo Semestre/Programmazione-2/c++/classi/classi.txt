@@ -1,0 +1,2 @@
+Le classi sono per certi versi simili alle struct di C, ma qui abbiamo delle sezioni o public o protected o private,
+e la possibilità di implementare metodi (funzioni) all'interno della classe stessa

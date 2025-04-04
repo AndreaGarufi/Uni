@@ -1,0 +1,2 @@
+I template servono per dare un tipo generico (T) da poter usare nelle funzioni che lo implementano, 
+cosi da non dover ogni volta riscrivere una funzione che faccai le stesse cose di altre per poterla usare con tipi differenti
