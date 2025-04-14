@@ -1,0 +1,4 @@
+sono simili alle funzioni, li uso per personalizzare un operatore (+ , *, () ecc), almeno 1 parametro deve essere di una classe
+Quando ridefinisco un operatore, non vado a creare un nuovo operatore partendo da quelli già esistenti modificandolo, 
+ma prendo l'operatore già esistente e lo modifico in base a come conviene a me. Quindi ogni volta che verrà chiamato quell'operatore, 
+all'interno del mio programma, verrà richiamato l'operatore da me ridefinito.

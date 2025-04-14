@@ -12,6 +12,7 @@
         "utility": "cpp",
         "iosfwd": "cpp",
         "fstream": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "string_view": "cpp"
     }
 }
