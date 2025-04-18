@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "137f975c5238831f",
+        "id": "eea094edbe916bc4",
         "type": "tabs",
         "children": [
           {
-            "id": "72a88ad0b247d407",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "[OCR] - Fondamenti di programmazione in c++"
-            }
-          },
-          {
-            "id": "2fd197247517e2d0",
+            "id": "d641a485584ff887",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -30,21 +18,8 @@
               "icon": "lucide-file-text",
               "title": "13 Lezione 09 Liste"
             }
-          },
-          {
-            "id": "003482ea64c4edc4",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/9 Allocazione_dinamica_della_memoria.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "9 Allocazione_dinamica_della_memoria"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -176,12 +151,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,11 +168,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2fd197247517e2d0",
+  "active": "d641a485584ff887",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/c++/liste/listaEs1.cpp",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/9 Allocazione_dinamica_della_memoria.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
     "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
     "Secondo Semestre/Programmazione-2/c++/operatori/a.exe",
     "Secondo Semestre/Programmazione-2/c++/operatori/operatori.txt",
     "Secondo Semestre/Programmazione-2/c++/liste/ListaDoppiamenteConcatenata.cpp",
@@ -206,7 +181,6 @@
     "Secondo Semestre/Programmazione-2/c++/liste/a.exe",
     "Secondo Semestre/Programmazione-2/c++/liste",
     "Secondo Semestre/Programmazione-2/c++/operatori/operatori.cpp",
-    "Secondo Semestre/Programmazione-2/c++/operatori.cpp",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Senza nome.md",
     "Secondo Semestre/Senza nome.md",

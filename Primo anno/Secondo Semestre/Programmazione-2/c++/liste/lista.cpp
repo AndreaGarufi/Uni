@@ -105,6 +105,9 @@ int main(){
     cout << lista << endl;
     cout << "Il puntatore al nodo 3 e':" << lista.Search(3) <<endl;
 
+    cout << "Inserisco un elemento dopo il 7: " << endl;
+    lista.Insert(99, lista.Search(7));  //aggiunge il valore 99 dopo il valore 7
+
     cout << "Elemento 3 rimosso: " << lista.Remove(3) << endl;
     cout << lista << endl;
     cout << "Elemento 3 RIrimosso: " << lista.Remove(3) << endl;
