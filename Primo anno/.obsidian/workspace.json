@@ -155,7 +155,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -170,6 +171,8 @@
   },
   "active": "d641a485584ff887",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/c++/liste/listaEs3Ordinata.cpp",
+    "Secondo Semestre/Programmazione-2/c++/liste/listaEs2Template.cpp",
     "Secondo Semestre/Programmazione-2/c++/liste/listaEs1.cpp",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/9 Allocazione_dinamica_della_memoria.pdf",
     "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
@@ -179,8 +182,6 @@
     "Secondo Semestre/Programmazione-2/c++/liste/ListaDoppiamenteConcatenata.cpp",
     "Secondo Semestre/Programmazione-2/c++/liste/lista.cpp",
     "Secondo Semestre/Programmazione-2/c++/liste/a.exe",
-    "Secondo Semestre/Programmazione-2/c++/liste",
-    "Secondo Semestre/Programmazione-2/c++/operatori/operatori.cpp",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Senza nome.md",
     "Secondo Semestre/Senza nome.md",
