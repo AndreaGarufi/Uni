@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "eea094edbe916bc4",
+        "id": "e8a1dd9a88c45fd5",
         "type": "tabs",
         "children": [
           {
-            "id": "d641a485584ff887",
+            "id": "c55502835cddd7b8",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "13 Lezione 09 Liste"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -169,19 +167,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d641a485584ff887",
+  "active": "c55502835cddd7b8",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/c++/contoMainSPATA.cpp",
+    "Secondo Semestre/Programmazione-2/c++/a.exe",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
+    "Secondo Semestre/Programmazione-2/c++/liste/listaEs4Dopp_link.cpp",
     "Secondo Semestre/Programmazione-2/c++/liste/listaEs3Ordinata.cpp",
     "Secondo Semestre/Programmazione-2/c++/liste/listaEs2Template.cpp",
     "Secondo Semestre/Programmazione-2/c++/liste/listaEs1.cpp",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/9 Allocazione_dinamica_della_memoria.pdf",
     "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
     "Secondo Semestre/Programmazione-2/c++/operatori/a.exe",
     "Secondo Semestre/Programmazione-2/c++/operatori/operatori.txt",
-    "Secondo Semestre/Programmazione-2/c++/liste/ListaDoppiamenteConcatenata.cpp",
-    "Secondo Semestre/Programmazione-2/c++/liste/lista.cpp",
-    "Secondo Semestre/Programmazione-2/c++/liste/a.exe",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Senza nome.md",
     "Secondo Semestre/Senza nome.md",

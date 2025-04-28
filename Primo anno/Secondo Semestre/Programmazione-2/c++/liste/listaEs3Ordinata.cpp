@@ -23,7 +23,8 @@ class List{
         List():head(nullptr){}
         friend ostream& operator<<(ostream& stream, const List& list);
         void inOrdinato(int d);
-    
+        Node* search(int d);
+        bool rimozione(int d);
     private:
         Node *head;
 };
@@ -57,6 +58,41 @@ void List::inOrdinato(int d){   //crescente
     return;
 }
 
+Node* List::search(int d){
+
+    Node *controllo = head;
+
+    while(controllo != nullptr){
+
+        if(controllo->dato == d){
+            return controllo;
+        }
+
+        controllo = controllo->next;
+    }
+
+    return nullptr;
+
+}
+
+bool List::rimozione(int d){
+
+    Node *controllo = head;
+    Node *ant = head;
+
+    while(controllo != nullptr){
+
+        if(controllo->dato == d){
+            ant->next = controllo->next;
+            delete controllo;
+            return true;
+        }
+        ant = controllo;
+        controllo = controllo->next;
+    }
+    return false;
+}
+
 
 ostream& operator<<(ostream& stream, const List& list){ //è importante mettere il riferimento & perche altrimenti faccio una copia
 
@@ -81,5 +117,9 @@ int main(){
     lista.inOrdinato(1);
     cout << lista;
 
-    
+    cout << "Cerco il nodo contenente il numero 10: " << lista.search(10) <<endl;
+
+    cout << "Rimuovo il nodo contentente il numero 10: " <<lista.rimozione(10) <<endl;
+
+    cout << lista;
 }
