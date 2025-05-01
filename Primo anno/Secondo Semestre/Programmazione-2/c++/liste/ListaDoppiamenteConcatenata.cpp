@@ -138,7 +138,7 @@ int main(){
     cout << lista;
 
     lista.remove(2);
-    cout << "crasha?";
+    //cout << "crasha?";
 
     cout << "Reinserisco tutto" << endl;
     lista.insertHead(10);

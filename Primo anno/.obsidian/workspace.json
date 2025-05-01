@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "e8a1dd9a88c45fd5",
+        "id": "fdbc86509b349fa0",
         "type": "tabs",
         "children": [
           {
-            "id": "c55502835cddd7b8",
+            "id": "802d66c6fb45320f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "13 Lezione 09 Liste"
             }
           }
         ]
@@ -167,8 +169,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c55502835cddd7b8",
+  "active": "802d66c6fb45320f",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/c++/liste/a.exe",
+    "template.md",
+    "Ci.md",
     "Secondo Semestre/Programmazione-2/c++/contoMainSPATA.cpp",
     "Secondo Semestre/Programmazione-2/c++/a.exe",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
@@ -179,9 +184,7 @@
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/9 Allocazione_dinamica_della_memoria.pdf",
     "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
     "Secondo Semestre/Programmazione-2/c++/operatori/a.exe",
-    "Secondo Semestre/Programmazione-2/c++/operatori/operatori.txt",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
-    "Senza nome.md",
     "Secondo Semestre/Senza nome.md",
     "ORARIO_LEZIONI_NUOVO.jpeg",
     "Secondo Semestre/Modelli/Pasted image 20250306132145.png",
@@ -214,7 +217,6 @@
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
