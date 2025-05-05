@@ -96,6 +96,9 @@ void List::insert(int d,Node *x){//capire bene
     Node *p = new Node(d,x->next);
     x->next = p;
     p->prev = x;
+    if (p->next != nullptr) {
+        p->next->prev = p;
+    }
 }
 
 ostream& operator<<(ostream& stream, const List& list){ //è importante mettere il riferimento & perche altrimenti faccio una copia
