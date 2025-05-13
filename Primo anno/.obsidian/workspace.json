@@ -13,10 +13,24 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf"
+                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.0 Lezione 10 Complessità - Parte 1.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "13 Lezione 09 Liste"
+              "title": "14.0 Lezione 10 Complessità - Parte 1"
+            }
+          },
+          {
+            "id": "c1088fc279cb5681",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Semestre/Programmazione-2/Complessità.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Complessità"
             }
           }
         ]
@@ -171,19 +185,24 @@
   },
   "active": "802d66c6fb45320f",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/Complessità.md",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.0 Lezione 10 Complessità - Parte 1.pdf",
+    "Pasted image 20250513210206.png",
+    "Pasted image 20250513210131.png",
+    "Pasted image 20250513205853.png",
+    "Pasted image 20250513205625.png",
+    "Pasted image 20250513205457.png",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.1 Lezione 10 Complessità - Parte 2.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
+    "Secondo Semestre/Programmazione-2/c++/other/ordinamentoMongiovi.cpp",
+    "Secondo Semestre/Programmazione-2/c++/other/ordinamento.cpp",
     "Secondo Semestre/Programmazione-2/c++/liste/a.exe",
     "template.md",
     "Ci.md",
     "Secondo Semestre/Programmazione-2/c++/contoMainSPATA.cpp",
     "Secondo Semestre/Programmazione-2/c++/a.exe",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
     "Secondo Semestre/Programmazione-2/c++/liste/listaEs4Dopp_link.cpp",
-    "Secondo Semestre/Programmazione-2/c++/liste/listaEs3Ordinata.cpp",
-    "Secondo Semestre/Programmazione-2/c++/liste/listaEs2Template.cpp",
-    "Secondo Semestre/Programmazione-2/c++/liste/listaEs1.cpp",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/9 Allocazione_dinamica_della_memoria.pdf",
-    "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
-    "Secondo Semestre/Programmazione-2/c++/operatori/a.exe",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Secondo Semestre/Senza nome.md",
     "ORARIO_LEZIONI_NUOVO.jpeg",
@@ -191,12 +210,7 @@
     "Secondo Semestre/Modelli/Pasted image 20250306131230.png",
     "Secondo Semestre/Modelli/Pasted image 20250306125803.png",
     "Secondo Semestre/Modelli/Pasted image 20250304210643.png",
-    "ORARIO_LEZIONI-VECCHIO.jpg",
     "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
-    "Secondo Semestre/Modelli/Pasted image 20250304204620.png",
-    "Secondo Semestre/Modelli/Pasted image 20250304205820.png",
-    "Secondo Semestre/Modelli/Pasted image 20250304205723.png",
-    "Secondo Semestre/Modelli/Pasted image 20250304205607.png",
     "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
     "Primo Semestre/programmazione-1/Tips Algoritmi.md",
     "Cose da fare.md",
@@ -216,7 +230,6 @@
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
-    "architettura-degli-elaboratori/Laboratorio/Istruzioni Assembly.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
