@@ -63,7 +63,7 @@ Per forzare la precedenza di un operatore si possono usare le parentesi
 ![[Pasted image 20241123142757.png|400]]
 
 
-I circuiti che compongono AND NOT OR soni chiamano **porte**, una rete di porte logiche è una **rete combinatoria** 
+I circuiti che compongono AND NOT OR sono chiamano **porte**, una rete di porte logiche è una **rete combinatoria** 
 
 Ecco come si rappresentano queste porte logiche
 ![[Pasted image 20241124091802.png]]
