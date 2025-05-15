@@ -4,37 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "43d88dc4c448ad7d",
+        "id": "e26a4a7c4300b7b0",
         "type": "tabs",
         "children": [
           {
-            "id": "d3eaf018735e9e96",
+            "id": "be811cdd61d643d3",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/5.3 Struttura-base-del-processore.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "5.3 Struttura-base-del-processore"
-            }
-          },
-          {
-            "id": "9389fcd3daf720bc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "5 Algebra Booleana"
+              "title": "Nuova scheda"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,35 +167,36 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9389fcd3daf720bc",
+  "active": "be811cdd61d643d3",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/Complessità.md",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.1 Lezione 10 Complessità - Parte 2.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.0 Lezione 10 Complessità - Parte 1.pdf",
+    "Pasted image 20250515100538.png",
+    "Pasted image 20250515100425.png",
+    "Pasted image 20250515100355.png",
+    "Project ideas.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/5.3 Struttura-base-del-processore.pdf",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/9 Tecnologia-microelettronica.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/8 Insieme-di-istruzioni-macchina.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/7 Circuiti-aritmetici.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/6 algebra booleana e circuiti logici.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/5.3 Struttura-base-del-processore.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/5.2 Pipelining.pdf",
-    "Secondo Semestre/Programmazione-2/Complessità.md",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.0 Lezione 10 Complessità - Parte 1.pdf",
-    "Pasted image 20250513210206.png",
-    "Pasted image 20250513210131.png",
-    "Pasted image 20250513205853.png",
-    "Pasted image 20250513205625.png",
-    "Pasted image 20250513205457.png",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.1 Lezione 10 Complessità - Parte 2.pdf",
+    "Secondo Semestre/Modelli/Pasted image 20250513210206.png",
+    "Secondo Semestre/Modelli/Pasted image 20250513210131.png",
+    "Secondo Semestre/Modelli/Pasted image 20250513205853.png",
+    "Secondo Semestre/Modelli/Pasted image 20250513205625.png",
+    "Secondo Semestre/Modelli/Pasted image 20250513205457.png",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
-    "Secondo Semestre/Programmazione-2/c++/other/ordinamentoMongiovi.cpp",
     "template.md",
     "Ci.md",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Secondo Semestre/Senza nome.md",
     "ORARIO_LEZIONI_NUOVO.jpeg",
     "Secondo Semestre/Modelli/Pasted image 20250306132145.png",
-    "Secondo Semestre/Modelli/Pasted image 20250306131230.png",
-    "Secondo Semestre/Modelli/Pasted image 20250306125803.png",
-    "Secondo Semestre/Modelli/Pasted image 20250304210643.png",
     "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
     "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
     "Primo Semestre/programmazione-1/Tips Algoritmi.md",
@@ -230,8 +214,6 @@
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }

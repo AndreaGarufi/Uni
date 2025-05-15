@@ -86,3 +86,16 @@ Infatti, se $T(n) = O(n^4)$, è anche vero che: $T(n) = O(n^7)$
 **Ω-grande -> limite inferiore**
 **Θ-grande ->complessità esatta**
 
+Un algoritmo A che risolve un problema P è ottimale se: 
+1. P ha complessità Ω(f(n)) 
+2. A ha complessità O(f(n))
+
+
+![[Pasted image 20250515100355.png]]
+
+![[Pasted image 20250515100425.png]]
+
+
+![[Pasted image 20250515100538.png]]
+
+
