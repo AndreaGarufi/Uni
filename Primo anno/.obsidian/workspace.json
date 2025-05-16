@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e26a4a7c4300b7b0",
+        "id": "3edb2c462c6aaf51",
         "type": "tabs",
         "children": [
           {
-            "id": "be811cdd61d643d3",
+            "id": "44877c6771491540",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -167,30 +167,32 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "be811cdd61d643d3",
+  "active": "44877c6771491540",
   "lastOpenFiles": [
-    "Secondo Semestre/Programmazione-2/Complessità.md",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.1 Lezione 10 Complessità - Parte 2.pdf",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/9 Circuiti Integrati.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.0 Lezione 10 Complessità - Parte 1.pdf",
-    "Pasted image 20250515100538.png",
-    "Pasted image 20250515100425.png",
-    "Pasted image 20250515100355.png",
+    "Secondo Semestre/Programmazione-2/c++/SpataLab/pila.cpp",
+    "Secondo Semestre/Programmazione-2/c++/ordinamenti/mergeSort",
+    "Secondo Semestre/Programmazione-2/c++/ordinamenti/insertionSort/insertionSort.cpp",
+    "Secondo Semestre/Programmazione-2/c++/ordinamenti/insertionSort",
+    "Secondo Semestre/Programmazione-2/c++/ordinamenti/selectionSort/a.exe",
+    "Secondo Semestre/Programmazione-2/c++/ordinamenti/selectionSort/selectionSort.cpp",
+    "Secondo Semestre/Programmazione-2/c++/ordinamenti/selectionSort",
+    "Secondo Semestre/Programmazione-2/c++/ordinamenti/bubbleSort/a.exe",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
+    "Secondo Semestre/Programmazione-2/Complessità.md",
+    "Secondo Semestre/Modelli/Pasted image 20250515100538.png",
+    "Secondo Semestre/Modelli/Pasted image 20250515100425.png",
+    "Secondo Semestre/Modelli/Pasted image 20250515100355.png",
     "Project ideas.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/5.3 Struttura-base-del-processore.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/9 Tecnologia-microelettronica.pdf",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/8 Insieme-di-istruzioni-macchina.pdf",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/7 Circuiti-aritmetici.pdf",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/6 algebra booleana e circuiti logici.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/5.2 Pipelining.pdf",
     "Secondo Semestre/Modelli/Pasted image 20250513210206.png",
     "Secondo Semestre/Modelli/Pasted image 20250513210131.png",
     "Secondo Semestre/Modelli/Pasted image 20250513205853.png",
     "Secondo Semestre/Modelli/Pasted image 20250513205625.png",
     "Secondo Semestre/Modelli/Pasted image 20250513205457.png",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
     "template.md",
     "Ci.md",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
@@ -210,10 +212,8 @@
     "Primo Semestre/strutture-discrete/Esempi di esercizi.md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "Primo Semestre/strutture-discrete/TUTTI I TEOREMI.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
