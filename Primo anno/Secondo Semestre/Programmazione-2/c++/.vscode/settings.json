@@ -17,6 +17,8 @@
         "algorithm": "cpp",
         "deque": "cpp",
         "unordered_map": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "system_error": "cpp",
+        "typeinfo": "cpp"
     }
 }

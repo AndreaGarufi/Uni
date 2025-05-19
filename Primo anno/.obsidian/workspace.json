@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "3edb2c462c6aaf51",
+        "id": "248879f0365c72cd",
         "type": "tabs",
         "children": [
           {
-            "id": "44877c6771491540",
+            "id": "e1b4fb0405c2c84b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "15 Lezione 11 Ordinamento_e_ricerca"
             }
           }
         ]
@@ -167,19 +169,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "44877c6771491540",
+  "active": "e1b4fb0405c2c84b",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
+    "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
+    "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
+    "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25/Studenti.pdf",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25/input.txt",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25",
+    "Secondo Semestre/Programmazione-2/c++/SpataLab/bibliotecaListaSPATA.cpp",
+    "Secondo Semestre/Programmazione-2/c++/SpataLab/pilaSPATA.cpp",
+    "Secondo Semestre/Inglese/Connettivi.md",
+    "Secondo Semestre/Inglese",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/9 Circuiti Integrati.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
-    "Secondo Semestre/Programmazione-2/c++/SpataLab/pila.cpp",
-    "Secondo Semestre/Programmazione-2/c++/ordinamenti/mergeSort",
-    "Secondo Semestre/Programmazione-2/c++/ordinamenti/insertionSort/insertionSort.cpp",
-    "Secondo Semestre/Programmazione-2/c++/ordinamenti/insertionSort",
-    "Secondo Semestre/Programmazione-2/c++/ordinamenti/selectionSort/a.exe",
-    "Secondo Semestre/Programmazione-2/c++/ordinamenti/selectionSort/selectionSort.cpp",
-    "Secondo Semestre/Programmazione-2/c++/ordinamenti/selectionSort",
-    "Secondo Semestre/Programmazione-2/c++/ordinamenti/bubbleSort/a.exe",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "Secondo Semestre/Programmazione-2/Complessità.md",
     "Secondo Semestre/Modelli/Pasted image 20250515100538.png",
@@ -199,7 +204,6 @@
     "Secondo Semestre/Senza nome.md",
     "ORARIO_LEZIONI_NUOVO.jpeg",
     "Secondo Semestre/Modelli/Pasted image 20250306132145.png",
-    "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
     "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
     "Primo Semestre/programmazione-1/Tips Algoritmi.md",
     "Cose da fare.md",
@@ -213,7 +217,6 @@
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
     "Primo Semestre/strutture-discrete/TUTTI I TEOREMI.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
