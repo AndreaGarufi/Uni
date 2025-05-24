@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "248879f0365c72cd",
+        "id": "621c7ef424070daf",
         "type": "tabs",
         "children": [
           {
-            "id": "e1b4fb0405c2c84b",
+            "id": "f2da4e19eda604be",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "15 Lezione 11 Ordinamento_e_ricerca"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -42,7 +40,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Esplora risorse"
+              "title": "Files"
             }
           },
           {
@@ -146,8 +144,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ],
@@ -160,30 +158,30 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Apri selezione rapida": false,
-      "graph:Apri vista grafo": false,
-      "canvas:Crea nuova lavagna": false,
-      "daily-notes:Apri nota del giorno": false,
-      "templates:Inserisci modello": false,
-      "command-palette:Apri riquadro comandi": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e1b4fb0405c2c84b",
+  "active": "f2da4e19eda604be",
   "lastOpenFiles": [
-    "ciao.md",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
+    "Secondo Semestre/Programmazione-2/c++/alberi/bstMONGIOVI.cpp",
+    "Secondo Semestre/Programmazione-2/c++/alberi/bst.cpp",
+    "Secondo Semestre/Programmazione-2/c++/alberi/alberoDiRicerca.cpp",
+    "Secondo Semestre/Programmazione-2/c++/alberi/a.exe",
+    "Secondo Semestre/Programmazione-2/c++/alberi",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
     "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
     "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
     "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25/Studenti.pdf",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25/input.txt",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25",
-    "Secondo Semestre/Programmazione-2/c++/SpataLab/bibliotecaListaSPATA.cpp",
-    "Secondo Semestre/Programmazione-2/c++/SpataLab/pilaSPATA.cpp",
     "Secondo Semestre/Inglese/Connettivi.md",
-    "Secondo Semestre/Inglese",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "Secondo Semestre/Programmazione-2/Complessità.md",
