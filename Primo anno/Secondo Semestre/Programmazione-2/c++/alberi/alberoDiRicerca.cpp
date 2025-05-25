@@ -5,8 +5,9 @@ using namespace std;
 class Bst;
 class BstNode{
     public:
-    BstNode(int a, BstNode *s = nullptr, BstNode *d = nullptr,BstNode *p):dato(a),left(s),right(d),padre(p){}
+    BstNode(){}
     friend class Bst;
+
     private:
     int dato;
     BstNode *left;
@@ -18,20 +19,21 @@ class Bst{
     public:
     Bst():root(nullptr){}
     ~Bst(){
-        //completa
+        Delete(root);
     }
     void insert(int d);
     void print();
 
     private:
+    void Delete(BstNode *node);
     void print(BstNode *node);
     BstNode *root;
 };
 
 void Bst::insert(int d){
 
-    BstNode *x = root;
-    BstNode *y = nullptr;
+    BstNode *x = root;  //nodo corrente
+    BstNode *y = nullptr;   //padre del nodo
 
     while(x != nullptr){    //questo ciclo mi trova la posizione in cui aggiungere il nodo
         y = x;
@@ -42,9 +44,20 @@ void Bst::insert(int d){
             x = x->right;
         }
     }
-    //sistema (anche costruttore)
-    BstNode *newNode = new BstNode(a,nullptr,nullptr,y);
+    BstNode *newNode = new BstNode; //creo il nodo e assegno i vari dati
+    newNode->dato = d;
+    newNode->padre = y;
+    newNode->left = nullptr;   //null perche essendo un nodo foglia non ha figli destri o sinistri
+    newNode->right = nullptr;
 
+    if(y == nullptr){
+        root = newNode;
+    }else if(d < y->dato){
+        y->left = newNode;
+    }else{
+        y->right = newNode;
+    }
+    return;
 
 }
 
@@ -56,7 +69,17 @@ void Bst::print(){
 
 void Bst::print(BstNode *node){
     if(node != nullptr){
-        //completa
+        cout << "this: " << node << " val: " << node->dato << " padre: " << node->padre << " left: " << node->left << " right: " << node->right << endl;
+        print(node->left);
+        print(node->right);
+    }
+}
+
+void Bst::Delete(BstNode *node){
+    if(node != nullptr){
+        Delete(node->left);
+        Delete(node->right);
+        delete node;
     }
 }
 
