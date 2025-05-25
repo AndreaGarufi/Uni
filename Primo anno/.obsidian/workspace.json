@@ -11,10 +11,12 @@
             "id": "f2da4e19eda604be",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "16 Lezione 12-13 Alberi"
             }
           }
         ]
@@ -169,6 +171,7 @@
   },
   "active": "f2da4e19eda604be",
   "lastOpenFiles": [
+    "Cose da fare.md",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
     "Secondo Semestre/Programmazione-2/c++/alberi/bstMONGIOVI.cpp",
     "Secondo Semestre/Programmazione-2/c++/alberi/bst.cpp",
@@ -180,7 +183,6 @@
     "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
     "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
     "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25/Studenti.pdf",
     "Secondo Semestre/Inglese/Connettivi.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
@@ -204,7 +206,6 @@
     "Secondo Semestre/Modelli/Pasted image 20250306132145.png",
     "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
     "Primo Semestre/programmazione-1/Tips Algoritmi.md",
-    "Cose da fare.md",
     "Primo Semestre/programmazione-1/PUNTATORI (importante).md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
