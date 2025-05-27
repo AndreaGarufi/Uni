@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "248879f0365c72cd",
+        "id": "c937e16b3572e76a",
         "type": "tabs",
         "children": [
           {
-            "id": "e1b4fb0405c2c84b",
+            "id": "ffd999596e8f3d94",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "16 Lezione 12-13 Alberi"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -169,11 +167,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e1b4fb0405c2c84b",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
+    "propedeudicita.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
     "Secondo Semestre/Programmazione-2/c++/alberi/bstMONGIOVI.cpp",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
     "ciao.md",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
     "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
@@ -182,8 +182,6 @@
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25/Studenti.pdf",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25/input.txt",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25",
-    "Secondo Semestre/Programmazione-2/c++/SpataLab/bibliotecaListaSPATA.cpp",
-    "Secondo Semestre/Programmazione-2/c++/SpataLab/pilaSPATA.cpp",
     "Secondo Semestre/Inglese/Connettivi.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",

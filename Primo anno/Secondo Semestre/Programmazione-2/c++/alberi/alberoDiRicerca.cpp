@@ -26,7 +26,7 @@ class Bst{
     int search(int d);
     int maxMin();
     void print();
-
+    //aggiungi la funzione "successore"
     private:
     void Delete(BstNode *node);
     void print(BstNode *node);
@@ -85,6 +85,11 @@ int Bst::search(int d){
 
 int Bst::maxMin(){
     BstNode *current = root;
+
+    if(current == nullptr){
+        cout << "Albero vuoto" <<endl;
+        return -1;
+    }
 
     while(current->right != nullptr){
         current = current->right;
