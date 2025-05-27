@@ -21,7 +21,10 @@ class Bst{
     ~Bst(){
         Delete(root);
     }
+
     void insert(int d);
+    int search(int d);
+    int maxMin();
     void print();
 
     private:
@@ -61,6 +64,44 @@ void Bst::insert(int d){
 
 }
 
+int Bst::search(int d){
+    BstNode *current = root;
+
+    while(current != nullptr && current->dato != d){
+        if(current->dato > d){
+            current = current->left;
+        }else{
+            current = current->right;
+        }
+    }
+
+    if(current == nullptr){
+        cout << "Elemento non trovato" <<endl;
+        return -1;
+    }
+    cout << "Elemento trovato" <<endl;
+    return current->dato;
+}
+
+int Bst::maxMin(){
+    BstNode *current = root;
+
+    while(current->right != nullptr){
+        current = current->right;
+    }
+    int max = current->dato;
+
+    current = root;
+
+    while(current->left != nullptr){
+        current = current->left;
+    }
+    int min = current->dato;
+
+    cout << "Il massimo e' " << max << ", e il minimo e' " << min <<endl;
+    return max,min;
+}
+
 void Bst::print(){
     print(root);
     cout << endl;
@@ -69,7 +110,7 @@ void Bst::print(){
 
 void Bst::print(BstNode *node){
     if(node != nullptr){
-        cout << "this: " << node << " val: " << node->dato << " padre: " << node->padre << " left: " << node->left << " right: " << node->right << endl;
+        cout << "this: " << node << ", val: " << node->dato << ", padre: " << node->padre << ", left: " << node->left << ", right: " << node->right << endl;
         print(node->left);
         print(node->right);
     }
@@ -90,7 +131,17 @@ int main(){
     albero.insert(10);
     albero.insert(11);
     albero.insert(12);
+    albero.insert(7);
     albero.print();
+
+    cout << "Cerco elementi che esistono e non esistono" <<endl;
+    cout << albero.search(12) <<endl;
+    cout << albero.search(11) <<endl;
+    cout << albero.search(10) <<endl;
+    cout << albero.search(9) <<endl;
+
+    cout << "Stampo massimo e minimo " <<endl;
+    albero.maxMin();
 
     return 0;
 }
