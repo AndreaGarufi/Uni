@@ -23,17 +23,63 @@ class Bst{
     }
 
     void insert(int d);
-    int search(int d);
+    BstNode* search(int d);
     int maxMin();
     void print();
-    //aggiungi la funzione "successore"
+    void trapianta(BstNode *u, BstNode *v);
+    void cancella(BstNode *z);
+
+    BstNode* minimo(BstNode *r);
     private:
     void Delete(BstNode *node);
     void print(BstNode *node);
     BstNode *root;
 };
 
+void Bst::trapianta(BstNode *u, BstNode *v){    //funzione per trapiantare sotto alberi
+
+    if(u->padre == nullptr){        //caso in cui u è la root allora v (e il suo sottoalbero) diventa la nuova root
+        root = v;
+    }else if(u == u->padre->left){  //caso in cui u è figlio sinistro, v (e il suo sottoalbero) diventano il nuovo figlio sinistro
+        u->padre->left = v;
+    }else{
+        u->padre->right = v;    //caso in cui u è figlio destro, v (e il suo sottoalbero) diventano il nuovo figlio destro
+    }
+    if(v != nullptr){           //aggiorno il padre
+        v->padre = u->padre;
+    }
+}
+
+void Bst::cancella(BstNode *z){     //funzione per cancellare un nodo (richiamera la funzione trapianta)
+    BstNode *y = nullptr;
+    if(z->left == nullptr){         //caso in cui ha un figlio destro
+        trapianta(z,z->right);
+    }else if(z->right == nullptr){  //caso in cui ha un figlio sinistro
+        trapianta(z,z->left);
+    }else{                          //caso in cui ha 2 figli
+        y = minimo(z->right);
+        if(y->padre != z){
+            trapianta(y,y->right);
+            y->right = z->right;
+            y->right->padre = y;
+        }
+        trapianta(z,y);
+        y->left = z->left;
+        y->left->padre = y;
+    }
+}
+
+BstNode* Bst::minimo(BstNode *r){
+    BstNode *current = r;
+
+    while(current->left != nullptr){
+        current = current->left;
+    }
+    return current;
+}
+
 void Bst::insert(int d){
+
 
     BstNode *x = root;  //nodo corrente
     BstNode *y = nullptr;   //padre del nodo
@@ -64,7 +110,7 @@ void Bst::insert(int d){
 
 }
 
-int Bst::search(int d){
+BstNode* Bst::search(int d){
     BstNode *current = root;
 
     while(current != nullptr && current->dato != d){
@@ -77,10 +123,10 @@ int Bst::search(int d){
 
     if(current == nullptr){
         cout << "Elemento non trovato" <<endl;
-        return -1;
+        return nullptr;
     }
     cout << "Elemento trovato" <<endl;
-    return current->dato;
+    return current;
 }
 
 int Bst::maxMin(){
@@ -147,6 +193,9 @@ int main(){
 
     cout << "Stampo massimo e minimo " <<endl;
     albero.maxMin();
+
+    albero.cancella(albero.search(12));
+    albero.print();
 
     return 0;
 }

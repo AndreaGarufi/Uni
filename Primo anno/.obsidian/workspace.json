@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c937e16b3572e76a",
+        "id": "05b8085be8dbf42c",
         "type": "tabs",
         "children": [
           {
-            "id": "ffd999596e8f3d94",
+            "id": "9b55089f6a8614d0",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -167,11 +167,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "9b55089f6a8614d0",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "propedeudicita.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
     "Secondo Semestre/Programmazione-2/c++/alberi/bstMONGIOVI.cpp",
     "ciao.md",
@@ -214,7 +214,6 @@
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "Primo Semestre/strutture-discrete/Esempi di esercizi.md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "Primo Semestre/strutture-discrete/TUTTI I TEOREMI.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
