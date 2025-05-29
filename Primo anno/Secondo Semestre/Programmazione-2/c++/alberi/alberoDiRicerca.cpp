@@ -67,6 +67,7 @@ void Bst::cancella(BstNode *z){     //funzione per cancellare un nodo (richiamer
         y->left = z->left;
         y->left->padre = y;
     }
+    delete z;
 }
 
 BstNode* Bst::minimo(BstNode *r){
