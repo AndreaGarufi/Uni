@@ -160,7 +160,7 @@ void Bst::print(){
     
 }
 
-void Bst::print(BstNode *node){
+void Bst::print(BstNode *node){     //visita pre order
     if(node != nullptr){
         cout << "this: " << node << ", val: " << node->dato << ", padre: " << node->padre << ", left: " << node->left << ", right: " << node->right << endl;
         print(node->left);
