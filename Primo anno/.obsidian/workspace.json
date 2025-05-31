@@ -11,10 +11,12 @@
             "id": "c6ce6ee4fdd720d5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "16 Lezione 12-13 Alberi"
             }
           }
         ]
@@ -167,7 +169,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "c6ce6ee4fdd720d5",
   "lastOpenFiles": [
     "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/a.exe",
     "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/main.cpp",

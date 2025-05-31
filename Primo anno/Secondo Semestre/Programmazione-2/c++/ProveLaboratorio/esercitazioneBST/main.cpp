@@ -134,7 +134,7 @@ void Bst::insert(int numero, string name, string surname,float m){  //questa fun
     while(x != nullptr){    //questo while scorre fino a trovare la posizione giusta nell'albero, poi esco e creo il nodo
         y = x;
 
-        if(numero < x->matricola){      //se loa matricola da inserire è più piccola di quella del nodo corrente vado verso sinistra altrimenti a destra
+        if(numero < x->matricola){      //se la matricola da inserire è più piccola di quella del nodo corrente vado verso sinistra altrimenti a destra
             x = x->left;
         }else{
             x = x->right;
