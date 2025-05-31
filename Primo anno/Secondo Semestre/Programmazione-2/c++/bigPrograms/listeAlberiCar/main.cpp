@@ -31,14 +31,106 @@ class Bst{
 
     void preleva();
     void insert(string brand, string model, int speed, float price);    //richiamerò questa funzione dentro preleva cosi leggo una riga e creo il nodo
-    void printRicorsiva();
-    void print(BstNode *r);
+    void printRicorsiva(bool flag);
+    void print(BstNode *r, ostream &out);
     BstNode* search(int speed);
-    //implementa cancellazione (e dopo fai tutto sulle liste)
+    void cancellazione(BstNode *z);
+    void trapianta(BstNode *u, BstNode *v);
+    BstNode* minimo(BstNode *r);
+    //void salvaFile();
+
+    void min();
+    void max();
+
     private:
     BstNode *root;
 };
 //fine zona albero//
+
+/*void Bst::salvaFile(){
+    fstream file("output.txt",ios::out);
+    if(file.file()){
+        cout << "Errore nell'apertura del file 'output.txt'" <<endl;
+        exit(-1);
+    }
+
+    file << printRicorsiva();
+    file.close();
+
+}*/
+
+void Bst::min(){
+
+    BstNode *current = root;
+
+    while(current->left != nullptr){
+        current = current->left;
+    }
+    cout << "la macchina con la velocita' massima piu' bassa e': ";
+    cout << endl << "Marca: " << current->marca << ", Modello: " << current->modello << ", Velocita' massima: " << current->velocita << ", Prezzo (milioni): " << current->prezzo <<endl;
+    return;
+    
+}
+
+void Bst::max(){
+
+    BstNode *current = root;
+
+    while(current->right != nullptr){
+        current = current->right;
+    }
+    cout << "la macchina con la velocita' massima piu' alta e': ";
+    cout << endl << "Marca: " << current->marca << ", Modello: " << current->modello << ", Velocita' massima: " << current->velocita << ", Prezzo (milioni): " << current->prezzo <<endl;
+    return;
+
+}
+
+/////////////////////cancellazione////////////////////////
+BstNode* Bst::minimo(BstNode *r){
+    BstNode *current = r;
+
+    while(current->left != nullptr){
+        current = current->left;
+    }
+    return current;
+
+}
+
+void Bst::trapianta(BstNode *u, BstNode *v){
+    if(u->padre == nullptr){
+        root = v;
+    }else if(u = u->padre->left){
+        u->padre->left = v;
+    }else{
+        u->padre->right = v;
+    }
+    if(v != nullptr){
+        v->padre = u->padre;
+    }
+}
+
+void Bst::cancellazione(BstNode *z){
+
+    BstNode *y = nullptr;
+    if(z->left == nullptr){
+        trapianta(z,z->right);
+    }else if(z->right == nullptr){
+        trapianta(z,z->left);
+    }else{
+        y = minimo(z->right);
+        if(y->padre != z){
+            trapianta(y,y->right);
+            y->right = z->right;
+            y->right->padre = y;
+        }
+        trapianta(z,y);
+        y->left = z->left;
+        y->left->padre = y;
+    }
+
+    return;
+}
+/////////////////////cancellazione////////////////////////
 
 BstNode* Bst::search(int speed){
     BstNode *current = root;
@@ -58,17 +150,27 @@ BstNode* Bst::search(int speed){
     return current;
 }
 
-void Bst::printRicorsiva(){
-    print(root);
+void Bst::printRicorsiva(bool flag){
+
+    if(flag == false){
+        ofstream file("output.txt",ios::out);
+        if(file.is_open()){
+            print(root,file);
+        }
+    }else{
+        print(root,cout);
+    }
+
+    
     cout <<endl;
     return;
 }
 
-void Bst::print(BstNode *r){
+void Bst::print(BstNode *r, ostream &out){
     if(r != nullptr){
-    print(r->left);
-    cout << endl << "Marca: " << r->marca << ", Modello: " << r->modello << ", Velocita' massima: " << r->velocita << ", Prezzo (milioni): " << r->prezzo <<endl;
-    print(r->right);
+    print(r->left,out);
+    out << endl << "Marca: " << r->marca << ", Modello: " << r->modello << ", Velocita' massima: " << r->velocita << ", Prezzo (milioni): " << r->prezzo <<endl;
+    print(r->right, out);
     }
     return;
 }
@@ -77,7 +179,7 @@ void Bst::preleva(){
 
     fstream file("input.txt", ios::in);
     if(file.fail()){
-        cout << "Errore nell'apertura del file" <<endl;
+        cout << "Errore nell'apertura del file 'input.txt'" <<endl;
         exit(-1);
     }
 
@@ -135,11 +237,29 @@ void Bst::insert(string brand, string model, int speed, float price){   //ordino
 
 int main(){
 
+    /////////////////inzio alberi////////////////////
     Bst prova;
     prova.preleva();
-    prova.printRicorsiva();
+    prova.printRicorsiva(true);
     cout << prova.search(400);
     cout <<endl;
+    prova.min();
+    cout <<endl;
+    prova.max();
+    cout <<endl;
+
+    cout << "Elimino (per poi reinserire) la Porche 911-GT3-RS:" << endl;
+    prova.cancellazione(prova.search(330));
+    prova.printRicorsiva(true);
+
+    cout << endl << "Reinserisco..." <<endl;
+    prova.insert("Porche","911-GT3-RS",330,0.5);
+    prova.printRicorsiva(false);
+    cout << endl << "Salvo nel file..." <<endl;
+    ////////////////fine alberi//////////////////////
+
+
+    
     
     return 0;
 }
