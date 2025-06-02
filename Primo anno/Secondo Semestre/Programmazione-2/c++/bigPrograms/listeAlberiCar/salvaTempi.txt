@@ -12,5 +12,3 @@ Marca: Bugatti, Modello: Chiron, Circuito: Silverstone, pilota: Hamilton, Tempo:
 Marca: Pagani, Modello: Huayra, Circuito: Autodromo-Di-Suzuka, pilota: Hamilton, Tempo: 1.49.0
 
 Marca: Porche, Modello: 911-GT3-RS, Circuito: Le, pilota: Mans, Tempo: 2.19.994
-
-Marca: Lamborghini, Modello: Centenario, Circuito: Nurburgring, pilota: Hamilton, Tempo: 2.21.567

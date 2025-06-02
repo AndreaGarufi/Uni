@@ -247,13 +247,54 @@ class List{
     void print(bool flag);
     void insertOrder(string brand,string model, string circuit, string pilot, float time);
     void prelevaFile();
-
+    Node *maxTempo();
+    bool remove(Node *x);
 
     private:
 
     Node *head;
 
 };
+
+bool List::remove(Node *x){
+
+    Node *current = head;
+    Node *ant = head;
+
+    if(current == nullptr){
+        cout << "Lista vuota" <<endl;
+        return false;
+    }
+
+    if(current == x){       //caso testa
+        head = current->next;
+        delete current;
+        return true;
+    }
+
+    while(current != nullptr && current != x){  //trovo la posizione da eliminare
+        ant = current;
+        current = current->next;
+    }
+
+    if(current == nullptr){
+        cout << "Nodo non trovato" <<endl;
+        return false;
+    }
+
+    ant->next = current->next;
+    delete current;
+    return true;
+}
+
+Node* List::maxTempo(){
+    Node *current = head;
+
+    while(current->next != nullptr){
+        current = current->next;
+    }
+    return current;
+}
 
 void List::prelevaFile(){
     fstream file("circuito.txt", ios::in);
@@ -364,6 +405,9 @@ int main(){
     cout << "Stampo i tempi delle macchine sui vari circuiti" <<endl;
     lista.prelevaFile();
     lista.print(false);
+
+    cout << "Elimino il giro piu' lento " <<endl;
+    cout << lista.remove(lista.maxTempo());
 
     cout << endl;
     cout << "Salvo nel file..." <<endl;
