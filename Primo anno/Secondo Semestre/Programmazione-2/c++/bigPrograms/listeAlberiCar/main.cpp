@@ -1,4 +1,5 @@
-//dati nel file organizzati nel seguente modo: marca modello velocitaMassima prezzo(milioni)
+//dati nel file input.txt organizzati nel seguente modo: marca modello velocitaMassima prezzo(milioni)
+//dati nel file circuito.txt organizzati nel seguente modo: marca modello circuito pilota tempo (in float cioè secondi totali per compiere il giro)
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -37,7 +38,6 @@ class Bst{
     void cancellazione(BstNode *z);
     void trapianta(BstNode *u, BstNode *v);
     BstNode* minimo(BstNode *r);
-    //void salvaFile();
 
     void min();
     void max();
@@ -46,18 +46,6 @@ class Bst{
     BstNode *root;
 };
 //fine zona albero//
-
-/*void Bst::salvaFile(){
-    fstream file("output.txt",ios::out);
-    if(file.file()){
-        cout << "Errore nell'apertura del file 'output.txt'" <<endl;
-        exit(-1);
-    }
-
-    file << printRicorsiva();
-    file.close();
-
-}*/
 
 void Bst::min(){
 
@@ -235,6 +223,118 @@ void Bst::insert(string brand, string model, int speed, float price){   //ordino
 
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class List;
+class Node{
+    public:       //next
+    Node(string brand,string model, string circuit, string pilot, float time,Node *p):marca(brand),modello(model),circuito(circuit),pilota(pilot),tempo(time),next(p){}
+    friend class List;
+
+    private:
+    string marca;
+    string modello;
+    string circuito;
+    string pilota;
+    float tempo;
+
+    Node *next;
+};
+
+class List{
+    public:
+    List():head(nullptr){}
+    void print(bool flag);
+    void insertOrder(string brand,string model, string circuit, string pilot, float time);
+    void prelevaFile();
+
+
+    private:
+
+    Node *head;
+
+};
+
+void List::prelevaFile(){
+    fstream file("circuito.txt", ios::in);
+    if(file.fail()){
+        cout << "Errore nell'apertura del file 'circuito.txt'" <<endl;
+        exit(-1);
+    }
+
+    string riga;
+    while(getline(file,riga)){
+        string brand,model,circuit,pilot;
+        float time = 0;
+
+        istringstream iss(riga);
+        
+        iss >> brand >> model >> circuit >> pilot >> time;
+        insertOrder(brand,model,circuit,pilot,time);
+    }
+    return;
+}
+
+void List::insertOrder(string brand,string model, string circuit, string pilot, float time){
+    
+    Node *current = head;
+    Node *ant = head;
+    Node *newNode = nullptr;
+
+    if(head == nullptr){
+        head = new Node(brand,model,circuit,pilot,time,head);
+        return;
+    }
+
+    if(head->tempo > time){
+        newNode = new Node(brand,model,circuit,pilot,time,head);
+        head = newNode;
+        return;
+    }
+
+    while(current != nullptr && current->tempo < time){
+        ant = current;
+        current = current->next;
+    }
+
+    newNode = new Node(brand,model,circuit,pilot,time,current);
+    ant->next = newNode;
+    return;
+}
+
+void List::print(bool flag){
+    Node *current = head;
+
+    if(flag == false){
+        while(current != nullptr){  //formatta bene il tempo
+            int minuti = current->tempo / 60;
+            int secondi = (int)current->tempo % 60;
+            int millisecondi = (current->tempo - (int)current->tempo) * 1000;
+            cout << endl << "Marca: " << current->marca << ", Modello: " << current->modello << ", Circuito: " << current->circuito 
+            << ", pilota: " << current->pilota << ", Tempo: " << minuti << "." << secondi << "." << millisecondi <<endl;
+
+            current = current->next;
+        }
+    }else{
+        fstream file("salvaTempi.txt",ios::out);
+        if(file.fail()){
+            cout << "Errore nell'apertura del file 'salvaTempi.txt'" <<endl;
+            exit(-1);
+        }
+        ostream& out = file;
+        while(current != nullptr){  //formatta bene il tempo
+            int minuti = current->tempo / 60;
+            int secondi = (int)current->tempo % 60;
+            int millisecondi = (current->tempo - (int)current->tempo) * 1000;
+            out << endl << "Marca: " << current->marca << ", Modello: " << current->modello << ", Circuito: " << current->circuito 
+            << ", pilota: " << current->pilota << ", Tempo: " << minuti << "." << secondi << "." << millisecondi <<endl;            current = current->next;
+        }
+    }
+
+
+    return;
+}
+
 int main(){
 
     /////////////////inzio alberi////////////////////
@@ -258,8 +358,17 @@ int main(){
     cout << endl << "Salvo nel file..." <<endl;
     ////////////////fine alberi//////////////////////
 
+    /////////////////inzio liste////////////////////
+    List lista;
+    cout <<endl;
+    cout << "Stampo i tempi delle macchine sui vari circuiti" <<endl;
+    lista.prelevaFile();
+    lista.print(false);
 
-    
-    
+    cout << endl;
+    cout << "Salvo nel file..." <<endl;
+    lista.print(true);
+    ////////////////fine liste//////////////////////
+
     return 0;
 }
