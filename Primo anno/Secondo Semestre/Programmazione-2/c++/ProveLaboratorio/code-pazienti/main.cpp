@@ -4,7 +4,7 @@ using namespace std;
 class Queue;
 class Patient{          //sarà il nodo della coda
     public:                                         //next
-    Patient(int code,string name,string condition,Patient *p):id(code),nome(name),condizioneMedica(condition),next(p){}
+    Patient(int code,string name,string condition,Patient *p,bool flag):id(code),nome(name),condizioneMedica(condition),next(p),raccomandazione(flag){}
     Patient(){}
     friend class Queue;
     int getId(){
@@ -32,13 +32,20 @@ class Patient{          //sarà il nodo della coda
     }
 
     void print(){
-        cout << "Nome paziente: " << nome << ", id paziente: " << id << ", condizione medica: " << condizioneMedica <<endl;
+        string temp;
+        if(raccomandazione == true){
+            temp = "SI";
+        }else{
+            temp = "NO";
+        }
+        cout << "Nome paziente: " << nome << ", id paziente: " << id << ", condizione medica: " << condizioneMedica << ", raccomandazione: " << temp <<endl;
     }
 
     private:
     int id;
     string nome;
     string condizioneMedica;
+    bool raccomandazione;
 
     Patient *next;
 };
@@ -47,7 +54,7 @@ class Queue{
     public:
     Queue():head(nullptr){}
 
-    void enQueue(int code,string name,string condition);    //inserisco in testa e levo in coda cosi facendo gestisco una coda
+    void enQueue(int code,string name,string condition, bool flag);    //inserisco in testa e levo in coda cosi facendo gestisco una coda
     void deQueue();
     void printCoda();
     bool isEmpty(){
@@ -64,8 +71,16 @@ class Queue{
     Patient *head;
 };
 
-void Queue::enQueue(int code,string name,string condition){
-    head = new Patient(code,name,condition,head);
+void Queue::enQueue(int code,string name,string condition,bool flag){
+    Patient dati;
+    dati.raccomandazione = flag;
+
+    if(flag == true){
+        head = new Patient(code,name,condition,head,true);      //sistemare questo inserimento con la regola del raccomandato
+        return;
+    }
+
+    head = new Patient(code,name,condition,head,false);
     return;
 }
 
@@ -106,13 +121,15 @@ void Queue::printCoda(){
 
 int main(){
 
+    cout << "La coda va letta dal basso verso l'alto: (in basso c'e' la testa in alto la coda)" << endl <<endl;
+
     Queue coda;
 
-    coda.enQueue(143,"Alferdo","malato");
-    coda.enQueue(555,"Niko Pandetta","scimunito");
-    coda.enQueue(777,"Melo","pazzo");
+    coda.enQueue(143,"Alferdo","malato",false);
+    coda.enQueue(555,"Niko Pandetta","scimunito",false);
+    coda.enQueue(777,"Melo","pazzo",false);
+    coda.enQueue(777,"Andrea","Troppa Bellezza",false);
     coda.printCoda();
-    //coda.isEmpty();
 
     cout <<endl;
     cout << endl << "Rimuovo Alferdo, lo stampo e ristampo la coda" <<endl;
@@ -125,11 +142,14 @@ int main(){
     coda.deQueue();
     coda.deQueue();
     coda.deQueue();
+    coda.deQueue();
     
     cout << endl << "Reinserisco..." <<endl;
-    coda.enQueue(143,"Alferdo","malato");
-    coda.enQueue(555,"Niko Pandetta","scimunito");
-    coda.enQueue(777,"Melo","pazzo");
+    coda.enQueue(143,"Alferdo","malato",false);
+    coda.enQueue(555,"Niko Pandetta","scimunito",false);
+    coda.enQueue(777,"Melo","pazzo",false);
+    coda.enQueue(777,"Andrea","Troppa Bellezza",true);  //raccomandazione
+
     cout << "Inserisco un paziente raccomandato e stampo" <<endl;
     return 0;
 }

@@ -243,7 +243,7 @@ Le architetture moderne sono ibride.
 
 
 
-Questo ciclo può interrompersi infatti il segnale **INTR** sospende il ciclo CPU ed è un interrupt per una periferica (la CPU si dedica alle richieste della periferica).
+Questo ciclo può interrompersi, infatti il segnale **INTR** sospende il ciclo CPU ed è un interrupt per una periferica (la CPU si dedica alle richieste della periferica).
 
 Ogni **IS è caratterizzata da un proprio Op. code, una determinata quantità di operandi e un preciso numero di cicli di bus** per il suo completamento (compresi tra il fetch, il decode e lo store). Questo ne determina il tempo di esecuzione di ogni microprogramma, anche se influisce poco dato che ogni ciclo CPU è almeno 10 volte più veloce di un ciclo di bus.
 Questo ne determina un bottleneck di sistema.
@@ -290,7 +290,7 @@ Quindi, **ad ogni operazione di lettura** del processore, l'informazione viene c
 Esistono **3 livelli di cache**
 • Livello 1, all'interno del processore;                   (man mano che i livelli crescono aumenta lo
 • Livello 2, collegato al processore;                       spazio nella cache ma diminuisce la velocità)
-• Livello 3 sulla motherboard.
+• Livello 3 sulla motherboard (anni 2000), oggi nel processore.
 
 ###### **PREFETCH** 
 Un modo per aumentare il parallelismo d'esecuzione, fu quello di caricare nel processore più istruzioni oltre a quella richiesta.
@@ -305,7 +305,7 @@ Esistono **4 tipi di prefetch**
 4. **PREFETCHING CON ACCESSO ALLE LINEE DI CACHE**: utilizza le linee di cache per l'accesso alla memoria, quindi trasporta dei blocchi fissi, da 64 byte solitamente, direttamente alla cache.
 
 ###### **PIPELINE**
-[[Pipelining e come è fatto_funziona il processore#Pipeline|Spiegazione dettagliata]]
+[[2 Pipelining|Spiegazione Pipeline completa]]
 Ben presto, **alla coda di Prefetch, fu affiancato un sistema a Pipeline** che ha lo scopo di sfruttare il concetto di **catena di montaggio:** invece di eseguire un'istruzione completamente e solo al termine la sua successiva, si può avviare l'istruzione subito dopo che la precedente è stata inserita nel data path.
 Per esempio, basta che la **prima istruzione si trovi in fase di decode, e la successiva può essere posta in stato di fetch**. Così come in una catena di montaggio, un nuovo pezzo può essere lavorato anche se il precedente non è ancora stato completato: **basta che le fasi (dette anche stadi della pipeline) non si sovrappongano.**
 
@@ -330,7 +330,7 @@ Così, una Pipeline a 5 stadi trasporta cinque istruzioni in catena di montaggio
 - c'è un istruzione di salto (go-to) - qui la pipeline viene persa.
 - Dipendenza dei dati tra le istruzioni - qui la pipeline potrebbe dover' essere interrotta
 
-**L'esecuzione predicativa** ([[Pipelining e come è fatto_funziona il processore#**Esistono delle** **tecniche per evitare questi ritardi **|esecuzione predicativa in dettaglio]]), cerca di prevenire la perdita delle pipeline a causa delle istruzioni di salto, attraverso degli algoritmi che usano tabelle simili a memorie cache.
+**L'esecuzione predicativa** ([[2 Pipelining#**Esistono delle** **tecniche per evitare questi ritardi **|Speculative execution dettagliata]]), cerca di prevenire la perdita delle pipeline a causa delle istruzioni di salto, attraverso degli algoritmi che usano tabelle simili a memorie cache.
 **Il problema di questa tecnica, che in realtà è molto efficiente, si ha quando la previsione è sbagliata**: le istruzioni eseguite inutilmente devono essere gettate e lo stato della macchina ripristinato. 
 L'esecuzione predicativa è anche nota come esecuzione speculativa, intendendosi quella elaborazione che computa anche il codice che potrebbe non essere mai utilizzato.
 
@@ -367,7 +367,7 @@ I compilatori moderni prendono tutte le **istruzioni a-sincrone e le raggruppano
 La CPU è progettata per operare a velocità estremamente elevate, elaborando milioni di istruzioni al secondo. Tuttavia, la RAM, sebbene veloce, ha tempi di accesso più lunghi quando la CPU richiede dati o istruzioni deve attendere che questi vengano recuperati dalla RAM. Questo processo di attesa genera un rallentamento, poiché la CPU rimane inattiva in attesa dei dati necessari per continuare l'elaborazione. Per mitigare questo problema, le CPU fanno uso della cache, una memoria più veloce e più vicina al processore, dove vengono conservati i dati e le istruzioni più frequentemente utilizzati. Tuttavia, anche con l'uso della cache, il bottleneck rimane una preoccupazione, specialmente in scenari di carico elevato o quando vengono eseguiti più processi contemporaneamente. In questi casi, se la RAM non è in grado di tenere il passo con le richieste della CPU, si crea un rallentamento significativo, influenzando negativamente l'efficienza complessiva del sistema. 
 
 ###### <mark style="background: #D2B3FFA6;">Il test di Turing</mark>
-Turing cercò di rispondere alla domanda "can machines think?", per fare ciò formulò quello che viene chiamato test di Turing ovvero un giudice umano comunica con due interlocutori nascosti: uno è un essere umano, e l'altro è una macchina. Se il giudice non riesce a distinguere chi è la macchina e chi è l'umano basandosi solo sulle risposte fornite, allora si dice che la macchina ha **superato il test** e può essere considerata "intelligente". Fino a qualche mese fa nessuno era riuscito a superarlo tranne ChatGPT-4 di recente
+Turing cercò di rispondere alla domanda "can machines think?", per fare ciò formulò quello che viene chiamato test di Turing ovvero un giudice umano comunica con due interlocutori nascosti: uno è un essere umano, e l'altro è una macchina. Se il giudice non riesce a distinguere chi è la macchina e chi è l'umano basandosi solo sulle risposte fornite, allora si dice che la macchina ha **superato il test** e può essere considerata "intelligente". Fino a qualche mese fa nessuno era riuscito a superarlo tranne ChatGPT-4 di recente (2024)
 
 ###### <mark style="background: #D2B3FFA6;">Processi sincroni / a-sincroni, latenza</mark>
 - **La latenza** è il tempo che il dato impiega a passare per il bus a seguito del comando READ, 

@@ -1,2 +1,2 @@
-finire merge sort e quick sort
-alberi
+studiare bene la valutazione sulle prestazioni (architettura)
+
