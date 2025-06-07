@@ -1,4 +1,3 @@
-Ecco la lista con la spiegazione di ciascun comando:
 ![[Pasted image 20241229113429.png]]
 
 ---

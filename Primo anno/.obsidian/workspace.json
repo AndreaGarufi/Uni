@@ -11,10 +11,26 @@
             "id": "c40a98798ef940a0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "pdf",
+              "state": {
+                "file": "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.1-IstruzioniMacchina/2.1-IstruzioniMacchina.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "2.1-IstruzioniMacchina"
+            }
+          },
+          {
+            "id": "7df5c9282764dcc9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Comandi Assembly"
             }
           }
         ]
@@ -169,29 +185,33 @@
   },
   "active": "c40a98798ef940a0",
   "lastOpenFiles": [
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es3.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.0-IstruzioniMacchina/2.0-IstruzioniMacchina.pdf",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es2.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es1.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/Nuova cartella",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo1/2.1/2.1es 1.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo1/2.1",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo1/2.0/2.0es 2.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo1/2.0/2.0es 1.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo1/2.0",
+    "ORARIO_LEZIONI_NUOVO.jpeg",
+    "ORARIO_LEZIONI-VECCHIO.jpg",
+    "Primo Semestre/Modelli/Pasted image 20250605215546.png",
+    "Project ideas.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.3-IstruzioniMacchina/2.3-IstruzioniMacchina.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/6 Circuiti Aritmetici.pdf",
     "Cose da fare.md",
     "Pipelining e come è fatto_funziona il processore.md",
-    "Project ideas.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/3 Struttura Processore.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/2 Pipelining.pdf",
-    "Pasted image 20250605215546.png",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf",
-    "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/salvaTempi.txt",
-    "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/output.txt",
-    "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/main.cpp",
-    "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/input.txt",
-    "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/circuito.txt",
     "ciao.md",
     "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Inglese/Connettivi.md",
@@ -203,17 +223,14 @@
     "Secondo Semestre/Modelli/Pasted image 20250513210131.png",
     "Secondo Semestre/Modelli/Pasted image 20250513205853.png",
     "Secondo Semestre/Modelli/Pasted image 20250513205625.png",
-    "Secondo Semestre/Modelli/Pasted image 20250513205457.png",
     "template.md",
     "Ci.md",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Secondo Semestre/Senza nome.md",
-    "ORARIO_LEZIONI_NUOVO.jpeg",
     "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
     "Primo Semestre/programmazione-1/Tips Algoritmi.md",
     "Primo Semestre/programmazione-1/PUNTATORI (importante).md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
