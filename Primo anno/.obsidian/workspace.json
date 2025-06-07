@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "05b8085be8dbf42c",
+        "id": "83f2cfcf44d1e14a",
         "type": "tabs",
         "children": [
           {
-            "id": "9b55089f6a8614d0",
+            "id": "7e8a55016fca6244",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
+                "file": "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 Introduzione e componenti PC"
-            }
-          },
-          {
-            "id": "1a37ae9da2b4cded",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2 Pipelining"
+              "title": "9 Circuiti Integrati"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -186,29 +171,31 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1a37ae9da2b4cded",
+  "active": "7e8a55016fca6244",
   "lastOpenFiles": [
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.3-IstruzioniMacchina/2.3-IstruzioniMacchina.pdf",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/6 Circuiti Aritmetici.pdf",
     "Cose da fare.md",
+    "Pipelining e come è fatto_funziona il processore.md",
+    "Project ideas.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/3 Struttura Processore.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/2 Pipelining.pdf",
     "Pasted image 20250605215546.png",
-    "Pipelining e come è fatto_funziona il processore.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf",
     "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/salvaTempi.txt",
     "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/output.txt",
     "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/main.cpp",
     "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/input.txt",
     "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/circuito.txt",
-    "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/a.exe",
-    "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
     "ciao.md",
     "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Inglese/Connettivi.md",
@@ -216,7 +203,6 @@
     "Secondo Semestre/Modelli/Pasted image 20250515100538.png",
     "Secondo Semestre/Modelli/Pasted image 20250515100425.png",
     "Secondo Semestre/Modelli/Pasted image 20250515100355.png",
-    "Project ideas.md",
     "Secondo Semestre/Modelli/Pasted image 20250513210206.png",
     "Secondo Semestre/Modelli/Pasted image 20250513210131.png",
     "Secondo Semestre/Modelli/Pasted image 20250513205853.png",
@@ -232,7 +218,6 @@
     "Primo Semestre/programmazione-1/PUNTATORI (importante).md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
-    "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }

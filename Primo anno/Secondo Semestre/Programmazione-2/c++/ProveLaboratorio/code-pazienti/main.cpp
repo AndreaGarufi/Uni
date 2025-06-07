@@ -76,7 +76,22 @@ void Queue::enQueue(int code,string name,string condition,bool flag){
     dati.raccomandazione = flag;
 
     if(flag == true){
-        head = new Patient(code,name,condition,head,true);      //sistemare questo inserimento con la regola del raccomandato
+        Patient *newNode = nullptr;
+        Patient *current = head;
+        Patient *ant = nullptr;
+        int passi = 0;
+
+        while(current != nullptr && passi <= 3){        //salvo la posizione del paziente raccomandato
+            passi++;
+            ant = current;
+            current = current->next;
+        }
+        newNode = new Patient(code,name,condition,head,true);
+        if(ant != nullptr){
+            ant->next = newNode;
+        }
+        newNode->next = current;
+
         return;
     }
 
@@ -129,6 +144,11 @@ int main(){
     coda.enQueue(555,"Niko Pandetta","scimunito",false);
     coda.enQueue(777,"Melo","pazzo",false);
     coda.enQueue(777,"Andrea","Troppa Bellezza",false);
+    coda.enQueue(324,"ScemoDiGuerra","babbitudine cronica",false);
+    coda.enQueue(321,"Pepo3393","road to diamod",false);
+    coda.enQueue(333,"Danny Lazzarin","tignosita'",false);
+    coda.enQueue(123,"xmurry","limiti dell'evoluto",false);
+
     coda.printCoda();
 
     cout <<endl;
@@ -143,13 +163,23 @@ int main(){
     coda.deQueue();
     coda.deQueue();
     coda.deQueue();
+    coda.deQueue();
+    coda.deQueue();
+    coda.deQueue();
+    coda.deQueue();
     
     cout << endl << "Reinserisco..." <<endl;
     coda.enQueue(143,"Alferdo","malato",false);
     coda.enQueue(555,"Niko Pandetta","scimunito",false);
     coda.enQueue(777,"Melo","pazzo",false);
-    coda.enQueue(777,"Andrea","Troppa Bellezza",true);  //raccomandazione
+    coda.enQueue(777,"Andrea","Troppa Bellezza",false);  
+    coda.enQueue(324,"ScemoDiGuerra","babbitudine cronica",false);
+    coda.enQueue(321,"Pepo3393","road to diamod",false);
+    coda.enQueue(333,"Danny Lazzarin","tignosita'",false);
+    coda.enQueue(123,"xmurry","limiti dell'evoluto",true);      //raccomandazione
+
 
     cout << "Inserisco un paziente raccomandato e stampo" <<endl;
+    coda.printCoda();
     return 0;
 }
