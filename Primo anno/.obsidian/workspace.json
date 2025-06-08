@@ -4,23 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "641252533d5bcb22",
+        "id": "356089bce94fd423",
         "type": "tabs",
         "children": [
           {
-            "id": "c40a98798ef940a0",
+            "id": "c728c726bb67314f",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.1-IstruzioniMacchina/2.1-IstruzioniMacchina.pdf"
+                "file": "Cose da fare.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "2.1-IstruzioniMacchina"
+              "icon": "lucide-file",
+              "title": "Cose da fare"
             }
           },
           {
-            "id": "7df5c9282764dcc9",
+            "id": "6ac69d30165e136f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -183,20 +185,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c40a98798ef940a0",
+  "active": "c728c726bb67314f",
   "lastOpenFiles": [
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.2-IstruzioniMacchina/2.2-IstruzioniMacchina.pdf",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es7.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es6.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es5.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.1-IstruzioniMacchina/2.1-IstruzioniMacchina.pdf",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es4.s",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/17 Lezione 15 Grafi.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es3.s",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.0-IstruzioniMacchina/2.0-IstruzioniMacchina.pdf",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es2.s",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es1.s",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/Nuova cartella",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo1/2.1/2.1es 1.s",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo1/2.1",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo1/2.0/2.0es 2.s",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo1/2.0/2.0es 1.s",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo1/2.0",
     "ORARIO_LEZIONI_NUOVO.jpeg",
     "ORARIO_LEZIONI-VECCHIO.jpg",
     "Primo Semestre/Modelli/Pasted image 20250605215546.png",
