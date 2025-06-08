@@ -8,7 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c728c726bb67314f",
+            "id": "6ac69d30165e136f",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.3-IstruzioniMacchina/2.3-IstruzioniMacchina.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "2.3-IstruzioniMacchina"
+            }
+          },
+          {
+            "id": "0e1f4ce08e5a8f5e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,20 +31,6 @@
               },
               "icon": "lucide-file",
               "title": "Cose da fare"
-            }
-          },
-          {
-            "id": "6ac69d30165e136f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Comandi Assembly"
             }
           }
         ]
@@ -185,11 +183,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c728c726bb67314f",
+  "active": "6ac69d30165e136f",
   "lastOpenFiles": [
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.2-IstruzioniMacchina/2.2-IstruzioniMacchina.pdf",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es7.s",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.2-IstruzioniMacchina/2.2-IstruzioniMacchina.pdf",
+    "Cose da fare.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es8.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es7.s",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es6.s",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es5.s",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.1-IstruzioniMacchina/2.1-IstruzioniMacchina.pdf",
@@ -197,8 +197,6 @@
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/17 Lezione 15 Grafi.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es3.s",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.0-IstruzioniMacchina/2.0-IstruzioniMacchina.pdf",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es2.s",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es1.s",
     "ORARIO_LEZIONI_NUOVO.jpeg",
     "ORARIO_LEZIONI-VECCHIO.jpg",
     "Primo Semestre/Modelli/Pasted image 20250605215546.png",
@@ -208,7 +206,6 @@
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
-    "Cose da fare.md",
     "Pipelining e come è fatto_funziona il processore.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
