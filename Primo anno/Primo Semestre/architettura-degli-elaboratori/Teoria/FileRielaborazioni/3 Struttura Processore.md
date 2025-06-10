@@ -72,7 +72,7 @@ per temporizzare (coordinare) il trasferimento dei dati nel processore si usano 
  
  ●Se il dato o l’istruzione da prelevare non si trovano nella cache, l’esecuzione deve bloccarsi al passo corrente fintanto che l’operazione di memoria richiesta non è stata eseguita 
  
- ●Ad operazione di memoria eseguita viene generato il segnare **MFC (memory function completed)** 
+ ●Ad operazione di memoria eseguita viene generato il segnale **MFC (memory function completed)** 
  
  ●Il circuito di controllo interrompe l’esecuzione dell’istruzione finché MFC non diventa uguale a 1 
  
@@ -91,7 +91,7 @@ L'attesa per i segnali di controllo si verifica quando la CPU aspetta che un seg
 
 **Un approccio per generare i segnali di controllo consiste nel CONTROLLO CABLATO**
 
-Il controllo cablato di una CPU è un metodo le cui operazioni vengono gestite a livello hardware, in pratica i segnali che controllano la CPU sono segnali predefiniti e non cambiano mai, in base a questi segnali la CPU esegue varie istruzioni. Il controllo su queste cose vengono fatte dalla Central Unit (CU)
+Il controllo cablato di una CPU è un metodo le cui operazioni vengono gestite a livello hardware, in pratica i segnali che controllano la CPU sono segnali predefiniti e non cambiano mai, in base a questi segnali la CPU esegue varie istruzioni. Il controllo su queste cose vengono fatte dalla Control Unit (CU)
  
 **Le istruzioni CISC possono occupare più di una parola, non è possibile un approccio a stadi come in RISC**
 quindi si utilizza un **blocco di interconnessione** per trasmettere dati tra i componenti, questo blocco è realizzato dal BUS, quindi il BUS connette vari dispositivi, ma solo 1 dispositivo alla volta può mandare un segnale nel BUS e per questo si utilizzano 3 linee di BUS 2 per gli operandi e 1 per il risultato

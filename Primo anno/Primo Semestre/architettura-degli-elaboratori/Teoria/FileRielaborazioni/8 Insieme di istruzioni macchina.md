@@ -9,7 +9,7 @@
 ●Le istruzioni possono occupare una o più parole
 
 cosa è una memory word?  --**esame** 
-è la dimensione del' unita di dato che un sistema di elaborazione può gestire e memorizzare in un singolo ciclo di clock di una CPU, varia in base a se l'architettura è a 8,16,32,64 bit, 
+è la dimensione dell' unita di dato che un sistema di elaborazione può gestire e memorizzare in un singolo ciclo di clock di una CPU, varia in base a se l'architettura è a 8,16,32,64 bit, 
 queste memory word vengono lette e scritte nella memoria RAM
 L’informazione è immagazzinata in memoria sotto forma di un vettore di parole (parole in successione)
 ogni word ha quindi un indirizzo in memoria
@@ -97,7 +97,7 @@ Le istruzioni di assembly cambiano in base all'architettura della CPU ad esempio
 - **Formato per chiamata**
 	- Sono quelle istruzioni in cui il valore immediato è fornito sin da subito (non ci sono esempi immediati)
 
-**Register Transfer notation**: la notazione di trasferimento del registro in assembly è il metodo utilizzato per descrivere il movimento dei dati nei registri della CPU,indica in modo specifico come i valori vengono manipolati i dati nel passaggio da un registro ad un'altro. 
+**Register Transfer notation**: la notazione di trasferimento del registro in assembly è il metodo utilizzato per descrivere il movimento dei dati nei registri della CPU, indica in modo specifico come i valori vengono manipolati nel passaggio da un registro ad un' altro. 
 - $R_1 \leftarrow [R_2]$ la freccia indica un trasferimento di valore
 Inoltre viene usato per specificare il funzionamento delle delle operazioni aritmetico-logiche
 - $C \leftarrow [A] + [B]$ 

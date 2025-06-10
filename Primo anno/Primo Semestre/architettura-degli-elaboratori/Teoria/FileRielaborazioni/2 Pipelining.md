@@ -80,10 +80,7 @@ La pipeline può andare in **stallo** quando una risorsa hardware è richiesta d
 lo stallo è un problema critico che **si verifica quando la pipeline viene interrotta a causa delle dipendenze da dato, o per altri problemi come le risorse limitate** (le risorse devono essere condivise. se non ci fossero le risorse condivise, quindi senza accesso concorrente alle risorse non ci sarebbero stalli nella pipeline)).
 alcuni processi possono non rilasciare più una risorsa (qui è colpa del programmatore) e quindi creare stalli.
 
-![[Pasted image 20241110145725.png]]
-![[Pasted image 20241110145739.png]]
-![[Pasted image 20241110145752.png]]
-
+![[Pasted image 20250605215546.png]]
 
 Il **CASO OTTIMALE** della pipeline è 1 istruzione / ciclo di clock
 vanno però considerati i problemi legati alle dipendenze ai salti e alle risorse limitate.

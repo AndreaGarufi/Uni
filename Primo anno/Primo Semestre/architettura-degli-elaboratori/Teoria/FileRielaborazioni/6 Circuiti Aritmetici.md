@@ -8,7 +8,7 @@ Un addizionatore a 2 bit può essere espresso come 2 funzioni logiche a 3 ingres
 **abbiamo diversi tipi di addizionatori:**
 
 ## **HALF ADDER**
-addizonatore a 1 bit è un circuito logico che somma 2 bit (A e B) considerando anche un possibile riporto in ingresso e uscita, produce 2 uscite (il valore della somma e il bit di riporto).
+addizonatore a 1 bit è un circuito logico che somma 2 bit (A e B) senza considerare un riporto in ingresso, produce 2 uscite (il valore della somma e il bit di riporto).
 **calcola il riporto ma non lo considera nelle operazioni**
 
 E' formato da una porta XOR e una AND
@@ -111,7 +111,7 @@ Il Ripple Carry Adder è un tipo di addizionatore a più bit in cui i riporti si
 **Generazione del riporto** determina la creazione del riporto quando entrambi i bit (xi​ e yi​) sono uguali a 1. In altre parole, il riporto è generato se xi=1 e yi=1
 
 - **Funzione di generazione**: Gi=xi⋅yi
-- **Funzione di propagazione**: Pi=xi+yi
+- **Funzione di propagazione**: Pi=xi ⊕ yi
 
 **Propagazione** determina se il riporto in ingresso (ci​) verrà propagato al bit successivo. Se il riporto di un bit dipende da quello precedente, la propagazione garantisce che il riporto venga considerato nei bit successivi.
 
