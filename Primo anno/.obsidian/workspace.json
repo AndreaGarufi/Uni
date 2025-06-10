@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "356089bce94fd423",
+        "id": "497f66343cb9f0c6",
         "type": "tabs",
         "children": [
           {
-            "id": "b9e03c8aa37e4106",
+            "id": "2e98b88c6205b351",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.4-IstruzioniMacchina/2.4-IstruzioniMacchina.pdf"
+                "file": "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.5-IstruzioniMacchina/2.5-IstruzioniMacchina.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "2.4-IstruzioniMacchina"
+              "title": "2.5-IstruzioniMacchina"
             }
           }
         ]
@@ -169,13 +169,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b9e03c8aa37e4106",
+  "active": "2e98b88c6205b351",
   "lastOpenFiles": [
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.4-IstruzioniMacchina/2.4-IstruzioniMacchina.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.5-IstruzioniMacchina/2.5-IstruzioniMacchina.pdf",
     "Cose da fare.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es11v2.s",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.4-IstruzioniMacchina/2.4-IstruzioniMacchina.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es12.s",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es11.s",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es10.s",
