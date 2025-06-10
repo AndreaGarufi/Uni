@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3dfe323e07106e1f",
+        "id": "1d3836952840e01a",
         "type": "tabs",
         "children": [
           {
-            "id": "c6ce6ee4fdd720d5",
+            "id": "57d750cd03be89ac",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "16 Lezione 12-13 Alberi"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -169,20 +167,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c6ce6ee4fdd720d5",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/2 Pipelining.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
     "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/a.exe",
     "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/main.cpp",
     "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar/input.txt",
     "Secondo Semestre/Programmazione-2/c++/bigPrograms/listeAlberiCar",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneBST/prova.cpp",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneBST/~$ercitazione bst.docx",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneBST/main.cpp",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneBST/input.txt",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneBST/esercitazione bst.docx",
     "Cose da fare.md",
     "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Inglese/Connettivi.md",
