@@ -3,4 +3,6 @@ studiare bene i sistemi di numerazione (pdf 4)
 ripassare algebra booleana (pdf 5)
 
 
-rifare es 13 14 assembly
+fare es scheda lia assembly
+
+capire bene es18 assembly
