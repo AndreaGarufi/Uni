@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1d3836952840e01a",
+        "id": "1635a5816d03d795",
         "type": "tabs",
         "children": [
           {
-            "id": "57d750cd03be89ac",
+            "id": "c58b55f5be920e18",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "Cose da fare.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
+              "title": "Cose da fare"
             }
           }
         ]
@@ -171,22 +171,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "c58b55f5be920e18",
   "lastOpenFiles": [
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es15.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.4-IstruzioniMacchina/2.4-IstruzioniMacchina.pdf",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.2-IstruzioniMacchina/2.2-IstruzioniMacchina.pdf",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.3-IstruzioniMacchina/2.3-IstruzioniMacchina.pdf",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.5-IstruzioniMacchina/2.5-IstruzioniMacchina.pdf",
+    "Cose da fare.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es14.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es13.s",
+    "ORARIO_LEZIONI_NUOVO.jpeg",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf",
     "conflict-files-obsidian-git.md",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/simulazione/test_lab_giu_2025.pdf",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/simulazione/main.cpp",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/simulazione/a.exe",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/simulazione",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/code-pazienti/main.cpp",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/code-pazienti/code-pazienti.pdf",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/code-pazienti/a.exe",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/code-pazienti",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/17 Lezione 15 Grafi.pdf",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es9.s",
     "Primo Semestre/Modelli/Pasted image 20250605215546.png",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
-    "Cose da fare.md",
     "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Inglese/Connettivi.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
@@ -207,7 +210,6 @@
     "Ci.md",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Secondo Semestre/Senza nome.md",
-    "ORARIO_LEZIONI_NUOVO.jpeg",
     "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
     "Primo Semestre/programmazione-1/Tips Algoritmi.md",
     "Primo Semestre/programmazione-1/PUNTATORI (importante).md",
@@ -217,8 +219,6 @@
     "Primo Semestre/strutture-discrete/Esercizi note/Esercizi grafi compito.md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "Primo Semestre/strutture-discrete/Esempi di esercizi.md",
-    "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 1 -RIELABORAZIONE- Logica Proposizionale, Teoria degli insiemi Relazioni e funzioni.md",
-    "Primo Semestre/strutture-discrete/TUTTI I TEOREMI.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
