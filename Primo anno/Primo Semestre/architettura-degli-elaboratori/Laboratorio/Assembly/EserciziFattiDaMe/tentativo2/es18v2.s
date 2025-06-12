@@ -6,8 +6,8 @@ risultato fill    4
 
           mov     r1,#lista
           mov     r2,#contatore
-          ldr     r3,[r1]
-          add     r1,r1,#4
+          ldr     r3,[r1]       ;carico il primo numero in r3
+          add     r1,r1,#4      
           sub     r2,r2,#1
 
 ciclo     ldr     r4,[r1]

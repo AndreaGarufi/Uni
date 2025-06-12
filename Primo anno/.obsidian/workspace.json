@@ -11,10 +11,14 @@
             "id": "97d2a91a8c51463f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Cose da fare.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Cose da fare"
             }
           }
         ]
@@ -167,8 +171,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "97d2a91a8c51463f",
+  "active": "59476c80b7c5f8bb",
   "lastOpenFiles": [
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/esESAME_Gennaio.s",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Appunti pre-esame orale da ricordare.md",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/17 Lezione 15 Grafi.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
@@ -178,8 +183,8 @@
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/12 Lezione 07 Template.pdf",
-    "Pasted image 20250612130622.png",
-    "Pasted image 20250612130613.png",
+    "Secondo Semestre/Modelli/Pasted image 20250612130622.png",
+    "Secondo Semestre/Modelli/Pasted image 20250612130613.png",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/11 Lezione 06 ereditarieta e polimorfismo.pdf",
     "Secondo Semestre/Modelli/Pasted image 20250612125611.png",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/10 Lezione 05 Classi_e_oggetti.pdf",
