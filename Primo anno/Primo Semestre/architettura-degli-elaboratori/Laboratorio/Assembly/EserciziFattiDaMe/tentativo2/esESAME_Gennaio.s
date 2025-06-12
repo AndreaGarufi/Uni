@@ -5,7 +5,7 @@
         ;gli    elementi dell'array hanno lunghezza 4 byte e hanno posizioni consecutive
         ;(per   saper fare questo esercizio devi aver capito bene massimo e minimo)
 
-ARR     dcd     1,2,3,4,5,6,7,8
+ARR     dcd     10,-20,3,-4,5,-6,-7,1
 LUNG    dcd     8
 POSMIN  fill    4
 VALMAX  fill    4
@@ -17,7 +17,7 @@ VALMAX  fill    4
         add     r1,r1,#4
         subs    r2,r2,#1
 
-ciclo   ldr     r4,[r1]
+ciclo   ldr     r4,[r1] ;stesso algoritmo del minimo solo che blt cambia con bgt
         cmp     r4,r3
         bgt     massimo
         add     r1,r1,#4
@@ -33,25 +33,41 @@ massimo mov     r3,r4
 
 
 salva   mov     r10,#VALMAX
-        str     r3,[r10]            ;fino a qui trovo il valore massimo
+        str     r3,[r10] ;fino a qui trovo il valore massimo
 
-        mov     r1,#ARR             ;da qui in poi la posizione del minimo
+        mov     r1,#ARR ;da qui in poi la posizione del minimo
         mov     r2,#LUNG
         ldr     r2,[r2]
-        mov r7,#0 ;registro in cui tengo conto della posizione
-        ldr r3,[r1]
-        add r1,r1,#4
-        subs r2,r2,#1
+        mov     r8,#0 ;lo userò per la vera posizione del vero minimo
+        mov     r7,#0 ;registro in cui tengo conto della posizione
+        ldr     r3,[r1] ;minimo provvisorio (primo numero)
+        add     r1,r1,#4
+        subs    r2,r2,#1
 
-        ciclo2 ldr r4,[r1]
-        cmp r4,r3
-        blt minimo
+ciclo2  ldr     r4,[r1] ;trovo il minimo ma devo anche aggiornare la posizione (uso r7)
+        cmp     r4,r3
+        blt     minimo
+        add     r7,r7,#1
+        add     r1,r1,#4
+        subs    r2,r2,#1
+        bgt     ciclo2
+        b       salva2
 
 
 
 
+minimo  mov     r3,r4 ;qui è dove trovo il nuovo minimo, ma siccome non è detto sia quello definitivo aggiorno la posizione in r7
+        add     r7,r7,#1 ;pero la salvo anche in r8 cosi che se dovesse essere il vero minimo ho la sua posizione salvata in r8
+        mov     r8,r7
+        add     r1,r1,#4
+        subs    r2,r2,#1
+        bgt     ciclo2
 
-        minimo mov r3,r4
+
+
+salva2  mov     r10,#POSMIN ;salvo r8 (posizione del minimo)
+        str     r8,[r10]
+        end
 
 
 
