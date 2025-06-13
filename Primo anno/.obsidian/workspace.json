@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "dd5a290a307b6e27",
+        "id": "5262cda49ffe20d6",
         "type": "tabs",
         "children": [
           {
-            "id": "97d2a91a8c51463f",
+            "id": "5166406d0f370f6d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cose da fare.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Cose da fare"
+              "title": "New tab"
             }
           }
         ]
@@ -171,8 +167,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "5166406d0f370f6d",
   "lastOpenFiles": [
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/6 algebra booleana e circuiti logici.pdf",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.5-IstruzioniMacchina/2.5-IstruzioniMacchina.pdf",
+    "Cose da fare.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/esESAME_Gennaio.s",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Appunti pre-esame orale da ricordare.md",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/17 Lezione 15 Grafi.pdf",
@@ -185,11 +186,8 @@
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/12 Lezione 07 Template.pdf",
     "Secondo Semestre/Modelli/Pasted image 20250612130622.png",
     "Secondo Semestre/Modelli/Pasted image 20250612130613.png",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/11 Lezione 06 ereditarieta e polimorfismo.pdf",
     "Secondo Semestre/Modelli/Pasted image 20250612125611.png",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/10 Lezione 05 Classi_e_oggetti.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
-    "Cose da fare.md",
     "ORARIO_LEZIONI_NUOVO.jpeg",
     "conflict-files-obsidian-git.md",
     "Primo Semestre/Modelli/Pasted image 20250605215546.png",
@@ -203,7 +201,6 @@
     "Secondo Semestre/Modelli/Pasted image 20250515100425.png",
     "Secondo Semestre/Modelli/Pasted image 20250515100355.png",
     "Project ideas.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
     "Secondo Semestre/Modelli/Pasted image 20250513210206.png",
     "Secondo Semestre/Modelli/Pasted image 20250513210131.png",
@@ -218,7 +215,6 @@
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "Primo Semestre/strutture-discrete/Esercizi note/Esercizi grafi compito.md",
-    "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
