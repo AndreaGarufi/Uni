@@ -38,7 +38,7 @@
 
 ---
 ;Data la lista [1,2,3,4,5,6,7,8,9,10]
-;contare tutti i numeri dispari e maggiori di 5 e salvare il risultato in memoria  **(es 11 continua da qui)**
+;contare tutti i numeri dispari e maggiori di 5 e salvare il risultato in memoria 
 
 ---
 ;Data la lista [1,2,3,4,5,6,7,8,9,10] sommare tutti i numeri pari e minori di 8 e salvare il risultato in memoria.
@@ -50,7 +50,7 @@
 ;Data la lista [30,10,23,1,17,8,19,10] sommare tutti i numeri compresi tra 10 e 20.
 
 ---
-;Data la sequenza di numeri 1,2,3,4,5,6,7,8 :
+;Data la sequenza di numeri 1,2,3,4,5,6,7,8 : 
 ;1. sommare i numeri di posizione pari.
 ;2. sottrarre i numeri in posizione dispari
 ;3. salvare i due risultati in memoria
@@ -62,7 +62,7 @@
 ---
 
 ; Eseguire la divisione 231 / 13
-;e salvare il risultato e il resto
+;e salvare il risultato e il resto    **(continua da es 17)**
 
 ---
 ;Data la lista [-10,4,23,50,0,40,10,7] trovare il minimo e salvare il risultato in memoria
