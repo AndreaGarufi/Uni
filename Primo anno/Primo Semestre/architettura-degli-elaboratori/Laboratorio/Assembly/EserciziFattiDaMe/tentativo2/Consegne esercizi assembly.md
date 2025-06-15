@@ -62,10 +62,11 @@
 ---
 
 ; Eseguire la divisione 231 / 13
-;e salvare il risultato e il resto    **(continua da es 17)**
+;e salvare il risultato e il resto    
 
 ---
 ;Data la lista [-10,4,23,50,0,40,10,7] trovare il minimo e salvare il risultato in memoria
+
 
 ---
 ;Data la lista [-10,4,23,50,0,40,10,7] sommare i numeri pari e salvare il risultato in memoria.
@@ -73,11 +74,11 @@
 ---
 ;calcolare la somma nell array escludendo i numeri negativi e i numeri in posizione pari
 ;l'indirizzo dell array è memorizzato in ARR
-;la lunghezza in LUNG
+;la lunghezza in LUNG   
 
 ---
 
-;scrivere un programma che detrmini la posizione del numero più piccolo e il valore del numero più grande presenti nell'array,
+;scrivere un programma che determini la posizione del numero più piccolo e il valore del numero più grande presenti nell'array,
 ;inserire i 2 valori in POSMIN e VALMAX
 ;l'indirizzo di base dell'array è memorizzato in memoria all'indirizzo ARR
 ;la lunghezza dell'array è memorizzata in memoria all'indirizzo LUNG

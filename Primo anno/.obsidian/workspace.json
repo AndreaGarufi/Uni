@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f61e3b44ec516db5",
+        "id": "8c1d46105deb3790",
         "type": "tabs",
         "children": [
           {
-            "id": "d976752429d789d8",
+            "id": "b6acc878983ec9a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -171,13 +171,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d976752429d789d8",
+  "active": "b6acc878983ec9a4",
   "lastOpenFiles": [
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/esESAME_Gennaio_v2_facile.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/esESAME_Gennaio_v2.s",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/Consegne esercizi assembly.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/11v3.s",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es5v2.s",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileCondivisiTeams/6 algebra booleana e circuiti logici.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.5-IstruzioniMacchina/2.5-IstruzioniMacchina.pdf",
@@ -185,11 +193,8 @@
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.2-IstruzioniMacchina/2.2-IstruzioniMacchina.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.1-IstruzioniMacchina/2.1-IstruzioniMacchina.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.0-IstruzioniMacchina/2.0-IstruzioniMacchina.pdf",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.4-IstruzioniMacchina/2.4-IstruzioniMacchina.pdf",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
     "Cose da fare.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/esESAME_Gennaio.s",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Appunti pre-esame orale da ricordare.md",
     "Secondo Semestre/Modelli/Pasted image 20250612130622.png",
     "Secondo Semestre/Modelli/Pasted image 20250612130613.png",
@@ -200,8 +205,6 @@
     "Primo Semestre/Modelli/Pasted image 20250605215546.png",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Inglese/Connettivi.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Complessità.md",
     "Secondo Semestre/Modelli/Pasted image 20250515100538.png",
     "Secondo Semestre/Modelli/Pasted image 20250515100425.png",
@@ -216,8 +219,6 @@
     "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
     "Primo Semestre/programmazione-1/Tips Algoritmi.md",
     "Primo Semestre/programmazione-1/PUNTATORI (importante).md",
-    "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }

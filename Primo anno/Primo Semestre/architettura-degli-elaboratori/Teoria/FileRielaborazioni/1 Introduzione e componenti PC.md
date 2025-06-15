@@ -311,7 +311,7 @@ Per esempio, basta che la **prima istruzione si trovi in fase di decode, e la su
 
 Le fasi della pipeline sono: **fetch-decode-execute-store/writeback**
 
-Writeback permette di scrivere il risultato di un operazione nei registri o nella memoria RAM, apporta un beneficio nella velocità della CPU, aumentando il throughput di calcolo.
+Writeback permette di scrivere il risultato di un operazione nei registri, apporta un beneficio nella velocità della CPU, aumentando il throughput di calcolo.
 
 Così, una Pipeline a 5 stadi trasporta cinque istruzioni in catena di montaggio. 
 • La Pipeline sopperisce così alle attese di CPU veloci nei confronti di memorie lente (collo di bottiglia di von Neumann). 

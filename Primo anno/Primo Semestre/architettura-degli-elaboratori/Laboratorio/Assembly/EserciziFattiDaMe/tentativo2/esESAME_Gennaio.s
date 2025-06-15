@@ -5,7 +5,7 @@
         ;gli    elementi dell'array hanno lunghezza 4 byte e hanno posizioni consecutive
         ;(per   saper fare questo esercizio devi aver capito bene massimo e minimo)
 
-ARR     dcd     10,-20,3,-4,5,-6,-7,1
+ARR     dcd     -10,4,-23,50,0,40,10,70
 LUNG    dcd     8
 POSMIN  fill    4
 VALMAX  fill    4
