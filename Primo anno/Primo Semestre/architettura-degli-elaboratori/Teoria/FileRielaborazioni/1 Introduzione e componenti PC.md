@@ -311,7 +311,7 @@ Per esempio, basta che la **prima istruzione si trovi in fase di decode, e la su
 
 Le fasi della pipeline sono: **fetch-decode-execute-store/writeback**
 
-Writeback permette di scrivere il risultato di un operazione nei registri o nella memoria RAM, apporta un beneficio nella velocità della CPU, aumentando il throughput di calcolo.
+Writeback permette di scrivere il risultato di un operazione nei registri, apporta un beneficio nella velocità della CPU, aumentando il throughput di calcolo.
 
 Così, una Pipeline a 5 stadi trasporta cinque istruzioni in catena di montaggio. 
 • La Pipeline sopperisce così alle attese di CPU veloci nei confronti di memorie lente (collo di bottiglia di von Neumann). 
@@ -371,7 +371,7 @@ Turing cercò di rispondere alla domanda "can machines think?", per fare ciò fo
 
 ###### <mark style="background: #D2B3FFA6;">Processi sincroni / a-sincroni, latenza</mark>
 - **La latenza** è il tempo che il dato impiega a passare per il bus a seguito del comando READ, 
-	Il comando viene lanciato (READ) - il dato pasa per il bus - il dato viene effettivamente letto dalla CPU.
+	Il comando viene lanciato (READ) - il dato passa per il bus - il dato viene effettivamente letto dalla CPU.
 
 - **I processi sincroni** hanno bisogno di essere "sincronizzati" tra loro perché ad esempio il primo è propedeutico per il secondo (quindi il secondo non può iniziare se ancora il primo non ha finito) questi processi vengono eseguiti dalla CPU che esegue sia processi sincroni che a-sincroni.
 - **I processi a-sincroni** non hanno bisogno di essere sincronizzati perché "lavorano da soli" infatti le GPU hanno moltissimi core rispetto alle CPU proprio perché loro devono svolgere solo processi a-sincroni

@@ -1,7 +1,7 @@
           ;Data   la sequenza di numeri 1,2,3,4,5,6,7,8 :
-          ;sommarea tutti i numeri la costante 10;
-          ;sommarei numeri ottenuti;
-          ;salvareil valore della somma in memoria.
+          ;sommare a tutti i numeri la costante 10;
+          ;sommare i numeri ottenuti;
+          ;salvare il valore della somma in memoria.
 
 lista     dcd     1,2,3,4,5,6,7,8 ;carico la lista in memoria
 dim       dcd     8 ;carico anche la lunghezza della lista

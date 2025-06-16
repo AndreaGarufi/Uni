@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "497f66343cb9f0c6",
+        "id": "62733626a88454f2",
         "type": "tabs",
         "children": [
           {
-            "id": "2e98b88c6205b351",
+            "id": "4b6262db23f9506c",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.5-IstruzioniMacchina/2.5-IstruzioniMacchina.pdf"
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "2.5-IstruzioniMacchina"
+              "icon": "lucide-file",
+              "title": "conflict-files-obsidian-git"
             }
           }
         ]
@@ -169,21 +171,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2e98b88c6205b351",
+  "active": "4b6262db23f9506c",
   "lastOpenFiles": [
+    "Cose da fare.md",
+    "conflict-files-obsidian-git.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/Consegne esercizi assembly.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.5-IstruzioniMacchina/2.5-IstruzioniMacchina.pdf",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25/a.exe",
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Programmazione a Oggetti (OOP).md",
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Complessità.md",
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Appunti pre-esame orale da ricordare.md",
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti",
+    "Secondo Semestre/Modelli/Pasted image 20250612130622.png",
+    "Secondo Semestre/Modelli/Pasted image 20250612130613.png",
+    "Secondo Semestre/Modelli/Pasted image 20250612125611.png",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es5v2.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/11v3.s",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneCODA/Esame-230724.pdf",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneCODA/main.cpp",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneCODA/a.exe",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneCODA",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es15.s",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es14.s",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es13.s",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.4-IstruzioniMacchina/2.4-IstruzioniMacchina.pdf",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.5-IstruzioniMacchina/2.5-IstruzioniMacchina.pdf",
-    "Cose da fare.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es11v2.s",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es12.s",
     "ORARIO_LEZIONI_NUOVO.jpeg",
     "ORARIO_LEZIONI-VECCHIO.jpg",
     "Primo Semestre/Modelli/Pasted image 20250605215546.png",
@@ -206,17 +215,9 @@
     "Secondo Semestre/Modelli/Pasted image 20250515100425.png",
     "Secondo Semestre/Modelli/Pasted image 20250515100355.png",
     "Secondo Semestre/Modelli/Pasted image 20250513210206.png",
-    "Secondo Semestre/Modelli/Pasted image 20250513210131.png",
-    "Secondo Semestre/Modelli/Pasted image 20250513205853.png",
-    "Secondo Semestre/Modelli/Pasted image 20250513205625.png",
     "template.md",
     "Ci.md",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
-    "Secondo Semestre/Senza nome.md",
-    "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
-    "Primo Semestre/programmazione-1/Tips Algoritmi.md",
-    "Primo Semestre/programmazione-1/PUNTATORI (importante).md",
-    "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
