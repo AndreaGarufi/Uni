@@ -46,9 +46,6 @@ ciclo2   ldr     r4,[r1]
          b       salva
 
 
-
-
-
 maggiore mov     r3,r4
          add     r1,r1,#4
          subs    r2,r2,#1
