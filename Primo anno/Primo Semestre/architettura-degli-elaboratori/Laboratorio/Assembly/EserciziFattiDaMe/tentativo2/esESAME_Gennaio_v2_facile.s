@@ -1,3 +1,8 @@
+;scrivere un programma che determini la posizione del numero più piccolo e il valore del numero più grande presenti nell'array,
+;inserire i 2 valori in POSMIN e VALMAX
+;l'indirizzo di base dell'array è memorizzato in memoria all'indirizzo ARR
+;la lunghezza dell'array è memorizzata in memoria all'indirizzo LUNG
+;gli elementi dell'array hanno lunghezza 4 byte e hanno posizioni consecutive
 ARR      dcd     -10,4,-23,50,0,40,10,70
 LUNG     dcd     8
 POSMIN   fill    4
