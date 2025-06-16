@@ -4,25 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1635a5816d03d795",
+        "id": "497f66343cb9f0c6",
         "type": "tabs",
         "children": [
           {
-            "id": "c58b55f5be920e18",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cose da fare.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Cose da fare"
-            }
-          },
-          {
-            "id": "bf0a2ea201b7f319",
+            "id": "2e98b88c6205b351",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -31,20 +17,6 @@
               },
               "icon": "lucide-file-text",
               "title": "2.5-IstruzioniMacchina"
-            }
-          },
-          {
-            "id": "78f7c1fa3dfa2ef3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Comandi Assembly"
             }
           }
         ]
@@ -70,7 +42,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Esplora risorse"
             }
           },
           {
@@ -174,8 +146,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -188,50 +160,55 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "59476c80b7c5f8bb",
+  "active": "2e98b88c6205b351",
   "lastOpenFiles": [
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/Itinere_29_04_25/a.exe",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneCODA/a.exe",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneCODA/main.cpp",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneCODA/mainprova.cpp",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneCODA/main.coo",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneCODA/Esame-230724.pdf",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneCODA/main.cpp",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneCODA/a.exe",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/esercitazioneCODA",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es15.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es14.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es13.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.4-IstruzioniMacchina/2.4-IstruzioniMacchina.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/2.5-IstruzioniMacchina/2.5-IstruzioniMacchina.pdf",
     "Cose da fare.md",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es18v2.s",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es19.s",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es18.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es11v2.s",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/es12.s",
     "ORARIO_LEZIONI_NUOVO.jpeg",
-    "conflict-files-obsidian-git.md",
+    "ORARIO_LEZIONI-VECCHIO.jpg",
     "Primo Semestre/Modelli/Pasted image 20250605215546.png",
+    "Project ideas.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
+    "Pipelining e come è fatto_funziona il processore.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
+    "ciao.md",
     "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Inglese/Connettivi.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "Secondo Semestre/Programmazione-2/Complessità.md",
     "Secondo Semestre/Modelli/Pasted image 20250515100538.png",
     "Secondo Semestre/Modelli/Pasted image 20250515100425.png",
     "Secondo Semestre/Modelli/Pasted image 20250515100355.png",
-    "Project ideas.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
     "Secondo Semestre/Modelli/Pasted image 20250513210206.png",
     "Secondo Semestre/Modelli/Pasted image 20250513210131.png",
     "Secondo Semestre/Modelli/Pasted image 20250513205853.png",
     "Secondo Semestre/Modelli/Pasted image 20250513205625.png",
-    "Secondo Semestre/Modelli/Pasted image 20250513205457.png",
     "template.md",
     "Ci.md",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
@@ -240,11 +217,6 @@
     "Primo Semestre/programmazione-1/Tips Algoritmi.md",
     "Primo Semestre/programmazione-1/PUNTATORI (importante).md",
     "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
-    "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
-    "Primo Semestre/strutture-discrete/Esercizi note/Esercizi grafi compito.md",
-    "Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 2 -RIELABORAZIONE.md",
-    "Primo Semestre/strutture-discrete/Esempi di esercizi.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
