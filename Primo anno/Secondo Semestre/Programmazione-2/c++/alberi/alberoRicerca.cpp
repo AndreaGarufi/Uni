@@ -25,11 +25,33 @@ class BST{
     void printPreorder(BstNode *r);
     void printPostorder(BstNode *r);
     bool search(int d);
+    void minMax();
 
     private:
     BstNode *root;
 
 };
+
+void BST::minMax(){
+
+    BstNode *current = root;
+
+    while(current->left != nullptr){
+        current = current->left;
+    }
+    cout <<endl;
+    cout << "Il minimo e': " << current->dato;
+
+    current = root;
+
+    while(current->right != nullptr){
+        current = current->right;
+    }
+    cout << endl;
+    cout << "Il massimo e': " << current->dato;
+    return;
+
+}
 
 bool BST::search(int d){
     BstNode *current = root;
@@ -133,9 +155,10 @@ int main(){
     albero.insert(14);
     albero.printRicorsiva();
 
-
     albero.search(10);
     albero.search(9);
+
+    albero.minMax();
     return 0;
 }
 

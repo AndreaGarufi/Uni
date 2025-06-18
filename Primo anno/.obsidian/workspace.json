@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e69a3e80b36a435a",
+        "id": "6f08ae6013b38ef3",
         "type": "tabs",
         "children": [
           {
-            "id": "a4a0ed4f064b3144",
+            "id": "11d1860a72d300fa",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf"
+                "file": "Cose da fare.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "16 Lezione 12-13 Alberi"
+              "icon": "lucide-file",
+              "title": "Cose da fare"
             }
           }
         ]
@@ -169,8 +171,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a4a0ed4f064b3144",
+  "active": "11d1860a72d300fa",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/Consegne esercizi assembly.md",
