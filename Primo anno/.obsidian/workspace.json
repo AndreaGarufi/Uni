@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "3ea9dcc721321ec5",
+        "id": "e69a3e80b36a435a",
         "type": "tabs",
         "children": [
           {
-            "id": "c540fb5cdd6f0087",
+            "id": "a4a0ed4f064b3144",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf"
               },
-              "icon": "lucide-file",
-              "title": "9 Circuiti Integrati"
+              "icon": "lucide-file-text",
+              "title": "16 Lezione 12-13 Alberi"
             }
           }
         ]
@@ -171,8 +169,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c540fb5cdd6f0087",
+  "active": "a4a0ed4f064b3144",
   "lastOpenFiles": [
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/Consegne esercizi assembly.md",
     "conflict-files-obsidian-git.md",
     "Cose da fare.md",
@@ -197,7 +197,6 @@
     "ORARIO_LEZIONI-VECCHIO.jpg",
     "Primo Semestre/Modelli/Pasted image 20250605215546.png",
     "Project ideas.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
@@ -206,7 +205,6 @@
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
     "ciao.md",
     "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Inglese/Connettivi.md",
