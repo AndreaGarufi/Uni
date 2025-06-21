@@ -1,0 +1,5 @@
+1 Neil USA 2000.5 0  
+2 Yuri RUSSIA 1500 50000 Roscosmos 
+3 Samantha ITA 1800 30000 ESA 
+6 Chris CANADA 1700 0  
+8 Jessica USA 2200 60000 NASA 
