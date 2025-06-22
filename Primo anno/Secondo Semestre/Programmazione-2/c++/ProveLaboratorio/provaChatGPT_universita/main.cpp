@@ -66,7 +66,7 @@ class Node{
     }
     friend class Stack<T>;
     ~Node(){
-
+        delete alunno;
     }
     private:    
     StudenteRaccomandato *alunno;
@@ -88,11 +88,48 @@ class Stack{
         }
     }
     void leggiFile();
+    void rimuoviSottoSoglia(float points);
+
 
     private:
     int lun;
     Node<T> *head;
 };
+
+template <typename T>
+void Stack<T>::rimuoviSottoSoglia(float points){
+
+    Node<T> **array = new Node<T>*[lun];
+    int dim = lun;
+    Node<T> *current = head;
+    for(int i = 0; i < dim; i++){
+        array[i] = new Node<T>(current->alunno->matricola,current->alunno->nome,current->alunno->cognome,
+        current->alunno->punteggio,current->alunno->professore,current->alunno->controllo,nullptr);
+        current = current->next;
+        
+    }
+    for(int i = 0; i < dim; i++){
+        pop();
+    }
+
+    for(int i = 0; i < dim; i++){
+        if(array[i]->alunno->punteggio < points && array[i]->alunno->controllo != true){
+            cout << endl << "Elimino: " <<endl;
+            array[i]->alunno->stampa();
+            delete array[i];
+            array[i] = nullptr;
+        }
+    }
+
+    for(int i = dim-1; i >= 0; i--){
+        if(array[i] != nullptr){
+            push(array[i]->alunno->matricola,array[i]->alunno->nome,array[i]->alunno->cognome,
+        array[i]->alunno->punteggio,array[i]->alunno->professore,array[i]->alunno->controllo);
+        }
+    }
+    cout <<endl;
+    print();
+}
 
 template <typename T>
 void Stack<T>::leggiFile(){
@@ -106,23 +143,6 @@ void Stack<T>::leggiFile(){
     string name, surname,teacher,raccomandazione;
     float points = 0;
     bool flag = false;
-    
-
-    /*while(file >> number >> name >> surname >> points){
-        raccomandazione = "";
-        teacher = "";
-        flag = false;
-        if((file >> raccomandazione)){
-            if(raccomandazione == "raccomandato"){
-                file >> teacher;
-                push(number,name,surname,points,teacher,true);
-            }else if(raccomandazione != "raccomandato"){
-                cout << "CIAO";
-                teacher = "";
-                push(number,name,surname,points,teacher,false);
-            }
-        }
-    }*/
 
     while(file >> number >> name >> surname >> points){
     raccomandazione = "";
@@ -144,45 +164,8 @@ void Stack<T>::leggiFile(){
             }
         }
     }
-
-    cout << number << " " << name << " " << surname << " " << points << " ";
-    if(flag) cout << "raccomandato ";
-    cout << teacher << endl;
-
     push(number, name, surname, points, teacher, flag);
-}
-
-//     string line;
-// while (getline(file, line)) {
-//     istringstream iss(line);
-//     int number;
-//     string name, surname, raccomandazione, teacher;
-//     float points;
-//     bool flag = false;
-    
-//     iss >> number >> name >> surname >> points;
-    
-//     if (iss >> raccomandazione) {
-//         if (raccomandazione == "raccomandato") {
-//             flag = true;
-//             if (!(iss >> teacher)) {
-//                 teacher = "";
-//             }
-//         } else {
-//             teacher = raccomandazione;
-//             raccomandazione = "";
-//         }
-//     } else {
-//         raccomandazione = "";
-//         teacher = "";
-//     }
-    
-//     cout << number << " " << name << " " << surname << " " << points << " ";
-//     if (flag) cout << "raccomandato ";
-//     cout << teacher << endl;
-
-//     push(number, name, surname, points, teacher, flag);
-// }
+    }
 
 }
 
@@ -219,17 +202,12 @@ void Stack<T>::push(int number,string name,string surname,float points,string te
 
 int main(){
     Stack<StudenteRaccomandato> pila;
-    /*pila.push(100,"MELO","MELOSO",180,"Cutello",true);
-    pila.push(100,"MELINO","MELANDO",50,"",false);
-    pila.push(100,"MELONE","MELANOSO",100,"",false);
-    pila.push(100,"GIANNI","SPERTI",90,"",false);
-    pila.push(100,"NIKO","PANDETTA",80,"Farinella",true);*/
     pila.leggiFile();
     pila.print();
-    cout << endl << "Rimuovo un elemento dalla pila" <<endl;
-    pila.pop();
-    pila.print();
+    // cout << endl << "Rimuovo un elemento dalla pila" <<endl;
+    // pila.pop();
+    // pila.print();
 
-
+    pila.rimuoviSottoSoglia(80);
     return 0;
 }

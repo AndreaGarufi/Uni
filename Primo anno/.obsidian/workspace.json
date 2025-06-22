@@ -11,10 +11,14 @@
             "id": "11f3d91b369cb381",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Semestre/Programmazione-2/EsamiTeoria/Punti.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Punti"
             }
           }
         ]
@@ -169,6 +173,8 @@
   },
   "active": "11f3d91b369cb381",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/EsamiTeoria/4TestDiTeoria.docx",
+    "Secondo Semestre/Programmazione-2/EsamiTeoria/Punti.md",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Complessità.pdf",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Appunti pre-esame orale da ricordare.pdf",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Programmazione a Oggetti (OOP).pdf",
@@ -179,7 +185,6 @@
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.1 Lezione 10 Complessità - Parte 2.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.0 Lezione 10 Complessità - Parte 1.pdf",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Complessità.md",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Appunti pre-esame orale da ricordare.md",
@@ -214,7 +219,6 @@
     "Secondo Semestre/Modelli/Pasted image 20250513210206.png",
     "template.md",
     "Ci.md",
-    "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
