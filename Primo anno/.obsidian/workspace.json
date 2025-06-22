@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6a76c8db10d0d3b0",
+        "id": "e4e8ce2ffe86df87",
         "type": "tabs",
         "children": [
           {
-            "id": "1dc53d6a28108a5c",
+            "id": "11f3d91b369cb381",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -167,8 +167,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1dc53d6a28108a5c",
+  "active": "11f3d91b369cb381",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Complessità.pdf",
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Appunti pre-esame orale da ricordare.pdf",
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Programmazione a Oggetti (OOP).pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/0 Introduzione.pdf",
     "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
     "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
@@ -177,9 +180,6 @@
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.1 Lezione 10 Complessità - Parte 2.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.0 Lezione 10 Complessità - Parte 1.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/13 Lezione 09 Liste.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/12 Lezione 07 Template.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/11 Lezione 06 ereditarieta e polimorfismo.pdf",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Complessità.md",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Appunti pre-esame orale da ricordare.md",
