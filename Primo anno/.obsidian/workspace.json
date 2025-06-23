@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e4e8ce2ffe86df87",
+        "id": "be826d4452146dc2",
         "type": "tabs",
         "children": [
           {
-            "id": "11f3d91b369cb381",
+            "id": "dd91ea8e6ea88de1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Semestre/Programmazione-2/EsamiTeoria/Punti.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Punti"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -171,20 +167,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "11f3d91b369cb381",
+  "active": "dd91ea8e6ea88de1",
   "lastOpenFiles": [
-    "Secondo Semestre/Programmazione-2/EsamiTeoria/4TestDiTeoria.docx",
     "Secondo Semestre/Programmazione-2/EsamiTeoria/Punti.md",
+    "Secondo Semestre/Programmazione-2/EsamiTeoria/2TestTeoria.pdf",
+    "Secondo Semestre/Programmazione-2/EsamiTeoria/4TestTeoria.pdf",
+    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
+    "Secondo Semestre/Programmazione-2/EsamiTeoria/4TestDiTeoria.docx",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Complessità.pdf",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Appunti pre-esame orale da ricordare.pdf",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Programmazione a Oggetti (OOP).pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/0 Introduzione.pdf",
     "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
     "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/17 Lezione 15 Grafi.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/15 Lezione 11 Ordinamento_e_ricerca.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/14.1 Lezione 10 Complessità - Parte 2.pdf",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Complessità.md",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Appunti pre-esame orale da ricordare.md",

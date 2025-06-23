@@ -145,26 +145,26 @@ void Stack<T>::leggiFile(){
     bool flag = false;
 
     while(file >> number >> name >> surname >> points){
-    raccomandazione = "";
-    teacher = "";
-    flag = false;
+        raccomandazione = "";
+        teacher = "";
+        flag = false;
 
-    // Usare peek per vedere se c'è altro da leggere (spazio o fine riga)
-    if(file.peek() != '\n' && file.peek() != EOF){
-        if(file >> raccomandazione){
-            if(raccomandazione == "raccomandato"){
-                if(!(file >> teacher)){
-                    teacher = "";
+        // Usare peek per vedere se c'è altro da leggere (spazio o fine riga)
+        if(file.peek() != '\n' && file.peek() != EOF){
+            if(file >> raccomandazione){
+                if(raccomandazione == "raccomandato"){
+                    if(!(file >> teacher)){
+                        teacher = "";
+                    }
+                    flag = true;
+                } else {
+                    // Se la parola non è raccomandato, allora è insegnante
+                    teacher = raccomandazione;
+                    raccomandazione = "";
                 }
-                flag = true;
-            } else {
-                // Se la parola non è raccomandato, allora è insegnante
-                teacher = raccomandazione;
-                raccomandazione = "";
             }
         }
-    }
-    push(number, name, surname, points, teacher, flag);
+        push(number, name, surname, points, teacher, flag);
     }
 
 }
