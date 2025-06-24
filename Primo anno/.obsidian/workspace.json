@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "be826d4452146dc2",
+        "id": "a42a43835b4fcfe7",
         "type": "tabs",
         "children": [
           {
-            "id": "dd91ea8e6ea88de1",
+            "id": "5d094427be905359",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Secondo Semestre/Programmazione-2/EsamiTeoria/Punti.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/17 Lezione 15 Grafi.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Punti"
+              "icon": "lucide-file-text",
+              "title": "17 Lezione 15 Grafi"
             }
           }
         ]
@@ -171,11 +169,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dd91ea8e6ea88de1",
+  "active": "5d094427be905359",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/EsamiTeoria/Punti.md",
     "Secondo Semestre/Programmazione-2/EsamiTeoria/2TestTeoria.pdf",
     "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25/mainCAST.cpp",
-    "Secondo Semestre/Programmazione-2/EsamiTeoria/Punti.md",
     "Secondo Semestre/Programmazione-2/EsamiTeoria/4TestTeoria.pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
     "Secondo Semestre/Programmazione-2/EsamiTeoria/4TestDiTeoria.docx",
@@ -184,7 +182,6 @@
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Programmazione a Oggetti (OOP).pdf",
     "Secondo Semestre/Programmazione-2/FileCondivisiTeams/0 Introduzione.pdf",
     "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
-    "Secondo Semestre/Programmazione-2/[OCR] - Fondamenti di programmazione in c++.pdf",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Complessità.md",
     "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Appunti pre-esame orale da ricordare.md",
