@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a42a43835b4fcfe7",
+        "id": "75e72a90fe2f1999",
         "type": "tabs",
         "children": [
           {
-            "id": "5d094427be905359",
+            "id": "de71a4d8a68263f0",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo Semestre/Programmazione-2/FileCondivisiTeams/17 Lezione 15 Grafi.pdf"
+                "file": "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/Consegne esercizi assembly.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "17 Lezione 15 Grafi"
+              "icon": "lucide-file",
+              "title": "Consegne esercizi assembly"
             }
           }
         ]
@@ -42,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Esplora risorse"
+              "title": "Files"
             }
           },
           {
@@ -146,8 +148,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ],
@@ -160,62 +162,63 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Apri selezione rapida": false,
-      "graph:Apri vista grafo": false,
-      "canvas:Crea nuova lavagna": false,
-      "daily-notes:Apri nota del giorno": false,
-      "templates:Inserisci modello": false,
-      "command-palette:Apri riquadro comandi": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5d094427be905359",
+  "active": "de71a4d8a68263f0",
   "lastOpenFiles": [
+    "Secondo Semestre/Programmazione-2/c++/liste/ListaPitStop.cpp",
+    "Secondo Semestre/Programmazione-2/c++/alberi/alberoRicerca.cpp",
+    "Secondo Semestre/Programmazione-2/c++/alberi/alberoF1.cpp",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/trainingGenerale.cpp",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_universita/input.txt",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_universita/main.cpp",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_universita/esame.pdf",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_universita/a.exe",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_universita",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_spazio/outputCODA.txt",
+    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_spazio/outputBST.txt",
     "Secondo Semestre/Programmazione-2/EsamiTeoria/Punti.md",
-    "Secondo Semestre/Programmazione-2/EsamiTeoria/2TestTeoria.pdf",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/16_05_25/mainCAST.cpp",
-    "Secondo Semestre/Programmazione-2/EsamiTeoria/4TestTeoria.pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/16 Lezione 12-13 Alberi.pdf",
-    "Secondo Semestre/Programmazione-2/EsamiTeoria/4TestDiTeoria.docx",
-    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Complessità.pdf",
-    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Appunti pre-esame orale da ricordare.pdf",
-    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/PDFs/Programmazione a Oggetti (OOP).pdf",
-    "Secondo Semestre/Programmazione-2/FileCondivisiTeams/0 Introduzione.pdf",
-    "Secondo Semestre/Programmazione-2/Introduction_to_Algorithms_Thomas_H_Cormen,_Charles_E_Leiserson.pdf",
-    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Programmazione a Oggetti (OOP).md",
-    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Complessità.md",
-    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Appunti pre-esame orale da ricordare.md",
-    "Cose da fare.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/Consegne esercizi assembly.md",
-    "conflict-files-obsidian-git.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
+    "Cose da fare.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Appunti pre-esame orale da ricordare.md",
     "Secondo Semestre/Modelli/Pasted image 20250612130622.png",
     "Secondo Semestre/Modelli/Pasted image 20250612130613.png",
     "Secondo Semestre/Modelli/Pasted image 20250612125611.png",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
     "ORARIO_LEZIONI_NUOVO.jpeg",
-    "ORARIO_LEZIONI-VECCHIO.jpg",
+    "conflict-files-obsidian-git.md",
     "Primo Semestre/Modelli/Pasted image 20250605215546.png",
-    "Project ideas.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
-    "Pipelining e come è fatto_funziona il processore.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
-    "ciao.md",
-    "Secondo Semestre/Programmazione-2/Programmazione a Oggetti (OOP).md",
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Programmazione a Oggetti (OOP).md",
     "Secondo Semestre/Inglese/Connettivi.md",
-    "Secondo Semestre/Programmazione-2/Complessità.md",
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Complessità.md",
     "Secondo Semestre/Modelli/Pasted image 20250515100538.png",
     "Secondo Semestre/Modelli/Pasted image 20250515100425.png",
     "Secondo Semestre/Modelli/Pasted image 20250515100355.png",
+    "Project ideas.md",
     "Secondo Semestre/Modelli/Pasted image 20250513210206.png",
+    "Secondo Semestre/Modelli/Pasted image 20250513210131.png",
     "template.md",
     "Ci.md",
+    "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
+    "Secondo Semestre/Senza nome.md",
+    "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
+    "Primo Semestre/programmazione-1/Tips Algoritmi.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }

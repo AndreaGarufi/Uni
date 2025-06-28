@@ -60,9 +60,10 @@ class Bst{
     Bst():root(nullptr){}
     void insert(int d);
     void printRicorsiva();
-    void print(BstNode *r);
+    
 
     private:
+    void print(BstNode *r);
     BstNode *root;
 };
 
