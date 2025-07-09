@@ -41,9 +41,27 @@ Infine definiamo $a<b$ se esiste un $n ∈\,N$ tale che $a+n=b$
 **Sottrazione e divisione**
 Servono a risolvere dei problemi quali: quello di trovare $n$ tale che $n=b+a$ (sottrazione) e quello di trovare $n$ tale che $a=bn$ (divisione). Essi tuttavia non sono sempre risolvibili e questo a portato a nuovi insiemi numerici
 
+**Insieme numeri relativi $Z$**
+Ad un $n∈N$ aggiungiamo i segni + e - creando cosi l'insieme $Z$ composto da: $\{0\} \cup \{+n : n∈N\}\cup \{-n : n∈N\}$
+Qui notiamo che la sottrazione diventa sempre risolvibile, inoltre **$N$ è un sottoinsieme di $Z$** perché $n$ e $+n$ si comportano allo stesso identico modo (sono lo stesso numero)
 
+**Insieme numeri razionali $Q$** 
+Questo insieme è formato da tutte le coppie diverse da 0 di $(m,n)$ dove $m∈Z$ e $n∈N$, questo perché al denominatore il numero è positivo e il segno si mette al numeratore. Qui vediamo che anche la divisione e sempre risolvibile
+$Z$ **è un sottoinsieme di** $Q$ perché $z∈Z$ e $\frac{z}{1}∈Q$ si comportano allo stesso identico modo (sono lo stesso numero)
 
+**Insieme numeri reali $R$**
+L'insieme $Q$ lascia irrisolto il problema dell'estrazione della radice (es. $\sqrt{2}$ , qual è il numero che elevato alla seconda da come risultato 2? Non esiste in $Q$), si utilizza così la rappresentazione dei numeri in decimale, infatti ogni $\frac{m}{n} ∈Q$ ammette la rappresentazione del tipo:  $a=±a_0,a_1,a_2,a_3 ...$ -> numeri con la virgola
+che può essere finito o periodico.
+**Adesso possiamo introdurre** $R = \{0\}\cup \{±a_0,a_1,a_2,a_3 ...:a_0 ∈N_0, a_i∈\{ 0 ...9\}∀i ∈ N_0\}$
+$R$ **è quindi costituito da tutti gli allineamenti decimali periodici e non periodici e dallo zero**
 
-Questo problema ha portato all’introduzione degli insiemi numerici successivi
+se l'allineamento decimale (i numeri dopo la virgola) è periodico (sempre gli stessi numeri dopo la virgola es. 1,333...) è razionale, altrimenti irrazionale (cioè non può essere scritto come frazione) 
 
+**Per introdurre ordine in $R$:**
+1) Ogni numero negativo è minore di 0 e ogni positivo è maggiore di 0
+2) dati 2 numeri positivi diremo maggiore quello con la prima cifra diversa maggiore es. +4, 718652 > +4, 718372
+3) Dati 2 numeri $a,b<0$ diremo che $a<b$ se $-a >-b$
 
+**Somma in $R$**
+1) $a+0=a$ per ogni $a∈R$
+2) 
