@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "75e72a90fe2f1999",
+        "id": "dfe34af353947597",
         "type": "tabs",
         "children": [
           {
-            "id": "de71a4d8a68263f0",
+            "id": "713169a263dce621",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/Consegne esercizi assembly.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo Semestre/Analisi-1/Esame/programmaEAM12425.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Consegne esercizi assembly"
+              "icon": "lucide-file-text",
+              "title": "programmaEAM12425"
             }
           }
         ]
@@ -44,7 +42,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Esplora risorse"
             }
           },
           {
@@ -162,28 +160,30 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "de71a4d8a68263f0",
+  "active": "713169a263dce621",
   "lastOpenFiles": [
-    "Secondo Semestre/Programmazione-2/c++/liste/ListaPitStop.cpp",
-    "Secondo Semestre/Programmazione-2/c++/alberi/alberoRicerca.cpp",
-    "Secondo Semestre/Programmazione-2/c++/alberi/alberoF1.cpp",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/trainingGenerale.cpp",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_universita/input.txt",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_universita/main.cpp",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_universita/esame.pdf",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_universita/a.exe",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_universita",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_spazio/outputCODA.txt",
-    "Secondo Semestre/Programmazione-2/c++/ProveLaboratorio/provaChatGPT_spazio/outputBST.txt",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/4 AppuntiCap4.pdf",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/3 Appunticap3.pdf",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/2 Appunticap2.pdf",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf",
+    "Secondo Semestre/Analisi-1/Marcellini, Sbordone - Esercitazioni Di Matematica Vol 1-1.pdf",
+    "Secondo Semestre/Analisi-1/Esame/proveEsame/EAM1_230625.pdf",
+    "Secondo Semestre/Analisi-1/Esame/proveEsame/EAM1_070725.pdf",
+    "Secondo Semestre/Analisi-1/Esame/programmaEAM12425.pdf",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli",
+    "Secondo Semestre/Analisi-1/Esame/proveEsame",
+    "Secondo Semestre/Analisi-1/Senza nome.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/Consegne esercizi assembly.md",
     "Secondo Semestre/Programmazione-2/EsamiTeoria/Punti.md",
     "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
@@ -191,7 +191,6 @@
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/Consegne esercizi assembly.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
     "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
@@ -218,7 +217,6 @@
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Secondo Semestre/Senza nome.md",
     "Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
-    "Primo Semestre/programmazione-1/Tips Algoritmi.md",
     "programmazione-1/Senza nome.canvas"
   ]
 }
