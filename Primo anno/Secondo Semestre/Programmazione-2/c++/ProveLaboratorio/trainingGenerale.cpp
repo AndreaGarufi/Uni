@@ -60,13 +60,18 @@ class Bst{
     Bst():root(nullptr){}
     void insert(int d);
     void printRicorsiva();
+<<<<<<< HEAD
     void print(BstNode *r);
     void eliminaAlbero(BstNode *r);
     ~Bst(){
         eliminaAlbero(root);
     }
+=======
+    
+>>>>>>> origin/main
 
     private:
+    void print(BstNode *r);
     BstNode *root;
 };
 
