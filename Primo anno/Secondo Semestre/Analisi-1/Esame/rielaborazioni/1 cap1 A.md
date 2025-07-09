@@ -64,4 +64,32 @@ se l'allineamento decimale (i numeri dopo la virgola) è periodico (sempre gli s
 
 **Somma in $R$**
 1) $a+0=a$ per ogni $a∈R$
-2) 
+2) Supponiamo di avere 2 numeri $a,b>0$, prendiamo le successioni decimali troncate fino a $n$ numeri e sommiamo i $a_0,a_1,a_2,a_n$ + $b_0,b_1,b_2,b_n$ vedremo che le cifre tenderanno a stabilizzarsi. es.
+![[Pasted image 20250709165824.png]]
+
+
+3) Se uno dei due numeri è negativo (o lo sono entrambi) si procede come nel caso dei numeri razionali: ad esempio, −π + √2 = −(π − √2)
+
+
+**Teorema di densità di $Q$ e $R \setminus Q$ in $R$**
+Siano $a,b$ 2 numeri reali con $a<b$, allora esistono infiniti numeri razionali $r$ e irrazionali $s$ tra $a$ e $b$Quindi $a < r < b$    e     $a < s <b$ 
+(in pratica ci sono infiniti numeri decimali, frazioni e virgola, tra 2 numeri reali a e b)
+
+Tutti gli infiniti numeri compresi tra $a$ e $b$ prendono il nome di **intervallo** di estremi $a$ e $b$
+Considereremo **2 tipi di intervalli: limitati e non limitati**.
+1) Intervalli limitati
+   - $]a,b[\,=\{x∈R: a<x<b\}$
+   - $[a,b]\,=\{x∈R: a≤x≤b\}$ 
+1) Intervalli non limitati
+   - $]a,+∞[\,=\{x ∈R: x>a\}$ ->semiretta non limitata superiormente
+   - $]-∞,b[\,=\{x∈R:x <b\}$ ->semiretta non limitata inferiormente
+   - analogamente: $[a,+∞[$ e $]-∞,b]$
+   - $]-∞,+∞[\,=R$
+ 
+Con la scrittura (a,b) definiamo un intervallo generico (uno qualunque di quelli sopra)
+Un intervallo del tipo $]c-r,c+r[$ (con $c∈R,r>0$) è detto **intorno** di $c$ di raggio $r$
+
+
+
+
+**Insiemi finiti, infiniti, numerabili**

@@ -46,7 +46,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -196,15 +196,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c4eb723b9b860e17",
+  "active": "04754019e74ae768",
   "lastOpenFiles": [
-    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1 A.md",
-    "conflict-files-obsidian-git.md",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf",
     "Secondo Semestre/Analisi-1/Esame/programmaEAM12425.pdf",
     "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/4 AppuntiCap4.pdf",
     "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/3 Appunticap3.pdf",
     "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/2 Appunticap2.pdf",
+    "Secondo Semestre/Modelli/Pasted image 20250709165824.png",
+    "conflict-files-obsidian-git.md",
     "Secondo Semestre/Analisi-1/Marcellini, Sbordone - Esercitazioni Di Matematica Vol 1-1.pdf",
     "Secondo Semestre/Analisi-1/Esame/proveEsame/EAM1_230625.pdf",
     "Secondo Semestre/Analisi-1/Esame/proveEsame/EAM1_070725.pdf",
@@ -238,7 +239,6 @@
     "Secondo Semestre/Modelli/Pasted image 20250515100355.png",
     "Project ideas.md",
     "Secondo Semestre/Modelli/Pasted image 20250513210206.png",
-    "Secondo Semestre/Modelli/Pasted image 20250513210131.png",
     "template.md",
     "Ci.md",
     "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
