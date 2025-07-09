@@ -60,12 +60,28 @@ class Bst{
     Bst():root(nullptr){}
     void insert(int d);
     void printRicorsiva();
+<<<<<<< HEAD
+    void print(BstNode *r);
+    void eliminaAlbero(BstNode *r);
+    ~Bst(){
+        eliminaAlbero(root);
+    }
+=======
     
+>>>>>>> origin/main
 
     private:
     void print(BstNode *r);
     BstNode *root;
 };
+
+void Bst::eliminaAlbero(BstNode *r){
+    if(r != nullptr){
+    eliminaAlbero(r->left);
+    eliminaAlbero(r->right);
+    delete r;
+    }
+}
 
 void Bst::printRicorsiva(){
     print(root);
