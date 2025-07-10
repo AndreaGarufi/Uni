@@ -71,7 +71,7 @@ se l'allineamento decimale (i numeri dopo la virgola) è periodico (sempre gli s
 3) Se uno dei due numeri è negativo (o lo sono entrambi) si procede come nel caso dei numeri razionali: ad esempio, −π + √2 = −(π − √2)
 
 
-**Teorema di densità di $Q$ e $R \setminus Q$ in $R$**
+**TEOREMA di densità di $Q$ e $R \setminus Q$ in $R$**
 Siano $a,b$ 2 numeri reali con $a<b$, allora esistono infiniti numeri razionali $r$ e irrazionali $s$ tra $a$ e $b$Quindi $a < r < b$    e     $a < s <b$ 
 (in pratica ci sono infiniti numeri decimali, frazioni e virgola, tra 2 numeri reali a e b)
 
@@ -93,3 +93,49 @@ Un intervallo del tipo $]c-r,c+r[$ (con $c∈R,r>0$) è detto **intorno** di $c$
 
 
 **Insiemi finiti, infiniti, numerabili**
+- Siano $A$ e $B$ 2 insiemi non vuoti, diremo che hanno la **stessa potenza** se esiste una corrispondenza biunivoca $f : A\, -> B$
+- Diremo che **$X$ è finito** ed ha $n$ elementi se esiste una corrispondenza biunivoca tra $X$ e $\{1,2 ...n\}$, **in caso** **contrario è detto infinito**
+- Un **insieme infinito ha la caratteristica di avere la stessa potenza dei suoi sottoinsiemi**, es. prendiamo $N$ (naturali) e $P$ che è l'insieme dei numeri naturali pari, possiamo fare una corrispondenza biunivoca tra $n∈N$ e $2n∈P$ (se raddoppio un qualsiasi numero per 2, questo è pari)
+- Un **insieme $X$ è detto numerabile se ha la stessa potenza di $N$**, $Z$ e $Q$ sono numerabili, per $R$ invece:
+  - Tutti gli intervalli hanno la medesima potenza, (1,2) (4,6) (+∞,-∞) hanno tutti la stessa cardinalità (ci sono numeri infiniti tra 1 e 2 o tra 4 e 6)
+  - La potenza degli intervalli è maggiore del numerabile, un intervallo reale come (0,1) non è numerabile: non esiste un modo per elencare tutti i numeri reali in quell'intervallo.
+  - $R$ ha la stessa potenza di un suo intervallo, (hanno la stessa cardinalità)
+$R$ **ha quindi una potenza maggiore del numerabile, ha quindi la potenza del continuo**
+
+
+**Valore assoluto**
+Se $x$ è un numero reale, definiamo $|x|$ il valore assoluto di $x$, che quando:
+- $x≥0$ -> $|x| = x$ 
+- $x<0$ -> $|x|=-x$ 
+Fatto cosi in modo che a prescindere dal segno del numero $|x|$ sia positivo
+
+**Proprietà per ogni x,y,z ∈ R**
+1) $|x| ≥0$,   $|x|=0$ se e solo se $x=0$
+2) $|-x|=|x|$
+3) $−|x| ≤ x ≤ |x|$
+4) $|xy| = |x| |y|$
+5) $a < x < b, a < y < b ⇒ |x − y| < b − a$
+6) $−a < x < a ⇔ |x| < a$
+7) $|a + b| ≤ |a| + |b|$
+8) $|a − b| ≤ |a| + |b|$
+9) $|x| < ε\,\,\,\,\, ∀ε > 0 ⇒ x = 0$
+
+
+**Estremo inferiore ed estremo superiore**
+Sia $X$ un insieme numerico, sottoinsieme non vuoto di $R$, un elemento $m∈X$ si dice **minimo** se $m <x$ per ogni $x∈X$, questo $m$ se esiste è unico.
+un elemento $M∈X$ si dice **massimo** se $M > x$ per ogni $x∈X$, questo $M$ se esiste è unico.
+
+**Perché potrebbero non esistere?**
+Perché se l'intervallo è aperto ($]1,2[$) allora ne l'1 ne il 2 sono compresi, ma dato che tra 1 e 2 ci sono numeri infiniti non trovero mai un numero più piccolo di tutti. Stessa cosa vale per il massimo. Se l'intervallo è chiuso allora gli estremi sono massimo e minimo.
+
+**Definizione**
+1) Un numero $h∈R$ è detto **minorante** di $X$ se $h≤x$ per ogni $x∈X$, h può appartenere a X ma anche starne fuori, semplicemente se l'insieme è chiuso il minorante è anche il minimo, mentre se è aperto il minorante sarà fuori dall'intervallo dell'insieme. $\underline{M_x}$ è l'insieme dei minoranti.
+2) Un numero $k∈R$ è detto **maggiorante** di $X$ se $k≥x$ per ogni $x∈X$. $\overline{M_x}$ è l'insieme dei maggioranti
+3) E' detto **limitato inferiormente** se $\underline{M_x}\neq0$, è **limitato superiormente** se $\overline{M_x}\neq0$, è **limitato** se ha sia dei minoranti che dei maggioranti -> $h < x <k$ ossia quando $X$ è contenuto in un intervallo
+
+**TEOREMA**
+
+
+
+
+
