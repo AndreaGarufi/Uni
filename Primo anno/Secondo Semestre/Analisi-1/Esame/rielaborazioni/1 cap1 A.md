@@ -134,8 +134,24 @@ Perché se l'intervallo è aperto ($]1,2[$) allora ne l'1 ne il 2 sono compresi,
 3) E' detto **limitato inferiormente** se $\underline{M_x}\neq0$, è **limitato superiormente** se $\overline{M_x}\neq0$, è **limitato** se ha sia dei minoranti che dei maggioranti -> $h < x <k$ ossia quando $X$ è contenuto in un intervallo
 
 **TEOREMA**
+1) Sia $X$ un insieme numerico limitato inferiormente, allora l'insieme dei minoranti ($\underline{M_x}$) di $X$ è dotato di massimo
+2) Sia $X$ un insieme numerico limitato superiormente, allora l'insieme dei maggioranti ($\overline{M_x}$) di $X$ è dotato di minimo
+Possiamo ora definire l'estremo superiore e quello inferiore di $X$:
+- **Se $X$ è limitato inferiormente si pone** $inf(X) =max(\underline{M_x})$, altrimenti $infX=-∞$
+- **Se $X$ è limitato superiormente si pone** $sup(X) =min(\overline{M_x})$, altrimenti $infX=+∞$
+
+**quindi un numero $l$ è un estremo inferiore di $X$ se e solo se verifica queste proprietà:**
+1) $l ≤ x \,\,\,\,\,∀x ∈ X$ -> mi dice che $l$ è un minorante
+2) $∀ε > 0\,\,\,\,\, ∃x ∈ X : x < l + ε$ -> mi dice che se sommo qualcosa a $l$ non è più un minorante di $X$ quindi $l$ è il massimo dei minoranti di $X$
+
+**Analogamente un numero $L$ è un estremo superiore di $X$ se e solo se verifica queste proprietà**
+1) $L ≥ x \,\,\,\,\,∀x ∈ X$
+2) $∀ε > 0\,\,\,\,\, ∃x ∈ X : x > L − ε$
 
 
-
+**Nozioni di topologia**
+Sia $X$ un insieme numerico. Si dice **punto interno di $X$** un punto $c$ se esiste $r>0$ tale che $]c-r,c+r[$ ⊆ $X$ -> un punto che sta dentro l'insieme numerico $X$
+Osserviamo che se X è un intervallo (a, b), i punti interni sono tutti e soli i punti dell’intervallo aperto $]a, b[$, l'insieme dei punti interni di $X$ è chiamato interno di $X$ e si denota con $int(X)$.
+L'insieme **$X$ è detto aperto** se è vuoto oppure, quando non è vuoto, tutti i suoi punti sono interni: $X = int(X)$ (es. $]a,b[$ oppure (1,3))
 
 
