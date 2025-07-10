@@ -150,8 +150,19 @@ Possiamo ora definire l'estremo superiore e quello inferiore di $X$:
 
 
 **Nozioni di topologia**
+$]c-r,c+r[$ -> si intende l'intervallo creato quindi da c ad r
+**Punto Interno**
 Sia $X$ un insieme numerico. Si dice **punto interno di $X$** un punto $c$ se esiste $r>0$ tale che $]c-r,c+r[$ ⊆ $X$ -> un punto che sta dentro l'insieme numerico $X$
 Osserviamo che se X è un intervallo (a, b), i punti interni sono tutti e soli i punti dell’intervallo aperto $]a, b[$, l'insieme dei punti interni di $X$ è chiamato interno di $X$ e si denota con $int(X)$.
-L'insieme **$X$ è detto aperto** se è vuoto oppure, quando non è vuoto, tutti i suoi punti sono interni: $X = int(X)$ (es. $]a,b[$ oppure (1,3))
+L'insieme **$X$ è detto aperto** se è vuoto oppure, quando non è vuoto, tutti i suoi punti sono interni: $X = int(X)$ (es. $]a,b[$ oppure (1,3), anche ∅ e $R$)
+
+**Punto di frontiera**
+Un numero reale $c$ è detto di frontiera se per ogni $r>0$ nell'intorno $]c-r,c+r[$ ci sono elementi di $X$ e elementi di $R\setminus X$ 
+
+**Punto di accumulazione**
+Un numero reale $c$ è detto di accumulazione se per ogni $r>0$ nell'intorno $]c-r,c+r[$ ci sono elementi di $X$ diversi da $c$ e il loro insieme si denota con $D(X)$ (la clausola “diverso da $c$” serve per **escludere i punti isolati**)
+(in breve un punto di accumulazione può essere dentro o fuori da $X$ basta che nell'intervallo $]c-r,c+r[$ ci sia almeno un punto di X diverso da $c$)
+Un punto interno è sempre di accumulazione mentre uno di frontiera può non esserlo.
+Un punto che non è di accumulazione si dice **punto isolato**
 
 
