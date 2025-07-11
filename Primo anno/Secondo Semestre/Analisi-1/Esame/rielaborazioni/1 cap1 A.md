@@ -136,6 +136,7 @@ Perché se l'intervallo è aperto ($]1,2[$) allora ne l'1 ne il 2 sono compresi,
 **TEOREMA**
 1) Sia $X$ un insieme numerico limitato inferiormente, allora l'insieme dei minoranti ($\underline{M_x}$) di $X$ è dotato di massimo
 2) Sia $X$ un insieme numerico limitato superiormente, allora l'insieme dei maggioranti ($\overline{M_x}$) di $X$ è dotato di minimo
+
 Possiamo ora definire l'estremo superiore e quello inferiore di $X$:
 - **Se $X$ è limitato inferiormente si pone** $inf(X) =max(\underline{M_x})$, altrimenti $infX=-∞$
 - **Se $X$ è limitato superiormente si pone** $sup(X) =min(\overline{M_x})$, altrimenti $infX=+∞$
@@ -165,4 +166,31 @@ Un numero reale $c$ è detto di accumulazione se per ogni $r>0$ nell'intorno $]c
 Un punto interno è sempre di accumulazione mentre uno di frontiera può non esserlo.
 Un punto che non è di accumulazione si dice **punto isolato**
 
+L’insieme $X$ è detto chiuso se il suo complementare $R \setminus X$ è aperto. **Si definisce chiusura di $X$ l’insieme**: $\overline{X}=X∪D(X)$ 
+da cui segue che un insieme è chiuso se e solo se contiene tutti i suoi punti di accumulazione e tutti i suoi punti di frontiera.
 
+Diremo che $X$ è denso in $R$ se $\overline X = R$ 
+
+
+**Potenze radici logaritmi**
+Se $a∈R$ e $n∈N_0$ allora **si definisce**:
+- $a^0=1$
+- $a^{n+1}=a^n+a$
+Se $a∈R\setminus\{0\}$ e $n∈N$ allora **si definisce**:
+$a^{-n}=\frac{1}{a^n}$
+
+Per esprimere la potenza quando l'esponente è razionale o irrazionale serve prima questo teorema:
+**TEOREMA DELLA RADICE $n$-esima ARITMETICA**
+Siano $a∈R$, con $a > 0$ e $n∈N$, con $n ≥2$ , allora esiste uno ed un solo numero $b$ tale che $b^n=a$ 
+
+il numero $b$ introdotto dal precedente teorema è detto radice $n$-esima aritmetica di $a$ e si indica con $\sqrt[n]{a}$ 
+Grazie a questo teorema se $a>0$ e $n∈N$ **si definisce**:
+$a^{\frac{1}{n}}=\sqrt[n]{a}$ 
+$a^{\frac{m}{n}}=(\sqrt[n]{a})^m$ 
+
+Per definire $a^b$ con $a > 0$ e $b$ irrazionale, si procede per stabilizzazione.
+
+**Le potenze ab che abbiamo definito sono tutte positive**. E' possibile anche vedere che, se $a > 1$, si ha $a^b > 1$ se e solo se $b > 0$; $0 < a < 1$, si ha $a^b > 1$ se e solo se $b < 0$
+
+
+**Discussione dell’equazione binomia**
