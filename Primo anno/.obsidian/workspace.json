@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "713169a263dce621",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/programmaEAM12425.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "programmaEAM12425"
-            }
-          },
-          {
             "id": "c4eb723b9b860e17",
             "type": "leaf",
             "state": {
@@ -34,7 +22,7 @@
             }
           },
           {
-            "id": "04754019e74ae768",
+            "id": "e7e35268ea8f4baa",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -44,9 +32,21 @@
               "icon": "lucide-file-text",
               "title": "1 AppuntiCap1"
             }
+          },
+          {
+            "id": "8a57ed5eb9e6a643",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Analisi-1/come risolvere esercizi/disequazione_1_valore_assoluto.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "disequazione_1_valore_assoluto"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -196,19 +196,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c4eb723b9b860e17",
+  "active": "8a57ed5eb9e6a643",
   "lastOpenFiles": [
-    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf",
+    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/disequazione_1_valore_assoluto.pdf",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1 A.md",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/disequazione_con_2_valori_assoluti.pdf",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf",
+    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/esempicap1.pdf",
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap2parte1.pdf",
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte3.pdf",
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte2.pdf",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/esempicap1.pdf",
+    "Secondo Semestre/Analisi-1/Esame/programmaEAM12425.pdf",
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/svolgimentosimulazione.pdf",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/simulazione_EAM1_2425.pdf",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/esercizicap3parte2.pdf",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/esercizicap3parte1.pdf",
     "Secondo Semestre/Modelli/Pasted image 20250709165824.png",
     "conflict-files-obsidian-git.md",
     "Secondo Semestre/Analisi-1/Senza nome.md",

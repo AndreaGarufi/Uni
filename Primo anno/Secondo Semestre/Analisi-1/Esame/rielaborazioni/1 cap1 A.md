@@ -172,7 +172,7 @@ da cui segue che un insieme è chiuso se e solo se contiene tutti i suoi punti d
 Diremo che $X$ è denso in $R$ se $\overline X = R$ 
 
 
-**Potenze radici logaritmi**
+**Potenze, radici, logaritmi**
 Se $a∈R$ e $n∈N_0$ allora **si definisce**:
 - $a^0=1$
 - $a^{n+1}=a^n+a$
@@ -194,3 +194,35 @@ Per definire $a^b$ con $a > 0$ e $b$ irrazionale, si procede per stabilizzazione
 
 
 **Discussione dell’equazione binomia**
+Siano $a∈R$ e $n∈N$ con $n≥2$, vogliamo trovare tutti i numeri reali $x$ tale che $x^n=a$ .
+Questa equazione è detta binomia.
+Vediamo quante soluzioni ha al variare di $a$
+1) $a=0$ , per la legge di annullamento del prodotto $x = 0$
+2) $a>0$ per il teorema della radice l'unica soluzione positiva è 
+   - $\sqrt[n]{a}$ 
+   - $x=0$ non è soluzione
+   - altre soluzioni saranno negative, in breve per $n$ pari $±\sqrt[n]{a}$ , per $n$ dispari $\sqrt[n]{a}$ 
+3) $a<0$ , $x=0$ non è soluzione e non possono esserci soluzioni positive, quindi la soluzione è negativa, per $n$ pari non ci sono soluzioni mentre per $n$ dispari si ha  $-\sqrt[n]{-a}$ 
+
+grazie a quanto visto possiamo estendere la nozione della radice: $\sqrt[n]{0}=0$  e $\sqrt[n]{x}=-\sqrt[n]{-x}$
+per $x<0$ e $n$ dispari
+
+
+**Logaritmo**
+Siano $a$ e $b$ due numeri positivi con $a\neq1$, si può dimostrare che l'equazione $a^x=b$ ha una sola soluzione, detta logaritmo di $b$ in base $a$ -> $log_a\,\,\,b$ , il logaritmo verifica l'uguaglianza:
+$a^{log_a\,\,\,b}=b$
+**Proprietà**
+1) $log_a\,\,\,a=1$    (l'equazione sarebbe $a^1=a$)
+2) $log_a\,\,\,b=0$ se e solo se $b=1$ 
+3) $log_a\,\,\,bc=log_a\,\,\,b+log_a\,\,\,c$
+4) $log_a\,\,\,b^x=x log_a\,\,\,b$
+5) $log_a\,\,\,\frac{b}{c}=log_a\,\,\,b-log_a\,\,\,c$
+6) $log_a\,\,\,b=(log_a\,\,\,c)(log_c\,\,\,b)$ 
+7) Dalla prima e dall’ultima delle precedenti eguaglianze, si ottiene:
+   $1=log_a\,\,\,a=(log_a\,\,\,b)(log_b\,\,\,a)⇒log_b\,\,\,a = \frac{1}{log_a\,\,\,b}$
+
+Osserviamo inoltre che: $log_a\,\,\,b>0$ se e solo se $a,b$ sono entrambi $> 1$ o $< 1$
+
+
+**CENNI SUI NUMERI COMPLESSI**
+**Definizioni e prime proprietà**
