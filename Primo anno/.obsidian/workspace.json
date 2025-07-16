@@ -1,14 +1,26 @@
 {
   "main": {
-    "id": "bf89027f93d81fb6",
+    "id": "95f54f1dafd373bf",
     "type": "split",
     "children": [
       {
-        "id": "dfe34af353947597",
+        "id": "513740b91da4d0d6",
         "type": "tabs",
         "children": [
           {
-            "id": "c4eb723b9b860e17",
+            "id": "2826ca4615c68c6c",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte2.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "eserccap1parte2"
+            }
+          },
+          {
+            "id": "979c29becd5545e8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,27 +34,17 @@
             }
           },
           {
-            "id": "e7e35268ea8f4baa",
+            "id": "eb435d4bf912c91d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf"
+                "file": "Cose da fare.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "1 AppuntiCap1"
-            }
-          },
-          {
-            "id": "8a57ed5eb9e6a643",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Analisi-1/come risolvere esercizi/disequazione_1_valore_assoluto.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "disequazione_1_valore_assoluto"
+              "icon": "lucide-file",
+              "title": "Cose da fare"
             }
           }
         ],
@@ -52,15 +54,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b504f1c1378291df",
+    "id": "6d61a9631df04d4c",
     "type": "split",
     "children": [
       {
-        "id": "90aced882f84f11d",
+        "id": "ce762966ca5147d8",
         "type": "tabs",
         "children": [
           {
-            "id": "59476c80b7c5f8bb",
+            "id": "4371091dceb8cd7d",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -73,7 +75,7 @@
             }
           },
           {
-            "id": "f69a8cd29e757190",
+            "id": "c7c08d62071d1982",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -90,7 +92,7 @@
             }
           },
           {
-            "id": "26ba83a7050d47cf",
+            "id": "af1b9a3f751a7ae5",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -103,35 +105,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 206.50043487548828
+    "width": 300
   },
   "right": {
-    "id": "e5cbad16aa00cfb4",
+    "id": "b0f0301d976babf0",
     "type": "split",
     "children": [
       {
-        "id": "83abbd526ffa63e0",
+        "id": "fc2b72cce7974bdb",
         "type": "tabs",
         "children": [
           {
-            "id": "545e5843f8bc6ddf",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "Etichette"
-            }
-          },
-          {
-            "id": "2078d0b59500042b",
+            "id": "e7e96a9c2f5f58b2",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,48 +131,58 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti"
+              "title": "Riferimenti a eserccap1parte1"
             }
           },
           {
-            "id": "d5a268691661c9eb",
+            "id": "780374c742bc64fb",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita"
+              "title": "Collegamenti in uscita da eserccap1parte1"
             }
           },
           {
-            "id": "7f4cc7a91368094a",
+            "id": "c97164531f3638dd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
+            }
+          },
+          {
+            "id": "53f6583ab62050cc",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
               "icon": "lucide-list",
-              "title": "Struttura"
-            }
-          },
-          {
-            "id": "b1638c93943e32a3",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "Struttura di eserccap1parte1"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
@@ -196,54 +196,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8a57ed5eb9e6a643",
+  "active": "eb435d4bf912c91d",
   "lastOpenFiles": [
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/disequazione_1_valore_assoluto.pdf",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1 A.md",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/disequazione_con_2_valori_assoluti.pdf",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi",
     "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/esempicap1.pdf",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap2parte1.pdf",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte3.pdf",
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte2.pdf",
-    "Secondo Semestre/Analisi-1/Esame/programmaEAM12425.pdf",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/svolgimentosimulazione.pdf",
-    "Secondo Semestre/Modelli/Pasted image 20250709165824.png",
-    "conflict-files-obsidian-git.md",
-    "Secondo Semestre/Analisi-1/Senza nome.md",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/Consegne esercizi assembly.md",
-    "Secondo Semestre/Programmazione-2/EsamiTeoria/Punti.md",
-    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/3 Struttura Processore.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1 A.md",
     "Cose da fare.md",
-    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
-    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Appunti pre-esame orale da ricordare.md",
-    "Secondo Semestre/Modelli/Pasted image 20250612130622.png",
-    "Secondo Semestre/Modelli/Pasted image 20250612130613.png",
-    "Secondo Semestre/Modelli/Pasted image 20250612125611.png",
-    "ORARIO_LEZIONI_NUOVO.jpeg",
-    "Primo Semestre/Modelli/Pasted image 20250605215546.png",
-    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Programmazione a Oggetti (OOP).md",
-    "Secondo Semestre/Inglese/Connettivi.md",
-    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Complessità.md",
-    "Secondo Semestre/Modelli/Pasted image 20250515100538.png",
-    "Secondo Semestre/Modelli/Pasted image 20250515100425.png",
-    "Secondo Semestre/Modelli/Pasted image 20250515100355.png",
-    "Project ideas.md",
-    "Secondo Semestre/Modelli/Pasted image 20250513210206.png",
-    "template.md",
-    "Ci.md",
-    "Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
-    "Secondo Semestre/Senza nome.md",
-    "programmazione-1/Senza nome.canvas"
+    "Secondo Semestre/Analisi-1/proveEsame/EAM1_230625.pdf",
+    "Secondo Semestre/Analisi-1/proveEsame/EAM1_070725.pdf",
+    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte3.pdf",
+    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf"
   ]
 }

@@ -158,7 +158,7 @@ Osserviamo che se X è un intervallo (a, b), i punti interni sono tutti e soli i
 L'insieme **$X$ è detto aperto** se è vuoto oppure, quando non è vuoto, tutti i suoi punti sono interni: $X = int(X)$ (es. $]a,b[$ oppure (1,3), anche ∅ e $R$)
 
 **Punto di frontiera**
-Un numero reale $c$ è detto di frontiera se per ogni $r>0$ nell'intorno $]c-r,c+r[$ ci sono elementi di $X$ e elementi di $R\setminus X$ 
+Un numero reale $c$ è detto di frontiera se per ogni $r>0$ nell'intorno $]c-r,c+r[$ ci sono elementi di $X$ e elementi di $R\setminus X$ , si denotano con $F(x)$
 
 **Punto di accumulazione**
 Un numero reale $c$ è detto di accumulazione se per ogni $r>0$ nell'intorno $]c-r,c+r[$ ci sono elementi di $X$ diversi da $c$ e il loro insieme si denota con $D(X)$ (la clausola “diverso da $c$” serve per **escludere i punti isolati**)
@@ -209,7 +209,7 @@ per $x<0$ e $n$ dispari
 
 
 **Logaritmo**
-Siano $a$ e $b$ due numeri positivi con $a\neq1$, si può dimostrare che l'equazione $a^x=b$ ha una sola soluzione, detta logaritmo di $b$ in base $a$ -> $log_a\,\,\,b$ , il logaritmo verifica l'uguaglianza:
+Siano $a$ e $b$ **due numeri positivi** con $a\neq1$, si può dimostrare che l'equazione $a^x=b$ ha una sola soluzione, detta logaritmo di $b$ in base $a$ -> $log_a\,\,\,b$ , il logaritmo verifica l'uguaglianza:
 $a^{log_a\,\,\,b}=b$
 **Proprietà**
 1) $log_a\,\,\,a=1$    (l'equazione sarebbe $a^1=a$)
