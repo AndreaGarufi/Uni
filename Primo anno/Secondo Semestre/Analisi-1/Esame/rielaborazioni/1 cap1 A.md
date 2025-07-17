@@ -309,6 +309,8 @@ $f$ è strettamente crescente (decrescente) in $(a,b)$ se e solo se è crescente
    $∀a∈[-1,1]$ definiamo $arccos (a)=$ l'unico $x∈[0,π]:cos(x)=a$ 
    
    **Come risolvere**![[Pasted image 20250717171144.png]]
+   ![[Pasted image 20250717172332.png]]
+   
    
    
 
