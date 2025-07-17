@@ -223,6 +223,99 @@ $a^{log_a\,\,\,b}=b$
 
 Osserviamo inoltre che: $log_a\,\,\,b>0$ se e solo se $a,b$ sono entrambi $> 1$ o $< 1$
 
+**FUNZIONI**
+**Dati 2 insiemi non vuoti $A$ e $B$ e $f$ criterio che associa ad ogni elemento di $A$ uno e un solo elemento di $B$**
+
+$f: A->B$ "$f$ definita in $A$ e con valori in $B$ "
+$A$ dominio della funzione
+$B$ codominio
+$f$ legge di definizione
+
+
+$\{f(x):x ∈A\}=f(A)$ ->immagine di $F$ 
+(in pratica prendo le $x ∈ A$ e attraverso la funzione $f$ ottengo dei risultati)
+
+**Definizione**
+$f$ è limitata se lo è $f(x)$ cioè esiste $a,b∈R$ tale che $a<f(x)<b$ per qualsiasi $x$
+quindi:
+- $sup(f)=sup(f(x))$
+- $inf(f)=inf(f(x))$
+
+abbiamo anche massimo e minimo relativo e assoluto
+
+**Monotonia della funzione**
+$f: (a,b)->R$ se $x<y$ e:
+- $f(x)≤f(y)$ allora $f$ è crescente
+- $f(x)<f(y)$ allora $f$ è strettamente crescente
+- $f(x)≥f(y)$ allora $f$ è decrescente
+- $f(x)>f(y)$ allora $f$ è strettamente decrescente
+
+Funzione crescente:
+![[Pasted image 20250717105105.png]]
+
+Funzione strettamente crescente
+![[Pasted image 20250717105238.png]]
+
+
+**TEOREMA strettamente crescente (decrescente)**
+$f$ è strettamente crescente (decrescente) in $(a,b)$ se e solo se è crescente (decrescente) in ogni punto di $(a,b)$  
+
+
+**Funzioni elementari**
+1) **Funzione potenza**
+   $n∈N$   $f(x)=x^n$           $∀x∈]-∞;+∞[$
+   
+   $n$ dispari
+   ![[Pasted image 20250717110509.png]]
+   $n$ pari
+   ![[Pasted image 20250717110531.png]]
+   La sua **inversa** è $\sqrt[n]{x}$
+
+2) **Polinomi**
+   $f(x) = a_0 x^n + a_{1} x^{n-1} + \dots + a_{n-1} x + a_n$
+   
+   $n=0$ ->polinomio costante $f(x)=a_0$ $∀x∈R$
+   se $a_0=0$ ->polinomio nullo
+   se 2 polinomi hanno lo stesso grado si dicono identici ($f(x)=g(x)$)
+   
+   **TEOREMA DI RUFFINI**
+   Il polinomio $f(x)$ è divisibile per $x-c$ se e solo se $f(c)=0$
+
+3) **Funzione razionale fratta** 
+   $f(x) = \frac{a_0 x^n + \dots + a_n}{b_0 x^p + \dots + b_p}$
+   $f$ è definita in $R\setminus\{c∈R:b_0c^p+ ... b_p = 0\}$
+   (significa: **tutti i numeri reali tranne** quelli che rendono **il denominatore nullo**.
+   significa che devo fare la condizione di esistenza negli esercizi ponendo il denominatore diverso da 0)
+
+4) **Funzione esponenziale**
+   $a∈R$ $a>0,a\neq1$    $f(x)=a^x$    $∀x∈R$
+   **soluzioni sempre positive**
+   
+   se $a>1$ la funzione è strettamente crescente se $0<a<1$ la funzione è strettamente decrescente
+
+5) **Funzione logaritmica**
+   E' l'inversa della funzione esponenziale
+
+6) **Funzioni trigonometriche**
+   Lavoriamo sulle circonferenze:
+   ![[Pasted image 20250717165038.png|450]]
+   Se $x∈R$ , $cosx(senx)$ è l'ascissa (l'ordinata) del secondo estremo di un arco della circonferenza avente primo estremo $A(1,0)$ e misure in radianti
+   ![[Pasted image 20250717165706.png|450]]
+   seno e coseno sono compresi uguali tra $0$ e $1$ 
+   $cos^2x+sen^2x=1$ per qualsiasi $x∈R$
+   
+   l'**arcocoseno e arcoseno** sono le funzioni inverse di coseno e seno
+   $cos[0,π]=[-1,1]$->questo è l'intervallo dei valori da $0=1$ a $π=-1$
+   $∀a∈[-1,1]$ definiamo $arccos (a)=$ l'unico $x∈[0,π]:cos(x)=a$ 
+   
+   **Come risolvere**![[Pasted image 20250717171144.png]]
+   
+   
+
+   
+
+
+
 
 **CENNI SUI NUMERI COMPLESSI**
 **Definizioni e prime proprietà**
