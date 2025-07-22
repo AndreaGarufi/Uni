@@ -310,9 +310,15 @@ $f$ è strettamente crescente (decrescente) in $(a,b)$ se e solo se è crescente
    
    **Come risolvere**![[Pasted image 20250717171144.png]]
    ![[Pasted image 20250717172332.png]]
-   
-   
-   
+**Definizione tangente**   
+$tanx=\frac{senx}{cosx}$      con $x\neq \frac{π}{2}+kπ$ con $k∈Z$   
+$tan(-x)=-tanx$
+la tangente è definita entro $-\frac{π}{2};\frac{π}{2}$   esclusi, ed strettamente crescente
+
+**Come risolvere**
+![[Pasted image 20250719120224.png]]
+
+
 
    
 
@@ -321,3 +327,54 @@ $f$ è strettamente crescente (decrescente) in $(a,b)$ se e solo se è crescente
 
 **CENNI SUI NUMERI COMPLESSI**
 **Definizioni e prime proprietà**
+Definiamo numero complesso la coppia ordinata $z=(a,b)$ con $a,b∈R$. Indicheremo con $C$ l'insieme dei numeri complessi.
+2 numeri complessi  $z=(a,b)$ e $w=(c,d)$ **si dicono uguali** $z=w$ se e solo se $a=c, b=d$ 
+**Dalla definizione possiamo capire che c'è una corrispondenza biunivoca tra $C$ e piano cartesiano**, possiamo associare quindi $a,b$ con i punti nel piano
+
+Sia $z=(a,b)$ se $b=0$ ->numero complesso reale altrimenti numero complesso immaginario, inoltre si dice immaginario puro se $a=0$ e $b\neq0$ 
+**Definizioni**
+- $0=(0,0)$ -> zero complesso
+- $1=(1,0)$ -> unita reale
+- $i=(0,1)$ ->unita immaginaria
+- $-z=(-a,-b)$ -> opposto di $z$
+- $\overline{z}=(a,-b)$ -> coniugato di $z$
+- $|z|=\sqrt[2]{a^2+b^2}$ -> modulo di $z$
+
+$|z|$ rappresenta la distanza dall'origine
+
+**Somma**
+$z+w=(a,b)+(c,d)=(a+c,b+d)$
+
+**Prodotto**
+$z\cdot w=(a,b)\cdot(c,d)=(ac-bd,ad+bc)$
+
+Osserviamo che: $z-z=0$ , $z\cdot 1=z$ , $z\cdot \overline{z}=|z|^2$ 
+
+I numeri reali si possono identificare come $(a,0)$ e pertanto $R$ **è un sottoinsieme di** $C$
+$i^2=-1$ -> se eseguiamo la moltiplicazione $(0,1)\cdot(0,1)$ otteniamo che $i^2=-1$
+
+**Forma algebrica e forma trigonometrica**
+Sia $z=(a,b)∈C$ alla luce delle definizioni precedenti, osserviamo che:
+$z = (a, 0) + (0, 1) · (b, 0)$ 
+otteniamo
+$z = a + ib$ ->**detta forma algebrica di $z$** 
+In pratica $z=(a,b)$ si può scrivere come $z=a+ib$
+Questa forma ci torna utile perché trattiamo $z$ come un polinomio
+
+Sia ora $z = a + ib$ un numero complesso non nullo, e sia $P = (a, b)$ il punto del piano che lo rappresenta. Indichiamo con $α$ la misura in radianti del più piccolo angolo di cui deve ruotare il semiasse delle ascisse positive per sovrapporsi in direzione e verso alla semiretta OP orientata da O verso P . I numeri $α + 2kπ (k ∈ Z)$ vengono chiamati argomenti di $z$
+![[Pasted image 20250722115113.png||400]]
+
+
+Se $A$ è la proiezione di $P$ sull’asse delle ascisse, il triangolo $OP A$ è un triangolo rettangolo quindi si ha $a = OA = |z| cos α$ e $b = AP = |z| sen α$. Il numero $z$ si può allora riscrivere nella forma $z = |z|(cos (α) + i sen (α))$ -> **detta forma trigonometrica.**
+![[Pasted image 20250722115306.png|400]]
+
+
+**Formula di Moivre per calcolare la potenza in forma trigonometrica**
+$z^n=|z|^n\cdot(cos(na)+isen(na))$ -> vale per ogni $n∈Z$ 
+
+**Radici**
+Siano $z$ un numero complesso e $n$ un intero maggiore o uguale a $2$. Un numero complesso $w$ tale che $w^n = z$ è detto radice $n-esima$ di $z$
+- troviamo tutte le radici di $z$
+
+1) $z =0$ l'unica radice è $w=0$ 
+2) 
