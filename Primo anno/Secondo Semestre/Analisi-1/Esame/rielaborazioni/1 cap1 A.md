@@ -377,4 +377,9 @@ Siano $z$ un numero complesso e $n$ un intero maggiore o uguale a $2$. Un numero
 - troviamo tutte le radici di $z$
 
 1) $z =0$ l'unica radice è $w=0$ 
-2) 
+2) $z\neq0$ , ovviamene qui la radice $w$ non è nulla, scriviamo entrambi in forma trigonometrica:
+   $z=|z|\cdot(cos(a)+isen(a))$ e   $w=|w|\cdot(cos(b)+isen(b))$ e adesso scriviamo grazie alla formula di Moivre l'eguaglianza $w^n=z$ in questo modo:
+   $w^n=|w|^n\cdot(cos(nb)+isen(nb))=|z|\cdot(cos(a)+isen(a))$, concludiamo che sono verificate le seguenti condizioni:
+   - $|w|^n=|z|$ -> $|w|=\sqrt[n]{|z|}$ 
+   - esiste un $k∈Z$ tale che $nb=a +2kπ$ da cui $b = \frac{a+2kπ}{n}$ 
+

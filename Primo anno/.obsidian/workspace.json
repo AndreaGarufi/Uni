@@ -34,6 +34,18 @@
             }
           },
           {
+            "id": "61a2ae93967ba799",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte3.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "eserccap1parte3"
+            }
+          },
+          {
             "id": "ee4f801f8d520d9e",
             "type": "leaf",
             "state": {
@@ -46,20 +58,9 @@
               "icon": "lucide-file",
               "title": "Condizioni di esistenza"
             }
-          },
-          {
-            "id": "61a2ae93967ba799",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte3.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "eserccap1parte3"
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -207,15 +208,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "979c29becd5545e8",
+  "active": "5056c08b2793e4f0",
   "lastOpenFiles": [
-    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf",
+    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte3.pdf",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1 A.md",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Condizioni di esistenza.md",
     "Pasted image 20250722115306.png",
     "Pasted image 20250722114304.png",
     "Pasted image 20250722115113.png",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte3.pdf",
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte2.pdf",
     "Cose da fare.md",
     "Pasted image 20250719120224.png",
