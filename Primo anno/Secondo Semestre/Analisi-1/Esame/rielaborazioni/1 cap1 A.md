@@ -361,7 +361,8 @@ $z = a + ib$ ->**detta forma algebrica di $z$**
 In pratica $z=(a,b)$ si può scrivere come $z=a+ib$
 Questa forma ci torna utile perché trattiamo $z$ come un polinomio
 
-Sia ora $z = a + ib$ un numero complesso non nullo, e sia $P = (a, b)$ il punto del piano che lo rappresenta. Indichiamo con $α$ la misura in radianti del più piccolo angolo di cui deve ruotare il semiasse delle ascisse positive per sovrapporsi in direzione e verso alla semiretta OP orientata da O verso P . I numeri $α + 2kπ (k ∈ Z)$ vengono chiamati argomenti di $z$
+Sia ora $z = a + ib$ un numero complesso non nullo, e sia $P = (a, b)$ il punto del piano che lo rappresenta. Indichiamo con $α$ la misura in radianti del più piccolo angolo di cui deve ruotare il semiasse delle ascisse positive per sovrapporsi in direzione e verso alla semiretta OP orientata da O verso P . I numeri $α + 2kπ (k ∈ Z)$ vengono chiamati argomenti di $z$ -> $arg(z)=arctan(\frac{b}{a})$ 
+
 ![[Pasted image 20250722115113.png||400]]
 
 
