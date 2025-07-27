@@ -1,5 +1,6 @@
+**ARGOMENTI**
 Insiemi numerici. Dai numeri naturali ai numeri reali. Insiemi finiti, infiniti, numerabili. Elementi di struttura di R: potenza del continuo. Densità di Q e di R\Q in R. Intervalli, intorni. Insiemi limitati. Minimo e massimo, minoranti e maggioranti, estremi inferiore e superiore di un insieme numerico. Insiemi separati, insiemi contigui. Punti interni, di frontiera, di accumulazione. Proprietà delle diseguaglianze fra numeri reali. Valore assoluto e sue proprietà. Potenza intera di un numero reale. Teorema della radice n-ma aritmetica. Potenza con esponente non intero di un numero reale. Numeri complessi: definizione, forma algebrica e trigonometrica. Potenze e radici di un numero complesso.
-
+Generalità sulle funzioni. Dominio, immagine e grafico di una funzione. Funzioni iniettive, suriettive, funzione inversa. Funzione composta. Funzioni reali di una variabile reale: funzioni limitate, estremo inferiore e superiore, estremi assoluti e relativi, oscillazione. Monotonia. Rapporto incrementale. Funzioni elementari: potenza, esponenziale, radice, logaritmo, polinomi, funzioni razionali fratte, funzioni trigonometriche e loro inverse.
 
 
 **Dai numeri naturali ai numeri reali**

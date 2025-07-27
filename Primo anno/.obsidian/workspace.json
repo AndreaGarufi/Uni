@@ -8,59 +8,46 @@
         "type": "tabs",
         "children": [
           {
-            "id": "979c29becd5545e8",
+            "id": "2b56d81e39bdd140",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1 A.md",
+                "file": "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1 cap1 A"
-            }
-          },
-          {
-            "id": "5056c08b2793e4f0",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "1 AppuntiCap1"
-            }
-          },
-          {
-            "id": "61a2ae93967ba799",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte3.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "eserccap1parte3"
+              "title": "2 cap2"
             }
           },
           {
             "id": "ee4f801f8d520d9e",
             "type": "leaf",
             "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/2 Appunticap2.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "2 Appunticap2"
+            }
+          },
+          {
+            "id": "629adf1baba1827f",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Condizioni di esistenza e formule.md",
+                "file": "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Condizioni di esistenza e formule"
+              "title": "1 cap1"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -208,27 +195,31 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ee4f801f8d520d9e",
+  "active": "2b56d81e39bdd140",
   "lastOpenFiles": [
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte3.pdf",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1 A.md",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/2 Appunticap2.pdf",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1.md",
+    "Secondo Semestre/Analisi-1/Esame/programmaEAM12425.pdf",
     "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/scrivere_in_forma_algebrica_espressione_complessa_i_denominatore.pdf",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Condizioni di esistenza e formule.md",
-    "Pasted image 20250722115306.png",
-    "Pasted image 20250722114304.png",
-    "Pasted image 20250722115113.png",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte2.pdf",
+    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte3.pdf",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/radici_complesse/Caso_solo_parte_reale_negativa.pdf",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/radici_complesse/Caso_solo_parte_immaginaria.pdf",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/radici_complesse/radice_complessa.pdf",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/radici_complesse",
     "Cose da fare.md",
-    "Pasted image 20250719120224.png",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/disequazione_con_2_valori_assoluti.pdf",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/disequazione_1_valore_assoluto.pdf",
+    "Secondo Semestre/Modelli/Pasted image 20250722115306.png",
+    "Pasted image 20250722114304.png",
+    "Secondo Semestre/Modelli/Pasted image 20250722115113.png",
+    "Secondo Semestre/Modelli/Pasted image 20250719120224.png",
     "Secondo Semestre/Modelli/Pasted image 20250717172332.png",
     "Secondo Semestre/Modelli/Pasted image 20250717171144.png",
     "Secondo Semestre/Modelli/Pasted image 20250717165706.png",
     "Pasted image 20250717165416.png",
     "Secondo Semestre/Modelli/Pasted image 20250717165038.png",
-    "Secondo Semestre/Modelli/Pasted image 20250717110531.png",
-    "Secondo Semestre/Analisi-1/proveEsame/EAM1_230625.pdf",
-    "Secondo Semestre/Analisi-1/proveEsame/EAM1_070725.pdf",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf"
+    "Secondo Semestre/Modelli/Pasted image 20250717110531.png"
   ]
 }
