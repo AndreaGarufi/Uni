@@ -1,4 +1,5 @@
-rivedere radice complesse con argomento negativo
+TEOREMA DELLA PERMANENZA DEL SEGNO
+
 
 
 

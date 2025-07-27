@@ -15,10 +15,19 @@ abbiamo la nostra successione $a_n$ , sappiamo che è D limitata quindi ad un ce
 
 **Successioni regolari**
 Introduciamo il concetto di **limite di una successione**.
-1) Sia $l$ un numero reale. Si dice che la successione $\{a_n\}$ *converge* o *tende* ad $l$ o che $l$ è il limite della successione e si scrive $a_n->l$ o $lim\,\,\,\,a_n=l$  se è verificata la seguente condizione:
+1) Sia $l$ un numero reale. Si dice che la successione $\{a_n\}$ *converge* o *tende* ad $l$ o che $l$ è il limite della successione e si scrive $a_n→l$ o $lim\,\,\,\,a_n=l$  se è verificata la seguente condizione:
    $∀ε>0 \,\,\,\,∃α∈N:n>α⇒|a_n-l|<ε$ 
 
-ovvero se dato un qualunque intorno di $l$, **D** i termini della successione appartengono a tale intorno: se $n>α$ si ha $|a-n-l|<ε⇐⇒ -ε<a_n-l<ε⇐⇒l-ε<a_n<l+ε$ 
+ovvero se dato un qualunque intorno di $l$, **D** i termini della successione appartengono a tale intorno: se $n>α$ si ha $|a_n-l|<ε⇐⇒ -ε<a_n-l<ε⇐⇒l-ε<a_n<l+ε$ 
 Ad esempio, si verifica facilmente che una successione costante $a_n=k$ tende a $k;$ $\frac{1}{n}\,\,→0$ 
 Si ha un risultato fondamentale, che è basato sulla seguente proprietà di $R$: dati 2 numeri reali distinti $a,b$ esistono un intorno di $a$ un intorno di $b$ disgiunti
+
+( ✅ Cosa vuol dire che una successione ha limite $l$?
+Vuol dire che, **più vai avanti nella successione**, **più i suoi termini si avvicinano a un numero fisso $l$**.)
+
+
+**TEOREMA DELLA PERMANENZA DEL SEGNO**
+Se $a_n→l$ con $l>0$ allora **D** $a_n>0$, se $l<0$ allora **D** $a_n>0$
+**Dimostrazione**
+Supponiamo $l > 0$. Scelto $ε$ tale che $0 < ε < l$, **D** si ha $0 < l − ε < a_n$. Il caso $l < 0$ si prova in modo simile. Generalizzando questo risultato, possiamo affermare che se $a_n → l$ e $h < l$ (risp. $k > l$), **D** si ha $a_n > h$ (risp. $a_n < k$). 
 
