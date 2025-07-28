@@ -26,7 +26,7 @@ Introduciamo il concetto di **limite di una successione**.
 	Vuol dire che, **più vai avanti nella successione**, **più i suoi termini si avvicinano a un numero fisso $l$**.)
 	
 	**TEOREMA DELL’UNICITA' DEL LIMITE**
-	 una successione converge, il suo limite è unico (è ovvio che possa tendere ad un solo numero)
+	 Se una successione converge, il suo limite è unico (è ovvio che possa tendere ad un solo numero)
 	 **Dimostrazione**
 	 **Supponiamo per assurdo** che $a_n → l$ e $a_n → L$, con, ad esempio, $l < L$. Scelto $ε$ tale che $0 < ε < \frac{L-l}{2}$ , **D** si ha $a_n < l+ε < L−ε < a_n$, che è un assurdo.
 	
@@ -39,7 +39,7 @@ Introduciamo il concetto di **limite di una successione**.
 	Se $a_n ≤ b_n ≤ c_n$ per ogni $n ∈ N$ e $a_n → l$, $c_n → l$, allora $b_n → l$. 
 	**Dimostrazione**. Dato che **D** si ha sia $l−ε < a_n < l+ε$ e che $l−ε < c_n < l+ε$, **D** si avrà $l − ε < a_n ≤ b_n ≤ c_n < l + ε$
 
-2) Si dice che la successione $\{an\}$ diverge o tende a $+∞$ (risp. $−∞$), e si scrive $a_n → +∞$ o $lim a_n = +∞$ (risp. $−∞$) se è verificata la seguente condizione:
+2) Si dice che la successione $\{an\}$ diverge o tende a $+∞$ (risp. $−∞$), e si scrive $a_n → +∞$ o $lim\,\,\, a_n = +∞$ (risp. $−∞$) se è verificata la seguente condizione:
    
    $∀k>0 \,\,\,\,\,∃α ∈ N : n>α⇒a_n>k$   ($a_n<-k$)
    
@@ -66,4 +66,28 @@ Consideriamo anche $\{|a_n|\}$
 2) Se $a_n → +∞$ oppure $a_n → −∞$, si ha $|an| → +∞$. Il viceversa non vale: ad esempio, posto $a_n = (−1)^n \cdot n$, la successione dei valori assoluti vale $n$ quindi diverge ma $\{a_n\}$ oscilla.
 
 **Regolarità e limitatezza**
+1) Una successione convergente è limitata ma non vale il viceversa
+2) Una successione che diverge a $+∞$ ha un limite inferiore (magari parte da 0) ma non è limitata superiormente
+3) Una successione che diverge a $-∞$ ha un limite superiormente (magari i suoi termini sono minori di -1) ma non è limitata inferiormente
 
+**Successioni monotone**
+Si dice che la successione ${a_n}$ è monotona se, per ogni $n ∈ N$ o definitivamente, verifica una delle seguenti condizioni: 
+1) $a_n > a_{n+1}$ (successione strettamente decrescente) 
+2) $a_n ≥ a_{n+1}$ (successione decrescente) 
+3) $a_n < a_{n+1}$ (successione strettamente crescente) 
+4) $a_n ≤ a_{n+1}$ (successione crescente)
+
+Le successioni monotone costituiscono una categoria di successioni sicuramente regolari, ciò e stabilito dal seguente risultato, che fornisce anche il valore del limite.
+
+**TEOREMA DI REGOLARITA' (O SUL LIMITE) DELLE SUCCESSIONI MONOTONE**
+1) Una successione che verifica una delle condizioni 1) e 2) tende al proprio estremo inferiore. 
+2) Una successione che verifica una delle condizioni 3) e 4) tende al proprio estremo superiore.
+**Dimostrazione**
+Proviamo, per semplicità, solo il caso della divergenza. 
+-  Se $inf (a_n) = −∞$, fissato $k > 0$ il numero $−k$ non è un minorante per la successione, dunque esiste $α ∈ N$ tale che $a_α < −k$. Per $n > α$ si ha $a_n ≤ a_α < −k$, che è la tesi. 
+-  Se $sup (a_n) = +∞$, fissato $k > 0$ il numero $k$ non è un maggiorante per la successione, dunque esiste $α ∈ N$ tale che $a_α > k$. Per $n > α$ si ha $a_n ≥ a_α > k$, che è la tesi.
+
+Osserviamo che per una successione crescente il termine $a1$ è il minimo, per una successione decrescente è il massimo
+
+
+**Operazioni con i limiti delle successioni**
