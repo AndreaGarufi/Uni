@@ -91,3 +91,44 @@ Osserviamo che per una successione crescente il termine $a1$ è il minimo, per u
 
 
 **Operazioni con i limiti delle successioni**
+1) Sia ${a_n}$ una successione regolare e sia $c$ un numero reale. Prendiamo in considerazione la successione ${ca_n}$. Si ha: 
+   i) se $a_n → l$, allora $ca_n → c\cdot l$ 
+   ii) se $a_n → +∞$ e $c > 0$, allora $ca_n → +∞$ 
+   iii) se $a_n → +∞$ e $c < 0$, allora $ca_n → −∞$ 
+   iv) se $a_n → −∞$ e $c > 0$, allora $ca_n → −∞$
+   v) se $a_n → −∞$ e $c < 0$, allora $ca_n → +∞$
+   
+   
+2) Date due successioni ${a_n}$ e ${b_n}$ prendiamo in considerazione la **successione somma** ${a_n + b_n}$. Si ha: 
+   I) Se $a_n → l$ e $b_n → L$, allora $a_n + b_n → l + L$
+   II) Se $a_n → +∞$ ed esiste un numero $h ≤ b_n$ per ogni $n ∈ N$, allora $a_n + b_n → +∞$ (in pratica basta che $b_n$ sia limitata inferiormente entro un certo $h$ cosi la somma tende a più infinito)
+   
+Se la somma di 2 successioni che rispettivamente tendono a $+∞$ e $-∞$ formano una **forma indeterminata** 
+
+3) Date due successioni ${a_n}$ e ${b_n}$ prendiamo in considerazione la **successione prodotto** ${a_n b_n}$ Si ha:
+   I) Se $a_n → l$ e $bn → L$, allora $an bn → l\cdot L$
+   II) Se $a_n → 0$ e ${b_n}$ è limitata, allora $a_n b_n → 0$ 
+   III) Se $a_n → +∞$ ed esiste un numero positivo $h ≤ b_n$ per ogni $n ∈ N$, allora $a_n b_n → +∞$
+
+Se una delle 2 successioni diverge ($+/-∞$) e l'altra tende a $0$ si ha una forma indeterminata
+
+4) Sia ${a_n}$ una successione regolare e **D** non nulla, prendiamo in considerazione la **successione reciproca** $\{ \frac{1}{a_n} \}$. Si possono dimostrare i seguenti risultati:
+   I) Se $a_n → l\neq0$, allora $\frac{1}{a_n}\to \frac{1}{l}$  
+   II) Se $a_n → 0$, allora $\frac{1}{a_n}\to∞$
+   III) Se $a_n → ∞$, allora $\frac{1}{a_n}\to0$ 
+
+5) Date due successioni ${a_n}$ e ${b_n}$, con $b_n\neq0$ **D**, prendiamo in considerazione la **successione quoziente** ${a_n b_n}$ . Essa viene studiata utilizzando i risultati visti ai punti 3) e 4), scrivendola nella forma $a_n\frac{1}{b_n}$ . Si ha una forma indeterminata se tale prodotto si presenta nella forma$ $0 · ∞$, quindi se entrambe le successioni sono infinitesime o infinitamente grandi
+
+Riassumendo, le forme indeterminate che abbiamo finora trovato sono: $+∞ − ∞$, $0 · ∞$, $\frac{0}{0}$ , $\frac{∞}{∞}$
+
+
+**Limiti notevoli**
+Alcune successioni sono espresse mediante funzioni elementari, qui vediamo le più comuni
+1) **Successione Potenza** 
+   $\{n^x\}$, $x ∈ R$ 
+   - Se $x=0$ la successione è costante
+   - Se $x>0$ si ha $n^x\to +∞$
+   - Se $x<0$ si ha $\frac{1}{n^{-x}}\to0$
+
+1) **Successione in forma di polinomio**
+   
