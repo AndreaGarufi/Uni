@@ -151,4 +151,22 @@ Alcune successioni sono espresse mediante funzioni elementari, qui vediamo le pi
     
 
 5) **Successioni composte mediante funzioni elementari**
+   PROPOSIZIONE 1. Se $f : X → R$ è una funzione elementare, se ${a_n} ⊆ X$, $a_n → l$ e $l ∈ X$, allora si ha $f (a_n) → f (l)$. Ad esempio, se $a_n → π$, si ha $cos (a_n) → cos (π)$. Vediamo ora alcuni particolari casi di successioni composte mediante funzioni elementari.
    
+   - Sia $\{x_n\}$ una successione regolare e sia $a$ un numero positivo e diverso da $1$. Studiamo la successione $\{a^{x_n} \}$. Per la Proposizione, se $x_n → l$, si ha $a^{x_n} → a^l$. Se $\{x_n\}$ diverge si deve distinguere se $a > 1$ oppure $0 < a < 1$. Si ha:
+     i) $a > 1$, $x_n → +∞ ⇒ a^{x_n} → +∞$ 
+     ii) $a > 1$, $x_n → −∞ ⇒ a^{x_n} → 0$ 
+     iii) $a < 1$, $x_n → +∞ ⇒ a^{x_n} → 0$ 
+     iv) $a < 1$, $x_n → −∞ ⇒ a^{x_n} → +∞$
+ 
+- Sia $\{x_n\}$ una successione regolare di numeri positivi e sia $a$ un numero positivo e diverso da $1$. Studiamo la successione $\{log_a\,\,\, x_n\}$. Per la Proposizione, se $x_n → l > 0$, si ha $log_a \,\,\,x_n → log_a l$Se $\{x_n\}$ diverge a $+∞$ oppure tende a $0$ si deve distinguere se $a > 1$ oppure $0 < a < 1$. Si ha:
+	   i) $a > 1$, $x_n → +∞ ⇒ log_a x_n → +∞$ 
+	   ii) $a > 1$, $x_n → 0 ⇒ log_a x_n → −∞$
+	   iii) $a < 1$, $x_n → +∞ ⇒ log_a x_n → −∞$ 
+	   iv) $a < 1$, $x_n → 0 ⇒ log_a x_n → +∞$
+
+- Successione del tipo $(a_n)^{b_n}$ essendo $a_n > 0$ per ogni $n$. Questa successione si scrive nella forma $(a_n)^{b_n} = e^{log\,\,\,(a_n)^{b_n}} = e^{b_n\,\,\, log \,\,\,a_n}$ e in questa forma ci si può ricondurre ai casi 1 e 2. Si avranno forme indeterminate se il prodotto $b_n\,\,\, log\,\,\, a_n$ si presenta nella forma $0 · ∞$ e questo accade se $b_n → 0$ e $log \,\,\,a_n → ∞$ o viceversa. Ricordiamo che: 
+  $log\,\,\, a_n → ∞$ significa che $a_n → +∞$ oppure che $a_n → 0$ 
+  $log\,\,\, a_n → 0$ significa che $a_n → 1$
+
+**Il numero $e$**
