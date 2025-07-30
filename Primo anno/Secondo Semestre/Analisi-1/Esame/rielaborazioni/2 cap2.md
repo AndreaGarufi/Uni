@@ -80,8 +80,8 @@ Si dice che la successione ${a_n}$ è monotona se, per ogni $n ∈ N$ o definiti
 Le successioni monotone costituiscono una categoria di successioni sicuramente regolari, ciò e stabilito dal seguente risultato, che fornisce anche il valore del limite.
 
 **TEOREMA DI REGOLARITA' (O SUL LIMITE) DELLE SUCCESSIONI MONOTONE**
-1) Una successione che verifica una delle condizioni 1) e 2) tende al proprio estremo inferiore. 
-2) Una successione che verifica una delle condizioni 3) e 4) tende al proprio estremo superiore.
+1) Una successione che è strettamente decrescente o decrescente tende al proprio estremo inferiore. 
+2) Una successione che è strettamente crescente o crescente tende al proprio estremo superiore.
 **Dimostrazione**
 Proviamo, per semplicità, solo il caso della divergenza. 
 -  Se $inf (a_n) = −∞$, fissato $k > 0$ il numero $−k$ non è un minorante per la successione, dunque esiste $α ∈ N$ tale che $a_α < −k$. Per $n > α$ si ha $a_n ≤ a_α < −k$, che è la tesi. 
@@ -130,5 +130,25 @@ Alcune successioni sono espresse mediante funzioni elementari, qui vediamo le pi
    - Se $x>0$ si ha $n^x\to +∞$
    - Se $x<0$ si ha $\frac{1}{n^{-x}}\to0$
 
-1) **Successione in forma di polinomio**
+2) **Successione in forma di polinomio**
+   $x_n = a_0n^p + a_1n^{p−1} + · · · + a_p$ 
+   a successione si presenta normalmente nella forma indeterminata $∞ − ∞$. Si procede nel seguente modo:
+   $x_n = n^p \left( a_0 + \frac{a_1}{n} + \cdots + \frac{a_p}{n^p} \right)$. Si ha $n^p\to+∞$ mentre la quantità tra parentesi tende ad $a_0$ quindi: $x_n\to+∞$ se $a_0>0$ oppure tende a $-∞$ se $a_0<0$ 
+   
+3) **Successione in forma di funzione razionale**
+   $x_n = \frac{a_0 n^p + a_1 n^{p-1} + \cdots + a_p}{b_0 n^q + b_1 n^{q-1} + \cdots + b_q}$ qui abbiamo la forma indeterminata $\frac{∞}{∞}$ e si procede anche qui come prima:
+   $x_n = n^{p - q} \cdot \frac{a_0 + \frac{a_1}{n} + \cdots + \frac{a_p}{n^p}}{b_0 + \frac{b_1}{n} + \cdots + \frac{b_q}{n^q}}$ quindi se $p=q$ si ha che $x_n\to \frac{a_0}{b_0}$, se $p<q$ si ha che $x_n\to0$, se $p>q$ si ha $x_n\to+∞$ se $a_0,b_0$ hanno lo stesso segno invece $-∞$ se hanno segno opposto
+   ![[Pasted image 20250730114248.png]]
+
+4) **Successione geometrica**
+   $\{a^n\}$ con $a ∈ R$ 
+   Si prova facilmente per esercizio che tale successione ha il seguente comportamento al limite:
+    $a > 1 ⇒ a_n → +∞$ 
+    $a = 1 ⇒ a_n → 1$ ( è costante) 
+    $0 < a < 1 ⇒ a_n → 0$ 
+    $a = −1 ⇒ a_n$ è oscillante 
+    $a < −1 ⇒ a_n → ∞$ ed è oscillante
+    
+
+5) **Successioni composte mediante funzioni elementari**
    
