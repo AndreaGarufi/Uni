@@ -169,4 +169,9 @@ Alcune successioni sono espresse mediante funzioni elementari, qui vediamo le pi
   $log\,\,\, a_n → ∞$ significa che $a_n → +∞$ oppure che $a_n → 0$ 
   $log\,\,\, a_n → 0$ significa che $a_n → 1$
 
+
 **Il numero $e$**
+(vedi appunti se serve)
+
+
+**Successioni estratte**
