@@ -175,3 +175,38 @@ Alcune successioni sono espresse mediante funzioni elementari, qui vediamo le pi
 
 
 **Successioni estratte**
+Data una successione $\{a_n\}$, sia data un’altra successione $\{n_k\}$ strettamente crescente, con $n_k ∈ N$ per ogni $n ∈ N$. La funzione composta $\{a_{n_k} \}$ è detta successione estratta da $\{a_n\}$ mediante la legge ${n_k}$. In pratica, essa è costituita dai soli elementi della prima successione aventi indici del tipo $n_k$
+Esempi: 
+- se $n_k = 2k$, si ottiene la successione dei termini di posto pari 
+- se $n_k = 2k − 1$, si ottiene la successione dei termini di posto dispari 
+- se $n_k = r + k$, avendo fissato $r ∈ N$, si ottiene la successione ottenuta sopprimendo i primi r termini
+
+**TEOREMA DI REGOLARITA' DELLE SUCCESSIONI ESTRATTE.**
+$\{a_n\}$ è regolare, ogni sua estratta ha il suo stesso limite. Il viceversa non vale: ad esempio, posto $a_n = (−1)^n$, la successione dei termini di posto pari è costante quindi convergente ma ${a_n}$ oscilla. Possiamo dunque concludere che se una successione ha due estratte aventi limiti diversi, essa oscilla. Si hanno tuttavia i seguenti risultati: 
+1) se $\{a_{r+k}\}$ è regolare, anche $\{a_n\}$ ha il suo stesso limite. 
+2) se $\{a_{2k}\}$ e $\{a_{2k−1}\}$ hanno lo stesso limite, anche $\{a_n\}$ ha il loro stesso limite
+
+**OSSERVAZIONE**
+Dal paragrafo precedente si deduce che, data una successione ${a_n}$, è possibile prendere in considerazione due nuove successioni, quella formata dai soli termini di posto pari di ${a_n}$ e quella formata dai soli termini di posto dispari. Se esse hanno lo stesso limite, allora ${a_n}$ ha tale limite; se esse hanno limiti diversi, ${a_n}$ non è regolare
+
+**Confronto fra infiniti e fra infinitesimi**
+Siano $\{a_n\}$ e $\{b_n\}$ due successioni infinitamente grandi, dette anche due infiniti.
+- Sono dello stesso ordine se il loro rapporto tende ad un numero diverso da $0$
+- si dice che $\{a_n\}$ è di ordine superiore rispetto a $\{b_n\}$ se il loro rapporto diverge
+
+Siano ora $\{a_n\}$ e $\{b_n\}$ due infinitesimi.
+- i dice che sono dello stesso ordine se il loro rapporto tende ad un limite diverso da zero
+- si dice che $\{a_n\}$ è di ordine superiore rispetto a $\{b_n\}$ se il loro rapporto tende a zero
+
+
+**Successioni definite per ricorrenza**
+**Una successione si dice definita per ricorrenza se viene dato il suo primo termine e viene fornita una legge che calcola ciascun termine in funzione del precedente**. Data, cioè, una funzione reale di variabile reale $f$ , che supporremo sia una funzione elementare, la successione si presenta nella forma $a_n+1 = f (a_n)$. Ad esempio:
+![[Pasted image 20250731113510.png]]
+
+**Per una tale successione, solitamente, si procede nel seguente modo**: 
+- si studia la monotonia 
+- si individua quel numero l che potrebbe essere l’estremo inferiore (o superiore) 
+- da quanto sopra segue che $l = lim\,\,\, a_n$, ma allora si ha anche $l = lim\,\,\, a_{n+1}$ (grazie a quanto detto sulle successioni estratte) 
+- si osserva che $a_{n+1} = f (a_n) → f (l)$ 
+- per l’unicità del limite si deve avere $f (l) = l$. Si risolve l’equazione $f (x) = x$ e, fra le sue eventuali soluzioni, si cerca un eventuale numero l che possa essere l’estremo inferiore (o superiore) della successione. Se non c’è un tale $l$, la successione diverge
+
