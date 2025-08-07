@@ -27,3 +27,13 @@ $arg(z^n)=n\cdot arg(z)$
 
 ==Radici==
 $\sqrt[n]{z}=\sqrt[n]{|z|}\cdot (cos(\frac{arg(z)+2kπ}{n})+isen(\frac{arg(z)+2kπ}{n}))$ per $k=0,1, ... n-1$
+
+
+
+**Limiti delle successioni**
+==Caso forma indeterminata $1^∞$== 
+$(1+\frac{x}{n})^n=e^x$ 
+$(1-\frac{x}{n})^n=e^{-x}$ 
+
+==Metodo Salvo Romeo==
+$(1+\frac{x}{n})^\frac{n}{x}= e$  
