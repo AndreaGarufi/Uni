@@ -205,7 +205,7 @@ Siano ora $\{a_n\}$ e $\{b_n\}$ due infinitesimi.
 
 **Per una tale successione, solitamente, si procede nel seguente modo**: 
 - si studia la monotonia 
-- si individua quel numero l che potrebbe essere l’estremo inferiore (o superiore) 
+- si individua quel numero $l$ che potrebbe essere l’estremo inferiore (o superiore) 
 - da quanto sopra segue che $l = lim\,\,\, a_n$, ma allora si ha anche $l = lim\,\,\, a_{n+1}$ (grazie a quanto detto sulle successioni estratte) 
 - si osserva che $a_{n+1} = f (a_n) → f (l)$ 
 - per l’unicità del limite si deve avere $f (l) = l$. Si risolve l’equazione $f (x) = x$ e, fra le sue eventuali soluzioni, si cerca un eventuale numero l che possa essere l’estremo inferiore (o superiore) della successione. Se non c’è un tale $l$, la successione diverge
