@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ef443ab8bdc1620a",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/3 Appunticap3.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "3 Appunticap3"
-            }
-          },
-          {
             "id": "3acd5d63cc1060db",
             "type": "leaf",
             "state": {
@@ -32,8 +20,21 @@
               "icon": "lucide-file",
               "title": "3 cap3"
             }
+          },
+          {
+            "id": "ef443ab8bdc1620a",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/3 Appunticap3.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "3 Appunticap3"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -183,32 +184,34 @@
   },
   "active": "ef443ab8bdc1620a",
   "lastOpenFiles": [
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/3 cap3.md",
+    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap3parte1.pdf",
     "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/3 Appunticap3.pdf",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/3 cap3.md",
+    "Cose da fare.md",
+    "Senza nome.md",
+    "Secondo Semestre/Modelli/Pasted image 20250809124620.png",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1.md",
+    "Secondo Semestre/Analisi-1/Esame/programmaEAM12425.pdf",
     "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/4 AppuntiCap4.pdf",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Condizioni di esistenza e formule.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/forma_indeterminata_1_elevato_infinito/spiegazione salvo romeo YT.md",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/Successione_oscillante.pdf",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/Successioni_definite_per_ricorrenza.pdf",
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap2parte2.pdf",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/riassunto breve.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/Limiti_con_sen_cos_tg.pdf",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/Limiti_successioni_normali_e_log.pdf",
-    "Cose da fare.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/forma_indeterminata_1_elevato_infinito/forma_indeterminata_1_elevato_infinito.pdf",
-    "Pasted image 20250807110947.png",
+    "Secondo Semestre/Modelli/Pasted image 20250807110947.png",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/forma_indeterminata_1_elevato_infinito",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/simulazione_EAM1_2425.pdf",
     "Secondo Semestre/Modelli/Pasted image 20250731113510.png",
     "Secondo Semestre/Modelli/Pasted image 20250730114248.png",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1.md",
     "Secondo Semestre/Modelli/Pasted image 20250722115306.png",
     "Pasted image 20250722114304.png",
     "Secondo Semestre/Modelli/Pasted image 20250722115113.png",
     "Secondo Semestre/Modelli/Pasted image 20250719120224.png",
     "Secondo Semestre/Modelli/Pasted image 20250717172332.png",
-    "Secondo Semestre/Modelli/Pasted image 20250717171144.png",
-    "Secondo Semestre/Modelli/Pasted image 20250717165706.png"
+    "Secondo Semestre/Modelli/Pasted image 20250717171144.png"
   ]
 }
