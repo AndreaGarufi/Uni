@@ -36,5 +36,88 @@ Anche qui ritroviamo dei teoremi delle successioni:
    Sia data una funzione $f : X → R$ e sia $c ∈ D(X)$. Si ha $lim_{x→c} f (x) = l$ (risp. $+∞$, $−∞$) se e solo se per ogni successione $\{x_n\}$ di elementi di $X$ convergente a $c$ si ha $f (x_n) → l$
 
 **Limiti sinistro e destro**
+Sia data una funzione $f : (a, b) → R$. Per ogni $c ∈]a, b]$ il limite della restrizione di $f$ ad $(a, c[$ al tendere di $x$ a $c$ si chiama limite sinistro di $f$ al tendere di $x$ a $c$, o limite per $x$ che tende a $c$ da sinistra, e si indica con $lim_{x→c^−} f (x)$. Per ogni $c ∈ [a, b[$ il limite della restrizione di $f$ a $]c, b)$ al tendere di $x$ a $c$ si chiama limite destro di $f$ al tendere di $x$ a $c$, o limite per $x$ che tende a $c$ da destra, e si indica con $lim_{x→c^+} f (x)$.
 
+**Limite al tendere di $x$ all’infinito**
+Data una funzione $f : (a, +∞[→ R$, si definisce il limite di $f$ al tendere di $x$ a $+∞$ nel seguente modo:
+$\lim_{x \to +\infty} f(x) = l \in \mathbb{R} \ \text{ se } \ \forall \varepsilon > 0 \ \exists \bar{x} > a : x > \bar{x} \Rightarrow |f(x) - l| < \varepsilon$
+$\lim_{x \to +\infty} f(x) = +\infty \ \text{ se } \ \forall k > 0 \ \exists \bar{x} > a : x > \bar{x} \Rightarrow f(x) > k$
+$\lim_{x \to +\infty} f(x) = -\infty \ \text{ se } \ \forall k > 0 \ \exists \bar{x} > a : x > \bar{x} \Rightarrow f(x) < -k$
+
+
+**Limiti di funzioni elementari**
+Premettiamo che (la proveremo in seguito) vale la seguente 
+**PROPOSIZIONE** 
+Se $f : X → R$ è una funzione elementare, per ogni $c ∈ X$ si ha $lim_{x→c} f (x) = f (c)$
+
+**Nel seguito, tratteremo alcuni casi che non rientrano in tale condizione.**
+
+1) **Funzione esponenziale**
+   Sia $a$ un numero positivo e diverso da $1$. Consideriamo la funzione $a^x$. Per studiare il suo limite al tendere di $x$ a $±∞$ si deve distinguere se $a > 1$ oppure $0 < a < 1$. Si ha, utilizzando i risultati analoghi visti per le successioni e il Teorema ponte: 
+   i) $a > 1 ⇒ lim_{x→+∞} a^x = +∞; lim_{x→−∞} a^x = 0$ 
+   ii)$0 < a < 1 ⇒ lim_{x→+∞} a^x = 0; lim_{x→−∞} a^x = +∞$
+
+2) **Funzione logaritmo**
+   Sia a un numero positivo e diverso da $1$. Consideriamo la funzione $log_a\,\,\, x$. Per studiare il suo limite al tendere di $x$ a $0$ o a $+∞$ si deve distinguere se $a > 1$ oppure $0 < a < 1$. Si ha, utilizzando i risultati analoghi visti per le successioni e il Teorema ponte:
+   i) $a > 1 ⇒ lim_{x→+∞} log_a\,\,\, x = +∞; lim_{x→0} log_a\,\,\, x = −∞$ 
+   ii) $0 < a < 1 ⇒ lim_{x→+∞} log_a\,\,\, x = −∞; lim_{x→0} log_a\,\,\, x = +∞$
+
+3) **Funzione potenza** 
+   Esaminiamo intanto il caso della potenza con esponente intero. La funzione potenza con esponente intero positivo è definita per ogni $x$, quella con esponente intero negativo è definita per $x \neq 0$
+   Sia allora $n ∈ R$:
+   si ha facilmente: 
+   $lim_{x→+∞} x^n = +∞$ 
+   $lim_{x→−∞} x^n = +∞$ se $n$ è pari 
+   $lim_{x→−∞} x^n = −∞$ se n è dispari.
    
+   Si ha poi, tenendo presente che $x^{-n}=\frac{1}{}x^n$:
+   se n è pari, $lim_{x→±∞} x^{−n} = 0$, $lim_{x→0} x^{−n} = +∞$
+   se n è dispari, $lim_{x→±∞} x^{−n} = 0$, $lim_{x→0^−} x^{−n} = −∞$, $lim_{x→0^+} x^{−n} = +∞$
+
+   Se l’esponente è un numero $α$ non intero:
+   - Se **α > 0** e non è intero → possiamo calcolare $x^α$ solo se **x ≥ 0**
+   - Se **α < 0** e non è intero → possiamo calcolare $x^α$ solo se **x > 0** (perché con α negativo serve anche che x non sia zero, altrimenti si divide per 0
+   
+4) **Polinomi** 
+   Consideriamo il polinomio $f (x) = a_0x^n + a_1x^{n−1} + · · · + a_n$
+   La funzione potrebbe trovarsi nella forma indeterminata $+∞ − ∞$ e si procede nel seguente modo. $f (x) = x^n(a_0 + \frac{a_1}{x} + · · · + \frac{a_n}{x^n} )$
+   (in pratica come nelle successioni devo raccogliere la $x$, $\frac{a}{x}$ anche qui tende a $0$)
+   Ne segue quindi:
+   ![[Pasted image 20250813164602.png]]
+   In sostanza, possiamo concludere che, al tendere di $x$ a $±∞$, i polinomi divergono sempre, per capire il segno della divergenza occorre esaminare il grado di $x^n$ e il segno del suo coefficiente.
+   
+5) **Funzioni razionali fratte**
+   Consideriamo la funzione $f(x)= \frac{a_0 x^n + a_1 x^{n-1} + \dots + a_n}{b_0 x^m + b_1 x^{m-1} + \dots + b_m}$
+   Supporremo che il numeratore e il denominatore non abbiano divisori a comune
+   Per $x → ±∞$ la funzione si presenta nella forma indeterminata $\frac{∞ }{∞ }$ e si procede nel seguente modo:
+- Se $n>m$ (sono gli esponenti)
+      Per determinare il segno corretto, si considera il rapporto dei termini di grado massimo:
+     ![[Pasted image 20250813165729.png]]
+     ![[Pasted image 20250813165952.png]]
+- Se $n=m$
+  Il limite è dato dal rapporto dei coefficienti dei termini di grado massimo:
+  ![[Pasted image 20250813170225.png]]
+  ![[Pasted image 20250813170327.png]]
+- Se $n<m$
+  Qui si ha un numero sopra (che sia anche grande) che viene diviso per un numero che cresce molto di più quindi la frazione tende a $0$ (come nelle successioni)
+  ![[Pasted image 20250813170621.png]]
+
+
+**Alcuni limiti notevoli** 
+Esaminiamo adesso alcuni limiti che **si presentano in forma indeterminata**.
+1) **Limiti notevoli con funzioni trigonometriche**
+   Consideriamo la funzione $f (x) = \frac{sen(x)}{x}$; essa è definita per $x\neq0$ e, per $x → 0$, si presenta nella forma indeterminata $\frac{0}{0}$ 
+   Utilizzando il limite notevole studiato per le successioni, si ottiene che
+   ![[Pasted image 20250813170959.png]]
+   (semplicemente quando $x$ tende a $0$ il valore di $x$ e del seno di $x$ sono praticamente identici quindi sarebbe come fare $\frac{x}{x}$ e quindi $1$)
+   E analogamente si hanno i seguenti altri limiti notevoli:
+   ![[Pasted image 20250813171423.png]]
+2) **Limiti notevoli di tipo esponenziale**
+   Utilizzando i limiti visti per le successioni, si ottengono i seguenti limiti notevoli (osserviamo che si presentano tutti in forma indeterminata $1^∞$):
+   ![[Pasted image 20250813171718.png]]
+
+
+**Confronto fra infinitesimi e fra infiniti**
+Una funzione che tende a zero è detta infinitesima (o ”un infinitesimo”), una funzione che diverge è detta infinitamente grande (o ”un infinito”).
+
+**Asintoti**
