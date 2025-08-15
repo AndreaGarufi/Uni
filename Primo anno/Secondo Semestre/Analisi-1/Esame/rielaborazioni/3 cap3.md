@@ -121,3 +121,43 @@ Esaminiamo adesso alcuni limiti che **si presentano in forma indeterminata**.
 Una funzione che tende a zero è detta infinitesima (o ”un infinitesimo”), una funzione che diverge è detta infinitamente grande (o ”un infinito”).
 
 **Asintoti**
+Un asintoto per $f$ è una retta $r$ tale che la distanza del generico punto del grafico di $f$ da $r$ tenda a zero.
+Ne esistono di 3 tipi:
+- **Asintoto orizzontale** → è una retta orizzontale $y=k$ verso cui la funzione si avvicina quando $x$ va verso $+∞$ o $−∞$ 
+    Immaginalo come il “livello” che la curva raggiunge e poi non supera andando lontano a destra o a sinistra.
+    
+- **Asintoto verticale** → è una retta verticale $x=h$ che il grafico non può attraversare e vicino alla quale la funzione “spara” verso $+∞$ o $−∞$  
+    Qui la curva si avvicina moltissimo a una linea verticale, ma senza toccarla, e nel farlo la funzione cresce o decresce senza limiti.
+    
+- **Asintoto obliquo** → è una retta inclinata $y=mx+q$ verso cui il grafico si avvicina per $x→±∞$ quando non c’è un asintoto orizzontale.  
+    Qui la curva segue un “pendio” inclinato, come se corresse parallelamente a una diagonale sempre più da vicino.
+
+
+![[Pasted image 20250814105324.png]]
+
+
+**Limiti delle funzioni monotone**
+Una funzione è monotona se in un intervallo $(a,b)$ la funzione è crescente o decrescente (anche strettamente).
+**TEOREMA SUI LIMITI DELLE FUNZIONI MONOTONE**
+Sia $f : (a, b) → R$ una funzione strettamente crescente in $(a, b)$. Allora: 
+- per ogni $c ∈]a, b[$ esistono i limiti destro e sinistro di $f$ al tendere di $x$ a $c$ e si ha:
+  $l^-=lim_{x\to c^-} f(x)= sup_{(a,c]}f(x)≤f(c)≤l^+=lim_{x\to c^+} f(x)=inf_{]c,b)} f(x)$
+  ![[Pasted image 20250815145708.png]]
+
+- esistono i limiti di $f$ al tendere di $x$ ad $a$ e a $b$ e si ha:
+  $l^+ = lim_{x→a} f (x) = inf_{]a,b)} f (x)$
+  $l^− = lim_{x→b} f (x) = sup_{(a,b[} f (x)$
+  (nell'immagine sopra sarebbero dove la $x$ vale $-2$ e $+2$)
+
+**OSSERVAZIONI**
+1) Se $a$, $b$ appartengono all’insieme di definizione, si ha $l^+ ≥ f (a)$; $l^− ≤ f (b)$
+2) Se $f$ è decrescente, si ha $l^− = lim_{x→c^−} f (x) = inf_{(a,c[} f (x) ≥ f (c) ≥ l^+ = lim_{x→c^+} f (x) = sup_{]c,b)} f (x)$
+
+**Funzioni continue**
+Sia data una funzione $f : X → R$ e sia $c$ un punto non isolato di $X$. Si dice che la funzione $f$ è continua in $c$ se $lim_{x→c} f (x) = f (c)$. Si dice che $f$ è continua in $X$ se è continua in ogni punto di $X$. Dai risultati visti nel capitolo precedente si vede subito che somma, prodotto, quoziente di funzioni continue sono continue, e che una funzione composta mediante funzioni continue è continua.
+
+Nel seguito, esporremo due importanti proprietà delle funzioni continue in un intervallo. La prima è espressa dal seguente risultato, del quale diamo solo l’enunciato
+
+**TEOREMA DI WEIERSTRASS**
+Sia $f$ una funzione reale continua in un intervallo chiuso e limitato $[a, b]$. Allora, $f$ ammette minimo e massimo assoluti
+
