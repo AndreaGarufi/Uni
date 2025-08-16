@@ -176,4 +176,34 @@ Sia $f$ una funzione reale continua in un intervallo chiuso e limitato $[a, b]$ 
 **Dimostrazione**
 Consideriamo in $[a, b]$ la funzione $g(x) = f (x) − γ$, che è continua e agli estremi dell’intervallo assume valori di segno diverso, quindi, per il Teorema di esistenza degli zeri, si annulla in un punto $c$: si ha dunque $f (c) − γ = 0$
 **OSSERVAZIONI SUL TEOREMA DI DARBOUX**
-1) 
+1) Se l’intervallo non è chiuso e limitato la tesi vale egualmente: basta applicare il teorema ad una restrizione
+2) Se $f$ non è definita in un intervallo il teorema non vale: basti pensare ad esempio ad una funzione definita nell’unione di due intervalli disgiunti, costante in ciascuno di essi, con valori diversi delle costanti
+3) Il viceversa del teorema non vale: la funzione definita in $[0, 1]$ ponendo $f (x) = x$ in $]0, 1[$, $f (0) = 1$, $f (1) = 0$, verifica la PVI ma non è continua
+
+
+**TEOREMA DI CONTINUITA' DELLE FUNZIONI MONOTONE**
+$f : (a, b) → R$ una funzione strettamente monotona. Sia verificata la PVI. Allora, $f$ è continua
+
+**Dimostrazione**
+Supponiamo che $f$ sia crescente e proviamo la continuità, ad esempio, in un punto $c$ interno ad $(a,b)$. Dal teorema sui limiti delle funzioni monotone segue che $l^{-} \leq f(c) \leq l^{+}$. Per provare la continuità basta provare che $l^{-} = f(c) = l^{+}$. Supponiamo per assurdo che non sia vero, ad esempio si abbia $l^{-} < f(c)$. Sia $\gamma \in [l^{-}, f(c)[$; per la PVI esiste $\bar{x} \in (a,b)$ tale che $f(\bar{x}) = \gamma$. L'assurdo segue dal fatto che $\bar{x}$ non può esistere, infatti: 
+- se fosse $\bar{x} = c$ si avrebbe $\gamma = f(\bar{x}) = f(c)$
+- se fosse $\bar{x} < c$ si avrebbe $\gamma = f(\bar{x}) \leq l^{-}$ 
+- se fosse $\bar{x} > c$ si avrebbe $\gamma = f(\bar{x}) > f(c)$ 
+L’assurdo è dunque trovato
+
+Fra le conseguenze di questi teoremi, vediamo le seguenti:
+1) **Immagine di un intervallo mediante una funzione continua**
+   Sia $f : [a, b] → R$ una funzione continua. Dal teorema di Darboux segue che la sua immagine è un intervallo, e dal teorema di Weierstrass segue che $f$ possiede minimo $m$ e massimo $M$ , quindi la sua immagine è l’intervallo chiuso e limitato $[m, M ]$. Se, in particolare, $f$ è crescente, la sua immagine è l’intervallo $[f (a), f (b)]$; se $f$ è decrescente, la sua immagine è l’intervallo $[f (b), f (a)]$. In generale, se $f$ è una funzione continua in un intervallo generico $(a, b)$, la sua immagine è l’intervallo $(inf_{(a,b)} f (x), sup_{(a,b)} f (x))$. In particolare, ricordando il teorema sui limiti delle funzioni monotone, se $f$ è crescente in $(a, b)$ la sua immagine è l’intervallo $(lim_{x→a} f (x), lim_{x→b} f (x))$; se $f$ è decrescente in $(a, b)$ la sua immagine è l’intervallo $(lim_{x→b} f (x), lim_{x→a} f (x))$.
+
+2) **Continuità della funzione inversa.**
+   Sia $f : [a, b] → [f (a), f (b)]$ una funzione strettamente crescente (oppure $f : [a, b] → [f (b), f (a)]$ una funzione strettamente decrescente) e continua. Allora, la sua funzione inversa è continua.
+
+3) **Continuità delle funzioni elementari**
+   Tutte le funzioni elementari che abbiamo introdotto sono continue nei rispettivi insiemi di definizione. Sia infatti $c$ un punto dell’insieme di definizione di $f$ . Se $c$ è contenuto in un intervallo in cui $f$ è monotona, la continuità in $c$ segue dal teorema di continuità delle funzioni monotone. In caso contrario, si verifica che i limiti sinistro e destro coincidono. Ad esempio, $lim_{x→0^−} x^2 = inf_{]−∞,0[} x^2 = 0 = lim_{x→0^+} x^2 = inf_{]0,+∞[} x^2$ 
+
+**Punti di discontinuità**
+
+
+
+
+   
