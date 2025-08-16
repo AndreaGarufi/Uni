@@ -202,6 +202,13 @@ Fra le conseguenze di questi teoremi, vediamo le seguenti:
    Tutte le funzioni elementari che abbiamo introdotto sono continue nei rispettivi insiemi di definizione. Sia infatti $c$ un punto dell’insieme di definizione di $f$ . Se $c$ è contenuto in un intervallo in cui $f$ è monotona, la continuità in $c$ segue dal teorema di continuità delle funzioni monotone. In caso contrario, si verifica che i limiti sinistro e destro coincidono. Ad esempio, $lim_{x→0^−} x^2 = inf_{]−∞,0[} x^2 = 0 = lim_{x→0^+} x^2 = inf_{]0,+∞[} x^2$ 
 
 **Punti di discontinuità**
+Data una funzione $f : X → R$, un punto $c ∈ D(X)$ è detto punto di discontinuità per $f$ in uno dei seguenti casi: 
+- se $f$ non è definita in $c$: ad esempio, $f (x) = log \,\,\,x, c = 0$
+- se $f$ non è dotata di limite al tendere di $x$ a $c$: ad esempio, $f (x) = \frac{|x|}{x}$ , $c = 0$ 
+- se $lim_{x → c} f (x) \neq f (c)$: ad esempio, $f (x) = x$ per $x \neq 0$, $f (0) = 5$, $c = 0$
+
+Sia $c$ un punto di discontinuità
+![[Pasted image 20250816114503.png]]
 
 
 
