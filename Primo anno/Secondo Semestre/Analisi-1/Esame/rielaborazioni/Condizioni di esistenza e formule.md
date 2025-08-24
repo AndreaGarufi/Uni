@@ -37,3 +37,19 @@ $(1-\frac{x}{n})^n=e^{-x}$
 
 ==Metodo Salvo Romeo==
 $(1+\frac{x}{n})^\frac{n}{x}= e$  
+
+
+
+**Limiti**
+==Asintoti e equazioni degli asintoti==
+![[Pasted image 20250822112355.png]]
+(nell'asintoto obliquo e polinomiale devo dividere numeratore e denominatore)
+risolvere una divisone di polinomi:
+![[Pasted image 20250822120455.png|600]]
+
+esempio:
+![[Pasted image 20250822120845.png|400]]
+![[Pasted image 20250822120905.png|400]]
+![[Pasted image 20250822120924.png|400]]
+
+
