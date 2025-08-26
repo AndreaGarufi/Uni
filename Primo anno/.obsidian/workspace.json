@@ -32,23 +32,8 @@
               "icon": "lucide-file-text",
               "title": "4 AppuntiCap4"
             }
-          },
-          {
-            "id": "95e044e24da82fc3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cose da fare.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Cose da fare"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -197,11 +182,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b079063a258753e2",
+  "active": "bdae9aa97653dec3",
   "lastOpenFiles": [
-    "Cose da fare.md",
     "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/4 AppuntiCap4.pdf",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1.md",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf",
+    "Pasted image 20250826154652.png",
+    "Pasted image 20250826154513.png",
+    "Pasted image 20250826154510.png",
+    "Pasted image 20250826093541.png",
+    "Cose da fare.md",
     "Pasted image 20250825175017.png",
     "Secondo Semestre/Analisi-1/Esame/programmaEAM12425.pdf",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/3 cap3.md",
@@ -212,20 +203,14 @@
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap3parte1.pdf",
     "Secondo Semestre/Analisi-1/proveEsame/EAM1_230625.pdf",
     "Secondo Semestre/Analisi-1/proveEsame/EAM1_070725.pdf",
-    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/3 Appunticap3.pdf",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Condizioni di esistenza e formule.md",
     "Secondo Semestre/Modelli/Pasted image 20250822120924.png",
     "Secondo Semestre/Modelli/Pasted image 20250822120905.png",
     "Secondo Semestre/Modelli/Pasted image 20250822120845.png",
     "Secondo Semestre/Modelli/Pasted image 20250822120455.png",
     "Secondo Semestre/Modelli/Pasted image 20250822112355.png",
-    "Secondo Semestre/Modelli/Pasted image 20250816114503.png",
-    "Secondo Semestre/Modelli/Pasted image 20250816112749.png",
-    "Secondo Semestre/Modelli/Pasted image 20250815145708.png",
-    "Secondo Semestre/Modelli/Pasted image 20250814105324.png",
     "Senza nome.md",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/forma_indeterminata_1_elevato_infinito/spiegazione salvo romeo YT.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/riassunto breve.md"
   ]
