@@ -80,4 +80,6 @@ A) *Teorema di prolungamento della derivata*. Sia data una funzione $f : (a, b) 
 **OSSERVAZIONE** Dal teorema appena enunciato segue che le funzioni $arcsin (x)$ e $arccos (x)$ non sono derivabili in $−1$ e $1$, infatti sono continue ma le loro derivate divergono al tendere di $x$ a tali punti
 B) *Criterio di monotonia*. Sia data una funzione $f : (a, b) → R$ derivabile. Condizione sufficiente affinché $f$ sia crescente in $(a, b)$ è che $f ′(x) ≥ 0 ∀x ∈ (a, b)$. 
 **Dimostrazione** Siano $x, y ∈ (a, b)$, con $x < y$. Applicando il Teorema di Lagrange ad $f$ nell’intervallo $[x, y]$, si ottiene che esiste $c ∈]x, y[$ tale che $f (y) − f (x) = (y − x)f ′(c) ≥ 0$, da cui la tesi
-Dal teorema B) segue subito che 
+Dal teorema B) segue subito che, se $f ′(x) > 0$ per ogni $x ∈ (a, b)$, allora $f$ è strettamente crescente in $(a, b)$. Questa condizione è comunque troppo restrittiva, basti pensare che la funzione $f (x) = x^3$ non la verifica pur essendo strettamente crescente. Si ha tuttavia il seguente risultato più generale, del quale non diamo la dimostrazione.
+C) *Criterio di stretta monotonia.* Sia data una funzione $f : (a, b) → R$ derivabile. Condizione necessaria e sufficiente affinché $f$ sia strettamente crescente in $(a, b)$ è che $f ′(x) ≥ 0 ∀x ∈ (a, b)$ e che non esista nessun intervallo $(c, d) ⊆ (a, b)$ tale che $f ′(x) = 0 ∀x ∈ (c, d)$.
+D) *Teorema sulle funzioni con derivata nulla.*

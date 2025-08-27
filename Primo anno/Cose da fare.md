@@ -15,5 +15,6 @@ TEOREMA DI ROLLE (facile)
 TEOREMA DI LAGRANGE
 Teorema di prolungamento della derivata
 Criterio di monotonia
-
+Criterio di stretta monotonia
+Teorema sulle funzioni con derivata nulla
 
