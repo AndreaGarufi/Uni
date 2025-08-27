@@ -45,10 +45,39 @@ In questo paragrafo presentiamo le formule che permettono di derivare le funzion
 6) **Potenza con esponente qualunque** Stessa formula per esponenti interi ovvero $ax^{a-1}$ ma per esponenti reali non interi (numeri con la virgola) bisogna che $x>0$ mentre se l'esponente è compreso tra $0$ e $1$ allora la funzione non è derivabile in $x=0$ 
 7) **Funzioni trigonometriche**
    ![[Pasted image 20250826154513.png]]
-8) **Funzioni inverese delle funzioni trigonometriche**
+8) **Funzioni inverse delle funzioni trigonometriche**
    ![[Pasted image 20250826154652.png]]
 
 **Teoremi sul calcolo differenziale e loro applicazioni allo studio delle funzioni**
-Il primo risultato che presentiamo è legato al Teorema di pag. 13 del cap. 1, secondo il quale la funzione è crescente (decrescente) in $c$ se e solo se $r(x) > 0$ ($r(x) < 0$) in un intorno di $c$. Se $f ′(c) > 0$ ($f ′(c) < 0$), allora, per il teorema della permanenza del segno si avrà $r(x) > 0$ ($r(x) < 0$) in un intorno di $c$. Ne segue:
+Il primo risultato che presentiamo è legato al Teorema di pag. 13 del cap. 1(appunti prof), secondo il quale la funzione è crescente (decrescente) in $c$ se e solo se $r(x) > 0$ ($r(x) < 0$) in un intorno di $c$. Se $f ′(c) > 0$ ($f ′(c) < 0$), allora, per il teorema della permanenza del segno si avrà $r(x) > 0$ ($r(x) < 0$) in un intorno di $c$. Ne segue:
 
-**TEOREMA**
+**TEOREMA 1 (di monotonia locale)** 
+Se $f ′(c) > 0$ ($risp. f ′(c) < 0$) allora $f$ è crescente (risp. è decrescente) nel punto $c$
+
+Il viceversa non è vero, ad esempio la funzione $f (x) = x^3$ è crescente nel punto $c = 0$ ma $f ′(0) = 0$. Possiamo solo affermare che, se $f$ è crescente (decrescente) in $c$, allora $f ′(c) ≥ 0$ ($f ′(c) ≤ 0$)
+
+Per avere dei risultati più raffinati, occorre presentare alcuni importanti teoremi
+
+**TEOREMA DI FERMAT**
+Data una funzione $f : (a, b) → R$, sia $c ∈]a, b[$ un punto di minimo o di massimo relativo per $f$ . Si supponga che $f$ sia derivabile nel punto $c$. Allora, si ha $f ′(c) = 0$
+**Dimostrazione**
+Dato che il punto $c$ è interno, la derivata è il limite del rapporto incrementale sia da sinistra che da destra. Ora, il numeratore del rapporto incrementale in un intorno di $c$ ha sempre lo stesso segno (ad esempio, se $c$ è un punto di minimo relativo, si ha $f (x)−f (c) ≥ 0$ in un intorno di $c$) mentre il denominatore è negativo a sinistra di $c$ e positivo a destra. Ne segue che $f ′(c) = f ′_−(c) = lim_{x→c^−}\,\,\, r(x) ≤ 0$ e, contemporaneamente, $f ′(c) = f ′_+(c) = lim_{x→c^+}\,\,\, r(x) ≥ 0$ quindi necessariamente $f ′(c) = 0$
+(L’unico numero che è **≤ 0** e **≥ 0** insieme è **0**. Dunque $f′(c)=0$)
+
+Il viceversa del teorema non vale
+
+**TEOREMA DI ROLLE**
+Sia $f$ una funzione reale continua nell’intervallo chiuso $[a, b]$ e derivabile in $]a, b[$, tale che $f (a) = f (b)$. Allora, esiste $c ∈]a, b[$ tale che $f ′(c) = 0$
+**Dimostrazione**
+Per il teorema di Weierstrass $f$ è dotata di minimo e massimo assoluti, siano $x_1$ il punto di minimo assoluto e $x_2$ il punto di massimo assoluto. Se $x_1 = a$ e $x_2 = b$, o viceversa, allora il minimo e il massimo assoluti della funzione sono uguali quindi $f$ è costante e la sua derivata è ovunque nulla. In caso contrario, uno dei due punti $x_1$, $x_2$ è interno, in esso allora la derivata è nulla per il teorema di Fermat
+
+**TEOREMA DI LAGRANGE**
+**Dimostrazione**
+Consideriamo in $[a, b]$ la funzione $g(x) = (f (b) − f (a))x + (a − b)f (x)$. Si vede facilmente che essa verifica le ipotesi del teorema di Rolle, quindi esiste $c ∈]a, b[$ tale che $g′(c) = 0$. Dal fatto che $g′(x) = f (b) − f (a) + (a − b)f ′(x)$ segue subito la tesi.
+
+**COROLLARI DEL TEOREMA DI LAGRANGE**
+A) *Teorema di prolungamento della derivata*. Sia data una funzione $f : (a, b) → R$ e sia $c ∈ (a, b)$. Supponiamo che $f$ sia derivabile in $(a, b) \ {c}$ e che sia continua in $c$. Supponiamo inoltre che esista il $lim_{x→c} f ′(x)$, sia esso $l$ (può essere un numero oppure $±∞$). Allora, si ha $lim_{x→c} r(x) = l$
+**OSSERVAZIONE** Dal teorema appena enunciato segue che le funzioni $arcsin (x)$ e $arccos (x)$ non sono derivabili in $−1$ e $1$, infatti sono continue ma le loro derivate divergono al tendere di $x$ a tali punti
+B) *Criterio di monotonia*. Sia data una funzione $f : (a, b) → R$ derivabile. Condizione sufficiente affinché $f$ sia crescente in $(a, b)$ è che $f ′(x) ≥ 0 ∀x ∈ (a, b)$. 
+**Dimostrazione** Siano $x, y ∈ (a, b)$, con $x < y$. Applicando il Teorema di Lagrange ad $f$ nell’intervallo $[x, y]$, si ottiene che esiste $c ∈]x, y[$ tale che $f (y) − f (x) = (y − x)f ′(c) ≥ 0$, da cui la tesi
+Dal teorema B) segue subito che 
