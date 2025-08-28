@@ -83,3 +83,34 @@ B) *Criterio di monotonia*. Sia data una funzione $f : (a, b) → R$ derivabile.
 Dal teorema B) segue subito che, se $f ′(x) > 0$ per ogni $x ∈ (a, b)$, allora $f$ è strettamente crescente in $(a, b)$. Questa condizione è comunque troppo restrittiva, basti pensare che la funzione $f (x) = x^3$ non la verifica pur essendo strettamente crescente. Si ha tuttavia il seguente risultato più generale, del quale non diamo la dimostrazione.
 C) *Criterio di stretta monotonia.* Sia data una funzione $f : (a, b) → R$ derivabile. Condizione necessaria e sufficiente affinché $f$ sia strettamente crescente in $(a, b)$ è che $f ′(x) ≥ 0 ∀x ∈ (a, b)$ e che non esista nessun intervallo $(c, d) ⊆ (a, b)$ tale che $f ′(x) = 0 ∀x ∈ (c, d)$.
 D) *Teorema sulle funzioni con derivata nulla.*
+Sia data una funzione $f : (a, b) → R$ derivabile, tale che $f ′(x) = 0 ∀x ∈ (a, b)$. Allora, $f$ è costante in $(a, b)$
+**Dimostrazione**
+Siano $x$, $y$ due punti generici di $(a, b)$, con $x < y$. Applicando il Teorema di Lagrange ad $f$ nell’intervallo $[x, y]$ (le ipotesi sono verificate in quanto $f$ è derivabile in $(a, b)$) si ottiene l’esistenza di $c ∈]x, y[$ tale che $f (y) − f (x) = f ′(c)(y − x) = 0$, quindi $f (x) = f (y)$ e, dato che $x$ e $y$ sono arbitrari, ne segue la tesi.
+
+**Metodo per lo studio dei punti stazionari**
+Sia $f$ una funzione derivabile in $(a, b)$ e sia $c ∈ (a, b)$ tale che $f ′(c) = 0$. Dai risultati precedenti (T. Fermat) segue che $c$ può essere un punto di estremo relativo. Tenendo presenti i criteri di monotonia visti prima, segue che:
+1) Se $f ′(x) < 0$ in un intorno sinistro di $c$ e $f ′(x) > 0$ in un intorno destro di $c$, allora $c$ è un punto di minimo relativo per $f$ 
+2) Se $f ′(x) > 0$ in un intorno sinistro di $c$ e $f ′(x) < 0$ in un intorno destro di $c$, allora $c$ è un punto di massimo relativo per $f$
+
+In pratica, un punto stazionario $c$ è un punto di estremo relativo per $f$ se in corrispondenza di $c$ la derivata cambia segno
+Se esiste la derivata seconda in $c$, possiamo raffinare lo studio anche utilizzando il segno della derivata seconda, precisamente si ha: 
+3) se $f ′′(c) > 0$, allora $c$ è un punto di minimo relativo per $f$ 
+4) se $f ′′(c) < 0$, allora $c$ è un punto di massimo relativo per $f$
+
+	In definitiva: se $f ′(c)\neq 0$, la funzione $f$ è crescente o decrescente nel punto $c$; se $f ′(c) = 0$ e $f ′′(c)\neq 0$, $c$ è un punto di estremo relativo per $f$
+
+
+**Metodo per la ricerca degli estremi assoluti**
+Sia $f$ una funzione reale continua in $[a, b]$, il teorema di Weierstrass assicura l’esistenza degli estremi assoluti. Per individuarli, occorre determinare i seguenti insiemi:
+![[Pasted image 20250828121457.png]]
+in quanto, se un punto di estremo assoluto appartiene all’interno di $[a, b]$, in tale punto la derivata, se esiste, è nulla per il teorema di Fermat: pertanto, i punti di estremo assoluto andranno cercati o all’interno dell’intervallo, e in tal caso la derivata o non esiste oppure esiste e vale zero, oppure agli estremi dell’intervallo. Un volta determinati i tre insiemi $A$, $B$, $C$, basta calcolare i valori della funzione in tutti i punti di tali insiemi per trovare il minimo e il massimo
+
+**Funzioni localmente convesse**
+Sia $f : (a, b) → R$ una funzione derivabile e sia c ∈ (a, b), ricordiamo che l’equazione della tangente al grafico di $f$ nel punto di ascissa $c$ è $y = f (c) + f ′(c)(x − c)$. La tangente divide il piano in due semipiani, chiamiamo semipiano superiore l’insieme $\bar{S}= {(x, y) ∈ R^2 : y ≥ f (c) + f ′(c)(x − c)}$, analogamente si definisce il semipiano inferiore che indicheremo con $\underline{S}$. Si dice che la funzione $f$ è convessa nel punto $c$ se esiste $r > 0$ tale che, se $x ∈]c − r, c + r[$ si ha $f (x) ≥ f (c) + f ′(c)(x − c)$, ossia se per tutti i punti di un opportuno intorno di $c$ il corrispondente punto del grafico appartiene a $\bar{S}$. In modo simile si definisce $f$ concava nel punto $c$ se per tutti i punti di un opportuno intorno di $c$ il corrispondente punto del grafico appartiene a $\underline{S}$ 
+![[Pasted image 20250828123409.png]]
+(non per forza deve essere una parabola questo è solo un esempio)
+
+Se $f$ in $c$ non è né convessa né concava, si dice che $c$ è un punto di flesso per $f$
+(Un **punto di flesso** è un punto in cui la funzione passa da **convessa a concava** (o viceversa)
+
+hanno particolare
