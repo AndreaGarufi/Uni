@@ -25,12 +25,14 @@
             "id": "8a53a7286e539e8a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap4parte2.pdf"
+                "file": "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "eserccap4parte2"
+              "icon": "lucide-file",
+              "title": "4 cap4"
             }
           }
         ],
@@ -185,8 +187,10 @@
   },
   "active": "8a53a7286e539e8a",
   "lastOpenFiles": [
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Lista teoremi.md",
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap4parte2.pdf",
+    "conflict-files-obsidian-git.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md",
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap4parte1.pdf",
     "Secondo Semestre/Analisi-1/Introduzione 3_03_25.pdf",
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/svolgimentosimulazione.pdf",
