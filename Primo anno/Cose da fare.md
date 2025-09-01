@@ -17,4 +17,5 @@ Teorema di prolungamento della derivata
 Criterio di monotonia
 Criterio di stretta monotonia
 Teorema sulle funzioni con derivata nulla
-
+TEOREMA convessa
+TEOREMA DI DE L’HOPITAL

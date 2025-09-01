@@ -33,12 +33,12 @@ In questo paragrafo vengono presentate le regole per derivare funzioni ottenute 
 3) **Reciproco**. Sia $f$ derivabile in un punto $c$ e tale che $f (c)\neq 0$. Indicata con $F$ la funzione reciproca $F (x) =\frac{1}{f(x)}$ , la funzione $F$ è derivabile nel punto $c$ e si ha $F ′(c) =\frac{-f ′(c)}{(f(c))^2}$
 4) **Quoziente**. Siano $f, g$ derivabili in un punto $c$, e si abbia $g(c) \neq 0$. Indicata con $q$ la funzione quoziente $q(x) = \frac{f (x)}{g(x)}$ , la funzione $q$ è derivabile nel punto $c$ e si ha $q′(c) = \frac{ f′(c)g(c)−f (c)g′(c)}{(g(x))^2}$
 5) **Funzione composta**. Siano date due funzioni $f : (α, β) → R$ e $g : (a, b) → (α, β)$. Sia $c ∈ (a, b)$ e supponiamo che $g$ sia derivabile nel punto $c$ e che $f$ sia derivabile nel punto $g(c) ∈ (α, β)$. Indicata con $F$ la funzione composta $F (x) = f (g(x))$, la funzione $F$ è derivabile nel punto $c$ e si ha $F ′(c) = f ′(g(c)) g′(c)$
-6) Funzione inversa. Sia $f : [a, b] → R$ una funzione strettamente crescente e continua, sappiamo allora che essa è invertibile e la sua inversa è $f^{-1} : [f (a), f (b)] → [a, b]$ ed è anch’essa strettamente crescente e continua (valgono considerazioni analoghe nel caso in cui $f$ sia strettamente decrescente). Sia $γ ∈ [f (a), f (b)]$, vogliamo sapere se $f^{-1}$ sia derivabile in $γ$. Sia $c ∈ [a, b]$ tale che $γ = f (c)$, si supponga che $f ′(c)\neq 0$, allora si può dimostrare che $f^{-1}$ è derivabile in $γ$ e $(f^{−1})′(γ) = \frac{1}{f ′(c)}$
+6) **Funzione inversa**. Sia $f : [a, b] → R$ una funzione strettamente crescente e continua, sappiamo allora che essa è invertibile e la sua inversa è $f^{-1} : [f (a), f (b)] → [a, b]$ ed è anch’essa strettamente crescente e continua (valgono considerazioni analoghe nel caso in cui $f$ sia strettamente decrescente). Sia $γ ∈ [f (a), f (b)]$, vogliamo sapere se $f^{-1}$ sia derivabile in $γ$. Sia $c ∈ [a, b]$ tale che $γ = f (c)$, si supponga che $f ′(c)\neq 0$, allora si può dimostrare che $f^{-1}$ è derivabile in $γ$ e $(f^{−1})′(γ) = \frac{1}{f ′(c)}$
 
 **Derivate delle funzioni elementari**
 In questo paragrafo presentiamo le formule che permettono di derivare le funzioni elementari presentate nel cap. 1
 1) **Funzione costante** Se $f (x) = k\,\,\, ∀x ∈ R$, il suo rapporto incrementale è nullo quindi $f ′(x) = 0\,\,\, ∀x ∈ R$.
-2) **Funzione potenza con esponente intero** Sia $f (x) = x^n$. Si ha $f ′(x) = nx^{n−1} ∀x ∈ R$. Lo proviamo solo nel caso $n = 2$. Il rapporto incrementale è $r(x) = \frac{x^2-c^2}{x-c} = x + c$ il cui limite al tendere di $x$ a $c$ è $2c$
+2) **Funzione potenza con esponente intero** Sia $f (x) = x^n$. Si ha $f ′(x) = nx^{n−1} \,\,\,∀x ∈ R$. Lo proviamo solo nel caso $n = 2$. Il rapporto incrementale è $r(x) = \frac{x^2-c^2}{x-c} = x + c$ il cui limite al tendere di $x$ a $c$ è $2c$
 3) **Funzione valore assoluto** Non è derivabile se $x= 0$ mentre se $x<0$ allora $f'(x)=-1$ se $x>0$ allora $f'(x)=+1$ 
 4) **Funzione esponenziale** Se $f (x) = a^x$, si ha $f ′(x) = a^x \,\,\,log\,\,\, a\,\,\, ∀x ∈ R$ 
 5) **Logaritmo** Se $log\,\,\,a^x$ allora si ha $\frac{1}{x}log_a\,\,\,e$ per ogni $x>0$ 
@@ -113,4 +113,26 @@ Sia $f : (a, b) → R$ una funzione derivabile e sia c ∈ (a, b), ricordiamo ch
 Se $f$ in $c$ non è né convessa né concava, si dice che $c$ è un punto di flesso per $f$
 (Un **punto di flesso** è un punto in cui la funzione passa da **convessa a concava** (o viceversa)
 
-hanno particolare
+**TEOREMA**
+Sia f una funzione derivabile in $(a, b)$ e sia $c ∈ (a, b)$ tale che esista $f ′′(c) > 0$. Allora, $f$ è convessa in $c$ 
+**Dimostrazione**
+![[Pasted image 20250828165258.png]]
+
+Il seguente risultato, del quale non vedremo la dimostrazione, fornisce un’applicazione del calcolo differenziale al calcolo di alcuni limiti. Lo enunciamo, per fissare le idee, solo nel caso in cui $x → c$ ma si può enunciare in modo simile nel caso in cui $x → ±∞$
+
+**Teorema di de L'Hopital**
+
+Siano $f, g$ due funzioni reali derivabili in $(a,b)\setminus\{c\}$ tali che:
+1. $\lim_{x \to c} f(x) = \lim_{x \to c} g(x) = 0$  
+    oppure  
+    $\lim_{x \to c} f(x) = \lim_{x \to c} g(x) = \infty$
+    
+2. $g'(x) \neq 0 \ \ \forall x \in (a,b)\setminus\{c\}$
+    
+3. Esiste il $\lim_{x \to c} \frac{f'(x)}{g'(x)} = l \ \ (l \in \mathbb{R} \ \text{oppure}\ l = \pm \infty)$
+    
+
+Allora, si ha:
+a) $g(x) \neq 0 \ \ \forall x \in (a,b)\setminus\{c\}$
+b) $\lim_{x \to c} \frac{f(x)}{g(x)} = l$
+
