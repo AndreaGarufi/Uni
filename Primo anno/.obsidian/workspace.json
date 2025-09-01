@@ -1,50 +1,50 @@
 {
   "main": {
-    "id": "95f54f1dafd373bf",
+    "id": "bf89027f93d81fb6",
     "type": "split",
     "children": [
       {
-        "id": "a4eb88e276f9d905",
+        "id": "6087671d9c955465",
         "type": "tabs",
         "children": [
           {
-            "id": "bdae9aa97653dec3",
+            "id": "db4cf672e0b53402",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md",
+                "file": "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Lista teoremi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4 cap4"
+              "title": "Lista teoremi"
             }
           },
           {
-            "id": "b079063a258753e2",
+            "id": "98718f2e53649aff",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/4 AppuntiCap4.pdf"
+                "file": "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/2 Appunticap2.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "4 AppuntiCap4"
+              "title": "2 Appunticap2"
             }
           },
           {
-            "id": "c736e39d0315cb0b",
+            "id": "d23eee730b26021d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cose da fare.md",
+                "file": "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cose da fare"
+              "title": "2 cap2"
             }
           }
         ]
@@ -53,15 +53,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "6d61a9631df04d4c",
+    "id": "b504f1c1378291df",
     "type": "split",
     "children": [
       {
-        "id": "ce762966ca5147d8",
+        "id": "90aced882f84f11d",
         "type": "tabs",
         "children": [
           {
-            "id": "4371091dceb8cd7d",
+            "id": "59476c80b7c5f8bb",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -74,7 +74,7 @@
             }
           },
           {
-            "id": "c7c08d62071d1982",
+            "id": "f69a8cd29e757190",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -91,7 +91,7 @@
             }
           },
           {
-            "id": "af1b9a3f751a7ae5",
+            "id": "26ba83a7050d47cf",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -104,23 +104,35 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 206.50043487548828
   },
   "right": {
-    "id": "b0f0301d976babf0",
+    "id": "e5cbad16aa00cfb4",
     "type": "split",
     "children": [
       {
-        "id": "fc2b72cce7974bdb",
+        "id": "83abbd526ffa63e0",
         "type": "tabs",
         "children": [
           {
-            "id": "e7e96a9c2f5f58b2",
+            "id": "545e5843f8bc6ddf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
+            }
+          },
+          {
+            "id": "2078d0b59500042b",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/4 AppuntiCap4.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,58 +142,48 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a 4 AppuntiCap4"
+              "title": "Riferimenti"
             }
           },
           {
-            "id": "780374c742bc64fb",
+            "id": "d5a268691661c9eb",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da eserccap1parte1"
+              "title": "Collegamenti in uscita"
             }
           },
           {
-            "id": "c97164531f3638dd",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-tags",
-              "title": "Etichette"
-            }
-          },
-          {
-            "id": "53f6583ab62050cc",
+            "id": "7f4cc7a91368094a",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Struttura di eserccap1parte1"
+              "title": "Struttura"
+            }
+          },
+          {
+            "id": "b1638c93943e32a3",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -196,36 +198,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bdae9aa97653dec3",
+  "active": "db4cf672e0b53402",
   "lastOpenFiles": [
-    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/4 AppuntiCap4.pdf",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md",
-    "Secondo Semestre/Modelli/Pasted image 20250828123409.png",
-    "Secondo Semestre/Modelli/Pasted image 20250828121457.png",
-    "Cose da fare.md",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/2 Appunticap2.pdf",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Lista teoremi.md",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1.md",
-    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/1 AppuntiCap1.pdf",
-    "Secondo Semestre/Modelli/Pasted image 20250826154652.png",
-    "Secondo Semestre/Modelli/Pasted image 20250826154513.png",
-    "Secondo Semestre/Modelli/Pasted image 20250826154510.png",
-    "Secondo Semestre/Modelli/Pasted image 20250826093541.png",
-    "Secondo Semestre/Modelli/Pasted image 20250825175017.png",
     "Secondo Semestre/Analisi-1/Esame/programmaEAM12425.pdf",
+    "Secondo Semestre/Analisi-1/proveEsame/EAM1_070725.pdf",
+    "Secondo Semestre/Analisi-1/proveEsame/EAM1_230625.pdf",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/4 AppuntiCap4.pdf",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/3 cap3.md",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap3parte2.pdf",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_funzioni/trovare_numero_continuita.pdf",
+    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/3 Appunticap3.pdf",
+    "Pasted image 20250901103942.png",
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap4parte2.pdf",
     "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap4parte1.pdf",
-    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap3parte1.pdf",
-    "Secondo Semestre/Analisi-1/proveEsame/EAM1_230625.pdf",
-    "Secondo Semestre/Analisi-1/proveEsame/EAM1_070725.pdf",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Condizioni di esistenza e formule.md",
-    "Secondo Semestre/Modelli/Pasted image 20250822120924.png",
-    "Secondo Semestre/Modelli/Pasted image 20250822120905.png",
-    "Secondo Semestre/Modelli/Pasted image 20250822120845.png",
-    "Senza nome.md",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
+    "Secondo Semestre/Modelli/Pasted image 20250828123409.png",
+    "Secondo Semestre/Modelli/Pasted image 20250828121457.png",
+    "Secondo Semestre/Modelli/Pasted image 20250826154652.png",
+    "Secondo Semestre/Modelli/Pasted image 20250826154513.png",
+    "Secondo Semestre/Modelli/Pasted image 20250813170225.png",
+    "Secondo Semestre/Modelli/Pasted image 20250813165952.png",
+    "Secondo Semestre/Modelli/Pasted image 20250813165729.png",
+    "Secondo Semestre/Modelli/Pasted image 20250813164602.png",
+    "Secondo Semestre/Modelli/Pasted image 20250809124620.png",
+    "Secondo Semestre/Analisi-1/proveEsame",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/forma_indeterminata_1_elevato_infinito/spiegazione salvo romeo YT.md",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/riassunto breve.md"
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/forma_indeterminata_1_elevato_infinito/forma_indeterminata_1_elevato_infinito.pdf",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/riassunto breve.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Condizioni di esistenza e formule.md",
+    "conflict-files-obsidian-git.md",
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Appunti pre-esame orale da ricordare.md",
+    "Secondo Semestre/Programmazione-2/EsamiTeoria/Punti.md",
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Programmazione a Oggetti (OOP).md",
+    "Secondo Semestre/Programmazione-2/EsameOraleAppunti/Complessità.md",
+    "Cose da fare.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/2 Pipelining.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/9 Circuiti Integrati.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Assembly/EserciziFattiDaMe/tentativo2/Consegne esercizi assembly.md",
+    "Primo Semestre/architettura-degli-elaboratori/Laboratorio/Comandi Assembly.md",
+    "Project ideas.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/8 Insieme di istruzioni macchina.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/7 Assembly, come funzionano i linguaggi di programmazione e Sistema Operativo.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/6 Circuiti Aritmetici.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/5 Algebra Booleana.md",
+    "Pipelining e come è fatto_funziona il processore.md",
+    "Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/4 Sistemi di numerazione e rappresentazione binaria dei numeri interi.md",
+    "programmazione-1/Senza nome.canvas"
   ]
 }
