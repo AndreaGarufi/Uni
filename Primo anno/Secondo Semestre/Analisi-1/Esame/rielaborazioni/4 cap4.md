@@ -72,6 +72,7 @@ Sia $f$ una funzione reale continua nell’intervallo chiuso $[a, b]$ e derivabi
 Per il teorema di Weierstrass $f$ è dotata di minimo e massimo assoluti, siano $x_1$ il punto di minimo assoluto e $x_2$ il punto di massimo assoluto. Se $x_1 = a$ e $x_2 = b$, o viceversa, allora il minimo e il massimo assoluti della funzione sono uguali quindi $f$ è costante e la sua derivata è ovunque nulla. In caso contrario, uno dei due punti $x_1$, $x_2$ è interno, in esso allora la derivata è nulla per il teorema di Fermat
 
 **TEOREMA DI LAGRANGE**
+Sia $f$ una funzione reale continua nell’intervallo chiuso $[a, b]$ e derivabile in $]a, b[$. Allora, esiste $c ∈]a, b[$ tale che $f (b) − f (a) = f ′(c)(b − a)$.
 **Dimostrazione**
 Consideriamo in $[a, b]$ la funzione $g(x) = (f (b) − f (a))x + (a − b)f (x)$. Si vede facilmente che essa verifica le ipotesi del teorema di Rolle, quindi esiste $c ∈]a, b[$ tale che $g′(c) = 0$. Dal fatto che $g′(x) = f (b) − f (a) + (a − b)f ′(x)$ segue subito la tesi.
 
