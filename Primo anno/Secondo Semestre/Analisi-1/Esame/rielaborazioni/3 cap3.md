@@ -166,7 +166,7 @@ La seconda è la seguente proprietà dei valori intermedi. Si dice che una funzi
 **TEOREMA DI ESISTENZA DEGLI ZERI**
 Sia $f$ una funzione reale continua in un intervallo chiuso e limitato $[a, b]$ e si supponga che $f (a) < 0$ e $f (b) > 0$ (o viceversa). Allora esiste $c ∈ [a, b]$ tale che $f (c) = 0$
 **Dimostrazione**
-Dimostrazione. Posto $x_0 = \frac{a+b}{2}$, se $f(x_0) = 0$ la tesi è dimostrata, se $f(x_0) < 0$ poniamo $[a_1, b_1] = [x_0, b]$, se $f(x_0) > 0$ poniamo $[a_1, b_1] = [a, x_0]$, si ha dunque $f(a_1) < 0$, $f(b_1) > 0$, $a \le a_1 \le b_1 \le b$, $b_1 - a_1 = \frac{b-a}{2}$.  
+Posto $x_0 = \frac{a+b}{2}$, se $f(x_0) = 0$ la tesi è dimostrata, se $f(x_0) < 0$ poniamo $[a_1, b_1] = [x_0, b]$, se $f(x_0) > 0$ poniamo $[a_1, b_1] = [a, x_0]$, si ha dunque $f(a_1) < 0$, $f(b_1) > 0$, $a \le a_1 \le b_1 \le b$, $b_1 - a_1 = \frac{b-a}{2}$.  
 Procedendo analogamente a partire dall’intervallo $[a_1, b_1]$ e poi reiterando lo stesso ragionamento, se per un certo $n$ si trova $f(x_n) = 0$ la tesi è dimostrata, in caso contrario si determinano due successioni $\{a_n\}$ e $\{b_n\}$ tali che, per ogni $n \in \mathbb{N}$, si ha $f(a_n) < 0$, $f(b_n) > 0$, $a \le a_1 \le \dots \le a_n < b_n \le b_{n-1} \le \dots \le b$, $b_n - a_n = \frac{b-a}{2^n}$.  
 La successione $\{a_n\}$ è crescente e limitata superiormente (da $b$), quindi converge al proprio estremo superiore $c \le b$. Si ha poi $b_n = b_{n-1} + a_n = \frac{b-a}{2^n} + a_n \to c$. Si ha allora, per la continuità di $f$, $f(a_n) \to f(c)$ e $f(b_n) \to f(c)$ ma da $f(a_n) < 0$ segue $f(c) \le 0$ e da $f(b_n) > 0$ segue $f(c) \ge 0$ quindi necessariamente $f(c) = 0$.
 
