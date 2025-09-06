@@ -53,5 +53,15 @@ Applichiamo il procedimento alla funzione `f(x) = 3x² + x - 2`:
     Dividiamo entrambi i lati per `6`:
     `x = -1/6`
 
-Abbiamo così trovato che `x = -1/6` è l'unico punto critico per la funzione `f(x) = 3x² + x - 2`. Questo è il nostro candidato, che dovrà essere analizzato con i metodi del Passaggio 2 (studio del segno della derivata prima o criterio della derivata seconda) per determinare se si tratta di un punto di massimo, di minimo o di un flesso.
+Abbiamo così trovato che `x = -1/6` è l'unico punto critico per la funzione `f(x) = 3x² + x - 2`. Questo è il nostro candidato.
+Dobbiamo determinare se si tratta di un punto di massimo relativo, di minimo relativo o nessuno dei due. Per farlo, possiamo utilizzare il **criterio della derivata seconda**.
 
+- **Regola:** Si calcola la derivata seconda della funzione, f''(x).
+    
+    - Se `f''(x)` calcolata nel punto critico è **positiva**, la funzione è convessa in quel punto, il che indica un **minimo relativo**.
+        
+    - Se `f''(x)` calcolata nel punto critico è **negativa**, la funzione è concava in quel punto, il che indica un **massimo relativo**.
+        
+    - Se `f''(x)` calcolata nel punto critico è **uguale a zero**, il test è inconcludente e si devono usare altri metodi.
+In questo caso, la derivata seconda è una costante.  
+`f''(-1/6) = 6`
