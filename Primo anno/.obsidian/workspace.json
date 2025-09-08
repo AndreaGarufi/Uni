@@ -11,6 +11,30 @@
             "id": "cc1deb70b8ae161e",
             "type": "leaf",
             "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Analisi-1/proveEsame/simulazione_EAM1_2425.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "simulazione_EAM1_2425"
+            }
+          },
+          {
+            "id": "191d5ab5ba2edd91",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_funzioni/Trovare_asintoti.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Trovare_asintoti"
+            }
+          },
+          {
+            "id": "6214b976650bad74",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md",
@@ -21,7 +45,8 @@
               "title": "4 cap4"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -170,28 +195,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cc1deb70b8ae161e",
+  "active": "6214b976650bad74",
   "lastOpenFiles": [
-    "Secondo Semestre/Analisi-1/proveEsame/EAM1_200125.pdf",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1.md",
+    "Secondo Semestre/Analisi-1/proveEsame/simulazione_EAM1_2425.pdf",
+    "Secondo Semestre/Analisi-1/proveEsame/EAM1_230625.pdf",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_funzioni/Trovare_asintoti.pdf",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Trovare_max_min_assoluti_intervallo.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Trovare_crescenza_concavita_max_min_relativi.md",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/trova_eq_tangente_nei_punti_dati.pdf",
+    "Secondo Semestre/Analisi-1/proveEsame/EAM1_200125.pdf",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Dimostrare_f_invertibile_dominio_derivata.md",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md",
-    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/2 Appunticap2.pdf",
-    "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/4 AppuntiCap4.pdf",
+    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte3.pdf",
+    "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf",
     "Secondo Semestre/Analisi-1/proveEsame/EAM1_140425.pdf",
     "Secondo Semestre/Analisi-1/proveEsame/EAM1_070725.pdf",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/Limiti_successioni_normali_e_log.pdf",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/Successione_oscillante.pdf",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/Successioni_definite_per_ricorrenza.pdf",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
     "Secondo Semestre/Analisi-1/proveEsame/EAM1_060924.pdf",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/trova_eq_tangente_nei_punti_dati.pdf",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/3 cap3.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Senza nome.md",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Condizioni di esistenza e formule.md",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Lista teoremi.md",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1.md",
     "conflict-files-obsidian-git.md",
     "Cose da fare.md",
     "Secondo Semestre/Modelli/Pasted image 20250828165258.png",
