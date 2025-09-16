@@ -140,7 +140,7 @@ Perché se l'intervallo è aperto ($]1,2[$) allora ne l'1 ne il 2 sono compresi,
 
 Possiamo ora definire l'estremo superiore e quello inferiore di $X$:
 - **Se $X$ è limitato inferiormente si pone** $inf(X) =max(\underline{M_x})$, altrimenti $infX=-∞$
-- **Se $X$ è limitato superiormente si pone** $sup(X) =min(\overline{M_x})$, altrimenti $infX=+∞$
+- **Se $X$ è limitato superiormente si pone** $sup(X) =min(\overline{M_x})$, altrimenti $supX=+∞$
 
 **quindi un numero $l$ è un estremo inferiore di $X$ se e solo se verifica queste proprietà:**
 1) $l ≤ x \,\,\,\,\,∀x ∈ X$ -> mi dice che $l$ è un minorante
