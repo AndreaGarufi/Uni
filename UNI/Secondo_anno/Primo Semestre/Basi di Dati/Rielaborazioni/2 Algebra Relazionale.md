@@ -49,7 +49,7 @@ tolgo le istanze comuni a tutti e 2
 Posso ovviamente combinare varie operazioni
 
 ### **PROIEZIONE**
-Prende tutte le n-uple da un sottoinsieme di attributi, in pratica sceglie tutti dati da alcune colonne scelte
+Prende tutte le n-uple da un sottoinsieme di attributi, in pratica sceglie tutti i dati da alcune colonne scelte
 
 **Definizione:**
 – Sia R una relazione e siano $A_1$, $A_2$,…, $A_n$ alcuni suoi attributi allora: 
@@ -119,3 +119,4 @@ Quando $F$ è una congiunzione di uguaglianze si parla di equi-JOIN altrimenti t
 
 
 ### **QUERY**
+Una query è una funzione da una istanza di un database (insieme di relazioni) ad una relazione 
