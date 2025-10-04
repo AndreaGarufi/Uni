@@ -82,3 +82,40 @@ Allora si pone:
 **Esempio PRODOTTO CARTESIANO**
 ![[Pasted image 20251004105644.png]]
 
+### **JOIN (GIUNZIONE)**
+**L’operatore più importante dell’algebra relazionale** 
+• Permette di combinare t-uple da relazioni diverse basandosi sui valori degli attributi
+
+• Fondamentalmente due tipi (più qualche variante): 
+1) Natural JOIN 
+2) Theta JOIN
+
+**NATURAL JOIN**
+Sia R con attributi $XY$ ed S con attributi $YZ$ 
+• 𝑅 ⋈ 𝑆 e’ una relazione di attributi $XYZ$ costituita da tutte le n-uple t tali che $t[XY]$ ∈ 𝑅  e $t[YZ]$∈ 𝑆 
+• Quindi:
+𝑅 ⋈ 𝑆 = {𝑡|$t[XY]$ ∈ 𝑅 e $t[YZ]$ ∈ 𝑆}
+
+**Cioè: le n-uple del risultato sono ottenute combinando le n-uple di R e S che hanno gli stessi valori negli attributi con lo stesso nome** 
+**Esempio NATURAL JOIN**
+![[Pasted image 20251004113858.png]]
+
+![[Pasted image 20251004114041.png]]
+
+
+**THETA-JOIN e EQUI-JOIN**
+Estensione del NATURAL JOIN
+• Viene specificato un predicato per la selezione delle n-uple 
+• E’ un operatore derivato:
+𝑅 ⋈$_𝐹$ 𝑆 = 𝜎𝐹 (𝑅 × 𝑆)
+
+Quando $F$ è una congiunzione di uguaglianze si parla di equi-JOIN altrimenti theta-JOIN
+**Esempio EQUI-JOIN**
+![[Pasted image 20251004114513.png]]
+
+**Definizione**
+![[Pasted image 20251004114718.png]]
+
+
+
+### **QUERY**
