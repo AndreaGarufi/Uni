@@ -4,37 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "8a7304d56ba06600",
+        "id": "0536ddf4f976e69d",
         "type": "tabs",
         "children": [
           {
-            "id": "5a45e626387aa49b",
+            "id": "07fa419124c3726c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2 Algebra Relazionale"
-            }
-          },
-          {
-            "id": "9a5ceb15e932b070",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/2 lezione3_AlgebraRelazionale.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "2 lezione3_AlgebraRelazionale"
+              "title": "Nuova scheda"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -183,9 +166,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9a5ceb15e932b070",
+  "active": "07fa419124c3726c",
   "lastOpenFiles": [
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Ricorsione.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/2 lezione3_AlgebraRelazionale.pdf",
     "Pasted image 20251004114718.png",
     "Pasted image 20251004114513.png",
@@ -207,7 +191,6 @@
     "Secondo_anno/Basi di Dati/File_condivisi_studium/Senza nome",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/1 lezione1_introduzione.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium",
-    "propedeudicita.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Libri/l'altro libro obsidian non lo legge ma è in questa cartella.md",
     "Secondo_anno/Senza nome.md",
     "Project ideas.md",
