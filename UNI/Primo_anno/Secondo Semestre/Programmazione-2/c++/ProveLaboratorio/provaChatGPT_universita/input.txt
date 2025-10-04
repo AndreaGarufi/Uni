@@ -1,0 +1,6 @@
+1001 Mario Rossi 88
+1002 Laura Verdi 91 raccomandato Prof.Bianchi
+1003 Luca Bianchi 79
+1004 Anna Neri 95 raccomandato Prof.Rossi
+1005 Gianni Verdi 59
+1006 Andrea Garufi 79 raccomandato Prof.Einstein

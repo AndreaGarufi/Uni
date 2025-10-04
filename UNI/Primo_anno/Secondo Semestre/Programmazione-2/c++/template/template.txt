@@ -1,0 +1,35 @@
+I template servono per dare un tipo generico (T) da poter usare nelle funzioni che lo implementano, 
+cosi da non dover ogni volta riscrivere una funzione che faccai le stesse cose di altre per poterla usare con tipi differenti
+
+🎯 1. Quando serve scrivere template <typename T>?
+👉 Ogni volta che definisci qualcosa di generico (cioè che usa un tipo T), devi dire al compilatore che T è un tipo "variabile".
+
+✅ Quindi va messo:
+
+prima della definizione di una classe template
+
+prima della definizione di una funzione template
+
+
+🎯 2. Quando serve mettere <T>?
+👉 Ogni volta che usi una classe o funzione che è template, devi specificare il tipo usato.
+
+Esempi:
+
+Quando crei un oggetto:
+List<int> lista;
+
+Quando definisci un metodo fuori dalla classe:
+void List<T>::inserimentoTesta(T d)  // devi mettere <T> per dire "questa è la versione generica"
+
+Quando definisci friend o operator<<:
+friend ostream& operator<< <T>(ostream&, const List<T>&);
+
+
+È come dire:
+"Questa singola funzione/class usa un tipo generico T, non tutto il file."
+
+
+REGOLA
+Vuoi definire qualcosa che usa T? | Scrivi template <typename T> sopra. |
+Vuoi usare una classe template come List<T>? | Specifica <T> ogni volta. |

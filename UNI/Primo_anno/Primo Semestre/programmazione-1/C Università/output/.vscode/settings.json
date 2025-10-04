@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "concepts": "c",
+        "type_traits": "c",
+        "stdbool.h": "c",
+        "stdio.h": "c",
+        "cstdlib": "c",
+        "stdlib.h": "c",
+        "somma.h": "c",
+        "string.h": "c",
+        "cmath": "c"
+    }
+}

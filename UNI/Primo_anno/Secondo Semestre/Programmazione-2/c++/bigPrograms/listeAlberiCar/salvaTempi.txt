@@ -1,0 +1,14 @@
+
+Marca: Ferrari, Modello: FXX-K, Circuito: Autodromo-Nazionale-Monza, pilota: Hamilton, Tempo: 1.40.675
+
+Marca: Mercedes, Modello: AMG-One, Circuito: Autodromo-di-Vallelunga, pilota: Hamilton, Tempo: 1.42.457
+
+Marca: Mclaren, Modello: P1, Circuito: Spa-Francorchamps, pilota: Hamilton, Tempo: 1.43.573
+
+Marca: Hennessy, Modello: Venom-GT, Circuito: Monaco, pilota: Hamilton, Tempo: 1.44.103
+
+Marca: Bugatti, Modello: Chiron, Circuito: Silverstone, pilota: Hamilton, Tempo: 1.46.764
+
+Marca: Pagani, Modello: Huayra, Circuito: Autodromo-Di-Suzuka, pilota: Hamilton, Tempo: 1.49.0
+
+Marca: Porche, Modello: 911-GT3-RS, Circuito: Le, pilota: Mans, Tempo: 2.19.994

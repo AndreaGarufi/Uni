@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "95f54f1dafd373bf",
+    "type": "split",
+    "children": [
+      {
+        "id": "8a7304d56ba06600",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5a45e626387aa49b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2 Algebra Relazionale"
+            }
+          },
+          {
+            "id": "9a5ceb15e932b070",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/2 lezione3_AlgebraRelazionale.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "2 lezione3_AlgebraRelazionale"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6d61a9631df04d4c",
+    "type": "split",
+    "children": [
+      {
+        "id": "ce762966ca5147d8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4371091dceb8cd7d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Esplora risorse"
+            }
+          },
+          {
+            "id": "c7c08d62071d1982",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Ricerca"
+            }
+          },
+          {
+            "id": "af1b9a3f751a7ae5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Segnalibri"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 255.50260543823242
+  },
+  "right": {
+    "id": "b0f0301d976babf0",
+    "type": "split",
+    "children": [
+      {
+        "id": "fc2b72cce7974bdb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e7e96a9c2f5f58b2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Secondo Semestre/Analisi-1/Esame/appuntiNaselli/4 AppuntiCap4.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Riferimenti a 4 AppuntiCap4"
+            }
+          },
+          {
+            "id": "780374c742bc64fb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Collegamenti in uscita da eserccap1parte1"
+            }
+          },
+          {
+            "id": "c97164531f3638dd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
+            }
+          },
+          {
+            "id": "53f6583ab62050cc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Secondo Semestre/Analisi-1/Esame/EserciziEsempi/eserccap1parte1.pdf",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Struttura di eserccap1parte1"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "9a5ceb15e932b070",
+  "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/1 Modello relazionale dei dati.md",
+    "Secondo_anno/Modelli",
+    "Secondo_anno/Primo Semestre",
+    "Secondo_anno/Modelli/Pasted image 20251002162942.png",
+    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/2 lezione2_modellorelazionale.pdf",
+    "Secondo_anno/Modelli/Pasted image 20251002162305.png",
+    "Secondo_anno/Modelli/Pasted image 20251002161829.png",
+    "Secondo_anno/Modelli/Pasted image 20251002160238.png",
+    "Secondo_anno/Modelli/Pasted image 20251002155953.png",
+    "Secondo_anno/Modelli/Pasted image 20251002155734.png",
+    "Secondo_anno/Modelli/Pasted image 20251002155704.png",
+    "Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni",
+    "Secondo_anno/Basi di Dati/File_condivisi_studium/Senza nome",
+    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/1 lezione1_introduzione.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium",
+    "propedeudicita.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Libri/l'altro libro obsidian non lo legge ma è in questa cartella.md",
+    "Secondo_anno/Senza nome.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Libri/Basi di Dati (P. Atzeni, S._ (z-library)",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Libri/FondamentiBD-Edizione-Mar2024.pdf",
+    "Project ideas.md",
+    "conflict-files-obsidian-git.md",
+    "Cose da fare.md",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Dimostrare_f_invertibile_dominio_derivata.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/3 cap3.md",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Trovare_max_min_assoluti_intervallo.md",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Trovare_crescenza_concavita_max_min_relativi.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Senza nome.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Condizioni di esistenza e formule.md",
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Lista teoremi.md",
+    "Secondo Semestre/Modelli/Pasted image 20250828165258.png",
+    "Secondo Semestre/Modelli/Pasted image 20250828123409.png",
+    "Secondo Semestre/Modelli/Pasted image 20250828121457.png",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/forma_indeterminata_1_elevato_infinito/spiegazione salvo romeo YT.md",
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/riassunto breve.md"
+  ]
+}

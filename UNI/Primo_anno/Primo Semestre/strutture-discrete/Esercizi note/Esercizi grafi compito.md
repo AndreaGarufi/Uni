@@ -1,0 +1,1 @@
+Per esercizi su grafi che potrebbero essere nel compito guarda le foto della cartella "fotoG"

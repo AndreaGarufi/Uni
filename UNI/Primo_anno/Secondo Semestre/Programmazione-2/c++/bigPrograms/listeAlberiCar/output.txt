@@ -1,0 +1,16 @@
+
+Marca: Mercedes, Modello: AMG-One, Velocita' massima: 315, Prezzo (milioni): 2.5
+
+Marca: Porche, Modello: 911-GT3-RS, Velocita' massima: 330, Prezzo (milioni): 0.5
+
+Marca: Lamborghini, Modello: Centenario, Velocita' massima: 335, Prezzo (milioni): 6
+
+Marca: Pagani, Modello: Huayra, Velocita' massima: 345, Prezzo (milioni): 4
+
+Marca: Mclaren, Modello: P1, Velocita' massima: 350, Prezzo (milioni): 1.5
+
+Marca: Ferrari, Modello: FXX-K, Velocita' massima: 360, Prezzo (milioni): 3
+
+Marca: Bugatti, Modello: Chiron, Velocita' massima: 400, Prezzo (milioni): 3.5
+
+Marca: Hennessy, Modello: Venom-GT, Velocita' massima: 420, Prezzo (milioni): 3.7

@@ -1,0 +1,65 @@
+.sfondo {
+  background-image: url('indexBackgrund.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment:scroll;
+}
+
+.audiowide-regular {
+    font-family: "Audiowide", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 50px;
+    color: #ff5733;
+  }
+
+
+  .audiowide-regular-TEXT {
+    font-family: "Audiowide", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    color: #ff5733;
+  }
+
+
+  .audiowide-regular-TEXT1 {
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #131211;
+  }
+
+  .audiowide-regular-FOOTER {
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #131211;
+  }
+
+  a:hover .animate__pulse {
+    animation: pulse 1s infinite; /* Imposta l'animazione pulse */
+}
+
+/* La definizione dell'animazione pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+  
