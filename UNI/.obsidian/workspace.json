@@ -11,10 +11,14 @@
             "id": "07fa419124c3726c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "2 Algebra Relazionale"
             }
           }
         ]
@@ -168,6 +172,8 @@
   },
   "active": "07fa419124c3726c",
   "lastOpenFiles": [
+    "Secondo_anno/Modelli/Pasted image 20251004114718.png",
+    "Secondo_anno/Modelli/Pasted image 20251004114513.png",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Ricorsione.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/2 lezione3_AlgebraRelazionale.pdf",
@@ -185,7 +191,6 @@
     "Secondo_anno/Modelli/Pasted image 20251002162942.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/2 lezione2_modellorelazionale.pdf",
     "Secondo_anno/Modelli/Pasted image 20251002162305.png",
-    "Secondo_anno/Modelli/Pasted image 20251002161829.png",
     "Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni",
     "Secondo_anno/Basi di Dati/File_condivisi_studium/Senza nome",
