@@ -30,3 +30,34 @@ La cardinalità del risultato è il prodotto delle cardinalità
 $R \,\mathrel{\stackrel{\leftrightarrow}{\bowtie}}\, S =(R \bowtie S) \cup\bigl((R - \pi_{XY}(R \bowtie S)) \times \{Z = NULL\}\bigr) \cup\bigl(\{X = NULL\} \times (S - \pi_{YZ}(R \bowtie S))\bigr)$
 
 **Altre Giunzioni Esterne**
+Nelle giunzioni esterne sinistre e destre si aggiungono solo le parti sinistre e destre. • Siano R ed S definite sugli insiemi di attributi XY e YZ rispettivamente
+
+**Definizione outer join sinistra**
+$R \;\;\mathrel{\stackrel{\leftarrow}{\bowtie}}\;\; S = (R \Join S) \;\cup\;\big((R - \pi_{XY}(R \Join S)) \times \{Z = NULL\}\big)$
+
+**Definizione outer join destra**
+$R  \;\;\mathrel{\stackrel{\rightarrow}{\bowtie}}\;\; S = (R \Join S) \cup \big((S - \pi_{YZ}(R \Join S)) \times \{X = NULL\}\big)$
+
+**Esempi di tutte e 3**
+![[Pasted image 20251007094923.png]]
+
+
+**Proprietà del JOIN**
+- Commutativo: 𝑅 ⋈ 𝑆 = 𝑆 ⋈ 𝑅
+- Associativo: (𝑅 ⋈ 𝑆) ⋈ 𝑇 = 𝑅 ⋈ (𝑆 ⋈ 𝑇)
+
+cosi possiamo costruire sequenze senza ambiguità
+
+**Esempio di JOIN multipli**
+![[Pasted image 20251007095253.png]]
+
+**Prodotto cartesiano a partire dal JOIN**
+• Il JOIN è definito anche se non ci sono attributi comuni fra le relazioni 
+• **In questo caso, non essendoci vincoli sulle tuple da selezionare, vengono selezionate tutte le tuple dalle relazioni del JOIN e quindi otteniamo un prodotto cartesiano**
+
+
+**Esempio di prodotto cartesiano generato dal JOIN**
+![[Pasted image 20251007095513.png]]
+
+
+**Intersezione a partire dalla Natural Join**
