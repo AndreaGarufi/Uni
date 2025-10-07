@@ -47,7 +47,8 @@
               "title": "2 Algebra Relazionale parte 1"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -196,10 +197,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c6ba59177e124343",
+  "active": "4371091dceb8cd7d",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/3 lezione4_AlgebraRelazionale2.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/3 lezione4_AlgebraRelazionale2.pdf",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007160829.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007160746.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007155934.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007155909.png",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007155027.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007154527.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007095253.png",
@@ -210,13 +216,8 @@
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing",
     "Secondo_anno/Primo Semestre/Interazione e multimedia",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251006212632.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251006212446.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251006212314.png",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Ricorsione.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/2 lezione3_AlgebraRelazionale.pdf",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251004114718.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251004114513.png",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Ricorsione.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/2 lezione3_AlgebraRelazionale.pdf",

@@ -78,3 +78,25 @@ $R \overset{\leftrightarrow}{\cup} S = R \times \{Z = NULL\} \cup \{X = NULL\} \
 
 
 ### **SELEZIONE CON VALORI NULLI**
+Questa è la tabella
+![[Pasted image 20251007155909.png]]
+
+
+questa è la query
+![[Pasted image 20251007155934.png]]
+
+Prenderà solo il 45 perche il 35 è minore di 40 e l'altro campo è NULL quindi non verrà preso, infatti:
+
+𝜎𝐸ta>30(𝑃ersone) ∪ 𝜎𝐸ta≤30(𝑃ersone) ≠ 𝑃ersone
+è diverso perché se ci sono campi NULL non verranno presi, quindi la tabella sarà diversa da Persone (che invece contiene campi NULL)
+
+Per riferirsi ai valori nulli esistono forme apposite di condizioni: **IS NULL/ IS NOT NULL** 
+Quindi: 
+![[Pasted image 20251007160746.png|500]]
+
+**Esempio**
+![[Pasted image 20251007160829.png|500]]
+
+
+
+### **QUOZIENTE**
