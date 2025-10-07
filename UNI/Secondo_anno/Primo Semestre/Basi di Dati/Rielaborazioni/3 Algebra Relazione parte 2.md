@@ -100,3 +100,4 @@ Quindi:
 
 
 ### **QUOZIENTE**
+Divisione: Siano XY gli attributi di R ed Y quelli di S, allora
