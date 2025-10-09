@@ -61,3 +61,43 @@ cosi possiamo costruire sequenze senza ambiguità
 
 
 **Intersezione a partire dalla Natural Join**
+Date due relazioni definite sulla stessa lista di attributi, allora il natural join coincide con l’intersezione delle due relazioni
+
+### **SEMI-JOIN**
+• Siano R con attributi XY ed S con attributi YZ 
+• 𝑅 ⋉ 𝑆 è una relazione di attributi XY costituita da tutte le n-uple di R che partecipano a 𝑅 ⋈ 𝑆. 
+![[Pasted image 20251007154527.png]]
+
+
+### **UNIONE ESTERNA**
+Siano R ed S due relazioni definite sugli insiemi di attributi XY e YZ allora:
+• L’unione esterna
+$R \overset{\leftrightarrow}{\cup} S = R \times \{Z = NULL\} \cup \{X = NULL\} \times S$
+• si ottiene estendendo le due tabelle con le colonne dell’altra con valori nulli e si fa l’unione
+![[Pasted image 20251007155027.png]]
+
+
+### **SELEZIONE CON VALORI NULLI**
+Questa è la tabella
+![[Pasted image 20251007155909.png]]
+
+
+questa è la query
+![[Pasted image 20251007155934.png]]
+
+Prenderà solo il 45 perche il 35 è minore di 40 e l'altro campo è NULL quindi non verrà preso, infatti:
+
+𝜎𝐸ta>30(𝑃ersone) ∪ 𝜎𝐸ta≤30(𝑃ersone) ≠ 𝑃ersone
+è diverso perché se ci sono campi NULL non verranno presi, quindi la tabella sarà diversa da Persone (che invece contiene campi NULL)
+
+Per riferirsi ai valori nulli esistono forme apposite di condizioni: **IS NULL/ IS NOT NULL** 
+Quindi: 
+![[Pasted image 20251007160746.png|500]]
+
+**Esempio**
+![[Pasted image 20251007160829.png|500]]
+
+
+
+### **QUOZIENTE**
+Divisione: Siano XY gli attributi di R ed Y quelli di S, allora
