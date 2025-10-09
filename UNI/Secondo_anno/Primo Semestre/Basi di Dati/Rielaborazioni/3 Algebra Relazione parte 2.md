@@ -101,3 +101,37 @@ Quindi:
 
 ### **QUOZIENTE**
 Divisione: Siano XY gli attributi di R ed Y quelli di S, allora
+𝑅 ÷ 𝑆 = {𝑤|𝑤 × 𝑆 ⊆ 𝑅}
+
+La divisione serve a rispondere a query del tipo: trova TUTTE le n-uple di R associate a TUTTE le n-uple di S
+![[Pasted image 20251009144502.png]]
+
+
+### **Viste (relazioni derivate)**
+Una vista è la tabella virtuale che si forma quando faccio una query
+
+• Rappresentazioni diverse per gli stessi dati (schema esterno)
+
+• Relazioni derivate: – relazioni il cui contenuto è funzione del contenuto di altre relazioni (definito per mezzo di interrogazioni) 
+• Relazioni di base: contenuto autonomo – Le relazioni derivate possono essere definite su altre derivate
+
+**Esempio**
+![[Pasted image 20251009145510.png]]
+
+
+Due tipi di relazioni derivate: – **viste materializzate** – **relazioni virtuali (o viste)** 
+
+**Viste materializzate**
+• relazioni derivate memorizzate nella base di dati – vantaggi: • immediatamente disponibili per le interrogazioni 
+– **svantaggi**: 
+• ridondanti 
+• appesantiscono gli aggiornamenti 
+• sono raramente supportate dai DBMS
+
+• **Relazioni virtuali (o viste)**: 
+– sono supportate dai DBMS (tutti) 
+– una interrogazione su una vista viene eseguita "ricalcolando" la vista
+
+**Viste come strumento di programmazione**
+![[Pasted image 20251009145935.png]]
+
