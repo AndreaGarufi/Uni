@@ -1,4 +1,4 @@
-int lato = 50;
+/*int lato = 50;
 
 
 void setup(){
@@ -19,4 +19,4 @@ void mousePressed(){
 
 void draw(){
   
-}
+}*/

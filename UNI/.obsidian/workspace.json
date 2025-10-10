@@ -11,10 +11,12 @@
             "id": "c6ba59177e124343",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista grafo"
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/1 Ricorsione.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "1 Ricorsione"
             }
           }
         ]
@@ -177,8 +179,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c6ba59177e124343",
+  "active": "4371091dceb8cd7d",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/File_teams_1/a.exe",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/File_teams_1/esercizio1.c++",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/File_teams_1/esercizio1",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/File_teams_1",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi",
+    "Secondo_anno/Primo Semestre/Senza nome",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Ricorsione 2.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/1 Ricorsione.pdf",
+    "Primo_anno/Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/3 lezione4_AlgebraRelazionale2.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251009145935.png",
@@ -186,14 +198,6 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251009145510.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251009144502.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione2/lezione2_9.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione2/lezione2_8.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione2/lezione2_7.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione2/lezione2_5.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione2/lezione2_6.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione2/lezione2_3.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione2/lezione2_4.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione2/lezione2_2.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione2/lezione2mio.pde",
     "Secondo_anno/Primo Semestre/Basi di Dati/Libri/l'altro libro obsidian non lo legge ma è in questa cartella.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007160829.png",
