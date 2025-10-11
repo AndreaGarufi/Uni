@@ -33,7 +33,8 @@
               "title": "Da Sapere"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -179,10 +180,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "3216613356f858dc",
+  "active": "d13300199b680e7f",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/3 Notazioni asintotiche.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011160111.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011155511.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011154542.png",

@@ -18,6 +18,7 @@ E' un albero dove ogni nodo corrisponde ad una chiamata ricorsiva
 Descrive il tempo di esecuzione di un algoritmo ricorsivo
 $T(n)$ dove $T$ è il tempo impiegato in base all'input $n$
 
+
 ### **ANALISI DEL COSTO DI UN ALGORITMO**
 Analisi asintotica $->$ comportamento dell'algoritmo con valori molto grandi
 **Confronto tra funzioni**
