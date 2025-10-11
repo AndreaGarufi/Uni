@@ -11,13 +11,30 @@
             "id": "df728fff7e10fadd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/3 Notazioni asintotiche.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "3 Notazioni asintotiche"
+            }
+          },
+          {
+            "id": "d13300199b680e7f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Da Sapere"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -74,7 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 224.50961303710938
   },
   "right": {
     "id": "60ceb3bf826ca8d1",
@@ -163,8 +180,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "df728fff7e10fadd",
+  "active": "d13300199b680e7f",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/3 Notazioni asintotiche.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/2 Ricorsione 2.pdf",
+    "Pasted image 20251011121033.png",
+    "Pasted image 20251011114749.png",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/1 Ricorsione.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251009145935.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251009145925.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251009145510.png",
@@ -175,13 +198,9 @@
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/File_teams_1/a.exe",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/File_teams_1",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Ricorsione 2.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007160829.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007160746.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007155934.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007155909.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007155027.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007154527.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007095513.png"
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007155909.png"
   ]
 }
