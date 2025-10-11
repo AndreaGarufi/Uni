@@ -33,8 +33,7 @@
               "title": "Da Sapere"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -180,13 +179,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "d13300199b680e7f",
+  "active": "3216613356f858dc",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/3 Notazioni asintotiche.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/3 Notazioni asintotiche.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011160111.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011155511.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011154542.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/2 Ricorsione 2.pdf",
-    "Pasted image 20251011121033.png",
-    "Pasted image 20251011114749.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011121033.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011114749.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/1 Ricorsione.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251009145935.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251009145925.png",
@@ -198,9 +200,6 @@
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/File_teams_1/a.exe",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/File_teams_1",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007160829.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007160746.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007155934.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007155909.png"
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007160829.png"
   ]
 }

@@ -46,6 +46,21 @@ in questo caso quello che cresce più velocemente è $7n^4$ quindi l'ordine di g
 Le classi principali sono 3  $𝚯(g(n))$, $O(g(n))$, $Ω(g(n))$ 
 1) $𝚯(g(n))$ -> theta di g di n
    è la classe di tutte le funzioni che hanno un comportamento asintotico simile a g(n),
-   $$𝚯(g(n))= \{F(n):Ǝ c_1,c_2,n_0| 0≤ c_1\,g(n)≤F(n)≤ c_2\,g(n)∀n ≥ n_0  \}$$
+   $$𝚯(g(n))= \{F(n):Ǝ\,\, c_1,c_2,n_0| 0≤ c_1\,g(n)≤F(n)≤ c_2\,g(n)∀n ≥ n_0  \}$$
+![[Pasted image 20251011154542.png|300]]
+$F(n)$ sta sempre in mezzo o al massimo uguale a $c_1\,g(n)$ e $c_2\,g(n)$
 
-fare grafico
+2)  $O(g(n))$ 
+   è la classe che limita superiormente il comportamento di una funzione: ovvero la funzione non andrà mai sopra $O(n)$
+   $$O(g(n)) = \{F(n):Ǝ\,\, c,n_0| 0≤ F(n)≤c\,g(n)∀n ≥ n_0\}$$ ![[Pasted image 20251011155511.png|300]]
+$F(n)$ sta sempre sotto o al massimo uguale alla funzione $O(g(n))$
+
+3) $Ω(g(n))$
+   è la classe che limita inferiormente il comportamento di una funzione: ovvero la funzione non andrà mai sotto $Ω(g(n))$
+   $$Ω(g(n)) = \{F(n):Ǝ\,\, c,n_0| 0≤ c\,g(n)≤F(n)∀n ≥ n_0\}$$   
+![[Pasted image 20251011160111.png|300]]
+$F(n)$ sta sempre sopra o al massimo uguale alla funzione $Ω(g(n))$
+
+esiste anche $o$ piccolo ed è uguale a $O$ solo che la funzione si comporta sempre meglio e mai uguale
+
+**A partire dalla procedura posso capire la classe?**
