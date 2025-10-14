@@ -21,4 +21,7 @@ Sintassi generale Query su SQL
 11) PRECEDENZE
     ![[Pasted image 20251014163112.png]]
     La modifica delle regole di precedenza è ottenuta con l’uso delle parentesi.
-12) pag 38
+12) La join viene usata per effettuare query su più tabelle
+    ![[Pasted image 20251014201658.png]]
+    La condizione di join va scritta nella clausola WHERE
+13) 
