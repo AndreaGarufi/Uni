@@ -4,33 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a6a1eec061f4c133",
+        "id": "dbfc3c18b66668c0",
         "type": "tabs",
         "children": [
           {
-            "id": "cf5b5d82d9710ec9",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "5 lezione7_SQL_I"
-            }
-          },
-          {
-            "id": "b0e0bc1871f5bbd4",
+            "id": "81e31728fef1e7fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
+                "file": "Cose da fare.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQL"
+              "title": "Cose da fare"
             }
           }
         ]
@@ -193,11 +181,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cf5b5d82d9710ec9",
+  "active": "4371091dceb8cd7d",
   "lastOpenFiles": [
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
-    "Pasted image 20251014201658.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014201658.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014163112.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014162945.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014162916.png",
