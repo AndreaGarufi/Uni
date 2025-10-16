@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "dbfc3c18b66668c0",
+        "id": "a8d96e03ecb60515",
         "type": "tabs",
         "children": [
           {
-            "id": "81e31728fef1e7fd",
+            "id": "97d977e30bc7a480",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Cose da fare.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Cose da fare"
+              "icon": "lucide-file-text",
+              "title": "5 lezione7_SQL_I"
             }
           }
         ]
@@ -181,10 +179,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4371091dceb8cd7d",
+  "active": "97d977e30bc7a480",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/3 lezione4_AlgebraRelazionale2.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/2 lezione3_AlgebraRelazionale.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/Lez 01- Introduttiva_2025-2026.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/sketch_251016a/sketch_251016a.pde",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/sketch_251016a",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/Nuova cartella",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/Lez 02 - I fondamenti 2025-2026.pdf",
+    "Cose da fare.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014201658.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014163112.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014162945.png",
@@ -197,15 +205,7 @@
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014155752.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014155616.png",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/2 lezione3_AlgebraRelazionale.pdf",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/3 lezione4_AlgebraRelazionale2.pdf",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/1 lezione2_modellorelazionale.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/1 Ricorsione.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/a.exe",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/prova.cpp",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/3 Notazioni asintotiche.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/2 Ricorsione 2.pdf",
     "Primo_anno/Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Libri/l'altro libro obsidian non lo legge ma è in questa cartella.md",
@@ -216,7 +216,6 @@
     "Secondo_anno/Senza nome.md",
     "Project ideas.md",
     "conflict-files-obsidian-git.md",
-    "Cose da fare.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Dimostrare_f_invertibile_dominio_derivata.md",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1.md",
