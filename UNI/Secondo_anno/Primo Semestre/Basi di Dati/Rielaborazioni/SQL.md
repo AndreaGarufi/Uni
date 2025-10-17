@@ -24,4 +24,12 @@ Sintassi generale Query su SQL
 12) La join viene usata per effettuare query su più tabelle
     ![[Pasted image 20251014201658.png]]
     La condizione di join va scritta nella clausola WHERE
-13) 
+13) OPERATORI AGGREGATI
+    – AVG – COUNT – MAX – MIN – SUM
+14) GROUP BY
+    Divide le righe di una tabella in gruppi piu piccoli
+15) HAVING
+    Esclude gruppi di risultati
+16) 
+
+

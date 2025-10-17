@@ -8,15 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "97d977e30bc7a480",
+            "id": "78ca3ab44433415a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf"
+                "file": "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "5 lezione7_SQL_I"
+              "icon": "lucide-file",
+              "title": "SQL"
             }
           }
         ]
@@ -179,11 +181,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "97d977e30bc7a480",
+  "active": "78ca3ab44433415a",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/esercitazione1_AlgebraRelazionale.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/3 lezione4_AlgebraRelazionale2.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/2 lezione3_AlgebraRelazionale.pdf",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/Lez 01- Introduttiva_2025-2026.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/sketch_251016a/sketch_251016a.pde",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/sketch_251016a",
@@ -191,8 +196,6 @@
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/Nuova cartella",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/Lez 02 - I fondamenti 2025-2026.pdf",
     "Cose da fare.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014201658.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014163112.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014162945.png",
@@ -201,7 +204,6 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014162147.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014161849.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014160731.png",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/4 AlgebraRelazionaleOttimizzazioneQuery.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014155752.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014155616.png",
