@@ -30,6 +30,27 @@ Sintassi generale Query su SQL
     Divide le righe di una tabella in gruppi piu piccoli
 15) HAVING
     Esclude gruppi di risultati
-16) 
+
+**RIASSUMENDO**
+![[Pasted image 20251018161726.png|650]]
+![[Pasted image 20251018161750.png]]
+Creare una query che restituisca:
+nome, matricola, voto minimo, voto massimo, voto medio per gli studenti che hanno dato più di 8 materie
+![[Pasted image 20251018161824.png]]
+
+16) QUERY NIDIFICATE
+    ![[Pasted image 20251018165011.png]]
+    SottoSelect deve dare come risultato una tabella con un solo elemento o vuota
+    le condizioni in SQL permettono anche il confronto fra un attributo e il risultato di una sottoquery 
+    – Attributo op (ANY | ALL) ( Sottoselect ) 
+    • ANY: il predicato è vero se almeno uno dei valori restituiti da Query soddisfano la condizione 
+    • ALL: il predicato è vero se tutti i valori restituiti dalla Query soddisfano la condizione 
+    
+    – quantificatore esistenziale 
+    • [NOT] EXISTS ( Sottoselect ) 
+    • Il predicato è vero se la SelectQuery restituisce almeno una tupla
+17) 
+
+
 
 
