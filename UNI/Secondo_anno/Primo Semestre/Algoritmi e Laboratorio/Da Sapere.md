@@ -65,3 +65,6 @@ $F(n)$ sta sempre sopra o al massimo uguale alla funzione $Ω(g(n))$
 esiste anche $o$ piccolo ed è uguale a $O$ solo che la funzione si comporta sempre meglio e mai uguale
 
 **A partire dalla procedura posso capire la classe?**
+(si) da capire e fare
+
+

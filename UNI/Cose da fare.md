@@ -1,0 +1,1 @@
+basi di dati numero 7 fino a pag 12
