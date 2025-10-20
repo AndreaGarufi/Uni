@@ -68,3 +68,25 @@ esiste anche $o$ piccolo ed è uguale a $O$ solo che la funzione si comporta sem
 (si) da capire e fare
 
 
+
+
+**Strutture dati**
+**HEAP** 
+Per implementare una struttura dati astratta : Coda con priorità (lifo) 
+- A parità di valore si considera il tempo di arrivo
+- Si considera la chiave (valore più piccola)
+![[Pasted image 20251020180019.png]]
+le chiavi sono i valori dentro l'array, mai la posizione
+
+Ovviamente per essere efficiente bisogna che abbia un costo basso
+
+![[Pasted image 20251020180140.png|500]]
+
+1) array disordinato
+2) array ordinato
+3) BST
+
+**Definizione HEAP**
+Struttura dati non lineare. E' un albero binario dove ogni nodo ha al più due figli. È posizionale, ha un figlio sinistro e uno destro, a sinistra è più piccolo della clave a destra più grade. È completo. Tutti i livelli sono pieni. L'ultimo livello può essere non pieno ma solo se i nodi sono allineati da sinistra verso destra![[Pasted image 20251020180427.png|400]]
+![[Pasted image 20251020180450.png]]
+
