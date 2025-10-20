@@ -11,12 +11,14 @@
             "id": "f3ff1766b7bd494d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/4 algoritmi e laboratorio.pdf"
+                "file": "Cose da fare.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "4 algoritmi e laboratorio"
+              "icon": "lucide-file",
+              "title": "Cose da fare"
             }
           },
           {
@@ -195,8 +197,8 @@
   },
   "active": "f3ff1766b7bd494d",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/3 Notazioni asintotiche.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/4 algoritmi e laboratorio.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/3 Notazioni asintotiche.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180450.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180427.png",
