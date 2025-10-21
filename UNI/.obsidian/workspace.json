@@ -11,14 +11,12 @@
             "id": "f3ff1766b7bd494d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Cose da fare.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/1 Ricorsione.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Cose da fare"
+              "icon": "lucide-file-text",
+              "title": "1 Ricorsione"
             }
           },
           {
@@ -197,6 +195,8 @@
   },
   "active": "f3ff1766b7bd494d",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/arrayRicorsivi.c++",
+    "Cose da fare.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/4 algoritmi e laboratorio.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/3 Notazioni asintotiche.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
@@ -212,7 +212,6 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251018161750.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251018161726.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
-    "Cose da fare.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/2 Ottimizzazione con la ricorsione.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/esercitazione1_AlgebraRelazionale.pdf",
