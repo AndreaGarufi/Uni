@@ -37,20 +37,68 @@ Sintassi generale Query su SQL
 Creare una query che restituisca:
 nome, matricola, voto minimo, voto massimo, voto medio per gli studenti che hanno dato più di 8 materie
 ![[Pasted image 20251018161824.png]]
+ 
+ 
+ 1) QUERY NIDIFICATE![[Pasted image 20251018165011.png]]SottoSelect deve dare come risultato una tabella con un solo elemento o vuota
+le condizioni in SQL permettono anche il confronto fra un attributo e il risultato di una sottoquery 
+– Attributo op (ANY | ALL) ( Sottoselect ) 
+• ANY: il predicato è vero se almeno uno dei valori restituiti da Query soddisfano la condizione 
+• ALL: il predicato è vero se tutti i valori restituiti dalla Query soddisfano la condizione 
 
-16) QUERY NIDIFICATE
-    ![[Pasted image 20251018165011.png]]
-    SottoSelect deve dare come risultato una tabella con un solo elemento o vuota
-    le condizioni in SQL permettono anche il confronto fra un attributo e il risultato di una sottoquery 
-    – Attributo op (ANY | ALL) ( Sottoselect ) 
-    • ANY: il predicato è vero se almeno uno dei valori restituiti da Query soddisfano la condizione 
-    • ALL: il predicato è vero se tutti i valori restituiti dalla Query soddisfano la condizione 
-    
-    – quantificatore esistenziale 
-    • [NOT] EXISTS ( Sottoselect ) 
-    • Il predicato è vero se la SelectQuery restituisce almeno una tupla
-17) 
+– quantificatore esistenziale 
+• [NOT] EXISTS ( Sottoselect ) 
+• Il predicato è vero se la SelectQuery restituisce almeno una tupla
 
+
+2) CREATE SCHEMA 
+   *CREATE SCHEMA Nome AUTHORIZATION Utente* 
+   
+   *Definizioni*
+ Dove:
+  – Si crea il database chiamato Nome 
+  – Utente è l’amministratore 
+ – Le Definizioni creano gli elementi dello schema (Tabelle, Viste, Indici, etc…)
+
+3) *DROP SCHEMA Nome [RESTRICT | CASCADE]*
+   • cancella la base di dati Nome 
+   • Restrict: drop non viene eseguito se il database non è vuoto. 
+   • Cascade: Vengono rimossi automaticamente tutti i dati presenti nel database
+
+4) *CREATE TABLE*
+   – definisce uno schema di relazione e ne crea un’istanza vuota 
+   – specifica attributi, domini e vincoli
+5) DOMINI
+   Sono i tipi delle variabili:
+   • CHAR(n) stringhe di lunghezza n 
+   • VARCHAR(n) stringhe di lunghezza variabile con al massimo n caratteri 
+   • INTEGER interi 
+   • REAL reali 
+   • NUMERIC (p,s) p cifre di cui s decimali 
+   • FLOAT(p) es. 0.17 
+   • DATE,TIME per date ed ore
+   *CREATE DOMAIN*
+   – definisce un dominio (semplice), utilizzabile in definizioni di relazioni, anche con vincoli e valori di default 
+
+6) VINCOLI DI INTEGRITA'
+   • Riguardano i valori ammissibili degli attributi di una tupla 
+   – Vincoli Intrarelazionali: nell’ambito della stessa relazione 
+   – Vincoli Referenziali (o Interrelazionali): tra diverse relazioni 
+   
+   • Vengono controllati durante le tre possibili operazioni di modifica SQL 
+   – INSERT,DELETE e UPDATE 
+   – Devono essere sempre soddisfatti altrimenti la transazione fallisce 
+   – Oppure, l’utente può opzionalmente definire delle azioni (correttive) da intraprendere per ripristinare l’integrità
+   
+7) Vincoli intrarelazionali    
+   • NOT NULL 
+   • UNIQUE definisce chiavi 
+   • PRIMARY KEY: chiave primaria (una sola, implica NOT NULL) 
+   • CHECK
+
+8) SQL, operazioni sui dati
+   • interrogazione: – SELECT 
+   • modifica: – INSERT, DELETE, UPDATE
+9) 
 
 
 
