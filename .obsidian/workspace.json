@@ -4,37 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "0fe2d7ff29429e68",
+        "id": "59d39904c952187f",
         "type": "tabs",
         "children": [
           {
-            "id": "00853acd4e0c962e",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/4 Eq_ricorrenza.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "4 Eq_ricorrenza"
-            }
-          },
-          {
-            "id": "1ff93569438f3dc4",
+            "id": "d14c556a9f5f89d8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Rielaborazione.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Da Sapere"
+              "title": "1 Rielaborazione"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -185,31 +172,31 @@
     "type": "floating",
     "children": [
       {
-        "id": "584a51e789f1ae66",
+        "id": "a1cecf2a2fadd079",
         "type": "window",
         "children": [
           {
-            "id": "55a05211c93bbe0e",
+            "id": "8329af05cbf1ffe2",
             "type": "tabs",
             "children": [
               {
-                "id": "4af00572eb2f051d",
+                "id": "27bccf039c5d82f7",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
                   "state": {
-                    "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/4 Risoluzione delle Equazioni di Ricorrenza.pdf"
+                    "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/2 Lez 03 - Operazioni sulle matrici 2025-2026.pdf"
                   },
                   "icon": "lucide-file-text",
-                  "title": "4 Risoluzione delle Equazioni di Ricorrenza"
+                  "title": "2 Lez 03 - Operazioni sulle matrici 2025-2026"
                 }
               }
             ]
           }
         ],
         "direction": "vertical",
-        "x": 152,
-        "y": 249,
+        "x": 1253,
+        "y": 332,
         "width": 1213,
         "height": 794,
         "maximize": true,
@@ -217,20 +204,24 @@
       }
     ]
   },
-  "active": "1ff93569438f3dc4",
+  "active": "d14c556a9f5f89d8",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/2 Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Rielaborazione.md",
+    "Pasted image 20251024161423.png",
+    "Pasted image 20251024161051.png",
+    "Pasted image 20251024160926.png",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/4 Risoluzione delle Equazioni di Ricorrenza.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/4 Eq_ricorrenza.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Pasted image 20251024135108.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/1 Lez 02 - I fondamenti 2025-2026.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/2 Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/3 Lez 04 - Bayer pattern 2025-26.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/4 Eq_ricorrenza.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Lez 04 - Bayer pattern 2025-26.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
     "UNI/Secondo_anno/Primo Semestre/Lez 04 - Bayer pattern 2025-26.pdf",
     "UNI/Secondo_anno/Primo Semestre/Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
-    "UNI/Secondo_anno/Lez 04 - Bayer pattern 2025-26.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251024113845.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251024110126.png",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
@@ -238,9 +229,6 @@
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180427.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180140.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180019.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251018165011.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251018161824.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251018161750.png",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md"
   ]
 }
