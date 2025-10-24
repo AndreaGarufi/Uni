@@ -4,23 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "63eb18526a59cbb3",
+        "id": "0fe2d7ff29429e68",
         "type": "tabs",
         "children": [
           {
-            "id": "df728fff7e10fadd",
+            "id": "00853acd4e0c962e",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/3 Notazioni asintotiche.pdf"
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/4 Eq_ricorrenza.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "3 Notazioni asintotiche"
+              "title": "4 Eq_ricorrenza"
             }
           },
           {
-            "id": "d13300199b680e7f",
+            "id": "1ff93569438f3dc4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -33,7 +33,8 @@
               "title": "Da Sapere"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -179,27 +180,67 @@
       "bases:Create new base": false
     }
   },
-  "active": "df728fff7e10fadd",
+  "floating": {
+    "id": "32985c9ca68f952d",
+    "type": "floating",
+    "children": [
+      {
+        "id": "584a51e789f1ae66",
+        "type": "window",
+        "children": [
+          {
+            "id": "55a05211c93bbe0e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "4af00572eb2f051d",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/4 Risoluzione delle Equazioni di Ricorrenza.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "4 Risoluzione delle Equazioni di Ricorrenza"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 152,
+        "y": 249,
+        "width": 1213,
+        "height": 794,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "1ff93569438f3dc4",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/4 Risoluzione delle Equazioni di Ricorrenza.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/3 Notazioni asintotiche.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011160111.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011155511.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011154542.png",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/2 Ricorsione 2.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011121033.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251011114749.png",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/1 Ricorsione.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251009145935.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251009145925.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251009145510.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251009144502.png",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/1 Ricorsione.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/File_teams_1/esercizio1.c++",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/File_teams_1/a.exe",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/File_teams_1",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251007160829.png"
+    "Pasted image 20251024135108.png",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/1 Lez 02 - I fondamenti 2025-2026.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/2 Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/3 Lez 04 - Bayer pattern 2025-26.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/4 Eq_ricorrenza.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Lez 04 - Bayer pattern 2025-26.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Lez 04 - Bayer pattern 2025-26.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
+    "UNI/Secondo_anno/Lez 04 - Bayer pattern 2025-26.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251024113845.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251024110126.png",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180450.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180427.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180140.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180019.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251018165011.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251018161824.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251018161750.png",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md"
   ]
 }
