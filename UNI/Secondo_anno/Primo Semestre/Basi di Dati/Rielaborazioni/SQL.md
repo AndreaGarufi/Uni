@@ -1,4 +1,4 @@
-(Verranno inserite solo cose riassuntive e generali ma SQL va studiato direttamente dal pdf 5)[[5 lezione7_SQL_I.pdf]]
+(Verranno inserite solo cose riassuntive e generali ma SQL va studiato direttamente dal pdf 5,6,7,8)[[5 lezione7_SQL_I.pdf]]
 
 Sintassi generale Query su SQL 
 ![[Pasted image 20251014160731.png]]
@@ -50,6 +50,7 @@ le condizioni in SQL permettono anche il confronto fra un attributo e il risulta
 • Il predicato è vero se la SelectQuery restituisce almeno una tupla
 
 
+**CREAZIONE/GESTIONE DATABASE**
 2) CREATE SCHEMA 
    *CREATE SCHEMA Nome AUTHORIZATION Utente* 
    

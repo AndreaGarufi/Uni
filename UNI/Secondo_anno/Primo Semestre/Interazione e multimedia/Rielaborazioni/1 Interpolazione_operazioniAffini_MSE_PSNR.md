@@ -82,3 +82,14 @@ Quindi partendo da una matrice $m$ x $n$ ottendo una matrice $\frac{m}{2}$ x $\f
 - PSNR (Peak Signal to Noise Ratio)  parametro per misurare la qualità di un immagine compressa rispetto all'originale, dipende dalla differenza tra l’immagine codificata e quella originale. Maggiore è il suo valore maggiore sarà la “somiglianza” con l'originale
 
 PSNR (Peak Signal to Noise Ratio)
+Per calcolarlo bisogna avere sia l'immagine da valutare sia quella originale, questo algoritmo non è il migliore per valutare la qualità di un immagine ma è il più diffuso.
+Per calcolare il PSNR abbiamo prima bisogno del MSE:
+![[Pasted image 20251025105228.png|400]]
+
+Poi si hanno 3 formula che sono equivalenti tra di loro:
+![[Pasted image 20251025105307.png]]
+
+MSE e PSNR sono molto usati perché semplici da calcolare, però non sempre danno un risultato fedele a quello dato dal sistema visivo umano. Infatti:
+- Due immagini distorte possono avere tipi molto diversi di errori pur avendo lo stesso MSE.
+- Entrambe le metriche sono fortemente influenzate anche da “impercettibili” movimenti spaziali (traslazioni,rotazioni, flipping di righe e/colonne)
+

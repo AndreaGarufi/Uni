@@ -8,7 +8,7 @@ Riduce in modo significativo la dimensione del risultato intermedio (e quindi il
 
 
 • Supponiamo che vogliamo trovare: 
-• tutti i professori che hanno dato a Mario Rossi piu’ di 27
+• tutti i professori che hanno dato a Mario Rossi più di 27
 ![[Pasted image 20251014155752.png]]
 
 **Regole per la quey optimization**
