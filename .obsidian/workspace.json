@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0193eb290530b464",
+        "id": "2c79fc7e00b5e484",
         "type": "tabs",
         "children": [
           {
-            "id": "39b170525b32f321",
+            "id": "247099ae2eb0c6cf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQL"
+              "title": "Da Sapere"
             }
           }
         ]
@@ -167,13 +167,53 @@
       "bases:Create new base": false
     }
   },
-  "active": "39b170525b32f321",
+  "floating": {
+    "id": "32985c9ca68f952d",
+    "type": "floating",
+    "children": [
+      {
+        "id": "b32b166983a3e7f3",
+        "type": "window",
+        "children": [
+          {
+            "id": "a52fb444a82eef6e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1cdf715d47e504c9",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/4 Risoluzione delle Equazioni di Ricorrenza.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "4 Risoluzione delle Equazioni di Ricorrenza"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 616,
+        "y": 196,
+        "width": 1213,
+        "height": 794,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "247099ae2eb0c6cf",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/4 Risoluzione delle Equazioni di Ricorrenza.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/8 lezione10_SQL_IV.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/6 lezione8_SQL_II.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/4 AlgebraRelazionaleOttimizzazioneQuery.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
@@ -193,9 +233,6 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/2 Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025105307.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/4 Risoluzione delle Equazioni di Ricorrenza.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/4 Eq_ricorrenza.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/1 Lez 02 - I fondamenti 2025-2026.pdf"
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md"
   ]
 }

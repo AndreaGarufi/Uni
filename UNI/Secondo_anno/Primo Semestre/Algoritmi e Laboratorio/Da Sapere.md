@@ -109,10 +109,6 @@ In questo caso, il costo per livello è costante e l’albero ha profondità log
 
 
 
-
-
-
-
 #### Il metodo della sostituzione
 Consiste nel formulare un’ipotesi sulla forma asintotica della soluzione e nel dimostrare che tale ipotesi è corretta attraverso un ragionamento induttivo.
 Si parte dall’ equazione di ricorrenza e, osservando la struttura del problema, si tenta di “indovinare” la crescita di T (n), ad esempio di O(n) O($n^2$) ecc... . Una volta formulata una ipotesi la si sostituisce nell'equazione e si verifica se l'uguaglianza (o disuguaglianza) risulta soddisfatta per valori sufficientemente grandi di n. Se l’ipotesi risulta coerente, viene così confermata; altrimenti, la si modifica finché non produce una forma valida.
@@ -131,7 +127,8 @@ L'intuizione suggerisce una crescita logaritmica. Supponiamo quindi $T(n)≤ c \
 ![[Pasted image 20251024135108.png]]
 Affinché la disuguaglianza $T(n)≤ c \,log_2\,\,n$ sia rispettata, è sufficiente che $-c+1≤ 0$ cioè $c≥1$ Anche in questo caso la nostra ipotesi è coerente $T(n) = O(log\,\,n)$
 
-#### TEOREMA MASTER
+#### TEOREMA MASTER (Importante)
+
 
 
 
