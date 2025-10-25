@@ -128,6 +128,16 @@ L'intuizione suggerisce una crescita logaritmica. Supponiamo quindi $T(n)≤ c \
 Affinché la disuguaglianza $T(n)≤ c \,log_2\,\,n$ sia rispettata, è sufficiente che $-c+1≤ 0$ cioè $c≥1$ Anche in questo caso la nostra ipotesi è coerente $T(n) = O(log\,\,n)$
 
 #### TEOREMA MASTER (Importante)
+Dopo aver visto il metodo dell’albero di ricorsione, che offre una rappresentazione intuitiva della struttura del costo, e il metodo della sostituzione, che consente una verifica formale dell’ipotesi asintotica, possiamo introdurre un terzo strumento, spesso più diretto ed efficace: il Teorema Master questo risultato fornisce una regola generale per determinare in modo sistematico l’ordine di grandezza di molte equazioni di ricorrenza della forma
+$$T(n) = aT(\frac{n}{b}) + f(n)$$
+dove:
+- $a ≥ 1$ il numero di sottoproblemi in cui viene suddiviso il problema di dimensione $n$
+- $b>1$ il fattore di riduzione della dimensione di ciascun sottoproblema.
+- $f(n)$ il costo del lavoro non ricorsivo, ossia il tempo a suddividere il problema e a combinare i risultati
+
+**L'idea in breve**
+L’idea del Teorema Master è confrontare la funzione $f (n)$ — che misura il lavoro esterno alla ricorsione — con la quantità $n^{log_b\,\, a}$, che rappresenta il costo totale del lavoro ricorsivo. A seconda di quale dei due termini cresce più rapidamente, si individuano tre comportamenti distinti.
+
 
 
 
