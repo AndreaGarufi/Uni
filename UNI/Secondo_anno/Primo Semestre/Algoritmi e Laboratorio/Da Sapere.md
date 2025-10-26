@@ -168,3 +168,4 @@ Ovviamente per essere efficiente bisogna che abbia un costo basso
 **Definizione HEAP**
 Struttura dati non lineare. E' un albero binario dove ogni nodo ha al più due figli. È posizionale, ha un figlio sinistro e uno destro, a sinistra è più piccolo della clave a destra più grade. È completo. Tutti i livelli sono pieni. L'ultimo livello può essere non pieno ma solo se i nodi sono allineati da sinistra verso destra![[Pasted image 20251020180427.png|400]]
 ![[Pasted image 20251020180450.png]]
+ciao 

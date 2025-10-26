@@ -11,12 +11,14 @@
             "id": "82794c28c7ede847",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf"
+                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "7 lezione9_SQL_III"
+              "icon": "lucide-file",
+              "title": "Da Sapere"
             }
           },
           {
@@ -195,29 +197,31 @@
   },
   "active": "82794c28c7ede847",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112253.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112146.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112029.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111953.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111833.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111604.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111436.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111257.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025110811.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025105307.png",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/3 Lez 04 - Bayer pattern 2025-26.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/2 Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/4 Risoluzione delle Equazioni di Ricorrenza.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/8 lezione10_SQL_IV.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/1 Ricorsione.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/4 Eq_ricorrenza.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/3 Notazioni asintotiche.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/c++_prove_algoritmi/arrayRicorsivi.c++",
     "Cose da fare.md",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180450.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180427.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180140.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251020180019.png",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/6 lezione8_SQL_II.pdf",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251018165011.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251018161824.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251018161750.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251018161726.png",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014201658.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251014163112.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
     "Primo_anno/Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
@@ -237,8 +241,6 @@
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Trovare_crescenza_concavita_max_min_relativi.md",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Senza nome.md",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Condizioni di esistenza e formule.md",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Lista teoremi.md",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/Limiti_successioni/forma_indeterminata_1_elevato_infinito/spiegazione salvo romeo YT.md"
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Condizioni di esistenza e formule.md"
   ]
 }
