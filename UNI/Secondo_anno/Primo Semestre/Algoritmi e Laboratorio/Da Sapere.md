@@ -170,4 +170,4 @@ Struttura dati non lineare. E' un albero binario dove ogni nodo ha al più due f
 ![[Pasted image 20251020180450.png]]
 
 
-ciao
+ciao mi chiamo andrea
