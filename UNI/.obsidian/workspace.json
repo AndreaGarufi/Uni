@@ -47,8 +47,7 @@
               "title": "Cose da fare"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -208,11 +207,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "986766d04e13e353",
+  "active": "cd58548bdb2ca692",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Cose da fare.md",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/2 Ottimizzazione con la ricorsione.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/8 lezione10_SQL_IV.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",

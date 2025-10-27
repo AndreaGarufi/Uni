@@ -1,1 +1,1 @@
-fare esercizi 3 notazione asintotiche e completare con gli ultimi 2 paragrafi di quel pdf
+fare esercizi 3 notazione asintotiche
