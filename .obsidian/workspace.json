@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2c79fc7e00b5e484",
+        "id": "1035d73bb8e4537c",
         "type": "tabs",
         "children": [
           {
-            "id": "247099ae2eb0c6cf",
+            "id": "d72f5480b5dc72df",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/2 esercitazione2_SQLAlgebraRelazionale.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "2 esercitazione2_SQLAlgebraRelazionale"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -165,11 +163,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "247099ae2eb0c6cf",
+  "active": "d72f5480b5dc72df",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/2 esercitazione2_SQLAlgebraRelazionale.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/9 lezione11_SQL_V.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/1 esercitazione1_AlgebraRelazionale.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/2 esercitazione2_SQLAlgebraRelazionale.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/4 Risoluzione delle Equazioni di Ricorrenza.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf",
@@ -180,10 +180,8 @@
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/6 lezione8_SQL_II.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/4 AlgebraRelazionaleOttimizzazioneQuery.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112253.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112146.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112029.png",
@@ -193,7 +191,6 @@
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111436.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111257.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025110811.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025105307.png"
   ]
 }
