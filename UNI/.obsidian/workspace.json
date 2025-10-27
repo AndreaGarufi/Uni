@@ -4,50 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "11fc07a82750dcc7",
+        "id": "fe75a2471cb0b026",
         "type": "tabs",
         "children": [
           {
-            "id": "cd58548bdb2ca692",
+            "id": "636fa75a0c38da67",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf"
+                "file": "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "3 Notazioni Asintotiche"
+              "title": "5 lezione7_SQL_I"
             }
           },
           {
-            "id": "986766d04e13e353",
+            "id": "ba1a4d2d63498eda",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+                "file": "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Da Sapere"
-            }
-          },
-          {
-            "id": "c0c9f79f2db5267f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cose da fare.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Cose da fare"
+              "title": "SQL I"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -207,15 +194,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cd58548bdb2ca692",
+  "active": "ba1a4d2d63498eda",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf",
     "Cose da fare.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/2 Ottimizzazione con la ricorsione.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/8 lezione10_SQL_IV.pdf",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/6 lezione8_SQL_II.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251027160319.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
@@ -224,7 +213,6 @@
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/2 esercitazione2_SQLAlgebraRelazionale.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/1 esercitazione1_AlgebraRelazionale.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/4 Risoluzione delle Equazioni di Ricorrenza.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112253.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112146.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112029.png",
@@ -252,7 +240,6 @@
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Trovare_max_min_assoluti_intervallo.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Trovare_crescenza_concavita_max_min_relativi.md",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/Senza nome.md",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/Condizioni di esistenza e formule.md"
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Senza nome.md"
   ]
 }
