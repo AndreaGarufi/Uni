@@ -109,6 +109,12 @@ La divisione serve a rispondere a query del tipo: trova TUTTE le n-uple di R ass
 
 ### **Viste (relazioni derivate)**
 Una vista è la tabella virtuale che si forma quando faccio una query
+Utilizzate per vari scopi: 
+– Semplificazione 
+– Protezione dati 
+– Scomposizione query complesse 
+– Riorganizzazione dati secondo nuovi schemi 
+– Etc.
 
 • Rappresentazioni diverse per gli stessi dati (schema esterno)
 

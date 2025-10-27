@@ -135,17 +135,55 @@ dove:
 - $b>1$ il fattore di riduzione della dimensione di ciascun sottoproblema.
 - $f(n)$ il costo del lavoro non ricorsivo, ossia il tempo a suddividere il problema e a combinare i risultati
 
+**Enunciato del teorema master**
+Sia $T (n) = a T (n/b) + f (n)$ con $a ≥ 1$, $b > 1$, e $f (n)$ una funzione positiva. Allora valgono i seguenti casi:
+1) se esiste una costante $ε > 0$ tale che:
+   $$f(n) = O(n^{log_b\,\, a-ε})$$
+   cioè il lavoro non ricorsivo è asintoticamente più piccolo del lavoro interno alla ricorsione, allora $$T (n) = Θ(n^{log_b\,\, a})$$
+   In questo caso domina il costo generato dalla parte ricorsiva dell’algoritmo (le chiamate interne)
+
+2) (generalizzato) se $$ f(n) = Θ(n^{log_b\,\, a} \,\,log^k\,\,n)$$
+   ossia il lavoro non ricorsivo ha lo stesso ordine di grandezza del lavoro ricorsivo (a meno di un fattore logaritmico), allora $$T (n) = Θ(n^{log_b\,\, a} \,\,log^{k+1}\,\,n)$$
+   In questo caso, tutti i livelli dell’albero di ricorsione contribuiscono in modo equivalente al costo totale, e la moltiplicazione per un fattore $log^k\,\,n$ nel termine $f (n)$ si traduce in un incremento di un ordine logaritmico nel costo complessivo
+
+3) se esiste una costante $ε > 0$ tale che:
+   $$ f(n) = Ω(n^{log_b\,\, a+ε})$$
+   cioè il lavoro non ricorsivo cresce più velocemente del lavoro interno, e se inoltre è verificata una condizione di regolarità (detta condizione di dominanza) $a\,f(\frac{n}{b})≤ c\,\, f (n)$ per una costante $c < 1$ e $n$ sufficientemente grande, allora $$T (n) = Θ(f (n))$$
+   In questo caso, la parte ricorsiva diventa trascurabile rispetto al lavoro non ricorsivo. Esempio tipico: una ricorrenza come $T (n) = 2T (n/2) + n^2$, dove il termine $n^2$ domina.
+
+
+
 **L'idea in breve**
 L’idea del Teorema Master è confrontare la funzione $f (n)$ — che misura il lavoro esterno alla ricorsione — con la quantità $n^{log_b\,\, a}$, che rappresenta il costo totale del lavoro ricorsivo. A seconda di quale dei due termini cresce più rapidamente, si individuano tre comportamenti distinti.
+In sostanza, $n^{log_b\,\, a}$ descrive quanto “grande” diventa l’albero della ricorsione, mentre $f (n)$ misura il costo aggiuntivo sostenuto a ciascun livello.
+Il comportamento finale di $T (n)$ dipende da quale di queste due componenti cresce più rapidamente:
+- Se $f (n)$ cresce molto meno di $n^{log_b\,\, a}$ , il termine ricorsivo domina 
+- Se cresce molto di più, prevale il termine non ricorsivo 
+- Se le due funzioni hanno crescita simile, i contributi si equilibrano e il costo totale si distribuisce tra tutti i livelli.
 
+Il parametro $ε$ viene introdotto proprio per formalizzare questa differenza di crescita: esso rappresenta una “distanza esponenziale” tra le due funzioni.
 
+Quando si scrive, ad esempio, $f (n) = O(n^{log_b\,\, a-ε})$, si intende che f (n) cresce in modo sensibilmente più lento rispetto a $n^{log_b\,\, a}$ , tanto da risultare inferiore di un intero fattore polinomiale. Allo stesso modo, $f (n) = Ω(n^{log_b\,\, a+ε})$
 
+**Come capire in che caso mi trovo**
+Un modo semplice per orientarsi è il seguente: se tra $f (n)$ e $n^{log_b\,\, a}$ compare una differenza di potenze, anche minima, questa differenza è sufficiente a stabilire il caso corretto del teorema. Al contrario, quando le due funzioni sono dello stesso ordine, ma $f (n)$ contiene un termine moltiplicativo in $log\,\, n$ o una funzione molto vicina alla crescita polinomiale, il problema rientra nel caso “intermedio”
 
+**Esempio 1**
+Consideriamo la ricorrenza $T (n) = 2T (n/2) + n$. Qui $a = 2$, $b = 24 e quindi $n^{log_b\,\, a} = n$. Poiché $f (n) = n$ ha la stessa crescita, non esiste un $ε > 0$ tale che $f (n)$ sia né più piccolo né più grande di un fattore polinomiale rispetto a $n^{log_b\,\, a}$: ci troviamo dunque nel caso intermedio, e la soluzione è $T (n) = Θ(n\,\, log\,\, n)$
 
+**Esempio 2**
+Consideriamo invece $T (n) = 2T (n/2) + n^2$. In questo caso $n^{log_b\,\, a} = n$, ma $f (n) = n^2$ cresce più rapidamente di un intero fattore polinomiale, cioè $f (n) = Ω(n^1+ε)$ con $ε = 1$. Qui il termine non ricorsivo domina e la soluzione è $T (n) = Θ(n^2)$
 
+**Applicazione del Teorema Master**
+**Esempio ricerca binaria**
+La ricerca binaria è descritta dalla ricorrenza $T (n) = T (n/2) + 1$
 
+In questo caso $a = 1$, $b = 2$ e $f (n) = 1$. Calcoliamo il termine di riferimento $n^{log_b\,\, a}$: poiché $log_2\,\, 1 = 0$, si ottiene $n^{log_2\,\, 1} = n^0 = 1$. Confrontiamo ora $f (n)$ con questo valore: $f (n) = 1 = Θ(1) = Θ(n^{log_2\,\, 1})$
+Siamo dunque nel secondo caso del Teorema Master, quello in cui $f (n)$ ha lo stesso ordine di grandezza del termine ricorsivo.
+Applicando la formula corrispondente, otteniamo: $$T (n) = Θ(n^{log_2\,\, 1}\,log\,\,n) = Θ(log\,\, n)$$
+In ogni passo della ricerca binaria, il problema viene dimezzato, ma il la- voro svolto ad ogni livello (una sola comparazione) è costante. Poiché ci sono $log_2\,\, n$ livelli fino a ridurre il problema a un singolo elemento, il costo totale cresce in modo logaritmico. Il Teorema Master, in questo caso, conferma in modo immediato ciò che l’intuizione suggerisce: ogni livello contribuisce in modo uniforme, e il numero di livelli determina la crescita complessiva
 
-
+(altri 2 esempi per gli altri 2 casi nel pdf 4 a pagina 20, dopo ci sono anche altre eq. di ricorrenza risolte con i 3 metodi spiegati [[4 Risoluzione delle Equazioni di Ricorrenza.pdf]])
 
 
 

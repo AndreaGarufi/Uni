@@ -1,4 +1,4 @@
-(Verranno inserite solo cose riassuntive e generali ma SQL va studiato direttamente dal pdf 5,6,7,8)[[5 lezione7_SQL_I.pdf]]
+(Verranno inserite solo cose riassuntive e generali ma SQL va studiato direttamente dai pdf 5,6,7,8,9)[[5 lezione7_SQL_I.pdf]]
 
 Sintassi generale Query su SQL 
 ![[Pasted image 20251014160731.png]]
@@ -99,7 +99,10 @@ le condizioni in SQL permettono anche il confronto fra un attributo e il risulta
 8) SQL, operazioni sui dati
    • interrogazione: – SELECT 
    • modifica: – INSERT, DELETE, UPDATE
-9) 
+9) VIEW
+   ![[Pasted image 20251027160319.png|600]]
+   Le view possono essere distrutte alla pari delle tabelle con drop view ecc...
+10) 
 
 
 
