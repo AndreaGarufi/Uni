@@ -25,7 +25,7 @@ Analisi asintotica $->$ comportamento dell'algoritmo con valori molto grandi
 1) $F(n) = k | 0<k<∞$ **costante**
 2) $F(n) = n$ cresce **linearmente** all'input dato
 3) $F(n)= log_2\,\,\,n$ cresce meno rispetto alla lineare
-4) $F(n) = n\,\,\,log\,\,\,n$ funzione **linearitmica** cresce un po di più della funzione lineare
+4) $F(n) = n\,\,\,log\,\,\,n$ funzione **linearitmica** cresce un po' di più della funzione lineare
 
 - funzioni polinomiali
 5) $F(n^2)$ funzione **quadratica**
@@ -39,7 +39,7 @@ Analisi asintotica $->$ comportamento dell'algoritmo con valori molto grandi
 ![[Pasted image 20251011121033.png]]
 
 
-### **Come capire la classe di una funzione**
+### **COME CAPIRE LA CLASSE DI UNA FUNZIONE**
 Se la funzione è $F(n) = n^3 + 7n^4 + 2n\,\,log^3\,\,n+3$
 confrontiamo i termini e da li capiamo quello con la grandezza maggiore:
 in questo caso quello che cresce più velocemente è $7n^4$ quindi l'ordine di grandezza è $n^4$
@@ -64,11 +64,24 @@ $F(n)$ sta sempre sopra o al massimo uguale alla funzione $Ω(g(n))$
 
 esiste anche $o$ piccolo ed è uguale a $O$ solo che la funzione si comporta sempre meglio e mai uguale
 
+**Nella realtà...**
+Tuttavia, nella pratica, gli algoritmi raramente operano nei loro casi estremi. Un algoritmo descritto come $O(n^2)$ potrebbe, in molti scenari reali, comportarsi quasi sempre come un algoritmo $O(n\,\,log\,\, n)$, se le condizioni medie del problema lo favoriscono. Viceversa, un algoritmo con complessità $Ω(n)$ nel caso migliore potrebbe raramente riuscire a raggiungere quel limite, perché le situazioni ottimali sono poco frequenti.
+
+Nell’analisi asintotica degli algoritmi, è prassi comune trascurare i fattori costanti e i termini di ordine inferiore. Questo approccio consente di concentrarsi sulla crescita dominante della funzione di costo al crescere della dimensione dell’input n. Tuttavia, nella pratica quotidiana — soprattutto per input di piccole o medie dimensioni — queste costanti possono fare una differenza sostanziale.
+
+Infatti magari un algoritmo con una complessità peggiore potrebbe essere più efficiente (per input medi o piccoli) di un altro con complessità migliore
+In sintesi, possiamo dire che: 
+• le notazioni asintotiche descrivono il comportamento a lungo termine;
+• i fattori costanti e i termini minori influenzano le prestazioni nel breve termine; 
+• un algoritmo asintoticamente migliore può essere più lento di un altro per una vasta gamma di input reali.
+
+
+
 ### **A partire dalla procedura posso capire la classe?**
 (si) da capire e fare
 
 
-### **Risoluzione equazioni di ricorrenza**
+### **RISOLUZIONE EQUAZIONI DI RICORRENZA**
 Se indichiamo con T(n) il costo dell’algoritmo su un problema di dimensione n, possiamo esprimere questo comportamento nel modo seguente:
 $$T(n) = aT(\frac{n}{b}) + f(n)$$Dove a rappresenta il numero di sottoproblemi prodotti, b il fattore di riduzione della dimensione e f (n) il costo complessivo delle operazioni non ricorsive, ossia di tutte quelle attività che non comportano nuove chiamate, come la divisione del problema, la fusione dei risultati o eventuali operazioni preliminari
 
@@ -187,7 +200,7 @@ In ogni passo della ricerca binaria, il problema viene dimezzato, ma il la- voro
 
 
 
-### **Strutture dati**
+### **STRUTTURE DATI**
 **HEAP** 
 Per implementare una struttura dati astratta : Coda con priorità (lifo) 
 - A parità di valore si considera il tempo di arrivo
