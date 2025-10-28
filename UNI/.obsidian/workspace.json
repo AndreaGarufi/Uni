@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "636fa75a0c38da67",
+            "id": "f6f75b73f61064cc",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -198,7 +198,17 @@
   "lastOpenFiles": [
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
-    "Pasted image 20251027212601.png",
+    "Pasted image 20251028162219.png",
+    "Pasted image 20251028161838.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028161401.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028161019.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028155934.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028155824.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028155433.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028155323.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028155259.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028155140.png",
+    "Senza nome.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf",
     "Cose da fare.md",
@@ -207,21 +217,12 @@
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/8 lezione10_SQL_IV.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/6 lezione8_SQL_II.pdf",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251027160319.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/9 lezione11_SQL_V.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/2 esercitazione2_SQLAlgebraRelazionale.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/1 esercitazione1_AlgebraRelazionale.pdf",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112253.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112146.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112029.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111953.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111833.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111604.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111436.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111257.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
     "Primo_anno/Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
@@ -239,7 +240,6 @@
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/3 cap3.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Trovare_max_min_assoluti_intervallo.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Trovare_crescenza_concavita_max_min_relativi.md",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/Senza nome.md"
+    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md"
   ]
 }
