@@ -4,33 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "fe75a2471cb0b026",
+        "id": "8a3813c462207000",
         "type": "tabs",
         "children": [
           {
-            "id": "f6f75b73f61064cc",
+            "id": "063d7ae96dc6ea0f",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf"
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "5 lezione7_SQL_I"
+              "title": "COMPLETO interazione-e-multimedia"
             }
           },
           {
-            "id": "ba1a4d2d63498eda",
+            "id": "614967f8ca60df99",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
+                "file": "Cose da fare.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQL I"
+              "title": "Cose da fare"
             }
           }
         ],
@@ -194,10 +194,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4371091dceb8cd7d",
+  "active": "614967f8ca60df99",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/4 Lez 05 - Risoluzione 2024-25.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029154941.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029154824.png",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/3 Lez 04 - Bayer pattern 2025-26.pdf",
+    "Forza Horizon 5 [FitGirl Repack].torrent",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/5 Lez 06 - Occhio e lente sottile 2024-25.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028162219.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028161838.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028161401.png",
@@ -206,23 +216,15 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028155824.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028155433.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028155323.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028155259.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028155140.png",
     "Senza nome.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf",
     "Cose da fare.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/2 Ottimizzazione con la ricorsione.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/8 lezione10_SQL_IV.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/6 lezione8_SQL_II.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/9 lezione11_SQL_V.pdf",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/2 esercitazione2_SQLAlgebraRelazionale.pdf",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/1 esercitazione1_AlgebraRelazionale.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
     "Primo_anno/Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
@@ -239,7 +241,6 @@
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/1 cap1.md",
     "Secondo Semestre/Analisi-1/Esame/rielaborazioni/3 cap3.md",
     "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Trovare_max_min_assoluti_intervallo.md",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Trovare_crescenza_concavita_max_min_relativi.md",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/2 cap2.md"
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Trovare_crescenza_concavita_max_min_relativi.md"
   ]
 }

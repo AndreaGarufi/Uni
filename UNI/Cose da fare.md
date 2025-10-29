@@ -1,1 +1,1 @@
-fare esercizi 3 notazione asintotiche
+interazioni leggere il pdf fino a dove ha spiegato il prof
