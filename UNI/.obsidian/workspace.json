@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "4 Occhio Umano"
             }
-          },
-          {
-            "id": "6beaffaff3ca8ff6",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/5 Lez 06 - Occhio e lente sottile 2024-25.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "5 Lez 06 - Occhio e lente sottile 2024-25"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -194,10 +181,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6beaffaff3ca8ff6",
+  "active": "4371091dceb8cd7d",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/5 Lez 06 - Occhio e lente sottile 2024-25.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251030143627.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163844.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163531.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163132.png",
@@ -218,7 +206,6 @@
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251028162219.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/2 Ottimizzazione con la ricorsione.pdf",
