@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8a3813c462207000",
+        "id": "6e0758d11362bd89",
         "type": "tabs",
         "children": [
           {
-            "id": "063d7ae96dc6ea0f",
+            "id": "20fb73f296630fa5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "614967f8ca60df99",
+            "id": "6beaffaff3ca8ff6",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -33,7 +33,8 @@
               "title": "5 Lez 06 - Occhio e lente sottile 2024-25"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -193,10 +194,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "063d7ae96dc6ea0f",
+  "active": "6beaffaff3ca8ff6",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/5 Lez 06 - Occhio e lente sottile 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/5 Lez 06 - Occhio e lente sottile 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163844.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163531.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163132.png",
