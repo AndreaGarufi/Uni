@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1035d73bb8e4537c",
+        "id": "6fdc10339bace188",
         "type": "tabs",
         "children": [
           {
-            "id": "d72f5480b5dc72df",
+            "id": "3e6d8f6d48e5ddb0",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -163,34 +163,39 @@
       "bases:Create new base": false
     }
   },
-  "active": "d72f5480b5dc72df",
+  "active": "3216613356f858dc",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251030162023.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251030161432.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251030143627.png",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL II.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/5 Lez 06 - Occhio e lente sottile 2024-25.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/4 Lez 05 - Risoluzione 2024-25.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163844.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163531.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163132.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163119.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029162942.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029161004.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029160440.png",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria",
+    "UNI/Forza Horizon 5 [FitGirl Repack].torrent",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/2 esercitazione2_SQLAlgebraRelazionale.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/9 lezione11_SQL_V.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/1 esercitazione1_AlgebraRelazionale.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/4 Risoluzione delle Equazioni di Ricorrenza.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/3 Notazioni Asintotiche.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/8 lezione10_SQL_IV.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/6 lezione8_SQL_II.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/5 lezione7_SQL_I.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112253.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112146.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025112029.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111953.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111833.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111604.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111436.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025111257.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025110811.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251025105307.png"
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md"
   ]
 }
