@@ -14,7 +14,7 @@ Queste operazioni affini sono essenzialmente:
 - la traslazione
 - lo scaling
 - lo shear
-Queste operazioni non cambiano il valore del pixel ma lo spostano
+Queste operazioni non cambiano il valore del pixel ma lo spostano (dandogli delle nuove coordinate)
 Queste operazioni si possono identificare tramite matrice o equazione
 ![[Pasted image 20251024161423.png|600]]
 la matrice quindi è l'operazione che io andrò a fare sull'immagine,
@@ -78,7 +78,7 @@ Quindi partendo da una matrice $m$ x $n$ ottendo una matrice $\frac{m}{2}$ x $\f
 
 
 **Stima della qualità di un algoritmo**
-- MSE (Mean Square Errore) tale parametro serve a stimare l'errore quadratico medio tra due immagini; più tale indice è basso minore è la differenza tra le immagini.
+- MSE (Mean Square Error) tale parametro serve a stimare l'errore quadratico medio tra due immagini; più tale indice è basso minore è la differenza tra le immagini.
 - PSNR (Peak Signal to Noise Ratio)  parametro per misurare la qualità di un immagine compressa rispetto all'originale, dipende dalla differenza tra l’immagine codificata e quella originale. Maggiore è il suo valore maggiore sarà la “somiglianza” con l'originale
 
 PSNR (Peak Signal to Noise Ratio)
@@ -86,7 +86,7 @@ Per calcolarlo bisogna avere sia l'immagine da valutare sia quella originale, qu
 Per calcolare il PSNR abbiamo prima bisogno del MSE:
 ![[Pasted image 20251025105228.png|400]]
 
-Poi si hanno 3 formula che sono equivalenti tra di loro:
+Poi si hanno 3 formule che sono equivalenti tra di loro:
 ![[Pasted image 20251025105307.png]]
 
 MSE e PSNR sono molto usati perché semplici da calcolare, però non sempre danno un risultato fedele a quello dato dal sistema visivo umano. Infatti:
