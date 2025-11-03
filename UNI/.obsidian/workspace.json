@@ -35,10 +35,14 @@
             "id": "f46b82374c2a8476",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "5 Campionamento_Quantizzazione"
             }
           }
         ],
@@ -202,38 +206,38 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4371091dceb8cd7d",
+  "active": "f46b82374c2a8476",
   "lastOpenFiles": [
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/6 Lez 07 - Campionamento e quantizzazione 2024-2025.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
+    "Pasted image 20251103161915.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103161827.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103161736.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103161659.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103161643.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103160410.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103160321.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103160116.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103160014.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103155901.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/interazione-e-multimedia.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/5 Lez 06 - Occhio e lente sottile 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103153907.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/8 lezione10_SQL_IV.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251102153832.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL II.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/6 lezione8_SQL_II.pdf",
     "Cose da fare.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/9 lezione11_SQL_V.pdf",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251030162023.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251030161432.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251030143627.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163844.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163531.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163132.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163119.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029162942.png",
     "Senza nome.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/4 Lez 05 - Risoluzione 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/3 Lez 04 - Bayer pattern 2025-26.pdf",
-    "Forza Horizon 5 [FitGirl Repack].torrent",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
@@ -248,7 +252,6 @@
     "Secondo_anno/Senza nome.md",
     "Project ideas.md",
     "conflict-files-obsidian-git.md",
-    "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Dimostrare_f_invertibile_dominio_derivata.md",
-    "Secondo Semestre/Analisi-1/Esame/rielaborazioni/4 cap4.md"
+    "Secondo Semestre/Analisi-1/come risolvere esercizi/Derivate/Dimostrare_f_invertibile_dominio_derivata.md"
   ]
 }
