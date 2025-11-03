@@ -218,4 +218,34 @@ Ovviamente per essere efficiente bisogna che abbia un costo basso
 
 **Definizione HEAP**
 Struttura dati non lineare. E' un albero binario dove ogni nodo ha al più due figli. È posizionale, ha un figlio sinistro e uno destro, a sinistra è più piccolo della chiave a destra più grade. È completo. Tutti i livelli sono pieni. L'ultimo livello può essere non pieno ma solo se i nodi sono allineati da sinistra verso destra![[Pasted image 20251020180427.png|400]]
-![[Pasted image 20251020180450.png]]
+
+Può essere rappresentato come un albero ma molte volte si sceglie di rappresentarlo come un array, quando aggiungo o rimuovo un elemento bisogna chiamare *heapfy* che risistema la struttura dati.
+
+**HEAPFY**
+Questa procedura è molto importante perché serve a ripristinare la struttura dello heap dopo una modifica
+
+Ecco un esempio in pseudocodice
+questo se lo rappresento come un albero
+![[Pasted image 20251103204132.png|400]]
+
+Questo se lo rappresento come un array
+![[Pasted image 20251103203729.png|400]]
+
+(heapsize è il numero di nodi contenuti nello heap)
+
+
+**CREARE UN HEAP (come array)**
+1) parto da un array vuoto e inserisco gli elementi (non può essere chiamato ancora heap perche non è ordinato nella maniera corretta)
+2) Uso la procedura build-minHeap
+   `for i = n/2 down to 1 do
+	   `heapfy(H,i)
+	   
+- **`n`** → è il **numero di elementi** presenti nell’array (la dimensione dell’heap).  
+    Esempio: se l’array ha 10 valori, allora `n = 10`.
+    
+- **`H`** → è l’**array** che contiene gli elementi da sistemare in un heap.  
+    È l’array su cui lavorano `Heapify` e `BuildHeap`.
+    
+- **`i`** → è **l’indice del nodo** che stiamo “heapificando” in quel momento.  
+    Il ciclo parte da `n/2` (cioè dall’ultimo nodo che ha almeno un figlio) e va fino a `1` (la radice).
+

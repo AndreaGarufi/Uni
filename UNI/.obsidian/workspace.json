@@ -4,49 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "4bede13dc3a9b03b",
+        "id": "fc14d21f1c263cc8",
         "type": "tabs",
         "children": [
           {
-            "id": "069f6c463d2889de",
+            "id": "3f84e054b829bfc5",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf"
+                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "COMPLETO interazione-e-multimedia"
+              "title": "5 algoritmi e laboratorio"
             }
           },
           {
-            "id": "1b5d993a629fac58",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/6 Lez 07 - Campionamento e quantizzazione 2024-2025.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "6 Lez 07 - Campionamento e quantizzazione 2024-2025"
-            }
-          },
-          {
-            "id": "f46b82374c2a8476",
+            "id": "58501f2fc1fd309f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
+                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5 Campionamento_Quantizzazione"
+              "title": "Da Sapere"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -206,8 +194,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4371091dceb8cd7d",
+  "active": "58501f2fc1fd309f",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103204132.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103203729.png",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/6 Lez 07 - Campionamento e quantizzazione 2024-2025.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103161915.png",
@@ -215,17 +208,13 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103161736.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103161659.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103161643.png",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103160410.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103160321.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103160116.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103160014.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103155901.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/interazione-e-multimedia.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/5 Lez 06 - Occhio e lente sottile 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/8 lezione10_SQL_IV.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
@@ -237,7 +226,6 @@
     "Senza nome.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/4 Lez 05 - Risoluzione 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/3 Lez 04 - Bayer pattern 2025-26.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
