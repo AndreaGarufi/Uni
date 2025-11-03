@@ -54,5 +54,7 @@ b) Se il piano dei sensori non può essere mosso (caso della retina umana!) l’
 
 c) Se due oggetti sono a distanza u1 e u2 e entrambe queste quantità sono molto maggiori di f essi formano le loro immagini approssimativamente su un unico piano (i due valori corrispondenti v1 e v2 sono vicinissimi). Se u1 e u2 sono però differenti e comparabili (meno di 30 volte la distanza della lente) allora essi non possono essere focalizzati contemporaneamente: si manifesta il fenomeno della “profondità di campo” che risulta più accentuato se f è grande.
 
-**Capire la magnificazione**
+**Magnificazione**
+Col termine magnificazione andiamo a indicare la proprietà, della lente sottile, di alterare la dimensione dell’immagine di un oggetto rispetto alla dimensione effettiva di esso. Il fattore di magnificazione è dato da:
+![[Pasted image 20251103153907.png]]
 
