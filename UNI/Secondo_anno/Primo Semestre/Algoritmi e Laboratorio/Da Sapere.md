@@ -201,7 +201,7 @@ In ogni passo della ricerca binaria, il problema viene dimezzato, ma il la- voro
 
 
 ### **STRUTTURE DATI**
-**HEAP** 
+#### **HEAP** 
 Per implementare una struttura dati astratta : Coda con priorità (lifo) 
 - A parità di valore si considera il tempo di arrivo
 - Si considera la chiave (valore più piccola)
