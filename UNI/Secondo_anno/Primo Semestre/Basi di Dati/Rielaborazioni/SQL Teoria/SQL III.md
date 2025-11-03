@@ -138,3 +138,45 @@ Versione corretta
 - DEFAULT(Costante | NULL) -> applica di default una costante o NULL alla tupla dell'attributo
 
 ### **AZIONI PER VINCOLI SU CHIAVI ESTERNE**
+- ON DELETE NO ACTION
+  Rifiuta l'operazione quando si chiama delete
+- ON DELETE CASCADE
+  Cancella tutte le n-uple con valori della chiave esterna corrispondenti alla chiave primaria delle n- uple cancellate
+- ON DELETE SET NULL 
+  Assegna il valore NULL agli attributi della chiave esterna
+
+### **MODIFICHE DEGLI SCHEMI**
+- ALTER DOMAIN 
+- ALTER TABLE 
+- DROP DOMAIN 
+- DROP TABLE
+
+
+
+### **OPERAZIONI SUI DATI**
+- Interrogazione (lettura)
+  SELECT
+- Modifica (scrittura)
+  INSERT, DELETE, UPDATE
+
+INSERT
+Sintassi
+`INSERT INTO Tabella [“(”Attributo {,Attributo}“)”]VALUES“(”Valore {,Valore} “)”`
+**Esempio**
+`INSERT INTO Esami (NomeEsame, Voto)`
+`VALUES ('DB1', 27);`
+
+DELETE
+Sintassi
+`DELETE FROM Tabella WHERE Condizione`
+**Esempio**
+`DELETE FROM Esami WHERE Matricola = 123456`
+
+UPDATE
+Sintassi
+`UPDATE Tabella SET Attributo = Espr {,Attributo = Espr} WHERE Condizione`
+**Esempio**
+`UPDATE Aule SET Aula = 126 WHERE Aula = 3` 
+
+
+

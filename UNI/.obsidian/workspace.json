@@ -4,37 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "702d14b983883201",
+        "id": "4bede13dc3a9b03b",
         "type": "tabs",
         "children": [
           {
-            "id": "c68c1109d4ea7d41",
+            "id": "e0e0394c710681eb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "SQL III"
-            }
-          },
-          {
-            "id": "4740b0ca68e224f2",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "7 lezione9_SQL_III"
+              "title": "Nuova scheda"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -194,7 +177,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4740b0ca68e224f2",
+  "active": "e0e0394c710681eb",
   "lastOpenFiles": [
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
