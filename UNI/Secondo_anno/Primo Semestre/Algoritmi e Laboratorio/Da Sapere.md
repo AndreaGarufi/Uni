@@ -249,3 +249,10 @@ Questo se lo rappresento come un array
 - **`i`** → è **l’indice del nodo** che stiamo “heapificando” in quel momento.  
     Il ciclo parte da `n/2` (cioè dall’ultimo nodo che ha almeno un figlio) e va fino a `1` (la radice).
 
+
+
+La struttura heap ci semplifica la vita quando parliamo di velocità e complessità nei problemi di ordinamento
+
+Ad esempio nel selection sort normale con array il problema maggiore è trovare ogni volta il massimo il che ci porta ad avere una complessità $O(n^2)$ 
+
+Possiamo invece usare una struttura heap che migliora la complessità, usando comunque un array 

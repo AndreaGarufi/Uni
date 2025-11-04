@@ -4,33 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "fc14d21f1c263cc8",
+        "id": "1f50f9ec69a9a94d",
         "type": "tabs",
         "children": [
           {
-            "id": "3f84e054b829bfc5",
+            "id": "41fd1a0bcc5e2bbb",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf"
+                "file": "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/8 lezione10_SQL_IV.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "6 29 ottobre 2025_251029_105857"
+              "title": "8 lezione10_SQL_IV"
             }
           },
           {
-            "id": "58501f2fc1fd309f",
+            "id": "0871fc06c2e2c8bf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+                "file": "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Da Sapere"
+              "title": "SQL IV"
             }
           }
         ],
@@ -194,12 +194,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "58501f2fc1fd309f",
+  "active": "0871fc06c2e2c8bf",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/9 lezione11_SQL_V.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/8 lezione10_SQL_IV.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103204132.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103203729.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
@@ -216,10 +221,6 @@
     "Secondo_anno/Primo Semestre/Interazione e multimedia/interazione-e-multimedia.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/5 Lez 06 - Occhio e lente sottile 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/8 lezione10_SQL_IV.pdf",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL II.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/6 lezione8_SQL_II.pdf",
     "Cose da fare.md",
