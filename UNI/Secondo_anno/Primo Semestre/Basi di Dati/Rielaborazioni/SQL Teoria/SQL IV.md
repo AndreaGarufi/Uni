@@ -33,3 +33,6 @@ La distruzione di una view non altera le tabelle su cui si basa
 
 (visualizza esempi di query con le view nel PowerPoint 8 SQL IV [[8 lezione10_SQL_IV.pdf]] a pag 17-20)
 
+L'algebra relazionale è molto potente e completa tutta via ci sono alcune operazioni che non possono essere fatte come ad esempio somme medie ecc...
+
+

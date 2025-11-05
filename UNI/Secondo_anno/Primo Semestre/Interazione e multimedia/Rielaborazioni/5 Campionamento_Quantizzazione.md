@@ -73,3 +73,14 @@ Questo è particolarmente importante quando si elaborano dati medici (es. radiog
 **Effetti sulle immagini**
 ![[Pasted image 20251103161915.png]]
 
+![[Pasted image 20251105144002.png]]
+
+**Esempio di quantizzazione a 8 bit (8 livelli)**
+![[Pasted image 20251105144150.png]]
+
+![[Pasted image 20251105144234.png]]
+
+L'esempio è analogo
+
+Tra quantizzazione uniforme e non, la differenza è l'ampiezza dell'intervallo (come nell'immagine di prima)
+
