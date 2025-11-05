@@ -217,7 +217,7 @@ Ovviamente per essere efficiente bisogna che abbia un costo basso
 3) BST
 
 **Definizione HEAP**
-Struttura dati non lineare. E' un albero binario dove ogni nodo ha al più due figli. È posizionale, ha un figlio sinistro e uno destro, a sinistra è più piccolo della chiave a destra più grade. È completo. Tutti i livelli sono pieni. L'ultimo livello può essere non pieno ma solo se i nodi sono allineati da sinistra verso destra![[Pasted image 20251020180427.png|400]]
+Struttura dati non lineare. E' un albero binario dove ogni nodo ha al più due figli. È posizionale, ha un figlio sinistro e uno destro, in base a come lo considero (min heap o max heap) posso avere i figli che siano tutti minori o uguali del padre(max heap) oppure tutti maggiori uguali del padre(min heap). È completo. Tutti i livelli sono pieni. L'ultimo livello può essere non pieno ma solo se i nodi sono allineati da sinistra verso destra![[Pasted image 20251020180427.png|400]]
 
 Può essere rappresentato come un albero ma molte volte si sceglie di rappresentarlo come un array, quando aggiungo o rimuovo un elemento bisogna chiamare *heapfy* che risistema la struttura dati.
 
@@ -253,6 +253,29 @@ Questo se lo rappresento come un array
 
 La struttura heap ci semplifica la vita quando parliamo di velocità e complessità nei problemi di ordinamento
 
-Ad esempio nel selection sort normale con array il problema maggiore è trovare ogni volta il massimo il che ci porta ad avere una complessità $O(n^2)$ 
-
+Ad esempio nel **selection sort** normale con array il problema maggiore è trovare ogni volta il massimo il che ci porta ad avere una complessità $O(n^2)$ 
 Possiamo invece usare una struttura heap che migliora la complessità, usando comunque un array 
+Ecco quindi il procedimento per creare un selection sort con un heap:
+(Viene rappresentato come un albero ma nella realtà è un array)
+![[Pasted image 20251105184839.png]]
+1) Parto da un array disordinato (sinistra) e chiamo **build-max-heap** che mi va a creare un max-heap in qui ho i figli sempre minori uguali del padre
+2) Per prendere il massimo scambio il massimo (19) che è la root con il minimo (2) che è l'ultimo nodo, quindi prendo il nuovo ultimo nodo e chiamo **heapfy** che mi va a riordinare di nuovo il max-heap![[Pasted image 20251105185206.png]]
+3) Posiziono il massimo (19) alla fine dell'array e ripeto questa procedura fino a quando l'array non è ordinato (ovviamente scalo la dimensione su cui opero di 1 ogni volta che posiziono un massimo)
+
+Da questa idea di usare un heap come struttura dati nasce l'**heap-sort**
+
+**HEAP SORT**
+`heapSort(A,n)`
+	`buildMaxHeap(A,n)`
+	`for i = 0 to n-1 do`
+		`extractMax(A)`
+
+`extractMax(A)`
+`Swap(A,1,n-1)`
+`n = n-1`
+`heapfy(A,1)`
+
+Questa procedura ha complessità $O(n\,\,log \,\,n)$ molto simile al mergeSort che è $Θ(n\,\,log\,\,n)$ e consuma anche meno memoria perche qui lavoriamo con un singolo array a differenza del mergeSort
+
+**Definizione**
+E' dimostrato che un algoritmo di ordinamento che fa confronti non potrà mai scendere sotto $Θ(n\,\,log\,\,n)$ come complessità
