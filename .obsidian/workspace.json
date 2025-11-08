@@ -4,37 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "62aaff65da9bb62b",
+        "id": "57629354081e45cf",
         "type": "tabs",
         "children": [
           {
-            "id": "6b290484dd02bdbf",
+            "id": "0d2821391e2876fb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
+                "file": "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQL III"
-            }
-          },
-          {
-            "id": "f3fe973954a3a34a",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "7 lezione9_SQL_III"
+              "title": "SQL V"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -180,9 +167,68 @@
       "bases:Create new base": false
     }
   },
-  "active": "f3fe973954a3a34a",
+  "floating": {
+    "id": "1ed012d32ac85610",
+    "type": "floating",
+    "children": [
+      {
+        "id": "ed4f539207cf2b11",
+        "type": "window",
+        "children": [
+          {
+            "id": "16abad4bc61454ff",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "37d053fca0f82aac",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/9 lezione11_SQL_V.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "9 lezione11_SQL_V"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 4,
+        "y": 4,
+        "width": 1912,
+        "height": 1020,
+        "maximize": false,
+        "zoom": 1
+      }
+    ]
+  },
+  "active": "0d2821391e2876fb",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/9 lezione11_SQL_V.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
+    "UNI/Secondo_anno/Primo Semestre/Problemi esami.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105185206.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105184839.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105184814.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105155746.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105155551.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105145633.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105145453.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105145301.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105144234.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105144150.png",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/6 Lez 07 - Campionamento e quantizzazione 2024-2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/6 lezione8_SQL_II.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL II.md",
     "UNI/Cose da fare.md",
@@ -191,26 +237,9 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/1 Lez 02 - I fondamenti 2025-2026.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/2 Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251030162023.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251030161432.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251030143627.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/5 Lez 06 - Occhio e lente sottile 2024-25.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/4 Lez 05 - Risoluzione 2024-25.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163844.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163531.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163132.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163119.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029162942.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029161004.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029160440.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria",
-    "UNI/Forza Horizon 5 [FitGirl Repack].torrent",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/2 esercitazione2_SQLAlgebraRelazionale.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",

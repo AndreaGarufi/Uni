@@ -45,3 +45,147 @@ L'effetto di transazioni concorrenti deve essere **coerente** (ad esempio "equiv
 • se due assegni emessi sullo stesso conto corrente vengono incassati contemporaneamente si deve evitare di trascurarne uno 
 
 I risultati delle transazioni sono durevoli, ovvero dopo che una è stata conclusa ne resta traccia in modo definitivo.
+
+
+**Come inizia una transazione** 
+Una transazione inizia subito dopo la connessione al database oppure quando ne finisce una
+Possiamo concludere le transazioni come *commit* o *rollback*
+- commit(work) -> Le operazioni specificate vengono eseguite sulla base di dati
+- rollback(work) -> si decide di non eseguire le operazioni 
+
+Molti sistemi prevedono un sistema di autocommit in cui ogni operazione forma una transazione
+
+**Esempio di transazione in SQL**
+`start transaction (opzionale)` 
+`update ContoCorrente` 
+`set Saldo = Saldo – 10` 
+`where NumeroConto = 12345 ;` 
+`update ContoCorrente` 
+`set Saldo = Saldo + 10` 
+`where NumeroConto = 55555 ;` 
+`commit work;` 
+
+
+**BASI DI DATI ATTIVE**
+**TRIGGER**
+
+• Paradigma: Evento-Condizione-Azione 
+	• Quando un evento si verifica 
+	• Se la condizione è vera 
+	• Allora l’azione è eseguita
+
+Abbiamo:
+**Evento**
+Di solito una modifica dello stato del database: insert, delete, update ecc...
+Stato trigger: attivato
+
+**Condizione**
+E' un predicato che identifica se l'azione del trigger deve essere eseguita
+Stato trigger: considerato
+
+**Azione**
+Una sequenza di update SQL o una procedura
+Stato trigger: eseguito
+
+I DBMS forniscono tutti i componenti necessari. Basta integrarli
+
+• Ogni trigger è caratterizzato da: 
+	• nome 
+	• target (tabella controllata) 
+	• modalità (before o after) 
+	• evento (insert, delete o update) 
+	• granularità (statement-level o row-level) 
+	• alias dei valori o tabelle di transizione 
+	• azione 
+	• timestamp di creazione
+
+
+**Sintassi trigger**
+`create trigger TriggerName`
+`{ before | after }`
+`{ insert | delete | update [of Column] } on TableName`
+`[referencing`
+    `{ [old_table [as] OldTableAlias]`
+      `[new_table [as] NewTableAlias] } |`
+    `{ [old [row] [as] OldTupleName]`
+      `[new [row] [as] NewTupleName] }]`
+`[for each { row | statement }]`
+`[when Condition]`
+`SQL Statements`
+
+Tipi di eventi:
+- **BEFORE**
+  Il trigger è considerato e possibilmente eseguito prima dell'evento
+  Normalmente questa modalità è usata quando si vuole verificare una modifica prima che essa avvenga e “modificare la modifica”
+- **AFTER**
+  Il trigger è considerato ed eseguito dopo l'evento
+  Questa è la modalità più comune
+  
+**Esempio con after**
+`create trigger LimitaAumenti` 
+`after update of Salario on Impiegato` 
+`for each row` 
+`when (New.Salario > Old.Salario * 1.2)` 
+`UPDATE Impiegato SET Salario = Old.Salario * 1.2` 
+`WHERE Matricola = NEW.Matricola`
+
+
+**Granularità degli eventi**
+Abbiamo 2 modalità di agire per i trigger
+- Modalità statement-level (opzione for each statement)
+  Il trigger viene considerato e possibilmente eseguito solo una volta per ogni statement (comando) che lo ha attivato, indipendentemente dal numero di tuple modificato
+- Modalità row-level (opzione for each row)
+  Il trigger viene considerato e possibilmente eseguito una volta per ogni tupla modificata
+
+
+**CLAUSOLA REFERENCING**
+Questa clausola dipende dalla granularità
+• Se la modalità è *row-level*, ci sono due variabili di transizione (old and new) che rappresentano il valore precedente o successivo alla modifica di una tupla 
+
+• Se la modalità è *statement-level*, ci sono due tabelle di transizione (old table and new table) che contengono i valori precedenti e successivi delle tuple modificate dallo statement
+
+• old e old_table non sono presenti con l’evento insert 
+• new e new_table non sono presenti con l’evento delete
+
+**Esempio di trigger row-level**
+`create trigger AccountMonitor` 
+`after update on Account` 
+`for each row` 
+`when new.Total > old.Total` 
+`insert into Payments` 
+`values (new.AccNumber,new.Total - old.Total)`
+
+Letteralmente vuol dire:
+crea trigger che si chiama AccountMonitor, dopo la modifica (update) su Account, per ogni riga modificata, quando new.total > old.total, inserisci in Payments i valori:(new.AccNumber,new.Total - old.Total)
+
+**Esempio di trigger statement-level**
+`create trigger FileDeletedInvoices` 
+`after delete on Invoice` 
+`referencing old_table as OldInvoiceSet` 
+`insert into DeletedInvoices` 
+`(select * from OldInvoiceSet)` 
+
+Letteralmente vuol dire:
+crea trigger che si chiama FileDeletedInvoices, dopo la cancellazione su Invoice, crea un alias (referencing) di old_table chiamato OldInvoiceSet, inserisci in DeletedInvoices (fa una select)
+
+
+**TRIGGER IN CONFLITTO**
+Quando ci sono più trigger associati allo stesso evento (in conflitto) i questi vengono  eseguiti così:
+1) I trigger BEFORE
+2) Vengono eseguite le modifiche
+3) I trigger AFTER
+
+Quando i trigger appartengono alla stessa categoria l'ordine di esecuzione è in base al loro timestamp ovvero in base a quando sono stati scritti, quelli più vecchi vengono eseguiti per primi
+
+Altri trigger possono attivare altri trigger
+
+**PROPRIETÀ FORMALI DEI TRIGGER**
+E' importante garantire che l'interferenza tra trigger non produca comportamenti anomali:
+Vi sono 3 proprietà classiche
+
+1) Terminazione: per un qualunque stato iniziale e una qualunque transazione, si produce uno stato finale (stato quiescente)
+2) Confluenza: L’esecuzione dei trigger termina e produce un unico stato finale, indipendente dall’ordine di esecuzione dei trigger
+3) Univoca osservabilità: I trigger sono confluenti e producono verso l’esterno (messaggi, azioni di display) lo stesso effetto
+
+La terminazione è la proprietà principale
+pag 35 
