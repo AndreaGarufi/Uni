@@ -188,4 +188,11 @@ Vi sono 3 proprietà classiche
 3) Univoca osservabilità: I trigger sono confluenti e producono verso l’esterno (messaggi, azioni di display) lo stesso effetto
 
 La terminazione è la proprietà principale
-pag 35 
+**Analisi della terminazione**
+Si usa il **grafo di triggering** 
+- Uno nodo per ogni trigger
+- Un arco dal nodo $t_i$ al nodo $t_j$ se l'esecuzione dell'azione di $t_i$ può attivare il trigger $t_j$
+- Se il grafo è aciclico l'esecuzione termina
+- Se il grafo ha cicli allora *può* avere problemi di terminazione (ma non è sicuro)
+
+
