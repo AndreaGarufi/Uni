@@ -4,33 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "57629354081e45cf",
+        "id": "c2261b5495eabc34",
         "type": "tabs",
         "children": [
           {
-            "id": "cbb92f15d34a00fe",
+            "id": "48a852e3edad95e7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6 Colore_luce"
+              "title": "Problemi esami"
             }
           },
           {
-            "id": "9b28f5c8e2944f1f",
+            "id": "34c8fdfde841e03f",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf"
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "COMPLETO interazione-e-multimedia"
+              "icon": "lucide-file",
+              "title": "Da Sapere"
             }
           }
         ]
@@ -184,23 +186,23 @@
     "type": "floating",
     "children": [
       {
-        "id": "cf6978b0908f423a",
+        "id": "81d663c4206b7331",
         "type": "window",
         "children": [
           {
-            "id": "b759597d7755c6cc",
+            "id": "d03a7faa42ab5c05",
             "type": "tabs",
             "children": [
               {
-                "id": "0d2821391e2876fb",
+                "id": "fdeec2c5ad595da9",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
                   "state": {
-                    "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf"
+                    "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf"
                   },
                   "icon": "lucide-file-text",
-                  "title": "7 Lez 08 - Colore 2024-2025"
+                  "title": "6 29 ottobre 2025_251029_105857"
                 }
               }
             ]
@@ -211,17 +213,24 @@
         "y": 4,
         "width": 1912,
         "height": 1020,
-        "maximize": false,
-        "zoom": 1
+        "maximize": true,
+        "zoom": 1.5
       }
     ]
   },
-  "active": "cbb92f15d34a00fe",
+  "active": "48a852e3edad95e7",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251109113944.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251109112739.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251109112654.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251109112457.png",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/9 lezione11_SQL_V.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
@@ -232,16 +241,10 @@
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105155746.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105155551.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105145633.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105145453.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105145301.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105144234.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105144150.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/6 Lez 07 - Campionamento e quantizzazione 2024-2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/6 lezione8_SQL_II.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL II.md",
     "UNI/Cose da fare.md",
@@ -252,7 +255,6 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",

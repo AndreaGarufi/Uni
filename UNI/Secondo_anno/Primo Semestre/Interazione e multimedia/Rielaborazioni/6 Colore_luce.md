@@ -95,5 +95,7 @@ Il principale difetto del sistema CIE (e di tutti i modelli del colore da esso d
 In altre parole, dati due colori C1 e C2, consideriamone le distanze ∆C, rispettivamente, dal colore C3 = C1 + ∆C e dal colore C4 = C2 + ∆C. Supponendo che le due distanze siano quantitativamente uguali, sarebbe desiderabile che i due colori C3 e C4 fossero percepiti come ugualmente distanti da C1 e C2. Dato che il sistema non è percettivamente uniforme, in generale le due distanze, benché uguali, saranno percepite come differenti
 
 Nel 1976 la CIE ha standardizzato 2 spazi di colore che avessero uniformità percettiva
-- $CIE L^*a^*b*$
-- 
+- CIE $L^*a^*b*$
+- CIE $L^*u^*v^*$ 
+
+pag 39
