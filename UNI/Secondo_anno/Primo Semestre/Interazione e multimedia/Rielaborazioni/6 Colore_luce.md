@@ -75,3 +75,25 @@ Unendo tre colori con un triangolo, tutti i colori lungo il bordo e nel triangol
  Unendo R G e B si ottiene un triangolo che contiene tutti i colori che si possono produrre. 
  Da notare che il triangolo non copre tutta l’area, quindi non tutti i colori si ottengono unendo R G e B
 
+**SPAZIO CIE xyz**
+I valori del tristimolo necessari a formare un colore possono essere determinati attraverso formule matematiche, ad esempio il diagramma di cromaticità CIE che mostra la composizione di un colore in funzione di x e y mentre il corrispondente valore di z è calcolato direttamente dalla $z = 1 - (x+y)$ 
+x è la quantità di rosso
+y è la quantità di verde
+z è la quantità del blu
+Il diagramma di cromaticità CIE 1931, è solo una "fetta" di uno spazio più completo, lo spazio dei colori CIE 1931 al quale si assegnano le coordinate XYZ
+
+Scopo di un modello del colore (o spazio dei colori o sistema dei colori) è di consentirne la specificazione dei colori con modalità standardizzate, che fanno normalmente riferimento ad un sistema di coordinate 3-D
+
+I modelli del colore più utilizzati in image processing sono vari ad esempio:
+- RGB
+- CMY
+- YUV
+- HSI
+
+**CIE $L^*a^*b^*$**
+Il principale difetto del sistema CIE (e di tutti i modelli del colore da esso derivati mediante trasformazioni lineari o non lineari di coordinate) è che esso non è dotato di uniformità percettiva
+In altre parole, dati due colori C1 e C2, consideriamone le distanze ∆C, rispettivamente, dal colore C3 = C1 + ∆C e dal colore C4 = C2 + ∆C. Supponendo che le due distanze siano quantitativamente uguali, sarebbe desiderabile che i due colori C3 e C4 fossero percepiti come ugualmente distanti da C1 e C2. Dato che il sistema non è percettivamente uniforme, in generale le due distanze, benché uguali, saranno percepite come differenti
+
+Nel 1976 la CIE ha standardizzato 2 spazi di colore che avessero uniformità percettiva
+- $CIE L^*a^*b*$
+- 
