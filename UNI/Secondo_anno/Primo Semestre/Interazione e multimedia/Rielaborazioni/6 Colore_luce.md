@@ -119,4 +119,31 @@ Questo è lo spazio CIELAB in cui abbiamo le 3 coordinate:
 $L^*$ è la luminosità (0 nero, 100 bianco)
 $a^*$ e $b^*$ = coordinate di cromaticità 
 
-pag 47
+
+**Modello LCh**
+Il modello di colore LCh è uno **spazio di colore cilindrico** derivato dal più noto spazio **CIELAB**.
+
+In pratica, rappresenta i colori in modo più intuitivo per l’occhio umano, usando tre componenti:
+
+- **C (Chroma)**: indica l’intensità o la saturazione del colore (quanto è “vivo” o “spento”).
+    
+- **H (Hue)**: rappresenta la tonalità, cioè il tipo di colore percepito (rosso, verde, blu, ecc.), espresso in gradi da 0° a 360°.
+    
+- **L (Lightness)**: misura la luminosità, da 0 (nero) a 100 (bianco).
+    
+
+Rispetto a RGB o LAB, il modello CHL/LCh è **più vicino alla percezione umana**, perché separa chiaramente la componente luminosa da quella cromatica. Per questo motivo è spesso usato in grafica, fotografia e design per modificare i colori in modo naturale (ad esempio schiarendo senza alterare la tonalità)
+![[Pasted image 20251110120611.png|650]]
+
+
+
+**BIANCO E NERO**
+Le ccordinate del nero matematico sono $X = 0, Y = 0, Z = 0$
+Il nero matematico però in natura non esiste perché ogni oggetto rifletterà almeno un po' di luce
+- In media il fattore di riflessione di una misurazione di un oggeto nero è nell'ordine di qualche punto percentuale (2-4%)
+- Il nero più nero è quello del veluto nero
+
+Per quanto riguarda il bianco, quello equienergetico (teorico) le sue coordinate sono $X = 1, Y = 1, Z = 1$
+Nella realtà il bianco dipende dalla luce che illumina l'oggetto, per esempio una lampadina o il sole producono un bianco diverso
+
+
