@@ -138,12 +138,25 @@ Rispetto a RGB o LAB, il modello CHL/LCh è **più vicino alla percezione umana*
 
 
 **BIANCO E NERO**
-Le ccordinate del nero matematico sono $X = 0, Y = 0, Z = 0$
+Le coordinate del nero matematico sono $X = 0, Y = 0, Z = 0$
 Il nero matematico però in natura non esiste perché ogni oggetto rifletterà almeno un po' di luce
-- In media il fattore di riflessione di una misurazione di un oggeto nero è nell'ordine di qualche punto percentuale (2-4%)
-- Il nero più nero è quello del veluto nero
+- In media il fattore di riflessione di una misurazione di un oggetto nero è nell'ordine di qualche punto percentuale (2-4%)
+- Il nero più nero è quello del velluto nero
 
 Per quanto riguarda il bianco, quello equienergetico (teorico) le sue coordinate sono $X = 1, Y = 1, Z = 1$
 Nella realtà il bianco dipende dalla luce che illumina l'oggetto, per esempio una lampadina o il sole producono un bianco diverso
+
+### **SPAZI DI COLORE**
+In natura raramente si vedono colori puri, quasi sempre si tratta di un miscuglio di più lunghezze d'onda di radiazione luminosa
+- Il nostro cervello non è uno spettrometro, spettri differenti producono sensazioni cromatiche uguali
+- Manteniamo la stessa percezione del colore anche se la luce che lo illumina cambia
+
+
+Lo “spettro” di un illuminante è il diagramma dei contributi di energia che esso apporta per ciascuna differente lunghezza d’onda
+
+Spettri diversi possono produrre colori eguali: coppie di spettri con questa reciproca proprietà si chiamano *metameri.*
+![[Pasted image 20251110195406.png]]
+
+Lo spettro tratteggiato e quello continuo producono (nel cervello) il medesimo colore!
 
 

@@ -4,33 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "4ecea5ab4c577fa1",
+        "id": "fe58c9d600b7fdff",
         "type": "tabs",
         "children": [
           {
-            "id": "3f4f7296bb3d9684",
+            "id": "07d727cb32c43144",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "6 Colore_luce"
-            }
-          },
-          {
-            "id": "713e790ea215451b",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "7 Lez 08 - Colore 2024-2025"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -193,10 +177,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4371091dceb8cd7d",
+  "active": "07d727cb32c43144",
   "lastOpenFiles": [
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
+    "Primo_anno/Secondo Semestre/Programmazione-2/FileCondivisiTeams/1 Il_linguaggio_C++_Elementi_base.pdf",
+    "Primo_anno/Secondo Semestre/Programmazione-2/FileCondivisiTeams/0 Introduzione.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110195406.png",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/figure_pacMan/figure_pacMan.pde",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/figure_pacMan",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110120611.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110095300.png",
     "Pasted image 20251110094414.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110094521.png",
@@ -214,13 +204,8 @@
     "Secondo_anno/Primo Semestre/Problemi esami.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105185206.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105184839.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105184814.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/6 Lez 07 - Campionamento e quantizzazione 2024-2025.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
