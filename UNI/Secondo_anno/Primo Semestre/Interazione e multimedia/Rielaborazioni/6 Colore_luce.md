@@ -98,4 +98,25 @@ Nel 1976 la CIE ha standardizzato 2 spazi di colore che avessero uniformità per
 - CIE $L^*a^*b*$
 - CIE $L^*u^*v^*$ 
 
-pag 39
+**FORMULE**
+Attraverso delle formule si può passare a spazi di colore differenti, queste sono quelle per passare da CIE $XYZ$ a CIE $L^*a^*b*$ 
+![[Pasted image 20251110094521.png]]
+
+
+La **metrica CIELAB** è percettivamente uniforme e:
+$L^*$ rappresenta la **luminanza**
+$a^*$ e $b^*$ rappresentano la **crominanza**
+Nello spazio CIELAB le differenze di colore sono definite come distanza tra due punti dello spazio L* a* b*
+
+Uguali differenze corrispondono a uguali differenze di percezione. 
+Questo è un pregio di questo sistema
+
+• Delta E=1 accettato nell’industria dei cosmetici 
+• Delta E=0,01 accettato nella Ferrari
+
+![[Pasted image 20251110095300.png|600]]
+Questo è lo spazio CIELAB in cui abbiamo le 3 coordinate:
+$L^*$ è la luminosità (0 nero, 100 bianco)
+$a^*$ e $b^*$ = coordinate di cromaticità 
+
+pag 47
