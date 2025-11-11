@@ -160,3 +160,48 @@ Spettri diversi possono produrre colori eguali: coppie di spettri con questa rec
 Lo spettro tratteggiato e quello continuo producono (nel cervello) il medesimo colore!
 
 
+**Modello del pittore**
+Basi fisiche
+![[Pasted image 20251111142826.png]]
+
+La lunghezza d'onda in cui si ha il picco da il colore percepito
+
+Il rapporto (epicco-emedia)/(epicco+emedia) è la SATURAZIONE, cioè quanto il colore è puro. Meno luce bianca equivale ad un maggiore valore del rapporto.
+
+emedia è proporzionale al contenuto energetico della radiazione: essa può essere considerata una misura della “luminosità” di una radiazione (detto anche VALORE). Esso da un contributo “bianco” al colore percepito
+
+![[Pasted image 20251111143017.png]]
+
+Unendo geometricamente tutti i vari triangoli dei vari colori otterremo il modello **HSV**
+
+**Spazio HSV (oppure HSI)**
+
+- H = hue (colore); copre tutti i colori ordinati in sequenza
+
+- S = saturazione; da un minimo (centro) pari al bianco puro ad un massimo (periferia) colore puro
+
+- V = valore o luminosità; da un minimo (nessuna energia emessa) ad un massimo
+
+
+**SINTESI ADDITIVA**
+I colori vengono creati a partire dai 3 colori primari rosso, verde, blu (RGB) infatti unendo i vari colori in uno schema a cerchi possiamo ottenere il bianco, il giallo, il magenta e il ciano, questo è alla base degli schermi di monitor e TV
+![[Pasted image 20251111143757.png|350]]
+
+2 colori si dicono complementari quando la loro somma da il bianco
+il magenta è complementare del verde, il giallo del blu e il ciano del rosso
+
+Quindi questo metodo somma vari colori per ottenere gli altri, ma esiste anche un altro modo per creare i colori:
+
+**SINTESI SOTTRATTIVA**
+Abbiamo un Filtro Ottico Colorato = mezzo a facce piane e parallele che attraversato dalla luce bianca ne assorbe selettivamente una porzione
+
+Il filtro assume il colore prodotto dalla radiazione complementare di quella che viene assorbita come accade alle sostanze colorate
+
+Sovrapponendo tre filtri di colore giallo (Y), magenta (M) e ciano (C) su un visore luminoso bianco si ottengono i colori per sintesi sottrattiva
+![[Pasted image 20251111144157.png|300]]
+Sovrapponendo tutti e tre i filtri viene assorbita tutta la radiazione visibile per cui si ottiene il Nero (K). Sovrapponendo due filtri si ottiene il colore corrispondente alla componente luminosa che non viene assorbita da nessuno dei due
+
+(in breve Sintesi Sottrattiva = aggiunge un filtro viene “sottratta” una componente che modifica il colore della luce)
+
+Su questo metodo si basano la stampa a colori e le foto a colori
+
