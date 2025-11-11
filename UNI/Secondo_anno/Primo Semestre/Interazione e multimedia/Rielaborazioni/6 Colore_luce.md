@@ -204,4 +204,38 @@ Sovrapponendo tutti e tre i filtri viene assorbita tutta la radiazione visibile 
 (in breve Sintesi Sottrattiva = aggiunge un filtro viene “sottratta” una componente che modifica il colore della luce)
 
 Su questo metodo si basano la stampa a colori e le foto a colori
+Infatti le stampanti usano inchiostri tipicamente ciano, magenta e giallo che impressi su una superficie riflettente come la carta, quando la luce li colpisce, assorbono selettivamente delle lunghezze d'onda e noi percepiamo quella riflessa
+
+I 2 diagrammi in breve:
+![[Pasted image 20251111153035.png|500]]
+
+
+
+**COLORI PRIMARI E SECONDARI**
+
+Nel modello RGB il rosso il verde e il blu sono i colori primari, unendoli non si possono creare tutti i colori ma solo Magenta M, Giallo Y e Ciano C che sono i colori secondari
+Il modello RGB può essere descritto da un cubo
+
+**PRO**:
+- Facile da usare e implementare in software e hardware
+- E' uno standard
+
+**CONTRO**:
+- percettivamente poco comodo: difficile capire guardando un colore in natura in quale proporzione vi contribuiscano l’R, il G e il B
+
+Esempi di come funziona l'RGB:
+![[Pasted image 20251111154101.png]]
+
+Il giallo è formato da rosso e verde ma niente blu, e infatti in R e G i Simpson sono chiari mentre in B sono scuri perché non c'è blu nel giallo
+
+**RIEPILOGANDO**
+- Le rappresentazioni dei colori nello spazio RGB (o CMY il duale) non sempre sono le più convenienti
+
+- Sono disponibili altre rappresentazioni che usano componenti che sono specificatamente relazionate al criterio usato per descrivere la luminanza, la tinta e la saturazione (HSV)
+
+- La tinta descrive che colore è presente (rosso, verde, giallo, ecc.) e può essere correlato alla lunghezza d’onda dominante della sorgente di luce
+
+- La saturazione, invece, esprime quanto è vivo il colore (molto forte, pastello, vicino al bianco) e può essere correlato alla purezza o alla distribuzione dello spettro della sorgente
+
+- La luminanza è la grandezza che tende a valutare la sensazione luminosa ricevuta dall'occhio, è legata quindi all’intensità della luce (quanto il colore è bianco, grigio o nero) e può essere correlata alla luminosità della sorgente
 
