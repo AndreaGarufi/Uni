@@ -279,3 +279,39 @@ Questa procedura ha complessità $O(n\,\,log \,\,n)$ molto simile al mergeSort c
 
 **Definizione**
 E' dimostrato che un algoritmo di ordinamento che fa confronti non potrà mai scendere sotto $Θ(n\,\,log\,\,n)$ come complessità
+
+
+Ma non tutti gli algoritmi di ordinamento hanno bisogno di fare comparazioni
+##### **Algoritmi di ordinamento che non necessità di confronti**
+
+**COUNTING SORT**
+Costruiamo un array A:
+`A = [4,3,5,3,5,3,2,3,4]`
+
+adesso creo un secondo array chiamato C, questo array avrà l' ultimo indice = all'elemento massimo di A + 1, quindi nel nostro caso avrà dimensione 7 (max(A) = 5 + 1 ma dato che inizio da 0 avrà dimensione 7), lo inizializzo a 0:
+
+`C = [0,0,0,0,0,0,0]`
+`     0 1 2 3 4 5 6` 
+L'ultimo indice è l'indice k che ci da la dimensione
+Con questo array C, conterò le occorrenze dei numeri presenti in A, nel nostro caso:
+`C = [0,0,1,4,2,2,0]`
+`     0 1 2 3 4 5 6` 
+infatti il 2 compare una volta, il 3 quattro volte ecc...
+Quindi `C[i]` = numero di occorrenze dell' elemento i in A
+
+Adesso modifichiamo l'array C rendendolo C', in cui in `C[i]` andiamo a sommare il numero `C[i]+C[i-1]`
+Quindi sommiamo l'elemento corrente con il precedente e lo posizioniamo nell'elemento corrente
+In pseudocodice stiamo facendo: `for i = 0 to k do (C[i] = C[i] + C[i-1])`
+Otterremo cosi l'array C modificato in C':
+`C' = [0,0,1,5,7,9,9]`
+`      0 1 2 3 4 5 6` 
+
+In questo modo all'interno di C' avremo il numero di elementi in A minori o uguali ad i
+infatti quanti elementi ci sono minori o uguali a 2 nell'array A? 1 (solo il 2)
+quanti elementi ci sono minori o uguali a 3 nell'array A? 5 (i quattro 3 e il 2)
+ecc...
+
+Adesso creiamo un ultimo array B della stessa dimensione di A
+`B =  [0,0,0,0,0,0,0]`
+`      0 1 2 3 4 5 6` 
+

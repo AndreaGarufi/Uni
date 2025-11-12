@@ -4,61 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "fe58c9d600b7fdff",
+        "id": "87c252e772bc071e",
         "type": "tabs",
         "children": [
           {
-            "id": "07d727cb32c43144",
+            "id": "336c7fd673d909d7",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "7 31 ottobre 2025_251031_104628"
+            }
+          },
+          {
+            "id": "d1fbd00e760c7a64",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
+                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6 Colore_luce"
-            }
-          },
-          {
-            "id": "2734e306267eb3b4",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "7 Lez 08 - Colore 2024-2025"
-            }
-          },
-          {
-            "id": "13efe5346862961a",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.3"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.3"
-            }
-          },
-          {
-            "id": "6f6925cd6f74c342",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "COMPLETO interazione-e-multimedia"
+              "title": "Da Sapere"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -218,17 +194,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "13efe5346862961a",
+  "active": "d1fbd00e760c7a64",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
-    "Pasted image 20251111154101.png",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251111154101.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/3 esercitazione3_MySQLWorkbench.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/3 esercitazione3_MySQLWorkbench.pdf.opdownload",
     "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/9 lezione11_SQL_V.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
-    "Pasted image 20251111153035.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251111153035.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251111144157.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251111143757.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251111143017.png",
@@ -237,14 +217,10 @@
     "Primo_anno/Secondo Semestre/Programmazione-2/FileCondivisiTeams/0 Introduzione.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110195406.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/figure_pacMan/figure_pacMan.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/figure_pacMan",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110120611.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110095300.png",
     "Pasted image 20251110094414.png",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione3/lezione3.pde",
     "Secondo_anno/Primo Semestre/Problemi esami.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",

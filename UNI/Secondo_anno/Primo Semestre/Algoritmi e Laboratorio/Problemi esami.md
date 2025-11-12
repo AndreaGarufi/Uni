@@ -47,3 +47,5 @@ All'esame vanno scritte anche le funzioni heapfy e increaseKey, in generale se f
 Consegna:
 scrivere la procedura heapMerge(H1,H2,n) (n è il numero di chiavi)
 La procedura deve avere complessità $O(n)$
+
+pag 6 note numero 6
