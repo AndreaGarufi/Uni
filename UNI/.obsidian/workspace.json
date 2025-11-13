@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "336c7fd673d909d7",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "7 31 ottobre 2025_251031_104628"
-            }
-          },
-          {
             "id": "d1fbd00e760c7a64",
             "type": "leaf",
             "state": {
@@ -33,8 +21,7 @@
               "title": "Da Sapere"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"

@@ -312,6 +312,22 @@ quanti elementi ci sono minori o uguali a 3 nell'array A? 5 (i quattro 3 e il 2)
 ecc...
 
 Adesso creiamo un ultimo array B della stessa dimensione di A
-`B =  [0,0,0,0,0,0,0]`
-`      0 1 2 3 4 5 6` 
+`B =  [0,0,0,0,0,0,0,0,0]`
+`      0 1 2 3 4 5 6 7 8` 
+
+Fatto questo si scorre l'array A al contrario, quindi partendo dalla fine, questo serve a mantenere la stabilità, 
+**SCRIVERE COME FUNZIONA**
+
+Ecco lo pseudo codice del countingSort
+`CountinSort(A,n){`
+	`k = max(A)`
+	`C = new Array(k+1)`
+	`for i = 0 to k do C[i] = 0`
+	`for i = 0 to n-1 do C[A[i]] = C[A[i]]+1`
+	`for i = 1 to k do C[i] = C[i] + C[i-1]`
+	`for i = n-1 down to 0 do`
+	`B[C[A[i]]-1] = A[i]`
+	`C[A[i]] = C[A[i]]-1`
+`}`
+
 
