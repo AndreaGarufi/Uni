@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "87c252e772bc071e",
+        "id": "66d429b60e3aec6f",
         "type": "tabs",
         "children": [
           {
-            "id": "d1fbd00e760c7a64",
+            "id": "867193102883418c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/1 esercitazione1_AlgebraRelazionale.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Da Sapere"
+              "icon": "lucide-file-text",
+              "title": "1 esercitazione1_AlgebraRelazionale"
             }
           }
         ]
@@ -181,10 +179,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d1fbd00e760c7a64",
+  "active": "867193102883418c",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/1 esercitazione1_AlgebraRelazionale.pdf",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/images.webp",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
@@ -203,10 +205,8 @@
     "Primo_anno/Secondo Semestre/Programmazione-2/FileCondivisiTeams/1 Il_linguaggio_C++_Elementi_base.pdf",
     "Primo_anno/Secondo Semestre/Programmazione-2/FileCondivisiTeams/0 Introduzione.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110195406.png",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/figure_pacMan/figure_pacMan.pde",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110120611.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110095300.png",
-    "Pasted image 20251110094414.png",
     "Secondo_anno/Primo Semestre/Problemi esami.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
@@ -218,13 +218,11 @@
     "Senza nome.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
     "Primo_anno/Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Libri/l'altro libro obsidian non lo legge ma è in questa cartella.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/1 Modello relazionale dei dati.md",
     "Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md"
