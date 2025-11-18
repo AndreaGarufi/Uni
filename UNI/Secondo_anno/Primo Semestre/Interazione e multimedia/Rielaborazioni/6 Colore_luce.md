@@ -239,3 +239,47 @@ Il giallo è formato da rosso e verde ma niente blu, e infatti in R e G i Simpso
 
 - La luminanza è la grandezza che tende a valutare la sensazione luminosa ricevuta dall'occhio, è legata quindi all’intensità della luce (quanto il colore è bianco, grigio o nero) e può essere correlata alla luminosità della sorgente
 
+**COLORI SICURI PER IL WEB**
+Si sa che 40 dei 256 colori usati tipicamente per il web, vengono processati in modo diverso da vari tipi di sistemi operativi, mentre 216 colori sono comuni alla maggior parte dei sistemi,
+Questi 216 colori sono diventati gli standard di fatto dei colori sicuri, specialmente nelle applicazioni Internet. Essi vengono utilizzati quando si vuole che i colori visti dalla maggior parte delle persone siano gli stessi
+Sono in RGB e il numero decimale può essere solo composto da:
+00, 33, 66, 99, CC, FF
+Quindi sono colori sicuri tutti quelli che in esadecimale sono scritti usando terne con questi 6 possibili lavori: ad esempio #33CCFF è sicuro mentre non lo è il colore #12A3FE
+
+![[Pasted image 20251118161714.png]]
+
+
+**Rappresentazioni luminanza-crominanza**
+Gli spazi di colore che hanno una componente legata alla luminosità e le altre 2 alla crominanza sono molto importanti e sono usate per la compressione di immagini, la luminanza fornisce un immagine a scala di grigi dell'immagine, mentre la crominanza fornisce gli extra per aggiungere il colore, l'occhio umano è più sensibile alla luminanza che ai colori quindi posso usare più bit per rappresentare la luminanza e meno per la crominanza risparmiando spazio
+
+
+**FAMIGLIA YUV**
+La famiglia di spazi di colore YUV viene spesso utilizzata per la codifica di immagini o video analogici, tenendo separate la luminanza dalla crominanza
+
+Tra le possibili controparti digitali degli spazi YUV troviamo gli spazi $YC_bC_r$
+
+**Da RGB a YUV**
+La luminanza Y si ottiene mediante la somma pesata:
+$Y = 0.299𝑅 + 0.587𝐺 + 0.114𝐵$
+
+Il termine crominanza è definito come la differenza tra il colore e un bianco di riferimento alla stessa luminanza opportunamente pesato
+$U = 0.564(𝐵 − 𝑌) → U = −0.169𝑅 − 0.331𝐺 + 0.5𝐵$
+$V = 0.713 𝑅 − 𝑌 → V = +0.5𝑅 − 0.419𝐺 − 0.081𝐵$
+
+**Da YUV a $YC_b C_r$**
+![[Pasted image 20251118163513.png]]
+
+in questo spazio $Y$ rappresenta la luminanza, $C_b$ la crominanza del blu e $C_r$ quella del rosso
+
+
+**PALETTE**
+Nelle immagini io dovrei ricordare per ogni pixel il colore rosso il blu e il verde che sarebbero 8 bit + 8 bit + 8 bit = 24 bit per pixel, nelle immagini grandi formate da ad esempio 2600x2300 pixel la memoria richiesta sarebbe troppa, quindi dato che un immagine è praticamente una matrice, posso semplicemente ricondurre ogni pixel ad un indice della matrice che corrisponde al colore che rappresenta quel pixel e inoltre creo una palette di colori che uso per "ricostruire l'immagine" con i giusti colori:
+![[Pasted image 20251118164443.png]]
+
+Esistono delle palette di colore standard in base al sistema in uso, ovviamente se nell'immagine avrò più colori di quelli che la mia palette ha alcuni colori dovranno essere approssimati
+**Esempio**
+![[Pasted image 20251118164707.png]]![[Pasted image 20251118164719.png]]![[Pasted image 20251118164733.png]]
+![[Pasted image 20251118164744.png]]
+
+![[Pasted image 20251118164919.png]]
+
