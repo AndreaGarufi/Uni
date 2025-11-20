@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c9d36787c4e8589f",
+        "id": "9b17e63a2f267a0d",
         "type": "tabs",
         "children": [
           {
-            "id": "a42ef1bee9424462",
+            "id": "c3851d242c1815ce",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6 Colore_luce"
+              "title": "Prove in itinere"
             }
           }
         ]
@@ -181,11 +181,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a42ef1bee9424462",
+  "active": "c3851d242c1815ce",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.docx",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/8 Lez 09 - Operazioni puntuali 2024-25.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 1.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/0 Lez 01- Introduttiva_2025-2026.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_06122022_turno_1000.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 2.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Senza nome.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164919.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164744.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164733.png",
@@ -199,16 +208,9 @@
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/images.webp",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251111154101.png",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/3 esercitazione3_MySQLWorkbench.pdf",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/3 esercitazione3_MySQLWorkbench.pdf.opdownload",
-    "Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/9 lezione11_SQL_V.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
-    "Primo_anno/Secondo Semestre/Programmazione-2/FileCondivisiTeams/1 Il_linguaggio_C++_Elementi_base.pdf",
-    "Primo_anno/Secondo Semestre/Programmazione-2/FileCondivisiTeams/0 Introduzione.pdf",
     "Secondo_anno/Primo Semestre/Problemi esami.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
@@ -225,8 +227,6 @@
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
     "Primo_anno/Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Libri/l'altro libro obsidian non lo legge ma è in questa cartella.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/1 Modello relazionale dei dati.md",
-    "Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md"
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale.md"
   ]
 }
