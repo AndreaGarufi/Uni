@@ -8,17 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c3851d242c1815ce",
+            "id": "ac47ff3475a06474",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
-                "mode": "source",
-                "source": false
+                "file": "Primo_anno/Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Prove in itinere"
+              "icon": "lucide-file-text",
+              "title": "1 Introduzione e componenti PC"
             }
           }
         ]
@@ -181,10 +179,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c3851d242c1815ce",
+  "active": "ac47ff3475a06474",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.docx",
+    "Primo_anno/Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.docx",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/8 Lez 09 - Operazioni puntuali 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 1.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/0 Lez 01- Introduttiva_2025-2026.pdf",
