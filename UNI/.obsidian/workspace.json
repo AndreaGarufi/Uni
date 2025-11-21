@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9b17e63a2f267a0d",
+        "id": "c16bb988ee81b78e",
         "type": "tabs",
         "children": [
           {
-            "id": "ac47ff3475a06474",
+            "id": "c0fcc08045b87455",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Primo_anno/Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf"
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "1 Introduzione e componenti PC"
+              "icon": "lucide-file",
+              "title": "6 Colore_luce"
             }
           }
         ]
@@ -179,21 +181,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ac47ff3475a06474",
+  "active": "c0fcc08045b87455",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/6 Colore_luce.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/5 Campionamento_Quantizzazione.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/4 Occhio Umano.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/3 Risoluzione.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/2 Sensore_bayerPattern_colorInterpolation.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/1 Interpolazione_operazioniAffini_MSE_PSNR.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf",
+    "Primo_anno/Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/PDFs/1 Introduzione e componenti PC.pdf",
     "Primo_anno/Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.docx",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/8 Lez 09 - Operazioni puntuali 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 1.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/0 Lez 01- Introduttiva_2025-2026.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_06122022_turno_1000.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 2.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Senza nome.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164919.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164744.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164733.png",
@@ -202,7 +211,6 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164443.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118163513.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118161714.png",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/1 esercitazione1_AlgebraRelazionale.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Esercizi/images.webp",
@@ -211,21 +219,15 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251111154101.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
     "Secondo_anno/Primo Semestre/Problemi esami.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL II.md",
     "Cose da fare.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
     "Senza nome.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
     "Primo_anno/Secondo Semestre/Fondamenti di Informatica/Da sapere sempre.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Libri/l'altro libro obsidian non lo legge ma è in questa cartella.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale.md"
+    "Secondo_anno/Primo Semestre/Basi di Dati/Libri/l'altro libro obsidian non lo legge ma è in questa cartella.md"
   ]
 }
