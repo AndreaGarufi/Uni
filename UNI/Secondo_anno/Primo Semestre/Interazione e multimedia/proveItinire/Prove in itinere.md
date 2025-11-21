@@ -2,11 +2,27 @@ Prova in itinere A: Trasformazioni Affini e Interpolazione
 
 **a) Cosa si intende per _Forward mapping_ e _Inverse mapping_?**
 
-Spiegare in cosa differiscono i due approcci di mappatura quando si applica una trasformazione affine a un'immagine. Specificare quale dei due metodi è comunemente utilizzato da MATLAB e perché.
+Spiegare in cosa differiscono i due approcci di mappatura quando si applica una trasformazione affine a un'immagine.
+
+RISPOSTA:
+Il forward mapping si applica quando ho bisogno di usare una trasformazione affine (shear, rotazione,scaling ecc... . Inoltre una trasformazione affine è sostanzialmente una ricalcolo delle coordinate di un pixel nella posizione v,w , usando una matrice affine T e avendo quindi come output le nuove coordinate x,y del pixel), quindi per trovare le coordinate nuove $[x,y,1]$ applicherò questa formula: $[v,w,1] *T$.
+Questa operazione potrebbe creare dei "buchi" all'interno dell'immagine e per risolvere questo problema si ricorre all'inverse mapping che elimina i "buchi" dall'immagine: si applica su $[x,y,1] * inversa(T)$ 
 
 **b) A cosa serve l'interpolazione nel contesto delle trasformazioni affini?**
 
 Definire il concetto di interpolazione e spiegare quali problemi si presentano (ad esempio, ai bordi dell'immagine) quando essa non viene applicata correttamente durante le trasformazioni. Citare tre diversi tipi di interpolazione utilizzati nell'elaborazione delle immagini.
+
+RISPOSTA:
+Alcune trasformazioni affini hanno bisogno di interpolare l'immagine affinché la trasformazione vada a buon fine, è il caso dello zooming, infatti se ad esempio zoommo in 2x la mia immagine m x n diventerà 2m x 2n quindi sarà il doppio e avrò il quadruplo dei pixel, quindi se zoommo e non faccio nulla avrò dei pixel vuoti nell'immagine. E' qui che interviene l'interpolazione che non aggiunge informazione all'immagine ma si limita a ricostruire dei dati sulla base di quelli esistenti, ne esistono di diverse tipologie:
+nearest Neighbor (replication) è la più semplice ma anche quella meno efficace e al pixel da ricostruire applica il valore del pixel più vicino
+
+bilinear che è più complessa della replication ma ha un effetto migliore, per ogni pixel da ricostruire assegna l'intensità dei 4 pixel più vicini ad esso
+la formula è $v(x,y) = ax + by + cxy + d$ 
+
+bicubic la più complessa ed assegna l'intensità al pixel da ricostruire in base a quella dei 16 pixel più vicini
+la formula è $v(x,y) = Σ_{i = 0}^{3}Σ_{j = 0}^{3} a_{ij} (X^iY^i)$ 
+
+Esistono alcuni punti critici come i bordi dell'immagine infatti se mi trovo al bordo e uso un algoritmo bilineare o bicubico potrei non avere i 4 o i 16 pixel più vicini su cui stimare l'intensità del pixel in esame, le soluzioni sono 2 : o non si fa niente o si interpola con i pixel a disposizione anche se in minor numero
 
 **c) Matrice di trasformazione combinata.**
 
