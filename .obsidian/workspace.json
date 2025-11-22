@@ -4,49 +4,36 @@
     "type": "split",
     "children": [
       {
-        "id": "d66d83b311f38865",
+        "id": "954816b1d5f100d6",
         "type": "tabs",
         "children": [
           {
-            "id": "67adb9740aedda93",
+            "id": "9cfc57ad9eafc4c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
+                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6 Colore_luce"
+              "title": "Prove in itinere"
             }
           },
           {
-            "id": "27e61e1134b9bc44",
+            "id": "47f242babc412125",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf"
+                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/5 Campionamento_Quantizzazione.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "7 Lez 08 - Colore 2024-2025"
-            }
-          },
-          {
-            "id": "2e6820e39a49f46a",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "COMPLETO interazione-e-multimedia"
+              "title": "5 Campionamento_Quantizzazione"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -192,39 +179,40 @@
       "bases:Create new base": false
     }
   },
-  "active": "3216613356f858dc",
+  "active": "9cfc57ad9eafc4c3",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/5 Campionamento_Quantizzazione.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/6 Colore_luce.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110120611.png",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/4 Occhio Umano.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/3 Risoluzione.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/2 Sensore_bayerPattern_colorInterpolation.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/3 Lez 04 - Bayer pattern 2025-26.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/2 Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/1 Lez 02 - I fondamenti 2025-2026.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164919.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164744.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164733.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164719.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164707.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164443.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118163513.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118161714.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251111154101.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251111153035.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110095300.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251110094521.png",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251109113944.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251109112739.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251109112654.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251109112457.png",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/9 lezione11_SQL_V.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/7 lezione9_SQL_III.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105185206.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105184839.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251105184814.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/6 Lez 07 - Campionamento e quantizzazione 2024-2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/File_condivisi_studium/6 lezione8_SQL_II.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL II.md",
     "UNI/Cose da fare.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/interazione-e-multimedia.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",

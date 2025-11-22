@@ -36,9 +36,16 @@ Prova in itinere B: Campionamento e Aliasing
 
 Definire il _Nyquist rate_ e spiegare il _Teorema del campionamento di Shannon_. Secondo il teorema, cosa è necessario per ricostruire fedelmente il segnale?
 
+RISPOSTA:
+Il nyquist rate è la più alta frequenza del segnale moltiplicata per 2:
+Si supponga avere un segnale analogico, se è costante allora la frequenza più alta è 1, altrimenti si divide in 2 parti creando 2 intervalli più piccoli, se negli intervalli il segnale si può considerare approssimativamente costante allora non devo creare altri intervalli altrimenti continuerò a dividere in intervalli più piccoli finché non otterrò intervalli talmente piccoli che potrò considerare il segnale come costante, sia N il numero degli intervalli allora 2N è il nyquist rate.
+Il teorema di shannon dice che per poter ricostruire il segnale fedelmente devo campionare con una frequenza pari o superiore al nyquist rate
+
 **b) Il fenomeno dell'Aliasing.**
 
 Descrivere in dettaglio cosa succede quando un segnale viene campionato ad una frequenza inferiore al Nyquist rate, definendo il fenomeno dell'_aliasing_. Spiegare in che modo un campionamento troppo basso può stravolgere un segnale, facendo riferimento alla perdita di dettagli e all'introduzione di nuovi dettagli.
+
+
 
 **c) Esempio di applicazione del Nyquist rate.**
 
