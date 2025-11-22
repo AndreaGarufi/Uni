@@ -38,18 +38,28 @@ Definire il _Nyquist rate_ e spiegare il _Teorema del campionamento di Shannon_.
 
 RISPOSTA:
 Il nyquist rate è la più alta frequenza del segnale moltiplicata per 2:
-Si supponga avere un segnale analogico, se è costante allora la frequenza più alta è 1, altrimenti si divide in 2 parti creando 2 intervalli più piccoli, se negli intervalli il segnale si può considerare approssimativamente costante allora non devo creare altri intervalli altrimenti continuerò a dividere in intervalli più piccoli finché non otterrò intervalli talmente piccoli che potrò considerare il segnale come costante, sia N il numero degli intervalli allora 2N è il nyquist rate.
+Ad esempio se la frequenza più alta nel segnale è 100hz il nyquist rate è 200hz
+
+non capisco se sia giusta oppure no
+(Si supponga avere un segnale analogico, se è costante allora la frequenza più alta è 1, altrimenti si divide in 2 parti creando 2 intervalli più piccoli, se negli intervalli il segnale si può considerare approssimativamente costante allora non devo creare altri intervalli altrimenti continuerò a dividere in intervalli più piccoli finché non otterrò intervalli talmente piccoli che potrò considerare il segnale come costante, sia N il numero degli intervalli allora 2N è il nyquist rate.)
+
+
 Il teorema di shannon dice che per poter ricostruire il segnale fedelmente devo campionare con una frequenza pari o superiore al nyquist rate
 
 **b) Il fenomeno dell'Aliasing.**
 
 Descrivere in dettaglio cosa succede quando un segnale viene campionato ad una frequenza inferiore al Nyquist rate, definendo il fenomeno dell'_aliasing_. Spiegare in che modo un campionamento troppo basso può stravolgere un segnale, facendo riferimento alla perdita di dettagli e all'introduzione di nuovi dettagli.
 
-
+RISPOSTA:
+Se non si segue il teorema di shannon e si campiona ad una frequenza minore del nyquist rate si possono avere 2 problemi:
+1) La perdita di informazione e la conseguente eccessiva approssimazione del segnale
+2) La comparsa di artefatti falsi, ovvero l'aggiunta di informazione che però nel segnale originale non era presente, qui si parla di aliasing
 
 **c) Esempio di applicazione del Nyquist rate.**
 
 Se si analizza un quadro di 500 pixel di dimensione e si vuole garantire che il dettaglio massimo (il tratto più fine) misuri 5 pixel, calcolare il numero massimo di campioni che si dovrebbero prelevare per preservare tale dettaglio, e determinare qual è il Nyquist rate.
+
+Se ho un immagine di 500 pixel e il tratto più fine da preservare è 5px posso campionare al suo nyquist rate ovvero 500/5 = 100 -> 200px quindi campionando a 200px o più (preferibilmente di più se si vuole avere una resa maggiore) posso ricreare l'immagine in maniera molto simile all'originale, se invece campionassi ad una frequenza più bassa come ad esempio 80 o 100 px avrei come output un immagine con perdita di dati e possibile presenta di aliasing
 
 --------------------------------------------------------------------------------
 
@@ -59,10 +69,48 @@ Prova in itinere C: Rappresentazione Raster e Quantizzazione
 
 Definire come viene rappresentata un'immagine digitale _raster_. Specificare le convenzioni utilizzate per contare le righe e le colonne di questa rappresentazione e dove è posta l'origine delle coordinate.
 
+Un immagine digitale raster è rappresentata con i pixel, questa immagine può essere rappresentata con una matrice in cui ogni indice $a_{ij}$ corrisponde ad un pixel. L'origine delle coordinate è posta nell'angolo in alto a sinistra della matrice. Si differenziano dalle immagini vettoriali perché queste ultime anziche usare i pixel usano delle formule matematiche per "disegnare" l'immagine, questo ha dei pro e dei contro, ad esempio quando si zoomma un immagine vettoriale questa non si sfoca a differenza di quelle raster, ma le immagini raster sono più adatte a rispecchiare immagini "reali"
+
 **b) Tipologie di Immagini e Bit per Pixel.**
 
 Descrivere le tre principali tipologie di immagini (Bianco/nero, Scala di grigio, A colori) in base alla profondità di bit e al range di valori che un pixel può assumere in posizione . Spiegare inoltre in che modo il valore di una cella della matrice viene tradotto in colore (pixel).
 
 **c) Quantizzazione Uniforme.**
 
-Spiegare a cosa serve il processo di _quantizzazione_. Se un segnale analogico viene quantizzato, e si vuole portare un range di ingresso da livelli () ad un range di uscita di livelli () con quantizzazione uniforme, utilizzare la formula per calcolare il livello in uscita corrispondente a un livello di ingresso .
+Spiegare a cosa serve il processo di _quantizzazione_. Se un segnale analogico viene quantizzato, e si vuole portare un range di ingresso da livelli (256) ad un range di uscita di livelli (8) con quantizzazione uniforme, utilizzare la formula per calcolare il livello in uscita corrispondente a un livello di ingresso .
+
+Un segnale misurato da un sensore è un segnale analogico che per definizione è composto da numeri reali che se vogliamo rappresentare digitalmente devono essere rappresentati come numeri discreti. Supponiamo di avere un segnale nell'intervallo chiuso (a,b), allora si stabilisce un certo numero di "livelli" che sono dei numeri compresi nell'intervallo (t0 ,t1, t2, tn) tali che:
+$t_0 <= a < t_1 < t_2 .... t_n <= b$ , per ogni numero y letto dal sensore verrà collocato verso il livello corrispondente seguendo questa logica: $t_k <= y <t_k+1$ in questo modo sto approssimando i numeri reali letti dal sensore in base ai livelli che ho assegnato all'intervallo (più livelli uso meno devo approssimare e più informazione riesco a preservare) , esistono 2 modi di quantizzare:
+1) quantizzazione uniforme 
+2) quantizzazione non uniforme
+
+la formula per la quantizzazione uniforme è 
+$L' = \frac{L * K}{N}$
+
+dove L' è il numero in uscita
+L è il numero in entrata
+K è il numero di livelli in uscita
+N è il numero di livelli in entrata
+
+mentre per la quantizzazione uniforme è tutto uguale tranne una funzione:
+$L' = \frac{f(L) * K}{f(N)}$
+dove f() è una funzione ad esempio il logaritmo 
+
+calcoliamo:
+livelli in ingresso = 256
+livelli in uscita = 8
+matrice 
+0   100
+50 200
+
+applico la formula della quantizzazione uniforme:
+$L' = \frac{0 * 8}{256} = 0$
+$L' = \frac{100 * 8}{256} = 3.125$
+$L' = \frac{50 * 8}{256} = 1.56$
+$L' = \frac{200 * 8}{256} = 6.25$
+adesso tengo solo la parte intera:
+la matrice che ottengo è
+0 3
+1 6
+
+
