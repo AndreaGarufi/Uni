@@ -30,6 +30,7 @@ Lo standard è la bicubica. Nel contesto di uno zooming ad esempio 2x avrò il q
 
 Spiegare il modello teorico del **Pinhole** (foro con spillo) utilizzato per comprendere la formazione dell'immagine nell'occhio. Descrivere cosa succede quando un punto luminoso attraversa un _pinhole reale_ invece di uno ideale. Definire la **Point Spread Function (PSF)** e spiegare brevemente cosa implica il **Principio di sovrapposizione** in questo contesto.
 
+
 **b) Equazione della Lente Sottile.**
 
 Scrivere l'equazione che lega la distanza dell’oggetto (_u_), la distanza dell’immagine (_v_) e la lunghezza focale (_f_) per una lente sottile. Spiegare in che modo questa equazione si applica alla messa a fuoco in una macchina fotografica (movimento del piano dei sensori) e in che modo si applica all'occhio umano (cristallino).
