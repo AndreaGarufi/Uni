@@ -130,7 +130,7 @@ come dice il nome raggruppa per(espressione)
 
 
 ### **CLAUSOLA HAVING**
-Restriziona il risultato
+Restriziona il risultato dopo un group by
 **Esempio**
 ![[Pasted image 20251028162219.png|500]]
 

@@ -4,33 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "954816b1d5f100d6",
+        "id": "8af3e2403b2538df",
         "type": "tabs",
         "children": [
           {
-            "id": "9cfc57ad9eafc4c3",
+            "id": "f4f26f6d7d3b4477",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "proveItinere2"
-            }
-          },
-          {
-            "id": "47f242babc412125",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/5 Campionamento_Quantizzazione.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "5 Campionamento_Quantizzazione"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -179,10 +163,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "9cfc57ad9eafc4c3",
+  "active": "f4f26f6d7d3b4477",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.docx",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/5 Campionamento_Quantizzazione.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.docx",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.docx",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Non confermato 648274.crdownload",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
@@ -190,7 +176,6 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/lu78301mwtk.tmp",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinerePDF.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/lu75081kmun.tmp",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/5 Campionamento_Quantizzazione.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/6 Colore_luce.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/4 Occhio Umano.pdf",
@@ -217,7 +202,6 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
