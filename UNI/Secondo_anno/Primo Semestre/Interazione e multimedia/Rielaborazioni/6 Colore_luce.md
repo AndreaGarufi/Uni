@@ -14,7 +14,7 @@ Per comodità lo spettro del visibile è diviso in sei regioni: violetto, blu, v
 
 Le bande di colore non sono tutte della stessa grandezza e degradano in quelle limitrofe
 
-Noi percepiamo il colore in base alla lunghezza d'onda che l'oggetto riflette, se rifletto le lunghezze d'onda relative al rosso vedremo l'oggetto come rosso, se le assorbe tutte lo vediamo come bianco al contrario come nero
+Noi percepiamo il colore in base alla lunghezza d'onda che l'oggetto riflette, se rifletto le lunghezze d'onda relative al rosso vedremo l'oggetto come rosso, se le riflette tutte lo vediamo come bianco al contrario come nero
 
 **Per descrivere la luce bastano queste 3 grandezze**
 - Radianza
@@ -82,6 +82,8 @@ y è la quantità di verde
 z è la quantità del blu
 Il diagramma di cromaticità CIE 1931, è solo una "fetta" di uno spazio più completo, lo spazio dei colori CIE 1931 al quale si assegnano le coordinate XYZ
 
+Le relazioni per passare dalle coordinate tridimensionali XYZ alle coordinate xyz sono: x = X/(X+Y+Z), y = Y/(X+Y+Z), z = Z/(X+Y+Z)
+
 Scopo di un modello del colore (o spazio dei colori o sistema dei colori) è di consentirne la specificazione dei colori con modalità standardizzate, che fanno normalmente riferimento ad un sistema di coordinate 3-D
 
 I modelli del colore più utilizzati in image processing sono vari ad esempio:
@@ -113,6 +115,9 @@ Questo è un pregio di questo sistema
 
 • Delta E=1 accettato nell’industria dei cosmetici 
 • Delta E=0,01 accettato nella Ferrari
+
+In poche parole: **ΔE è la misura della “distanza visiva” tra due colori.**
+Più è alto delta E più sarà la differenza tra i 2 colori
 
 ![[Pasted image 20251110095300.png|600]]
 Questo è lo spazio CIELAB in cui abbiamo le 3 coordinate:

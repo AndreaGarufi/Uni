@@ -25,18 +25,28 @@
             "id": "ea50888cbf4376dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf"
               },
-              "icon": "lucide-file",
-              "title": "6 Colore_luce"
+              "icon": "lucide-file-text",
+              "title": "7 Lez 08 - Colore 2024-2025"
+            }
+          },
+          {
+            "id": "a3928ae24e6c2df6",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 2.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Itinere_0712021_turno 2"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -196,8 +206,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4371091dceb8cd7d",
+  "active": "a3928ae24e6c2df6",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_06122022_turno_1000.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 2.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 1.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/6 Lez 07 - Campionamento e quantizzazione 2024-2025.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/6 Colore_luce.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
@@ -219,15 +235,10 @@
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.docx",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.docx",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/5 Campionamento_Quantizzazione.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/4 Occhio Umano.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/3 Risoluzione.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/1 Interpolazione_operazioniAffini_MSE_PSNR.pdf",
     "Primo_anno/Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Senza nome.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164919.png",
