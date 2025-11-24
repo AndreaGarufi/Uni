@@ -23,15 +23,11 @@ Si parla di *immagine equalizzata* quando il contributo di ogni differente tonal
 ![[Pasted image 20251123203256.png|450]]
 **Algoritmo di equalizzazione**
 
-
-
-
-
-
-
-
-
-
+Se $r_k$ è un livello di grigio e $n_k$ il numero di pixel nell’immagine MxN di quel livello di grigio, si può definire
+![[Pasted image 20251124091349.png]]
+Se facciamo il plot di $r_k$ versus $p_r (r_k )$ quello che si ottiene è l’istogramma dell’immagine
+I nuovi valori di grigio dell’istogramma sono così definiti:
+![[Pasted image 20251124091436.png]]
 
 
 **ARITMETICA SULLE IMMAGINI**
@@ -49,6 +45,26 @@ abbiamo 2 modalità di esecuzione per risolverli:
    ![[Pasted image 20251123202650.png]]
 
 
-   
+**OPERAZIONI SULLE IMMAGINI**
+Per semplificare lavoreremo su immagini a toni di grigio, le medesime operazioni valgono anche per RGB, infatti si agisce sui 3 canali separatamente e agendo come se fossero immagini in toni di grigio
+Queste operazioni vanno a modificare i pixel quindi l'immagine originale apparirà differente da quella finale
 
+Le operazioni possiamo definirle così: $g(x,y) = T[f(x,y)]$ 
+dove $g$ è l'immagine in uscita, $f$ è quella in entrata a cui viene applicato un operatore $T$ nell'intorno $x,y$
+
+La dimensione dell’intorno di $(x,y)$ definisce il carattere della elaborazione:
+*Puntuale* -> agisce sul singolo pixel e x,y corrispondono a questo pixel
+*Locale* (per esempio una piccola regione quadrata centrata sul pixel); 
+*Globale* (l’intorno coincide con l’intera f)
+
+**Operatori puntuali**
+**Definizione**
+Si dice operatore puntuale, un operatore che preso in input il valore di un pixel ne restituisce uno cambiato che dipende esclusivamente dal valore del pixel in ingresso
+
+**Tipiche operazioni puntuali**
+1) aggiunta o sottrazione di una costante a tutti i pixel (per compensare sotto o sovraesposizioni)
+2) inversione della scala dei grigi (negativo)
+3) espansione del contrasto
+4) modifica (equalizzazione o specifica) dell'istogramma
+5) presentazione in falsi colori
 

@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e70dee2a5dff0333",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/8 Lez 09 - Operazioni puntuali 2024-25.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "8 Lez 09 - Operazioni puntuali 2024-25"
-            }
-          },
-          {
             "id": "6f014f2e9a0f3512",
             "type": "leaf",
             "state": {
@@ -33,8 +21,7 @@
               "title": "7 Operazioni_puntuali"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,10 +183,12 @@
   },
   "active": "6f014f2e9a0f3512",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123203256.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123203254.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/8 Lez 09 - Operazioni puntuali 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
+    "Pasted image 20251124091436.png",
+    "Pasted image 20251124091349.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123203256.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123203254.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123202650.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123202645.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123202221.png",
@@ -225,9 +214,6 @@
     "Primo_anno/Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Senza nome.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164919.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164744.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164733.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164719.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
