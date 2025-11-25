@@ -11,13 +11,30 @@
             "id": "f4f26f6d7d3b4477",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "7 Operazioni_puntuali"
+            }
+          },
+          {
+            "id": "e256b91b886a3481",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "COMPLETO interazione-e-multimedia"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -74,7 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 375.5
+    "width": 274.5110321044922
   },
   "right": {
     "id": "60ceb3bf826ca8d1",
@@ -163,8 +180,23 @@
       "bases:Create new base": false
     }
   },
-  "active": "f4f26f6d7d3b4477",
+  "active": "3216613356f858dc",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/8 Lez 09 - Operazioni puntuali 2024-25.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111929.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111634.png",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125110701.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125110436.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125110342.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125105303.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125104050.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125103459.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125103249.png",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 1.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251124091436.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/5 Campionamento_Quantizzazione.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.md",
@@ -174,23 +206,9 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.odt",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/lu78301mwtk.tmp",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinerePDF.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/lu75081kmun.tmp",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/6 Colore_luce.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/4 Occhio Umano.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164919.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164744.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164733.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164719.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164707.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164443.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118163513.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118161714.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251111154101.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251111153035.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",

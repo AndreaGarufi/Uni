@@ -68,3 +68,49 @@ Si dice operatore puntuale, un operatore che preso in input il valore di un pixe
 4) modifica (equalizzazione o specifica) dell'istogramma
 5) presentazione in falsi colori
 
+Un operatore puntuale può essere descritto come una funzione che prende un immagine f(x,y) applica un operazione T e restituisce una seconda immagine g(x,y) diversa in qualcosa dalla prima.
+![[Pasted image 20251125103249.png|500]]
+
+Ad un input che è 0 la funzione restituisce 2, input = 1 restituisce 3 e cosi via, questo è un esempio di una funzione di questo genere
+
+Questo tipo di grafico si chiama look-up tables (LUT)
+![[Pasted image 20251125103459.png|300]]
+Sono delle tabelle che associano ad un valore di f (x, y), il valore g(x, y) data una trasformazione T 
+
+
+- **NEGATIVO**
+  E' la più semplice operazione puntuale e inverte il valore del pixel f(x,y) seguendo la formula 255-f(x,y) (il bianco diventa nero e il nero diventa bianco e cosi via)
+  ![[Pasted image 20251125104050.png|400]]
+  Ovviamente cambiano anche gli istogrammi perché si invertono
+- **TRASFORMAZIONE LOGARITMICA**
+  Si tratta di una trasformazione che consente di comprimere la gamma dinamica, permettendo la memorizzazione o la visualizzazione, con una scala dei grigi usuale, di immagini caratterizzate da escursioni di intensità molto ampie.
+  (comprime i valori alti dal bianco verso il grigio e il valori bassi dal nero verso il grigio)
+  $g(x, y) = c · log(1 + f (x, y))$ 
+  c è una costante positiva che serve a normalizzare i valori all'interno del range (0,255)
+  ![[Pasted image 20251125105303.png|400]]
+  ![[Pasted image 20251125110342.png|400]]
+  A noi interessa in questo caso vedere come è la curva della trasformazione logaritmica
+  
+- **Trasformazione di potenza**
+  La trasformazione di potenza può essere espressa come:
+  $g(x, y) = c · (f (x, y))^γ$
+  anche qui c è una costante positiva che serve a normalizzare il valore del pixel, mentre per γ anche lei ha sempre valore positivo e per valori minori di 1 ha effetti simili alla trasformazione logaritmica, mentre per valori maggiori di 1 ha effetti opposti
+  ![[Pasted image 20251125110436.png|580]]
+  Possiamo vedere che per gamma = 1 l'immagine resta la stessa, per gamma minore di 1 segue la funzione del logaritmo di prima e per valori superiori a 1 diventa l'opposto del log
+  ![[Pasted image 20251125110701.png|500]]
+- **BINARIZZAZIONE**
+  Rende l'immagine in bianco e nero, si sceglie una soglia T sotto la quale ogni pixel diventerà nero e ogni pixel sopra diventerà bianco
+- **VARIAZIONI DI CONTRASTO**
+  Aumentare il contrasto, significa rendere più evidenti le differenze di colore. Ciò si ottiene andando a cambiare il valore di un pixel con un altro che sia più scuro o più chiaro
+  ![[Pasted image 20251125111634.png]]
+- **CURVE NON MONOTONE**
+  È possibile fare delle variazioni alle curve in modo che questa diventi non monotona, ovvero anziché crescere sempre, potrebbe in alcuni punti decrescere, un esempio è la solarizzazione
+  ![[Pasted image 20251125111929.png|600]]
+  
+  La **solarizzazione**, nelle operazioni puntuali, è una trasformazione che **inverte i toni solo oltre una certa soglia**.  
+  In pratica: fino a un certo valore l'immagine resta normale, oltre quel valore i pixel diventano il loro negativo.
+  
+  
+
+  
+
