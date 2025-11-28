@@ -6,23 +6,31 @@
       {
         "id": "d800c7321a5e4977",
         "type": "tabs",
+        "dimension": 45.87020648967551,
         "children": [
           {
-            "id": "6f014f2e9a0f3512",
+            "id": "fa1fa52df66ff770",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7 Operazioni_puntuali"
+              "title": "TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "e3e672fc721356e4",
+        "type": "tabs",
+        "dimension": 54.12979351032449,
+        "children": [
           {
-            "id": "ea50888cbf4376dc",
+            "id": "db933783b2ebb132",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -34,19 +42,20 @@
             }
           },
           {
-            "id": "a3928ae24e6c2df6",
+            "id": "e5d03bc1ca0de10e",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 2.pdf"
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Itinere_0712021_turno 2"
+              "icon": "lucide-file",
+              "title": "7 Operazioni_puntuali"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -206,41 +215,41 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a3928ae24e6c2df6",
+  "active": "4371091dceb8cd7d",
   "lastOpenFiles": [
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/8 Lez 09 - Operazioni puntuali 2024-25.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 2.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_06122022_turno_1000.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 1.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251128181257.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251128181224.png",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/7 Operazioni_puntuali.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/6 Lez 07 - Campionamento e quantizzazione 2024-2025.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/5 Lez 06 - Occhio e lente sottile 2024-25.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/4 Lez 05 - Risoluzione 2024-25.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/3 Lez 04 - Bayer pattern 2025-26.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/2 Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251128172713.png",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/1 Lez 02 - I fondamenti 2025-2026.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111929.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111634.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125110701.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125110436.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125110342.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125105303.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125104050.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/6 Colore_luce.pdf",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251124091436.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251124091349.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123203256.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123203254.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123202650.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123202645.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123202221.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123202015.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251123201542.png",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/2 Sensore_bayerPattern_colorInterpolation.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.docx",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
     "Primo_anno/Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Senza nome.md",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251118164919.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",

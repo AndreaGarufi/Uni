@@ -6,7 +6,9 @@ Descrivere come i sensori 2D array (come i CCD) acquisiscono la luce e la trasfo
 
 RISPOSTA:
 I sensori CCD sono sensibili alla luce e quando colpiti da un raggio si attivano mandando un segnale elettrico che poi deve essere digitalizzato
-i sensori sono disposti a matrice e ogni sensore sarà sensibile al rosso al verde o al blu. Quando l'immagine deve essere salvata in memoria si procede salvando la prima colonna della matrice, tutte le altre colonne vengono "shiftate" a sinistra per essere ad una ad una salvate. Il bayer pattern è una tecnica che serve a gestire in maniera corretta la resa dei colori per l'immagine, in particolare i sensori sono disposti a matrice in modo che alcuni percepiscano il rosso altri il blu e altri il verde secondo questo rapporto RGB -> 1:2:1 ovvero il verde è predominante perché per l'occhio umano è più importante rispetto a rosso e blu. in questa maniere per ricavare gli altri colori si usa la color interpolation
+i sensori sono disposti a matrice e ogni sensore sarà sensibile al rosso al verde o al blu. 
+Questo perché viene usato una sorta di filtro che seleziona solo delle lunghezze d'onda quali il blu il verde e il rosso, il filtro si chiama CFA quello usato è il bayer pattern
+Quando l'immagine deve essere salvata in memoria si procede salvando la prima colonna della matrice, tutte le altre colonne vengono "shiftate" a sinistra per essere ad una ad una salvate. Il bayer pattern è una tecnica che serve a gestire in maniera corretta la resa dei colori per l'immagine, in particolare i sensori sono disposti a matrice in modo che alcuni percepiscano il rosso altri il blu e altri il verde secondo questo rapporto RGB -> 1:2:1 ovvero il verde è predominante perché per l'occhio umano è più importante rispetto a rosso e blu. in questa maniere per ricavare gli altri colori si usa la color interpolation
 
 **b) Color Interpolation (Demosaicking) e Replication.**
 
@@ -30,28 +32,33 @@ Lo standard è la bicubica. Nel contesto di uno zooming ad esempio 2x avrò il q
 
 Spiegare il modello teorico del **Pinhole** (foro con spillo) utilizzato per comprendere la formazione dell'immagine nell'occhio. Descrivere cosa succede quando un punto luminoso attraversa un _pinhole reale_ invece di uno ideale. Definire la **Point Spread Function (PSF)** e spiegare brevemente cosa implica il **Principio di sovrapposizione** in questo contesto.
 
+Il modello del pinhole usato per spiegare la formazione dell'immagine nell'occhio è composto da una scatola chiusa in cui in un lato vengono posti dei sensori fotosensibili e dal lato opposto viene fatto un foro (pinhole) della grandezza ideale di uno spillo, (la formula del raggio del pinhole reale sarebbe: r = sqrt(lunghezza d'onda x distanza pinhole-oggetto)) il raggio di luce proveniente da una sorgente luminosa posta fuori dalla scatola andrà ad essere rilevato dai sensori, l'immagine "creata sui sensori" è il point spread function, se ci sono più sorgenti luminose le immagini create dai raggi si andranno a sovrapporre (Principio di sovrapposizione)
+
 
 **b) Equazione della Lente Sottile.**
 
 Scrivere l'equazione che lega la distanza dell’oggetto (_u_), la distanza dell’immagine (_v_) e la lunghezza focale (_f_) per una lente sottile. Spiegare in che modo questa equazione si applica alla messa a fuoco in una macchina fotografica (movimento del piano dei sensori) e in che modo si applica all'occhio umano (cristallino).
 
+L'equazione della lente sottile è 1/u + 1/v = 1/f dove u è la distanza dell'oggetto reale dalla lente, v è la distanza dell'immagine formata(piano dei sensori) e f è la lunghezza focale, se l'oggetto si allontana dalla lente, quindi aumenta la u l'immagine apparirebbe sfocata quindi bisogna aggiustare la v allontanando o avvicinando il piano dei sensori alla lente, nell'occhio umano questa cosa si risolve con dei muscoli che cambiano la forma del cristallino
+
 **c) Calcolo della Magnificazione.**
 
 La **magnificazione** _m_ è data dal rapporto _v_/_u_. Un ingegnere sta progettando un sistema ottico in cui un oggetto è posto a una distanza _u_=5 cm e l'immagine è formata a _v_=10 cm.
 
-1. Calcolare il fattore di magnificazione _m_.
+1 . Calcolare il fattore di magnificazione _m_.
 
-2. Utilizzando l'equazione della lente sottile, determinare la lunghezza focale _f_ del sistema.
+2 . Utilizzando l'equazione della lente sottile, determinare la lunghezza focale _f_ del sistema.
 
-3. Se lo stesso sistema ottico (con la stessa _f_) viene usato per focalizzare un nuovo oggetto a una distanza _u_′=50 cm, a quale distanza _v_′ si formerà l'immagine? (Suggerimento: 1/_u_+1/_v_=1/_f_).
+3 . Se lo stesso sistema ottico (con la stessa _f_) viene usato per focalizzare un nuovo oggetto a una distanza _u_′=50 cm, a quale distanza _v_′ si formerà l'immagine? (Suggerimento: 1/_u_+1/_v_=1/_f_).
 
+
+1) m = 10/5 = 2
+2) 1/u + 1/v = 1/f = 1/5 + 1/10 = 3/10 -> 3,3333
+3) 1/v = 1/f - 1/u
+   
 --------------------------------------------------------------------------------
 
 **Nuova Prova in itinere F: Rappresentazioni Visive e Modelli di Colore**
-
-**a) Immagini, Percezione e Illusioni Ottiche.**
-
-Citando le fonti, spiegare il **ruolo culturale** delle immagini e perché la comunicazione visuale è considerata la forma più immediata ed efficace di comunicazione. Descrivere due fenomeni percettivi, le **Bande di Mach** e il **Contrasto Simultaneo**, e spiegare cosa dimostrano tali fenomeni riguardo alla luminosità percepita rispetto all'intensità emessa.
 
 **b) Modello HSV/HSI.**
 
