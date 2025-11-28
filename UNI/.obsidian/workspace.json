@@ -6,7 +6,6 @@
       {
         "id": "d800c7321a5e4977",
         "type": "tabs",
-        "dimension": 45.87020648967551,
         "children": [
           {
             "id": "fa1fa52df66ff770",
@@ -20,39 +19,6 @@
               },
               "icon": "lucide-file",
               "title": "TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA"
-            }
-          }
-        ]
-      },
-      {
-        "id": "e3e672fc721356e4",
-        "type": "tabs",
-        "dimension": 54.12979351032449,
-        "children": [
-          {
-            "id": "db933783b2ebb132",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/8 Lez 09 - Operazioni puntuali 2024-25.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "8 Lez 09 - Operazioni puntuali 2024-25"
-            }
-          },
-          {
-            "id": "e5d03bc1ca0de10e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "7 Operazioni_puntuali"
             }
           }
         ]
@@ -215,8 +181,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4371091dceb8cd7d",
+  "active": "fa1fa52df66ff770",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.docx",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/8 Lez 09 - Operazioni puntuali 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
@@ -231,7 +200,6 @@
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/3 Lez 04 - Bayer pattern 2025-26.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/2 Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251128172713.png",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/1 Lez 02 - I fondamenti 2025-2026.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111929.png",
@@ -260,7 +228,6 @@
     "Cose da fare.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
     "Senza nome.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md"
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md"
   ]
 }
