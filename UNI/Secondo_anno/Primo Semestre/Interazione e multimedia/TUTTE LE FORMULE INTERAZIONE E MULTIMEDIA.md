@@ -105,7 +105,7 @@ $$𝐶_𝑟 = 𝑉 + 128$$
 Per gli istogrammi
 Per un immagine $l[m,n]$ si ha $H(k) =$ numero di pixel di valore k
 
-Formula normalizzazione dell'istogramma
+Formula normalizzazione dell'istogramma (problemi di range)
 $$
 v_{\text{nuovo}} = 255 \cdot \frac{(v_{\text{vecchio}} - \text{min}_{\text{osservato}})}{(\text{max}_{\text{osservato}} - \text{min}_{\text{osservato}})}
 $$
