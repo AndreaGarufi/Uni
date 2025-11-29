@@ -132,3 +132,6 @@ Trasformazione di potenza
 $$g(x, y) = c · (f (x, y))^γ$$
 
 La binarizzazione sceglie un valore soglia: i pixel al di sotto diventano neri quelli al di sopra bianchi
+
+
+**FINE  ARGOMENTI PROVA IN ITINERE 1**
