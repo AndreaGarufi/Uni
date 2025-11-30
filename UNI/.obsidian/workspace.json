@@ -27,10 +27,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/7 Operazioni_puntuali.pdf"
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_06122022_turno_1000.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "7 Operazioni_puntuali"
+              "title": "Itinere_06122022_turno_1000"
             }
           },
           {
@@ -45,6 +45,18 @@
               },
               "icon": "lucide-file",
               "title": "proveItinere4"
+            }
+          },
+          {
+            "id": "cbcf86402435164e",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/1 Interpolazione_operazioniAffini_MSE_PSNR.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "1 Interpolazione_operazioniAffini_MSE_PSNR"
             }
           }
         ]
@@ -209,25 +221,25 @@
   },
   "active": "fa1fa52df66ff770",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_06122022_turno_1000.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/1 Interpolazione_operazioniAffini_MSE_PSNR.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 1.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere4.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/6 Colore_luce.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/2 Sensore_bayerPattern_colorInterpolation.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 2.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/7 Operazioni_puntuali.pdf",
     "Pasted image 20251129120339.png",
     "Pasted image 20251129120256.png",
     "Pasted image 20251129120215.png",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/7 Operazioni_puntuali.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.docx",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/8 Lez 09 - Operazioni puntuali 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251128181257.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251128181224.png",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/6 Lez 07 - Campionamento e quantizzazione 2024-2025.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/5 Lez 06 - Occhio e lente sottile 2024-25.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/4 Lez 05 - Risoluzione 2024-25.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/3 Lez 04 - Bayer pattern 2025-26.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251128172713.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
