@@ -11,10 +11,24 @@
             "id": "33d10247feffc695",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA"
+            }
+          },
+          {
+            "id": "9e8923919ac68cdb",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/1 Interpolazione_operazioniAffini_MSE_PSNR.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "1 Interpolazione_operazioniAffini_MSE_PSNR"
             }
           }
         ]
@@ -179,9 +193,9 @@
   },
   "active": "33d10247feffc695",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/1 Interpolazione_operazioniAffini_MSE_PSNR.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere4.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/2 Lez 03 - Operazioni sulle matrici 2025-2026.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/1 Lez 02 - I fondamenti 2025-2026.pdf",
