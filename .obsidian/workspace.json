@@ -4,20 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "236598795dea613f",
+        "id": "a7fcd40ab8ad62ef",
         "type": "tabs",
         "children": [
           {
-            "id": "17c2c7b1c6babd40",
+            "id": "960af91f0f657d16",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "6 29 ottobre 2025_251029_105857"
+            }
+          },
+          {
+            "id": "02791ce90c765124",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Da Sapere"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -163,8 +180,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "3216613356f858dc",
+  "active": "02791ce90c765124",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251128181257.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251128181224.png",
@@ -188,14 +209,11 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125110701.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125110436.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Itinere_0712021_turno 1.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/5 Campionamento_Quantizzazione.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",

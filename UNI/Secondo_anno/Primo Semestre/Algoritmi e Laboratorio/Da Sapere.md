@@ -282,7 +282,7 @@ E' dimostrato che un algoritmo di ordinamento che fa confronti non potrà mai sc
 
 
 Ma non tutti gli algoritmi di ordinamento hanno bisogno di fare comparazioni
-##### **Algoritmi di ordinamento che non necessità di confronti**
+##### **Algoritmi di ordinamento che non necessitano di confronti**
 
 **COUNTING SORT**
 Costruiamo un array A:
