@@ -13,14 +13,14 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf"
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/8 5 novembre 2025.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "7 31 ottobre 2025_251031_104628"
+              "title": "8 5 novembre 2025"
             }
           },
           {
-            "id": "02791ce90c765124",
+            "id": "b7d7708fdab3659f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -180,10 +180,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "02791ce90c765124",
+  "active": "b7d7708fdab3659f",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
+    "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
+    "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Sunto.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/8 5 novembre 2025.pdf",
+    "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
+    "UNI/Primo_anno/Primo Semestre/strutture-discrete/Esempi di esercizi.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Primo_anno/Primo Semestre/strutture-discrete/TUTTI I TEOREMI.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 653099.crdownload",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
@@ -201,9 +209,7 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/6 Colore_luce.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.docx",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/8 Lez 09 - Operazioni puntuali 2024-25.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111929.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111634.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125110701.png",
@@ -221,11 +227,6 @@
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL II.md",
     "UNI/Cose da fare.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL_ultraRiassunto.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md"
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md"
   ]
 }
