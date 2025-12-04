@@ -275,7 +275,7 @@ Da questa idea di usare un heap come struttura dati nasce l'**heap-sort**
 `n = n-1`
 `heapfy(A,1)`
 
-Questa procedura ha complessità $O(n\,\,log \,\,n)$ molto simile al mergeSort che è $Θ(n\,\,log\,\,n)$ e consuma anche meno memoria perche qui lavoriamo con un singolo array a differenza del mergeSort
+Questa procedura ha complessità $O(n\,\,log \,\,n)$ molto simile al mergeSort che è $Θ(n\,\,log\,\,n)$ e consuma anche meno memoria perché qui lavoriamo con un singolo array a differenza del mergeSort
 
 **Definizione**
 E' dimostrato che un algoritmo di ordinamento che fa confronti non potrà mai scendere sotto $Θ(n\,\,log\,\,n)$ come complessità
@@ -283,6 +283,7 @@ E' dimostrato che un algoritmo di ordinamento che fa confronti non potrà mai sc
 
 Ma non tutti gli algoritmi di ordinamento hanno bisogno di fare comparazioni
 ##### **Algoritmi di ordinamento che non necessitano di confronti**
+Ne vedremo 2:
 
 **COUNTING SORT**
 Costruiamo un array A:
@@ -315,10 +316,10 @@ Adesso creiamo un ultimo array B della stessa dimensione di A
 `B =  [0,0,0,0,0,0,0,0,0]`
 `      0 1 2 3 4 5 6 7 8` 
 
-Fatto questo si scorre l'array A al contrario, quindi partendo dalla fine, questo serve a mantenere la stabilità, 
-**SCRIVERE COME FUNZIONA**
+Fatto questo si scorre l'array A al contrario, quindi partendo dalla fine, questo serve a mantenere la stabilità, poi:
+Per ogni elemento i (elemento corrente dentro A), si posiziona i in `B[C'[i]-1]` e successivamente si decrementa: `C'[i]` di 1, perché avendo posizionato l'elemento i ne ho 1 in meno da posizionare quindi devo scalare di 1 il numero degli elementi i: se `C'[3] = 5` ho 5 tre da posizionare, dopo aver posizionato il primo 3 `C'[3] = 4` e cosi via
 
-Ecco lo pseudo codice del countingSort
+Ecco lo pseudocodice del countingSort
 `CountinSort(A,n){`
 	`k = max(A)`
 	`C = new Array(k+1)`
@@ -330,4 +331,64 @@ Ecco lo pseudo codice del countingSort
 	`C[A[i]] = C[A[i]]-1`
 `}`
 
+La complessità del counting sort è $O(n + k)$ dove $n$ è il numero di elementi presenti in A e k è il MAX(A)
 
+
+**RADIX SORT**
+L'idea generale del radix sort è ordinare l'array in base alle cifre di ogni elemento, ovvero si ordina (generalmente) partendo dalla cifra meno significativa e ad ogni passata si va fino a quella più significativa
+
+Faccio un esempio visivo:
+`A = [329,457,657,839,436,720,355]`
+
+329       720       720       329
+457       355       329       355
+657       436       436       436
+839       457       839       457
+436       657       355       657
+720       329       457       720
+355       839       657       839
+Partendo dall'array iniziale, ho ordinato prima rispetto alla terza cifra (seconda colonna) poi rispetto alla seconda (terza colonna) e infine rispetto alla terza (quarta colonna), così facendo ho ordinato l'array
+
+Pseudocodice
+`RadixSort(A,n,h)`
+	`for i = 0 to h = 1 do` 
+		`countingSort(A,n,h)`
+
+dove A è l'array, n la dimensione e h sono le cifre dei numeri all'interno (ovviamente devono avere tutti lo stesso numero di cifre) 
+
+La formula per trovare il numero in base alla cifra che voglio (unità,decine,ecc...) è:
+$$(\frac{A[i]}{10^h})\%10$$   esempio: con $10^0$ cioè la cifra delle unità
+$$(\frac{345}{1})\%10$$
+$$345\%10 = 5$$
+
+La complessità del radix sort è $O(n)$
+
+
+
+#### **TABELLE AD INDIRIZZAMENTO DIRETTO**
+Queste tabelle funzionano in maniera molto simile all' array C del counting sort, ovvero un array in cui si salva il numero di occorrenze per ogni numero, all'indice che rappresenta quel numero, infatti per queste tabelle supponiamo di avere un insieme di numeri: 
+S = {1,3,3,5,5,6,7}
+salviamo il numero di occorrenze di questi numeri all'interno di un array T che ha dimensione pari al massimo+1 dell'insieme S
+`T = [0,1,0,2,0,2,1,1]`
+`     0 1 2 3 4 5 6 7`
+Infatti nell'insieme S lo 0 compare zero volte l'1 una volta, il 3 due volte e cosi via
+E' molto facile da capire e da implementare infatti in pseudocodice le operazioni sono:
+Inserimento:
+`insert(T,k)`
+	`T[k] = T[k]+1`
+
+Cancellazione:
+`delete(T,k)`
+	`if T[k] = 0 then T[k] = 0`
+	`else T[k] = T[k] -1`
+
+Ricerca:
+`search(T,k)`
+	`if(T[k] >= 1) return 1`
+	`return`
+
+dove T è l'array e k l'elemento
+
+Questa struttura è molto semplice ma NON è efficiente se la differenza tra min e max nell'insieme è grande, infatti se avessi un insieme S = {1,2,3,300,5000} avrei 5000+1 caselle di cui la maggior parte vuota
+
+Sarebbe ottimo avere una struttura con le caratteristiche di una tabella ad indirizzamento diretto ma che consumi il giusto numero di celle
