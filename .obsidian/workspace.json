@@ -27,7 +27,8 @@
               "state": {
                 "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
               "title": "Da Sapere"
@@ -180,15 +181,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "b7d7708fdab3659f",
+  "active": "3216613356f858dc",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/8 5 novembre 2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251205104739.png",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Sunto.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/8 5 novembre 2025.pdf",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/Esempi di esercizi.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/TUTTI I TEOREMI.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 653099.crdownload",
@@ -213,7 +215,6 @@
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111929.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111634.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125110701.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125110436.png",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
@@ -226,7 +227,6 @@
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL II.md",
     "UNI/Cose da fare.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md"
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md"
   ]
 }

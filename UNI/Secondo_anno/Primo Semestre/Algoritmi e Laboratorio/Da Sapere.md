@@ -393,4 +393,26 @@ Questa struttura è molto semplice ma NON è efficiente se la differenza tra min
 
 Sarebbe ottimo avere una struttura con le caratteristiche di una tabella ad indirizzamento diretto ma che consumi il giusto numero di celle
 
-guarda sia appunti girlando che tuoi
+#### **TABELLE HASH**
+Queste tabelle funzionano in maniera simile a quelle ad indirizzamento diretto, solo che utilizzano una funzione (chiamata hash) che ne determina la posizione, in questa maniera elimino il problema di creare array giganteschi per inserire valori altrettanto grandi, vediamo dopo come funziona, per ora gestiamo le **collisioni**.
+Le collisioni possono avvenire se ho 2 valori uguali da inserire (o in generale la funzione produce lo stesso risultato e quindi lo stesso indice), la funzione hash verrà eseguita 2 volte sui 2 valori e quindi determinerà la stessa posizione per entrambi i valori, questo problema viene gestito implementando una lista in ogni indice dell'array, in questa maniera se 2 valori devono andare nello stesso indice avremo in quell'indice una lista che conserverà i valori
+
+Se $K_i$ e $K_j$ sono due chiavi e $h$ è la funzione hash, la collisione si verifica quando $h(K_i) = h(K_j)$ 
+Rappresento questa struttura così: 
+![[Pasted image 20251205104739.png]]
+
+Lo pseudocodice delle funzioni con cui gestire la lista è questo:
+`insert(T,k)`
+	`listInsert(k,T[h(k)])`
+
+`search(T,k)`
+	`return listSearch(k,T[h(k)])`
+
+Il **caso pessimo** è quando tutti gli elementi collidono e quindi ho una lista concatenata normalissima e quindi perdo le proprietà di una tabella hash
+
+Per capire quanto la tabella sia piena nasce la misura: **fattore di carico**
+$$a=\frac{n}{m}$$
+Dove $n$ è il numero di elementi
+e $m$ è la lunghezza dell'array T (ovvero quante celle ho in totale)
+Il fattore di carico varia tra 0 e 1 (0 = vuota 1 = piena) se supero l'1 vuol dire che ogni cella è piena e si sono verificate collisioni
+
