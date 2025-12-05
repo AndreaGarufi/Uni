@@ -458,7 +458,19 @@ $h(k) = \lfloor m * ((k * A) \mod 1) \rfloor$
 ##### **INDIRIZZAMENTO APERTO (non si usano liste per le collisioni)**
 Qui a differenza di prima non utilizziamo una lista per concatenare le chiavi che vanno in collisione (da notare che il fattore di carico non supererà mai 1), quindi questa tabella hash può riempirsi al punto tale da non accettare più valori per l'inserimento, questo permette di velocizzare le operazioni di ricerca.
 
-Per indirizzare le chiavi esaminiamo le celle della tabella (*ispezione*) finché non troviamo una cella vuota per l'inserimento, anziché ispezionare sempre partendo dalla cella 0 fino a quella m-1, esaminiamo in base alla chiave da inserire, estendiamo quindi la funzione hash in modo da prendere un secondo input, ovvero la cella da cui iniziare l'ispezione:
-`h(k) -> h(k,n)`: dove $k$ è l'elemento da inserire e $n$ è la posizione da cui partire per esaminare (0)
+Per indirizzare le chiavi esaminiamo le celle della tabella (*ispezione*) finché non troviamo una cella vuota per l'inserimento, anziché ispezionare sempre partendo dalla cella 0 fino a quella m-1, esaminiamo in base alla chiave da inserire, estendiamo quindi la funzione hash in modo da prendere un secondo input, ovvero un numero che parte da 0 e che indica il tentativo di inserimento, questo numero $i$ obbliga la funzione hash a dare un risultato diverso ogni volta (visto che ogni volta che l'inserimento fallisce $i$ viene incrementata)
+`h(k) -> h(k,i)`: dove $k$ è l'elemento da inserire e $i$ è il tentativo da cui partire per esaminare 
+(0, ..., m-1)
+E' importante quindi garantire che $h(k,i)\neq h(k,j)$ se $i\neq j$ 
+
+Esempio:
+1) primo tentativo ($i=0$) 
+   $h(3,0) = 5$ -> 5 è l'indice nell'array ovvero la posizione in cui deve andare il 3
+2) Secondo tentativo ($i=1$)
+   Se la posizione numero 5 era occupata $i$ si incrementa e si passa al prossimo tentativo
+   $h(3,1)=6$ se la posizione 6 è libera il 3 viene inserito altrimenti si continua così fino alla fine dell'array o alla prima posizione vuota
+
+Con questo tipo di implementazione le funzioni diventano:
+
 
 
