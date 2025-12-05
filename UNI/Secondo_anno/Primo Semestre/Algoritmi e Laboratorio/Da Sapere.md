@@ -455,4 +455,10 @@ $h(k) = \lfloor m * ((k * A) \mod 1) \rfloor$
 - Di tutta la moltiplicazione ne prendo il floor per escludere la parte intera
 
 
-**Come gestire in maniera buona le collisioni**
+##### **INDIRIZZAMENTO APERTO (non si usano liste per le collisioni)**
+Qui a differenza di prima non utilizziamo una lista per concatenare le chiavi che vanno in collisione (da notare che il fattore di carico non supererà mai 1), quindi questa tabella hash può riempirsi al punto tale da non accettare più valori per l'inserimento, questo permette di velocizzare le operazioni di ricerca.
+
+Per indirizzare le chiavi esaminiamo le celle della tabella (*ispezione*) finché non troviamo una cella vuota per l'inserimento, anziché ispezionare sempre partendo dalla cella 0 fino a quella m-1, esaminiamo in base alla chiave da inserire, estendiamo quindi la funzione hash in modo da prendere un secondo input, ovvero la cella da cui iniziare l'ispezione:
+`h(k) -> h(k,n)`: dove $k$ è l'elemento da inserire e $n$ è la posizione da cui partire per esaminare (0)
+
+

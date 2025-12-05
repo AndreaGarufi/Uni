@@ -33,6 +33,18 @@
               "icon": "lucide-file",
               "title": "Da Sapere"
             }
+          },
+          {
+            "id": "65f24abc315436ae",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Introduzione Agli Algoritmi_ (Z-Library)"
+            }
           }
         ],
         "currentTab": 1
@@ -183,8 +195,9 @@
   },
   "active": "b7d7708fdab3659f",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/8 5 novembre 2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/8 5 novembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251205104739.png",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Sunto.md",
@@ -210,7 +223,6 @@
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251129120215.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/6 Colore_luce.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111929.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111634.png",
