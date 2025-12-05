@@ -416,3 +416,43 @@ Dove $n$ è il numero di elementi
 e $m$ è la lunghezza dell'array T (ovvero quante celle ho in totale)
 Il fattore di carico varia tra 0 e 1 (0 = vuota 1 = piena) se supero l'1 vuol dire che ogni cella è piena e si sono verificate collisioni
 
+Ogni elemento $k$ ha la stessa possibilità di essere inserito nella posizione $i$, ovvero $\frac{1}{m}$ 
+
+La complessità delle funzioni di ricerca nel caso di successo e di insuccesso è $O(1+a)$, l'1 è simbolico perché controllando la lista di elementi per capire se è alla fine accederà ad un null
+
+Adesso cerchiamo di capire quali sono i principali metodi per creare una funzione hash:
+
+**Metodo della divisione**
+E' il metodo più usato per definire $h$ perché è abbastanza semplice da implementare.
+Abbiamo $k$ che sono le chiavi da inserire, e $m$ è il numero di celle dell'array
+$h(k)=k\mod m$ 
+Esempio:
+`T = [0,0,0,0,0,0,0,0,0,0]`
+`     0 1 2 3 4 5 6 7 8 9 ` 
+I numeri da inserire sono: 50,53,67
+$50 \mod 10= 0$ -> indice 0 nell'array
+$53 \mod 10= 3$ -> indice 3 nell'array
+$67 \mod 10= 7$ -> indice 7 nell'array
+`T = [50,0,0,53,0,0,0,67,0,0]`
+`     0  1 2 3  4 5 6 7  8 9 ` 
+(nell'array non inserisco direttamente il numero ma un puntatore che punta ad una lista che contiene i numeri,3 liste da un elemento in questo caso)
+
+Scegliere bene il modulo è importante, ad esempio se un numero $k$ fosse molto grande e scegliessi un $m$ troppo piccolo avrei un array piccolo con liste enormi
+Esempio:
+$8012 \mod 5 = 2$
+$8012 \mod 5 = 2$
+già con 2 numeri diversi ho ottenuto la stessa posizione nell'array quindi li ho fatti collidere
+
+
+**Metodo della moltiplicazione**
+Abbiamo $k$ che sono le chiavi da inserire, e $m$ è il numero di celle dell'array
+Scegliamo un $A$ compreso tra 0 e 1 (0 e 1 esclusi) allora:
+$h(k) = \lfloor m * ((k * A) \mod 1) \rfloor$ 
+
+- Il mod 1 serve ad escludere la parte decimale della moltiplicazione $k*A$ 
+- $0<k*A<k$ -> ricorda che sarà per forza minore di $k$ perché sto moltiplicando per un numero $A$ che essendo compreso tra 0 e 1 va a diminuire la quantità $k$ 
+- $0 ≤m * ((k * A) \mod 1)< m$ 
+- Di tutta la moltiplicazione ne prendo il floor per escludere la parte intera
+
+
+**Come gestire in maniera buona le collisioni**
