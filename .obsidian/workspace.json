@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "dd4ac4be74f0b24c",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/8 5 novembre 2025.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "8 5 novembre 2025"
-            }
-          },
-          {
             "id": "eb0865c2a1c54ac0",
             "type": "leaf",
             "state": {
@@ -34,7 +22,19 @@
             }
           },
           {
-            "id": "65f24abc315436ae",
+            "id": "0bfdaa4f3f7a75eb",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/9 12 novembre 2025.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "9 12 novembre 2025"
+            }
+          },
+          {
+            "id": "47e3dae5f7531755",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -191,11 +191,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "dd4ac4be74f0b24c",
+  "active": "eb0865c2a1c54ac0",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/8 5 novembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/9 12 novembre 2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 899679.crdownload",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/8 5 novembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251205104739.png",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Sunto.md",
@@ -215,12 +217,10 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere4.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/7 Operazioni_puntuali.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/Interazione e Multimedia_251124_092442 (2).pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251129120339.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251129120256.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251129120215.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/6 Colore_luce.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111929.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251125111634.png",

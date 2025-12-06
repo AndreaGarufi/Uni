@@ -420,7 +420,7 @@ Ogni elemento $k$ ha la stessa possibilità di essere inserito nella posizione $
 
 La complessità delle funzioni di ricerca nel caso di successo e di insuccesso è $O(1+a)$, l'1 è simbolico perché controllando la lista di elementi per capire se è alla fine accederà ad un null
 
-Adesso cerchiamo di capire quali sono i principali metodi per creare una funzione hash:
+Adesso cerchiamo di capire quali sono i *principali metodi per creare una funzione hash*:
 
 **Metodo della divisione**
 E' il metodo più usato per definire $h$ perché è abbastanza semplice da implementare.
@@ -472,5 +472,21 @@ Esempio:
 
 Con questo tipo di implementazione le funzioni diventano:
 
+`insert(T,k)`
+	`i = 0`
+	`while(i < m and T[i] ≠ null) do`
+		`i = i + 1`
+	`if (i < m) then T[i] = k`
 
+`search(T,k)`
+	`i = 0`
+	`while(i < m and T[i] ≠ null) do`
+		`if(T[i] = k) return true`
+		`i = i + 1`
+	`return false`
 
+Dove $m$ è il numero di celle e $n$ è il numero di elementi
+Entrambe queste funzioni hanno complessità $O(n)$
+
+##### **HASHING**
+usa appunti sia girlando sia tuoi e usa chat gpt per capire il libro a pag 225 ispezione lineare
