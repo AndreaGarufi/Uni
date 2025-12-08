@@ -488,5 +488,41 @@ Con questo tipo di implementazione le funzioni diventano:
 Dove $m$ è il numero di celle e $n$ è il numero di elementi
 Entrambe queste funzioni hanno complessità $O(n)$
 
-##### **HASHING**
-usa appunti sia girlando sia tuoi e usa chat gpt per capire il libro a pag 225 ispezione lineare
+In generale quindi l'indirizzamento aperto, quando si verificano collisioni non concatena con una lista ma scorre le posizioni successive fin quando se ne presenta una disponibile per l'inserimento, per farlo segue delle tecniche, ne abbiamo 3
+###### **HASHING**
+1) **Ispezione lineare**
+   Per farlo seguiamo la formula $$h(k,i) = (h'(k)+i) \mod m$$
+dove $h(k)$ è la funzione hash completa che gestisce anche le collisioni
+$h'(k)$ è un altra funzione hash (ausiliaria) che serve per costruire $h(k)$ 
+In pratica quindi $h'(k)$ è la funzione hash che mi indica il punto da cui iniziare l'ispezione lineare, quindi a livello pratico inizia dalla posizione $h'(k)$ e scorre le celle in cerca di una libera fino ad arrivare a quella che la precede (il modulo serve per tornare all'inizio dell'array quando si trova alla fine di quest'ultimo)
+*Problemi:*
+Questa metodologia è semplice da implementare ma presenta un problema: ovvero gli elementi $k$ sono "attratti" dalle parti del'array con massa più grande:
+
+**Glomerazione primaria**
+Partiamo da un array vuoto, ogni elemento $k$ ha probabilità $\frac{1}{m}$ ($m$ = numero totale di celle) di finire in una determinata cella, ma se il mio array non è vuoto ma ho ad esempio delle zone più occupate rispetto ad altre:
+`T = [1,0,1,1,1,0,0,0,1,0,0,1]` 0 cella vuota, 1 cella piena
+`     0 1 2 3 4 5 6 7 8 9 10 11`
+Supponiamo che la nostra funzione $h'(k)$ ci abbia dato come punto di partenza l'indice numero 2 che è occupato, cosi come lo sono anche l'indice 3 e 4, l'elemento $h'(k)$ aveva probabilità $\frac{1}{m}$ di finire all'indice 2 ma dato che è occupato la funzione $h(k)$ scorrerà all'indice successivo, questo comporta un aumento delle probabilità a $\frac{2}{m}$ di finire all'indice 3 perché le probabilità si sommano, anche il 3 è occupato quindi va al 4 (la probabilità è $\frac{3}{m}$) e dato che anche il 4 è occupato andrà ancora avanti all'indice 5 che il primo libero, la probabilità totale adesso è $\frac{4}{m}$. 
+
+Abbiamo capito perché le parti più massicce tendono ad ingrandirsi di ancora di più attirando i nuovi elementi, in pratica ad ogni tentativo in cui la cella è occupata la probabilità di finire alla prossima cella aumenta di 1
+![[Pasted image 20251208115432.png|300]]
+
+come si può vedere dal disegno l'elemento $k$ ha probabilità $\frac{1}{m}$ di finire in una cella vuota e se capita in una cella piena ad ogni spostamento la probabilità aumenta
+
+2) **Ispezione quadratica**
+   segue la formula $$h(k,i) = (h'(k) + c_1i + c_2i^2) \mod m$$
+dove $c_1$ e $c_2$ sono diversi da 0 e sono delle costanti
+In questo caso la glomerazione primaria non c'è ma invece c'è la secondaria che è molto più contenuta
+
+3) **Hashing doppio**
+   si basa sulla formula $$h(k) = (h'(k) + ih''(k)) \mod m$$
+
+
+#### **ALBERI ROSSO-NERI**
+**Introduzione**
+Un albero per dirsi bilanciato deve avere come obbiettivo quello di (almeno asintoticamente) fare lo stesso lavoro sia nella parte di destra che nella parte di sinistra
+Prima di parlare degli alberi rosso-neri dobbiamo prima capire il concetto di rotazione in un albero bilanciato (bst)
+
+**ROTAZIONE**
+Abbiamo 2 tipologie di rotazione: rotazione a destra e rotazione a sinistra.
+leggi pag 259 libro
