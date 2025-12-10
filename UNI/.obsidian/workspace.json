@@ -45,7 +45,8 @@
               "title": "COMPLETO interazione-e-multimedia"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -205,10 +206,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "012c8d043549c500",
+  "active": "a020ca276d8b7f5d",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/9 Lez 10 - Operatori locali e Convoluzione 2025-26.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8.md",
     "Project ideas.md",
     "Cose da fare.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251210211020.png",
