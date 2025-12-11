@@ -7,5 +7,6 @@
     "downscalePercent": 100
   },
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "Secondo_anno/Primo Semestre/Modelli"
+  "attachmentFolderPath": "Secondo_anno/Primo Semestre/Modelli",
+  "readableLineLength": true
 }
