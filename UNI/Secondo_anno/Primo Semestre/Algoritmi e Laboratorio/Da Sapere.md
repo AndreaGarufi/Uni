@@ -525,4 +525,18 @@ Prima di parlare degli alberi rosso-neri dobbiamo prima capire il concetto di ro
 
 **ROTAZIONE**
 Abbiamo 2 tipologie di rotazione: rotazione a destra e rotazione a sinistra.
-leggi pag 259 libro
+E' abbastanza semplice ma bisogna prestare attenzione:
+Posso ruotare solo se il nodo su cui devo ruotare ha un figlio: se ruoto a sinistra deve avere un figlio destro, se invece devo ruotare a destra deve avere un figlio sinistro
+
+Esempio rotazione sinistra
+![[Pasted image 20251212151942.png|500]]
+
+Esempio rotazione destra
+![[Pasted image 20251212152438.png|500]]
+
+
+In questo modo abbiamo modificato la struttura dell'albero ma non "il suo significato"
+
+
+
+
