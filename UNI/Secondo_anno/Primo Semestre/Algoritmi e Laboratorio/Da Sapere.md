@@ -528,15 +528,43 @@ Abbiamo 2 tipologie di rotazione: rotazione a destra e rotazione a sinistra.
 E' abbastanza semplice ma bisogna prestare attenzione:
 Posso ruotare solo se il nodo su cui devo ruotare ha un figlio: se ruoto a sinistra deve avere un figlio destro, se invece devo ruotare a destra deve avere un figlio sinistro
 
-Esempio rotazione sinistra
+**Esempio rotazione sinistra**
 ![[Pasted image 20251212151942.png|500]]
 
-Esempio rotazione destra
+**Esempio rotazione destra**
 ![[Pasted image 20251212152438.png|500]]
 
 
 In questo modo abbiamo modificato la struttura dell'albero ma non "il suo significato"
+E' questo il motivo per cui queste rotazioni sono importanti, servono quindi a ribilanciare l'albero.
+Adesso parliamo degli alberi rosso-neri
+
+#### **ALBERI ROSSO-NERI -> REGOLE**
+Gli alberi rosso neri hanno 5 proprietà fondamentali:
+1) Ogni nodo è rosso o nero
+2) La root è sempre nera
+3) Le foglie sono sempre nere
+   - Rilassiamo questa regola :
+     A livello sia pratico che teorico considero le foglie come NULL, cosi farò risultare questi nodi NULL come nodi neri, essendo questi ultimi foglie la proprietà è rispettata, aumento l'altezza dell'albero di 1 livello ma a livello asintotico non cambia molto
+1) Un nodo rosso ha sempre figli neri
+2) Un qualsiasi cammino da un nodo ad una foglia incontra sempre lo stesso numero di nodi neri
+
+*Nota bene: ci sono vari modi per colorare uno stesso albero, l'importante è rispettare le proprietà*
+
+Queste proprietà possono essere rispettate solo se l'albero è bilanciato.
+Esempio di albero rosso nero
+![[Pasted image 20251214112630.png|300]]
+(Un albero rosso nero che è solo colorato di nero può comunque rispettare le proprietà, perché non è obbligatorio che ci siano nodi rossi)
+
+**Altezza nera**
+Denotiamo con $bh(x)$ l'altezza nera che è il numero di nodi neri partendo da un nodo x (senza contarlo) e arrivando ad una foglia, ad esempio se da x a una foglia incontro 3 nodi neri $bh(x) = 3$ 
+
+Un albero rosso nero deve essere bilanciato per poter rispettare le proprietà, ma nella realtà difficilmente ci saranno alberi perfettamente bilanciati, l'importante è che lo siano almeno abbansta da far risepttare le proprietà: in un albero rosso-nero, se denotiamo *l'altezza* (altezza normale non altezza nera) *minima $= k$* allora *l'altezza massima* di un altra parte dell'albero può essere al più $2k+1$, più di cosi non posso sbilanciare l'albero altrimenti non rispetterei più le 5 proprietà
+
+**Lemma**
+L’altezza massima di un albero rosso-nero con n nodi interni è $2log(n+1)$
+(dimostrazione sul libro a pagina 257 [[Introduzione Agli Algoritmi_ (Z-Library).pdf|Introduzione Agli Algoritmi]])
 
 
-
-
+**INSERIMENTO IN UN ALBERO ROSSO NERO**
+guarda anche note tue
