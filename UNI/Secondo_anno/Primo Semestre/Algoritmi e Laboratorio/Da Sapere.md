@@ -575,3 +575,23 @@ In totale abbiamo **3 casi**:
 3) ![[Pasted image 20251215212501.png]]
    
 Adesso vediamo un esempio
+![[Pasted image 20251216161513.png|600]]
+(Altri esempi sono visibili negli appunti 9 e 10)
+
+**CANCELLAZIONE**
+La cancellazione è un'operazione abbastanza complessa, iniziamo col dire che l'eliminazione di *un nodo rosso non comporta problematiche*, basta eseguire una normale cancellazione di un nodo in un albero,![[Pasted image 20251216162328.png|190]]
+mentre per quanto riguarda la *cancellazione di un nodo nero così facendo altero sempre il numero di nodi neri in un cammino (regola 5)* quindi va gestito attentamente:
+
+Abbiamo 2 casi di rimozione, in cui tolgo un nodo nero e il suo colore va gestito dandolo ad un altro nodo nero
+1) ![[Pasted image 20251216164800.png]]
+2) ![[Pasted image 20251216164812.png]]
+
+*Il nodo doppio nero è un nodo che contiene un flag che dice che lui è nero e contiene anche il colore di un altro nodo nero eliminato*, questo doppio nero va gestito e ci sono 5 casi: 3 casi normali e 2 varianti dei due primi casi:
+
+Prima di iniziare ricorda che quando si ruota si scambiano anche i colori
+1) 
+
+
+
+
+
