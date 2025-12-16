@@ -546,8 +546,8 @@ Gli alberi rosso neri hanno 5 proprietà fondamentali:
 3) Le foglie sono sempre nere
    - Rilassiamo questa regola :
      A livello sia pratico che teorico considero le foglie come NULL, cosi farò risultare questi nodi NULL come nodi neri, essendo questi ultimi foglie la proprietà è rispettata, aumento l'altezza dell'albero di 1 livello ma a livello asintotico non cambia molto
-1) Un nodo rosso ha sempre figli neri
-2) Un qualsiasi cammino da un nodo ad una foglia incontra sempre lo stesso numero di nodi neri
+4) Un nodo rosso ha sempre figli neri
+5) Un qualsiasi cammino da un nodo ad una foglia incontra sempre lo stesso numero di nodi neri
 
 *Nota bene: ci sono vari modi per colorare uno stesso albero, l'importante è rispettare le proprietà*
 
@@ -559,7 +559,7 @@ Esempio di albero rosso nero
 **Altezza nera**
 Denotiamo con $bh(x)$ l'altezza nera che è il numero di nodi neri partendo da un nodo x (senza contarlo) e arrivando ad una foglia, ad esempio se da x a una foglia incontro 3 nodi neri $bh(x) = 3$ 
 
-Un albero rosso nero deve essere bilanciato per poter rispettare le proprietà, ma nella realtà difficilmente ci saranno alberi perfettamente bilanciati, l'importante è che lo siano almeno abbansta da far risepttare le proprietà: in un albero rosso-nero, se denotiamo *l'altezza* (altezza normale non altezza nera) *minima $= k$* allora *l'altezza massima* di un altra parte dell'albero può essere al più $2k+1$, più di cosi non posso sbilanciare l'albero altrimenti non rispetterei più le 5 proprietà
+Un albero rosso nero deve essere bilanciato per poter rispettare le proprietà, ma nella realtà difficilmente ci saranno alberi perfettamente bilanciati, l'importante è che lo siano almeno abbastanza da far rispettare le proprietà: in un albero rosso-nero, se denotiamo *l'altezza* (altezza normale non altezza nera) *minima $= k$* allora *l'altezza massima* di un altra parte dell'albero può essere al più $2k+1$, più di cosi non posso sbilanciare l'albero altrimenti non rispetterei più le 5 proprietà
 
 **Lemma**
 L’altezza massima di un albero rosso-nero con n nodi interni è $2log(n+1)$
@@ -567,4 +567,11 @@ L’altezza massima di un albero rosso-nero con n nodi interni è $2log(n+1)$
 
 
 **INSERIMENTO IN UN ALBERO ROSSO NERO**
-guarda anche note tue
+Il nodo inserito è sempre rosso cosi diminuiamo i problemi.
+In totale abbiamo **3 casi**:
+(Spiegherò i casi con l'albero d'esempio usato a lezione)
+1) ![[Pasted image 20251215212446.png]]
+2) ![[Pasted image 20251215212454.png]]
+3) ![[Pasted image 20251215212501.png]]
+   
+Adesso vediamo un esempio
