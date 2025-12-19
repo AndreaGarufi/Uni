@@ -34,6 +34,20 @@
             }
           },
           {
+            "id": "b25ed0860f1593aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "conflict-files-obsidian-git"
+            }
+          },
+          {
             "id": "afa917835b4c8c27",
             "type": "leaf",
             "state": {
@@ -46,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -206,8 +220,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "507bfb9941a71eb0",
+  "active": "b25ed0860f1593aa",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "conflict-files-obsidian-git.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione4/sketch.properties",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/yellowSquare.pde",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/redSquare.pde",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/classi.pde",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/11 - 21 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251219164240.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251217194244.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251217194203.png",
@@ -216,24 +238,16 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251217194035.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251217193935.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251217193559.png",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/10 - 14 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251216164812.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251216164800.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251216162328.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/9 12 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione6/foto/foto.pde",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione6/foto/data",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione6/foto",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione6",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/9 Lez 10 - Operatori locali e Convoluzione 2025-26.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "Project ideas.md",
     "Cose da fare.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione5/trasformazioni_affini/trasformazioni_affini.pde",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere4.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.md",

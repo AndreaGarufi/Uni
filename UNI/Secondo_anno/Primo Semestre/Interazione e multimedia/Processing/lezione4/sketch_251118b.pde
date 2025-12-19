@@ -1,5 +1,5 @@
 // Gestione testo
-
+/*
 PFont f;
 String typing = "";
 String saved = "";
