@@ -20,30 +20,6 @@
               "icon": "lucide-file",
               "title": "Da Sapere"
             }
-          },
-          {
-            "id": "0bfdaa4f3f7a75eb",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/9 12 novembre 2025.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "9 12 novembre 2025"
-            }
-          },
-          {
-            "id": "9bf6ae83bfc39b2e",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Introduzione Agli Algoritmi_ (Z-Library)"
-            }
           }
         ]
       }
@@ -191,21 +167,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "3216613356f858dc",
+  "active": "eb0865c2a1c54ac0",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/9 12 novembre 2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/11 - 21 novembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251214112630.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251212152438.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251212151942.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251211181242.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251211181116.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251211181026.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251211180951.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251211180751.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251211180429.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251211175643.png",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/10 - 14 novembre 2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 142129.crdownload",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/9 12 novembre 2025.pdf",
+    "Pasted image 20251219104149.png",
+    "Pasted image 20251219104142.png",
+    "Pasted image 20251219104135.png",
+    "Pasted image 20251219104126.png",
+    "Pasted image 20251219104059.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251216164812.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251216164800.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251216162328.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251216161513.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251215212501.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/9 Lez 10 - Operatori locali e Convoluzione 2025-26.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 899679.crdownload",
@@ -219,11 +198,8 @@
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 653099.crdownload",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere4.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",

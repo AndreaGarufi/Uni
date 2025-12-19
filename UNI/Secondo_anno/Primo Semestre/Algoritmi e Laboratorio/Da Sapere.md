@@ -589,7 +589,13 @@ Abbiamo 2 casi di rimozione, in cui tolgo un nodo nero e il suo colore va gestit
 *Il nodo doppio nero è un nodo che contiene un flag che dice che lui è nero e contiene anche il colore di un altro nodo nero eliminato*, questo doppio nero va gestito e ci sono 5 casi: 3 casi normali e 2 varianti dei due primi casi:
 
 Prima di iniziare ricorda che quando si ruota si scambiano anche i colori
-1) 
+1) ![[Pasted image 20251219104059.png]]
+2) ![[Pasted image 20251219104126.png]]
+3) ![[Pasted image 20251219104135.png]]
+4) ![[Pasted image 20251219104142.png]]
+5) ![[Pasted image 20251219104149.png]]
+
+
 
 
 

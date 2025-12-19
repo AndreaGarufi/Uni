@@ -4,7 +4,7 @@ class Ball{
   float sx,sy;          //velocita
   
   
-  Ball(float x,float y,float s,float sx,float sy){
+  Ball(float x,float y,float s,float sx,float sy){  //costruttore a cui assegnamo i valori
     this.posX = x;
     this.posY = y;
     this.size = s;
@@ -13,7 +13,7 @@ class Ball{
   }
   
   Ball(float x,float y,float s){
-    this(x,y,s,0,0);
+    this(x,y,s,0,0);    //questa cosa è una chiamata al costruttore per inizializzare a "0"
   }
   
   void display(){
