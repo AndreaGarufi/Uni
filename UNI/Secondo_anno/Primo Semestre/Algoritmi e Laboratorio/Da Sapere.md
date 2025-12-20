@@ -539,7 +539,7 @@ In questo modo abbiamo modificato la struttura dell'albero ma non "il suo signif
 E' questo il motivo per cui queste rotazioni sono importanti, servono quindi a ribilanciare l'albero.
 Adesso parliamo degli alberi rosso-neri
 
-#### **ALBERI ROSSO-NERI -> REGOLE**
+##### **ALBERI ROSSO-NERI -> REGOLE**
 Gli alberi rosso neri hanno 5 proprietà fondamentali:
 1) Ogni nodo è rosso o nero
 2) La root è sempre nera
@@ -589,20 +589,25 @@ Abbiamo 2 casi di rimozione, in cui tolgo un nodo nero e il suo colore va gestit
 *Il nodo doppio nero è un nodo che contiene un flag che dice che lui è nero e contiene anche il colore di un altro nodo nero eliminato*, questo doppio nero va gestito e ci sono 5 casi: 3 casi normali e 2 varianti dei due primi casi:
 
 Prima di iniziare ricorda che quando si ruota si scambiano anche i colori
-<<<<<<< HEAD
 Userò le lettere per indicare i nodi
 1) ![[Pasted image 20251219164240.png]]
 2) ![[Pasted image 20251217194035.png]]
 3) ![[Pasted image 20251217194126.png]]
 4) ![[Pasted image 20251217194203.png]]
 5) ![[Pasted image 20251217194244.png]]
-=======
-1) ![[Pasted image 20251219104059.png]]
-2) ![[Pasted image 20251219104126.png]]
-3) ![[Pasted image 20251219104135.png]]
-4) ![[Pasted image 20251219104142.png]]
-5) ![[Pasted image 20251219104149.png]]
->>>>>>> origin/main
+
+Vediamo adesso 2 esempi: uno è l'eliminazione di vari nodi, l'altro è l'eliminazione del minimo
+(Per capirli adeguatamente bisogna rifarli passo passo e usare questi per vedere se si è fatto bene)
+1) ![[Pasted image 20251220203731.png|500]]
+2) ![[Pasted image 20251220203801.png|500]]
+
+Fornire un esempio di albero rosso nero con 10 nodi tale che dopo aver eliminato un nodo nero l'altezza nera ($bh$) diminuisca di 1:
+![[Pasted image 20251220222745.png|500]]
+Il primo albero non è valido perché è un albero sbagliato, dato che non rispetta la regola 5 (il cammino dei neri uguale per tutti), e quindi giusto il secondo albero perché tiene conto della regola per avere una determinata altezza nera (in questo caso 3) che è $N_{neri} = 2^{bh}-1 = 7$, infatti ci sono 7 nodi neri e gli ultimi 3 rossi che non influiscono sul conteggio dell'altezza nera, 7 è quindi il numero minimo di nodi per avere un altezza nera di 3 e se ne venisse eliminato anche solo 1 l'albero dovrebbe ribilanciarsi diminuendo per forza il numero dell'altezza nera
+
+Fornire un esempio di albero rosso nero in cui l'inserimento aumenta l'altezza nera
+![[Pasted image 20251220225517.png|250]]
+Il nodo tratteggiato che stiamo inserendo è ovviamente di colore rosso, questo porta ad una reazione a catena in cui si parte dal caso 3 dell'inserimento (ovvero i figli D e F scambiano il colore con il padre C), in questo modo C diventa rosso, qui non posso riapplicare il caso 3 perché E è nero quindi va applicata una rotazione e in questo modo riesco a propagare il "conflitto" fino alla radice dove viene espulso, in questo modo aumenta l'altezza nera
 
 
 
@@ -610,3 +615,13 @@ Userò le lettere per indicare i nodi
 
 
 
+
+### **PROGRAMMAZIONE DINAMICA**
+Partiamo con il dire cosa è un problema di ottimizzazione:
+**Definizione** 
+Un problema si dice di ottimizzazione quando esistono varie soluzioni ma solo alcune di queste sono le migliori, per capire qual è la migliore ad ogni soluzione applichiamo la funzione bontà che è definita cosi: $f: S \rightarrow R$ , dove $S$ è l'insieme delle soluzioni e $R$ i numeri reali
+
+Ad esempio nel problema dei cammini minimi nei grafi se parto da un nodo A potrei poter scegliere 2 percorsi diversi per arrivare a C: A-B-C o A-D-B-C, normalmente il primo cammino è la soluzione migliore, ma non è sempre così, il grado di bontà assegnato ad ogni soluzione è diverso in base al problema che si affronta
+
+Adesso parliamo della prgrammazione dinamica
+#### **PROGRAMMAZIONE DINAMICA**
