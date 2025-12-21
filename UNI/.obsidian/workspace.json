@@ -32,8 +32,21 @@
               "icon": "lucide-file",
               "title": "Da Sapere"
             }
+          },
+          {
+            "id": "4c1a5b95e300402c",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Introduzione Agli Algoritmi_ (Z-Library)"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -193,10 +206,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4cad214353793776",
+  "active": "4c1a5b95e300402c",
   "lastOpenFiles": [
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/11 19 novembre.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/12 - 21 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/10 - 14 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220225517.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220225258.png",
@@ -204,8 +219,6 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220222745.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220203801.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220203731.png",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/12 - 21 novembre 2025.pdf",
     "conflict-files-obsidian-git.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione4/sketch.properties",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/yellowSquare.pde",

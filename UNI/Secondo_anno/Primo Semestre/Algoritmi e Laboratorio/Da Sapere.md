@@ -625,3 +625,18 @@ Ad esempio nel problema dei cammini minimi nei grafi se parto da un nodo A potre
 
 Adesso parliamo della prgrammazione dinamica
 #### **PROGRAMMAZIONE DINAMICA**
+La programmazione divide et impera divide il problema in *sotto problemi indipendenti* che va a risolvere ricorsivamente e poi unisce le soluzioni per risolvere il problema più grande, la programmazione dinamica invece è usata quando i *sotto problemi non sono indipendenti* (ovvero quando essi si ripetono più volte), in questo contesto un algoritmo divide et impera spreca molto tempo risolvendo dei casi che ha già risolto, mentre un algoritmo dinamico memorizza il risultato del sotto problema riconducendolo quindi ad un caso base, in questa maniera quando il sotto problema si ripresenterà verrà risolto immediatamente (quindi ogni sotto problema viene risolto una sola volta e salvato il risultato in una tabella).
+
+La programmazione dinamica tipicamente si applica ai problemi di ottimizzazione
+Il processo di costruzione di un algoritmo di programmazione dinamica può essere suddiviso in *4 fasi*:
+1) Strutturazione
+   gode della sottostruttura ottima? (la soluzione ottima del problema grande si ottiene combinando soluzioni ottime dei sottoproblemi)
+   Sovrapposizione dei sottoproblemi: gli stessi sottoproblemi compaiono più volte?
+   posso usare approccio ricorsivo?
+   se si...
+2) Definire una funzione ricorsiva per il calcolo della soluzione ottima
+3) Costruire una procedura bottom-up (dai problemi piccoli a quelli più grandi) per il calcolo di una soluzione ottima
+4) Opzionale - costruzione di una soluzione ottima
+
+Vediamo dei problemi di ottimizzazione:
+**Problema del rod-cut**
