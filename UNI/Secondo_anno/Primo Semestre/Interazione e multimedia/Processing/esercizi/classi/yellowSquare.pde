@@ -26,9 +26,22 @@ class Square{
     noStroke();
     rect(posX,posY,lato1,lato2);
   }
+  
+  void move(){
+    posX = posX + velocita;
+    if(posX > width-lato1){
+      velocita = -velocita;  
+    }
+    if(posX < 0){
+      velocita = -velocita;  //questa cosa moltiplica per -1 quindi inverte sempre il segno
+    }
+    
+  }
+  
 
   void run(){
     display();
+    move();
   }
 
 

@@ -15,7 +15,7 @@ void setup(){
 void draw(){
 
   background(0);
-  for (Square quadrato:ab){
+  for (Square quadrato:ab){    //oggetto square di nome quadrato, scorre ogni cella di ab se entro c'è qualcosa esegue run()
     quadrato.run();
   }
 }
@@ -23,7 +23,16 @@ void draw(){
 
 void keyPressed(){
   if(key == 'n' || key == 'N'){
-    ab.add(new Square(0,0,100,100));
+    float lato1 = random(50,100);
+    float lato2 = lato1;
+    ab.add(new Square(0,random(0,width-lato2),lato1,lato2,random(1,7)));
+    }
+     
+  if(key == 'g' || key == 'G'){
+    float lato1 = random(20,60);
+    float lato2 = lato1;
+    ab.add(new redSquare(random(0,width-lato1),0,lato1,lato2,random(1,7)));
+    
   }
   
 }
