@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "87339936959d1f05",
+        "id": "4d23d619ac78d94a",
         "type": "tabs",
         "children": [
           {
-            "id": "4cad214353793776",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/11 19 novembre.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "11 19 novembre"
-            }
-          },
-          {
-            "id": "0e611bce93b2ddc1",
+            "id": "8babb9e606c68d71",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,7 +22,7 @@
             }
           },
           {
-            "id": "4c1a5b95e300402c",
+            "id": "3a178d5b02b233b3",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -205,12 +193,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4cad214353793776",
+  "active": "8babb9e606c68d71",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/11 19 novembre.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251223102236.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/12 - 21 novembre 2025.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/9 Lez 10 - Operatori locali e Convoluzione 2025-26.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/10 - 14 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220225517.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220225258.png",
@@ -223,12 +214,9 @@
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/yellowSquare.pde",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/redSquare.pde",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/classi.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251219164240.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251217194244.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251217194203.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251217194157.png",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/9 12 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "Project ideas.md",
     "Cose da fare.md",

@@ -630,7 +630,7 @@ La programmazione divide et impera divide il problema in *sotto problemi indipen
 La programmazione dinamica tipicamente si applica ai problemi di ottimizzazione
 Il processo di costruzione di un algoritmo di programmazione dinamica può essere suddiviso in *4 fasi*:
 1) Strutturazione
-   gode della sottostruttura ottima? (la soluzione ottima del problema grande si ottiene combinando soluzioni ottime dei sottoproblemi)
+   Gode della sottostruttura ottima? (la soluzione ottima del problema grande si ottiene combinando soluzioni ottime dei sottoproblemi)
    Sovrapposizione dei sottoproblemi: gli stessi sottoproblemi compaiono più volte?
    posso usare approccio ricorsivo?
    se si...
@@ -640,3 +640,89 @@ Il processo di costruzione di un algoritmo di programmazione dinamica può esser
 
 Vediamo dei problemi di ottimizzazione:
 **Problema del rod-cut**
+Abbiamo un' azienda che acquista barre di acciaio e le taglia in porzioni per poi rivenderle, si vuole sapere qual è il taglio ottimale per una barra di lunghezza $i$ in modo da massimizzarne il ricavo:
+![[Pasted image 20251223102236.png|600]]
+Ad esempio qual è il taglio ottimale per una barra lunga 4?
+
+- Non tagliarla -> guadagno = 9
+- Tagliarla in 2 pezzi -> guadagno = 10
+- Tagliarla in un pezzo singolo e uno da 3 -> guadagno = 9
+- Tagliarla in 2 pezzi singoli e uno da 2 -> guadagno = 7
+
+Chiaramente la soluzione ottimale per il nostro problema è la seconda opzione che fa ricavare 10
+
+Cerchiamo di risolverlo seguendo le 4 fasi della programmazione dinamica:
+**Fase 1**
+Strutturazione, il problema gode della sottostruttura ottima?
+Possiamo dire che il problema $P(n)$ ha soluzione $S(n)$, la lunghezza totale della barra è $n$, possiamo quindi suddividere il problema in più sottoproblemi più piccoli, infatti la barra viene tagliata a lunghezza $k$ avremo cosi la barra divisa in 2 una di lunghezza $k$ e il resto sarà il totale $n$ meno l'altra parte ovvero $k$, quindi il problema diventa: $P(n) = P(k) +P(n-k)$ 
+con $k<n$, $n-k < n$ e $1≤k≤n$ 
+   
+Una soluzione ottima al problema generale è composta da soluzioni ottime di sottoproblemi?
+Noi sappiamo che una soluzione $S(n) = S(k) + S(n-k)$, avremo che: $S^*(n) = S(k) + S^*(n-k)$ dove $S^*(n)$ è una soluzione "buona" e $S^*(n-k)$ è una soluzione perfetta al sottoproblema $n-k$ ma ci manca la soluzione ottima di $k$, infatti:
+$S^\#(n) = S^*(k) + S^*(n-k)$, quindi abbiamo che $S^\#(n)$ è la soluzione ottima al problema perché è composta da soluzioni ottime degli altri sottoproblemi
+Quindi: $S^*(n)≤S^\#(n)$ 
+
+**Fase 2**
+Definiamo una funzione ricorsiva per il calcolo della soluzione ottima 
+$$
+r(i) = 
+\begin{cases} 
+0 & \text{se } i = 0 \\
+\displaystyle \max_{1 \le k \le i} \left( r(k) + r(i-k) \right) & \text{se } i \ge 1 
+\end{cases}
+$$
+Dove $i$ è la lunghezza della barra e $k$ è il punto in cui taglio la barra
+Questa funzione max calcola i valori di $k$ da 1 fino ad $i$ e poi sceglie il massimo (in pratica calcola la formula per ognuno, e alla fine tiene solo il risultato più grande, ricordo che $k$ è dove la barra viene tagliata, quindi è come se provasse a tagliare in tutti i modi possibili e poi tiene solo il taglio che restituisce il ricavo massimo)
+
+**Fase 3**
+Come dice la fase 3 dobbiamo costruire una procedura bottom-up per il calcolo della soluzione ottima
+Dato che si ripetono gli stessi sottoproblemi (come dice la prog. dinamica) usiamo un array per memorizzare il risultato di questi sottoproblemi in modo da risolverli una volta sola
+Andrò spiegare nel dettaglio ogni riga della funzione
+
+Abbiamo 2 array:
+`R[n]` -> qui andremo a mettere i risultati dei problemi già esaminati
+`P[i]` -> questo array contiene il ricavo in base alla lunghezza
+
+1) `Rod-cut(n)`
+2) 	`if n = 0 then return 0`
+3) 	`for i = 1 to n do`
+4)		   `m = P[i]`
+5)		   `for k = 1 to i - 1 do`
+6)			`if R[k] + R[i-k] > m then`
+7)				`m = R[k] + R[i-k]`
+8)		   `R[i] = m`
+
+*riga 1* -> alla funzione passo la lunghezza della sbarra ($n$)
+*riga 2* -> questo è il caso base in cui la lunghezza è 0
+*riga 3* -> è il ciclo principale che gestisce la funzione in maniera bottom-up, infatti parte dal basso (1) fino alla lunghezza della sbarra ($n$)
+*riga 4* -> qui si inizializza m (che è il massimo provvisorio) con il prezzo della barra di lunghezza i, ovvero il prezzo della barra senza essere tagliata (che comunque potrebbe essere la soluzione ottimale)
+*riga 5* -> questo ciclo identifica tutte le possibili posizioni in cui tagliare la barra (parte da 1 e si ferma a $i -1$, perché i sarebbe la barra non tagliata, che abbiamo già tenuto in considerazione nella riga precedente)
+*riga 6* -> qui ci chiediamo: la somma dei valori di questi prezzi (`R[k] + R[i-k]`) è maggiore di m? Se si allora questa somma diventerà il mio nuovo massimo, e ricomincia il ciclo, ogni volta che la condizione nell'if è vera aggiornerà il nuovo massimo
+*riga 7* -> aggiorna il massimo
+*riga 8* -> finito il ciclo m conterrà il valore massimo per quella lunghezza della barra, il risultato viene salvato in R alla lunghezza i
+
+**Fase 4**
+Costruzione di una soluzione ottima
+Useremo praticamente la funzione del passo precedente a cui aggiungiamo un array $k$ per segnare dove abbiamo tagliato la sbarra in corrispondenza del ricavo massimo (prima trovavamo solo il ricavo massimo) e creeremo una funzione print
+
+ `Rod-cut(n)`
+     `k = newArray(n)`
+	 `if n = 0 then return 0`
+	 `for i = 1 to n do`
+		`m = P[i]`
+	    `k[i] = i`
+		`for k = 1 to i - 1 do`
+			`if R[k] + R[i-k] > m then`
+				`m = R[k] + R[i-k]`
+				`k[i] = k`
+		`R[i] = m`
+
+Le uniche aggiunge sono appunto questo array che salva in posizione $i$(la lunghezza della barra) il punto $k$ in cui è stata tagliata
+
+`print-cut(n,k)`
+	`if k[n] = n then`
+		`print(n)`
+	`else`
+		`print-cut(k[n],k)`
+		`print-cut(n-k[n],k)`
+

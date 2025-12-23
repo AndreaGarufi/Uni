@@ -56,30 +56,27 @@ void draw(){
 
 
 
-/*float rotAngle = 10;  //palla che gira e schiarisce mentre gira
+ //palla che gira e schiarisce mentre gira
+/*float rotAngle =  10;
 
 void setup(){
   size(600,600);
-  frameRate(10);
+  frameRate(60);
 }
 
-
 void draw(){
-
-fill(255,50);
-rect(0,0,width,height);
-
-translate(width/2,height/2);
-rotate(radians(rotAngle));
-noStroke();
-fill(255,0,0);
-ellipse(255,0,20,20);
-rotAngle = rotAngle + 20;
-
+    fill(255,50);
+    rect(0,0,width, height);
+    translate(width/2,height/2);
+    rotate(radians(rotAngle));
+    noStroke();
+    fill(255,0,0);
+    ellipse(250,0,20,20);
+    rotAngle+=20;
 }*/
 
-
-/*int a1 = 0;  //quadrati che girano indipendentemente
+/*
+int a1 = 0;  //quadrati che girano indipendentemente
 int a2 = 0;
 
 void setup(){
