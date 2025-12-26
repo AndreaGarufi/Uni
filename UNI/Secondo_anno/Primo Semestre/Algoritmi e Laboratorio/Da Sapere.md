@@ -639,7 +639,7 @@ Il processo di costruzione di un algoritmo di programmazione dinamica può esser
 4) Opzionale - costruzione di una soluzione ottima
 
 Vediamo dei problemi di ottimizzazione:
-**Problema del rod-cut**
+###### **Problema del rod-cut**
 Abbiamo un' azienda che acquista barre di acciaio e le taglia in porzioni per poi rivenderle, si vuole sapere qual è il taglio ottimale per una barra di lunghezza $i$ in modo da massimizzarne il ricavo:
 ![[Pasted image 20251223102236.png|600]]
 Ad esempio qual è il taglio ottimale per una barra lunga 4?
@@ -726,3 +726,32 @@ Le uniche aggiunge sono appunto questo array che salva in posizione $i$(la lungh
 		`print-cut(k[n],k)`
 		`print-cut(n-k[n],k)`
 
+
+###### **Problema della moltiplicazione tra matrici**
+In algebra due matrici si possono moltiplicare se il numero di colonne della prima è uguale al numero di righe della seconda e la matrice risultante avrà come righe il numero di righe della prima e come colonne il numero di colonne della seconda.
+![[Pasted image 20251226125125.png|500]]
+
+Pensiamo quindi ad una funzione che moltiplichi 2 matrici:
+1) `matrix-multiply(A,B,p,q,r)`
+2)     `C = newMatrix(p,r)`
+3)     `for i = 1 to p do`
+4)           `for j = 1 to r do`
+5)                 `C[i,j] = 0`
+6)                 `For k = 1 to q do`
+7)                     `C[i,j] = C[i,j] + A[i,k]xB[k,j]`
+8)     `return C`
+
+Questa funzione non tiene conto della *parentesizzazione*, quindi funziona ma è poco efficiente
+Il numero totale di operazioni svolte durante una moltiplicazione tra matrici è dato da: p x q x r 
+ovvero righe della prima(p), colonne della prima e righe della seconda(q) e colonne della seconda(r)
+
+**Cosa è la parentesizzazione?**
+Le matrici godono della proprietà associativa, quindi in sostanza: cambiando l'ordine delle moltiplicazioni il risultato finale non cambia, ma cambia il numero di operazioni che facciamo per moltiplicarle, ad esempio:
+![[Pasted image 20251226130222.png|600]]
+
+Come possiamo vedere il numero di operazioni è significativamente diverso tra i 2 modi di moltiplicare, possiamo perciò dire che la parentesizzazione è il modo di aggregare le moltiplicazioni. A noi ovviamente interessa quella che ci fa fare meno moltiplicazioni
+
+**Fase 1**
+![[Pasted image 20251226132307.png]]
+
+**Fase 2**
