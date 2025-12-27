@@ -20,30 +20,6 @@
               "icon": "lucide-file",
               "title": "Da Sapere"
             }
-          },
-          {
-            "id": "545beafd8b18fc02",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/12 - 21 novembre 2025.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "12 - 21 novembre 2025"
-            }
-          },
-          {
-            "id": "3a178d5b02b233b3",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Introduzione Agli Algoritmi_ (Z-Library)"
-            }
           }
         ]
       }
@@ -207,29 +183,29 @@
   },
   "active": "8babb9e606c68d71",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/13 - 26 novembre 2025.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Lezione 9 - Programmazione dinamica e algoritmi golosi.md",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/12 - 21 novembre 2025.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/11 19 novembre.pdf",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251227121638.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251227120331.png",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/10 - 14 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251226132307.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251226131318.png",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/12 - 21 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251226130222.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251226125125.png",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/11 19 novembre.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251223102236.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/9 Lez 10 - Operatori locali e Convoluzione 2025-26.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/10 - 14 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220225517.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220225258.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220224716.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220222745.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220203801.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220203731.png",
     "conflict-files-obsidian-git.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione4/sketch.properties",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/yellowSquare.pde",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/redSquare.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/classi.pde",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "Project ideas.md",
     "Cose da fare.md",
@@ -251,7 +227,6 @@
     "Primo_anno/Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
     "Secondo_anno/Primo Semestre/Problemi esami.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md"
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md"
   ]
 }

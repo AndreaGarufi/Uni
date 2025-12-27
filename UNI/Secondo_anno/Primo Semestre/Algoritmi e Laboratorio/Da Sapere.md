@@ -652,7 +652,7 @@ Ad esempio qual è il taglio ottimale per una barra lunga 4?
 Chiaramente la soluzione ottimale per il nostro problema è la seconda opzione che fa ricavare 10
 
 Cerchiamo di risolverlo seguendo le 4 fasi della programmazione dinamica:
-**Fase 1**
+**Fase 1** -Capire se ha sottostruttura ottima-
 Strutturazione, il problema gode della sottostruttura ottima?
 Possiamo dire che il problema $P(n)$ ha soluzione $S(n)$, la lunghezza totale della barra è $n$, possiamo quindi suddividere il problema in più sottoproblemi più piccoli, infatti la barra viene tagliata a lunghezza $k$ avremo cosi la barra divisa in 2 una di lunghezza $k$ e il resto sarà il totale $n$ meno l'altra parte ovvero $k$, quindi il problema diventa: $P(n) = P(k) +P(n-k)$ 
 con $k<n$, $n-k < n$ e $1≤k≤n$ 
@@ -662,7 +662,7 @@ Noi sappiamo che una soluzione $S(n) = S(k) + S(n-k)$, avremo che: $S^*(n) = S(k
 $S^\#(n) = S^*(k) + S^*(n-k)$, quindi abbiamo che $S^\#(n)$ è la soluzione ottima al problema perché è composta da soluzioni ottime degli altri sottoproblemi
 Quindi: $S^*(n)≤S^\#(n)$ 
 
-**Fase 2**
+**Fase 2** -Definizione funzione ricorsiva-
 Definiamo una funzione ricorsiva per il calcolo della soluzione ottima 
 $$
 r(i) = 
@@ -674,7 +674,7 @@ $$
 Dove $i$ è la lunghezza della barra e $k$ è il punto in cui taglio la barra
 Questa funzione max calcola i valori di $k$ da 1 fino ad $i$ e poi sceglie il massimo (in pratica calcola la formula per ognuno, e alla fine tiene solo il risultato più grande, ricordo che $k$ è dove la barra viene tagliata, quindi è come se provasse a tagliare in tutti i modi possibili e poi tiene solo il taglio che restituisce il ricavo massimo)
 
-**Fase 3**
+**Fase 3** -Definizione di una procedura per il calcolo della soluzione ottima-
 Come dice la fase 3 dobbiamo costruire una procedura bottom-up per il calcolo della soluzione ottima
 Dato che si ripetono gli stessi sottoproblemi (come dice la prog. dinamica) usiamo un array per memorizzare il risultato di questi sottoproblemi in modo da risolverli una volta sola
 Andrò spiegare nel dettaglio ogni riga della funzione
@@ -701,7 +701,9 @@ Abbiamo 2 array:
 *riga 7* -> aggiorna il massimo
 *riga 8* -> finito il ciclo m conterrà il valore massimo per quella lunghezza della barra, il risultato viene salvato in R alla lunghezza i
 
-**Fase 4**
+Questa procedura ha complessità $O(n^2)$
+
+**Fase 4** -Costruzione di una soluzione ottima-
 Costruzione di una soluzione ottima
 Useremo praticamente la funzione del passo precedente a cui aggiungiamo un array $k$ per segnare dove abbiamo tagliato la sbarra in corrispondenza del ricavo massimo (prima trovavamo solo il ricavo massimo) e creeremo una funzione print
 
@@ -751,7 +753,116 @@ Le matrici godono della proprietà associativa, quindi in sostanza: cambiando l'
 
 Come possiamo vedere il numero di operazioni è significativamente diverso tra i 2 modi di moltiplicare, possiamo perciò dire che la parentesizzazione è il modo di aggregare le moltiplicazioni. A noi ovviamente interessa quella che ci fa fare meno moltiplicazioni
 
-**Fase 1**
+**Fase 1** -Capire se ha sottostruttura ottima-
 ![[Pasted image 20251226132307.png]]
 
-**Fase 2**
+**Fase 2** -Definizione funzione ricorsiva-
+$$
+S_{1,n} = 
+\begin{cases} 
+   ∅ & \text{se } n = 1 \\
+   \min\limits_{1 \le k < n} (S_{1,k} + S_{k+1,n} + P_0 P_k P_n) & \text{se } n > 1
+\end{cases}
+$$
+In sostanza il caso base restituisce insieme vuoto perché se la matrice è una non fa la moltiplicazione mentre se le matrici sono più di una allora: per ogni k che va da $1$ fino a $n-1$ calcola la somma della soluzione $S_{1,k}$ e $S_{k+1,n}$ e somma anche $P_0 P_k P_n$ che è il numero di moltiplicazioni che si fanno, di tutti questi calcoli sceglie il minimo (in poche parole controlla ogni singola *parentesizzazione* che si può fare, spostando la k a mano a mano, e sceglie il minimo tra tutti i calcoli fatti, ovvero la *parentesizzazione* migliore)
+Generalizzando:
+$$
+S_{i,j} = 
+\begin{cases} 
+   ∅ & \text{se } i = j \\
+   \min\limits_{i \le k < j} (S_{i,k} + S_{k+1,j} + p_{i-1} p_k p_j) & \text{se } i < j
+\end{cases}
+$$
+
+**Fase 3** -Definizione di una procedura per il calcolo della soluzione ottima-
+Il problema grande se risolto con una procedura ricorsiva pura (divide et impera) porterebbe ad avere molti sottoproblemi uguali, quindi devo usare la memorizzazione, non attraverso un normale array ma attraverso una matrice. Utilizziamo un approccio bottom-up
+Data una matrice S:
+![[Pasted image 20251227120331.png|500]]
+- Le righe $i$ indicano l'inizio della catena di matrici che prendo in considerazione, mentre le colonne $j$ indicano la fine
+- $S[i,j]$ è il costo minimo per moltiplicare le matrici da $A_i$ fino ad $A_j$ 
+  Esempio: la cella alla riga 2 e colonna 5 ($S[2,5]$), lì dentro scriveremo il costo minimo per fare $A_2 \cdot A_3 \cdot A_4 \cdot A_5$
+- La diagonale principale è composta da 0 perché la catena è formata da una sola matrice e quindi il costo è 0
+- Pattern di risoluzione: la matrice non si riempie a caso ma dato che prende in considerazione catene che vanno dalla matrice $i$ che ha indice più piccolo della matrice $j$ che ha indice più grande ($i<j$) la matrice si riempirà solo sopra la diagonale e si riempirà seguendo la lunghezza $l$ della catena:
+  1) $l = 1$ (Lunghezza 1): Sono le singole matrici ($A_1, A_2...$). Costo 0. È la diagonale principale che abbiamo già riempito.
+  2) $l = 2$ (Lunghezza 2): Ora calcoliamo il costo per moltiplicare coppie di matrici vicine: ($A_1A_2$), ($A_2A_3$), ($A_3A_4$)... Questi valori vanno nella diagonale subito sopra quella degli zeri.
+  3) $l = 3$ (Lunghezza 3): Ora calcoliamo catene di 3 matrici: ($A_1A_2A_3$), ($A_2A_3A_4$)... Per calcolare il costo di $A_1 \dots A_3$, l'algoritmo guarda i calcoli fatti al passo precedente (lunghezza 2) che sono già scritti nella tabella. Non deve ricalcolarli
+  4) ...e così via fino a $l = n$
+- La soluzione ottima è quella posta nell'ultima casella
+
+$$
+\textbf{Pattern di risoluzione\,\,\,\,} \\
+\begin{array}{l l l l l l l l}
+\mathbf{1} \rightarrow & A_{1,1} & A_{2,2} & A_{3,3} & A_{4,4} & A_{5,5} & A_{6,6} & A_{7,7} \\
+\mathbf{2} \rightarrow & A_{1,2} & A_{2,3} & A_{3,4} & A_{4,5} & A_{5,6} & A_{6,7} & \\
+\mathbf{3} \rightarrow & A_{1,3} & A_{2,4} & A_{3,5} & A_{4,6} & A_{5,7} & & \\
+\mathbf{4} \rightarrow & A_{1,4} & A_{2,5} & A_{3,6} & A_{4,7} & & & \\
+\mathbf{5} \rightarrow & A_{1,5} & A_{2,6} & A_{3,7} & & & & \\
+\mathbf{6} \rightarrow & A_{1,6} & A_{2,7} & & & & & \\
+\mathbf{7} \rightarrow & A_{1,7} & & & & & & \\
+\end{array}
+$$
+
+Inizia da 1 e finisce a 7 con la soluzione ottima
+
+Scriviamo la procedura e descriverò ogni riga
+1) `matrix-chain-order(p,n)`               (mco)
+2)     `S = newMatrix(n,n)`
+3)     `for i = 1 to n do S[i,i] = 0`
+4)     `for l = 2 to n do`
+5)          `for i = 1 to n-l-1 do`
+6)              `j = i + l - 1`
+7)              `S[i,j] = +∞`
+8)              `for k = 1 to j-1 do`
+9)                   `if S[i,j] > S[i,k] + S[k+1,j] + p[i-1]* p[k]* p[j]  then`
+10)                       `S[i,j] = S[i,k] + S[k+1,j] + p[i-1]* p[k]* p[j]`
+11)   `return S[1,n]`
+
+*riga 1* -> dichiarazione della funzione che prende in input un vettore p con le dimensioni delle matrici e il numero di matrici (n)
+*riga 2* -> creazione della matrice che contiene le soluzioni (S)
+*riga 3* -> inizializza a 0 la diagonale della matrice S che indica il costo nullo
+*riga 4* -> questo for esterno indica la lunghezza (risolve prima tutte le catene di 2 matrici poi quelle da 3, 4, 5 ecc...)
+*riga 5* -> questo for indica la $i$ da dove si parte ovvero l'inizio della catena
+*riga 6* -> calcola l'indice di fine della catena
+*riga 7* -> inizializziamo a +∞, perché dobbiamo trovare un valore molto basse quindi lo inizializziamo ad un numero altissimo così che non possa essere scambiato per il minimo
+*riga 8* -> questo for è quello che parentesizza la catena, quindi prova tutti i possibili k, ad esempio per $A_1 \dots A_4$, prova a tagliare dopo la prima matrice ($A_1 | A_2 A_3 A_4$), dopo la seconda       ($A_1 A_2 | A_3 A_4$)
+*riga 9* -> controlla se il taglio effettuato al punto k costo meno di quello trovato fino a quel momento, è composto da 3 parti: `S[i,k]`: Costo ottimale della parte sinistra (già calcolato e salvato in memoria), `S[k+1,j]`: Costo ottimale della parte destra (già calcolato e salvato), 
+`p[i-1]*p[k]*p[j]`: Costo per moltiplicare le due matrici risultanti
+*riga 10* -> se il nuovo valore è più piccolo del precedente aggiorna il nuovo minimo
+*riga 11* -> ritorna il minimo assoluto (che è soluzione ottima e si troverà nella cella all'angolo in alto a destra)
+
+Questa procedura ha complessità $O(n^3)$
+
+Questo algoritmo calcola il *costo minimo della soluzione* ma non abbiamo modo di sapere quale sia l'ordine effettivo delle matrici da moltiplicare. 
+
+**Fase 4** -Costruzione di una soluzione ottima-
+Molti algoritmi richiedono di trovare il valore della soluzione ottima, quindi ci potremmo fermare al terzo step, in questo caso però abbiamo bisogno anche ricostruire la parentesizzazione della soluzione ottima in modo da poter effettuare la vera e propria moltiplicazione, da questa esigenza nasce lo step successivo, solitamente opzionale.
+
+ `matrix-chain-order(p,n)`               (mco)
+     `S = newMatrix(n,n)`
+     `D = newMatrix(n,n)`
+     `for i = 1 to n do S[i,i] = 0`
+     `for l = 2 to n do`
+          `for i = 1 to n-l-1 do`
+              `j = i + l - 1`
+              `S[i,j] = +∞`
+              `for k = 1 to j-1 do`
+                   `if S[i,j] > S[i,k] + S[k+1,j] + p[i-1]* p[k]* p[j]  then`
+                     `S[i,j] = S[i,k] + S[k+1,j] + p[i-1]* p[k]* p[j]`
+                     `D[i,j] = k`
+    `return S[1,n]`
+
+
+`print-chain(D,i,j)`
+	`if i = j then`
+		`print(A_i)`
+	`else` 
+		`k = D[i,j]`
+		`print "("`
+		`print-chain(D,i,k)`
+		`print-chain(D,k+1,j)`
+		`print ")"`
+
+Mentre l'algoritmo che è rimasto essenzialmente lo stesso si occupa di esplorare e trovare tutti i possibili modi di parentesizzare la catena, la matrice $D[i,j]$ salva esattamente quale indice $k$ ha prodotto la parentesizzazione migliore. La funzione print-chain serve per stampare la parentesizzazione migliore in base ai parametri passati.
+
+###### **Problema della selezione di attività**
+Contesto: Una risorsa mutualmente esclusiva come viene gestita in maniera efficiente quando viene usata da più utenti?
