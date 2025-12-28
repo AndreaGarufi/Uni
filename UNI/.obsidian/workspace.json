@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Da Sapere"
             }
+          },
+          {
+            "id": "6ed72aa4ff27791f",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/14 28 novembre.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "14 28 novembre"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -181,10 +194,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8babb9e606c68d71",
+  "active": "6ed72aa4ff27791f",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/13 - 26 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/14 28 novembre.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/13 - 26 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251227121638.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251228120714.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
@@ -205,7 +219,6 @@
     "conflict-files-obsidian-git.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione4/sketch.properties",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/yellowSquare.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/redSquare.pde",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "Project ideas.md",
     "Cose da fare.md",

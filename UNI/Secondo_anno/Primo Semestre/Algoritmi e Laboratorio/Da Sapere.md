@@ -864,3 +864,16 @@ Molti algoritmi richiedono di trovare il valore della soluzione ottima, quindi c
 
 Mentre l'algoritmo che è rimasto essenzialmente lo stesso si occupa di esplorare e trovare tutti i possibili modi di parentesizzare la catena, la matrice $D[i,j]$ salva esattamente quale indice $k$ ha prodotto la parentesizzazione migliore. La funzione print-chain serve per stampare la parentesizzazione migliore in base ai parametri passati.
 
+
+###### **Problema della distanza di editing tra 2 stringhe**
+Questo problema analizza la distanza di editing tra 2 stringhe, ovvero la "differenza" tra le 2, ad esempio casa e chiesa hanno una distanza di editing di 4 perché la differenza è "hie" + "a" 
+In una stringa possiamo apportare 3 operazioni:
+1) Inserimento di un carattere -> casa -> casta -> distanza pari a 1
+2) Cancellazione di un carattere -> casta -> casa -> distanza pari a 1
+3) Sostituzione di un carattere -> casta -> vasta -> distanza pari a 1
+Esistono altre operazioni come lo swap, l'inversione ecc... ma queste 3 sono le più importanti
+
+**Come passo da casa a chiese?**
+casa-> c*h*asa -> ch*e*sa -> ch*i*esa -> chies*e*
+Ho effettuato  3 inserimenti e 1 sostituzione
+Avrei potuto anche cancellare e riscrivere la parola ma avrebbe preso più tempo, e infatti quando la stringa è piccola posso ignorare l'efficienza ma quando la stringa diventa molto grande devo ottimizzare
