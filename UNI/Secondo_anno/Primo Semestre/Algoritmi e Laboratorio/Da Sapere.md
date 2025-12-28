@@ -864,5 +864,3 @@ Molti algoritmi richiedono di trovare il valore della soluzione ottima, quindi c
 
 Mentre l'algoritmo che è rimasto essenzialmente lo stesso si occupa di esplorare e trovare tutti i possibili modi di parentesizzare la catena, la matrice $D[i,j]$ salva esattamente quale indice $k$ ha prodotto la parentesizzazione migliore. La funzione print-chain serve per stampare la parentesizzazione migliore in base ai parametri passati.
 
-###### **Problema della selezione di attività**
-Contesto: Una risorsa mutualmente esclusiva come viene gestita in maniera efficiente quando viene usata da più utenti?
