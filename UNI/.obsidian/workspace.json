@@ -33,8 +33,7 @@
               "title": "14 28 novembre"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -194,10 +193,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ed72aa4ff27791f",
+  "active": "8babb9e606c68d71",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/14 28 novembre.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251229220330.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251229163356.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/13 - 26 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251227121638.png",
@@ -215,7 +215,6 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251223102236.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/9 Lez 10 - Operatori locali e Convoluzione 2025-26.pdf",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251220225517.png",
     "conflict-files-obsidian-git.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione4/sketch.properties",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/classi/yellowSquare.pde",

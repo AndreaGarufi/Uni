@@ -923,18 +923,18 @@ Useremo una matrice per rappresentare la distanza di editing in cui ogni numero 
 
 
 1) `EDT(x, y, n, m)`
-2)  `ED = new matrix(n + 1, m + 1)`
-3)    `for i = 0 to n do`
-4)        `ED[i, 0] = i`
-5)    `for j = 1 to m do`
-6)        `ED[0, j] = j`
-7)    `for i = 1 to n do`
-8)       `for j = 1 to m do`
-9)            `if (x[i] == y[j]) then`
-10)                `ED[i, j] = ED[i - 1, j - 1]`
-11)            `else`
-12)                `ED[i, j] = min(ED[i, j - 1], ED[i - 1, j], ED[i - 1, j - 1]) + 1`
-13)   `return ED[n, m]`
+2)      `ED = new matrix(n + 1, m + 1)`
+3)      `for i = 0 to n do`
+4)           `ED[i, 0] = i`
+5)      `for j = 1 to m do`
+6)           `ED[0, j] = j`
+7)      `for i = 1 to n do`
+8)           `for j = 1 to m do`
+9)                `if (x[i] == y[j]) then`
+10)                    `ED[i, j] = ED[i - 1, j - 1]`
+11)              `else`
+12)                    `ED[i, j] = min(ED[i, j - 1], ED[i - 1, j], ED[i - 1, j - 1]) + 1`
+13)     `return ED[n, m]`
 
 *riga 1* -> Definizione della funzione che prende in input le stringhe x e y con la loro dimensione
 *riga 2* -> crea una matrice di dimensione n+1 e m+1 ($j$ sono le colonne $i$ le righe)
@@ -983,3 +983,41 @@ LCS(i, j) = \begin{cases}
 \end{cases}
 $$
 **Fase 3** -Costruzione di una procedura per il calcolo dell *longest common substring*-
+Scrivo una procedura ottimizzata che usa solo 2 array anziché una matrice
+1) `LCS(X,Y,n,m)`
+2)      `LCS_i-1 = newArray(m)`
+3)      `LCS_i = newArray(n)`
+4)      `for j = 0 to m do` 
+5)           `LCS_i-1[j] = 0`
+6)           `for i = 1 to n do`
+7)                `LCS_i[0] = 0`
+8)                `for j = 1 to m do`
+9)                     `LCS_i[j] = ∅`
+10)                   `if X[i] = Y[j] then`
+11)                       `LCS_i[j] = LCS_i-1[j-1]+1`
+12)                   `if M < LCS_i[j] then`
+13)                       `M = LCS_i[j]`
+14)     `LCS_i-1 = LCS_i`
+
+*riga 1* -> dichiarazione della funzione che prende in input le 2 stringhe e le dimensioni
+*riga 2-3* -> dato che è una versione ottimizzata non creo una matrice ma uso solo 2 array per memorizzare la riga precedente (i-1) e la riga corrente
+*riga 4-5* -> inizializza l'array della riga precedente a 0 perché prima di iniziare la sottostringa comune è sempre vuota
+*riga 6* -> inizia un ciclo che scorre la stringa X dall'inizio alla fine
+*riga 7* -> gestisce il caso limite in cui non si può avere una corrispondenza prima del primo carattere
+*riga 8* -> per ogni carattere della stringa X scorre tutta la stringa Y
+*riga 9* -> inizializza a 0 (o insieme vuoto) perché a differenza delle "sottosequenze", nelle "sottostringhe" se due caratteri non sono uguali, la catena si spezza e la conta deve ripartire da zero
+*riga 10-11* -> controlla se il carattere è uguale tra X e Y e se si allora prende il valore della riga precedente gli aggiunge 1 e lo mette come valore della riga corrente (perché ha trovato una corrispondenza)
+*riga 12-13* -> confronta il valore di M (massima sequenza trovata) con sostanzialmente la nuova sequenza che ha appena trovato e se è maggiore di M, M viene aggiornato come nuovo massimo
+*riga 14* -> una volta che è stata controllata la riga "corrente" questa diventerà la riga precedente
+
+Vediamo un esempio:
+![[Pasted image 20251229220330.png]]
+La sottostringa andrà a formarsi sulla diagonale, ogni volta che trova un carattere corrispondente prende il valore della diagonale nella cella precedente e gli somma 1 (perché ha appena trovato un carattere corrispondente), la matrice viene analizzata scorrendo le colonne sulle righe in questo modo: inizia dalla *G* e confronta con ogni carattere di *ATGCCAT*, G-A scrive 0, G-T scrive 0, G-G scrive 1 perché il carattere combacia poi scorre fino alla fine senza trovare altri caratteri uguali, poi passa all'altra G che fa la stessa cosa, poi passa alla *C* che scrive sempre 0 fin quando non trova la prima C dell'altra stringa, quindi prende il valore di prima dalla diagonale (1) e gli somma 1 cosi diventa 2, abbiamo appena trovato la sottostringa più lunga fino ad adesso, poi continua con gli altri caratteri finché non finisce.
+
+
+Adesso vediamone una variante chiamata *longest common subsequence*
+**Longest common subsequence** 
+La differenza con le sottostringhe è che possono includere dei caratteri nel mezzo:
+X = A*C*GA*AT*
+Y = C*CAT*AG
+
