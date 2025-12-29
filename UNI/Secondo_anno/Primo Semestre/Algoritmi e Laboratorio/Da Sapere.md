@@ -877,3 +877,109 @@ Esistono altre operazioni come lo swap, l'inversione ecc... ma queste 3 sono le 
 casa-> c*h*asa -> ch*e*sa -> ch*i*esa -> chies*e*
 Ho effettuato  3 inserimenti e 1 sostituzione
 Avrei potuto anche cancellare e riscrivere la parola ma avrebbe preso più tempo, e infatti quando la stringa è piccola posso ignorare l'efficienza ma quando la stringa diventa molto grande devo ottimizzare
+
+**Fase 1** -Sottostruttura ottima-
+Vogliamo trasformare la stringa X in Y e sappiamo che:
+$X_i = X_1,X_2,X_3 ...X_i$ e $Y_i = Y_1,Y_2,Y_3 ...Y_j$
+$|X|=n$ , $|Y|=m$ 
+sappiamo anche che: $X_i=X_{i-1}X_i$ e la stessa cosa per $Y$.
+Per capire se il problema gode della sottostruttura ottima dobbiamo analizzare 2 casi:
+1) $X_i = Y_j$ -> $X_{i-1}Y_{j-1}$
+   Se l'ultimo carattere di X e di Y è uguale il problema si riduce di 1
+2) $X_i \neq Y_j$ 
+   In questo caso devo scegliere quale delle 3 operazioni fare (inserimento, cancellazione, sostituzione):
+   - ED($X_{i-1},Y_{j-1}$)+sostituzione di $X_i$ con $Y_j$
+   - ED($X_{i-1},Y_{j}$)+cancellazione di $X_i$
+   - ED($X_{i},Y_{j-1}$)+inserimento di $Y_j$ alla fine di $X$
+     ED sta per una funzione che calcola la distanza di editing
+
+**Fase 2** -Definizione funzione ricorsiva-
+$$
+ED(i, j) = \begin{cases}
+   % Casi Base
+   i & \text{se } j = 0 \\
+   j & \text{se } i = 0
+   \quad \left\} \begin{aligned} &\textbf{CASI BASE} \\[-2pt] &(\text{quando 1 delle 2 stringhe è vuota}) \end{aligned} \right. \\[2em]
+
+   % Match
+   ED(i-1, j-1) & \text{se } X[i] = Y[j] \quad (\text{l'ultimo carattere è uguale}) \\[2em]
+
+   % Mismatch
+   \min \underbrace{\left(
+      \underbrace{ED(i-1, j)}_{\text{cancellazione}},
+      \underbrace{ED(i, j-1)}_{\text{inserimento}},
+      \underbrace{ED(i-1, j-1)}_{\text{sostituzione}}
+   \right)}_{\text{scelgo il costo minimo tra le 3 operazioni}} + 1 & \text{se } X[i] \neq Y[j]
+\end{cases}
+$$
+
+$i$ e $j$ nei casi base indicano una delle 2 stringhe vuote, quindi se devo trasformare la stringa $i$ nella stringa $j$ o viceversa dovrò fare $i$ operazioni o $j$ operazioni (per ricopiarla)
+
+
+Analizzando una possibile funzione ricorsiva pura (top-down) ci accorgiamo che ci sono vari sottoproblemi che si ripetono, perciò usare questo approccio è inefficiente
+
+**Fase 3** -Definizione di una procedura per il calcolo della soluzione ottima-
+Useremo una matrice per rappresentare la distanza di editing in cui ogni numero rappresenta la distanza di editing tra le 2 stringhe
+
+
+1) `EDT(x, y, n, m)`
+2)  `ED = new matrix(n + 1, m + 1)`
+3)    `for i = 0 to n do`
+4)        `ED[i, 0] = i`
+5)    `for j = 1 to m do`
+6)        `ED[0, j] = j`
+7)    `for i = 1 to n do`
+8)       `for j = 1 to m do`
+9)            `if (x[i] == y[j]) then`
+10)                `ED[i, j] = ED[i - 1, j - 1]`
+11)            `else`
+12)                `ED[i, j] = min(ED[i, j - 1], ED[i - 1, j], ED[i - 1, j - 1]) + 1`
+13)   `return ED[n, m]`
+
+*riga 1* -> Definizione della funzione che prende in input le stringhe x e y con la loro dimensione
+*riga 2* -> crea una matrice di dimensione n+1 e m+1 ($j$ sono le colonne $i$ le righe)
+*riga 3-6* -> rappresentano i casi base in cui una o tutte e 2 le stringhe sono vuote
+*riga 7-8* -> questi 2 cicli for servono a scorrere la matrice
+*riga 9* -> l'if controlla se siamo nel caso in cui i 2 ultimi caratteri siano uguali (secondo caso nella funzione ricorsiva) e...
+*riga 10* -> se l'if è vero copia il numero della casella precedente (diagonale) in quella corrente perché i 2 caratteri nelle stringhe sono uguali quindi ricopio la distanza di editing perché non è cambiata
+*riga 11-12* -> altrimenti (se i 2 caratteri sono diversi) all'interno della cella corrente mette il numero minimo tra le celle vicine che rappresentano inserimento cancellazione e sostituzione, al numero nella cella aggiungo 1 perché ho fatto un operazione in più
+*riga 13* -> restituisce il numero scritto nell'ultima casella in basso a sinistra che rappresenta la soluzione ottima
+
+La complessità temporale e di memoria di questa funzione è $O(n\,\,x\,\,m)$
+
+Esempio con la matrice fatta a lezione:
+![[Pasted image 20251229163356.png|400]]
+
+**Fase 4** -Costruzione di una soluzione ottima-
+`Print-EDT(ed, x, y, n, m)`
+    `i = n`
+    `j = m`
+    `while (ed[i, j] > 0) do`
+        `if (x[i] == y[j]) then`
+            `i = i - 1`
+            `j = j - 1`
+        `else`
+            `e = min(ed[i, j - 1], ed[i - 1, j], ed[i - 1, j - 1])`
+            `if (e == ed[i, j - 1]) then`
+                `j = j - 1` -> stampiamo `ins(Y[j])`
+            `else if (e == ed[i - 1, j]) then`
+                `i = i - 1` -> stampiamo `canc(x[i])`
+            `else`
+                `i = i - 1` -> stampiamo `sost(x[i],y[j])`
+                `j = j - 1`
+
+
+###### **Trovare la sottostringa più lunga di tutte** (veloce)
+Questa è una sottostringa: X = a*gato*r Y = b*gato*p 
+**Fase 1** -Sottostruttura-
+Il problema gode di una sottostruttura ottima perché se i caratteri sono uguali è necessario ridurre pian piano l'indice del carattere in cui ci troviamo (LCS($x_{i-1},y_{j-1}$)+1)
+
+**Fase 2** -Definizione di una funzione ricorsiva-
+$$
+LCS(i, j) = \begin{cases}
+   0 & \text{se } i = 0\,\,\, oppure\,\,\, j = 0 \\
+   0 & \text{se } X[i] \neq Y[j] \\
+   LCS(i-1, j-1) + 1 & \text{se } X[i] = Y[j]
+\end{cases}
+$$
+**Fase 3** -Costruzione di una procedura per il calcolo dell *longest common substring*-
