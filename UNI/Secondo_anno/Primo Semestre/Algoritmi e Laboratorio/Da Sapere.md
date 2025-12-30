@@ -1020,4 +1020,21 @@ Adesso vediamone una variante chiamata *longest common subsequence*
 La differenza con le sottostringhe è che possono includere dei caratteri nel mezzo:
 X = A*C*GA*AT*
 Y = C*CAT*AG
+E' comunque un problema simile a quello della sottostringa infatti la funzione ricorsiva è simile:
+$$
+LCS(i, j) = 
+\begin{cases} 
+0 & \text{se } i = 0\,\,\, oppure\,\,\, j = 0 \\
+LCS(i-1, j-1) + 1 & \text{se } x[i] = y[j] \\
+\max(LCS(i-1, j), LCS(i, j-1)) & \text{se } x[i] \neq y[j]
+\end{cases}
+$$
+Scelgo quindi il max tra cancellazione e inserimento
 
+
+
+### **ALGORITMI GREEDY (GOLOSI)**
+Per alcuni problemi di ottimizzazione è uno spreco utilizzare la programmazione dinamica andando a fare le migliori scelte possibili, spesso conviene affidarsi ad algoritmi più semplici chiamati algoritmi golosi o greedy. Un algoritmo greedy fa sempre la scelta migliore in quel determinato momento ovvero fa una scelta *localmente ottima* nella speranza che essa porterà ad una *soluzione globalmente ottima*. Gli algoritmi golosi possono essere applicati ad una vasta quantità di problemi di ottimizzazione, ne vedremo alcuni:
+
+###### **Compressione di Huffman**
+Questo è un problema che riguarda la compressione dei dati all'interno di un file per far risultare il file con una dimensione minore.
