@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0a418fb96a8055b9",
+        "id": "e5653be46a693892",
         "type": "tabs",
         "children": [
           {
-            "id": "e42b26d71bfdab47",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "10 Lez 12 Fourier 2024-25"
-            }
-          },
-          {
-            "id": "e93632b8f79a4621",
+            "id": "a791edb470b65e8b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,8 +20,33 @@
               "icon": "lucide-file",
               "title": "9"
             }
+          },
+          {
+            "id": "d69256e42a603d04",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "10 Lez 12 Fourier 2024-25"
+            }
+          },
+          {
+            "id": "b5f3ca33104b9ffe",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "COMPLETO interazione-e-multimedia"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -193,10 +206,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e42b26d71bfdab47",
+  "active": "d69256e42a603d04",
   "lastOpenFiles": [
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9.md",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260102210941.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260102210911.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260102210854.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260102200054.png",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260102210825.png",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260102105149.png",
     "Senza nome.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260102104554.png",
@@ -209,17 +228,11 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251229163356.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/13 - 26 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251227121638.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251228120714.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Lezione 9 - Programmazione dinamica e algoritmi golosi.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/12 - 21 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/11 19 novembre.pdf",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251227120331.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/10 - 14 novembre 2025.pdf",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251226132307.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251226131318.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251226130222.png",
     "conflict-files-obsidian-git.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione4/sketch.properties",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "Project ideas.md",
     "Cose da fare.md",
