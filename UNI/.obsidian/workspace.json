@@ -4,45 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "4d23d619ac78d94a",
+        "id": "0a418fb96a8055b9",
         "type": "tabs",
         "children": [
           {
-            "id": "8babb9e606c68d71",
+            "id": "e42b26d71bfdab47",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Da Sapere"
-            }
-          },
-          {
-            "id": "e84ea2321f6a6ce3",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Introduzione Agli Algoritmi_ (Z-Library)"
-            }
-          },
-          {
-            "id": "6ed72aa4ff27791f",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/15 - 12 dicembre 2025.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "15 - 12 dicembre 2025"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -205,11 +177,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8babb9e606c68d71",
+  "active": "4371091dceb8cd7d",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/15 - 12 dicembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/15 - 12 dicembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/14 28 novembre.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251229220330.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20251229163356.png",
