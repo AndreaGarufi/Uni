@@ -33,8 +33,7 @@
               "title": "15 - 12 dicembre 2025"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -194,10 +193,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7230bdc5fc50e8e6",
+  "active": "b746a26ab1903fcf",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260104200826.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/15 - 12 dicembre 2025.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/1 Modello relazionale dei dati.md",
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
+    "Primo_anno/Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.pdf",
+    "Primo_anno/Primo Semestre/programmazione-1/Traduzione e linguaggi algoritmi.md",
+    "Primo_anno/Primo Semestre/programmazione-1/Variabili, Tipi su C.md",
+    "Primo_anno/Primo Semestre/programmazione-1/Matrice stringa tridimensionale.md",
+    "Primo_anno/Primo Semestre/programmazione-1/PUNTATORI (importante).md",
+    "Primo_anno/Primo Semestre/programmazione-1/Tips Algoritmi.md",
+    "Primo_anno/Primo Semestre/strutture-discrete/FileCondivisiTeams/01_Parte1.pdf",
+    "Primo_anno/Primo Semestre/programmazione-1/FileCondivisiTeams/0) Flowcharts ESERCIZI DA FARE.pdf",
+    "Primo_anno/Primo Semestre/programmazione-1/FileCondivisiTeams/1 bis) Algoritmi-e-Diagrammi-di-flusso.pdf",
+    "Primo_anno/Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260104163929.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/COMPLETO interazione-e-multimedia.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
@@ -215,11 +227,7 @@
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/9 Lez 10 - Operatori locali e Convoluzione 2025-26.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/14 28 novembre.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/13 - 26 novembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Lezione 9 - Programmazione dinamica e algoritmi golosi.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/12 - 21 novembre 2025.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/11 19 novembre.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/10 - 14 novembre 2025.pdf",
     "conflict-files-obsidian-git.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "Project ideas.md",
@@ -232,14 +240,6 @@
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/3 Algebra Relazione parte 2.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/1 Interpolazione_operazioniAffini_MSE_PSNR.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/3 Risoluzione.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
-    "Primo_anno/Primo Semestre/architettura-degli-elaboratori/Teoria/FileRielaborazioni/1 Introduzione e componenti PC.md",
-    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md"
+    "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/2 Algebra Relazionale parte 1.md"
   ]
 }

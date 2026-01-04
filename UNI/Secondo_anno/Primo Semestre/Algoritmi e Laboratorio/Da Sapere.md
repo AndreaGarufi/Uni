@@ -1089,9 +1089,15 @@ Per valutare l'albero usiamo questa funzione:
 $$b(t) = Σ_{c ∈ Σ}\,\, f(c) * d_t(c)$$
 Il valore di bontà **$b(t)$** è dato dalla **sommatoria**, per ogni carattere **$c$** appartenente all'alfabeto **$\Sigma$** del prodotto tra la **frequenza $f(c)$** del carattere e la **profondità nell'albero $d_t(c)$** (che sarebbe la lunghezza del codice del carattere)
 
-**Dobbiamo trovare una strategia che minimizza $b(t)$**
+**Dobbiamo trovare una strategia che minimizza $b(t)$ (algoritmo di Huffman)**
 Lo faremo ricorsivamente utilizzando una strategia greedy
-Ma come riduciamo in sottoproblemi? Cerchiamo di definire un caso base:
 
-Prendiamo 2 lettere del nostro alfabeto e le sostituisco con una:
+L'algoritmo di Huffman parte dalle foglie, quindi :
+- **Prende i due caratteri che appaiono meno volte** di tutti.
+- **Li unisce:** Li fonde insieme creando un nuovo nodo (il padre dei 2 caratteri) che pesa quanto la somma dei due.
+- **Li allontana:** Dato che li ha uniti subito, questi due caratteri finiranno nel punto più profondo dell'albero. Significa che avranno il codice più lungo.
+- **Ripete:** Ora considera il nuovo gruppo (padre e i 2 figli) come se fosse un singolo oggetto e ricomincia dal punto 2
+![[Pasted image 20260104200826.png|500]]
+Unisce C e D in H, C e D avranno codice più lungo rispetto ad H fa le stesse cose con gli altri caratteri, dato che unisce 2 caratteri in 1 l'albero finisce quando non ci sono più caratteri, e arriva alla root
+
 
