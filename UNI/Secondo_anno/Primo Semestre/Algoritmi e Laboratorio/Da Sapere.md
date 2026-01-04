@@ -1038,3 +1038,60 @@ Per alcuni problemi di ottimizzazione è uno spreco utilizzare la programmazione
 
 ###### **Compressione di Huffman**
 Questo è un problema che riguarda la compressione dei dati all'interno di un file per far risultare il file con una dimensione minore.
+
+Supponiamo di avere un testo T composto da 100 caratteri:
+Il nostro alfabeto $Σ$:
+- a = 20   -> numero di volte che si ripete il carattere
+- b = 7
+- c = 3
+- d = 10
+- e = 15
+- f = 1
+- g = 30
+- h = 4
+- i = 5
+- l = 5
+
+Supponiamo che in questa configurazione ogni carattere occupi 10 bit di spazio, quindi per il testo (100 caratteri) occuperà : 100 x 10 = 1000 bit, per testi piccoli non è un problema ma con testi molto lunghi lo spazio occupato diventa un problema
+
+La soluzione a questo potrebbe essere assegnare più bit ai caratteri meno frequenti e meno bit a quelli più frequenti in modo da risparmiare spazio a discapito però di una codifica e decodifica più impegnative.
+Ma bisogna stare attenti a usare bene i *prefissi*, perché ogni carattere deve iniziare con una sequenza di bit che sia univoca in modo che non ci siano ambiguità quando il computer dovrà decodificarli:
+Ad esempio:
+
+| **Carattere** | **Codifica Semplice** | **Codifica con prefissi** |
+| ------------- | --------------------- | ------------------------- |
+| a = 20        | 0000                  | 10                        |
+| b = 7         | 0001                  | 1100                      |
+| c = 3         | 0010                  | 1101                      |
+| d = 10        | 0011                  | 000001                    |
+| e = 15        | 0100                  | 001                       |
+| f = 1         | 0101                  | 000000                    |
+| g = 30        | 0110                  | 01                        |
+| h = 4         | 0111                  | 111                       |
+| i = 5         | 1000                  | 0001                      |
+| l = 5         | 1001                  | 00001                     |
+| Testo = 100   | 400 Bit               | 298 bit                   |
+Utilizzando questa codifica siamo riusciti ad abbassare di molto lo spazio utilizzato, anche se è stato difficile codificare tutto stando attento ai prefissi.
+
+Questa codifica con i prefissi non è sempre migliore di quella a 4 bit perché se ho un carattere come ad esempio la f o la d occupo 6 bit anziché 4, il guadagno sta nel fatto che queste lettere appaiono di meno rispetto alla g ad esempio e quindi visto che la g occupa solo 2 bit nel complesso di un testo vario ci vado a guadagnare memoria
+
+*Huffman ci da una mano a creare una codifica con i prefissi utilizzando un albero*
+
+Questo è l'albero della nostra codifica con prefissi:
+![[Pasted image 20260104163929.png|480]]
+
+Per leggerlo si parte dalla root e si decide: a = 10 quindi vado a destra da li scendo a sinistra con lo 0 e ho trovato la a
+
+**L'obbiettivo è quindi trovare l'albero che codifica meglio i nostri caratteri**
+$∀c ∈ Σ$ abbiamo che: $f(c)$ = frequenza, $d_t(c)$ = profondità di quel carattere nell'albero
+
+Per valutare l'albero usiamo questa funzione:
+$$b(t) = Σ_{c ∈ Σ}\,\, f(c) * d_t(c)$$
+Il valore di bontà **$b(t)$** è dato dalla **sommatoria**, per ogni carattere **$c$** appartenente all'alfabeto **$\Sigma$** del prodotto tra la **frequenza $f(c)$** del carattere e la **profondità nell'albero $d_t(c)$** (che sarebbe la lunghezza del codice del carattere)
+
+**Dobbiamo trovare una strategia che minimizza $b(t)$**
+Lo faremo ricorsivamente utilizzando una strategia greedy
+Ma come riduciamo in sottoproblemi? Cerchiamo di definire un caso base:
+
+Prendiamo 2 lettere del nostro alfabeto e le sostituisco con una:
+
