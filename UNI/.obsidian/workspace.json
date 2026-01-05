@@ -8,7 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b746a26ab1903fcf",
+            "id": "82f03c63cbb0bcec",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Introduzione Agli Algoritmi_ (Z-Library)"
+            }
+          },
+          {
+            "id": "d387a50f74355e26",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,7 +32,14 @@
               "icon": "lucide-file",
               "title": "Da Sapere"
             }
-          },
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "adb484c1854dafdd",
+        "type": "tabs",
+        "children": [
           {
             "id": "7230bdc5fc50e8e6",
             "type": "leaf",
@@ -193,11 +212,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b746a26ab1903fcf",
+  "active": "d387a50f74355e26",
   "lastOpenFiles": [
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260104200826.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/15 - 12 dicembre 2025.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
+    "Senza nome.md",
+    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260104200826.png",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/1 Modello relazionale dei dati.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/Algoritmo di Query Optimization.md",
     "Primo_anno/Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.pdf",
@@ -222,10 +243,7 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103192600.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103104651.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103104327.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103104046.png",
-    "Senza nome.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/9 Lez 10 - Operatori locali e Convoluzione 2025-26.pdf",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/14 28 novembre.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Lezione 9 - Programmazione dinamica e algoritmi golosi.md",
     "conflict-files-obsidian-git.md",
