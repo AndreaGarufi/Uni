@@ -1248,3 +1248,4 @@ Vediamo lo pseudocodice della procedura BFS che ha complessità $O(V+E)$ se uso 
 
 Una visita BFS genera un albero BFS
 
+**DFS -> Depth-First Search -> Ricerca in Profondità**
