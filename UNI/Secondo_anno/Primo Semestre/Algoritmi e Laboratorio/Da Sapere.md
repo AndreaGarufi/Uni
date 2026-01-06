@@ -1131,7 +1131,7 @@ L'algoritmo di Huffman ha complessità $O(n\,\,log\,\,n)$ dove $n$ è la cardina
 3)	   `foreach c ∈ Σ do`
 4)		`x = newNode(c)`
 5)		`insert x in Q`
-6)	   `for i = 1 to |Σ|-1 do`
+6)	   `for i = 1 to |Σ| -1 do`
 7)		`x = extractMin(Q)`
 8)		`y = extractMin(Q)`
 9)		`z = newNode`
@@ -1140,4 +1140,28 @@ L'algoritmo di Huffman ha complessità $O(n\,\,log\,\,n)$ dove $n$ è la cardina
 12)	`right(z) = y`
 13)	`insert z in Q`
 
-*riga 1* -> 
+*riga 1* -> definizione della funzione, Σ è l'alfabeto, f invece le frequenze di ogni carattere
+*riga 2* -> crea una coda con priorità, che servirà a mantenere in cima i valori di frequenze più basse
+*riga 3-5* -> inizia un ciclo che scorre ogni carattere, crea un nodo x dove viene inserito il carattere e poi lo inserisce nella coda con priorità
+*riga 6* -> questo è il ciclo principale, che verrà eseguito $n-1$ volte dove $n$ è il numero di caratteri
+*riga 7-8* -> estrae dalla coda Q i 2 nodi che hanno frequenza più bassa (sono i nodi da combinare)
+*riga 9* -> crea il nuovo nodo z
+*riga 10* -> calcola la frequenza combinata degli altri 2 nodi
+*riga 11-12* -> assegna a x e y come figli destro e sinistro a z
+*riga 13* -> reinserisce z nella coda, e ricomincia, da questo momento z è un nodo combinato e verrà trattato come un altro carattere con una propria frequenza
+
+Alla fine del ciclo, nella coda $Q$ rimarrà un solo nodo: la radice dell'intero albero di Huffman. Percorrendo l'albero dalla radice alle foglie si ottengono i codici binari per ogni carattere.
+
+###### **Grafi**
+Prima di introdurre il prossimo problema risolto con approccio greedy, ripassiamo i grafi:
+$G = (V,E)$
+$V= \{v_1,v_2,v_3,v_n\}$ -> questi sono i nodi o vertici del grafo -> $|V| = n$
+$E⊆ \{(a_i,a_j):i,j∈V\}$ -> questi sono gli archi che collegano 2 nodi
+
+|**Tipo**|**Relazione degli Archi**|**Rappresentazione Visiva**|
+|---|---|---|
+|**Direzionato**|Coppia ordinata $(u, v)$|Frecce $\rightarrow$|
+|**Non Direzionato**|Insieme non ordinato $\{u, v\}$|Linee $-$|
+|**Ordinato**|Segue una sequenza logica|Nodi in fila (es. A, B, C)|
+
+

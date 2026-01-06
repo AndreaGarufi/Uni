@@ -167,36 +167,75 @@
       "bases:Create new base": false
     }
   },
+  "floating": {
+    "id": "2a1232431b02d367",
+    "type": "floating",
+    "children": [
+      {
+        "id": "64bf1298a61280fd",
+        "type": "window",
+        "children": [
+          {
+            "id": "e5ed4b4c85b2673d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "17055bdf71da24af",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/16 - 15 dicembre 2025.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "16 - 15 dicembre 2025"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1538,
+        "y": 2,
+        "width": 1533,
+        "height": 861,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "eb0865c2a1c54ac0",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/11 - 21 novembre 2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/16 - 15 dicembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/10 - 14 novembre 2025.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 142129.crdownload",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/9 12 novembre 2025.pdf",
-    "Pasted image 20251219104149.png",
-    "Pasted image 20251219104142.png",
-    "Pasted image 20251219104135.png",
-    "Pasted image 20251219104126.png",
-    "Pasted image 20251219104059.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251216164812.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251216164800.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251216162328.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251216161513.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251215212501.png",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 135155.crdownload",
+    "UNI/Senza nome.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260104200826.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260104163929.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103195039.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103194131.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103193557.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103192836.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103192729.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103192600.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103104651.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103104327.png",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.10.27.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.09.25.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.09.01.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.07.01.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.06.16.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.05.14.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.04.15.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/9 Lez 10 - Operatori locali e Convoluzione 2025-26.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 899679.crdownload",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/8 5 novembre 2025.pdf",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Sunto.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/Esempi di esercizi.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/TUTTI I TEOREMI.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/7 31 ottobre 2025_251031_104628.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 653099.crdownload",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere4.md",
@@ -211,8 +250,6 @@
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL II.md",
-    "UNI/Cose da fare.md"
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md"
   ]
 }
