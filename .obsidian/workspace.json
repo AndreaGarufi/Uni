@@ -168,19 +168,19 @@
     }
   },
   "floating": {
-    "id": "2a1232431b02d367",
+    "id": "b3ad818c4d785d26",
     "type": "floating",
     "children": [
       {
-        "id": "64bf1298a61280fd",
+        "id": "50f774992c72d7d8",
         "type": "window",
         "children": [
           {
-            "id": "e5ed4b4c85b2673d",
+            "id": "9b72afba64b6ff45",
             "type": "tabs",
             "children": [
               {
-                "id": "17055bdf71da24af",
+                "id": "900ee8791d7112e4",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
@@ -195,24 +195,24 @@
           }
         ],
         "direction": "vertical",
-        "x": 1537,
-        "y": 1,
-        "width": 1535,
-        "height": 863,
-        "maximize": true,
+        "x": 1539,
+        "y": 3,
+        "width": 1530,
+        "height": 858,
+        "maximize": false,
         "zoom": 0
       }
     ]
   },
   "active": "eb0865c2a1c54ac0",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260106175334.png",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/16 - 15 dicembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260106175334.png",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "Senza nome.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260106172733.png",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/16 - 15 dicembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 135155.crdownload",
     "UNI/Senza nome.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260104200826.png",

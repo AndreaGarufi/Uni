@@ -1211,5 +1211,25 @@ Usiamo:
 - <span style="display:inline-block;width:12px;height:12px;background:white;border:1px solid #888;"></span> **bianco** non visitato
 
 Usiamo $d[v]$ che indica la distanza di un nodo $v$ da $s$
+
 Vediamo lo pseudocodice della procedura BFS che ha complessità $O(V+E)$ se uso la lista di adiacenza oppure $O(V^2)$ se uso la matrice di adiacenza
+
+1) `BFS(V,s)`
+2)      `foreach v ∈ V do` 
+3)            `color[v] = W` -> W = white
+4)            `d[v] = +∞`
+5)      `d[s] = ∅` -> la distanza tra s e se stesso non esiste
+6)      `Q = {}` -> coda vuota
+7)      `equeue(s)`
+8)      `color[s] = G` -> G = grey
+9)      `while Q ≠ {} do` 
+10)        `v = dequeue(Q)`
+11)        `foreach u ∈ Adj(v) do`
+12)               `if color[u] = W then`
+13)                      `d[u] = d[v]+1`
+14)                      `color[u] = G`
+15)                      `enqueue(u)`
+16)      `color[v] = B` -> B = black
+
+Una visita BFS genera un albero BFS
 
