@@ -1231,5 +1231,9 @@ Vediamo lo pseudocodice della procedura BFS che ha complessità $O(V+E)$ se uso 
 15)                      `enqueue(u)`
 16)      `color[v] = B` -> B = black
 
+*riga 1* -> 
+
+
+
 Una visita BFS genera un albero BFS
 
