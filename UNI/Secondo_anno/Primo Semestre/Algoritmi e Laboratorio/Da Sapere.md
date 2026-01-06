@@ -1218,7 +1218,7 @@ Vediamo lo pseudocodice della procedura BFS che ha complessità $O(V+E)$ se uso 
 2)      `foreach v ∈ V do` 
 3)            `color[v] = W` -> W = white
 4)            `d[v] = +∞`
-5)      `d[s] = ∅` -> la distanza tra s e se stesso non esiste
+5)      `d[s] = 0` -> la distanza tra s e se stesso è 0
 6)      `Q = {}` -> coda vuota
 7)      `equeue(s)`
 8)      `color[s] = G` -> G = grey
@@ -1231,9 +1231,20 @@ Vediamo lo pseudocodice della procedura BFS che ha complessità $O(V+E)$ se uso 
 15)                      `enqueue(u)`
 16)      `color[v] = B` -> B = black
 
-*riga 1* -> 
-
-
+*riga 1* -> dichiarazione della funzione, prende in input l'insieme dei vertici e il vertice di inizio(s)
+*riga 2-4* -> scorre ogni nodo e setta il colore a bianco per inizializzarli, e la distanza dei vertici ad infinito
+*riga 5* -> imposta la distanza della sorgente (s) da se stessa che è 0
+*riga 6* -> inizializza una coda vuota
+*riga 7* -> inserisce il nodo di partenza nella coda, è il primo nodo da analizzare
+*riga 8* -> colora il vertice (s) di grigio perché sta venendo analizzato
+*riga 9* -> inizia il while principale della funzione, questo while continua finché la coda non è vuota, se la coda è vuota vuol dire che abbiamo analizzato tutti i nodi
+*riga 10* -> estrae il primo nodo dalla coda, quindi lo analizziamo
+*riga 11* -> questo ciclo for scorre tutti i vicini di v (che chiama u) 
+*riga 12* -> controlla se il vicino (u) è bianco (non visitato)
+*riga 13* -> qui costruiamo i livelli di distanza, perché la distanza di u da s(sorgente) è la distanza di v +1 
+*riga 14* -> adesso u è stato scoperto quindi lo coloriamo di grigio
+*riga 15* -> aggiungiamo u alla coda cosi che possa essere successivamente analizzato
+*riga 16* -> imposta il colore di v a nero perché abbiamo finito di analizzarlo
 
 Una visita BFS genera un albero BFS
 
