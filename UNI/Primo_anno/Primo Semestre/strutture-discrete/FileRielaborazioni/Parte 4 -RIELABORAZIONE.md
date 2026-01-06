@@ -276,7 +276,7 @@ Si può dimostrare facilmente che la connessione tra nodi è una relazione di eq
 Quindi l’insieme V si può partizionare in classi di equivalenza, dove in ogni classe ci sono nodi collegati da un cammino
 
 **Definizione Componenti Connesse (difficile slide Cutello)**
-Sia G = {V,E} un grafo e sia V = $V_1 ∪ V_2 ∪ · · · ∪ V_k$  la partizione indotta dalla relazione di connessione tra i nodi. Sia G = {$V_i,E_i$} il sottografo indotto da $V_i$ per ogni i = 1...k. Tali sottografi si chiamano componenti connesse di G
+Sia $G = {V,E}$ un grafo e sia V = $V_1 ∪ V_2 ∪ · · · ∪ V_k$  la partizione indotta dalla relazione di connessione tra i nodi. Sia G = {$V_i,E_i$} il sottografo indotto da $V_i$ per ogni $i = 1...k$. Tali sottografi si chiamano componenti connesse di $G$
 
 **Definizione Componenti Connesse (semplice chatGPT)**
 Quando il grafo non è connesso, si può dividere il grafo in gruppi di vertici che sono connessi tra loro, ma non connessi agli altri gruppi. Questi gruppi si chiamano <u>componenti connesse</u>

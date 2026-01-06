@@ -1155,7 +1155,7 @@ Alla fine del ciclo, nella coda $Q$ rimarrà un solo nodo: la radice dell'intero
 ###### **Grafi**
 Prima di introdurre il prossimo problema risolto con approccio greedy, ripassiamo i grafi:
 $G = (V,E)$
-$V= \{v_1,v_2,v_3,v_n\}$ -> questi sono i nodi o vertici del grafo -> $|V| = n$
+$V= \{v_1,v_2,v_3,...v_n\}$ -> questi sono i nodi o vertici del grafo -> $|V| = n$
 $E⊆ \{(a_i,a_j):i,j∈V\}$ -> questi sono gli archi che collegano 2 nodi
 
 |**Tipo**|**Relazione degli Archi**|**Rappresentazione Visiva**|
@@ -1164,4 +1164,52 @@ $E⊆ \{(a_i,a_j):i,j∈V\}$ -> questi sono gli archi che collegano 2 nodi
 |**Non Direzionato**|Insieme non ordinato $\{u, v\}$|Linee $-$|
 |**Ordinato**|Segue una sequenza logica|Nodi in fila (es. A, B, C)|
 
+**Percorsi**
+Dato un percorso $P = < u_1,u_2...u_k >$ è un cammino se:
+1) $u_i ∈ V , ∀ 1≤i ≤k$ -> ogni elemento del cammino deve essere un vertice
+2) $(u_i, u_{i+1}) \in E \quad \forall \ 1 \le i < k$ -> per ogni coppia di nodi deve esistere un arco che li collega
+Un cammino semplice è un cammino che passa 1 sola volta da ogni nodo (aciclico)
+
+**Relazioni e grafi**
+Se dobbiamo rappresentare una relazione con un grafo possiamo identificarla con un arco tra 2 nodi, come scegliamo se usare un arco orientato o non orientato? Dipende dalla relazione che devo seguire
+
+**Grafi pesati**
+Un grafo è pesato se ad ogni arco diamo un peso, utilizzando la funzione: $W: E\rightarrow R$![[Pasted image 20260106172733.png|300]]
+
+Trovare usi in cui gli archi abbiano un peso negativo è difficile ma esistono, la maggior parte però hanno peso positivo 
+
+**Calcolare il peso di un percorso**
+Usiamo questa formula:$$W(p) = Σ_{i = 1}^{k-1} W(u_i,u_{i+1})$$
+La sommatoria ci dice di sommare il peso di tutti gli archi del cammino partendo dal primo arco fino all'ultimo, mentre $W(u_i,u_{i+1})$ rappresenta il peso del singolo arco, quindi si deve sommare il peso di ogni arco
+
+**DOMANDA ESAME**
+**Che cosa è un ordinamento topologico di un grafo?**
+- Un ordinamento topologico di un grafo è un ordinamento lineare dei nodi in modo che ci sia una determinata relazione, se $∃ (u,a) ∈ E$ tale che $u<v$ . Ad esempio:
+  A-F-D-G-C-E-B, questo potrebbe essere un esempio di ordinamento topologico di un grafo
+- In un grafo possono esserci più ordinamenti topologici.
+- Se il grafo ha un ciclo non posso fare ordinamenti topologici
+
+**Definizione Componenti Connesse**
+Sia $G = ({V,E})$ un grafo e sia V = $v_1 ∪ v_2 ∪ · · · ∪ v_k$  la partizione indotta dalla relazione di connessione tra i nodi. Sia G = {$V_i,E_i$} il sottografo indotto da $V_i$ per ogni $i = 1...k$. Tali sottografi si chiamano componenti connesse di $G$.
+Esempi:
+![[Pasted image 20250108114343.png|500]]
+
+**Definizione Componenti Fortemente Connesse**
+In un grafo $G = (V,E)$ se ho una componente connessa che sia un ciclo allora ho una componente fortemente connessa
+
+**Come rappresentiamo i grafi?**
+Abbiamo 2 modi: *liste di adiacenza* o *matrici di adiacenza*
+![[Pasted image 20260106175334.png|500]]
+
+
+**BFS -> Breadth-First Search -> Ricerca in ampiezza**
+L'idea alla base della BFS è partire da un nodo $S$ e esplorare i nodi a distanza 1 poi 2 poi 3 e cosi via...
+Per sapere se siamo già passati da un nodo usiamo i colori, ovvero delle variabili che cambiano valore (come per gli alberi rosso neri)
+Usiamo:
+- <span style="display:inline-block;width:12px;height:12px;background:gray;"></span> **grigio** quando visito il nodo
+- <span style="display:inline-block;width:12px;height:12px;background:black;"></span> **nero** dopo la visita
+- <span style="display:inline-block;width:12px;height:12px;background:white;border:1px solid #888;"></span> **bianco** non visitato
+
+Usiamo $d[v]$ che indica la distanza di un nodo $v$ da $s$
+Vediamo lo pseudocodice della procedura BFS che ha complessità $O(V+E)$ se uso la lista di adiacenza oppure $O(V^2)$ se uso la matrice di adiacenza
 

@@ -195,10 +195,10 @@
           }
         ],
         "direction": "vertical",
-        "x": 1538,
-        "y": 2,
-        "width": 1533,
-        "height": 861,
+        "x": 1537,
+        "y": 1,
+        "width": 1535,
+        "height": 863,
         "maximize": true,
         "zoom": 0
       }
@@ -206,8 +206,13 @@
   },
   "active": "eb0865c2a1c54ac0",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/16 - 15 dicembre 2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260106175334.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
+    "Senza nome.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260106172733.png",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/16 - 15 dicembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 135155.crdownload",
     "UNI/Senza nome.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260104200826.png",
@@ -218,8 +223,6 @@
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103192836.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103192729.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103192600.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103104651.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103104327.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.10.27.pdf",
@@ -232,7 +235,6 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Sunto.md",
-    "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/Esempi di esercizi.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/TUTTI I TEOREMI.md",
@@ -246,10 +248,8 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL IV.md"
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md"
   ]
 }

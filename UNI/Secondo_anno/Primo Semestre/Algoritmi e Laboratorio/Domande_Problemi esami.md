@@ -1,3 +1,17 @@
+**Domande frequenti esame**
+*Cosa è un problema di ottimizzazione?*
+Un problema si dice di ottimizzazione quando esistono varie soluzioni ma solo alcune di queste sono le migliori, per capire qual è la migliore ad ogni soluzione applichiamo la funzione bontà che è definita cosi: $f: S \rightarrow R$ , dove $S$ è l'insieme delle soluzioni e $R$ i numeri reali
+
+Ad esempio nel problema dei cammini minimi nei grafi se parto da un nodo A potrei poter scegliere 2 percorsi diversi per arrivare a C: A-B-C o A-D-B-C, normalmente il primo cammino è la soluzione migliore, ma non è sempre così, il grado di bontà assegnato ad ogni soluzione è diverso in base al problema che si affronta
+
+*Cosa è un ordinamento topologico di un grafo?*
+- Un ordinamento topologico di un grafo è un ordinamento lineare dei nodi in modo che ci sia una determinata relazione, se $∃ (u,a) ∈ E$ tale che $u<v$ . Ad esempio:
+  A-F-D-G-C-E-B, questo potrebbe essere un esempio di ordinamento topologico di un grafo
+- In un grafo possono esserci più ordinamenti topologici.
+- Se il grafo ha un ciclo non posso fare ordinamenti topologici
+
+
+
 **Problemi esami con heap**
 
 ### 6 Settembre 2024
