@@ -1300,4 +1300,23 @@ Vediamo un esempio su un grafo e l'albero che si genera
 ![[Pasted image 20260107114343.png]]
 Come possiamo vedere si inizia dal nodo A che ha anche il tempo di inizio e fine, come scritto in ogni nodo e nella timeline, accanto possiamo vedere l'albero DFS che si genera in base a come sono esplorati i nodi
 
+**Ordinamenti topologici**
+Etichettiamo gli archi inserendo:
+T : archi consecutivi nell'albero DFS
+I : archi all'indietro
+F : archi in avanti -> cioè archi che collegano A ad F ad esempio (cioè collegano ad un discendente non diretto)
+C : archi di attraversamento
 
+Tutte queste informazione ci servono a fare un ordinamento topologico del grafo usando la DFS
+Ad esempio sull'esercizio di prima:
+Ordinamento topologico manuale -> A,D,G,B,E,F,C
+Ordinamento topologico rispetto al tempo di fine visita -> D,G,B,A,E,F,C
+
+Quindi possiamo usare la DFS sia per l'ordinamento topologico sia per verificare l'aciclicità (nella parte in cui scorre tutti i vicini di v se trova nodi grigi vuol dire che c'è un ciclo)
+
+**Cicli DFS**
+Avendo delle componenti fortemente connesse, possiamo suddividere il grafo in *macronodi* ciascun macronodo è una componente fortemente connessa
+![[Pasted image 20260107122852.png|500]]
+Chiamando la DFS su questo grafo avremo questo albero
+![[Pasted image 20260107122953.png|300]]
+Quindi abbiamo un numero di alberi in base a quante sono le componenti fortemente connesse.
