@@ -172,33 +172,33 @@
     "type": "floating",
     "children": [
       {
-        "id": "50f774992c72d7d8",
+        "id": "23df3125f1cbfb5c",
         "type": "window",
         "children": [
           {
-            "id": "9b72afba64b6ff45",
+            "id": "a395adedd93c18f6",
             "type": "tabs",
             "children": [
               {
-                "id": "900ee8791d7112e4",
+                "id": "96b18f694f073ead",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
                   "state": {
-                    "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/16 - 15 dicembre 2025.pdf"
+                    "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/17 - 17 dicembre 2025.pdf"
                   },
                   "icon": "lucide-file-text",
-                  "title": "16 - 15 dicembre 2025"
+                  "title": "17 - 17 dicembre 2025"
                 }
               }
             ]
           }
         ],
         "direction": "vertical",
-        "x": 1537,
-        "y": 1,
-        "width": 1535,
-        "height": 863,
+        "x": 1538,
+        "y": 2,
+        "width": 1533,
+        "height": 861,
         "maximize": true,
         "zoom": 0
       }
@@ -206,8 +206,13 @@
   },
   "active": "eb0865c2a1c54ac0",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/16 - 15 dicembre 2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/17 - 17 dicembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260107114343.png",
+    "Pasted image 20260107114132.png",
+    "Pasted image 20260107113957.png",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 939009.crdownload",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/16 - 15 dicembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260106175334.png",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
@@ -220,9 +225,6 @@
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103195039.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103194131.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103193557.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103192836.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103192729.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260103192600.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.10.27.pdf",
@@ -230,8 +232,6 @@
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.09.01.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.07.01.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.06.16.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.05.14.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.04.15.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Sunto.md",

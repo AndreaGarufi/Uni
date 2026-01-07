@@ -1215,7 +1215,7 @@ Usiamo $d[v]$ che indica la distanza di un nodo $v$ da $s$
 Vediamo lo pseudocodice della procedura BFS che ha complessità $O(V+E)$ se uso la lista di adiacenza oppure $O(V^2)$ se uso la matrice di adiacenza
 
 1) `BFS(V,s)`
-2)      `foreach v ∈ V do` 
+2)      `for each v ∈ V do` 
 3)            `color[v] = W` -> W = white
 4)            `d[v] = +∞`
 5)      `d[s] = 0` -> la distanza tra s e se stesso è 0
@@ -1224,7 +1224,7 @@ Vediamo lo pseudocodice della procedura BFS che ha complessità $O(V+E)$ se uso 
 8)      `color[s] = G` -> G = grey
 9)      `while Q ≠ {} do` 
 10)        `v = dequeue(Q)`
-11)        `foreach u ∈ Adj(v) do`
+11)        `for each u ∈ Adj(v) do`
 12)               `if color[u] = W then`
 13)                      `d[u] = d[v]+1`
 14)                      `color[u] = G`
@@ -1249,3 +1249,55 @@ Vediamo lo pseudocodice della procedura BFS che ha complessità $O(V+E)$ se uso 
 Una visita BFS genera un albero BFS
 
 **DFS -> Depth-First Search -> Ricerca in Profondità**
+Funzione naturalmente ricorsiva, viene usato per trovare le componenti fortemente connesse.
+Anche qui vale la regola:
+- <span style="display:inline-block;width:12px;height:12px;background:gray;"></span> **grigio** quando visito il nodo
+- <span style="display:inline-block;width:12px;height:12px;background:black;"></span> **nero** dopo la visita
+- <span style="display:inline-block;width:12px;height:12px;background:white;border:1px solid #888;"></span> **bianco** non visitato
+
+Iniziamo dallo pseudo codice della procedura
+1) `DFS(G,S)`
+2)     `for each v ∈ V do`
+3)         `color[v] = W`
+4)         `π[v] = NULL` -> questo è il padre del nodo corrente
+5)     `T = 0` -> tempo
+6)      `for each v ∈ V do`
+7)           `if color[v] = W then`
+8)                 `DFS-VISIT(v)`
+
+*riga 1* -> definizione della funzione, prende in input il grafo G e il nodo sorgente S
+*riga 2-4* -> per ogni nodo v li colora di bianco e setta il loro padre a NULL
+*riga 5* -> inizializza il tempo di visita a 0 perché non abbiamo ancora iniziato
+*riga 6-8* -> per ogni nodo v controlla se il colore è bianco (non visitato) e se si chiama DFS-VISIT
+
+Complessità $O(V)$
+
+
+1) `DFS-VISIT(v)`
+2)       `d[v] = T`
+3)       `T = T+1`
+4)       `color[v] = G`
+5)       `for each u ∈ Adj(v) do`
+6)            `if color u = W then`
+7)                  `π[u] = v
+8)       `color[v] = B`
+9)       `F[v] = T`
+10)     `T = T+1`
+
+*riga 1* -> definizione della funzione, prende in input il nodo v
+*riga 2*-> inizializza `d[v]` (array che tiene traccia del tempo di inizio visita) con il tempo T
+*riga 3* -> aumenta il tempo di 1 perché stiamo andando avanti
+*riga 4* -> colora di grigio il nodo perché lo stiamo esaminando
+*riga 5-7* -> per ogni nodo u che è vicino di v controlla se u è bianco (non visitato) e in caso imposta come padre di u il nodo v
+*riga 8-9* -> a questo punto con v abbiamo finito e lo coloriamo di nero e impostiamo il valore di T come tempo di fine visita in `F[v]`
+*riga 10* -> aumentiamo il tempo T di 1 perché stiamo andando avanti
+
+Complessità $O(E)$
+Complessità totale delle 2 procedure = $O(V+E)$
+
+La chiamata DFS genera un albero DFS
+Vediamo un esempio su un grafo e l'albero che si genera
+![[Pasted image 20260107114343.png]]
+Come possiamo vedere si inizia dal nodo A che ha anche il tempo di inizio e fine, come scritto in ogni nodo e nella timeline, accanto possiamo vedere l'albero DFS che si genera in base a come sono esplorati i nodi
+
+
