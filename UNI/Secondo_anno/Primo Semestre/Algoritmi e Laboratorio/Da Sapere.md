@@ -1320,3 +1320,24 @@ Avendo delle componenti fortemente connesse, possiamo suddividere il grafo in *m
 Chiamando la DFS su questo grafo avremo questo albero
 ![[Pasted image 20260107122953.png|300]]
 Quindi abbiamo un numero di alberi in base a quante sono le componenti fortemente connesse.
+
+###### **Problema dei cammini minimi**
+Negli esempi useremo grafi orientati ma vale la stessa cosa per quelli non orientati
+Abbiamo un grafo pesato e diversi percorsi tra cui scegliere, vogliamo scegliere il percorso meno dispendioso
+![[Pasted image 20260107164704.png|400]]
+Possiamo percorrere diversi cammini:
+<A,G,C,B> -> costo = 12
+<A,D,E,F,B> -> costo = 17
+<A,D,E,F,B> -> costo = 8 -> anche se è il più lungo è quello che costa meno
+
+Se aggiungo un peso negativo la situazione cambia:
+![[Pasted image 20260107165330.png|400]]
+<A,G,C,D,E,F,B> -> costo = -1
+
+**Se esiste un peso negativo dove c'è un ciclo il problema non ha soluzione, perché non esiste un cammino minimo**
+
+La nostra soluzione può essere solo positiva
+
+**Cammini minimi**
+Abbiamo 4 tipi di cammini minimi
+
