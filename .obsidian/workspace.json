@@ -20,6 +20,30 @@
               "icon": "lucide-file",
               "title": "Da Sapere"
             }
+          },
+          {
+            "id": "e76b9e650d502fee",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/18 - 19 dicembre 2025.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "18 - 19 dicembre 2025"
+            }
+          },
+          {
+            "id": "1fc7b648485f7ad7",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Introduzione Agli Algoritmi_ (Z-Library)"
+            }
           }
         ]
       }
@@ -167,49 +191,16 @@
       "bases:Create new base": false
     }
   },
-  "floating": {
-    "id": "196f76b0ba0fe4e9",
-    "type": "floating",
-    "children": [
-      {
-        "id": "e86973df46833788",
-        "type": "window",
-        "children": [
-          {
-            "id": "9dcd592aa2629a9f",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "54febeab8c2d3976",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/18 - 19 dicembre 2025.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "18 - 19 dicembre 2025"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 1539,
-        "y": 3,
-        "width": 1530,
-        "height": 858,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "eb0865c2a1c54ac0",
   "lastOpenFiles": [
-    "UNI/Senza nome.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260107165330.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/18 - 19 dicembre 2025.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260108163334.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260108161136.png",
+    "UNI/Senza nome.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260107165330.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260107164704.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260107122953.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/17 - 17 dicembre 2025.pdf",
@@ -221,17 +212,13 @@
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/16 - 15 dicembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260106175334.png",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "Senza nome.md",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260106172733.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 135155.crdownload",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260104200826.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.10.27.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.09.25.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.09.01.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.07.01.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Sunto.md",

@@ -1340,4 +1340,64 @@ La nostra soluzione può essere solo positiva
 
 **Cammini minimi**
 Abbiamo 4 tipi di cammini minimi
+1. _Problema dei cammini minimi da sorgente unica(single source)_: dato un grafo vogliamo trovare un cammino minimo che va da un dato vertice sorgente $s∈V$ a ciascun vertice $v∈V$
+2. _Problema dei cammini minimi con destinazione unica(single destination)_: trovare un cammino minimo da ciascun vertice v a un dato vertice t destinazione. (Invertendo la direzione di ciascun arco nel grafo lo possiamo ricondurre al primo caso)
+3. _Problema dei cammini minimi fra tutte le coppie di vertici(all-pairs)_: trovare un cammino minimo da u a v per ogni coppia di vertici. 
+4. _Problema del cammino minimo per una coppia di vertici(single pair)_: trovare un cammino minimo da u a v, è una variante del primo problema.
+
+Affronteremo solo il primo e il terzo.
+
+**Dimostrazione cammino minimo e sottostruttura ottima**
+Dimostrazione per assurdo:
+Immaginiamo un cammino minimo $P'$ dal nodo u al nodo q e al nodo v che è la destinazione (q è il nodo prima della destinazione)
+![[Pasted image 20260108161136.png|300]]
+
+avremo che: $P'(u\leadsto q)+w(q,v)= (u,v)$
+supponiamo di avere anche un secondo cammino ancora più piccolo:
+$P''(u \leadsto q)< P'(u \leadsto q)$ ma:
+$P''(u \leadsto q) + w(q, v) < P'(u \leadsto q) + w(q, v) = \delta(u, v)$ che è una contraddizione, quindi si evince che $P''$ non può essere un cammino minimo e che un qualsiasi sotto cammino del cammino minimo è anch'esso minimo
+
+Nel codice per tenere traccia della *stima del cammino minimo* dalla sorgente s a v useremo un array,`d[v]` che sarà inizialmente inizializzato a +∞ perché non ho modo di sapere quale sia il camminino minimo prima di iniziare a cercarlo, e successivamente dopo vari *aggiornamenti* con dei cammini minimi temporanei all'interno di `d[v]` ci sarà il vero cammino minimo
+
+Questi *aggiornamenti* sono dei **relax(u,v)** degli archi
+
+**Cosa è il relax di un arco?**
+![[Pasted image 20260108163334.png|300]]
+Ho `d[u]` e `d[v]` e mi faccio questa domanda:
+`if (d[u]+w(u,v) < d[v]) then d[v] = d[u] + w(u,v)` ovvero, il percorso da S a u + il pezzo per arrivare da u a v è più piccolo del percorso da S a v che ho trovato precedentemente? se si allora assegno il nuovo cammino minimo all' array `d[v]`
+Questo è il relax di un arco
+
+Vediamo lo pseudocodice della funzione Generic-single source shortest path che trova un cammino minimo
+1) `Generic-SSSP(G,S)`
+2)     `for each v ∈ V do`
+3)         `d[v] = +∞`
+4)         `d[S] = 0`
+5)     `while ∃ (u,v) ∈ E : d[u] +w(u,v) < d[v] do`
+6)         `RELAX(u,v)`
+7)     `return d`
+
+*riga 1* -> definizione della funzione che prende in input il grafo e il nodo S che è la sorgente
+*riga 2-4* -> per ogni nodo v imposta la stima della distanza da S a + infinito e la distanza da S a 0
+*riga 5-6* -> questo è pezzo principale della procedura, continuerà a chiamare la funzione `RELAX(u,v)` finché esisterà un arco da u a v tale che `d[u] +w(u,v)` sia minore di `d[v]`
+*riga 7* -> ritorna la distanza cioè il cammino minimo
+
+**Proprietà dei cammini minimi**
+1) **Disuguaglianza triangolare** 
+   Per qualsiasi arco $(u,v)∈E$, si ha $δ(s,v)≤δ(s,u)+w(u,v)$
+2) **Limite superiore**
+   Per tutti i vertici $v∈V$, si ha sempre $d[v]≥δ(s,v)$ e, una volta che il limite superiore $d[v]$ assume il valore $δ(s,v)$, esso non cambia più
+3) **Convergenza**
+   Se ho un cammino del tipo: $s⇝u→v$ da un punto $d[u] =δ(s,u)$ sono sicuro che rilassando $d[v]=δ(s,v)$
+
+
+**DAG -> Directed Acyclic Graph**
+Rilassando gli archi di un DAG (Directed Acyclic Graph) pesato $G=(V,E)$ secondo un ordine topologico dei suoi vertici è possibile calcolare i cammini minimi da una sorgente unica nel tempo $Θ(V+E)$. L'algoritmo inizia ordinando topologicamente il DAG, se esiste un cammino dal vertice u al vertice v, allora u precede v nell'ordine topologico. Effettuiamo un passaggio sui vertici secondo l'ordine topologico. Durante l'elaborazione vengono rilassati tutti gli archi che escono dal vertice
+
+ `DAG-SHORTEST-PATHS(G, w, s)`
+	   `foreach v ∈ V do`
+		   `d[v] = +∞`
+	   `esegui DFS per calcolare il tempo di fine visita F[v]`
+	   `foreach v ∈ V do` -> in ordine topologico
+	    `foreach u in Adj[u]`
+		`RELAX(u,v)`
 
