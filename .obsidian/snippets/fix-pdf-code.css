@@ -1,0 +1,19 @@
+/* Versione potenziata per mantenere l'indentazione nell'export PDF */
+pre[class*="language-"], 
+code[class*="language-"], 
+.markdown-rendered pre, 
+.markdown-rendered code {
+    white-space: pre !important;
+    tab-size: 4 !important; /* Forza la dimensione del tab */
+    -moz-tab-size: 4 !important;
+}
+
+@media print {
+    .markdown-rendered pre, 
+    .markdown-rendered code {
+        white-space: pre !important;
+        display: block !important;
+        unicode-bidi: embed !important;
+        font-family: monospace !important;
+    }
+}

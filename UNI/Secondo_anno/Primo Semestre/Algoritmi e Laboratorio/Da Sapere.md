@@ -75,12 +75,6 @@ In sintesi, possiamo dire che:
 • i fattori costanti e i termini minori influenzano le prestazioni nel breve termine; 
 • un algoritmo asintoticamente migliore può essere più lento di un altro per una vasta gamma di input reali.
 
-
-
-### **A partire dalla procedura posso capire la classe?**
-(si) da capire e fare
-
-
 ### **RISOLUZIONE EQUAZIONI DI RICORRENZA**
 Se indichiamo con T(n) il costo dell’algoritmo su un problema di dimensione n, possiamo esprimere questo comportamento nel modo seguente:
 $$T(n) = aT(\frac{n}{b}) + f(n)$$Dove a rappresenta il numero di sottoproblemi prodotti, b il fattore di riduzione della dimensione e f (n) il costo complessivo delle operazioni non ricorsive, ossia di tutte quelle attività che non comportano nuove chiamate, come la divisione del problema, la fusione dei risultati o eventuali operazioni preliminari
@@ -265,15 +259,15 @@ Ecco quindi il procedimento per creare un selection sort con un heap:
 Da questa idea di usare un heap come struttura dati nasce l'**heap-sort**
 
 **HEAP SORT**
-`heapSort(A,n)`
-	`buildMaxHeap(A,n)`
-	`for i = 0 to n-1 do`
-		`extractMax(A)`
-
-`extractMax(A)`
-`Swap(A,1,n-1)`
-`n = n-1`
-`heapfy(A,1)`
+1) `heapSort(A,n)`
+2) 	`buildMaxHeap(A,n)`
+3) 	`for i = 0 to n-1 do`
+4) 		`extractMax(A)`
+--------
+1) `extractMax(A)`
+2)     `Swap(A,1,n-1)`
+3)     `n = n-1`
+4)     `heapfy(A,1)`
 
 Questa procedura ha complessità $O(n\,\,log \,\,n)$ molto simile al mergeSort che è $Θ(n\,\,log\,\,n)$ e consuma anche meno memoria perché qui lavoriamo con un singolo array a differenza del mergeSort
 
@@ -320,16 +314,16 @@ Fatto questo si scorre l'array A al contrario, quindi partendo dalla fine, quest
 Per ogni elemento i (elemento corrente dentro A), si posiziona i in `B[C'[i]-1]` e successivamente si decrementa: `C'[i]` di 1, perché avendo posizionato l'elemento i ne ho 1 in meno da posizionare quindi devo scalare di 1 il numero degli elementi i: se `C'[3] = 5` ho 5 tre da posizionare, dopo aver posizionato il primo 3 `C'[3] = 4` e cosi via
 
 Ecco lo pseudocodice del countingSort
-`CountinSort(A,n){`
-	`k = max(A)`
-	`C = new Array(k+1)`
-	`for i = 0 to k do C[i] = 0`
-	`for i = 0 to n-1 do C[A[i]] = C[A[i]]+1`
-	`for i = 1 to k do C[i] = C[i] + C[i-1]`
-	`for i = n-1 down to 0 do`
-	`B[C[A[i]]-1] = A[i]`
-	`C[A[i]] = C[A[i]]-1`
-`}`
+1) `CountinSort(A,n){`
+2) 	`k = max(A)`
+3) 	`C = new Array(k+1)`
+4) 	`for i = 0 to k do C[i] = 0`
+5) 	`for i = 0 to n-1 do C[A[i]] = C[A[i]]+1`
+6) 	`for i = 1 to k do C[i] = C[i] + C[i-1]`
+7) 	`for i = n-1 down to 0 do`
+8) 	`B[C[A[i]]-1] = A[i]`
+9) 	`C[A[i]] = C[A[i]]-1`
+10) `}`
 
 La complessità del counting sort è $O(n + k)$ dove $n$ è il numero di elementi presenti in A e k è il MAX(A)
 
@@ -350,9 +344,9 @@ Faccio un esempio visivo:
 Partendo dall'array iniziale, ho ordinato prima rispetto alla terza cifra (seconda colonna) poi rispetto alla seconda (terza colonna) e infine rispetto alla terza (quarta colonna), così facendo ho ordinato l'array
 
 Pseudocodice
-`RadixSort(A,n,h)`
-	`for i = 0 to h = 1 do` 
-		`countingSort(A,n,h)`
+1) `RadixSort(A,n,h)`
+2) 	`for i = 0 to h = 1 do` 
+3) 		`countingSort(A,n,h)`
 
 dove A è l'array, n la dimensione e h sono le cifre dei numeri all'interno (ovviamente devono avere tutti lo stesso numero di cifre) 
 
@@ -374,18 +368,18 @@ salviamo il numero di occorrenze di questi numeri all'interno di un array T che 
 Infatti nell'insieme S lo 0 compare zero volte l'1 una volta, il 3 due volte e cosi via
 E' molto facile da capire e da implementare infatti in pseudocodice le operazioni sono:
 Inserimento:
-`insert(T,k)`
-	`T[k] = T[k]+1`
+1) `insert(T,k)`
+2) 	`T[k] = T[k]+1`
 
 Cancellazione:
-`delete(T,k)`
-	`if T[k] = 0 then T[k] = 0`
-	`else T[k] = T[k] -1`
+1) `delete(T,k)`
+2) 	`if T[k] = 0 then T[k] = 0`
+3) 	`else T[k] = T[k] -1`
 
 Ricerca:
-`search(T,k)`
-	`if(T[k] >= 1) return 1`
-	`return`
+1) `search(T,k)`
+2) 	`if(T[k] >= 1) return 1`
+3) 	`return`
 
 dove T è l'array e k l'elemento
 
@@ -402,11 +396,11 @@ Rappresento questa struttura così:
 ![[Pasted image 20251205104739.png]]
 
 Lo pseudocodice delle funzioni con cui gestire la lista è questo:
-`insert(T,k)`
-	`listInsert(k,T[h(k)])`
-
-`search(T,k)`
-	`return listSearch(k,T[h(k)])`
+1) `insert(T,k)`
+2) 	`listInsert(k,T[h(k)])`
+---
+1) `search(T,k)`
+2) 	`return listSearch(k,T[h(k)])`
 
 Il **caso pessimo** è quando tutti gli elementi collidono e quindi ho una lista concatenata normalissima e quindi perdo le proprietà di una tabella hash
 
@@ -472,18 +466,18 @@ Esempio:
 
 Con questo tipo di implementazione le funzioni diventano:
 
-`insert(T,k)`
-	`i = 0`
-	`while(i < m and T[i] ≠ null) do`
-		`i = i + 1`
-	`if (i < m) then T[i] = k`
-
-`search(T,k)`
-	`i = 0`
-	`while(i < m and T[i] ≠ null) do`
-		`if(T[i] = k) return true`
-		`i = i + 1`
-	`return false`
+1) `insert(T,k)`
+2) 	`i = 0`
+3) 	`while(i < m and T[i] ≠ null) do`
+4) 		`i = i + 1`
+5) 	`if (i < m) then T[i] = k`
+---
+1) `search(T,k)`
+2) 	`i = 0`
+3) 	`while(i < m and T[i] ≠ null) do`
+4) 		`if(T[i] = k) return true`
+5) 		`i = i + 1`
+6) 	`return false`
 
 Dove $m$ è il numero di celle e $n$ è il numero di elementi
 Entrambe queste funzioni hanno complessità $O(n)$
@@ -608,13 +602,6 @@ Il primo albero non è valido perché è un albero sbagliato, dato che non rispe
 Fornire un esempio di albero rosso nero in cui l'inserimento aumenta l'altezza nera
 ![[Pasted image 20251220225517.png|250]]
 Il nodo tratteggiato che stiamo inserendo è ovviamente di colore rosso, questo porta ad una reazione a catena in cui si parte dal caso 3 dell'inserimento (ovvero i figli D e F scambiano il colore con il padre C), in questo modo C diventa rosso, qui non posso riapplicare il caso 3 perché E è nero quindi va applicata una rotazione e in questo modo riesco a propagare il "conflitto" fino alla radice dove viene espulso, in questo modo aumenta l'altezza nera
-
-
-
-
-
-
-
 
 ### **PROGRAMMAZIONE DINAMICA**
 Partiamo con il dire cosa è un problema di ottimizzazione:
@@ -1393,11 +1380,10 @@ Vediamo lo pseudocodice della funzione Generic-single source shortest path che t
 **DAG -> Directed Acyclic Graph**
 Rilassando gli archi di un DAG (Directed Acyclic Graph) pesato $G=(V,E)$ secondo un ordine topologico dei suoi vertici è possibile calcolare i cammini minimi da una sorgente unica nel tempo $Θ(V+E)$. L'algoritmo inizia ordinando topologicamente il DAG, se esiste un cammino dal vertice u al vertice v, allora u precede v nell'ordine topologico. Effettuiamo un passaggio sui vertici secondo l'ordine topologico. Durante l'elaborazione vengono rilassati tutti gli archi che escono dal vertice
 
- `DAG-SHORTEST-PATHS(G, w, s)`
-	   `foreach v ∈ V do`
-		   `d[v] = +∞`
-	   `esegui DFS per calcolare il tempo di fine visita F[v]`
-	   `foreach v ∈ V do` -> in ordine topologico
-	    `foreach u in Adj[u]`
-		`RELAX(u,v)`
-
+1) `DAG-SHORTEST-PATHS(G,s)`
+2)     `foreach v ∈ V do`
+3)         `d[v] = +∞`
+4)     `esegui DFS per calcolare il tempo di fine visita F[v]`
+5)     `for each v ∈ V do` -> in ordine topologico
+6)          `for each u in Adj[u]`
+7)              `RELAX(u,v)`
