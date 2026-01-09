@@ -62,3 +62,36 @@ David Huffman ha proposto un semplice algoritmo greedy che permette di ottenere 
 - Si etichetteranno i rami a sinistra con codice 1 e quelli a destra con codice 0.
 - Il codice che si forma procedendo dalla radice alla foglia è il codice abbinato al carattere presente nella foglia stessa
 
+C'è un esempio ben fatto nel power point [[11 Lez 13 compressione 2024-25.pdf|11 compressione]] dalla slide numero 22 alla 26
+
+Dopo l'algoritmo avremo ottenuto la codifica che ci interessa, servirà un altro po di memoria per memorizzare la tabella che contiene la codifica
+L'algoritmo di Huffman è usato nei seguenti standard di compressione: CCITT, JBIG2, JPEG, MPEG-1,2,4
+
+**Altri algoritmi LOSS LESS**
+**Run Lenght Encoding**
+![[Pasted image 20260109150043.png]]
+![[Pasted image 20260109150057.png]]
+
+**Codifica Differenziale**
+![[Pasted image 20260109150419.png]]
++3,+1,+6,-4,0,-22 ...
+Si dimostra sperimentalmente che per le immagini la sequenza delle differenze ha una entropia minore di quella dei valori originali e quindi richiede meno bit per essere memorizzata
+
+**Compressione Lossy**
+Si parla di compressione LOSSY quando i dati possono essere trasformati in modo da essere memorizzati con risparmio di memoria ma con perdita di informazione. *Tale tipo di compressione produce un maggiore risparmio di memoria!*
+
+- Fissata la massima distorsione accettabile l’algoritmo di compressione deve trovare la rappresentazione con il più basso numero di bit. 
+- Viceversa, fissato il massimo numero di bit accettabile occorre trovare il miglior algoritmo di compressione che a parità di numero di bit mi dia la minima distorsione
+![[Pasted image 20260109150736.png|400]]
+
+L'idea della compressione lossy è: *Se “percettivamente” non è importante: buttalo via!*
+- MP3 : applicano questa idea al caso del suono e della musica; 
+- JPEG : applicano questa idea alle immagini fisse (still images) 
+- MPEG, AVI, DVX etc: applicano questa idea alle sequenze di immagini (filmati)
+
+Ovviamente una volta buttata via l’informazione non può essere ricostruita: si tratta di compressione IRREVERSIBILE
+
+Noi vedremo soltanto:
+1) Un algoritmo di requantization;
+2) Il JPEG
+
