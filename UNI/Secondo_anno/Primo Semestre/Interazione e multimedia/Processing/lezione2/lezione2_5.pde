@@ -1,5 +1,5 @@
-
 /*
+//funzione radians
 void setup(){
   size(800,400);
   background(255);
@@ -10,7 +10,7 @@ void setup(){
   // 0-270
   arc(200,height/2,100,100,0,PI+HALF_PI);
   //ERRORE
-  arc(300,height/2,100,100,PI,0);
+  //arc(300,height/2,100,100,PI,0);
   //180-360
   arc(400,height/2,100,100,PI,TWO_PI);
   arc(500,height/2,100,100,PI,2*PI);

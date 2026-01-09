@@ -13,5 +13,4 @@ for(int x = 50; x<width; x+=50){
     line(x, 0, x+larghezzaFreccia, height/2);
     line(x, height, x+larghezzaFreccia, height/2);
   }
-}
-*/
+}*/

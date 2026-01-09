@@ -1,4 +1,5 @@
 /*
+//linee che si spostano e ricominciano da capo
 int pos1=10;
 int pos2=10;
 

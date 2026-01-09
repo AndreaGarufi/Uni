@@ -95,3 +95,51 @@ Noi vedremo soltanto:
 1) Un algoritmo di requantization;
 2) Il JPEG
 
+**Requantization**
+- Si tratta molto semplicemente di una riduzione del numero di livelli disponibili in modo da risparmiare bit per pixel. 
+- La si realizza “dimenticando” n bit meno significativi per canale. 
+- Per esempio: RED: da 8 bit si conservano solo i 4 più significativi; 
+- GREEN: da 8 bit si conservano solo i 6 più significativi; 
+- BLUE: da 8 bit a si conservano solo i 2 più significativi. 
+- Si risparmia così il 50% dei bit inizialmente necessario! In più: se ci sono meno simboli … la compressione LZW o Huffman è più efficiente!
+- *Ma c'è una forte perdita di qualità*
+![[Pasted image 20260109180154.png]]
+
+**Lo standard JPEG**
+Passi fondamentali della codifica JPEG:
+1) Pre-processing: 
+   i. Color Transform (RGB → $YC_b C_r$); 
+   ii. Sottocampionamento della crominanza 
+   iii. Suddivisione della immagine in sottoimmagini. 
+2) Trasformazione: 
+   i. Discrete Cosine Transform; 
+   ii. Quantization; 
+3) Codifica: 
+   i. DC Coefficient Encoding; 
+   ii. Zig-zag ordering of AC Coefficients; 
+   iii. Entropy Coding (Huffman).
+
+**Pre-processing**
+Iniziamo con il *color transform (i)* appunto dallo spazio RGB a $YC_b C_r$
+Applichiamo la formula:
+![[Pasted image 20260109180653.png|400]]
+
+*sottocampionamento della crominanza (ii)*
+In questo modo abbiamo un canale separato $Y$ per la luminanza e possiamo sfruttarlo a nostro vantaggio, infatti l'occhio umano è più sensibile alla luminanza che alla crominanza quindi JPEG conserva tutta la luminanza ma campiona i 2 valori di crominanza, scegliendo 1 valore per ogni 4 per $C_b$ e $C_r$
+ Questa operazione è lossy ed è irreversibile
+
+*partizione dell'immagine*
+JPEG suddivide l'immagine in quadretti da 8x8 cioè 64 pixel NON sovrapposti, quadretti diversi subiranno una elaborazione differente ed questa l'origine del problema della quadrattatura che si verifica quando le immagini compresse con JPEG vengono zoommate o stampate
+![[Pasted image 20260109181651.png]]
+
+**Shift dei livelli di grigio**
+- Prima della applicazione della DCT ai 64 pixel di ciascun blocco viene sottratta una quantità pari a $2^{n-1}$, dove $2^n$ rappresenta il numero massimo di livelli di grigio dell’immagine. 
+- Se il blocco considerato presenta 256 = $2^8$ possibili livelli di grigio, a ciascun pixel di tale blocco verrà sottratto un offset pari a 128 = $2^7$. 
+- Con questo processo, noto come shift dei livelli di grigio, il grigio medio (128) diventa 0
+Esempio
+![[Pasted image 20260109181937.png|600]]
+
+**Trasformazione**
+*Trasformata discreta del coseno DCT*
+
+

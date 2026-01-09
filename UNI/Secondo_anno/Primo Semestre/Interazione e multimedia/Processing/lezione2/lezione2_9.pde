@@ -1,6 +1,6 @@
-/*int lato = 50;
-
-
+/*
+//quadrati che cambiano random al click del mouse
+int lato = 50;
 void setup(){
   size(500,500);
   noStroke();
@@ -19,4 +19,5 @@ void mousePressed(){
 
 void draw(){
   
-}*/
+}
+/*

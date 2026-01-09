@@ -1,4 +1,5 @@
 /*
+/cerchi partendo da 0 e height mezzi, sempre più grandi
 size(1000, 700);
 background(255);
 noFill();
@@ -11,5 +12,4 @@ for (int center = raggio; center + d/2 <= width && d <= height; center += raggio
   d += raggio * 2;
   println(d);
 }
-
 */

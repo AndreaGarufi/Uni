@@ -1,4 +1,6 @@
+
 /*
+Calcola la curva di bezier prendendo come ancoraggio 4 punti
 void setup(){
   size(800,800);
   background(125);
