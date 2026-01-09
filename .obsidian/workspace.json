@@ -4,45 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a7fcd40ab8ad62ef",
+        "id": "43f38874acd4f55f",
         "type": "tabs",
         "children": [
           {
-            "id": "eb0865c2a1c54ac0",
+            "id": "cd112ceca01de2d1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Da Sapere"
-            }
-          },
-          {
-            "id": "e76b9e650d502fee",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/18 - 19 dicembre 2025.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "18 - 19 dicembre 2025"
-            }
-          },
-          {
-            "id": "1fc7b648485f7ad7",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Introduzione Agli Algoritmi_ (Z-Library)"
+              "title": "10 Compressione"
             }
           }
         ]
@@ -191,11 +167,54 @@
       "bases:Create new base": false
     }
   },
-  "active": "eb0865c2a1c54ac0",
+  "floating": {
+    "id": "c18d9a9fc62bd907",
+    "type": "floating",
+    "children": [
+      {
+        "id": "2a841cff5f0167e3",
+        "type": "window",
+        "children": [
+          {
+            "id": "c85085ef8d2d7e0f",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b23184c9e88d53f8",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/11 Lez 13 compressione 2024-25.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "11 Lez 13 compressione 2024-25"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1539,
+        "y": 3,
+        "width": 1530,
+        "height": 858,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "3216613356f858dc",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/11 Lez 13 compressione 2024-25.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
+    "Senza nome.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109113503.png",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/Non confermato 165362.crdownload",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/18 - 19 dicembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260108163334.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260108161136.png",
@@ -210,15 +229,10 @@
     "Pasted image 20260107113957.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 939009.crdownload",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/16 - 15 dicembre 2025.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260106175334.png",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "Senza nome.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 135155.crdownload",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.10.27.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.09.25.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/EsamiPassati/altri esami/esame.25.09.01.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Sunto.md",
@@ -236,7 +250,6 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
     "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/5 Campionamento_Quantizzazione.md"
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md"
   ]
 }
