@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "43f38874acd4f55f",
+        "id": "c862776c154be907",
         "type": "tabs",
         "children": [
           {
-            "id": "cd112ceca01de2d1",
+            "id": "0bea9b58d15edc02",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "10 Compressione"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -167,53 +163,27 @@
       "bases:Create new base": false
     }
   },
-  "floating": {
-    "id": "c18d9a9fc62bd907",
-    "type": "floating",
-    "children": [
-      {
-        "id": "2a841cff5f0167e3",
-        "type": "window",
-        "children": [
-          {
-            "id": "c85085ef8d2d7e0f",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "b23184c9e88d53f8",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/11 Lez 13 compressione 2024-25.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "11 Lez 13 compressione 2024-25"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 1537,
-        "y": 1,
-        "width": 1535,
-        "height": 863,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "3216613356f858dc",
+  "active": "0bea9b58d15edc02",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109181937.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/11 Lez 13 compressione 2024-25.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.10.27.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.09.01.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.07.01.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.06.16.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.05.14.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.04.15.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.02.17.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.01.27 (b).pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.01.27 (a).pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2024",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas",
+    "README.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109181937.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109181651.png",
     "Pasted image 20260109181623.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109180653.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109180154.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/0 Lez 01- Introduttiva_2025-2026.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109150736.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109150419.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109150057.png",
@@ -221,19 +191,10 @@
     "Senza nome.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109113503.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/Non confermato 165362.crdownload",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/18 - 19 dicembre 2025.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260108163334.png",
     "UNI/Senza nome.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/17 - 17 dicembre 2025.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 939009.crdownload",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/16 - 15 dicembre 2025.pdf",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Non confermato 135155.crdownload",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Sunto.md",
@@ -250,7 +211,6 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL III.md"
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md"
   ]
 }
