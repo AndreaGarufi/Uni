@@ -140,6 +140,34 @@ Esempio
 ![[Pasted image 20260109181937.png|600]]
 
 **Trasformazione**
-*Trasformata discreta del coseno DCT*
+*Trasformata discreta del coseno DCT(i)*
+Il JPEG trasforma i blocchi 8 x 8 di pixel secondo un algoritmo detto DCT, è un algoritmo della famiglia delle trasformate di Fourier, 
 
+E’ stato dimostrato che, statisticamente, tale trasformazione “*decorrela*” al massimo i dati permettendo maggiori rapporti di compressione nella fase successiva di codifica.
+Decorrela in questo contesto indica che questa DCT separa i dati non rendendoli più interdipendenti, detto in breve se ho 64x64 pixel di cielo azzurro con variazioni minime ne prendo un valore medio anziche il valore di ogni singolo pixel, risparmiando spazio
 
+**CERCA DI CAPIRE MEGLIO A LEZIONE PERCHé NEL POWER POINT È SPIEGATO MALE**
+
+*Quantizzazione(ii)*
+Un vantaggio in termini di simboli da usare (e quindi in termini di lunghezza dei codici Huffman) si ottiene se si riduce il numero di “livelli” su cui i coefficienti della DCT possono variare. Tale operazione permette di rappresentare i diversi coefficienti incrementando il fattore di compressione, più precisamente avviene un processo di riduzione del numero di bit necessari per memorizzare un valore intero riducendone la precisione
+
+Il valore F quantizzato si ottiene come :
+$$F_{quantizzato} = round(F/Q)$$
+dove Q è un fattore di quantizzazione, F è un numero da quantizzare.
+Il valore ricostruito si ottiene moltiplicando $F_{quantizzato}$ per Q
+La quantizzazione è un processo irreversibile (lossy)
+
+Si è dimostrato che non è conveniente usare un unico fattore di quantizzazione per tutti i 64 coefficienti della DCT della luminanza, o per quantizzare i valori provenienti dalla DCT delle crominanze, quindi si utilizzano 2 fattori diversi fornito dallo standard o eventualmente uno fornito dall'utente (a cui però poi va aggiunta la tabella che deve essere trasmessa non essendo uno standard)
+![[Pasted image 20260110200312.png]]
+
+Si osservi che un fattore di compressione maggiore comporta una maggiore perdita di informazione e quindi una qualità visiva minore
+L’utente del JPEG può scegliere il “grado” di quantizzazione da adottare fornendo un “quality factor” QF che va da 1 a 100. Maggiore è il QF e minore sarà la perdita di informazioni. Quindi fattore di qualità e fattore di compressione sono l’uno l’inverso dell’altro
+
+**Effetto della quantizzazione**
+![[Pasted image 20260110200422.png]]
+
+**Codifica**
+Tutti i coefficienti vengono riordinati in un vettore 64 x 1 seguendo l’ordinamento “a serpentina” (per creare lunghe run di zeri) e codificati in un altro stream
+![[Pasted image 20260110200615.png|600]]
+
+**A questo punto si hanno 2 differenti codifiche**
