@@ -223,14 +223,32 @@ questo se lo rappresento come un albero
 ![[Pasted image 20251103204132.png|400]]
 
 Questo se lo rappresento come un array
-![[Pasted image 20251103203729.png|400]]
+1) `heapfy(H,i)`
+2)     `l = left(i)`
+3)     `r = right(i)`
+4)     `min = i`
+5)     `if(l <= heapsize and H[l] < H[min]) then`
+6)         `min = l`
+7)     `if(r <= heapsize and H[r] < H[min]) then`
+8)         `min = r`
+9)     `if (min ≠ i) then`
+10)       `swap(H,i,min)`
+11)       `heapfy(H,min)`
 
-(heapsize è il numero di nodi contenuti nello heap)
+*riga 1* -> definizione della funzione, prende in input l'array H e il nodo (indice nell'array) che stiamo prendendo in considerazione
+*riga 2* -> ad l assegniamo l'indice del figlio sinistro di i
+*riga 3* -> ad r assegniamo l'indice del figlio destro di i
+*riga 4* -> assegniamo un minimo temporaneo = ad i (nodo corrente)
+*riga 5-8* -> confronto: controlla se l è dentro l'array e quindi se esiste e se l è più piccolo del minimo temporaneo esso diventa il nuovo minimo, la stessa cosa avviene per r
+*riga 9-10* -> se il minimo non è i allora il nodo i e il nuovo minimo si scambiano,
+*riga 11* -> chiamo heapfy sul nuovo minimo
 
+(heapsize è il numero di nodi contenuti nello heap, e la dimensione dell'array)
 
 **CREARE UN HEAP (come array)**
-1) parto da un array vuoto e inserisco gli elementi (non può essere chiamato ancora heap perche non è ordinato nella maniera corretta)
-2) Uso la procedura build-minHeap
+1) parto da un array vuoto e inserisco gli elementi (non può essere chiamato ancora heap perché non è ordinato nella maniera corretta)
+2) Uso la procedura *build-minHeap*
+   `build-minHeap()`
    `for i = n/2 down to 1 do
 	   `heapfy(H,i)
 	   
@@ -241,18 +259,34 @@ Questo se lo rappresento come un array
     È l’array su cui lavorano `Heapify` e `BuildHeap`.
     
 - **`i`** → è **l’indice del nodo** che stiamo “heapificando” in quel momento.  
-    Il ciclo parte da `n/2` (cioè dall’ultimo nodo che ha almeno un figlio) e va fino a `1` (la radice).
+    Il ciclo parte da `n/2` (cioè dall'ultimo nodo che ha almeno un figlio) e va fino a `1` (la radice).
+    questo perché da $n/2+1$ iniziano le foglie dell'albero, che non hanno figli
 
+per fare un max heap chiameremo *build-maxHeap* e cambierà la funzione heapfy in modo da mettere i nodi con valore più alto in cima, quindi al contrario rispetto a min-heap
 
+**Modifica di un valore dentro l'heap**
+Per fare questo si usa una funzione chiamata updateKey che cambia il valore della chiave del nodo, in questo caso è una decreaseKey su un min heap :
 
-La struttura heap ci semplifica la vita quando parliamo di velocità e complessità nei problemi di ordinamento
+1) `DECREASE-KEY(H, i, k)` 
+2)      `H[i] = k // Aggiorno la chiave all'indice i` 
+3)      `while (i > 1 and H[parent(i)] > H[i]) do // Controllo indice > 1 invece di != NULL` 
+4)           `swap(H, i, parent(i))` 
+5)           `i = parent(i)`
+
+*riga 1* -> definzione della funzione, prende in input l'heap, il nodo da cambiare e il valore nuovo
+*riga 2* -> aggiorno la chiave
+*riga 3-5* -> finché i non è la root e il padre di i è maggiore di i scambia il padre con il figlio e assegna il nuovo padre
+
+---
+
+*La struttura heap ci semplifica la vita quando parliamo di velocità e complessità nei problemi di ordinamento*
 
 Ad esempio nel **selection sort** normale con array il problema maggiore è trovare ogni volta il massimo il che ci porta ad avere una complessità $O(n^2)$ 
 Possiamo invece usare una struttura heap che migliora la complessità, usando comunque un array 
 Ecco quindi il procedimento per creare un selection sort con un heap:
 (Viene rappresentato come un albero ma nella realtà è un array)
 ![[Pasted image 20251105184839.png]]
-1) Parto da un array disordinato (sinistra) e chiamo **build-max-heap** che mi va a creare un max-heap in qui ho i figli sempre minori uguali del padre
+1) Parto da un array disordinato (sinistra) e chiamo **build-max-heap** che mi va a creare un max-heap in cui ho i figli sempre minori uguali del padre
 2) Per prendere il massimo scambio il massimo (19) che è la root con il minimo (2) che è l'ultimo nodo, quindi prendo il nuovo ultimo nodo e chiamo **heapfy** che mi va a riordinare di nuovo il max-heap![[Pasted image 20251105185206.png]]
 3) Posiziono il massimo (19) alla fine dell'array e ripeto questa procedura fino a quando l'array non è ordinato (ovviamente scalo la dimensione su cui opero di 1 ogni volta che posiziono un massimo)
 
@@ -263,11 +297,21 @@ Da questa idea di usare un heap come struttura dati nasce l'**heap-sort**
 2) 	`buildMaxHeap(A,n)`
 3) 	`for i = 0 to n-1 do`
 4) 		`extractMax(A)`
+
+*riga 1* -> definizione della funzione, prende in input l'array disordinato e la dimensione
+*riga 2* -> richiama la funzione buildMaxHeap
+*riga 3-4* per ogni elemento dell'array (max heap) ne estrae il massimo
+
 --------
 1) `extractMax(A)`
-2)     `Swap(A,1,n-1)`
+2)     `Swap(A,0,n-1)`
 3)     `n = n-1`
 4)     `heapfy(A,1)`
+
+*riga 1* -> definizione della funzione, prende in input l'array
+*riga 2* -> scambia il massimo (root) con l'ultimo elemento dell'array (che sarà una foglia e quindi un elemento piccolo)
+*riga 3* -> riduce la dimensione dell'array perché il massimo è già stato ordinato
+*riga 4* -> chiama heapfy per risistemare l'array e passa il primo elemento perché è quello che va risistemato
 
 Questa procedura ha complessità $O(n\,\,log \,\,n)$ molto simile al mergeSort che è $Θ(n\,\,log\,\,n)$ e consuma anche meno memoria perché qui lavoriamo con un singolo array a differenza del mergeSort
 

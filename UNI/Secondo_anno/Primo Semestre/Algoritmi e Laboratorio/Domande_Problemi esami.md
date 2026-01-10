@@ -55,6 +55,26 @@ Scrivere la procedura updateKey(H,i,k)
 
 All'esame vanno scritte anche le funzioni heapfy e increaseKey, in generale se faccio uso di altre funzioni le devo scrivere
 
+### 17 Febbraio 2025
+Scrivere una procedura UpdateKey(H, i, k) che aggiorni, in un Heap Binario Massimo, la chiave in posizione i con il nuovo valore k, e ripristini le proprietà dell’heap massimo. L’algoritmo deve gestire correttamente entrambi i casi in cui $k > H[i]$ e $k < H[i]$
+
+`// Procedura principale`
+`UPDATE-KEY(H, i, k)`
+    `if (k == H[i]) return  // Nessun cambiamento`
+    `vecchia_chiave = H[i]`
+    `H[i] = k`
+    `// CASO 1: AUMENTO DELLA CHIAVE (Increase-Key)`
+    `// Il valore è cresciuto, quindi deve potenzialmente salire`
+    `if (k > vecchia_chiave) then`
+        `// Continua a scambiare col padre finché il nodo è maggiore del padre`
+        `while (i > 0 AND H[parent(i)] < H[i]) do`
+            `swap(H, i, parent(i))`
+            `i = parent(i)`
+    `// CASO 2: DIMINUZIONE DELLA CHIAVE (Decrease-Key)`
+    `// Il valore è diminuito, quindi deve potenzialmente scendere`
+    `else` 
+        `// Chiamiamo la procedura standard che ripara il sottoalbero verso il basso`
+        `MaxHeapify(H, i)`
 
 ### 16 Giugno 2025
 
