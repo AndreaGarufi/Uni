@@ -59,7 +59,8 @@
               "title": "Domande_Problemi esami"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -205,12 +206,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "4800ecba62be1c99",
+  "active": "25f6af8558c65e84",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.04.15.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.02.17.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.01.27 (b).pdf",
