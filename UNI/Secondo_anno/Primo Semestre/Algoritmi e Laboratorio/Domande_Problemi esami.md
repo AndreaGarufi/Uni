@@ -10,6 +10,9 @@ Ad esempio nel problema dei cammini minimi nei grafi se parto da un nodo A potre
 - In un grafo possono esserci più ordinamenti topologici.
 - Se il grafo ha un ciclo non posso fare ordinamenti topologici
 
+*Come funziona l'insieme dei cammini conosciuti e dei cammini non conosciuti nell'algoritmo di Bellman-Ford?*
+![[Pasted image 20260111165500.png|400]]
+Questa è la configurazione iniziale prima di iniziare l'algoritmo, man mano che eseguo le relax i nodi si spostano dall'insieme dei nodi nuovi a quello dei calcolati, solo in questa direzione, normalmente l'insieme dei nodi calcolati all'inizio contiene solo la sorgente S, ma nel caso in cui nel grafo ci siano nodi isolati questi si troveranno già qui, solo che noi lo scopriremo alla fine dell'algoritmo (si trovano li perché da soli costituiscono un cammino minimo)
 
 
 **Problemi esami con heap**

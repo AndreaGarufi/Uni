@@ -1398,7 +1398,7 @@ Ho `d[u]` e `d[v]` e mi faccio questa domanda:
 `if (d[u]+w(u,v) < d[v]) then d[v] = d[u] + w(u,v)` ovvero, il percorso da S a u + il pezzo per arrivare da u a v è più piccolo del percorso da S a v che ho trovato precedentemente? se si allora assegno il nuovo cammino minimo all' array `d[v]`
 Questo è il relax di un arco
 
-Vediamo lo pseudocodice della funzione Generic-single source shortest path che trova un cammino minimo
+Vediamo lo pseudocodice della funzione *Generic-single source shortest path che trova un cammino minimo*, ma a differenze dell'algoritmo di Bellman-Ford se nel grafo c'è un ciclo negativo questo algoritmo non funziona più
 1) `Generic-SSSP(G,S)`
 2)     `for each v ∈ V do`
 3)         `d[v] = +∞`
@@ -1411,6 +1411,8 @@ Vediamo lo pseudocodice della funzione Generic-single source shortest path che t
 *riga 2-4* -> per ogni nodo v imposta la stima della distanza da S a + infinito e la distanza da S a 0
 *riga 5-6* -> questo è pezzo principale della procedura, continuerà a chiamare la funzione `RELAX(u,v)` finché esisterà un arco da u a v tale che `d[u] +w(u,v)` sia minore di `d[v]`
 *riga 7* -> ritorna la distanza cioè il cammino minimo
+
+Questo algoritmo ha complessità $O(2^v)$ nel caso peggiore
 
 **Proprietà dei cammini minimi**
 1) **Disuguaglianza triangolare** 
@@ -1431,3 +1433,25 @@ Rilassando gli archi di un DAG (Directed Acyclic Graph) pesato $G=(V,E)$ secon
 5)     `for each v ∈ V do` -> in ordine topologico
 6)          `for each u in Adj[u]`
 7)              `RELAX(u,v)`
+
+**Risolviamo il problema nel caso in cui ci siano cicli negativi usando Bellman-Ford**
+
+![[Pasted image 20260111165500.png|400]]
+Questa è la configurazione iniziale prima di iniziare l'algoritmo, man mano che eseguo le relax i nodi si spostano dall'insieme dei nodi nuovi a quello dei calcolati, solo in questa direzione, normalmente l'insieme dei nodi calcolati all'inizio contiene solo la sorgente S, ma nel caso in cui nel grafo ci siano nodi isolati questi si troveranno già qui, solo che noi lo scopriremo alla fine dell'algoritmo (si trovano li perché da soli costituiscono un cammino minimo)
+
+**Questo algoritmo rilassa ogni arco del grafo V-1 volte**
+$V-1$ perché è la lunghezza massima di un cammino minimo in un grafo
+
+Vediamone lo Pseudocodice, questo algoritmo ha complessità $O(V*E)$ se si usano liste di adiacenza e $O(V^3)$ se si usano matrici di adiacenza
+
+1) Bellman-Ford(G,s,v)
+2) 
+
+
+
+| **Caratteristica** | **Algoritmo Generico (Generic-SSSP)**                                            | **Bellman-Ford**                                                                                         |
+| ------------------ | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Logica**         | "Rilassa finché puoi": sceglie archi a caso finché trova qualcosa da migliorare. | "Sistematica": rilassa **tutti** gli archi del grafo per esattamente **V - 1 volte**.                    |
+| **Cicli Negativi** | **Loop Infinito**: continua a rilassare gli archi del ciclo senza mai fermarsi.  | **Rilevamento**: esegue un controllo finale (la V-esima volta) per segnalare se esistono cicli negativi. |
+| **Terminazione**   | **Non garantita** se il grafo contiene cicli di peso negativo raggiungibili.     | **Garantita** sempre, perché il numero di iterazioni è fissato.                                          |
+| **Complessità**    | Potenzialmente **esponenziale** $O(2^V)$ nel caso peggiore.                      | Determinata: **$O(V \cdot E)$** con liste di adiacenza o **$O(V^3)$** con matrice.                       |

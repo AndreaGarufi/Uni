@@ -171,3 +171,25 @@ Tutti i coefficienti vengono riordinati in un vettore 64 x 1 seguendo l’ordina
 ![[Pasted image 20260110200615.png|600]]
 
 **A questo punto si hanno 2 differenti codifiche**
+- A questo punto si hanno due differenti codifiche. 
+- I coefficienti DC, cioè quelli che stanno nella posizione (1,1) del blocco 8x8, sono codificati usando una codifica differenziale; 
+- I coefficienti AC, cioè tutti gli altri del blocco, sono codificati usando una codifica run-length. 
+- Le tabelle usate di seguito forniscono i codici di Huffmann ottenuti sulla base di calcoli statistici preventivi e sono fornite dallo standard
+
+**(vedi codifiche -> [[11 Lez 13 compressione 2024-25.pdf|11 Compressione]] da slide 75 a 85)**
+
+![[Pasted image 20260111153141.png]]
+![[Pasted image 20260111153155.png]]
+
+**Nella ricostruzione**
+Si deve tornare indietro “ricostruendo” i dati originali (o le loro approssimazioni per i passi irreversibili)
+A destra vediamo il blocco 8x8 di input                      A sinistra invece quello ricostruito
+![[Pasted image 20260111153309.png]]
+Sono diversi tra loro perché JPEG è lossy
+
+![[Pasted image 20260111153417.png|500]]
+![[Pasted image 20260111153457.png]]
+
+![[Pasted image 20260111153521.png]]
+
+

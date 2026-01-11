@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9288b0ec5f9310f9",
+        "id": "9fdff94b40e5cd29",
         "type": "tabs",
         "children": [
           {
-            "id": "4800ecba62be1c99",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.09.01.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "esame.25.09.01"
-            }
-          },
-          {
-            "id": "9b9e2e2e1cb4b6fe",
+            "id": "5729de238c31a30e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,7 +22,19 @@
             }
           },
           {
-            "id": "5a9e85e95154aaa1",
+            "id": "75e02cd0467878d5",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/19 - 9 gennaio 2026.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "19 - 9 gennaio 2026"
+            }
+          },
+          {
+            "id": "74fe3dfa69e8cb1a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -193,70 +193,33 @@
       "bases:Create new base": false
     }
   },
-  "floating": {
-    "id": "d4a6d629eee54d6e",
-    "type": "floating",
-    "children": [
-      {
-        "id": "94c175f557d3178f",
-        "type": "window",
-        "children": [
-          {
-            "id": "c61e174914df121c",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "1bdf7bd655327c06",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "6 29 ottobre 2025_251029_105857"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 1539,
-        "y": 3,
-        "width": 1530,
-        "height": 858,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "4800ecba62be1c99",
+  "active": "5729de238c31a30e",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/19 - 9 gennaio 2026.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111165500.png",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111153521.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111153457.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111153417.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111153309.png",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/11 Lez 13 compressione 2024-25.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111153155.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111153141.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.09.01.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.07.01.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.05.14.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.06.16.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.07.01.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.10.27.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.04.15.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/11 Lez 13 compressione 2024-25.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260110200615.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260110200422.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260110200312.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.02.17.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251103203729.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas",
     "README.md",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109181937.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109181651.png",
-    "Pasted image 20260109181623.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109180653.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109180154.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260109150736.png",
     "Senza nome.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
     "UNI/Senza nome.md",
