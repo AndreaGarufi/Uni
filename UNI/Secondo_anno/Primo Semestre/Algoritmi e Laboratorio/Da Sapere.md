@@ -222,7 +222,7 @@ Ecco un esempio in pseudocodice
 questo se lo rappresento come un albero
 ![[Pasted image 20251103204132.png|400]]
 
-Questo se lo rappresento come un array
+Questo se lo rappresento come un array (questo è il min heap, esiste la versione per il max heap)
 1) `heapfy(H,i)`
 2)     `l = left(i)`
 3)     `r = right(i)`

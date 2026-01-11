@@ -58,23 +58,20 @@ All'esame vanno scritte anche le funzioni heapfy e increaseKey, in generale se f
 ### 17 Febbraio 2025
 Scrivere una procedura UpdateKey(H, i, k) che aggiorni, in un Heap Binario Massimo, la chiave in posizione i con il nuovo valore k, e ripristini le proprietà dell’heap massimo. L’algoritmo deve gestire correttamente entrambi i casi in cui $k > H[i]$ e $k < H[i]$
 
-`// Procedura principale`
-`UPDATE-KEY(H, i, k)`
-    `if (k == H[i]) return  // Nessun cambiamento`
-    `vecchia_chiave = H[i]`
+`updateKey(H,i,k)`
+	`if i > heapsize return`
+	`if k > H[i] then increaseKey(H,i,k)`
+	`else if k < H[i] then 
+		`H[i] = k`
+		`max-heapfy(H,i)`
+
+`INCREASE-KEY(H,i,k)`
     `H[i] = k`
-    `// CASO 1: AUMENTO DELLA CHIAVE (Increase-Key)`
-    `// Il valore è cresciuto, quindi deve potenzialmente salire`
-    `if (k > vecchia_chiave) then`
-        `// Continua a scambiare col padre finché il nodo è maggiore del padre`
-        `while (i > 0 AND H[parent(i)] < H[i]) do`
-            `swap(H, i, parent(i))`
-            `i = parent(i)`
-    `// CASO 2: DIMINUZIONE DELLA CHIAVE (Decrease-Key)`
-    `// Il valore è diminuito, quindi deve potenzialmente scendere`
-    `else` 
-        `// Chiamiamo la procedura standard che ripara il sottoalbero verso il basso`
-        `MaxHeapify(H, i)`
+    `while (i > 1 and H[parent(i)] < H[i]) do`
+        `swap(H,i,parent(i))`
+        `i = parent(i)`
+
+quando ho un max heap in questo caso per gestire entrambi i casi devo chiamare increaseKey quando $k > H[i]$ e quando invece è minore chiamo max-heapfy, con il min heap funziona al contrario devo chiamare decreaseKey
 
 ### 16 Giugno 2025
 
@@ -82,4 +79,48 @@ Consegna:
 scrivere la procedura heapMerge(H1,H2,n) (n è il numero di chiavi)
 La procedura deve avere complessità $O(n)$
 
-pag 6 note numero 6
+`Heap-merge(H1,H2,n)`
+     `H = newArray(2n)`
+     `for i = 0 to n do`
+         `H[i] = H1[i]`
+         `H[i+n] = H2[i]`
+    `buildMax-heap(H,2n)`
+
+
+### 1 Settembre 2025
+Si fornisca un funzione ricorsiva, IsHeap(A, i), che preso in input un Max-Heap A (rappresentato come un array) e un indice i > 0, verifica se il sotto albero radicato in nel nodo i di A sia effettivamente un Heap, ovvero rispetti la proprietà dell’ordinamento parziale. La procedura restituisce True/False.
+
+`IsHeap(A, i)`
+    `// Calcolo indici dei figli`
+    `l = 2*i + 1`
+    `r = 2*i + 2`
+    `// CASO BASE IMPLICITO:`
+    `// Se i nodi l o r escono dall'array, quel ramo è valido (è NULL).`
+    `// I controlli "if l < heapSize" e "if r < heapSize" gestiscono le foglie.`
+    `// 1. CONTROLLO SOTTOALBERO SINISTRO`
+    `if l < heapSize then`
+        `// Violazione locale: il figlio è maggiore del padre`
+        `if A[l] > A[i] then return False`
+        `// Violazione ricorsiva nel sottoalbero sinistro`
+        `if IsHeap(A, l) == False then return False`
+    `// 2. CONTROLLO SOTTOALBERO DESTRO`
+    `if r < heapSize then`
+        `// Violazione locale: il figlio è maggiore del padre`
+        `if A[r] > A[i] then return False`    
+        `// Violazione ricorsiva nel sottoalbero destro`
+        `if IsHeap(A, r) == False then return False`
+    `// Se non ho trovato violazioni, è un Heap valido`
+    `return True`
+
+versione senza commenti:
+`IsHeap(A, i)`
+    `l = 2*i + 1`
+    `r = 2*i + 2`
+    `if l < heapSize`
+        `if A[l] > A[i] or IsHeap(A, l) == False`
+            `return False`
+    `if r < heapSize`
+        `if A[r] > A[i] or IsHeap(A, r) == False`
+            `return False`
+    `return True`
+
