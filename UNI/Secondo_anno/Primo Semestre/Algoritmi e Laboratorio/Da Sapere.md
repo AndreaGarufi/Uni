@@ -1434,6 +1434,8 @@ Rilassando gli archi di un DAG (Directed Acyclic Graph) pesato $G=(V,E)$ secon
 6)          `for each u in Adj[u]`
 7)              `RELAX(u,v)`
 
+
+
 **Risolviamo il problema nel caso in cui ci siano cicli negativi usando Bellman-Ford**
 
 ![[Pasted image 20260111165500.png|400]]
@@ -1444,9 +1446,27 @@ $V-1$ perché è la lunghezza massima di un cammino minimo in un grafo
 
 Vediamone lo Pseudocodice, questo algoritmo ha complessità $O(V*E)$ se si usano liste di adiacenza e $O(V^3)$ se si usano matrici di adiacenza
 
-1) Bellman-Ford(G,s,v)
-2) 
+1) `Bellman-Ford(G,s,w)`
+2)     `d = newArray(len(v))`
+3)     `for each v ∈ V do`
+4)         `d[v] = +∞`
+5)         `π[v] = NULL` -> padre nodo corrente
+6)     `d[s] = 0`
+7)     `for i = 0 to V-1 do` -> V-1 -> è questa la lunghezza massima di un cammino minimo
+8)         `for each (u,v) ∈ E do`
+9)             `relax(u,v,w)`
+10)   `for each (u,v) ∈ E do` -> ultimo relax che (V in totale) così da trovare cicli negativi
+11)       `if(d[v] > d[u]+w(u,v)) then`
+12)           `return FALSE`
+13)   `return TRUE`
 
+*riga 1* -> dichiarazione della funzione, prende in input il grafo G, la sorgente s e un array con i pesi w
+*riga 2* -> creo un array che ha lunghezza pari al numero di vertici
+*riga 3-5* -> per ogni nodo v inizializza la stima della distanza a +infinito e il padre di ogni nodo a NULL
+*riga 6* -> imposta la distanza da s a 0
+*riga 7-9* -> questa è la parte principale, ogni arco viene rilassato V-1 volte (V-1 perché è la lunghezza massima di un cammino minimo) (*chiede all'esame*)
+*riga 10-12* -> rilassa un ultima volta, che sarebbe una volta in più del necessario perché se effettivamente funziona e gli archi si rilassano allora c'è un ciclo negativo e la funzione ritorna FALSE non essendoci un cammino minimo
+*riga 13* -> se non si sono rilassati allora il grafo non ha cicli negativi quindi ritorna TRUE e abbiamo così il nostro cammino minimo
 
 
 | **Caratteristica** | **Algoritmo Generico (Generic-SSSP)**                                            | **Bellman-Ford**                                                                                         |

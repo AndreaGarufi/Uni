@@ -14,6 +14,12 @@ Ad esempio nel problema dei cammini minimi nei grafi se parto da un nodo A potre
 ![[Pasted image 20260111165500.png|400]]
 Questa è la configurazione iniziale prima di iniziare l'algoritmo, man mano che eseguo le relax i nodi si spostano dall'insieme dei nodi nuovi a quello dei calcolati, solo in questa direzione, normalmente l'insieme dei nodi calcolati all'inizio contiene solo la sorgente S, ma nel caso in cui nel grafo ci siano nodi isolati questi si troveranno già qui, solo che noi lo scopriremo alla fine dell'algoritmo (si trovano li perché da soli costituiscono un cammino minimo)
 
+*Perché nell'algoritmo di Bellman-Ford nel for principale la i arriva fino a V-1?*
+ `for i = 0 to V-1 do`
+    `for each (u,v) ∈ E do` 
+        `relax(u,v,w)`
+
+Perché la lunghezza massima di un cammino minimo è $V-1$, alla fine viene eseguito un ultima volta (ovvero quindi V volte in totale) perché se effettivamente gli archi si rilassano V volte allora c'è un ciclo negativo e l'algoritmo ci avvisa
 
 **Problemi esami con heap**
 

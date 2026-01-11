@@ -22,18 +22,6 @@
             }
           },
           {
-            "id": "75e02cd0467878d5",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/19 - 9 gennaio 2026.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "19 - 9 gennaio 2026"
-            }
-          },
-          {
             "id": "74fe3dfa69e8cb1a",
             "type": "leaf",
             "state": {
@@ -47,7 +35,8 @@
               "title": "Domande_Problemi esami"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -193,12 +182,49 @@
       "bases:Create new base": false
     }
   },
-  "active": "5729de238c31a30e",
+  "floating": {
+    "id": "9fd9739bdbabcc5a",
+    "type": "floating",
+    "children": [
+      {
+        "id": "280e681056d17d21",
+        "type": "window",
+        "children": [
+          {
+            "id": "056ec88351932dda",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "75e02cd0467878d5",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/19 - 9 gennaio 2026.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "19 - 9 gennaio 2026"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1539,
+        "y": 3,
+        "width": 1530,
+        "height": 858,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "74fe3dfa69e8cb1a",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/19 - 9 gennaio 2026.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111165500.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/19 - 9 gennaio 2026.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111165500.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111153521.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111153457.png",
