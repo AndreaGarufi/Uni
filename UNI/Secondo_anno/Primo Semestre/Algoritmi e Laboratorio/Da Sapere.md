@@ -1431,7 +1431,7 @@ Rilassando gli archi di un DAG (Directed Acyclic Graph) pesato $G=(V,E)$ secon
 3)         `d[v] = +∞`
 4)     `esegui DFS per calcolare il tempo di fine visita F[v]`
 5)     `for each v ∈ V do` -> in ordine topologico
-6)          `for each u in Adj[u]`
+6)          `for each u in Adj[u] do`
 7)              `RELAX(u,v)`
 
 
@@ -1468,6 +1468,9 @@ Vediamone lo Pseudocodice, questo algoritmo ha complessità $O(V*E)$ se si usano
 *riga 10-12* -> rilassa un ultima volta, che sarebbe una volta in più del necessario perché se effettivamente funziona e gli archi si rilassano allora c'è un ciclo negativo e la funzione ritorna FALSE non essendoci un cammino minimo
 *riga 13* -> se non si sono rilassati allora il grafo non ha cicli negativi quindi ritorna TRUE e abbiamo così il nostro cammino minimo
 
+All'esame potrebbe esserci un applicazione di questo tipo in cui passo passo eseguiamo l'algoritmo
+Si inizia dal nodo A e dobbiamo trovare il cammino minimo per arrivare a ogni nodo:
+![[Screenshot_20260110_103629_Samsung capture.jpg|600]]
 
 | **Caratteristica** | **Algoritmo Generico (Generic-SSSP)**                                            | **Bellman-Ford**                                                                                         |
 | ------------------ | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -1475,3 +1478,27 @@ Vediamone lo Pseudocodice, questo algoritmo ha complessità $O(V*E)$ se si usano
 | **Cicli Negativi** | **Loop Infinito**: continua a rilassare gli archi del ciclo senza mai fermarsi.  | **Rilevamento**: esegue un controllo finale (la V-esima volta) per segnalare se esistono cicli negativi. |
 | **Terminazione**   | **Non garantita** se il grafo contiene cicli di peso negativo raggiungibili.     | **Garantita** sempre, perché il numero di iterazioni è fissato.                                          |
 | **Complessità**    | Potenzialmente **esponenziale** $O(2^V)$ nel caso peggiore.                      | Determinata: **$O(V \cdot E)$** con liste di adiacenza o **$O(V^3)$** con matrice.                       |
+
+**Algoritmo di Dijkstra**
+*Questo algoritmo lavora solo con pesi positivi*, se incontra un peso o un loop negativo fallisce
+Vediamo lo pseudocodice, ha complessità $O((V+E)log\,\,V)$ 
+
+1) `Dijkstra(G,s,w)`
+2)     `d = newArray(len(V))`
+3)     `for each v ∈ V do`
+4)          `d[v] = +∞`
+5)          `π[v] = NULL` -> padre del nodo corrente
+6)     `d[s] = 0`
+7)     `Q = buildmin-heap(v)`
+8)     `while Q ≠ 0 do`  -> qua dentro voglio prendere il nodo v con stima più piccola in v-s
+9)          `v = extractMin(Q)`
+10)        `for each u in Adj[u] do`
+11)             `if d[u] > d[v] +w(v,u) then`
+12)                    `decreaseKey(Q,u,d[v]+w(v,u))`
+
+*riga 1* -> definizione della funzione, prende in input il grafo G, la sorgente s e l'array dei pesi w
+*riga 2* -> crea un array d di lunghezza pari al numero di nodi, che conterrà la stima
+*riga 3-5* -> per ogni nodo v imposta la distanza dalla sorgente a + infinito, e il padre di ogni nodo a NULL
+*riga 6* -> imposta la distanza da s (sorgente) a 0
+*riga 7* -> in Q crea un min-heap 
+*riga 8* -> 

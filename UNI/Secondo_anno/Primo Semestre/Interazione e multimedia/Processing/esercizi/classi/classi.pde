@@ -15,7 +15,7 @@ void setup(){
 void draw(){
 
   background(0);
-  for (Square quadrato:ab){    //oggetto square di nome quadrato, scorre ogni cella di ab se entro c'è qualcosa esegue run()
+  for (Square quadrato:ab){    //oggetto square di nome quadrato, scorre ogni cella di ab se dentro c'è qualcosa esegue run()
     quadrato.run();
   }
 }
