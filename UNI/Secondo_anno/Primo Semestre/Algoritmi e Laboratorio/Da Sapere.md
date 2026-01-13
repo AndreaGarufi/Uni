@@ -1502,3 +1502,7 @@ Vediamo lo pseudocodice, ha complessità $O((V+E)log\,\,V)$
 *riga 6* -> imposta la distanza da s (sorgente) a 0
 *riga 7* -> in Q crea un min-heap 
 *riga 8* -> 
+
+
+Applicazione di Dijkstra, potrebbe chiedere all'esame
+![[Pasted image 20260113173215.png|600]]

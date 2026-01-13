@@ -21,6 +21,8 @@ Questa è la configurazione iniziale prima di iniziare l'algoritmo, man mano che
 
 Perché la lunghezza massima di un cammino minimo è $V-1$, alla fine viene eseguito un ultima volta (ovvero quindi V volte in totale) perché se effettivamente gli archi si rilassano V volte allora c'è un ciclo negativo e l'algoritmo ci avvisa
 
+
+
 **Problemi esami con heap**
 
 ### 6 Settembre 2024
