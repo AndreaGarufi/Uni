@@ -1492,7 +1492,7 @@ Vediamo lo pseudocodice, ha complessità $O((V+E)log\,\,V)$
 7)     `Q = buildmin-heap(v)`
 8)     `while Q ≠ 0 do`  -> qua dentro voglio prendere il nodo v con stima più piccola in v-s
 9)          `v = extractMin(Q)`
-10)        `for each u in Adj[u] do`
+10)        `for each u in Adj[v] do`
 11)             `if d[u] > d[v] +w(v,u) then`
 12)                    `decreaseKey(Q,u,d[v]+w(v,u))`
 
@@ -1501,8 +1501,9 @@ Vediamo lo pseudocodice, ha complessità $O((V+E)log\,\,V)$
 *riga 3-5* -> per ogni nodo v imposta la distanza dalla sorgente a + infinito, e il padre di ogni nodo a NULL
 *riga 6* -> imposta la distanza da s (sorgente) a 0
 *riga 7* -> in Q crea un min-heap 
-*riga 8* -> 
-
-
-Applicazione di Dijkstra, potrebbe chiedere all'esame
+*riga 8* -> ciclo principale che viene eseguito finché Q non è vuoto
+*riga 9* -> passo greedy, estrae il nodo con la stima $d[v]$ più piccola fino a quel momento
+*riga 10-12* -> per ogni nodo vicino di v (v è il nodo con la stima minima estratto prima) facciamo un relax, ovvero controlliamo se la distanza $d[u]$ è maggiore di $d[v]+w(v,u)$, se è così allora abbiamo trovare un nuovo cammino minimo, e aggiorniamo la coda Q (essendo un min-heap possiamo cambiare la priorità nella coda usando decreaseKey)
+ 
+Applicazione di Dijkstra, potrebbe chiederla all'esame
 ![[Pasted image 20260113173215.png|600]]
