@@ -135,3 +135,12 @@ versione senza commenti:
             `return False`
     `return True`
 
+### 27 Ottobre 2025
+Un sistema registra in tempo reale i punteggi dei giocatori di un videogioco online. Si vuole man- tenere in ogni momento la Top-Ten dei giocatori con i punteggi più alti, aggiornandola in tempo efficiente man mano che arrivano nuovi risultati. Per ciascun giocatore si considera solo il suo punteggio migliore. Progettare un algoritmo e una struttura dati che permettano di aggiornare la classifica dopo ciascun nuovo punteggio. Descrivere l’idea di base e stimare la complessità dell’operazione di aggiornamento della struttura.
+
+Useremo un min heap che conterrà i 10 punteggi più alti, quindi la root sarà il punteggio più alto in assoluto
+
+`topTen(H,i,p)`
+    `if p > H[0] then`
+		`H[0] = p`
+		`min-heapfy(H,0)`
