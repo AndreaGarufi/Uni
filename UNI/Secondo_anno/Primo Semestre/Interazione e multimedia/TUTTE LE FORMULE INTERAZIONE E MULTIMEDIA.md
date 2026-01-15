@@ -135,3 +135,181 @@ La binarizzazione sceglie un valore soglia: i pixel al di sotto diventano neri q
 
 
 **FINE  ARGOMENTI PROVA IN ITINERE 1**
+
+**INIZIO ARGOMENTI PROVA IN ITINERE 2**
+Un operatore $F: V\rightarrow W$ si dice lineare se per ogni coppia di vettori $v_1,v_2$ in $V$ e per ogni coppia di numeri reali $a,b$ si ha che:
+$$F(a*v_1 + b*v_2) = a*F(v_1)+b*F(v_2)$$
+
+Per indicare l' operazione di convoluzione si usa la notazione:
+$$g = f ⊛h$$
+La convoluzione è commutativa:
+$$f⊛h = h ⊛f$$
+La convoluzione è associativa:
+$$(f⊛h)⊛h_1 = f⊛(h⊛h_1)$$
+
+
+Applicare un kernel $h$ di dimensioni s x t ad un immagine se gli indici del kernel sono disposti in modo da avere gli indici (0,0) al centro:
+![[Pasted image 20260115211945.png|600]]
+
+Applicare un kernel $h$ di dimensioni s x t ad un immagine se gli indici del kernel sono disposti partendo da 1 fino ad arrivare a s e t:
+![[Pasted image 20260115212028.png]]
+
+Applicare un filtro lineare e shift invariante ad una immagine è equivalente a calcolare la convoluzione del kernel del filtro con l’immagine.
+
+Esempi di operatori locali:
+- Mediano -> È un filtro non lineare che fornisce in uscita il valore mediano dell’intorno del pixel
+  
+- Minimo e massimo -> preso un intorno mxn di pixel si sostituiscono tutti i valori di questi pixel con il valore minimo/massimo rilevato in quell'intorno
+
+- N-box o di media-> Sono definiti da kernel N x N con ogni elemento pari a $1/N^2$, sfocano le immagini
+
+- N-binomiale o filtri gaussiani -> smussano meno vigorosamente degli N-box
+
+Per rimuovere i 2 tipi di rumori solitamente si usano i filtri di media e mediano, quelli mediani funzionano meglio
+
+Kernel notevoli: lati orizzontali
+![[Pasted image 20260115213123.png|500]]
+
+Kernel notevoli: lati verticali
+![[Pasted image 20260115213153.png|500]]
+
+Formula magnitudo:
+$$
+magnitudo = \sqrt{sobel_x^2 + sobel_y^2}
+$$
+
+Kernel notevole: laplaciano
+![[Pasted image 20260115213308.png|500|300]]
+
+
+Formula Trasformata di Fourier (da immagine a frequenza)
+$$
+F(u,v) = \frac{1}{MN} \sum_{x=0}^{M-1} \sum_{y=0}^{N-1} f(x,y) e^{-i 2\pi (\frac{ux}{M} + \frac{vy}{N})} \quad \text{per } u=0,\dots,M-1,\ v=0,\dots,N-1
+$$
+
+Formula Antirasformata di Fourier (da frequenza a immagine)
+$$
+f(x,y) = \sum_{u=0}^{M-1} \sum_{v=0}^{N-1} F(u,v) e^{i 2\pi (\frac{ux}{M} + \frac{vy}{N})} \quad \text{per } x=0,\dots,M-1,\ y=0,\dots,N-1
+$$
+
+Formula di Eulero
+$e^{ix} = cos(x) + i*sen(x)$      e        $e ^{-ix} = cos(x) - i*sen(x)$
+
+Formula spettro della trasformata
+$$
+|F(u,v)| = \sqrt{R^2(u,v) + I^2(u,v)}
+$$
+
+Formula angolo di fase
+$$
+\phi(u,v) = \tan^{-1} \left[ \frac{I(u,v)}{R(u,v)} \right]
+$$
+
+Formula potenza spettrale
+$$
+P(u,v) = |F(u,v)|^2 = R^2(u,v) + I^2(u,v)
+$$
+
+Quando si visualizza a schermo lo spettro di Fourier, come immagine di intensità, non si riescono a visualizzare le parti meno luminose, quindi si usa una compressione di tipo logaritmico che permette di visualizzarle:
+$D(u,v)=c log(1+ F(u,v))$
+
+
+Proprietà di separabilità della DFT 2-D
+   $$
+F(u,v) = \frac{1}{M} \sum_{x=0}^{M-1} k(x,v) e^{\frac{-i 2\pi ux}{M}}
+$$
+
+Dove:
+
+$$
+k(x,v) = \left[ \frac{1}{N} \sum_{y=0}^{N-1} f(x,y) e^{\frac{-i 2\pi vy}{N}} \right]
+$$
+Il principale vantaggio delle proprietà di separabilità è che la 𝐹(𝑢, 𝑣) può essere ottenuta applicando in due passi successivi la trasformata 1-D
+
+
+Fast Fourier Transform (DFT ottimizzata)
+$$
+F(u) = \frac{1}{N} \sum_{x=0}^{N-1} f(x) \exp [ -i 2\pi ux / N ]
+$$
+
+Teorema convoluzione:
+La trasformata della convoluzione di due segnali nel dominio spaziale equivale al prodotto delle trasformate dei due segnali.
+
+che significa anche:
+La convoluzione di due segnali nel dominio spaziale equivale all’antitrasformata del prodotto delle trasformate dei due segnali.
+
+Formula convoluzione nel *dominio spaziale*:
+$$
+g(x,y) = f(x,y) \circledast h(x,y) = \frac{1}{MN} \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} f(m,n)h(x-m, y-n)
+$$
+ad un immagine f viene applicato un kernel h
+
+l'equivalente operazione nel *dominio delle frequenze*, moltiplicazione tra trasformate di Fourier
+$$
+G(u,v) = F(u,v)H(u,v)
+$$
+moltiplicazione tra antitrasformate di Fourier
+$$
+g(x,y) = F^{-1} \{ F(u,v)H(u,v) \}
+$$
+
+
+Filtri low-pass nel dominio della frequenza
+![[Pasted image 20260115215316.png]]
+
+Filtri high-pass nel dominio della frequenza
+![[Pasted image 20260115215341.png]]
+
+Filtri band reject nel dominio della frequenza
+![[Pasted image 20260115215436.png]]
+
+
+Compressione:
+Formula frequenza carattere $a_i$:
+$f_i = (\# occorrenze \,\,\,a_i )/N$
+
+Formula entropia:
+$E = - \sum f_i \log_2(f_i)\,\,\,\,i ∈ S$
+
+Teorema di Shannon
+I dati possono essere rappresentati senza perdere informazione (lossless) usando almeno un numero di bit pari a: $N*E$
+Dove N è il numero di caratteri mentre E è l’entropia. 
+
+
+Formula Trasformata Discreta del Coseno DCT
+$$
+F(u,v) = \frac{2}{N} \left[ \sum_{x=0}^{N-1} \sum_{y=0}^{N-1} C(u)C(v)f(x,y) \cos \frac{(2x+1)u\pi}{2N} \cos \frac{(2y+1)v\pi}{2N} \right]
+$$
+Formula antitrasformata
+$$
+f(x,y) = \frac{2}{N} \left[ \sum_{u=0}^{N-1} \sum_{v=0}^{N-1} C(u)C(v)F(u,v) \cos \frac{(2x+1)u\pi}{2N} \cos \frac{(2y+1)v\pi}{2N} \right]
+$$
+Dove:
+
+$$
+C(u) = \begin{cases} 
+\frac{1}{\sqrt{2}} & \text{per } u = 0 \\
+1 & \text{altrimenti}
+\end{cases}
+$$
+$$
+C(v) = \begin{cases} 
+\frac{1}{\sqrt{2}} & \text{per } v = 0 \\
+1 & \text{altrimenti}
+\end{cases}
+$$
+
+Formula quantizzazione (JPEG)
+$$F_{quantizzato}= round(F/Q)$$
+dove F e un numero e Q e un fattore di quantizzazione
+
+
+Formula codice grey
+$$
+\begin{aligned}
+g_i &= a_i \oplus a_{i+1} & 0 \le i \le m-2 \\
+g_{m-1} &= a_{m-1}
+\end{aligned}
+$$
+dove ⊕ denota l'operatore di XOR (or esclusivo)
+
