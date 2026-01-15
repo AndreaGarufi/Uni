@@ -1,6 +1,6 @@
 
-
-/*float scale = 0.2; //zoom e de-zoom
+/*
+float scale = 0.2; //zoom e de-zoom
 float dir_scale = 1;
 
 void setup(){
@@ -25,10 +25,12 @@ void draw(){
   if(scale >= 1 || scale <= 0){
   dir_scale = -dir_scale;
   }
-}*/
+}
+*/
 
-
-/*float shX = 0.1;
+/*
+//applicazione della trasformazione affine shear
+float shX = 0.1;
 float shY = 0.1;
 
 void setup(){
@@ -38,26 +40,26 @@ void setup(){
   stroke(255,0,0);
   strokeWeight(5);
   rectMode(CENTER);
-  frameRate(10);
+  frameRate(5);
 }
 
 void draw(){
   background(255,255,255);
   translate(width/2,height/2);
-  shearX(shX);
-  shearY(shY);
+  shearX(shX);    //applica lo shear all'asse X 
+  shearY(shY);    //questo all'asse Y
   rect(0,0,150,150);
-   shX = shX +0.1;
+   shX = shX +0.1;    
    //println(shX);
    shY = shY +0.1;
-}*/
+}
+*/
 
 
 
-
-
- //palla che gira e schiarisce mentre gira
-/*float rotAngle =  10;
+/*
+//palla che gira e schiarisce mentre gira
+float rotAngle =  10;
 
 void setup(){
   size(600,600);
@@ -73,7 +75,8 @@ void draw(){
     fill(255,0,0);
     ellipse(250,0,20,20);
     rotAngle+=20;
-}*/
+}
+*/
 
 /*
 int a1 = 0;  //quadrati che girano indipendentemente
@@ -106,4 +109,5 @@ void draw(){
   a1++;
   a2 = a2+4;
 
-}*/
+}
+*/

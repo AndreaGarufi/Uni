@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "9fdff94b40e5cd29",
+        "id": "ad527d2bbbbe230e",
         "type": "tabs",
         "children": [
           {
-            "id": "5729de238c31a30e",
+            "id": "61afe7cdc177fd3e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Da Sapere"
-            }
-          },
-          {
-            "id": "74fe3dfa69e8cb1a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Domande_Problemi esami"
+              "title": "Nuova scheda"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -182,31 +163,32 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "74fe3dfa69e8cb1a",
+  "active": "61afe7cdc177fd3e",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/23_02_21.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/Non confermato 280513.crdownload",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/06_12_22.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/Non confermato 319923.crdownload",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/24_02_23.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/Non confermato 700485.crdownload",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/08_02_22.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/Non confermato 13837.crdownload",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_07_22.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/Non confermato 399606.crdownload",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_06_22.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/Non confermato 661553.crdownload",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.10.27.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/6 29 ottobre 2025_251029_105857.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/5 algoritmi e laboratorio.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/19 - 9 gennaio 2026.pdf",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260113173215.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Screenshot_20260110_103629_Samsung capture.jpg",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251003193539.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20251029163132.png",
     "Pasted image 20260113173111.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/11 Lez 13 compressione 2024-25.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111165500.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111153521.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111153457.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111153417.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260111153309.png",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.09.01.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.05.14.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.06.16.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.07.01.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.04.15.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas",
     "README.md",
     "Senza nome.md",

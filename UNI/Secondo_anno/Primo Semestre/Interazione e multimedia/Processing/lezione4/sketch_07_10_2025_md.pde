@@ -1,4 +1,6 @@
 
+/*
+//pallina che gira rispetto alla canvas che viene anche spostata
 void setup(){
   size(500,500);
 }
@@ -16,9 +18,9 @@ void draw(){
   strokeWeight(5);
   stroke(255,0,0);
   line(0,0,20,0);
-  
-  
 }
+*/
+
 
 /*
 // Rotate e translate
@@ -30,7 +32,7 @@ void setup(){
 void draw(){
   background(0);
   translate(width/2, height/2); // cambia il sistema di riferimento il nuovo punto 0,0 -> 250,250
-  rotate(radians(a));//routa la canvas rispetto al punto 0,0
+  rotate(radians(a));//routa la canvas rispetto al punto 0,0 (cioè 250,250)
   //rect(width/2, height/2 ,50, 50); // ruota rispetto al centro nel caso senza il translate
   fill(255);
   rect(-25, -25 ,50, 50);

@@ -30,13 +30,13 @@ void keyPressed(){
     typing = typing + key;
   }
 }
-
+*/
 /*
 size(500, 500);
 fill(0, 100, 150);
-textSize(50);
+textSize(30);
 String x = "Stringa più lunga di una semplice parola";
-text(x,10,40,100,220);
+text(x,10,40,500,500);
 */
 /*
 void setup(){
