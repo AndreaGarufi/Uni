@@ -1376,7 +1376,7 @@ Abbiamo 4 tipi di cammini minimi
 3. _Problema dei cammini minimi fra tutte le coppie di vertici(all-pairs)_: trovare un cammino minimo da u a v per ogni coppia di vertici. 
 4. _Problema del cammino minimo per una coppia di vertici(single pair)_: trovare un cammino minimo da u a v, è una variante del primo problema.
 
-Affronteremo solo il primo e il terzo.
+Affronteremo solo il primo e il terzo, iniziamo con il primo problema, **Single-Source-Shortest-Path**
 
 **Dimostrazione cammino minimo e sottostruttura ottima**
 Dimostrazione per assurdo:
@@ -1507,3 +1507,6 @@ Vediamo lo pseudocodice, ha complessità $O((V+E)log\,\,V)$
  
 Applicazione di Dijkstra, potrebbe chiederla all'esame
 ![[Pasted image 20260113173215.png|600]]
+
+
+Vediamo adesso il 3 problema **All-Pairs-Shortest-Path**
