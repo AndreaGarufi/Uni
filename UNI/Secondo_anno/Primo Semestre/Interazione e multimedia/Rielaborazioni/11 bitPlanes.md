@@ -57,3 +57,5 @@ Si osservi il caso con maggiore variazione in binario, quello relativo ai numeri
 
 **Binario puro VS Gray Code**
 ![[Pasted image 20260116221252.png]]
+![[Pasted image 20260116221323.png]]
+
