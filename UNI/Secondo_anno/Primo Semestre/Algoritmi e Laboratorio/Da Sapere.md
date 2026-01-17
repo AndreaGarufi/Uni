@@ -1509,4 +1509,173 @@ Applicazione di Dijkstra, potrebbe chiederla all'esame
 ![[Pasted image 20260113173215.png|600]]
 
 
-Vediamo adesso il 3 problema **All-Pairs-Shortest-Path**
+Vediamo adesso il 3 problema **All-Pairs-Shortest-Path  (APSP)**
+
+$\delta(u,v)=$ al cammino minimo tra u e v per qualsiasi u,v appartenenti a V
+$\delta(v,v) = 0$
+Noi potremmo usare gli algoritmi visti per il SSSP eseguirli V volte e ottenere i cammini minimi per tutte le coppie, ma è conveniente? Vediamo:
+
+
+| Algoritmo    | SSSP          | APSP          |
+| ------------ | ------------- | ------------- |
+| Bellman-Ford | $O(V^3)$      | $O(V^4)$      |
+| Dijkstra     | $O(V^2\log V$ | $O(V^3\log V$ |
+| DAG          | $O(V^2)$      | $O(V^3)$      |
+Come si vede aumentiamo di un ordine di grandezza la complessità, riusciamo a fare meglio di così? Creiamo un nuovo algoritmo
+Useremo la programmazione dinamica (salteremo il punto 1 sottostruttura ottima perché è già stato dimostrato)
+
+Identifichiamo la dimensione del problema attraverso: *Il numero di archi che possono essere presenti in un cammino minimo, cioè la lunghezza massima di un cammino minimo* -> $d$ 
+![[Pasted image 20260117132038.png]]
+Se possiamo usare 0 archi la distanza tra u e v è infinita, se ne possiamo usare solo 1 allora è 7 e cosi via...
+Quindi partiremo da $d=0$ fino a scendere pian piano verso $d=V-1$, usando una matrice di adiacenza W
+prendiamo quindi questo come caso base:
+$$
+W[i, j] = \begin{cases} 
+0 & \text{se } i = j \\
+\text{peso}(i, j) & \text{se } (i, j) \in E \\
++\infty & \text{se } (i, j) \notin E, \ i \neq j
+\end{cases}
+$$
+
+Adesso useremo un concetto simile alla relax di un arco:
+![[Pasted image 20260117134706.png|300]]
+ovvero devo quindi capire se il cammino $\delta^{d-1}(u,v)$ è migliore o peggiore del cammino $\delta^{d-1}(u,k)+w(k,v)$ 
+quindi per qualsiasi k che trovo:
+`if(δ_d-1(u,k) +w(k,v) < δ_d-1(u,v)) then`
+	`δ_d(u,v) = δ_d-1(u,k) +w(k,v)`
+	`else` 
+		`δ_d(u,v) = δ_d-1(u,v)`
+
+$$
+l^d(i, j) = \begin{cases} 
+w[i, j] & \text{se } d = 1 \\
+\min\limits_{1 \le k \le n} \left( l^{d-1}(i, k) + w(k, j) \right) & \text{se } d > 1 \\
+\end{cases} 
+$$
+dove:
+$l^d(i, j)$ è la matrice di adiacenza dei cammini minimi tra le coppie
+$w(k, j)$ è il peso dell'arco da k a j
+controlliamo il minimo un totale di $n$ volte ($n = |V|$) usando k come contatore, inizialmente e 1 poi 2 fino ad n
+
+Vediamo lo pseudocodice, con complessità $O(V^3)$ il primo e $O(V)$ il secondo che insieme fanno $O(V^4)$
+Questa funzione calcola i percorsi con **un arco in più** rispetto a prima
+1) `extend-APSP(l^d,W)`
+2)     `l^d+1 = newMatrix(n,n)`
+3)     `for i = 1 to n do`
+4)         `for j = 1 to n do`
+5)               `l^d+1[i,j] = +∞`
+6)               `for k = 1 to n do`
+7)                     `if l^d[i,k] + w(k,j) < l^d+1[i,k] then`
+8)                           `l^d+1[i,j] = l^d[i,k] +w(k,j)`
+
+*riga 1* -> definizione della funzione, prende in input la matrice $l^d$ che contiene i cammini minimi fino a quel punto trovati, e W che è la matrice di adiacenza con i pesi degli archi
+*riga 2* -> crea una nuova matrice vuota dove scriveremo i risultati per d+1 (ovvero i cammini minimi nuovi scoperti usando un arco in più di prima)
+*riga 3-4* -> fa 2 for per scorrere la matrice
+*riga 5* -> inizializziamo tutta a la matrice a +infinito
+*riga 6* -> in questo ciclo proviamo tutti i possibili nodi intermedi k (sarebbe la parte del minimo nella formula)
+*riga 7-8* -> prende il costo calcolato precedentemente da i a k, gli somma il peso da k a j e controlla se è minore del costo da i a k nella matrice con un arco in più, se si allora nella matrice nuova scriveremo il nuovo cammino minimo
+
+questo codice va eseguito diverse volte partendo da d = 2 fino a V-1:
+
+Questa ripete il compito finché non hanno coperto tutte le lunghezze possibili
+1) `APSP(W)`
+2)      `l^1 = W`
+3)      `for d = 2 to V-1 do`
+4)            `l^d = extend-APSP(l^d-1,W)`
+5)      `return l^V-1` 
+
+*riga 1* -> definizione della funzione, prende in input la matrice con i pesi degli archi
+*riga 2* -> questo è il caso base, in cui si può usare un solo arco e quindi i cammini minimi sono semplicemente il peso di quegli archi
+*riga 3-4* -> questo ciclo inizia da d = 2 perché d = 1 lo abbiamo già calcolato e si ferma a V-1 perché V-1 è la lunghezza massima di un cammino minimo, poi chiama per la matrice di indice d la funzione di prima passando la matrice precedente e la matrice dei pesi
+*riga 5* -> ritorna l'ultima matrice che contiene i cammini minimi per ogni coppia di nodi
+
+Applichiamo questo algoritmo:
+![[Pasted image 20260117142518.png]]
+
+Questo algoritmo ha una complessità troppo alta, come lo miglioriamo?
+Anziché creare sempre matrici nuove ne possiamo creare una e per le altre moltiplichiamo sempre la stessa, in maniera ottimizzata...
+$l^1 = W$
+$l^2 = W*W$
+salto $l^3$
+$l^4 = l^2*l^2$
+$l^8 = l^4*l^4$ 
+e cosi via...
+
+la nostra funzione può quindi diventare:
+$$
+l^d(i, j) = \begin{cases} 
+w[i, j] & \text{se } d = 1 \\
+\min\limits_{1 \le k \le n} \left( l^{d/2}(i, k) + l^{d/2}(k, j) \right)
+\end{cases}
+$$
+
+1) `fast-APSP(W)`
+2)     `l^1 = W`
+3)     `d = 1`
+4)     `while d < V-1 do`
+5)          `l^2d = extend-APSP(l^d,l^d)`
+6)          `d = 2d`
+7)     `return l^d`
+
+Inserendo un iterazione in più capiamo se ci sono cicli negativi
+*riga 1* -> definizione della funzione, prende in input la matrice dei pesi W
+*riga 2* -> caso base
+*riga 3* -> impostiamo d = 1
+*riga 4-6* -> continuiamo a ciclare finché la lunghezza di d è minore di V-1 perché V-1 è la lunghezza massima di un cammino minimo, poi per la matrice 2d chiama la funzione passando $l^d$ e $l^d$ in questo modo non trova i percorsi di prima + un arco ma trova "percorso di lunghezza d + percorso di lunghezza d" in un colpo solo, quindi otteniamo un percorso di lunghezza 2d, aggiorniamo $d = 2d$
+*riga 7* -> ritorna $l^d$ cioè l'ultima matrice calcolata
+
+cosi facendo otteniamo una complessità di $O(v^3\log V)$ come l'algoritmo di Dijkstra ma con la differenza che possiamo usare archi di peso negativo
+
+Ma resta comunque abbastanza alta la complessità, si può abbassare ancora usando l'algoritmo di Floyd-Warshall
+**Floyd-Warshall**
+![[Pasted image 20260117150104.png|500]]
+Qui si usa un ragionamento diverso, ovvero anziché aumentare di 1 gli archi tutte le volte, aumentiamo di 1 i nodi visitabili, all'inizio avremo quindi $V_0 = \{0\},V_1 = \{v_1\},V_2 = \{v_1,v_2\}$ ecc... fino a $V_k = \{v_1,v_2,....,v_k\}$ , quindi *k sono i nodi interni da cui posso passare*, immaginiamo questo grafo:
+![[Pasted image 20260117150450.png|300]]
+$\delta^0(i,j)$ -> posso andare da 1 a 2 perché non passo da nodi interni, da 3 a 8 no
+$\delta^1(i,j)$ -> posso andare da 7 a 2 perché posso passare da 1 nodo interno
+
+Usiamo una matrice $D^k[i,j] = \delta^k(i,j)$ per memorizzare un cammino minimo
+La nostra funzione ricorsiva è quindi:
+$$
+D^k[i, j] = \begin{cases} 
+w[i, j] & \text{se } k = 0 \quad \text{caso base con } V^0 = \{\} \\
+\underbrace{\min}_{\substack{\text{non ho bisogno di un for} \\ \text{che scorre tutti i} \\ \text{nodi perché } k \text{ è definito}}} \left( D^{k-1}[i, j], \ D^{k-1}[i, k] + D^{k-1}[k, j] \right)& \text{se } k > 0
+\end{cases}
+$$
+dove:
+ $D^{k-1}[i, j]$ corrisponde alla soluzione del passo precedente
+nel minimo in pratica controllo se:![[Pasted image 20260117151322.png|260]]
+il cammino da i-k k-j è più breve del cammino i-j
+
+Prima di scrivere lo pseudocodice, per aiutarci a creare l'albero dei cammini minimi terremo conto del predecessore di un nodo, questa procedura ha complessità $O(V^3)$ esattamente come bellman-ford per risolvere l'SSSP
+
+1) `Floyd-Warshall(W)`
+2)      `D^0 = W;`
+3)      `π[i,j] =  ....`     i -> se (i,j) è un arco, altrimenti NULL
+4)      `for k = 1 to n do`
+5)            `D^k = newMatrix(n,n)`
+6)            `for i = 1 to n do` 
+7)                  `for j = 1 to n do`
+8)                        `D^k [i,j] = D^k-1[i,j]`
+9)                        `π^k[i,j] = π^k-1[i,j]`
+10)                      `if  D^k [i,j] > D^k-1[i,k] + D^k-1 [k,j] then`
+11)                           `D^k [i,j] = D^k-1[i,k] + D^k-1 [k,j]`
+12)                           `π^k[i,j] = π^k-1[k,j]`
+13)    `return D^k`
+
+*riga 1* -> definizione della funzione, prende in input la matrice dei pesi W
+*riga 2* -> caso base, non posso esplorare nodi interni quindi resta il semplice peso dell'arco
+*riga 3* -> Inizializza la matrice dei predecessori ($\pi$). Questa serve per ricostruire il percorso, per creare l'albero
+*riga 4* -> il ciclo più importante, la k rappresenta la quantità di nodi interni che possiamo usare
+*riga 5* -> prepara una nuova matrice, (nella realtà anziché creare k matrici ne usiamo solo 2 perché ci serve la corrente e la precedente, quando finisco con la corrente la faccio diventare la precedente e la precedente di prima la riuso come nuova matrice corrente)
+*riga 6-7* -> for per scorrere la matrice
+*riga 8-9* -> qui ipotizziamo che il percorso trovato precedentemente sia quello migliore
+*riga 10-12* -> qui ci chiediamo se il percorso attuale i-j sia più lungo di quello i-k + k-j, se si allora il percorso i-k + k-j diventa il nuovo percorso minimo i-j, e aggiorniamo anche la matrice dei predecessori
+*riga 13* -> ritorniamo la matrice dei cammini minimi
+
+Questo algoritmo avendo una complessità di $O(V^3)$ è il migliore per risolvere il problema APSP
+
+Eseguiamolo
+![[Pasted image 20260117153254.png]]
+
+
