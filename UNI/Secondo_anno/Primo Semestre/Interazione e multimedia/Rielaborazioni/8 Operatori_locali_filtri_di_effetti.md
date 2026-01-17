@@ -17,7 +17,7 @@ Si possono pensare come filtraggi dell’immagine
 Un filtraggio è ottenuto facendo la convoluzione tra l’immagine ed una matrice
 
 **Operatori Lineari**
-Alcuni operatori locali e possono avere questa proprietà, ovvero essere linari, infatti un operatore:
+Alcuni operatori locali e possono avere questa proprietà, ovvero essere lineari, infatti un operatore:
 $F:V \rightarrow W$ si dice lineare se per ogni coppia di vettori $v_1$ e $v_2$ in $V$ e per ogni coppia di scalari $a,b$ si ha che:
 $$F(a v_1 + b v_2 ) = a F(v_1 ) + b F(v_2 )$$
 
