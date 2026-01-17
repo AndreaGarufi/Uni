@@ -32,9 +32,19 @@
               "icon": "lucide-file",
               "title": "Da Sapere"
             }
+          },
+          {
+            "id": "9e7a2a7a6d0f5902",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -194,10 +204,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4ac3eff47c59e53b",
+  "active": "9e7a2a7a6d0f5902",
   "lastOpenFiles": [
-    "pdf.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/11 Lez 13 compressione 2024-25.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/12 Lez 11 BitPlanes 2024-24.pdf",
+    "pdf.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117153254.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/21 - 16 gennaio 2026.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117151322.png",
@@ -214,13 +229,8 @@
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117b/sketch_260117b.pde",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117b",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a/smile.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a/sketch_260117a.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a/MegaSmile.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_07_22.jpeg",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/11 bitPlanes.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/1 Modello relazionale dei dati.md",

@@ -165,6 +165,11 @@ Esempi di operatori locali:
 
 - N-binomiale o filtri gaussiani -> smussano meno vigorosamente degli N-box
 
+Formula rumore gaussiano bianco:
+$$
+p(z) = \frac{1}{\sqrt{2\pi}\sigma} e^{-(z-\bar{z})^2/2\sigma^2}
+$$
+
 Per rimuovere i 2 tipi di rumori solitamente si usano i filtri di media e mediano, quelli mediani funzionano meglio
 
 Kernel notevoli: lati orizzontali
@@ -225,6 +230,17 @@ $$
 k(x,v) = \left[ \frac{1}{N} \sum_{y=0}^{N-1} f(x,y) e^{\frac{-i 2\pi vy}{N}} \right]
 $$
 Il principale vantaggio delle proprietà di separabilità è che la 𝐹(𝑢, 𝑣) può essere ottenuta applicando in due passi successivi la trasformata 1-D
+
+Proprietà valor medio:
+Il valore della trasformata nell’origine, cioè nel punto (u,v)=(0,0) è dato da:
+$$
+F(0,0) = \frac{1}{N \times N} \sum_{x=0}^{N-1} \sum_{y=0}^{N-1} f(x,y) 
+\qquad 
+\bar{f}(x,y) = \frac{1}{N \times N} F(0,0)
+$$
+- **A sinistra:** Viene calcolato $F(0,0)$. Solitamente nella teoria standard della DFT (Discrete Fourier Transform), $F(0,0)$ è la semplice somma di tutti i pixel. In questa specifica slide, però, sembra essere già normalizzato (diviso per $N \times N$).
+    
+- **A destra:** Viene definita $\bar{f}(x,y)$, ovvero la **media** (indicata dalla barra sopra la f), in funzione di $F(0,0)$.
 
 
 Fast Fourier Transform (DFT ottimizzata)
