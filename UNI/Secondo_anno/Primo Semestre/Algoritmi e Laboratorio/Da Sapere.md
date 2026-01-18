@@ -1183,7 +1183,7 @@ L'algoritmo di Huffman ha complessità $O(n\,\,log\,\,n)$ dove $n$ è la cardina
 
 Alla fine del ciclo, nella coda $Q$ rimarrà un solo nodo: la radice dell'intero albero di Huffman. Percorrendo l'albero dalla radice alle foglie si ottengono i codici binari per ogni carattere.
 
-###### **Grafi**
+### **GRAFI E CAMMINI MINIMI**
 Prima di introdurre il prossimo problema risolto con approccio greedy, ripassiamo i grafi:
 $G = (V,E)$
 $V= \{v_1,v_2,v_3,...v_n\}$ -> questi sono i nodi o vertici del grafo -> $|V| = n$

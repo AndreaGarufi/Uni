@@ -17,12 +17,12 @@ Si possono pensare come filtraggi dell’immagine
 Un filtraggio è ottenuto facendo la convoluzione tra l’immagine ed una matrice
 
 **Operatori Lineari**
-Alcuni operatori locali e possono avere questa proprietà, ovvero essere lineari, infatti un operatore:
+Alcuni operatori locali possono avere questa proprietà, ovvero essere lineari, infatti un operatore:
 $F:V \rightarrow W$ si dice lineare se per ogni coppia di vettori $v_1$ e $v_2$ in $V$ e per ogni coppia di scalari $a,b$ si ha che:
 $$F(a v_1 + b v_2 ) = a F(v_1 ) + b F(v_2 )$$
 
 Dove:
-- $v_1$ e $v_2$ sono degli vettori (array) che contengono dei valori di determinati pixel: ad esempio un vettore di lunghezza 9 può contenere un gruppo 3x3 di pixel all'interno di un'immagine più grande
+- $v_1$ e $v_2$ sono dei vettori (array) che contengono dei valori di determinati pixel: ad esempio un vettore di lunghezza 9 può contenere un gruppo 3x3 di pixel all'interno di un'immagine più grande
 - $a$ e $b$ sono 2 numeri reali
 
 La formula detta in maniera semplice:
@@ -70,7 +70,7 @@ Le dimensioni del kernel influenzano la complessità della operazione di filtrag
 
 **Filtri convolutivi**
 **I filtri lineari e invarianti per traslazione vengono chiamati anche filtri convolutivi**
-La conoluzione è un operazione fondamentale per ogni tipologia di signal processing e perciò dobbiamo studiarla.
+La convoluzione è un operazione fondamentale per ogni tipologia di signal processing e perciò dobbiamo studiarla.
 
 **Convoluzione: proprietà**
 1) La convoluzione si indica con: $g = f ⨂ h$ 
@@ -92,7 +92,7 @@ g_{m,n} = \sum_{i=1,j=1}^{s,t} h_{i,j} \cdot f_{m+(i-s+\lfloor s/2 \rfloor), n+(
 $$
    ![[Pasted image 20251211091949.png|200]]
 
-Applicare un filtro lineare e shift invariante ad una immagine è equivalente a calcolare la convoluzione del kernel del filtro con l’immagine
+Applicare un filtro lineare e shift invariant ad una immagine è equivalente a calcolare la convoluzione del kernel del filtro con l’immagine
 
 (la convoluzione dovrebbe essere la formula stessa dell'operazione)
 
@@ -101,7 +101,7 @@ Così come si verificano problemi ai bordi per le operazioni di interpolazione s
 POSSIBILI SOLUZIONI: 
  a) Filtrare solo le zone centrali dell’immagine 
  b) Supporre che tutto intorno all’immagine ci sia 0 
- c) Assumere una topologia “toroidale”: quando si “sfora a destra” si rientra a sinistra, quando si “sfora” in basso di rientra in alto e viceversa; (toroidale significa che i bordi si toccano con il loro opposto, immagine una cartina geografica che in cui il lato destro si tocca con il sinistro e il lato sopra con quello sotto, la forma che si otterrebbe è una sorta di ciambella) 
+ c) Assumere una topologia “toroidale”: quando si “sfora a destra” si rientra a sinistra, quando si “sfora” in basso di rientra in alto e viceversa; (toroidale significa che i bordi si toccano con il loro opposto, immagina una cartina geografica in cui il lato destro si tocca con il sinistro e il lato sopra con quello sotto, la forma che si otterrebbe è una sorta di ciambella) 
  d) Aggiungere una riga all’inizio uguale alle riga precedente, una riga alla fine uguale all’ultima riga, una colonna all’inizio uguale alla colonna iniziale, e una colonna alla fine uguale alla colonna finale
 
 a) ![[Pasted image 20251211092739.png|450]]
