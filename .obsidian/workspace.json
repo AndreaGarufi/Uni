@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ad527d2bbbbe230e",
+        "id": "087be0cb9b2dd790",
         "type": "tabs",
         "children": [
           {
-            "id": "61afe7cdc177fd3e",
+            "id": "edf0f2e34158d86a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -167,31 +167,32 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "61afe7cdc177fd3e",
+  "active": "edf0f2e34158d86a",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/12 Lez 11 BitPlanes 2024-24.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117153254.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117151322.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117150450.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117150104.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117142518.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117134706.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117132038.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260116221323.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260116221252.png",
+    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260116221003.png",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/11 bitPlanes.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117b/sketch_260117b.pde",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117b/data",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a/smile.pde",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a/sketch_260117a.pde",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a/MegaSmile.pde",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117b",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/21 - 16 gennaio 2026.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/20 - 14 gennaio 2026.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/Non confermato 829911.crdownload",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/11 Lez 13 compressione 2024-25.pdf",
-    "Pasted image 20260115215436.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
-    "Pasted image 20260115215341.png",
-    "Pasted image 20260115215316.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/9 Lez 10 - Operatori locali e Convoluzione 2025-26.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
-    "Pasted image 20260115213308.png",
-    "Pasted image 20260115213153.png",
-    "Pasted image 20260115213123.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260115212028.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260115212025.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260115211945.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/8 Lez 09 - Operazioni puntuali 2024-25.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/7 Lez 08 - Colore 2024-2025.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/23_02_21.jpeg",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/Non confermato 280513.crdownload",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/Non confermato 319923.crdownload",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/Non confermato 700485.crdownload",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas",
@@ -213,7 +214,6 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/6 Colore_luce.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/4 Occhio Umano.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL V.md"
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/2 Sensore_bayerPattern_colorInterpolation.md"
   ]
 }
