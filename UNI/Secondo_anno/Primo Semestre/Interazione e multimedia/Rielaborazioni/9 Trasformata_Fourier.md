@@ -6,7 +6,7 @@ Sia la serie di Fourier che la Trasformata di Fourier condividono il fatto che u
 E’ cioè possibile lavorare nel cosiddetto dominio di Fourier e tornare nel dominio originale della funzione in maniera del tutto naturale
 
 **Immagini come funzioni**
-Un immagine può essere vista come una funzione discreta in cui i valori rappresentano i livelli di grigio dei pixel, questa funzione immagine può essere vista come un segnale all'interno di un dominio con una propria frequenza (costante o variabile)
+Un'immagine può essere vista come una funzione discreta in cui i valori rappresentano i livelli di grigio dei pixel, questa funzione immagine può essere vista come un segnale all'interno di un dominio con una propria frequenza (costante o variabile)
 ![[Pasted image 20260102105149.png|600]]
 
 
@@ -21,7 +21,7 @@ f(x,y) = \sum_{u=0}^{M-1} \sum_{v=0}^{N-1} F(u,v) e^{i 2\pi \left( \frac{ux}{M} 
 $$
 Mentre questa è l'antitrasformata e converte dal dominio delle frequenze a quello dei pixel, in pratica serve a ricostruire l'immagine partendo dal segnale che abbiamo trovato con la prima formula
 **A cosa servono?**
-Quindi quando un immagine deve essere modificata l'ordine di esecuzione è questo:
+Quindi quando un immagine deve essere modificata, l'ordine di esecuzione è questo:
 Applico la trasformata di Fourier per convertire l'immagine in segnale, applico le modifiche (sfocature ecc...) direttamente sul segnale che ho ricavato con la prima formula e successivamente riconverto da segnale a immagine ricostruendo usando l'antitrasformata di Fourier
 
 **Formula di Eulero**
@@ -46,9 +46,9 @@ Questa è l'immagine $|F(u,v)|$
 ![[Pasted image 20260102210941.png|500]]
 Questa è $D(u,v)$
 
-La visualizzazione dello spettro riguarda in realtà non |F(u,v)| ma una sua versione compressa logaritmicamente. Altrimenti si vedrebbe solo un puntino al centro.
+La visualizzazione dello spettro riguarda in realtà non $|F(u,v)|$ ma una sua versione compressa logaritmicamente. Altrimenti si vedrebbe solo un puntino al centro.
 
-*L’ampiezza* contiene l’informazione relativa al fatto che **una certa struttura periodica è presente nell’immagine**. 
+*L’ampiezza* contiene l’informazione relativa al fatto che **una certa struttura periodica è presente nell'immagine**. 
 
 *La fase* contiene l’informazione **relativa al dove le strutture periodiche evidenziate nella DFT sono collocate**. Quindi è molto più significativa di quello che possa sembrare nell’immagine
 
@@ -70,7 +70,7 @@ Nello spazio delle frequenze è possibile:
  rigenerare segnali degradati
 
 **Discussioni**
-La trasformazione diretta può essere vista come un processo di analisi: il segnale f(x) viene scomposto nelle sue componenti elementari, che sono nella forma dei vettori di base. I coefficienti della trasformata specificano quanto di ogni componente di base è presente nel segnale. Nella trasformazione inversa, mediante un processo di sintesi, il segnale viene ricostruito, come somma pesata delle componenti di base: il peso di ogni vettore di base nella ricostruzione del segnale è rappresentato dal corrispondente coefficiente della trasformata. Il coefficiente della trasformata è una misura della correlazione tra il segnale ed il corrispondente vettore di base. La trasformazione non comporta perdita di informazione: essa fornisce solo una rappresentazione alternativa del segnale originale
+La trasformazione diretta può essere vista come un processo di analisi: il segnale $f(x)$ viene scomposto nelle sue componenti elementari, che sono nella forma dei vettori di base. I coefficienti della trasformata specificano quanto di ogni componente di base è presente nel segnale. Nella trasformazione inversa, mediante un processo di sintesi, il segnale viene ricostruito, come somma pesata delle componenti di base: il peso di ogni vettore di base nella ricostruzione del segnale è rappresentato dal corrispondente coefficiente della trasformata. Il coefficiente della trasformata è una misura della correlazione tra il segnale ed il corrispondente vettore di base. La trasformazione non comporta perdita di informazione: essa fornisce solo una rappresentazione alternativa del segnale originale
 
 Esistono anche altre trasformate utilizzate nell'image processing e nella compressione delle immagini.
 
@@ -85,10 +85,10 @@ Con 2-D si intende un segnale bidimensionale ovvero un segnale che per ogni punt
 La trasformata di Fourier può essere separata ovvero per trovare la soluzione al problema 2-D posso calcolare 2 problemi 1-D e unirli:
 ![[Pasted image 20260103103748.png]]
 
-in pratica prima trovo k usando la formula 1-D e poi applico un latra formula 1-D su k per ottenere entrambe le coordinate che mi servono
+in pratica prima trovo k usando la formula 1-D e poi applico un'altra formula 1-D su k per ottenere entrambe le coordinate che mi servono
 
 **Traslazione**
-Nel caso bidimensionale è utile prima di operare sulla trasformata applicare uno shift (traslazione) dell’origine nel punto ($M/2, N/2$) cioè nel centro della matrice dei coefficient delle frequenze. In questo modo i dati vengono traslati in maniera tale che $F(0,0)$ risulti il centro del rettangolo delle frequenze definito tra $[0,M-1]$ e $[0,N-1]$
+Nel caso bidimensionale è utile prima di operare sulla trasformata applicare uno shift (traslazione) dell’origine nel punto ($M/2, N/2$) cioè nel centro della matrice dei coefficienti delle frequenze. In questo modo i dati vengono traslati in maniera tale che $F(0,0)$ risulti il centro del rettangolo delle frequenze definito tra $[0,M-1]$ e $[0,N-1]$
 Queste proprietà vengono utilizzate per una migliore visualizzazione dello spettro
 ![[Pasted image 20260103104046.png]]
 Nella parte di destra abbiamo applicato la traslazione in quella di sinistra no
@@ -126,15 +126,15 @@ Questa è l'operazione nel dominio spaziale:
 
 mentre questa in quello delle frequenze
 ![[Pasted image 20260103192729.png|500]]
-
-Complessità per un segnale 1D: 
+Dove F è la trasformata dell'immagine, e H è la trasformata del filtro
+Complessità per un segnale 1-D: 
 Nel dominio delle frequenze $O(n\,\,\, log\,\,\,n)$ 
 Nel dominio spaziale $O(n^2 )$
 E' quindi conveniente passare al dominio delle frequenze
 
 **Filtraggio...**
 - Se il filtro ha dimensioni confrontabili con quelle dell’immagine è più efficiente computazionalmente effettuare il filtraggio nel dominio delle frequenze
-- Con maschere (kernel, ovvero matrici più piccole) più piccole diviene più efficiente il calcolo nel dominio spaziale
+- Con maschere (kernel), ovvero matrici più piccole diviene più efficiente il calcolo nel dominio spaziale
 - La definizione di un filtro nel dominio delle frequenze è più intuitiva
 
 Come ottenere un filtro a partire da una maschera spaziale 

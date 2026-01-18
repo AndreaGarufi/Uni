@@ -1,4 +1,4 @@
-Un’immagine con una profondità colore di N bit (si intende la quantità di bit dedicati ad ogni colore dell'immagine) può essere rappresentata da N piani di bit (bit-planes), ciascuno dei quali può essere vista come una singola immagine binaria. In particolare si può indurre un ordine che varia dal Most Significant Bit (MSB) fino al Least Significant Bit (LSB)
+Un’immagine con una profondità colore di N bit (si intende la quantità di bit dedicati ad ogni colore dell'immagine) può essere rappresentata da N piani di bit (bit-planes), ciascuno dei quali può essere visto come una singola immagine binaria. In particolare si può indurre un ordine che varia dal Most Significant Bit (MSB) fino al Least Significant Bit (LSB)
 
 ![[Pasted image 20260116214851.png|500]]
 
@@ -18,7 +18,7 @@ Si noti che solo i piani dal 7 al 3 contengono dati significativi dal punto di v
 
 Il rumore delle immagini e gli errori di acquisizione sono più evidenti nei piani bassi
 
-**Usi del Dit Planes**
+**Usi del Bit Planes**
 - Questo genere di scomposizione è molto utile per eliminare tutti i valori compresi in un certo range. 
 - Ad esempio, se si vogliono eliminare tutti i grigi compresi tra 32 e 63, è necessario porre a 0 il quinto bit, e quindi tutto il piano 5
 
@@ -27,8 +27,11 @@ Il rumore delle immagini e gli errori di acquisizione sono più evidenti nei pia
 ![[Pasted image 20260116220029.png]]
 man mano che saliamo di livello perdiamo sempre più le informazioni più generali facendo rimanere solo i dettagli forniti dai livelli più bassi
 
-Se la codifica usata è quella in binario puro, allora risulta evidente uno svantaggio: una piccola variazione può ripercuotersi su tutti i piani. 
-Esempio: Se un pixel ha ad esempio intensità 127 (01111111) e il suo adiacente ha intensità 128 (10000000) allora la transizione tra 0 e 1 si ripercuote su tutti i piani di bit. 
+Se la codifica usata è quella in binario puro, allora risulta evidente uno svantaggio: una piccola variazione può ripercuotersi su tutti i piani.
+Esempio: Se un pixel ha ad esempio intensità 127 (01111111) e il suo adiacente ha intensità 128 (10000000) allora la transizione tra 0 e 1 si ripercuote su tutti i piani di bit.
+la differenza tra grigio 127 e 128 è impercettibile.
+In pratica, **si è creato un "bordo" (un contrasto netto) in tutte e 8 le immagini dei piani di bit**, anche se nell'immagine originale c'era solo una sfumatura quasi invisibile.
+
 *Serve un codice in cui valori molto vicini abbiano codifiche binarie molto simili!*
 
 **Soluzione codice grey**
