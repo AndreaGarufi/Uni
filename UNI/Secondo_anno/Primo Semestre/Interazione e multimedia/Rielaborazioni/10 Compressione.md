@@ -14,12 +14,12 @@ Lo possiamo riassumere così
 
 La compressione è basata sul tipo di dati (audio,immagini,video ecc...) e sul *tipo di compressione* ovvero:
 - **lossless** (reversibile), cioè senza perdita di informazione
-- **Lossy** (irreversibile), cioè con una perdita di informazione
+- **lossy** (irreversibile), cioè con una perdita di informazione
 
 **Criterio per una buona compressione di tipo lossless**
 Cercare di raggiungere il limite teorico per la compressione senza perdita che viene fornito dal primo teorema di Shannon, ma prima vediamo altre nozioni importanti:
 **Frequenza**
-Sia data una sequenza S di N caratteri tratti da un alfabeto di M possibili caratteri: $a_1 ,…,a_M$. Sia $f_i$ la frequenza del carattere ai cioè:
+Sia data una sequenza S di N caratteri tratti da un alfabeto di M possibili caratteri: $a_1 ,…,a_M$. Sia $f_i$ la frequenza del carattere $a_i$ cioè:
 $f_i = (\#occorrenze\,\,\, a_i)/N$
 **Entropia**
 Definiamo entropia E della sequenza di dati S la quantità media di informazione associata ad un singolo simbolo nella sequenza S:
@@ -89,7 +89,7 @@ L'idea della compressione lossy è: *Se “percettivamente” non è importante:
 - JPEG : applicano questa idea alle immagini fisse (still images) 
 - MPEG, AVI, DVX etc: applicano questa idea alle sequenze di immagini (filmati)
 
-Ovviamente una volta buttata via l’informazione non può essere ricostruita: si tratta di compressione IRREVERSIBILE
+Ovviamente una volta buttata via l’informazione non può essere ricostruita esattamente: si tratta di compressione IRREVERSIBILE
 
 Noi vedremo soltanto:
 1) Un algoritmo di requantization;
@@ -129,7 +129,7 @@ In questo modo abbiamo un canale separato $Y$ per la luminanza e possiamo sfrutt
  Questa operazione è lossy ed è irreversibile
 
 *partizione dell'immagine*
-JPEG suddivide l'immagine in quadretti da 8x8 cioè 64 pixel NON sovrapposti, quadretti diversi subiranno una elaborazione differente ed questa l'origine del problema della quadrattatura che si verifica quando le immagini compresse con JPEG vengono zoommate o stampate
+JPEG suddivide l'immagine in quadretti da 8x8 cioè 64 pixel NON sovrapposti, quadretti diversi subiranno una elaborazione differente ed è questa l'origine del problema della quadrattatura che si verifica quando le immagini compresse con JPEG vengono zoommate o stampate
 ![[Pasted image 20260109181651.png]]
 
 **Shift dei livelli di grigio**
@@ -146,8 +146,6 @@ Il JPEG trasforma i blocchi 8 x 8 di pixel secondo un algoritmo detto DCT, è un
 E’ stato dimostrato che, statisticamente, tale trasformazione “*decorrela*” al massimo i dati permettendo maggiori rapporti di compressione nella fase successiva di codifica.
 Decorrela in questo contesto indica che questa DCT separa i dati non rendendoli più interdipendenti, detto in breve se ho 64x64 pixel di cielo azzurro con variazioni minime ne prendo un valore medio anziche il valore di ogni singolo pixel, risparmiando spazio
 
-**CERCA DI CAPIRE MEGLIO A LEZIONE PERCHé NEL POWER POINT È SPIEGATO MALE**
-
 *Quantizzazione(ii)*
 Un vantaggio in termini di simboli da usare (e quindi in termini di lunghezza dei codici Huffman) si ottiene se si riduce il numero di “livelli” su cui i coefficienti della DCT possono variare. Tale operazione permette di rappresentare i diversi coefficienti incrementando il fattore di compressione, più precisamente avviene un processo di riduzione del numero di bit necessari per memorizzare un valore intero riducendone la precisione
 
@@ -157,7 +155,7 @@ dove Q è un fattore di quantizzazione, F è un numero da quantizzare.
 Il valore ricostruito si ottiene moltiplicando $F_{quantizzato}$ per Q
 La quantizzazione è un processo irreversibile (lossy)
 
-Si è dimostrato che non è conveniente usare un unico fattore di quantizzazione per tutti i 64 coefficienti della DCT della luminanza, o per quantizzare i valori provenienti dalla DCT delle crominanze, quindi si utilizzano 2 fattori diversi fornito dallo standard o eventualmente uno fornito dall'utente (a cui però poi va aggiunta la tabella che deve essere trasmessa non essendo uno standard)
+Si è dimostrato che non è conveniente usare un unico fattore di quantizzazione per tutti i 64 coefficienti della DCT della luminanza, o per quantizzare i valori provenienti dalla DCT delle crominanze, quindi si utilizzano 2 fattori diversi forniti dallo standard o eventualmente uno fornito dall'utente (a cui però poi va aggiunta la tabella che deve essere trasmessa non essendo uno standard)
 ![[Pasted image 20260110200312.png]]
 
 Si osservi che un fattore di compressione maggiore comporta una maggiore perdita di informazione e quindi una qualità visiva minore
@@ -171,7 +169,6 @@ Tutti i coefficienti vengono riordinati in un vettore 64 x 1 seguendo l’ordina
 ![[Pasted image 20260110200615.png|600]]
 
 **A questo punto si hanno 2 differenti codifiche**
-- A questo punto si hanno due differenti codifiche. 
 - I coefficienti DC, cioè quelli che stanno nella posizione (1,1) del blocco 8x8, sono codificati usando una codifica differenziale; 
 - I coefficienti AC, cioè tutti gli altri del blocco, sono codificati usando una codifica run-length. 
 - Le tabelle usate di seguito forniscono i codici di Huffmann ottenuti sulla base di calcoli statistici preventivi e sono fornite dallo standard
