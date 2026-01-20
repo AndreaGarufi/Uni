@@ -4,50 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "6d8bb9da8d66a46c",
+        "id": "88ee44d037c93020",
         "type": "tabs",
         "children": [
           {
-            "id": "c9a9f32e685a10bb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA"
-            }
-          },
-          {
-            "id": "c7bb28481eafece1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "8 Operatori_locali_filtri_di_effetti"
-            }
-          },
-          {
-            "id": "53523506db0424be",
+            "id": "74c6c91970cb34db",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf"
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.05.14.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "10 Lez 12 Fourier 2024-25"
+              "title": "esame.25.05.14"
+            }
+          },
+          {
+            "id": "d5bbbaec6cbaa92d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Da Sapere"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -193,34 +180,34 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "c9a9f32e685a10bb",
+  "active": "d5bbbaec6cbaa92d",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/fileCondivisiTeams/4 Risoluzione delle Equazioni di Ricorrenza.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.05.14.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.06.16.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.04.15.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.02.17.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.01.27 (b).pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.01.27 (a).pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/TUTTO.pdf",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/11 Lez 13 compressione 2024-25.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/9 Lez 10 - Operatori locali e Convoluzione 2025-26.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/11 bitPlanes.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_07_22.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_06_22.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/24_02_23.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/23_02_21.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/08_02_22.jpeg",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117153254.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117151322.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117150450.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117150104.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117142518.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117134706.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117132038.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260116221323.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260116221252.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260116221003.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117b/sketch_260117b.pde",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117b/data",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a/smile.pde",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a/sketch_260117a.pde",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a/MegaSmile.pde",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117b",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas",
     "README.md",
