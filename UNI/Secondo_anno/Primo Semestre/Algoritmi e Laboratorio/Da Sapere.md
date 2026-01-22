@@ -222,7 +222,7 @@ Ecco un esempio in pseudocodice
 questo se lo rappresento come un albero
 ![[Pasted image 20251103204132.png|400]]
 
-Questo se lo rappresento come un array (questo è il min heap, esiste la versione per il max heap)
+Questo se lo rappresento come un array (questo è il min heap, esiste la versione per il max heap), Questo codice ha complessità $O(log\,\,\, n)$ perché l'heap è un albero binario completo e l'altezza è $log\,\,\,n$ 
 1) `heapfy(H,i)`
 2)     `l = left(i)`
 3)     `r = right(i)`
@@ -306,7 +306,7 @@ Da questa idea di usare un heap come struttura dati nasce l'**heap-sort**
 1) `extractMax(A)`
 2)     `Swap(A,0,n-1)`
 3)     `n = n-1`
-4)     `heapfy(A,1)`
+4)     `heapfy(A,0)`
 
 *riga 1* -> definizione della funzione, prende in input l'array
 *riga 2* -> scambia il massimo (root) con l'ultimo elemento dell'array (che sarà una foglia e quindi un elemento piccolo)
