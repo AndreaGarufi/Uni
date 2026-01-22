@@ -450,13 +450,13 @@ Il **caso pessimo** è quando tutti gli elementi collidono e quindi ho una lista
 
 Per capire quanto la tabella sia piena nasce la misura: **fattore di carico**
 $$a=\frac{n}{m}$$
-Dove $n$ è il numero di elementi
+Dove $n$ è il numero di celle occupate
 e $m$ è la lunghezza dell'array T (ovvero quante celle ho in totale)
 Il fattore di carico varia tra 0 e 1 (0 = vuota 1 = piena) se supero l'1 vuol dire che ogni cella è piena e si sono verificate collisioni
 
 Ogni elemento $k$ ha la stessa possibilità di essere inserito nella posizione $i$, ovvero $\frac{1}{m}$ 
 
-La complessità delle funzioni di ricerca nel caso di successo e di insuccesso è $O(1+a)$, l'1 è simbolico perché controllando la lista di elementi per capire se è alla fine accederà ad un null
+La complessità delle funzioni di ricerca nel caso di successo e di insuccesso è $O(1+a)$, l'1 è simbolico perché controlliamo la lista di elementi per capire se è alla fine, in caso accederà ad un null (+1)
 
 Adesso cerchiamo di capire quali sono i *principali metodi per creare una funzione hash*:
 
@@ -467,7 +467,7 @@ $h(k)=k\mod m$
 Esempio:
 `T = [0,0,0,0,0,0,0,0,0,0]`
 `     0 1 2 3 4 5 6 7 8 9 ` 
-I numeri da inserire sono: 50,53,67
+I numeri da inserire sono: 50,53,67, $m = 10$
 $50 \mod 10= 0$ -> indice 0 nell'array
 $53 \mod 10= 3$ -> indice 3 nell'array
 $67 \mod 10= 7$ -> indice 7 nell'array
@@ -487,10 +487,10 @@ Abbiamo $k$ che sono le chiavi da inserire, e $m$ è il numero di celle dell'arr
 Scegliamo un $A$ compreso tra 0 e 1 (0 e 1 esclusi) allora:
 $h(k) = \lfloor m * ((k * A) \mod 1) \rfloor$ 
 
-- Il mod 1 serve ad escludere la parte decimale della moltiplicazione $k*A$ 
+- Il mod 1 serve ad escludere la parte intera della moltiplicazione $k*A$ 
 - $0<k*A<k$ -> ricorda che sarà per forza minore di $k$ perché sto moltiplicando per un numero $A$ che essendo compreso tra 0 e 1 va a diminuire la quantità $k$ 
 - $0 ≤m * ((k * A) \mod 1)< m$ 
-- Di tutta la moltiplicazione ne prendo il floor per escludere la parte intera
+- Di tutta la moltiplicazione ne prendo il floor per escludere la parte decimale
 
 
 ##### **INDIRIZZAMENTO APERTO (non si usano liste per le collisioni)**
@@ -512,19 +512,19 @@ Con questo tipo di implementazione le funzioni diventano:
 
 1) `insert(T,k)`
 2) 	`i = 0`
-3) 	`while(i < m and T[i] ≠ null) do`
+3) 	`while(i < m-1 and T[i] ≠ null) do`
 4) 		`i = i + 1`
-5) 	`if (i < m) then T[i] = k`
+5) 	`if (i < m-1) then T[i] = k`
 ---
 1) `search(T,k)`
 2) 	`i = 0`
-3) 	`while(i < m and T[i] ≠ null) do`
+3) 	`while(i < m-1 and T[i] ≠ null) do`
 4) 		`if(T[i] = k) return true`
 5) 		`i = i + 1`
 6) 	`return false`
 
 Dove $m$ è il numero di celle e $n$ è il numero di elementi
-Entrambe queste funzioni hanno complessità $O(n)$
+Entrambe queste funzioni hanno complessità $O(m)$
 
 In generale quindi l'indirizzamento aperto, quando si verificano collisioni non concatena con una lista ma scorre le posizioni successive fin quando se ne presenta una disponibile per l'inserimento, per farlo segue delle tecniche, ne abbiamo 3
 ###### **HASHING**
