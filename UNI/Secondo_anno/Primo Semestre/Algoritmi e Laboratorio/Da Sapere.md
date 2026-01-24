@@ -590,7 +590,7 @@ Gli alberi rosso neri hanno 5 proprietà fondamentali:
 *Nota bene: ci sono vari modi per colorare uno stesso albero, l'importante è rispettare le proprietà*
 
 Queste proprietà possono essere rispettate solo se l'albero è bilanciato.
-Esempio di albero rosso nero
+Esempio di albero rosso nero (anche se questo viola la proprietà 5)
 ![[Pasted image 20251214112630.png|300]]
 (Un albero rosso nero che è solo colorato di nero può comunque rispettare le proprietà, perché non è obbligatorio che ci siano nodi rossi)
 

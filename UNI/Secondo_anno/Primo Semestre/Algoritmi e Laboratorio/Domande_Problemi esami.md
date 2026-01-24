@@ -144,3 +144,21 @@ Useremo un min heap che conterrà i 10 punteggi più alti, quindi la root sarà 
     `if p > H[0] then`
 		`H[0] = p`
 		`min-heapfy(H,0)`
+
+
+### 1 Luglio 2025
+In un albero rosso-nero, l’altezza nera di un nodo x, denotata bh(x), è definita come il numero di nodi neri presenti lungo un qualunque cammino da x a una foglia NIL, escludendo il nodo stesso, ma includendo il nodo NIL finale (che si assume sempre nero). Per definizione degli alberi rosso-neri, tutti i cammini da un nodo verso le foglie devono avere la stessa altezza nera. Scrivere lo pseudo-codice di una procedura ricorsiva che, dato un nodo x, restituisca la sua altezza nera
+
+Assumo che bh sia sempre almeno uguale ad 1, anche nel caso che x sia la root e anche l'unico nodo ha comunque 2 figli null che sono neri quindi bh = 1, assumo anche che l'albero sia valido
+```text
+BH(x,bh)
+    if (x = NULL) then
+        return bh
+    if (left(x) = NULL) then
+        return bh
+    if (left(x).colore = black) then
+        bh++
+    return BH(left(x),bh)
+
+```
+qui controllo ogni volta solo i figli sinistri fino ad arrivare alla foglia, scorrendoli come fosse una lista concatenata perché mi basta arrivare semplicemente alla fine e contare quante volte incontro un nodo nero
