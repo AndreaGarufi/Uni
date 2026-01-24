@@ -51,6 +51,7 @@ partendo dal min-heap iniziale devo fare 13 estrazioni del minimo che avvengono 
 
 (nel caso dell'array non è che il minimo lo estraggo e lo tolgo dall'array semplicemente viene messo in fondo e nei passi successivi riduco di 1 la dimensione dell'array)
 
+Possono esserci anche 13 inserimenti, se chiede 13 inserimenti da visualizzare nell'array passo dopo passo, bisogna fare prima l'albero come se fossero 13 inserimenti normali e poi uno alla volta ricopiare sull'array ogni passaggio, facendo un array per passaggio, i figli di un indice $i$ si trovano a $2*i+1$ per il left e $2*i+2$ per il right
 
 ### 14 Maggio 2025
 
