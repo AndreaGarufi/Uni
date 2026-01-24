@@ -1127,7 +1127,7 @@ L'algoritmo di Huffman parte dalle foglie, quindi :
 - **Prende i due caratteri che appaiono meno volte** di tutti.
 - **Li unisce:** Li fonde insieme creando un nuovo nodo (il padre dei 2 caratteri) che pesa quanto la somma dei due.
 - **Li allontana:** Dato che li ha uniti subito, questi due caratteri finiranno nel punto più profondo dell'albero. Significa che avranno il codice più lungo.
-- **Ripete:** Ora considera il nuovo gruppo (padre e i 2 figli) come se fosse un singolo oggetto e ricomincia dal punto 2
+- **Ripete:** Ora considera il nuovo gruppo (padre e i 2 figli) come se fosse un singolo oggetto e ricomincia dal punto 1
 ![[Pasted image 20260104200826.png|500]]
 Unisce C e D in H, C e D avranno codice più lungo rispetto ad H fa le stesse cose con gli altri caratteri, dato che unisce 2 caratteri in 1 l'albero finisce quando non ci sono più caratteri, e arriva alla root
 
@@ -1143,7 +1143,7 @@ Unisce C e D in H, C e D avranno codice più lungo rispetto ad H fa le stesse co
 2. $d_T(a)=d_{T′}(z)+1$ e $d_T(b)=d_{T′}(z)+1$
     - La profondità di a/b nell'albero originale (T) è la profondità di z nell'albero ridotto (T') più 1. **Costruzione di una relazione tra T e T':** Il costo dell'albero T, denotato come $b(T)$, è dato, come detto prima, dalla somma delle frequenze per le profondità: $b(T) = Σ_{c ∈ Σ}\,\, f(c) * d_T(c)$
 3. Espandendo la sommatoria per mettere in relazione T con T′: $b(T) = [Σ_{c ∈ Σ'}\,\, f(c) * d_{T'}(c)]−f(z)⋅d_{T'}(z)+f(a)d_T(a)+f(b)d_T(b)$ 
-   _Nota_: Il termine tra parentesi quadre è $b(T′)$. Sottraiamo il contributo di z (che è in T′ ma non è foglia in T) e aggiungiamo i contributi di a e b, così abbiamo ottenuto $b(t)$, e l'uguaglianza è vera.
+   _Nota_: Il termine tra parentesi quadre è $b(T′)$. Sottraiamo il contributo di z (che è in T′ ma non è foglia in T) e aggiungiamo i contributi di a e b, così abbiamo ottenuto $b(T)$, e l'uguaglianza è vera.
 4. Sostituendo le relazioni di profondità e frequenza ($f(z) = f(a)+f(b)$): $b(T)=b(T′)−(f(a)+f(b))d_{T′}(z)+f(a)(d_{T′}(z)+1)+f(b)(d_{T′}(z)+1)$
 5. Svolgendo i calcoli, i termini con $d_{T′}(z)$ si cancellano: $=f(a)+f(b)$
 6. Quindi la relazione fondamentale è: $b(T)=b(T′)+f(a)+f(b)$ 
