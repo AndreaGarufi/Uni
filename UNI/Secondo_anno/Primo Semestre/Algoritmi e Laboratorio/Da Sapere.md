@@ -1172,7 +1172,7 @@ L'algoritmo di Huffman ha complessità $O(n\,\,log\,\,n)$ dove $n$ è la cardina
 13)	`insert z in Q`
 
 *riga 1* -> definizione della funzione, Σ è l'alfabeto, f invece le frequenze di ogni carattere
-*riga 2* -> crea una coda con priorità, che servirà a mantenere in cima i valori di frequenze più basse
+*riga 2* -> crea una coda con priorità, che servirà a mantenere in cima i valori di frequenze più basse (min-heap)
 *riga 3-5* -> inizia un ciclo che scorre ogni carattere, crea un nodo x dove viene inserito il carattere e poi lo inserisce nella coda con priorità
 *riga 6* -> questo è il ciclo principale, che verrà eseguito $n-1$ volte dove $n$ è il numero di caratteri
 *riga 7-8* -> estrae dalla coda Q i 2 nodi che hanno frequenza più bassa (sono i nodi da combinare)
@@ -1215,7 +1215,7 @@ La sommatoria ci dice di sommare il peso di tutti gli archi del cammino partendo
 
 **DOMANDA ESAME**
 **Che cosa è un ordinamento topologico di un grafo?**
-- Un ordinamento topologico di un grafo è un ordinamento lineare dei nodi in modo che ci sia una determinata relazione, se $∃ (u,a) ∈ E$ tale che $u<v$ . Ad esempio:
+- Un ordinamento topologico di un grafo è un ordinamento lineare dei nodi in modo che ci sia una determinata relazione, se $∃ (u,v) ∈ E$ tale che $u<v$ . Ad esempio:
   A-F-D-G-C-E-B, questo potrebbe essere un esempio di ordinamento topologico di un grafo
 - In un grafo possono esserci più ordinamenti topologici.
 - Se il grafo ha un ciclo non posso fare ordinamenti topologici
@@ -1383,7 +1383,7 @@ Dimostrazione per assurdo:
 Immaginiamo un cammino minimo $P'$ dal nodo u al nodo q e al nodo v che è la destinazione (q è il nodo prima della destinazione)
 ![[Pasted image 20260108161136.png|300]]
 
-avremo che: $P'(u\leadsto q)+w(q,v)= (u,v)$
+avremo che: $P'(u\leadsto q)+w(q,v)= \delta(u,v)$
 supponiamo di avere anche un secondo cammino ancora più piccolo:
 $P''(u \leadsto q)< P'(u \leadsto q)$ ma:
 $P''(u \leadsto q) + w(q, v) < P'(u \leadsto q) + w(q, v) = \delta(u, v)$ che è una contraddizione, quindi si evince che $P''$ non può essere un cammino minimo e che un qualsiasi sotto cammino del cammino minimo è anch'esso minimo
@@ -1455,7 +1455,7 @@ Vediamone lo Pseudocodice, questo algoritmo ha complessità $O(V*E)$ se si usano
 7)     `for i = 0 to V-1 do` -> V-1 -> è questa la lunghezza massima di un cammino minimo
 8)         `for each (u,v) ∈ E do`
 9)             `relax(u,v,w)`
-10)   `for each (u,v) ∈ E do` -> ultimo relax che (V in totale) così da trovare cicli negativi
+10)   `for each (u,v) ∈ E do` -> ultimo relax (V in totale) così da trovare cicli negativi
 11)       `if(d[v] > d[u]+w(u,v)) then`
 12)           `return FALSE`
 13)   `return TRUE`
@@ -1481,7 +1481,7 @@ Si inizia dal nodo A e dobbiamo trovare il cammino minimo per arrivare a ogni no
 
 **Algoritmo di Dijkstra**
 *Questo algoritmo lavora solo con pesi positivi*, se incontra un peso o un loop negativo fallisce
-Vediamo lo pseudocodice, ha complessità $O((V+E)log\,\,V)$ 
+Vediamo lo pseudocodice, ha complessità $O((V+E)log\,\,V)$ con lista di adiacenza e $O(V^2 \log V)$ con matrice di adiacenza
 
 1) `Dijkstra(G,s,w)`
 2)     `d = newArray(len(V))`
@@ -1503,7 +1503,7 @@ Vediamo lo pseudocodice, ha complessità $O((V+E)log\,\,V)$
 *riga 7* -> in Q crea un min-heap 
 *riga 8* -> ciclo principale che viene eseguito finché Q non è vuoto
 *riga 9* -> passo greedy, estrae il nodo con la stima $d[v]$ più piccola fino a quel momento
-*riga 10-12* -> per ogni nodo vicino di v (v è il nodo con la stima minima estratto prima) facciamo un relax, ovvero controlliamo se la distanza $d[u]$ è maggiore di $d[v]+w(v,u)$, se è così allora abbiamo trovare un nuovo cammino minimo, e aggiorniamo la coda Q (essendo un min-heap possiamo cambiare la priorità nella coda usando decreaseKey)
+*riga 10-12* -> per ogni nodo vicino di v (v è il nodo con la stima minima estratto prima) facciamo un relax, ovvero controlliamo se la distanza $d[u]$ è maggiore di $d[v]+w(v,u)$, se è così allora abbiamo trovato un nuovo cammino minimo, e aggiorniamo la coda Q (essendo un min-heap possiamo cambiare la priorità nella coda usando decreaseKey)
  
 Applicazione di Dijkstra, potrebbe chiederla all'esame
 ![[Pasted image 20260113173215.png|600]]
@@ -1624,7 +1624,7 @@ Inserendo un iterazione in più capiamo se ci sono cicli negativi
 *riga 4-6* -> continuiamo a ciclare finché la lunghezza di d è minore di V-1 perché V-1 è la lunghezza massima di un cammino minimo, poi per la matrice 2d chiama la funzione passando $l^d$ e $l^d$ in questo modo non trova i percorsi di prima + un arco ma trova "percorso di lunghezza d + percorso di lunghezza d" in un colpo solo, quindi otteniamo un percorso di lunghezza 2d, aggiorniamo $d = 2d$
 *riga 7* -> ritorna $l^d$ cioè l'ultima matrice calcolata
 
-cosi facendo otteniamo una complessità di $O(v^3\log V)$ come l'algoritmo di Dijkstra ma con la differenza che possiamo usare archi di peso negativo
+cosi facendo otteniamo una complessità di $O(V^3\log V)$ come l'algoritmo di Dijkstra ma con la differenza che possiamo usare archi di peso negativo
 
 Ma resta comunque abbastanza alta la complessità, si può abbassare ancora usando l'algoritmo di Floyd-Warshall
 **Floyd-Warshall**
@@ -1632,13 +1632,13 @@ Ma resta comunque abbastanza alta la complessità, si può abbassare ancora usan
 Qui si usa un ragionamento diverso, ovvero anziché aumentare di 1 gli archi tutte le volte, aumentiamo di 1 i nodi visitabili, all'inizio avremo quindi $V_0 = \{0\},V_1 = \{v_1\},V_2 = \{v_1,v_2\}$ ecc... fino a $V_k = \{v_1,v_2,....,v_k\}$ , quindi *k sono i nodi interni da cui posso passare*, immaginiamo questo grafo:
 ![[Pasted image 20260117150450.png|300]]
 $\delta^0(i,j)$ -> posso andare da 1 a 2 perché non passo da nodi interni, da 3 a 8 no
-$\delta^1(i,j)$ -> posso andare da 7 a 2 perché posso passare da 1 nodo interno
+$\delta^1(i,j)$ -> posso andare da 3 a 8 perché posso passare da 1 nodo interno
 
 Usiamo una matrice $D^k[i,j] = \delta^k(i,j)$ per memorizzare un cammino minimo
 La nostra funzione ricorsiva è quindi:
 $$
 D^k[i, j] = \begin{cases} 
-w[i, j] & \text{se } k = 0 \quad \text{caso base con } V^0 = \{\} \\
+W[i, j] & \text{se } k = 0 \quad \text{caso base con } V^0 = \{\} \\
 \underbrace{\min}_{\substack{\text{non ho bisogno di un for} \\ \text{che scorre tutti i} \\ \text{nodi perché } k \text{ è definito}}} \left( D^{k-1}[i, j], \ D^{k-1}[i, k] + D^{k-1}[k, j] \right)& \text{se } k > 0
 \end{cases}
 $$
@@ -1647,7 +1647,7 @@ dove:
 nel minimo in pratica controllo se:![[Pasted image 20260117151322.png|260]]
 il cammino da i-k k-j è più breve del cammino i-j
 
-Prima di scrivere lo pseudocodice, per aiutarci a creare l'albero dei cammini minimi terremo conto del predecessore di un nodo, questa procedura ha complessità $O(V^3)$ esattamente come bellman-ford per risolvere l'SSSP
+Prima di scrivere lo pseudocodice, per aiutarci a creare l'albero dei cammini minimi terremo conto del predecessore di un nodo. Questa procedura ha complessità $O(V^3)$ esattamente come bellman-ford per risolvere l'SSSP
 
 1) `Floyd-Warshall(W)`
 2)      `D^0 = W;`

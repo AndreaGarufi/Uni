@@ -46,6 +46,18 @@
               "icon": "lucide-file",
               "title": "Da Sapere"
             }
+          },
+          {
+            "id": "782b36c94fa12eea",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.01.27 (a).pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "esame.25.01.27 (a)"
+            }
           }
         ],
         "currentTab": 2
@@ -196,18 +208,18 @@
   },
   "active": "d4b1075c43e71629",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ALGORITMI_COMPLETO.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.01.27 (b).pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.01.27 (a).pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.02.17.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.04.15.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.05.14.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.07.01.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.10.27.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ALGORITMI_COMPLETO.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.09.01.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.07.01.pdf",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.06.16.pdf",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Introduzione Agli Algoritmi_ (Z-Library).pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.05.14.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.04.15.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.02.17.pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.01.27 (b).pdf",
+    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
