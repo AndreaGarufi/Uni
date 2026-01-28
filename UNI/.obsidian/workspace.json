@@ -4,65 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "3cfcb765ba142e91",
+        "id": "bc8270601f5393a6",
         "type": "tabs",
         "children": [
           {
-            "id": "cc766efc8cbf8e11",
+            "id": "7659385d8b75bb37",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "image",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/21 - 16 gennaio 2026.pdf"
+                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/08_02_22.jpeg"
               },
-              "icon": "lucide-file-text",
-              "title": "21 - 16 gennaio 2026"
-            }
-          },
-          {
-            "id": "4ac3eff47c59e53b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Da Sapere"
-            }
-          },
-          {
-            "id": "9e7a2a7a6d0f5902",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "8 Operatori_locali_filtri_di_effetti"
-            }
-          },
-          {
-            "id": "0921d0e4c97261d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "9 Trasformata_Fourier"
+              "icon": "lucide-image",
+              "title": "08_02_22"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -222,34 +179,35 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0921d0e4c97261d5",
+  "active": "7659385d8b75bb37",
   "lastOpenFiles": [
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260128a/Cifra.pde",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260128a/sketch_260128a.pde",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260128a",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Nuova cartella",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/06_12_22.jpeg",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/9 Trasformata_Fourier.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/8 Operatori_locali_filtri_di_effetti.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/11 bitPlanes.pdf",
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/10 Compressione.pdf",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ALGORITMI_COMPLETO.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/10 Lez 12 Fourier 2024-25.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/pdf/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/11 Lez 13 compressione 2024-25.pdf",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/FileCondivisiTeams/12 Lez 11 BitPlanes 2024-24.pdf",
     "pdf.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117153254.png",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/21 - 16 gennaio 2026.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117151322.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117150450.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117150104.png",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/20 - 14 gennaio 2026.pdf",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117142518.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117134706.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117132038.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_06_22.jpeg",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117b/data/lena.png",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117b/data",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117b/sketch_260117b.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117b",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_06_22/sketch_260117a/smile.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_07_22.jpeg",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/11 bitPlanes.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/1 Modello relazionale dei dati.md",
