@@ -4,23 +4,34 @@ class Cifra{
   float velocitaY;
   int dim;
   color colore;
+  int testo;
   
-  Cifra(float posizioneX, float posizioneY, float vel, int dimensione){
+  Cifra(float posizioneX, float posizioneY, float vel, int text){
     this.posX = posizioneX;
     this.posY = posizioneY;
     this.velocitaY = vel;
-    this.dim = dimensione;
+    this.dim = 32;
     this.colore = #F8FF39;
+    this.testo = text;
   }
   
   void display(){
     fill(colore);
     textSize(dim);
-    text(random(0,9),posX,posY);
+    text(testo,posX,posY);
+  }
+  
+  void move(){
+    posY = posY+velocitaY;
+    
+    if((posY-32) > height){
+      posY = 0;
+    }
   }
   
   void run(){
     display();
+    move();
   }
 
 }
