@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8fe76397748463a0",
+        "id": "e1e260aab4e36c0e",
         "type": "tabs",
         "children": [
           {
-            "id": "54ca97fcb3a9a9ea",
+            "id": "8f26de8ee5ee3f9a",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/06_12_22.jpeg"
-              },
-              "icon": "lucide-image",
-              "title": "06_12_22"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -165,36 +163,35 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "54ca97fcb3a9a9ea",
+  "active": "8f26de8ee5ee3f9a",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame06_12_22/sketch_260128c/MongolfieraMotorizzata.pde",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame06_12_22/sketch_260128c/sketch_260128c.pde",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame06_12_22/sketch_260128c/Mongolfiera.pde",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame06_12_22/sketch_260128c",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame06_12_22",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_07_22.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_07_22/sketch_260129b/sketch_260129b.pde2690510489852460995.tmp",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_07_22/sketch_260129b/sketch_260129b.pde",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_07_22/sketch_260129b/Casetta.pde",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_07_22/sketch_260129b/Casa.pde",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_07_22/sketch_260129b",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame28_07_22",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/24_02_23.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame24_02_23/sketch_260129a/voto.pde",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame24_02_23/sketch_260129a/sketch_260129a.pde",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame24_02_23/sketch_260129a/Votone.pde",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame24_02_23/sketch_260129a",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_06_22.jpeg",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/23_02_21.jpeg",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/08_02_22.jpeg",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260128b/sketch_260128b.pde",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260128b",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ProveEsame/2025/esame.25.01.27 (a).pdf",
+    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/06_12_22.jpeg",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260128a/Cifrotta.pde",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260128a/sketch_260128a.pde",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260128a/Cifra.pde",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/11 bitPlanes.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_07_22.jpeg",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_06_22.jpeg",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/24_02_23.jpeg",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/23_02_21.jpeg",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117153254.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117151322.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117150450.png",
     "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117150104.png",
-    "UNI/Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117142518.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas",
     "README.md",
     "Senza nome.md",
