@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "afdb449cd3df12ab",
+        "id": "28472494fc930b39",
         "type": "tabs",
         "children": [
           {
-            "id": "c2e4c426cac3d238",
+            "id": "1d74b28335bd6f4c",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ALGORITMI_COMPLETO.pdf"
+                "file": "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Appunti prima lezione.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "ALGORITMI_COMPLETO"
+              "icon": "lucide-file",
+              "title": "Appunti prima lezione"
             }
           }
         ]
@@ -179,8 +181,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c2e4c426cac3d238",
+  "active": "1d74b28335bd6f4c",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Appunti prima lezione.md",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware",
+    "Secondo_anno/Senza nome.md",
+    "Secondo_anno/Secondo Semestre",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ALGORITMI_COMPLETO.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esamiPDF.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
@@ -192,10 +199,7 @@
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260131a/data/lena.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260131a/sketch_260131a.pde",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260131a/data",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260131a",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ALGORITMI_COMPLETO.pdf",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/08_02_22.jpeg",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260128b/sketch_260128b.pde",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/06_12_22.jpeg",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
@@ -224,7 +228,6 @@
     "Cose da fare.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere4.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md"
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.md"
   ]
 }
