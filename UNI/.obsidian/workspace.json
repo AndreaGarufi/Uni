@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "29424c84533670d8",
+        "id": "b74bd3d2b7d63580",
         "type": "tabs",
         "children": [
           {
-            "id": "53fa22d30e06f926",
+            "id": "cd91e6effb0ed50f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -177,7 +177,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "53fa22d30e06f926",
+  "active": "4371091dceb8cd7d",
   "lastOpenFiles": [
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Appunti prima lezione.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260303172039.png",
