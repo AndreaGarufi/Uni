@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "dbe0197c54ad838e",
+        "id": "ebf84123ddd122e0",
         "type": "tabs",
         "children": [
           {
-            "id": "e531381de0666bce",
+            "id": "9ce38e019a216e56",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/1_6_Marzo_java.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "1_6_Marzo_java"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -165,10 +163,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "e531381de0666bce",
+  "active": "9ce38e019a216e56",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/1 -LEZIONE_reti.pdf",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/1_6_Marzo_java.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Non confermato 806183.crdownload",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Sin_ttulo.pdf",
     "Pasted image 20260306202438.png",
     "Pasted image 20260306201833.png",
@@ -181,7 +181,6 @@
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/ClientCalcola.java",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/ClientCalcola.class",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/CalcolaImporti01.java",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/CalcolaImporti01.class",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LIBRO.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/08_02_22.jpeg",
