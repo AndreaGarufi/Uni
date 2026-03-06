@@ -165,41 +165,6 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "floating": {
-    "id": "369011296aca3af9",
-    "type": "floating",
-    "children": [
-      {
-        "id": "d8fac87cdf4008f7",
-        "type": "window",
-        "children": [
-          {
-            "id": "5cbd3f10ef8fcab1",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "1b487c7c85968266",
-                "type": "leaf",
-                "state": {
-                  "type": "empty",
-                  "state": {},
-                  "icon": "lucide-file",
-                  "title": "Nuova scheda"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 3,
-        "y": 3,
-        "width": 1530,
-        "height": 858,
-        "maximize": false,
-        "zoom": 0.5
-      }
-    ]
-  },
   "active": "e531381de0666bce",
   "lastOpenFiles": [
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",

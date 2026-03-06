@@ -17,7 +17,7 @@ public class HelloWorldLEZIONE {
         valore++;
         System.out.println(data);
         //IO.println("ciao ciao");
-        //IO.println("valore : " +valore);
+        System.out.println("valore : " +valore);
         System.out.println(saluto + ", Ingegneria del software.");
         contatore++;
         System.out.println("contatore: " +contatore);
