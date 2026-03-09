@@ -11,14 +11,12 @@
             "id": "20d295aef29d3374",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LIBRO.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L1_Introduzione.pdf"
               },
-              "icon": "lucide-file",
-              "title": "LIBRO"
+              "icon": "lucide-file-text",
+              "title": "L1_Introduzione"
             }
           }
         ]
@@ -183,23 +181,27 @@
   },
   "active": "20d295aef29d3374",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LIBRO-RETI.pdf",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/ClientCalcola.class",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/ClientCalcola.java",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/CalcolaImporti01.class",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/CalcolaImporti01.java",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/Importi.csv",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/Importi.csv",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LIBRO.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L1_Introduzione.pdf",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L1_Introduzione.pdf.opdownload",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Nuova cartella",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306202438.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306201833.png",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Appunti prima lezione.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260303172039.png",
-    "Secondo_anno/Secondo Semestre/modelli",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware",
     "Secondo_anno/Senza nome.md",
-    "Secondo_anno/Secondo Semestre",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/ALGORITMI_COMPLETO.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esamiPDF.pdf",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/lezione6/immagini/sketch.properties",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/immagine/data/lena.png",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/immagine/immagine.pde",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/immagine/data",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260131a/data/lena.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/08_02_22.jpeg",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/06_12_22.jpeg",
@@ -210,8 +212,6 @@
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117153254.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117151322.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117150450.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117150104.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117142518.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/11 bitPlanes.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/1 Modello relazionale dei dati.md",
@@ -226,7 +226,6 @@
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Lezione 9 - Programmazione dinamica e algoritmi golosi.md",
     "conflict-files-obsidian-git.md",
     "Project ideas.md",
-    "Cose da fare.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Problemi esami.md"
+    "Cose da fare.md"
   ]
 }
