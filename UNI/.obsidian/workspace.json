@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "99563d9b41ddb031",
+        "id": "dcf1e472b86ed6e9",
         "type": "tabs",
         "children": [
           {
-            "id": "235d19690fd44847",
+            "id": "b247b1540fea4709",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Libro_Secondario.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Libro_Secondario"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -179,19 +177,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4371091dceb8cd7d",
+  "active": "b247b1540fea4709",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/2_Applications_N.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Libro_Secondario.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/1 -LEZIONE_reti.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf.opdownload",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Nuova cartella",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/1 -LEZIONE_reti.pdf",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L1_Introduzione.pdf",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Slide/L1_Introduzione.pdf",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/javaEsercizi/File.java",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/javaEsercizi",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/ClientCalcola.class",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/ClientCalcola.java",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/CalcolaImporti01.class",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LIBRO.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306202438.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306201833.png",
