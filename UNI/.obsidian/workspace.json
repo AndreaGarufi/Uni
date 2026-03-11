@@ -8,15 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "20d295aef29d3374",
+            "id": "235d19690fd44847",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L1_Introduzione.pdf"
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Libro_Secondario.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "L1_Introduzione"
+              "title": "Libro_Secondario"
             }
           }
         ]
@@ -181,18 +181,18 @@
   },
   "active": "4371091dceb8cd7d",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf.opdownload",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Nuova cartella",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/1 -LEZIONE_reti.pdf",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L1_Introduzione.pdf",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/javaEsercizi/File.java",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/javaEsercizi",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/ClientCalcola.class",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/ClientCalcola.java",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/CalcolaImporti01.class",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/CalcolaImporti01.java",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola/Importi.csv",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/clientCalcola",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/Importi.csv",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LIBRO.md",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L1_Introduzione.pdf.opdownload",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306202438.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306201833.png",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",
