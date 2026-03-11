@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "dcf1e472b86ed6e9",
+        "id": "e06709af324e0e5c",
         "type": "tabs",
         "children": [
           {
-            "id": "b247b1540fea4709",
+            "id": "c43ad45b9cb38b67",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Sistemi_operativi.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Sistemi_operativi"
             }
           }
         ]
@@ -177,8 +179,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b247b1540fea4709",
+  "active": "c43ad45b9cb38b67",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Sistemi_operativi.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Reti_di_calcolatori.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/2_Applications_N.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide",
@@ -188,8 +192,6 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf.opdownload",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Nuova cartella",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Slide/L1_Introduzione.pdf",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/javaEsercizi/File.java",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LIBRO.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306202438.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306201833.png",
