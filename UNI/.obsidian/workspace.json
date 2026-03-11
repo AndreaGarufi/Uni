@@ -8,7 +8,33 @@
         "type": "tabs",
         "children": [
           {
+            "id": "edaf997bcfe3604c",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "SO-01"
+            }
+          },
+          {
             "id": "c43ad45b9cb38b67",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/2_10_marzo.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2_10_marzo"
+            }
+          },
+          {
+            "id": "56063a5d3340a8d0",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -19,7 +45,8 @@
               "title": "Sistemi_operativi"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -182,16 +209,18 @@
   "active": "c43ad45b9cb38b67",
   "lastOpenFiles": [
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Sistemi_operativi.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/2_10_marzo.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260311181510.png",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Senza nome.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Libri",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Reti_di_calcolatori.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/2_Applications_N.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Libro_Secondario.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Libri/Libro_Secondario.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/1 -LEZIONE_reti.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf.opdownload",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Nuova cartella",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LIBRO.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306202438.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306201833.png",
@@ -211,7 +240,6 @@
     "pdf.md",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117153254.png",
     "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117151322.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117150450.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/11 bitPlanes.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/1 Modello relazionale dei dati.md",
@@ -224,8 +252,6 @@
     "Primo_anno/Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Lezione 9 - Programmazione dinamica e algoritmi golosi.md",
-    "conflict-files-obsidian-git.md",
-    "Project ideas.md",
-    "Cose da fare.md"
+    "conflict-files-obsidian-git.md"
   ]
 }
