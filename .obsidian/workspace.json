@@ -4,20 +4,49 @@
     "type": "split",
     "children": [
       {
-        "id": "ebf84123ddd122e0",
+        "id": "2429e299033cbfd7",
         "type": "tabs",
         "children": [
           {
-            "id": "9ce38e019a216e56",
+            "id": "a349294fdb06dee7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "SO-01"
+            }
+          },
+          {
+            "id": "2a3dfc7c6d50c8d7",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Sistemi_operativi.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Sistemi_operativi"
+            }
+          },
+          {
+            "id": "f61483422e0d6cfc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/2_10_marzo.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "2_10_marzo"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -74,7 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 203.5110321044922
+    "width": 200
   },
   "right": {
     "id": "60ceb3bf826ca8d1",
@@ -163,19 +192,22 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "9ce38e019a216e56",
+  "active": "f61483422e0d6cfc",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/libri/Fowler, Martin - Refactoring Improving The Design Of Existing Code - libgen.li.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/libri/Non confermato 241166.crdownload",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/libri/Kent Beck, Cynthia Andres - Extreme programming explained_ embrace change (2004, Addison-Wesley Professional) - libgen.li.chm",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/libri/Non confermato 30910.crdownload",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/libri/Raoul-Gabriel Urma, Mario Fusco, Alan Mycroft - Modern Java in Action_ Lambdas, streams, functional and reactive programming (2018, Manning) - libgen.li.epub",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/libri/Non confermato 65395.crdownload",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/libri/Gamma, Erich_Helm, Richard_Johnson, Ralph E._Vlissides, John - Design patterns_ elements of reusable object-oriented software (2016, Pearson Education) - libgen.li.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/libri/Non confermato 105360.crdownload",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/libri/Martin Fowler - UML Distilled_ A Brief Guide to the Standard Object Modeling Language (2003, Addison-Wesley Professional) - libgen.li.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/libri/Non confermato 435046.crdownload",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/libri/by Raoul-Gabriel Urma, Mario Fusco, Alan Mycroft - Java 8 in Action_ Lambdas, Streams, and functional-style programming (2015_2014, MANNING Publications) - libgen.li.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/2_10_marzo.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/2_10_marzo.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Sistemi_operativi.pdf",
+    "Pasted image 20260311194821.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260311181510.png",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/2_Applications_N.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Reti_di_calcolatori.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L1_Introduzione.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java/javaEsercizi/File.java",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306202438.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306201833.png",
@@ -189,8 +221,6 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260128b/data/lena.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_06_22.jpeg",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/immagine/data/lena.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/24_02_23.jpeg",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/23_02_21.jpeg",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
@@ -210,7 +240,6 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere4.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere3.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/7 Operazioni_puntuali.md",
-    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere2.md"
+    "UNI/Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/SQL Teoria/SQL I.md"
   ]
 }
