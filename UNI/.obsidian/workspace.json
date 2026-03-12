@@ -39,14 +39,14 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Sistemi_operativi.pdf"
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Reti_di_calcolatori.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Sistemi_operativi"
+              "title": "Reti_di_calcolatori"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -206,7 +206,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c43ad45b9cb38b67",
+  "active": "56063a5d3340a8d0",
   "lastOpenFiles": [
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Sistemi_operativi.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/2_10_marzo.md",
