@@ -4,22 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "d6a0d236c58d784e",
+        "id": "60d2135798f94c98",
         "type": "tabs",
         "children": [
           {
-            "id": "b09badc1f5364841",
+            "id": "8769bc9508c5c5be",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260311194821.png"
+                "file": "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/1_2_marzo.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260311194821"
+              "icon": "lucide-file",
+              "title": "1_2_marzo"
+            }
+          },
+          {
+            "id": "9e9a2ccbee6ad97d",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L2_Test.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "L2_Test"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -165,26 +180,27 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "3216613356f858dc",
+  "active": "9e9a2ccbee6ad97d",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Libri/MaterialeSistemi_2023.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Libri/Non confermato 27760.crdownload",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/1_2_marzo.md",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L2_Test.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/Non confermato 906661.crdownload",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L1_Introduzione.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/2_6_Marzo_java.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni",
+    "Senza nome.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260311194821.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Reti_di_calcolatori.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/1 -LEZIONE_reti.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Sistemi_operativi.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/1_5_marzo.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/2_10_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/2_10_marzo.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260311194821.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260311181510.png",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/2_Applications_N.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L1_Introduzione.pdf",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306202438.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306201833.png",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Appunti prima lezione.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LIBRO.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
@@ -201,7 +217,6 @@
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas",
     "README.md",
-    "Senza nome.md",
     "UNI/Senza nome.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 4 -RIELABORAZIONE.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
