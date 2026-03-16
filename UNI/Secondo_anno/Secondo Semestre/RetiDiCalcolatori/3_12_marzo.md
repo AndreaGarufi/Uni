@@ -1,70 +1,101 @@
 
-Il protocollo FTP ci interessa per capire la differenza con http, file transport protocol. è un protocollo che lavora in entrambe le direzioni possono prendere e mandare informazione. Serve autenticazione, e tutto deve essere in chiaro. Nelle versioni più vecchie c’era modalita di trasferimento binaria o testuale. se il file è binario lo ricopio così com’è tra le varie macchine. su una porta mandano comandi e sull’altra trasferimento dati.
+**FTP - File Transfer Protocol**
+FTP lavora sulle porte 20 e 21, la 20 è usata per il passaggio dei dati e la 21 per i controlli/comandi
 
-se sono due canali separati, e sai blocca perchè file troppo grande posso dire lascia perdere e ricominciamo. questo è statefull
+**Bidirezionale:** Lavora in entrambe le direzioni; permette sia di caricare (upload) che di scaricare (download) informazioni e file.
 
-il canale di trasferimento lo apro quando mi serve. apre connessione tcp sulla porta 21, apre login e pass e il tcp rimane aperto fino a che qualcuno chiude o il sistema lo chiude per inutilizzo al termine dell’FTP si chiude anche il tcp
+**Sicurezza**
+- *Accesso*: Richiede quasi sempre un'autenticazione tramite username e password.
+- *Sicurezza*: È un protocollo non criptato. Tutto il traffico, comprese le credenziali di accesso, viaggia "in chiaro" sulla rete
 
-(farmacia)stateless senza stato, anche se ha memoria perche ad esempio premo e stampo, stato èm pronto, quando premo ce transisizone tra stato di pronto a stato di pronto con stampa. ma è stateless. ha memoria ma uno stato.
+**L'Architettura a "Doppio Canale"**
+A differenza dell'HTTP, l'FTP utilizza due connessioni separate per comunicare:
 
-(biglietti)statefull con stato, prima metti soldi poi biglietto, quindi ci son stati: prima stato di pronto, poi stato di biglietti e poi te lo stampa. qui ha piu stati, devo passare piu stati per una sola operazione.
+- *Canale di Controllo (Comandi):* Viene aperto sulla **Porta 21**. Serve esclusivamente per inviare i comandi (es. login, richiesta di un file, cambio cartella) e ricevere le risposte del server.
+- *Canale Dati:* Viene aperto sulla **porta 20** **solo quando serve** (quando si richiede il trasferimento effettivo di un file o la lista dei file in una cartella) e viene chiuso appena il trasferimento finisce.
 
-Http un po’ di storia, 1990 piu o meno, si doveva creare un sistema per recuperare documenti pubblici(non servono autorizzazioni), mettendo a disposizione un sistema che li mette direttamente sul pc. Sono una parte grafica (HTML) e un sistema di trasferimento, qualcosa per trovare dove è messo e farmelo inviare (HTTP).dveo contattare il server che ha il documento e lo devo identificare con URL.
+**Il vantaggio dei due canali:** Poiché sono separati, il canale di controllo rimane sempre libero e reattivo. Se il trasferimento di un file molto grande si blocca sul canale dati, puoi usare il canale di controllo per dire al server "lascia perdere" (abortire l'operazione) e ricominciare, senza far crollare l'intera connessione
 
-apro una connessione TCP, quello approva, poi chiedo di mandare il documento e lo da. poi iniziano a pensare che questo protocollo poteva essere utilizzato in altri modi, ad esempio la mail.
+![[Pasted image 20260316111025.png|451]]
+Il client apre una richiesta di connessione sulla sua porta (1742) il server apre la connessione sulla porta 21 e manda una ACK, dopo di ciò sulla la porta 20 apre la data connection per il client sulla porta 1742 (per il client) infine il client manda un ACK e da qui comincia lo scambio di file.
 
-HTTP sistema stateless. Il server web si scrive tutte le richieste che ho fato.
 
-ce una richietsa e una risposta, serve a dire trasferiscimi questo file e se ce dammelo
+**Differenza tra stateless e stateful**
 
-url è un file dentro un percorso. devo dire il nome della macchina e dove si trova nel percorso del file che è da wualche parte nel sistema web
+**Stateful**
+**Come funziona:** Il sistema (di solito un server) "ricorda" chi è l'utente e cosa ha fatto nelle richieste precedenti. Crea una vera e propria **sessione** continua.
+Ad esempio: Il protocollo **FTP** (che abbiamo appena visto: fai il login e la connessione rimane aperta in attesa dei tuoi comandi).
+- Le vecchie telefonate tradizionali.
+- I server dei videogiochi multiplayer online.
 
-le informazioni posso mandarle in due modi: incassellatte in manier rigida o dinamica.
+**Stateless**
+**Come funziona:** Ogni singola richiesta (o messaggio) inviata dal client al server è completamente **indipendente** e isolata dalle altre. Il server elabora la richiesta, invia la risposta e poi se ne dimentica all'istante.
+Ad esempio: Il protocollo **HTTP** (quello su cui si basa il web).
+- Le API REST (usate dalle app sui nostri smartphone per comunicare con i server).
 
-qui dinamica(come dimensione dei campi): prima metto un verbo o metodo(non so quando è grande, è grande fino allo spazio); URL peggio ancora, termina con il successivo spazio bianco, version , cr ed lf per dire che termina riga.
 
-nella seconda,chiave spazio parole e termina riga, quando finisce seconda riga riga vuota, dopo il corpo(altre informazioni).
 
-lo svantaggio qui è che devo identificare come indicare la fine della riga.
+**HTTP**
 
-hanno stessa struttura.
+HTTP nasce perché verso gli anni 90 si aveva bisogno di contattare un server in modo da recuperare documenti pubblici (si dovevano visualizzare le pagine dei siti web in pratica), quindi era inutile usare un protocollo come FTP (stateful), si può invece usare un protocollo *stateless* per migliorare e velocizzare i processi.
 
-ci sono sia codici che testo perche quando è stato creato dovevano sapere subito leggere cosa era successo; la macchina legge il 400 e l’umano il testo.
+L'idea è quella di aprire una connessione TCP con il server e richiedere un documento che verrà così erogato del server.
+![[Pasted image 20260316111955.png|361]]
 
-POST ti sto mandando questi dati e dammi una riasposra in base a questo(form)
+Quindi il client manda una richiesta di connessione TCP e il server approva sulla porta 80 mandando un messaggio di ACK poi il client richiedere un determinato file e il server lo eroga
 
-put e delete sono stati disabilitati
+HTTP è quindi stateless, ovvero il server non mantiene informazioni sulle richieste passate
 
-differenza tra post e get: con la get le coppie chiavi valore le metto nella URL, separate da &
+**Come è formata una pagina web**
+Una pagina web è formata da un insieme di oggetti (che possono anche essere contenuti su diversi web servers), un oggetto può essere un file HTML, un immagine JPEG, un file audio ecc..., quindi una pagina web è composta da un file base HTML che include vari oggetti ognuno reperibile tramite un URL (Uniform Resource Locator) 
+Ad esempio: www.someschool.edu/someDept/pic.gif
 
-con la post metto le stesse informazioni sotto dalla seconda riga in poi
 
-(cercarla bene) , get e post inviano entrambe informazioni. la differenza è la get invia coppia chiavi valore nella url, il post invia informazioni dopo la Url. Con la get vedo cosa è stato mandato, con la post no perche non vedo i campi dopo.
+![[Pasted image 20260316120341.png|455]]
+Il messaggio si divide in tre blocchi principali:
 
-i cookie è un pezzo di codice alfanumerico. ha un nome e un contenuto, ha dei parametri aggiuntivi. il cookie viene scritto sul client, e dopo che ha visitato il sito vede cosa hai vistato e vede il contenuto e le cancella. Amazon sa sta cosa e quindi il cookie ha numeri assurdi. ogni volta che riaccxedo al server il cookie mi dice se devo riaccedere o no e a chi lo devo mandare e fino a dove devo andare o dove devo partire. posso metterw altre informazioni tipo quando è stato generato e quando scade il cookie. puo essere invalidato mettendo una data antecedente alla data attuale. quanfo hai finito fai log out cosi il coockie di sessione viene invalidato quando l’utente si disconnette, non perche ho ho premuto log out.
+**Request Line (Riga di richiesta)**
+È la primissima riga del messaggio e contiene i "comandi" fondamentali. È composta da:
+- **method (metodo):** Indica l'azione che il client vuole che il server esegua. I più famosi sono **GET** (usato per richiedere una risorsa, come una pagina web o un'immagine) e **POST** (usato per inviare dati al server, come quando compili un modulo di login).
+- **sp (space):** Un semplice spazio vuoto che fa da separatore.
+- **URL:** Il percorso specifico della risorsa richiesta sul server (ad esempio `/index.html` o `/immagini/logo.png`).
+- **version:** La versione del protocollo HTTP utilizzata (di solito `HTTP/1.1` o `HTTP/2`).
+- **cr lf (Carriage Return & Line Feed):** Sono i caratteri di "ritorno a capo". Indicano al server che la riga di richiesta è finita.
 
-Un **cookie** (tecnicamente un _HTTP cookie_) è un piccolo file di testo che un sito web invia al tuo browser mentre lo stai visitando. Il browser lo memorizza sul tuo dispositivo e lo "restituisce" al sito ogni volta che torni su una sua pagina o compi un'azione. **Perché esistono?** Il protocollo fondamentale del web (HTTP) è "stateless". Senza i cookie, ogni volta che clicchi su una nuova pagina di un sito, il server ti tratterebbe come un perfetto sconosciuto. Ecco a cosa servono principalmente: • **Gestione della sessione:** Permettono di restare loggati. Senza cookie, dovresti inserire username e password ogni volta che passi dalla "Home" al tuo "Profilo". • **Carrello della spesa:** Ricordano cosa hai aggiunto al carrello mentre continui a navigare sul sito di e-commerce. • **Personalizzazione:** Memorizzano la lingua scelta, il tema (chiaro o scuro) o le impostazioni del layout. • **Tracciamento e Marketing:** Monitorano quali pagine visiti per capire i tuoi interessi e mostrarti pubblicità mirata. **Le tipologie principali** I cookie non sono tutti uguali. Si distinguono in base alla durata e a chi li "crea":
 
-**Di sessione** Temporanei. Vengono cancellati non appena chiudi il browser.
+**Header Lines (Intestazioni)**
 
-**Persistenti** Rimangono sul tuo dispositivo per un tempo prefissato (giorni o anni) finché non scadono o li cancelli.
+Dopo la riga di richiesta ci possono essere diverse righe di intestazione (gli _headers_). Servono a passare informazioni aggiuntive al server.
 
-**Prima parte** Creati direttamente dal sito che stai visitando (es. per ricordarti il login).
+- Ogni riga è composta da una coppia: un **header field name** (il nome del campo, ad esempio `Host`, `User-Agent` o `Accept-Language`) e il suo **value** (il valore, ad esempio `www.google.it`, `Mozilla/5.0...` o `it-IT`).
+- Ogni riga si chiude con il solito ritorno a capo (`cr lf`).
 
-**Terza parte** Creati da siti diversi da quello che stai visitando (es. banner pubblicitari o tasti social), usati per tracciarti su più siti diversi.
+**Il dettaglio cruciale:** Guarda subito sotto l'ultima riga di header. C'è una riga formata **solo da `cr lf`** (un ritorno a capo a vuoto). Questa riga vuota è obbligatoria e serve come "separatore": dice al server che le intestazioni sono finite e che tutto ciò che viene dopo è il corpo del messaggio.
 
----
+**Entity Body (Corpo del messaggio)**
 
-**Sono pericolosi?** I cookie **non sono virus né malware**. Sono semplici file di testo e non possono "eseguire" nulla sul tuo computer o leggere il tuo disco fisso. Il problema principale riguarda la **privacy**: i cookie di terza parte possono creare un profilo molto dettagliato delle tue abitudini online. È per questo che oggi vedi ovunque i "banner dei cookie" che ti chiedono il consenso per l'installazione.
+È la parte finale che contiene il "carico utile" (payload) dei dati veri e propri che stai inviando al server.
 
-Html dinamico, è nato statico in realtà, poi hanno collegato database dietro, informazioni per ppoter elaborare graficamente una pagina web. e sono nati i linguaggi adatti, prima era tutto in c. questi script sono da server non li vediamo, la programmazione lato client è tipicamente in javascript eseguito nel browser(infatti non puo scrivere sul sistema, o accedere alla webcam) certe cose è meglio farle fare al client per essere più fluido.
+- **Se usi il metodo GET:** Di solito l'entity body è completamente **vuoto**, perché stai solo chiedendo informazioni, non ne stai inviando (i parametri viaggiano nell'URL).
+- **Se usi il metodo POST:** L'entity body conterrà i dati effettivi. Ad esempio, se stai caricando un file o hai scritto un commento su un forum, il testo del commento o i byte del file viaggeranno all'interno di questo blocco.
 
-1.0 si apre tcp facevo richiesta e chiude tcp e fine, devo riaprirlo ogni volta
 
-1.1 non è persistente ma finisce quando finisco di caricare tutti gli oggetti.
+![[Pasted image 20260316120919.png|417]]
+L'HTTP response è identica alla request.
 
-se apro 4 canali tcp sara piu lento, ma in realta gli oggettti piu piccoli appaiono prima, in realtà questo non è efficiente.
 
-si cercava un protocollo più veloce, utilizza UDP (manda un messaggio invece TCP ne manda 4, ma tcp assicura la ricezione dei messaggi, UDP non è affidabile)in http/3.0. quasi tutti i server in vanno 1.1.
+![[Pasted image 20260316121005.png|473]]
 
-i protocolli sono retrocompatibili. Un protocollo si dice **retrocompatibile** (o _backward compatible_) quando una versione più recente o aggiornata è in grado di interagire correttamente con versioni precedenti dello stesso protocollo, o di gestire dati e dispositivi basati su standard più vecchi. a volte viene buttata fuori per sicurezza.
+
+**Cookie**
+Siti web e client browser usano i cookies per mantenere degli stati anche dopo la connessione (HTTP è stateless quindi non ha stati)
+L'uso può essere ad esempio quello di identificare un utente sul sito dopo che accede per la prima volta, oppure per restare loggati in un sito anche dopo la chiusura, senza dover inserire ogni volta username e password.
+
+I cookie sono sicuri perché non contengono codice eseguibile sul computer ma si limitano a raccogliere informazioni, sull'utente (ci possono essere dei rischi per quanto riguarda la privacy)
+
+
+**Versioni HTTP**
+Nel tempo si sono susseguiti vari aggiornamenti di questo protocollo, infatti un tempo si apriva la connessione usando un solo canale in cui veniva mandato tutto, creando rallentamenti ed errori, poi si è aggiunta una pipeline che spedisce ogni oggetto usando un canale diverso, in questo modo per siti molto grandi se un canale non ha ancora finito di mandare il suo oggetto nel frattempo gli altri sono già arrivati e l'utente può comunque vedere qualcosa del sito.
+In seguito sono stati aggiunti vari protocolli per la sicurezza
+
+i protocolli sono retrocompatibili. Un protocollo si dice **retrocompatibile** (o _backward compatible_) quando una versione più recente o aggiornata è in grado di interagire correttamente con versioni precedenti dello stesso protocollo, o di gestire dati e dispositivi basati su standard più vecchi.

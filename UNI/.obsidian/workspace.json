@@ -4,47 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "e06709af324e0e5c",
+        "id": "3aef882b9d3afe67",
         "type": "tabs",
         "children": [
           {
-            "id": "edaf997bcfe3604c",
+            "id": "f6efde922e2c08e1",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "SO-01"
-            }
-          },
-          {
-            "id": "c43ad45b9cb38b67",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Slide/L1_Introduzione.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "L1_Introduzione"
-            }
-          },
-          {
-            "id": "56063a5d3340a8d0",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Reti_di_calcolatori.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Reti_di_calcolatori"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -201,25 +174,35 @@
       "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
       "command-palette:Apri riquadro comandi": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "c43ad45b9cb38b67",
+  "active": "f6efde922e2c08e1",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/1_6_Marzo_java.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/3_12_marzo.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/3_12_marzo.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/2_Applications_N.pdf",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316121005.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316120919.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316120341.png",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/2_10_marzo.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/1_5_marzo.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/1_10_marzo.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Sistemi_operativi.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/2_10_marzo.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Reti_di_calcolatori.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316111955.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316111025.png",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/2_10_marzo.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/2_10_marzo.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Slide/L1_Introduzione.pdf",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260311194821.png",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Libri/MaterialeSistemi_2023.pdf",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Slide/L2_Test.pdf",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/3_13_marzo.md",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/1_2_marzo.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/2_10_marzo.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260311181510.png",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Senza nome.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Libri",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/2_Applications_N.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LIBRO.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306202438.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306201833.png",
@@ -229,16 +212,10 @@
     "Secondo_anno/Senza nome.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/immagine/data/lena.png",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260131a/data/lena.png",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/08_02_22.jpeg",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/06_12_22.jpeg",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "pdf.md",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117153254.png",
-    "Secondo_anno/Primo Semestre/Modelli/Pasted image 20260117151322.png",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/11 bitPlanes.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
     "Secondo_anno/Primo Semestre/Basi di Dati/Rielaborazioni/1 Modello relazionale dei dati.md",
@@ -247,10 +224,6 @@
     "Primo_anno/Primo Semestre/programmazione-1/Variabili, Tipi su C.md",
     "Primo_anno/Primo Semestre/programmazione-1/Matrice stringa tridimensionale.md",
     "Primo_anno/Primo Semestre/programmazione-1/PUNTATORI (importante).md",
-    "Primo_anno/Primo Semestre/programmazione-1/Tips Algoritmi.md",
-    "Primo_anno/Primo Semestre/programmazione-1/Appunti pre-esame orale da ricordare.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Lezione 9 - Programmazione dinamica e algoritmi golosi.md",
-    "conflict-files-obsidian-git.md"
+    "Primo_anno/Primo Semestre/programmazione-1/Tips Algoritmi.md"
   ]
 }
