@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "60d2135798f94c98",
+        "id": "6f0ccad5b1f0f2d2",
         "type": "tabs",
         "children": [
           {
-            "id": "f2990c1429a8a314",
+            "id": "908b7e6c7b45ac4b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/2_10_marzo.md",
-                "mode": "source",
-                "source": false
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
               },
-              "icon": "lucide-file",
-              "title": "2_10_marzo"
+              "icon": "lucide-file-text",
+              "title": "Riassunto_Github"
             }
           }
         ]
@@ -167,22 +165,27 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "f2990c1429a8a314",
+  "active": "908b7e6c7b45ac4b",
   "lastOpenFiles": [
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/3_12_marzo.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Non confermato 390670.crdownload",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/3_12_marzo.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/1 -LEZIONE_reti.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/2_10_marzo.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316121005.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316120919.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316120341.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316111955.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316111025.png",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/2_10_marzo.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/2_10_marzo.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/1_5_marzo.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Reti_di_calcolatori.pdf",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/3_13_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L2_Test.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/2_6_Marzo_java.pdf",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/1_2_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Libri/MaterialeSistemi_2023.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Libri/Non confermato 27760.crdownload",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/Non confermato 906661.crdownload",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L1_Introduzione.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni",
     "Senza nome.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260311194821.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/2_10_marzo.md",
@@ -194,11 +197,6 @@
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LIBRO.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/08_02_22.jpeg",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260131a/data/lena.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_07_22.jpeg",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/Esame08_02_22/sketch_260128b/data/lena.png",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/28_06_22.jpeg",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/esercizi/immagine/data/lena.png",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
