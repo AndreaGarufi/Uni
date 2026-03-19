@@ -8,15 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "908b7e6c7b45ac4b",
+            "id": "6f3133652806f397",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/4 - 17 marzo 2026.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Riassunto_Github"
+              "icon": "lucide-file",
+              "title": "4 - 17 marzo 2026"
             }
           }
         ]
@@ -165,38 +167,42 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "908b7e6c7b45ac4b",
+  "active": "6f3133652806f397",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/3_12_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Non confermato 390670.crdownload",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/3_12_marzo.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/1 -LEZIONE_reti.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/2_10_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316121005.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316120919.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316120341.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316111955.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260316111025.png",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/2_10_marzo.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/3_12_marzo.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/3_12_marzo.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/d1ee0d7f-d462-43db-90e0-e15b184e4ab6_Sistemi_operativi.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/d1ee0d7f-d462-43db-90e0-e15b184e4ab6_Sistemi_operativi.pdf",
+    "UNI/Secondo_anno/d1ee0d7f-d462-43db-90e0-e15b184e4ab6_Sistemi_operativi.pdf",
+    "UNI/d1ee0d7f-d462-43db-90e0-e15b184e4ab6_Sistemi_operativi.pdf",
+    "d1ee0d7f-d462-43db-90e0-e15b184e4ab6_Sistemi_operativi.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/4_17_marzo.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/2_10_marzo.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/1_5_marzo.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Reti_di_calcolatori.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/4 - 17 marzo 2026.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-02.pdf",
+    "Pasted image 20260319153905.png",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/Non confermato 396954.crdownload",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260318113052.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260317180000.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260317174247.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260317173027.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260317170122.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260317165615.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260317165352.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260317162204.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260317125005.png",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/5 - 17 marzo 2026.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/3_12_marzo.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/3_12_marzo.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/2_10_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/3_13_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L2_Test.pdf",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/1_2_marzo.md",
     "Senza nome.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260311194821.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/2_10_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260311181510.png",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306202438.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260306201833.png",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LIBRO.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Processing/proveLAB/08_02_22.jpeg",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/10 Compressione.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md",
     "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
@@ -209,9 +215,6 @@
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Tips.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Sunto.md",
     "UNI/Primo_anno/Primo Semestre/strutture-discrete/FileRielaborazioni/Parte 3 -RIELABORAZIONE.md",
-    "UNI/Primo_anno/Primo Semestre/strutture-discrete/Esempi di esercizi.md",
-    "UNI/Primo_anno/Primo Semestre/strutture-discrete/TUTTI I TEOREMI.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/Prove in itinere.md",
-    "UNI/Secondo_anno/Primo Semestre/Interazione e multimedia/proveItinire/proveItinere4.md"
+    "UNI/Primo_anno/Primo Semestre/strutture-discrete/Esempi di esercizi.md"
   ]
 }
