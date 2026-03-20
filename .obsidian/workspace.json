@@ -32,6 +32,18 @@
               "icon": "lucide-file-text",
               "title": "3_Transport_N"
             }
+          },
+          {
+            "id": "8aa7712b3c1850cf",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Riassunto_Github"
+            }
           }
         ]
       }
@@ -183,6 +195,7 @@
   "lastOpenFiles": [
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/3_Transport_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/6_19_marzo.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/5_19_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260319175721.png",
@@ -203,8 +216,6 @@
     "UNI/propedeudicita.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260319153905.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/4 - 17 marzo 2026.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/3_12_marzo.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/3_12_marzo.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260318113052.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260317180000.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/5 _17_marzo.md",

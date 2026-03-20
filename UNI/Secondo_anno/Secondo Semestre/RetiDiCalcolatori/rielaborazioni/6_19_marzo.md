@@ -1,11 +1,13 @@
 ### Throughput
-il throughput è un indice della capacità di trasmissione in un canale di comunicazione
+il throughput è un indice della capacità di trasmissione in un canale di comunicazione, più è alto più dati si possono far passare in quel canale:
+$$ Throughput = \frac{Numero\,\,\,di\,\,\,bit\,\,\,(o\,\,\,byte)\,\,\,trasmessi\,\,\,con\,\,\,successo}{ tempo\,\,\,impiegato}$$
 ![[Pasted image 20260319101419.png|500]]
-Consideriamo un canale con *Bandwidth* di 10 Mbps ovvero: $$BW = 10 \text{ Mbps } = 10^7 \text{ bit per secondo }$$da questo ne traiamo che:
+Consideriamo un canale con *Bandwidth* pari 10 Mbps ovvero: $$BW = 10 \text{ Mbps } = 10^7 \text{ bit per secondo }$$da questo ne traiamo che:
 - in $1 s \rightarrow 10000000 \; bits$
 - in $0.1  \micro s \rightarrow 1 \; bits$
 Se volessimo inviare un Frame di $1500$ bytes ovvero $12000$ bits impieghiamo: 
 $$T_{\mathrm{frame}} = \frac{\text{Dimensione del frame (in bit)}}{\text{Bandwidth (in bit/s)}}$$
+Ad esempio per noi il tempo di frame sarebbe di 1.2 millisecondi
 
 il nostro segnale si deve propagare da $A$  a $B$, quindi dobbiamo mettere in considerazione anche il tempo di propagazione del segnale, di seguito in dettaglio:
 $$T_{\mathrm{propagazione}} = \frac{\text{Spazio di trasmissione}}{\text{Velocità di trasmissione}}$$
@@ -13,15 +15,26 @@ $$T_{\mathrm{propagazione}} = \frac{\text{Spazio di trasmissione}}{\text{Velocit
 Con questa informazione possiamo calcolare anche il numero di bit che possono stare contemporaneamente nel canale:
 $$\text{Bandwidth (in bit/s)} \cdot T_{\mathrm{propagazione}}(\text{in s})$$
 
-Date tutte queste informazioni possiamo calcolare il **throughput teorico** è:
+| $T_{frame}$                                                             | $T_{propagazione}$                                                                        |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Il tempo impiegato<br>dal PC per immettere<br>tutto il frame nel canale | Il tempo impiegato <br>dai dati per percorrere<br>tutto il canale fino a <br>destinazione |
+
+
+Date tutte queste informazioni possiamo calcolare il **throughput teorico** che è:
 $$T = T_{\text{frame}} + T_{\text{propagazione}}$$
-Per calcolare il **throughput reale** dobbiamo considerare il tempo di $ACK$ e il tempo di $RTT$(Round-Trip Time) ovvero il tempo di andata e ritorno, la formula diventa:
-$$T = T_{\text{frame}} + RTT + T_{\text{propagazione}} + T_{\text{ACK}}$$
+Quindi il **throughput teorico** sarebbe il tempo impiegato per immettere tutti i dati + quello per percorrere il canale fino a destinazione
+
+Per calcolare il **throughput reale** dobbiamo considerare il tempo di $ACK$ e il tempo di $RTT$(Round-Trip Time) ovvero il tempo di andata e ritorno (quindi il $T_{propagazione}$ dell'andata + quello del ritorno dell' ACK), la formula diventa:
+$$T = T_{\text{frame}} + RTT + T_{\text{elaborazione}} + T_{\text{ACK}}$$
 $$T_{ACK} = \frac{\text{Dimensione dell'ACK (in bit)}}{\text{Bandwidth (in bit/s)}}$$
+il tempo di elaborazione è un tempo teorico (molto piccolo) che introduciamo perché il computer B dopo aver ricevuto un messaggio lo legge e crea un messaggio di ACK e lo fa nel tempo di elaborazione che è piccolo ma non 0
+
 $RTT$ lo dà l'esercizio
 ![[Pasted image 20260319105431.png|500]]
 
-La modalità pipeline ci consente di aumentare il throughput di una rete. Invece di inviare un singolo frame ne inviamo $n$ e aspettiamo $n$ $ACK$, capiamo subito che è molto importante gestire  i casi in cui il frame si rovina e l'ACK di risposta non arriva, usiamo principalmente questi due algoritmi:
+In questa maniera la reale velocità del canale non è molto alta, si decide quindi di implementare un meccanismo di pipeline...
+
+La modalità pipeline ci consente di aumentare il throughput di una rete. Invece di inviare un singolo frame ne inviamo $n$ e aspettiamo $n$ $ACK$, capiamo subito che è molto importante gestire i casi in cui il frame si rovina e l'ACK di risposta non arriva, usiamo principalmente questi due algoritmi:
 - **Go-Back-N (GBN)**: *Se si perde un pacchetto, si rimanda tutto da quel punto in poi.*
 	* **Finestra di invio:** Il mittente può inviare fino a $N$ pacchetti senza aspettare conferma (ACK).
 	* **Ricezione:** Il destinatario accetta i pacchetti solo in ordine rigoroso. Se arriva un pacchetto fuori sequenza, lo scarta.
@@ -31,27 +44,35 @@ La modalità pipeline ci consente di aumentare il throughput di una rete. Invece
 	* **Ricezione:** Il destinatario accetta i pacchetti fuori ordine e li **salva in un buffer**, inviando un ACK individuale per ogni pacchetto ricevuto correttamente.
 	* **Gestione degli errori:** Se il pacchetto $3$ va perso ma il $4$ e il $5$ arrivano, il destinatario memorizza $4$ e $5$. Quando scade il timer del mittente per il pacchetto $3$, il mittente ritrasmette solo e unicamente il pacchetto $3$.
 
+Usando la pipeline si riesce ad aumentare la quantità di dati trasmessi.
+
+
+
 **Rumore**: dobbiamo mettere in considerazione anche il rumore, ovvero il disturbo al nostro segnale durante la sua trasmissione. 
 
-Con questa foto vediamo le differenze tra TCP e UDP
-![[Pasted image 20260319110552.png|300]]
+Meme tra TCP e UDP
+![[Pasted image 20260319110552.png|407]]
 
 ---
 ### TCP
-Nella ricostruzione delle versioni di TCP si dice siano 4 versioni, ma non è vero è una sola quella del $1981$. Il TCP ha diverse feature:
+Nella ricostruzione delle versioni di TCP si dice ci siano 4 versioni, ma non è vero è una sola quella del $1981$. Il TCP ha diverse feature:
 * Addressing/Multiplexing
 * Connection Establishment, Management and Termination
 * Data Handling and Packaging
 * Data Transfer
 * Providing Reliability and Transmission Quality Services
 * Providing Flow Control and Congestion Avoidance Features
-L'ultima è quella sulla quale stanno lavorando i ricercatori, per migliorarla. Ci sono delle cose che TCP non provvede: 
+L'ultima è quella sulla quale stanno lavorando i ricercatori, per migliorarla. Ci sono delle cose a cui TCP non provvede: 
 - Non offre sicurezza
 - Non garantisce una comunicazione
 - Non mantiene i *message boundaries* ovvero i confini del messaggio, queste servono per riuscire ad interpretare e ricostruire messaggi.
 
 Di seguito la struttura del pacchetto TCP:
-![[Pasted image 20260319115102.png|500]]
+![[Pasted image 20260319115102.png|647]]
+
+
+
+
 Troviamo diverse informazioni:
 - **Destinatione e Source Port**
 - **Sequence Number:** Campo di 32 bit che indica il numero di sequenza del primo byte dei dati contenuti nel segmento TCP.
