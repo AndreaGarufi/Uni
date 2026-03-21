@@ -55,37 +55,50 @@ Meme tra TCP e UDP
 
 ---
 ### TCP
-Nella ricostruzione delle versioni di TCP si dice ci siano 4 versioni, ma non è vero è una sola quella del $1981$. Il TCP ha diverse feature:
-* Addressing/Multiplexing
-* Connection Establishment, Management and Termination
-* Data Handling and Packaging
-* Data Transfer
-* Providing Reliability and Transmission Quality Services
-* Providing Flow Control and Congestion Avoidance Features
+Nella ricostruzione delle versioni di TCP si dice ci siano 4 versioni, ma non è vero è una sola quella del 1981. Il TCP ha diverse funzionalità (feature):
+
+- Indirizzamento/Multiplexing
+- Creazione, Gestione e Terminazione della Connessione
+- Gestione e Impacchettamento dei Dati
+- Trasferimento Dati
+- Fornitura di Servizi di Affidabilità e Qualità della Trasmissione
+- Fornitura di Funzionalità di Controllo del Flusso e Prevenzione della Congestione
+
 L'ultima è quella sulla quale stanno lavorando i ricercatori, per migliorarla. Ci sono delle cose a cui TCP non provvede: 
-- Non offre sicurezza
-- Non garantisce una comunicazione
-- Non mantiene i *message boundaries* ovvero i confini del messaggio, queste servono per riuscire ad interpretare e ricostruire messaggi.
+- Non offre sicurezza 
+- Non garantisce una comunicazione 
+- Non mantiene i confini del messaggio (*message boundaries*), queste servono per riuscire ad interpretare e ricostruire messaggi.
 
 Di seguito la struttura del pacchetto TCP:
 ![[Pasted image 20260319115102.png|647]]
 
-
-
-
 Troviamo diverse informazioni:
 - **Destinatione e Source Port**
+  
 - **Sequence Number:** Campo di 32 bit che indica il numero di sequenza del primo byte dei dati contenuti nel segmento TCP.
-	- _Esempio pratico:_ Supponiamo che tu debba inviare 500 byte di dati. Il pacchetto parte con un Sequence Number impostato a `1000`. Questo significa che il pacchetto contiene i byte che vanno dal numero `1000` al `1499`.
+  _Esempio pratico:_ Supponiamo che tu debba inviare 500 byte di dati. Il pacchetto parte con un Sequence Number impostato a `1000`. Questo significa che il pacchetto contiene i byte che vanno dal numero `1000` al `1499`.
+  
 - **Acknowledgment Number (ACK):** Campo di 32 bit che indica il numero di sequenza del prossimo byte che il ricevitore si aspetta di ricevere (conferma cumulativa).
-	- _Esempio pratico:_ Il destinatario riceve il tuo pacchetto con i byte dal `1000` al `1499`. Per dirti che è andato tutto bene, ti manda indietro un messaggio con l'ACK impostato a `1500`. Ti sta letteralmente dicendo: "Perfetto, ho tutto fino al 1499. Ora sto aspettando che mi mandi il byte 1500".
-- **ecc...**
+  _Esempio pratico:_ Il destinatario riceve il tuo pacchetto con i byte dal `1000` al `1499`. Per dirti che è andato tutto bene, ti manda indietro un messaggio con l'ACK impostato a `1500`. Ti sta letteralmente dicendo: "Perfetto, ho tutto fino al 1499. Ora sto aspettando che mi mandi il byte 1500".
+  
+- **TCP header length (chiamato anche Data Offset):** Questo campo indica quanto è lungo l'intero header TCP. È fondamentale perché serve a dire al computer ricevente: "L'header finisce qui, da questo punto in poi iniziano i dati veri e propri (il payload)".
+  
+- **Spazio grigio (Reserved):** Sono bit "messi da parte" per sviluppi futuri del protocollo. Attualmente vengono impostati a zero e ignorati
+  
+- **Flag** Quella fila di lettere in verticale rappresenta i Flag, ovvero dei piccoli interruttori di 1 bit che indicano lo stato del pacchetto o danno istruzioni speciali.
+
+- **Window size (Dimensione della finestra):** È il cuore del _controllo di flusso_ che avevamo menzionato prima. Indica quanti byte il computer ricevente è in grado di accettare in quel momento. Se il ricevente è sovraccarico, abbasserà questo valore per dire al mittente: "Rallenta, non ho più spazio in memoria!"
+
+- **Checksum:** È un valore matematico di controllo per la correzione degli errori
+
+- - **Urgent pointer (Puntatore urgente):** Viene letto solo se il flag **URG** è attivo. Indica esattamente a quale byte finiscono i dati urgenti all'interno del pacchetto.
+
 
 Tutto questo rende TCP affidabile ma non molto veloce, tuttavia anche il througput è un fattore da tenere in considerazione, per analizzarlo dobbiamo analizzare una serie di parametri:
 - **MSS(Maximum Segment Size)**: Indica la dimensione massima dei dati che possono essere inviati in un singolo segmento TCP
-- **MTU(Maximum Tramission Unit)**: $MSS+$$Header TCP+$$HeaderIP$ 
+- **MTU(Maximum Tramission Unit)**: -> $MSS+$$Header TCP+$$HeaderIP$ 
 
-Un'altro dato importante è RTT(Round Trip TIme), questo tempo viene continuamente stimato in questo modo:
+Un'altro dato importante è RTT(Round Trip Time), questo tempo viene continuamente stimato in questo modo:
 - Per ogni comunicazione viene misurato il tempo che trascorre tra l'invio del pacchetto e il ritorno di un ipotetico ACK
 - Viene fatta la media di tutti i tempi salvati
 è importante che RTT siano stimato bene perché:
@@ -94,8 +107,14 @@ Un'altro dato importante è RTT(Round Trip TIme), questo tempo viene continuamen
 il calcolo del RTT viene fatto ad ogni invio di pacchetto, in modo che TCP sappia quanto aspettare. Il tipo di media che viene usata si chiama: **Exponential Weighted Moving Average**.  (Moving perché si muove un valore avanti ad ogni pacchetto)
 
 
-> [!DANGER] Da integrare
-> Deviazione standard media dei pacchetti e calcolo del timeout effettivo
+**Deviazione standard RTT**
+Abbiamo detto che il tempo RTT viene calcolato attraverso una media dei vari tempi che si sono registrati, ma non sempre i tempi registrati sono tutti simili tra loro (es. 1 ms, 1.12 ms, 1.09 ms) potrebbero infatti esserci oscillazioni molto grandi tra i vari tempi misurati, (es. 1 ms, 0.3 ms, 3 ms) quindi il calcolo della deviazione standard RTT è proprio il calcolo di queste oscillazioni molto grandi:
+$$Dev RTT = (1 − β) · Dev RTT + β · |Sample RTT − Estimated RTT|$$
+Un valore tipico di $β$ è $\frac{1}{4} = 0.25$
+Dove:
+- β è un peso fissato (0.25 di solito)
+- Sample RTT è il tempo misurato con l'ultimo pacchetto inviato
+- Estimated RTT è il tempo storico (ovvero la media fino a quel momento)
 
 
 A differenza dei modelli teorici RDT (che prevedono un timer per ogni singolo pacchetto), TCP riduce la complessità del sistema utilizzando **un solo timer di ritrasmissione globale**.
@@ -112,3 +131,4 @@ la formula dell'RTO è progettata per essere prudente, il timer finale calcolato
 - Se il ricevitore rileva un "buco" nei pacchetti, continua a mandare ACK con il numero del pacchetto mancante.
 - Se il mittente riceve **3 ACK duplicati** di fila, deduce con certezza che il pacchetto successivo è andato perso.
 - A questo punto il mittente **ritrasmette immediatamente il pacchetto**, senza aspettare che il lungo timer RTO scada.
+

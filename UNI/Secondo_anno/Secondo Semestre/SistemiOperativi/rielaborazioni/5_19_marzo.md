@@ -1,19 +1,25 @@
 
-### Thread
-Vedi lezione precedente
+### Thread 
+(continuo di [[UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/4_17_marzo.pdf|4_17_marzo]])
 
+Riassumendo le CPU di oggi hanno più core fisici, dove vengono eseguiti più processi/thread all'interno di ogni singolo core (contest switch) quindi ad oggi si sfrutta il parallelismo puro (tra core) e lo pseudo-parallelismo (all'interno di ogni singolo core).
+
+![[Pasted image 20260321133728.png|498]]
 ###### Programmazione multicore
-Programmare pensando ad un sistema multi thread, ci permette di non cambiare nulla quando arriviamo in uno scenario multicore, nella pratica non cambia nulla, i thread vengono divise sulle varie CPU.
+Programmare pensando ad un sistema multi thread, ci permette di non cambiare nulla quando arriviamo in uno scenario multicore, nella pratica non cambia nulla, i thread vengono divisi sui vari core.
 
+**Problemi della programmazione multicore**
 Scrivere programmi multi-core non è banale, dobbiamo stare attenti alle seguenti cose:
-- **separazione dei task**: per task intendiamo i compiti che la nostra CPU deve eseguire, è importante che questi vengano individuati e resi parallelizzabili, a grandi linee abbiamo un task per thread. Ha senso creare un thread se per task pesanti.
-- **bilanciamento**: 
-- **Suddivisione dei dati**: ognuno di questi task avrà bisogno di strutture dati che possono essere anche comuni (può capite anche che più thread lavorano sulla stessa struttura dati) 
-- **Dipendenza dei dati**: visto che i dati possono essere condivisi tra i vari thread ci possono essere delle dipendenze tra un task (e quindi un thread) ed un altro, è importante tenere a mente questo dettaglio per fare cercare di creare thread indipendenti quando possibile.
-- **Test e debugging**: Ci possono essere diversi problemi quando si parla di processi multicore. Dato lo stesso input si possono avere output diversi questo perché ci possono avere problemi dovuti a come i thread vengono inseriti nello scheduler, questo ovviamente non va bene, il debugging e i test servono a cercare questo tipo di problemi.
+- **Separazione dei task**: per task intendiamo i compiti che la nostra CPU deve eseguire, è importante che questi vengano individuati e resi parallelizzabili, a grandi linee abbiamo un task per thread. Ha senso creare un thread per task pesanti.
+- **Bilanciamento**: cioè la giusta suddivisione del lavoro tra i thread e i core 
+- **Suddivisione dei dati**: ognuno di questi task avrà bisogno di strutture dati che possono essere anche comuni (può capitare anche che più thread lavorano sulla stessa struttura dati) 
+- **Dipendenza dei dati**: visto che i dati possono essere condivisi tra i vari thread ci possono essere delle dipendenze tra un task (e quindi un thread) ed un altro, è importante tenere a mente questo dettaglio per cercare di creare thread indipendenti quando possibile.
+- **Test e debugging**: Ci possono essere diversi problemi quando si parla di processi multicore. Dato lo stesso input si possono avere output diversi questo perché ci possono essere problemi dovuti a come i thread vengono inseriti nello scheduler, questo ovviamente non va bene, il debugging e i test servono a cercare questo tipo di problemi.
 
 ###### Thread a livello utente
-A questo livello il sistema operativo non sa che cosa sia un thread è il programmatore a scegliere come gestire i thread, in pratica abbiamo una libreria che implementa un sistema run-time che gestisce una tabella dei thread
+![[Pasted image 20260321134253.png|203]]
+Le linee a zig-zag sono i thread generati dal programma in user mode (es. Excel) che confluiscono in un unico punto verso il kernel, *questo sta a indicare che il kernel non ha la minima idea di cosa sono questi thread lui li considera un unico processo* 
+
 *PRO*:
 - scheduling personalizzato
 - il dispatching non richiede trap nel kernel
