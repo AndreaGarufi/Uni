@@ -22,15 +22,15 @@
             }
           },
           {
-            "id": "992b5ddefc8ca2a3",
+            "id": "2deabb2b6989befd",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/4_17_marzo.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-02.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "4_17_marzo"
+              "title": "SO-02"
             }
           }
         ]
@@ -179,50 +179,13 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "floating": {
-    "id": "9468f25ec6f80262",
-    "type": "floating",
-    "children": [
-      {
-        "id": "5a928c1a3e130346",
-        "type": "window",
-        "children": [
-          {
-            "id": "be9b0bf8d60e442b",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "2deabb2b6989befd",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-02.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "SO-02"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 3,
-        "y": 3,
-        "width": 1530,
-        "height": 858,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "aaa87d11002a8245",
   "lastOpenFiles": [
-    "Pasted image 20260321134253.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-02.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/5_19_marzo.md",
-    "Pasted image 20260321133728.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/4_17_marzo.pdf",
+    "Pasted image 20260321134253.png",
+    "Pasted image 20260321133728.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/5_19_marzo.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/5_19_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/3_12_marzo.pdf",
@@ -243,7 +206,6 @@
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260319153905.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/4 - 17 marzo 2026.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260318113052.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/4 _17_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/3_12_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/3_12_marzo.md",

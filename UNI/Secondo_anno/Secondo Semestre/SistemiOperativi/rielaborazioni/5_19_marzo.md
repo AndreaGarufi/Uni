@@ -18,17 +18,16 @@ Scrivere programmi multi-core non è banale, dobbiamo stare attenti alle seguent
 
 ###### Thread a livello utente
 ![[Pasted image 20260321134253.png|203]]
-Le linee a zig-zag sono i thread generati dal programma in user mode (es. Excel) che confluiscono in un unico punto verso il kernel, *questo sta a indicare che il kernel non ha la minima idea di cosa sono questi thread lui li considera un unico processo* 
-
+Le linee a zig-zag sono i thread generati dal programma in user mode (es. Excel) che confluiscono in un unico punto verso il kernel, *questo sta a indicare che il kernel non ha la minima idea di cosa sono questi thread lui li considera un unico processo*, quindi il programma usa una libreria che crea e gestisce una sua personale tabella dei thread (come se fosse un mini sistema operativo integrato)
 *PRO*:
-- scheduling personalizzato
-- il dispatching non richiede trap nel kernel
+- scheduling personalizzato: il programma può scegliere le priorità tra i thread senza dover sottostare allo scheduler del sistema operativo
+- il dispatching non richiede trap nel kernel: il cambio di thread è velocissimo perché il programma fa tutto nella user mode, senza dover passare alla kernel mode
 *CONTRO*: 
 - chiamate bloccanti:
-	- *Chiamate di sistema bloccanti:* Quando un thread richiede un'operazione di I/O, l'operazione viene passata al kernel. Dato che il sistema operativo vede e gestisce solo il processo nel suo insieme, mette in stato di attesa (_blocked_) l'intero processo finché l'operazione di I/O non è completata. Di conseguenza, tutti gli altri thread a livello utente si bloccano inevitabilmente, anche se avrebbero istruzioni pronte da eseguire e non dipendono da quel dato.
+	- *Chiamate di sistema bloccanti:* Quando un thread richiede un'operazione di I/O, l'operazione viene passata al kernel (trap). Dato che il sistema operativo vede e gestisce solo il processo nel suo insieme, mette in stato di attesa (_blocked_) l'intero processo finché l'operazione di I/O non è completata. Di conseguenza, tutti gli altri thread a livello utente si bloccano inevitabilmente, anche se avrebbero istruzioni pronte da eseguire e non dipendono da quel dato.
 	- *Page fault:* Se un thread tenta di accedere a una variabile o a un'istruzione che si trova in un'area di memoria non attualmente caricata nella memoria RAM (ad esempio perché è stata spostata nell'area di swap su disco), si genera un'eccezione hardware chiamata _page fault_. Il sistema operativo deve intervenire per leggere la pagina mancante dal disco. Essendo un'operazione molto lenta, il kernel sospende l'esecuzione dell'intero processo. Pertanto, anche se gli altri thread del processo avessero tutte le loro pagine già pronte in RAM e potessero continuare a lavorare, vengono bloccati tutti fino al completamento del caricamento della pagina richiesta.
 - nessun vero parallelismo tra i processi
-- non si ha possibilità di prelazione - il processo diventa molto lungo e pesante questo crea la possibilità che la CPU non venga rilasciata
+- non si ha possibilità di prelazione, ovvero c'è la possibilità che la CPU o in generale una risorsa non venga rilasciata
 
 Per gestire i thread a questo livello devo praticamente fare sempre le stesse cose, ma lo devo fare in maniera manuale a livello utente. Più precisamente il programmatore va a scrivere tutto il ciclo vitale di un thread e quando si può usando thread_yield il thread rilascia l'utilizzo della CPU ad un altro thread (dello stesso processo)
 
@@ -37,10 +36,10 @@ Questo modello viene chiamato modello "1 a molti"
 ###### Thread a livello kernel
 Il kernel gestisce i thread, conosce che cosa sono i thread e sa che dentro ogni processo ci possono essere più thread, ovviamente il kernel deve essere affidabile nelle gestione dei thread, le chiamate di sistema sono analoghe a quelle usate a livello utente. Si ha un unica tabella dei thread a livello kernel.
 *PRO*:
-- Un thread con chiamata bloccante non va ad intralciare gli altri, come succede a livello user
-- La prelazione è disponibile
+- Un thread con chiamata bloccante non va ad intralciare gli altri, come succede a livello user, proprio perché il kernel li può vedere.
+- La prelazione è disponibile, quindi in caso di thread a livello kernel che occupano all'infinito una risorsa possono essere killati
 *CONTRO*:
-- si ha un cambio di contesto più lento, perché il kernel va a gestire tutti i thread e non solo quelli di uno specifico processo
+- si ha un cambio di contesto più lento, perché il kernel va a gestire tutti i thread e non solo quelli di uno specifico processo (richiede trap)
 - creazione e distruzione più costose (il numero di thread kernel è tipicamente limitato, è importante riciclarli)
 
 Il riciclo dei thread ci evita di utilizzare le chiamate thread_create e thread_delete in questo modo si risparmia molto tempo.
@@ -48,6 +47,7 @@ Il riciclo dei thread ci evita di utilizzare le chiamate thread_create e thread_
 Con questo tipo di gestione il nostro sistema operativo vede tutto come thread anche un processo che thread non ne ha.
 
 Questo modello viene chiamato modello "1 a 1"
+
 ###### Modello ibrido
 Questo modello mira a combinare i punti di forza dell'approccio a livello utente (efficienza e flessibilità) con quelli dell'approccio a livello kernel (vero parallelismo e tolleranza ai blocchi), mitigando i difetti di entrambi.
 
@@ -61,7 +61,7 @@ In pratica, il sistema effettua un **multiplexing** di numerosi thread a livello
 Tutti i sistemi operativi moderni supportano thread a livello kernel, anche supporto a livello utente tramite diverse librerie: 
 - green threads su Solaris
 - GNU portable thread su UNIX
-- fiber su win
+- fiber su windows
 Esistono anche delle librerie di accesso ai thread, che ci aiutano ad interagire allo stesso modo con quest'ultimi indipendentemente dal sistema operativo usato
 
 
