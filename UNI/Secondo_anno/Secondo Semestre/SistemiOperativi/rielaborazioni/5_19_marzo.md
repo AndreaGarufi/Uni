@@ -70,11 +70,10 @@ Spesso i processi hanno bisogno di cooperare, abbiamo diversi modi per fare ciò
 - **Pipe**: collegamento tra processi, in pratica cmd1 | cmd2 | cmd3, quello che faccio è avviare tutti e tre i comandi in parallelo, quello che succede è l'output del primo va in input all'altro e cosi via
 - **IPC (Inter Process Communication)**: dei processi con il proprio spazio di indirizzamento riescono a comunicare grazie a dei segmenti di memoria condivisa, questo permette la comunicazione tra processi in modo efficiente.
 
-Se il codice non è scritto in modo ottimale abbiamo diversi possibili problemi:
+Possono verificarsi i seguenti problemi:
 - come scambiarsi i dati
 - accavallamento delle operazioni su dati comuni
 - coordinamento tra le operazioni
-
 
 **Esempio:** Supponiamo di avere due processi P1 e P2 che aggiornano una variabile intera condivisa *x*. Entrambi eseguono un ciclo `for` che incrementa *x* di uno (`x = x + 1`) per 100 iterazioni ciascuno.
 
@@ -83,18 +82,18 @@ L'istruzione `x = x + 1` non è atomica: il processore la scompone in tre passi 
 2. **Incrementa** il valore nel registro
 3. **Scrivi** il nuovo valore in memoria
 
-Il problema nasce quando i due processi si interlacciano in mezzo a questi passi:
+Il problema nasce quando i due processi si intersecano in mezzo a questi passi:
 - *x* = 0
 - P1 legge x → ottiene 0
 - P2 legge x → ottiene 0 *(prima che P1 abbia scritto!)*
 - P1 incrementa → 0+1 = 1, scrive x = 1
 - P2 incrementa → 0+1 = 1, scrive x = 1
 
-Risultato: *x* vale 1 invece di 2 — un incremento è andato perso. Questo può ripetersi in qualsiasi iterazione, quindi al termine delle 100 iterazioni di entrambi i processi, il valore finale di *x* potrebbe essere molto inferiore a 200. Questo fenomeno prende il nome di **race condition** (corsa critica).
+Risultato: *x* vale 1 invece di 2 — un incremento è andato perso. Questo può ripetersi in qualsiasi iterazione, quindi al termine delle 100 iterazioni di entrambi i processi, il valore finale di *x* potrebbe essere molto inferiore a 200. Questo fenomeno prende il nome di **race condition** (corsa critica). Un altro esempio è quello dell'accredito di denaro sul conto bancario.
 
 **Sezioni critiche:** Per evitare le race condition, il programmatore deve garantire che i processi non accedano simultaneamente alla stessa risorsa condivisa. La porzione di codice in cui avviene questo accesso è detta *sezione critica*, e deve essere eseguita in mutua esclusione: un solo processo alla volta può trovarsi al suo interno.
 
-Per avere una buona soluzione dobbiamo rispettare queste quattro condizioni:
+*Per avere una buona soluzione dobbiamo rispettare queste quattro condizioni:*
 1. mutua esclusione nell'accesso alle sezioni critiche
 2. nessuna assunzione sulla velocità di esecuzione o sul numero di CPU
 3. nessun processo fuori dalla propria sezione critica può bloccare un altro processo
@@ -105,8 +104,7 @@ Di seguito il dettaglio di quello che succede realmente
 Ci sono diverse soluzioni a questo problema, come:
 - Disabilitare gli interrupt
 - Variabili di lock
-- Alternanza stretta
+- Alternanza stretta: (o _strict alternation_) è un algoritmo software elementare utilizzato per garantire la **mutua esclusione** tra due processi concorrenti che devono accedere a una zona di memoria o a una risorsa condivisa, definita **sezione critica**. Il meccanismo si basa su un'unica variabile globale condivisa, tipicamente un intero chiamato `turno`, che indica esplicitamente quale processo ha il diritto di entrare nella propria sezione critica.
   ![[Pasted image 20260319175721.png|500]]
 
-> [!DANGER] 
-> Integrare dettagli dell'alternanza stretta
+
