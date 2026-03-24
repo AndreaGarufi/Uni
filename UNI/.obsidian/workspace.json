@@ -11,28 +11,26 @@
             "id": "74b8efaeabef8002",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Rielaborazioni/5_23_marzo.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/3_Transport_N.pdf"
               },
-              "icon": "lucide-file",
-              "title": "5_23_marzo"
+              "icon": "lucide-file-text",
+              "title": "3_Transport_N"
             }
           },
           {
-            "id": "6ae7f81d9c3c7828",
+            "id": "c7a282fcb137d026",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Rielaborazioni/5_23_marzo.md",
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/6_24_marzo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5_23_marzo"
+              "title": "6_24_marzo"
             }
           }
         ],
@@ -197,14 +195,19 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "6ae7f81d9c3c7828",
+  "active": "c7a282fcb137d026",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/7 - 24 marzo 2026.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/6_24_marzo.md",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260324103826.png",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/3_Transport_N.pdf",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Rielaborazioni/5_23_marzo.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/image(9).png",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/PDF_LEZIONI/5_23_marzo.pdf",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Rielaborazioni/3_13_marzo.md",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/PDF_LEZIONI/3_13_marzo.pdf",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Rielaborazioni/1_2_marzo.md",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/PDF_LEZIONI/1_2_marzo.pdf",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Rielaborazioni/5_23_marzo.md",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/PDF_LEZIONI",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Slide/L3_Refactoring.pdf",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260323171630.png",
@@ -216,8 +219,6 @@
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260319163244.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260319153905.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260319115102.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260319110552.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260319105431.png",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/5_19_marzo.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/4 - 17 marzo 2026.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
@@ -225,9 +226,7 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/5_19_marzo.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/5_19_marzo.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/4 _17_marzo.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/3_Transport_N.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/5_19_marzo.pdf",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Slide/L3_SE_JUnit.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/5 - 17 marzo 2026.md",
     "3 - Transport_N.pdf.md",
     "2020260317102747.png.md",
@@ -243,7 +242,6 @@
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/TUTTE LE FORMULE INTERAZIONE E MULTIMEDIA.md"
+    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/8 Operatori_locali_filtri_di_effetti.md"
   ]
 }
