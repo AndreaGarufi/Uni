@@ -13,15 +13,42 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/6_24_marzo.md",
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/6_24_marzo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "6_24_marzo"
             }
+          },
+          {
+            "id": "4e7b348d2cc04581",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/6 - 24 marzo 2026.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "6 - 24 marzo 2026"
+            }
+          },
+          {
+            "id": "99cfafd8ca14bd91",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-02.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "SO-02"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -182,12 +209,18 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "2d7edf54d8ead383",
+  "active": "99cfafd8ca14bd91",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/6 - 24 marzo 2026.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/6_24_marzo.md",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260324175804.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260324155018.png",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/5_19_marzo.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/6_24_marzo.md",
+    "Project ideas.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/6_24_marzo.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/3_Transport_N.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/6_24_marzo.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260325114310.png",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/5_19_marzo.pdf",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260325112535.png",
@@ -206,13 +239,9 @@
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/PDF_LEZIONI/1_2_marzo.pdf",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/PDF_LEZIONI",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Slide/L3_Refactoring.pdf",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260323171630.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260323171341.png",
-    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/PDF_LEZIONI/2_6_Marzo_java.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/5_19_marzo.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/4 - 17 marzo 2026.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/5_19_marzo.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/4 _17_marzo.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/5 - 17 marzo 2026.md",
@@ -227,8 +256,6 @@
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Appunti prima lezione.md",
     "Secondo_anno/Senza nome.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md",
-    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "Secondo_anno/Primo Semestre/Interazione e multimedia/Rielaborazioni/9 Trasformata_Fourier.md"
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Domande_Problemi esami.md"
   ]
 }
