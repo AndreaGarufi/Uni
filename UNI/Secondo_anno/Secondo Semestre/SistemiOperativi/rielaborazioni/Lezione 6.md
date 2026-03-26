@@ -51,7 +51,6 @@ L'istruzione `TSL (REGISTER, LOCK)` compie due azioni allo stesso tempo:
 1. Legge il valore attuale della variabile `LOCK` e lo copia nel registro.
     
 2. Scrive un valore `!= 0` nella variabile `LOCK`.
-    
 
 **Come si usa:**
 
