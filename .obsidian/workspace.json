@@ -36,18 +36,6 @@
             }
           },
           {
-            "id": "2d0cf686d0451222",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Riassunto_Github"
-            }
-          },
-          {
             "id": "e2e18b80b733fd6b",
             "type": "leaf",
             "state": {
@@ -59,8 +47,7 @@
               "title": "4_Network_N"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -206,12 +193,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "a06ff212a82e673e",
+  "active": "4f717e836065e08c",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/8 - 26 marzo 2026.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/7_26_marzo.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260329171022.png",
     "Senza nome.md",
     "4 - Network_N.pdf.md",
@@ -228,7 +215,6 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260327123503.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260327121226.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/4_17_marzo.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/5_19_marzo.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260325174914.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260325114310.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260325112535.png",

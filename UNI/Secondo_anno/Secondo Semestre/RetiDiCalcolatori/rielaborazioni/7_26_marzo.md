@@ -5,7 +5,7 @@ Possiamo immaginare la rete di connessioni tra dispositivi e tra router come un 
 **Definizioni:**
 - *Routing* -> il processo di selezione e definizione di cammini per i pacchetti all'interno o tra reti.
 - *Forwarding* -> Consiste nell'inoltro effettivo dei pacchetti
-
+(Spesso chiesto all'esame)
 ![[Pasted image 20260329171022.png|291]]
 
 Un router ci instrada al router successivo, ad ogni nodo del grafo il router ci indica qual è la strada migliore per raggiungere il router (nodo) successivo
@@ -42,4 +42,9 @@ Le garanzie in termini di reliability sono affidate al livello trasporto, tramit
 
 **Router**
 I router sono sicuramente i dispositivi più responsabili dell'instradamento e dell'inoltro, sono formati da diversi componenti. In un router, mentre il processo d’instradamento è principalmente software, le porte di ingresso, di uscita e le strutture di commutazione, sono gestite da hardware dedicato. In questo modo, è possibile ottenere le performance richieste dalla rete, operando in lassi temporali dell’ordine dei millisecondi.
+
+• *Porte di ingresso*. Sono le terminazioni a livello fisico per i collegamenti in ingresso al router. Inoltre, è sempre nella porta d’ingresso che si effettua la decisione di forwarding. Ogni porta contiene infatti una copia della tabella di routing. In questo caso, il termine ”porta” fa riferimento a interfacce fisiche d’input (e output), ben diversi dalle porte software dei processi e dei socket. 
+• *Struttura di commutazione*. Connette fisicamente le porte d’ingresso a quelle di uscita. Una sorta di rete interna al router.
+• *Porte di uscita*. Memorizzano i pacchetti che provengono dalla struttura di commutazione e li trasmettono sul collegamento d’uscita. Nei collegamenti bidirezionali, la porta d’uscita è accoppiata alla porta d’ingresso sulla stessa scheda di collegamento. 
+• *Processore d’instradamento*. Esegue le funzioni del control plane.
 
