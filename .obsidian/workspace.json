@@ -11,10 +11,26 @@
             "id": "9acaf5cdd75e47fc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/9_9_aprile.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "9_9_aprile"
+            }
+          },
+          {
+            "id": "418a39e9fbb7c632",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/8_7_aprile.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "8_7_aprile"
             }
           }
         ]
@@ -165,6 +181,15 @@
   },
   "active": "9acaf5cdd75e47fc",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/8_7_aprile.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/9_9_aprile.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/8_7_aprile.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260407161248.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260407161213.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260407161125.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260407111150.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260407103211.png",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/7_26_marzo.pdf",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L3_SE_JUnit.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/7_26_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/7_26_marzo.pdf",
@@ -181,20 +206,12 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/6_24_marzo.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/8 - 26 marzo 2026.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260329171022.png",
     "Senza nome.md",
     "4 - Network_N.pdf.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/2_Applications_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/6_24_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 6.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/6 - 24 marzo 2026.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260327123503.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260327121226.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260325174914.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260325114310.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260325112535.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/6_24_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/5_23_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Rielaborazioni/5_23_marzo.md",
@@ -209,8 +226,6 @@
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/3_12_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/3_12_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/2_10_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/1_2_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
