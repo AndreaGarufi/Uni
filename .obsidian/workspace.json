@@ -11,12 +11,14 @@
             "id": "7e5f80455e8a774d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L5_EreditaOO.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/8_7_aprile.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "L5_EreditaOO"
+              "icon": "lucide-file",
+              "title": "8_7_aprile"
             }
           }
         ]
@@ -156,19 +158,19 @@
   "left-ribbon": {
     "hiddenItems": {
       "bases:Crea nuova Base": false,
-      "obsidian-git:Open Git source control": false,
       "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
       "canvas:Crea nuova lavagna": false,
       "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
-      "command-palette:Apri riquadro comandi": false
+      "command-palette:Apri riquadro comandi": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "7e5f80455e8a774d",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L4_Singleton.pdf",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L5_EreditaOO.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L4_Singleton.pdf",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L3_SE_JUnit.pdf",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/Non confermato 92143.crdownload",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/Non confermato 752949.crdownload",
