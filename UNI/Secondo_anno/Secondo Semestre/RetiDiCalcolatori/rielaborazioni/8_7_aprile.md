@@ -54,5 +54,5 @@ Notiamo che, dopo aver ottenuto tutti gli indirizzi necessari, tramite protocoll
 Infatti quando viene mandata una richiesta ARP viene scelta la prima risposta anche se non è quella dell'interessato, questo perché non si chiedono verifiche o certificati, di conseguenza si possono avvelenare le ARP table degli altri dispositivi cambiandone l'indirizzo MAC associato all' IP e questo porta a diversi tipi di danni:
 1) man-in-the-middle
 2) Denial of Service (DoS)
-3) Session Hijacking
+3) Session Hijacking.
 
