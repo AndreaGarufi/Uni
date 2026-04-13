@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4385134209fb01e9",
+        "id": "0fc4b7e2636cf57e",
         "type": "tabs",
         "children": [
           {
-            "id": "9acaf5cdd75e47fc",
+            "id": "7e5f80455e8a774d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/8_7_aprile.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "8_7_aprile"
             }
           }
         ]
@@ -154,7 +158,6 @@
   "left-ribbon": {
     "hiddenItems": {
       "bases:Crea nuova Base": false,
-      "obsidian-git:Open Git source control": false,
       "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
       "canvas:Crea nuova lavagna": false,
@@ -163,13 +166,26 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "9acaf5cdd75e47fc",
+  "active": "7e5f80455e8a774d",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L5_EreditaOO.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L4_Singleton.pdf",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L3_SE_JUnit.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/7_26_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/7_26_marzo.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/7_26_marzo.md",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/Non confermato 92143.crdownload",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/Non confermato 752949.crdownload",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-02.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/7_26_marzo.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/8_7_aprile.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/9_9_aprile.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/8_7_aprile.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260407161248.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260407161213.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260407161125.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260407111150.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260407103211.png",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/7_26_marzo.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/7_26_marzo.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/7_26_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/The-Truman-Show-1998-1080p-H265-AC3-5-1-ITA-ENG-sub-ita-eng-Ph4nt0mX.torrent",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/Non confermato 907608.crdownload",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/7 - 26 marzo 2026.md",
@@ -177,24 +193,13 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260326172735.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260326160339.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260326155928.png",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/5_19_marzo.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/6_24_marzo.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/8 - 26 marzo 2026.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260329171022.png",
     "Senza nome.md",
     "4 - Network_N.pdf.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/2_Applications_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/6_24_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 6.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/6 - 24 marzo 2026.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260327123503.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260327121226.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260325174914.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260325114310.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260325112535.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/6_24_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/5_23_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Rielaborazioni/5_23_marzo.md",
@@ -209,8 +214,6 @@
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/3_12_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/3_12_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/2_10_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Lezioni/1_2_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
