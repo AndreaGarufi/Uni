@@ -46,18 +46,25 @@ Questa è un implementazione è molto simile a quella fatta con il semaforo l'un
 
 
 ### Problema dei lettori-scrittori
-Ha presentato altre soluzione
+Questo problema riguarda processi o thread che devono accedere ad una stessa risorsa (come potrebbe essere una tabella di un database o un'area di memoria):
+Abbiamo i lettori che hanno solamente bisogno di leggere i dati in quella locazione e gli scrittori che invece sovrascrivono quei dati: si capisce quindi che la sincronizzazione tra questi processi sia fondamentale per evitare problemi.
 
+**Soluzione basata sui semafori**
 
-> [!DANGER] semafori
-> Soluzione basata sui semafori
+![[Pasted image 20260415130950.png|635]]
 
+*Problema*
+Il problema in questa soluzione è che i lettori hanno priorità assoluta e gli scrittori potrebbero non entrare mai perché mentre un lettore sta già leggendo ne potrebbe entrare un altro aumentando rc di 1 e quindi quando il primo ha finito di leggere rc sarà ancora 1 (perché era 2) e a questo punto il ciclo potrebbe continuare se entra un altro lettore, questo perché i lettori possono entrare in continuazione bloccando la risorsa per gli scrittori praticamente all'infinito 
 
-> [!DANGER] monitor
-> Soluzione basata sui monitor
+**Soluzione basata sui monitor**
+
+![[Pasted image 20260415133134.png|625]]
+
+Questa soluzione funziona perché sia lettori che scrittori gestiscono bene l'uso della risorsa senza dare priorità solo ad uno o solo all'altro
 
 ### Scheduling
-la scelta di quali processi va avviato viene fatta dallo scheduler, in pratica sceglie dalla coda dei processi pronti. Per fare ciò i processi si dividono in due tipi: 
+La scelta di quali processi va avviato viene fatta dallo scheduler, in pratica sceglie dalla coda dei processi pronti. Quindi lo scheduler entra in gioco alla terminazione o creazione di un processo, quando ci sono degli interrupt o si verificano chiamate bloccanti come l' I/O
+Per fare ciò i processi si dividono in due tipi: 
 - processi *CPU bounded*: un processo che usa principalmente la CPU 
 - processi *I/O bounded*: un processo che fa principalmente operazioni di input/output
 quello che fa lo scheduler è inserire tutti i processi I/O bound dentro la CPU in modo da avviare tutte le operazioni di I/O che sono lente, mentre aspetta una risposta avvia i processi CPU bounded, una volta che questi sono finiti riprende l'esecuzione dei processi I/O bounded che a quel punto avranno quasi sicuramente finito
