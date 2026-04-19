@@ -52,5 +52,11 @@ Basandoci su questi esempi vediamo che SRTN è il più efficiente perché confro
 Anche qui abbiamo diversi algoritmi per ottimizzare questo problema, uno di questo è: 
 - **Scheduling round robin**: (RR): questa è una versione con prelazione del FCFS, che si basa sullo gestire il tutto in un quanto di tempo
 
-> [!DANGER]
-> Ci sono altre cose da dire
+Questa versione funziona in base a dei quanti di tempo o time slice che di solito hanno una durata di 20-50ms
+In sostanza ogni processo può occupare la CPU per un time slice appena finisce il tempo il processo verrà messo in fondo alla coda (FCFS usa una coda FIFO) e viene eseguito il processo successivo, se il processo completa il suo lavoro prima della fine del quanto di tempo allora libererà la CPU e inizierà l'esecuzione di un altro processo
+![[Pasted image 20260417175441.png|551]]
+
+> [!EXAMPLE] Esempio:
+> Immagina di avere in background un rendering video pesantissimo e in primo piano Word, dove tu stai digitando. Se non ci fosse il Round Robin, il tuo clic sulla tastiera rimarrebbe bloccato ad aspettare per minuti interi che il video finisca di calcolare. Con il Round Robin, il rendering video lavora per (ad esempio) 20 millisecondi, poi viene sbattuto in fondo alla fila; tocca a Word, che elabora la tua lettera in 1 millisecondo e rilascia la CPU, poi tocca di nuovo al video, ecc.
+
+Continua nella prossima lezione...
