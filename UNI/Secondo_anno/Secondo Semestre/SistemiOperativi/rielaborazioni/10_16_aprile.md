@@ -32,7 +32,7 @@ La **starvation** si presenta quando non posso mai garantire a un processo in co
 Per risolvere questo problema posso usare l'**aging**: esso aumenta temporaneamente la priorità dei processi che trascorrono troppo tempo nella coda dei processi pronti; più tempo aspetta, più aumenta di priorità. Dopo che viene eseguito, la priorità torna a quella di base.
 
 ---
-# Scheduling a Code Multiple
+### Scheduling a Code Multiple
 
 Potremmo usare un sistema di **scheduling a code multiple**: avrò una coda per ogni livello di priorità, in ogni coda avrò processi della stessa priorità.
 
@@ -68,15 +68,15 @@ Per evitare la starvation posso realizzare un **up/down grade** della priorità 
 Un altro modo è cambiare lo scheduling verticale assegnando un tempo T a un ciclo. Per ogni livello verrà assegnata una percentuale di T a ogni coda di priorità. Se una coda è vuota la percentuale di T sarà minore (es. _50%, 25%, 15%, 10%_).
 
 ---
-# SJF e Stima del CPU Burst
+### SPN Shortest Process Next e Stima del CPU Burst
 
-Applico lo **SJF**. In questi sistemi devo però capire la durata del prossimo burst di CPU. Posso fare delle stime dei burst precedenti di quel processo dato che il burst di un processo è simile.
+Applico lo **SJF** ai processi interattivi. In questi sistemi devo però capire la durata del prossimo burst di CPU. Posso fare delle stime dei burst precedenti di quel processo dato che il burst di un processo è simile ai burst di quelli precedenti.
 
 **CPU Burst**: Durata del tempo da quando il processo riceve la CPU a quando si blocca per I/O o timeout.
 
 Questo sistema è senza quanti di tempo.
 
-$S =$ Stima (dò più valore ai valori recenti)
+$S =$ Stima (do più valore ai valori recenti)
 
 $$S_{n+1} = a S_n + (1-a) T_n$$
 
@@ -84,11 +84,11 @@ $$S_{n+1} = a S_n + (1-a) T_n$$
 
 - $T_n$: Ultima misurazione
 
-Così la nuova stima considera l'ultima misurazione e la vecchia stima dando un determinato peso a $T_n$ e $S_n$. Il peso vieene dato proprio da $a$ che rappresenta una costante $0<a<1$ che in base al suo valore scelto si sceglie se far valere di più la vecchia stima o l'ultima misurazione.
+Così la nuova stima considera l'ultima misurazione e la vecchia stima dando un determinato peso a $T_n$ e $S_n$. Il peso viene dato proprio da $a$ che rappresenta una costante $0<a<1$ che in base al suo valore scelto si sceglie se far valere di più la vecchia stima o l'ultima misurazione.
 (es $a = 0.5$ in questo caso avrò che $S_n$ e $T_n$  avranno lo stesso peso)
 
 ---
-# Altri tipi di Scheduling
+### Altri tipi di Scheduling
 
 - **Scheduling Garantito**: Viene stabilita una percentuale di utilizzo per ogni processo e viene fatta rispettare. Bisogna quindi fare delle promesse ai processi e vedere poi se sono state rispettate. Chi è più indietro con le promesse avrà una percentuale più alta; va a dare la CPU a chi l'ha usata di meno. Non è basato sul quanto di tempo.
 
