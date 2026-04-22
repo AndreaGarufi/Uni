@@ -11,13 +11,30 @@
             "id": "d6663cb8c0324cbf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/21_aprile.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "21_aprile"
+            }
+          },
+          {
+            "id": "98d13260bba80c28",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "slides_computer_networks_pub"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -163,8 +180,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d6663cb8c0324cbf",
+  "active": "98d13260bba80c28",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/21_aprile.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260421102346.png",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-02.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/10_16_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/9_14_aprile.md",
@@ -181,15 +202,12 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260415130950.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260415130755.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260413150630.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260413115426.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/4_17_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/9_9_aprile.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Senza nome",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/8_7_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L5_EreditaOO.pdf",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L4_Singleton.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/L3_SE_JUnit.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/slide/Non confermato 92143.crdownload",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/9_9_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/7_26_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/7_26_marzo.md",
@@ -209,7 +227,6 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/5_19_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/5_19_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/4 - 17 marzo 2026.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
