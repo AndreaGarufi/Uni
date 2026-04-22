@@ -61,19 +61,20 @@ In generale la memoria viene gestita usando degli indirizzi. Nel tempo la gestio
 
 
 ### Swapping
-Il livello di multiprogrammazione è limitata dalla dimensione della memoria centrale, da qui nascono diverse soluzione, la prima di queste è lo swapping (non è l'area di swap famosa di win). Se viene richiesto di creare un nuovo processo ma la memoria centrale è piena, lo swapper (*scheduler di medio termine*) decide quale processo inserire nel disco, in modo da liberare la memoria e poter creare il nuovo processo. 
+Il livello di multiprogrammazione è limitato dalla dimensione della memoria centrale, da qui nascono diverse soluzioni, la prima di queste è lo *swapping* (non è l'area di swap famosa di win). Se viene richiesto di creare un nuovo processo ma la memoria centrale è piena, lo swapper (*scheduler di medio termine*) decide quale processo inserire nel disco (SSD o Hard Disk), in modo da liberare la memoria e poter creare il nuovo processo. 
 
 > [!TIP]
 > Quando la RAM è piena e il sistema ha bisogno di eseguire un nuovo programma, lo swapper seleziona un processo in memoria che al momento non sta facendo nulla e compie un'operazione di **swap out**, parcheggiandolo temporaneamente su un disco capiente chiamato _backing store_. Lo spazio appena liberato viene subito riutilizzato per un'operazione di **swap in**, prelevando un nuovo processo dal disco e caricandolo nella memoria centrale affinché la CPU possa eseguirlo.
 
-Questa strategia crea delle problematiche, come i problemi delle operazioni di input/output pendenti: cosa succede se trasferiamo su disco un processo che stava aspettando la scrittura di un dato da parte dell'hardware? Il rischio è che la periferica finisca per scrivere quel dato nello stesso punto della RAM, ma che ora appartiene a un altro processo, corrompendone i dati. Per evitarlo, il sistema operativo deve ancorare in memoria i programmi impegnati in queste operazioni. 
+Questa strategia crea delle problematiche, come i problemi delle operazioni di input/output: cosa succede se trasferiamo su disco un processo che stava aspettando la scrittura di un dato da parte dell'hardware? Il rischio è che la periferica finisca per scrivere quel dato nello stesso punto della RAM, ma che ora appartiene a un altro processo, corrompendone i dati. Per evitarlo, il sistema operativo deve ancorare in memoria i programmi impegnati in queste operazioni. 
 
 Oltre a questo, c'è il problema di come allocare lo spazio fisico. Sebbene si possa dividere la memoria in blocchi a **dimensione fissa**, spesso si usa una **dimensione dinamica** che dà a ogni processo l'esatta memoria richiesta. 
 
 Questo però genera il fenomeno della **frammentazione**, dalla quale distinguiamo due casi:
 - *interna*: frammentazione interna al blocco assegnato ad un processo
-- *esterna*: Man mano che i processi (A, B, C, D) vengono caricati, eseguiti e scaricati, la memoria si riempie di piccoli "buchi" inutilizzati. Col tempo, si arriva a un paradosso: la somma di tutti questi buchi potrebbe bastare per caricare un nuovo programma, ma siccome lo spazio non è contiguo, il sistema non sa dove metterlo (IMG SOTTO). 
-  ![[Pasted image 20260421173410.png|500]]
+- *esterna*: Man mano che i processi (A, B, C, D) vengono caricati, eseguiti e scaricati, la memoria si riempie di piccoli "buchi" inutilizzati. Col tempo, si arriva a un paradosso: la somma di tutti questi buchi potrebbe bastare per caricare un nuovo programma, ma siccome lo spazio non è contiguo, il sistema non sa dove metterlo. 
+  ![[Pasted image 20260421173410.png|635]]
+
 Quando la frammentazione esterna diventa critica entra in gioco la **memory compaction**: il sistema operativo entra in azione riorganizzando fisicamente l'intera RAM: sposta e "schiaccia" tutti i processi verso un'estremità della memoria per fondere tutti i piccoli buchi in un unico grande spazio libero. È una manovra risolutiva, ma molto costosa in termini di prestazioni, poiché blocca temporaneamente l'esecuzione di tutto il resto
 
 ### Gestione dell'allocazione
