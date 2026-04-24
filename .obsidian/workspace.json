@@ -4,36 +4,49 @@
     "type": "split",
     "children": [
       {
-        "id": "a5ec87a03fde7746",
+        "id": "36976915852e81fa",
         "type": "tabs",
         "children": [
           {
-            "id": "98d13260bba80c28",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto/Consegna.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Consegna"
-            }
-          },
-          {
-            "id": "5777d6819506ccba",
+            "id": "f6df25a6418968e4",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "slides_computer_networks_pub"
+              "title": "4_Network_N"
+            }
+          },
+          {
+            "id": "45d1401470f0652b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/10_23_aprile.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "10_23_aprile"
+            }
+          },
+          {
+            "id": "99d5ac2868e610fe",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Riassunto_Github"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -179,34 +192,34 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "98d13260bba80c28",
+  "active": "45d1401470f0652b",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/10_23_aprile.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/9_9_aprile.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260424085243.png",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto/Consegna.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto/a.out",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto/main.cpp",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/21_aprile.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/10 23 aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260423124824.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260423123425.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260423123348.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260423123136.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260423115050.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260423113101.png",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/9_9_aprile.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260422182756.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11_21_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260422110825.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260421173410.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260421165603.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11 - 21 aprile 2026.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-lab.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-03.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/PrismLauncher-Windows-MSVC-Setup-11.0.2.exe",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/10_16_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/9_14_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/8_9_aprile.md",
