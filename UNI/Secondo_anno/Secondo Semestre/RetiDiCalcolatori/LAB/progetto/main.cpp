@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <optional>
 
 using namespace std;
 
@@ -8,75 +9,23 @@ class Device;
 class Application;
 class Segment;
 class Transport;
-
-class nodo {
-public:
-    nodo(int d, nodo* p=nullptr) : data(d), next(p) {}
-    
-    friend class Coda;
-    private:
-    int data;
-    nodo* next;
-};
-
-
-class Coda{
-    private:
-        nodo* head;
-        nodo* tail;
-
-    public:
-        Coda(){
-            head = tail = nullptr;
-        }
-
-
-        void stampa(){
-            nodo* current = head;
-            while(current != nullptr){
-                cout << current->data << endl;
-                current = current->next;
-            }
-        }
-
-        void enqueue(int data){
-            nodo* newnode = new nodo(data,nullptr);
-            if(tail == nullptr){
-                head = tail = newnode;
-            } else {
-                tail->next = newnode;
-                tail = newnode;
-            }
-        }
-
-        int dequeue(){
-            if(head != nullptr){
-                int data = head->data;
-                nodo* tmp = head;
-                head = head->next;
-                if(head == nullptr){
-                    tail = nullptr;
-                }
-                delete tmp;
-                return data;
-            } else{
-                cout << "coda vuota" << endl;
-                return -1;
-            }
-        }
-};
+class InterNetwork;
+class Packet;
+class NetworkAccess;
+class Frame;
 
 class Segment{
     public:
-    Segment(string segmento):segment(segmento){}
+    Segment(string segmento, int seq):segment(segmento),sequenza(seq){}
     friend class Transport;
 
     void stampaSegmento(){
-        cout << segment;
+        cout << "SEQ: " << sequenza << " Payload: " << segment <<endl;
     }
 
     private:
     string segment;
+    int sequenza;
 };
 
 class Transport{
@@ -87,6 +36,8 @@ class Transport{
 
     void segment(string parola);
 
+    void inviaRETE();
+
     private:
     int segmentSize;
     vector<Segment> segmenti;
@@ -95,21 +46,138 @@ class Transport{
 
 void Transport::segment(string parola){
 
-    cout << parola << " FUNZIONE SEGMENTO" << endl;
-
+    //cout << parola << " FUNZIONE SEGMENTO" << endl;
+    int k = 0;
     for(int i = 0;i < parola.length();i = i + segmentSize){
-        cout <<"ENTRA" <<endl;
         string segmento = parola.substr(i, segmentSize); 
-        segmenti.push_back(Segment(segmento));
-
+        segmenti.push_back(Segment(segmento,k));
+        k++;
     }
-cout <<"ENTRA" <<endl;
-    for(int i = 0; i < segmenti.size(); i++){
-cout <<"ENTRA" <<endl;
+    /*for(int i = 0; i < segmenti.size(); i++){
         segmenti[i].stampaSegmento();
-    }
+        cout <<endl;
+    }*/
+
+    inviaRETE();
+
 
 }
+
+class Packet{
+
+    public:
+    Packet(Segment frammento):payload(frammento){
+        this->sourceIP = "192.168.2.5";
+        this->destIP = "20.10.3.5";
+    }
+    friend class Segment;
+    void stampaPacchetto();
+
+    private:
+    Segment payload;
+    string sourceIP;
+    string destIP;
+
+};
+
+void Packet::stampaPacchetto(){
+    cout << "FUNZIONE STAMPA PACCHETTO" <<endl;
+    cout << "Source IP: " << sourceIP << " " << "Destination IP: " << destIP <<endl;
+    payload.stampaSegmento();
+    cout <<endl;
+}
+
+class InterNetwork{
+
+    public:
+    InterNetwork(){}
+    friend class Transport;
+
+    void riceviSegmento(Segment frammento);
+    void inviaNetwork();
+    void stampa();
+
+    private:
+    vector<Packet> pacchetto;
+
+};
+
+void InterNetwork::stampa(){
+
+    for(int i = 0; i < pacchetto.size();i++){
+        pacchetto[i].stampaPacchetto();
+    }
+}
+
+void InterNetwork::riceviSegmento(Segment frammento){
+
+    pacchetto.push_back(Packet(frammento));
+    //cout << pacchetto.size();
+
+}
+
+void Transport::inviaRETE(){    //funziona
+   //cout << "MANDIAMO I SEGMENTI";
+    InterNetwork rete;
+
+    //cout << segmenti.size();
+
+    for(int i = 0; i < segmenti.size();i++){
+
+        rete.riceviSegmento(segmenti[i]);
+    }
+    //rete.stampa();
+    rete.inviaNetwork();
+}
+
+class Frame{
+
+    public:
+    Frame(Packet pacchetto):payload(pacchetto){
+        this->MACsrc = "00:1A:2B:3C:4D:5E";
+        this->MACdst = "AC:DE:48:00:11:22";
+    }
+    void stampaFrame();
+
+    private:
+    Packet payload;
+    string MACsrc;
+    string MACdst;
+};
+
+void Frame::stampaFrame(){
+    cout << "FUNZIONE STAMPA FRAME" <<endl;
+    cout << "Source MAC: " << MACsrc << " " << "Destination MAC: " << MACdst <<endl;
+    payload.stampaPacchetto();
+    cout <<endl;
+}
+
+class NetworkAccess{
+
+    public:
+    NetworkAccess(){}
+    friend class InterNetwork;
+    friend class Packet;
+    void riceviPacchetto(Packet pacchetto);
+    void stampa();
+
+    private:
+    vector<Frame> frame;
+};
+
+void NetworkAccess::stampa(){
+
+    for(int i = 0; i < frame.size();i++){
+        frame[i].stampaFrame();
+    }
+}
+
+void NetworkAccess::riceviPacchetto(Packet pacchetto){
+
+    //cout << "RICEVUTO" <<endl;
+    frame.push_back(Frame(pacchetto));
+}
+
 
 class Application{
 
@@ -129,8 +197,10 @@ class Application{
 };
 
 void Application::send(string parola){
-    cout << parola << " FUNZIONE SEND" <<endl;
-    frammento.segment(parola);
+    //cout << parola << " FUNZIONE SEND" <<endl;
+    frammento.segment(parola);  //qui abbiamo diviso in segmenti
+    
+    //cout << "ABBIAMO FINITO"<<endl;
 
 }
 
@@ -154,22 +224,99 @@ class Device{
     Application ciao;
 };
 
+class nodo {
+public:
+    nodo(Frame d, nodo* p=nullptr) : data(d), next(p) {}
 
+    friend class Frame;
+    friend class NetworkAccess;
+    friend class Coda;
+    private:
+    Frame data;
+    nodo* next;
+};
+
+
+class Coda{
+    private:
+        nodo* head;
+        nodo* tail;
+
+    public:
+        Coda(){
+            head = tail = nullptr;
+        }
+        friend class Frame;
+        friend class NetworkAccess;
+
+
+        void stampa(){
+            if(head == nullptr){
+                exit(-1);
+            }
+
+            nodo* current = head; // Partiamo dal primo elemento
+            while(current != nullptr){
+                current->data.stampaFrame(); 
+                current = current->next;
+            }
+        }
+
+        void enqueue(Frame data){
+            nodo* newnode = new nodo(data,nullptr);
+            if(tail == nullptr){
+                head = tail = newnode;
+            } else {
+                tail->next = newnode;
+                tail = newnode;
+            }
+        }
+
+        optional<Frame> dequeue(){
+            if(head != nullptr){
+                Frame data = head->data;
+                nodo* tmp = head;
+                head = head->next;
+                if(head == nullptr){
+                    tail = nullptr;
+                }
+                delete tmp;
+                return data;
+            } else{
+                cout << "coda vuota" << endl;
+                return nullopt;
+            }
+        }
+};
+
+void InterNetwork::inviaNetwork(){
+    NetworkAccess internet;
+    //cout << "entra ";
+    //cout << pacchetto.size();
+    for(int i = 0; i < pacchetto.size();i++){
+        //cout << "entra"<<endl;
+        internet.riceviPacchetto(pacchetto[i]);
+    }
+    //internet.stampa();
+    Coda coda;
+
+    for(int i = 0; i < internet.frame.size();i++){
+        coda.enqueue(internet.frame[i]);
+
+    }
+    coda.stampa();
+}
 
 
 int main(){
 
-    /*Coda coda;
-    coda.enqueue(10);
-    coda.stampa();*/
-
-
-
     Device A;
     string parola;
     cout << "Manda un messaggio... ";
-    cin >> parola;
+    getline(cin,parola);
+    cout <<endl;
     A.mandaMessaggio(parola);
+
 
     return 0;
 }
