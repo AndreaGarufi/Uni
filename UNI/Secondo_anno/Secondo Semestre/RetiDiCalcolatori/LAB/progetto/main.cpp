@@ -13,6 +13,8 @@ class InterNetwork;
 class Packet;
 class NetworkAccess;
 class Frame;
+class nodo;
+class Coda;
 
 class Segment{
     public:
@@ -184,7 +186,7 @@ class Application{
     public:
     Application(){}
     friend class Transport;
-
+    friend class Coda;
 
     void send(string parola);
 
@@ -206,6 +208,8 @@ void Application::send(string parola){
 
 optional<Frame> Application::receive(){
     
+    cout << "RECEIVE" <<endl;
+
 
 
     return nullopt;
