@@ -162,3 +162,9 @@ Traccia se una determinata area dello spazio di indirizzamento è stata effettiv
 - **Ottimizzazione e Sicurezza:** Il SO deve sapere esattamente quali pagine sono vuote e quali allocate per ottimizzare le dimensioni delle tabelle delle pagine (che altrimenti su sistemi a 64 bit avrebbero dimensioni spropositate, es. $2^{52}$ voci).
 
 - **Segmentation Fault:** Se la MMU rileva un accesso a un indirizzo non allocato dal SO (es. area mai richiesta dal processo), genera un'eccezione come il _Segmentation Fault_, prevenendo comportamenti imprevisti.
+
+
+> [!info] **Differenza tra FRAME e PAGINA**
+> 
+> Un Frame corrisponde esattamente ad una pagina, solo che il frame contiene gli indirizzi fisici presenti in RAM, mentre la pagina contiene gli indirizzi logici che vede il processo. Dal punto di vista del processo lui sta lavorando su indirizzi di memoria fisici tutti contigui, ma in realtà ne ha solo l'impressione perché gli indirizzi fisici reali li conosce solo il SO, questo viene fatto per evitare il problema della frammentazione esterna 
+
