@@ -4,53 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "00e222e666349b9e",
+        "id": "e63e41095b345b9b",
         "type": "tabs",
         "children": [
           {
-            "id": "e69205a7eebaacd5",
+            "id": "ba29f6d125950140",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "12_23_aprile"
-            }
-          },
-          {
-            "id": "a86b4f65bbd8e52d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "13_28_aprile"
-            }
-          },
-          {
-            "id": "4083690a5c6f9e22",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "13_28_aprile"
+              "title": "Nuova scheda"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,15 +163,15 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "4083690a5c6f9e22",
+  "active": "ba29f6d125950140",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/13_28_aprile.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/13_28_aprile.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/12_23_aprile.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/11_21_aprile.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-03.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 13.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260428172712.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260428165612.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260428164846.png",
@@ -220,7 +187,6 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260424085243.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto/a.out",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/21_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260423124824.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260423123425.png",
