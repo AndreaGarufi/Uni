@@ -49,6 +49,7 @@ $$N_{FRAME} \cdot \text{DIM} + \text{OFFSET} = \text{Indirizzo Fisico}$$
 
 ---
 ## Tabella delle Pagine
+E' una per processo. La tabella delle pagine è contenuta in RAM, e gli aspetti da curare sono 2: la velocità di consultazione e la dimensione
 ![[Pasted image 20260427165710.png|301]]
 
 - **Indice $K$**: per ogni pagina ho un _Bit di presenza_ e un _Numero di frame_.

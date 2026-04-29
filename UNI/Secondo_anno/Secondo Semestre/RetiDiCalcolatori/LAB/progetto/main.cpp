@@ -13,6 +13,8 @@ class InterNetwork;
 class Packet;
 class NetworkAccess;
 class Frame;
+class nodo;
+class Coda;
 
 class Segment{
     public:
@@ -81,7 +83,7 @@ class Packet{
 };
 
 void Packet::stampaPacchetto(){
-    cout << "FUNZIONE STAMPA PACCHETTO" <<endl;
+    //cout << "FUNZIONE STAMPA PACCHETTO" <<endl;
     cout << "Source IP: " << sourceIP << " " << "Destination IP: " << destIP <<endl;
     payload.stampaSegmento();
     cout <<endl;
@@ -146,7 +148,7 @@ class Frame{
 };
 
 void Frame::stampaFrame(){
-    cout << "FUNZIONE STAMPA FRAME" <<endl;
+    //cout << "FUNZIONE STAMPA FRAME" <<endl;
     cout << "Source MAC: " << MACsrc << " " << "Destination MAC: " << MACdst <<endl;
     payload.stampaPacchetto();
     cout <<endl;
@@ -184,11 +186,11 @@ class Application{
     public:
     Application(){}
     friend class Transport;
-
+    friend class Coda;
 
     void send(string parola);
 
-    void receive();
+    optional<Frame> receive();
 
     private:
     string message;
@@ -204,8 +206,13 @@ void Application::send(string parola){
 
 }
 
-void Application::receive(){
+optional<Frame> Application::receive(){
+    
+    cout << "RECEIVE" <<endl;
 
+
+
+    return nullopt;
 }
 
 class Device{
@@ -219,10 +226,19 @@ class Device{
         
         ciao.send(parola);
     }
+
+    string riceviMessaggio();
     private:
     string messaggio;
     Application ciao;
 };
+
+string Device::riceviMessaggio(){
+
+    ciao.receive();
+
+    return "ciao";
+}
 
 class nodo {
 public:
@@ -317,6 +333,8 @@ int main(){
     cout <<endl;
     A.mandaMessaggio(parola);
 
+    Device B;
+    B.riceviMessaggio();
 
     return 0;
 }
