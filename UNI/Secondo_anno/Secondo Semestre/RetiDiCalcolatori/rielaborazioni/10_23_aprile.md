@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 In IPv6 il campo hop limit è 255, lo stesso numero del time to live di IPv4, non è stato alzato perché gli hop sono i salti tra router quindi se un pacchetto deve fare 255 salti è già tantissimo, quindi un numero più alto non ha senso
 
 si può comunicare tra IPv4 e IPv6 tramite incapsulamento, perché IPv4 non è compatibile con IPv6, quindi prendo il pacchetto IPv4 e lo incapsulo dentro un pacchetto IPv6 cosi che questo possa viaggiare in una rete IPv6 o viceversa
