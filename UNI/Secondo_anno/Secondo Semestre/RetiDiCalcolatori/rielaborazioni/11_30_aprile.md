@@ -88,3 +88,21 @@ In un mondo ideale, vorremmo che la media dei voltaggi inviati su un cavo fosse 
 2. **Perdita di Sincronizzazione (Clock Recovery)**
 - **Il silenzio degli zeri:** Se invii una lunghissima sequenza di zeri e la tua codifica prevede che lo zero sia $0V$, il cavo rimane "piatto" per molto tempo. Senza cambiamenti di tensione (transizioni), il ricevitore non ha più riferimenti per capire dove finisce un bit e dove inizia il prossimo.
 
+Per ovviare a questi problemi entra in gioco la codifica a blocchi:
+**Codifica a blocchi**
+sostituisce blocchi di bit di una determinata dimensione, con blocchi leggermente più grandi ( 4 → 5, 8 → 10), traducendo le sequenze in maniera tale da garantire un numero minimo di transizioni.
+
+*4B5B*
+Associa a blocchi di 4 bit, blocchi di 5 bit. Richiede una bandwitdh del 25% più capiente. E' utilizzata per fast Ethernet.
+![[Pasted image 20260501211518.png|320]]
+
+Esiste anche la codifica 8B10B che è molto usata in vari standard:
+• PCI Express ( < 3.0 ) 
+• IEEE 1394b (Firewire) 
+• Serial ATA 
+• Fibre Channel 
+• Gigabit Ethernet (alcune versioni) 
+• DisplayPort Main Link 
+• DVI e HDMI
+• USB 3.0
+

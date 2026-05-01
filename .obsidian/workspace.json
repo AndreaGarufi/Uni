@@ -44,9 +44,18 @@
               "icon": "lucide-file-text",
               "title": "5_DLL_N"
             }
+          },
+          {
+            "id": "d1b818af073e6f7f",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
+            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -192,11 +201,12 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "f4e27e2139542e71",
+  "active": "19ed7286db560e2d",
   "lastOpenFiles": [
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/11_30_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260501211518.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260501191132.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260501101700.png",
@@ -219,7 +229,6 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260428164846.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260428161016.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto/Consegna.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260427165710.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/9_9_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/21_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11_21_aprile.md",
