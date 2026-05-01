@@ -45,13 +45,46 @@ Siamo passati al **DATA LINK LAYER** [[5_DLL_N.pdf]]
 
 Il DLL si occupa di trasformare il segnale in bit e i bit in segnale, si occupa anche degli errori, raggruppa i bit per creare i frame
 
-// non so se è giusto
-Nel canale ho solo 2 modi per comunicare: acceso spento, come comunico? Devo creare un protocollo
-byte staffing -> soluzione che si usava molto tempo fa ora non più
-//
-ho smesso di prendere appunti
+In ogni singolo host (device e router) di una rete, è implementato il Data Link Layer. Ciò avviene tramite una combinazione di hardware, software e firmware presente all’interno dei NIC (Network Interface Controller) dei dispositivi di rete. Buona parte del DLL è implementato in hardware, come il protocollo Ethernet nell’adattatore Intel 700, o il protocollo Wi-Fi nel chipset Atheros AR5006. Tuttavia, è il software a farsi ponte tra il livello di rete, e il livello fisico
 
+**Comunicazione tra 2 Network Interface Controller**
+Lato mittente: 
+1. Il datagramma da trasmettere viene incapsulato in un frame del DLL. 
+2. I campi d’intestazione del DLL vengono riempiti. 
+3. (Se presenti) vengono stabiliti i valori dei bit nei campi per la rilevazione e correzione degli errori. 
+4. Il pacchetto viene trasferito. 
 
+Dal lato del ricevente: 
+1. Il Network Interface Controller riceve l’intero frame. 
+2. (Se presenti) effettua le verifiche relative ai campi di rilevazione e correzione errori. 
+3. Estrae il datagramma. 
+4. Manda il datagramma al livello superiore.
 
+##### **Data Framing**
+Si potrebbe pensare che usare 2 segnali per la comunicazione possa essere sufficiente, ma non è così, infatti in questo caso non è possibile stabilire se una sequenza di 0 sia una parte della comunicazione o se ci sia assenza di comunicazione, per questo motivo si utilizzano codifiche a più livelli:
 
+**Tree level encoding**
+Prevede 3 livelli di segnale: alto zero e basso.
+Ci sono anche delle regole:
+- prossimo bit = 0 -> nessuna transizione del segnale
+- Prossimo bit = 1 e livello del segnale $\neq$ 0 -> Il segnale passa a 0.
+- Prossimo bit = 1 e livello di segnale = 0 -> Il segnale passa ad un livello opposto a quello del più recente segnale diverso da 0.
+
+![[Pasted image 20260501191132.png|717]]
+
+Alcuni mezzi fisici come la gigabit Ethernet usano una codifica a 5 livelli che permette di inviare 2 bit per volta, *è quindi intuitivo pensare che più livelli aggiungo più la velocità della comunicazione aumenta, ed è così, però nella realtà devo tener conto del rumore intrinseco che si trova in ogni mezzo fisico reale*, ad esempio se ho un range di 5 volt (0-5 volt) è facile distinguere tra 0 e 5 (2 livelli) ma anche tra 0,1,2,3,4,5 (5 livelli) ma se volessi dividere in 1000 livelli la situazione si complica perché il la differenza tra un livello e l'altro è pochissima quindi basta anche un minimo rumore (che nella realtà è sempre presente) per generare degli errori, quindi dopo un tot di livelli smette di essere conveniente perché il canale è sempre più soggetto a errori man mano che i livelli aumentano 
+
+**Problemi del tree level encoding**
+Il tree level encoding è la base per la comunicazione ma presenta 2 problematiche:
+
+1. **Il problema del DC-Balance (Componente Continua)**
+
+In un mondo ideale, vorremmo che la media dei voltaggi inviati su un cavo fosse **0V**. Se la media è diversa da zero, si crea quella che chiamiamo "Componente Continua" (DC Offset).
+
+- **Saturazione e Calore:** Se invii molti segnali positivi senza "compensarli" con quelli negativi, la linea accumula energia. Questo può surriscaldare i componenti o mandare in saturazione i trasformatori di accoppiamento che si trovano nelle schede di rete.
+    
+- **Spostamento della soglia:** Il ricevitore deve capire se un segnale è "alto" o "basso" confrontandolo con una media. Se la media elettrica del cavo si sposta verso l'alto a causa del mancato bilanciamento, il ricevitore potrebbe fare fatica a distinguere uno zero da un uno, perché la sua "linea di terra" di riferimento è diventata instabile.
+
+2. **Perdita di Sincronizzazione (Clock Recovery)**
+- **Il silenzio degli zeri:** Se invii una lunghissima sequenza di zeri e la tua codifica prevede che lo zero sia $0V$, il cavo rimane "piatto" per molto tempo. Senza cambiamenti di tensione (transizioni), il ricevitore non ha più riferimenti per capire dove finisce un bit e dove inizia il prossimo.
 
