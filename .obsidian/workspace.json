@@ -22,18 +22,6 @@
             }
           },
           {
-            "id": "a61a106f819cd263",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/10_23_aprile.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "10_23_aprile"
-            }
-          },
-          {
             "id": "01e6ebc57678c1da",
             "type": "leaf",
             "state": {
@@ -45,6 +33,18 @@
               },
               "icon": "lucide-file",
               "title": "10_23_aprile"
+            }
+          },
+          {
+            "id": "f4e27e2139542e71",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "4_Network_N"
             }
           }
         ]
@@ -195,12 +195,14 @@
   },
   "active": "19ed7286db560e2d",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/10_23_aprile.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/9_9_aprile.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/10_23_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/11_30_aprile.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260501101700.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260501100725.png",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/10_23_aprile.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/10_23_aprile.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/9_9_aprile.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-lab.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
@@ -221,8 +223,6 @@
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/9_9_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260424085243.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/21_aprile.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260423124824.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260423123425.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11_21_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11 - 21 aprile 2026.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/10_16_aprile.md",
