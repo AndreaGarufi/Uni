@@ -10,7 +10,7 @@ Questa tabella viene consultata ogni volta che viene creato un processo per crea
 
 Per creare un ottima tabella delle pagine è importante curare i seguenti aspetti:
 - *velocità*: la velocità di consultazione 
-- *dimensione*
+- *dimensione* in RAM o disco
 
 ###### Affrontiamo il problema della velocità
 *Soluzione storica*: avere un registro per ogni entry della tabella delle pagine (per ogni processo), questa è una soluzione molto veloce, ma funziona solo se ho una tabella di dimensione ridotta. Inoltre il context switch diventa lento.
@@ -37,7 +37,7 @@ Un programma userà sempre maggiormente una parte ridotta del codice, mettendo i
 - una volta che una pagina viene liberata dalla RAM il suo rispettivo bit di validità dentro la TLB deve essere modificato
 - Ci consente di vincolare alcune pagine alla TLB - è uno strumento che sfrutta il sistema operativo per pagine molto importanti e richieste di frequente
 - Quando faccio un context swtich faccio un flush della TLB - la prima ricerca di un processo dopo un flush sarà sempre un miss perché la TLB è vuota. 
-  Per evitare il flush (è una perdita di tempo assurda se ci sono sempre gli stessi processi) andiamo ad aggiungere un una voce extra detta ASID(address-space identifiers) che identifica il processo dentro la tabella TLB. In pratica adesso la ricerca viene eseguita usando la chiave (page number, ASID).
+  Per evitare il flush (è una perdita di tempo assurda se ci sono sempre gli stessi processi) andiamo ad aggiungere una voce extra detta ASID(address-space identifiers) che identifica il processo dentro la tabella TLB. In pratica adesso la ricerca viene eseguita usando la chiave (page number, ASID).
 ![[Pasted image 20260428161016.png|700]]
 Riassumendo quando la CPU ha bisogno di un indirizzo se si ha un TLB hit avrò subito a disposizione pagina e frame del processo e quindi gli indirizzi fisici, se si verifica un TLB miss la CPU dovrà reperire la pagina o in RAM o sul disco
 
@@ -49,7 +49,7 @@ Riassumendo quando la CPU ha bisogno di un indirizzo se si ha un TLB hit avrò s
 ###### Affrontiamo il problema della dimensione
 Nella realtà la tabella delle pagine è enorme e quindi non è mai mono-dimensione
 ![[Pasted image 20260428164846.png|600]]
-In pratica dovremmo avere 4MB di ram per ogni pagina (una memoria assurda). Da questo tipo di problema nascono le pagine multi-livello. (sarebbe la gestione multi livello di basi di dati) 
+In pratica dovremmo avere 4MB di RAM per ogni pagina (una memoria assurda). Da questo tipo di problema nascono le pagine multi-livello. (sarebbe la gestione multi livello di basi di dati) 
 
 **Tabelle delle pagine multi-livello**: il PTBR punta alla tabella di primo livello, nella tabella di primo livello troviamo dei gruppi di pagine. In pratica il PTRB punta ad uno dei gruppi. Dentro al record di primo livello troviamo il puntatore ad una tabella di secondo livello. La tabella di secondo livello è la solita tabella delle pagine (come la conosciamo).
 ![[Pasted image 20260428165612.png|500]]
@@ -68,7 +68,7 @@ Per gestire i casi reali con 64 bit il numero di livelli aumenta (almeno 4 o 5 l
 > Se le pagine non hanno valore (il bit di validità è a 0) non ha senso gestirle. La struttura multi-livello viene usata solo per le pagine veramente utili 
 
 
-### Tabella delle pagine invertite (non ho capito)
+### Tabella delle pagine invertite
 Questa è un'altra soluzione nella gestione delle pagine in memoria, in pratica al posto di avere una tabella delle pagine enorme, creiamo una tabella dei frame ma con le seguenti voci:
 - idprocesso (PID)
 - pagina virtuale
