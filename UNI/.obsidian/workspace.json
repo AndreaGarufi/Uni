@@ -4,21 +4,73 @@
     "type": "split",
     "children": [
       {
-        "id": "82da53b162534d7a",
+        "id": "d0aec8f393705192",
         "type": "tabs",
         "children": [
           {
-            "id": "833f1b71c57d59d9",
+            "id": "5bf964499f44a550",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/12_5_maggio.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13_28_aprile"
+              "title": "12_5_maggio"
+            }
+          },
+          {
+            "id": "8d12575613aad631",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Riassunto_Github"
+            }
+          },
+          {
+            "id": "7bfc7cecf0ddc1fc",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "5_DLL_N"
+            }
+          },
+          {
+            "id": "8ee76f65bef82f55",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "12_23_aprile"
+            }
+          },
+          {
+            "id": "2c43d37e7c1339ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Callouts.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Callouts"
             }
           }
         ]
@@ -182,52 +234,52 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "833f1b71c57d59d9",
+  "active": "5bf964499f44a550",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/13_28_aprile.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/12_5_maggio.md",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506124720.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506124528.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506124255.png",
+    "Callouts.md",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506122130.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506122115.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506122006.png",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260501211518.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260501191132.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260501101700.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260501100725.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260430153805.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260430153554.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260430094927.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260430093905.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506115016.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260505105037.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260505102620.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260505102514.png",
+    "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/4_17_marzo.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/5_19_marzo.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/6_24_marzo.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/7_26_marzo.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/8_9_aprile.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/9_14_aprile.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/10_16_aprile.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11_21_aprile.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/12_23_aprile.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/13_28_aprile.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/1_LAB_30_aprile.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/11_30_aprile.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13 - 28 aprile 2026.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 13.md",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260428165612.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260428164846.png",
     "conflict-files-obsidian-git.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/10_23_aprile.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/10_23_aprile.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11_21_aprile.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-03.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/11_21_aprile.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/10_16_aprile.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/10_16_aprile.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto/Consegna.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto/main.cpp",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto/a.out",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/21_aprile.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/12 - 21 aprile 2026.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/9_14_aprile.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/4_17_marzo.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/8_9_aprile.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/9_9_aprile.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/8_7_aprile.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/7_26_marzo.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/9 - 7 aprile 2026.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/6_24_marzo.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/7_26_marzo.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/7 - 26 marzo 2026.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 6.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/6 - 24 marzo 2026.md"
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/8_7_aprile.md"
   ]
 }
