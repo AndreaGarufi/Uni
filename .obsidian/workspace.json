@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "db5d38c6a2eac072",
+        "id": "2853e9d558af7782",
         "type": "tabs",
         "children": [
           {
-            "id": "b354de2a81db210d",
+            "id": "cd2d87f0262137fc",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -163,8 +163,10 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "b354de2a81db210d",
+  "active": "cd2d87f0262137fc",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/12_5_maggio.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506151900.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506151256.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506150511.png",
@@ -182,10 +184,7 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-lab.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/12_5_maggio.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260505105037.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/1_LAB_30_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
