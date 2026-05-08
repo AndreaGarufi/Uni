@@ -22,7 +22,8 @@ Per compilare in modo semplice si può usare gcc
 gcc meme.c -l nome-libreria
 ```
 
-per cose più complicate **make** insieme ad un progetto **makefile** (come si usa? boh)
+per cose più complicate **make** insieme ad un progetto **makefile**: make è un software di automazione. Il suo compito è leggere un file di configurazione (chiamato appunto **Makefile**) e decidere quali parti del tuo programma devono essere ricompilate.
+La sua caratteristica "intelligente" è che guarda le **date di modifica** dei file: se il file sorgente è più recente dell'eseguibile, lo ricompila; altrimenti, lo salta risparmiando tempo.
 
 ```
 size a.out //ci ritorna la dimensione delle varie sezioni del nostro codice (heap, stack, ecc)
