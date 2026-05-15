@@ -11,10 +11,38 @@
             "id": "52e30fa1e8457f10",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/13_12_maggio.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "13_12_maggio"
+            }
+          },
+          {
+            "id": "4f6c9f23649b264b",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Riassunto_Github"
+            }
+          },
+          {
+            "id": "34953879b2bcbb13",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "5_DLL_N"
             }
           }
         ]
@@ -180,26 +208,30 @@
   },
   "active": "52e30fa1e8457f10",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260515161744.png",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/13_12_maggio.md",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260515161726.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260515161353.png",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/12_5_maggio.md",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260512120752.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260510162453.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260510162434.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260510162404.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260510162336.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260510162316.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260510162253.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260510162223.png",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
     "Callouts.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/11_30_aprile.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/11_30_aprile.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/12_5_maggio.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/12_5_maggio.pdf",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506151900.png",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf",
     "Senza nome.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506151256.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506150511.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506124720.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506124528.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506124255.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506122130.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506122115.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506122006.png",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260506115016.png",
     "Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/4_17_marzo.md",
@@ -221,9 +253,6 @@
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/10_23_aprile.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-03.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/11_21_aprile.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto/Consegna.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/21_aprile.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/12 - 21 aprile 2026.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/9_9_aprile.md"
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto/Consegna.md"
   ]
 }
