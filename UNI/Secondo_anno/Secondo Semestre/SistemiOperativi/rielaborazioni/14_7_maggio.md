@@ -248,3 +248,43 @@ L'algoritmo OPT effettua le scelte di sostituzione guardando al **futuro** anzic
     - Ad ogni fault, l'algoritmo analizza la sequenza futura per scartare la pagina il cui prossimo riferimento è il più lontano possibile.
 
 In questo modo e con l'uso dell'algoritmo OPT, si ottengono complessivamente **9 fault di pagina**. Questo valore rappresenta il limite minimo (ottimale) con cui confrontare gli altri algoritmi reali.
+
+![[Pasted image 20260516132824.png|632]]
+## Algoritmo FIFO e Anomalia di Belady
+
+L'algoritmo **FIFO (First-In, First-Out)** è un metodo di sostituzione delle pagine che si basa sulla semplicità: la prima pagina che entra in memoria è la prima a essere scartata. Per valutarne le prestazioni, usiamo come indice il numero di **page fault** generati rispetto a una sequenza di accessi.
+
+### Il confronto con l'algoritmo OPT
+
+Garantisce sempre il minor numero possibile di page fault. Tuttavia, FIFO presenta un comportamento che lo rende meno affidabile in certi scenari.
+
+### L'Anomalia di Belady
+
+Ci si aspetta che all'aumentare della memoria RAM (ovvero dei frame disponibili), il numero di page fault diminuisca. FIFO soffre dell'**Anomalia di Belady**: un fenomeno per cui, aumentando i frame, il numero di fault di pagina può aumentare anziché scendere.
+
+- **1 Frame**: si registrano **12 fault**.
+- **2 Frame**: la situazione non cambia, restano **12 fault**.
+- **3 Frame**: i fault scendono a **9**.
+- **4 Frame**: **anomalia**; invece di scendere ancora, i fault **aumentano a 10**.
+
+Il problema di fondo è che FIFO usa solo l'**età della pagina** come criterio per decidere cosa scartare. Questo non è sempre un parametro sensato: una pagina potrebbe essere in memoria da molto tempo (quindi "vecchia" per FIFO), ma essere usata spessissimo dal programma. Scartarla solo perché è arrivata per prima genera inutili page fault aggiuntivi.
+
+![[Pasted image 20260516132853.png]]
+
+## **L'Algoritmo LRU e la Proprietà di Inclusione**
+
+A differenza di FIFO, LRU si comporta molto bene anche su sequenze lunghe e **non soffre dell'Anomalia di Belady**.
+
+**La Proprietà di Inclusione** Il motivo per cui LRU è immune all'anomalia risiede nella **proprietà di inclusione**. Questa proprietà garantisce che, aumentando la memoria, le prestazioni non possano peggiorare.
+
+L'insieme delle pagine caricate avendo n frame è incluso in quello che si avrebbe avendo n+1 frame. Se aggiungiamo uno spazio, questo ospiterà una pagina in più senza stravolgere l'ordine di quelle già presenti. LRU guarda a quando le pagine sono state referenziate l'ultima volta; avere più spazio permette solo di mantenere in RAM pagine che prima sarebbero state scartate, senza alterare il pattern di utilizzo.
+
+---
+
+Non tutti gli algoritmi godono di questa proprietà. 
+• **NFU e Aging:** Sono considerati approssimazioni di LRU e, per questo motivo, **godono della proprietà di inclusione**. 
+• **Second Chance e Clock:** Sebbene cerchino di migliorare la gestione della memoria, hanno un legame stretto con FIFO. In casi limite — ad esempio quando il bit di riferimento R è uguale per tutte le pagine (tutti 0 o tutti 1) — questi algoritmi **collassano su FIFO**, soffrendo dell'Anomalia di Belady. 
+• **NRU (Not Recently Used):** Anche questo algoritmo, basato sulla divisione delle pagine in 4 classi, soffre dello stesso problema. Se tutte le pagine finiscono nella stessa configurazione/classe, l'algoritmo si riduce a un semplice FIFO e può presentare l'anomalia.
+
+![[Pasted image 20260516132923.png]]
+
