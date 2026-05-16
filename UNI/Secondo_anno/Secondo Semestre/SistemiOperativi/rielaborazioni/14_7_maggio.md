@@ -47,6 +47,8 @@ Se la RAM è già piena e non ci sono frame liberi per ospitare la nuova pagina,
 - A differenza della cache (gestita dall'hardware), la gestione della memoria virtuale è affidata al **Sistema Operativo**.
 - Ridurre al minimo il numero di page fault futuri, controllando i costi di overhead. La logica è simile a quella delle cache: decidere quale informazione rimuovere penalizzando il meno possibile l'esecuzione.
 
+*L'overhead è il lavoro che deve fare la CPU per pianificare/gestire la memoria senza quindi effettuare operazioni per i processi*
+
 ### L'Algoritmo Ottimale (OPT)
 
 L'algoritmo **OPT** rappresenta la soluzione teorica perfetta per la sostituzione delle pagine.
@@ -84,7 +86,7 @@ In caso di _page fault_, l'algoritmo suddivide le pagine presenti in RAM in **4 
 L'obiettivo è rimuovere una pagina che non sia stata usata recentemente.
 
 1. Il Sistema Operativo analizza le classi in ordine crescente, dalla **0** alla **3**.
-2. Viene scelta una pagina vittima appartenente alla **classe non vuota con il numero più basso**.
+2. Viene scelta una pagina vittima appartenente alla **classe non vuota con il numero più basso**
     - _Es:_ Se ci sono pagine nella Classe 0, se ne sceglie una casualmente tra quelle. Se la Classe 0 è vuota, si passa alla Classe 1, e così via.
 
 Questo permette di eliminare prima le pagine che sono sia "vecchie" (non referenziate) che "pulite" (non modificate), minimizzando l'impatto sulle prestazioni del sistema.
@@ -275,7 +277,7 @@ Il problema di fondo è che FIFO usa solo l'**età della pagina** come criterio 
 
 A differenza di FIFO, LRU si comporta molto bene anche su sequenze lunghe e **non soffre dell'Anomalia di Belady**.
 
-**La Proprietà di Inclusione** Il motivo per cui LRU è immune all'anomalia risiede nella **proprietà di inclusione**. Questa proprietà garantisce che, aumentando la memoria, le prestazioni non possano peggiorare.
+**La Proprietà di Inclusione**. Il motivo per cui LRU è immune all'anomalia risiede nella **proprietà di inclusione**. Questa proprietà garantisce che, aumentando la memoria, le prestazioni non possano peggiorare.
 
 L'insieme delle pagine caricate avendo n frame è incluso in quello che si avrebbe avendo n+1 frame. Se aggiungiamo uno spazio, questo ospiterà una pagina in più senza stravolgere l'ordine di quelle già presenti. LRU guarda a quando le pagine sono state referenziate l'ultima volta; avere più spazio permette solo di mantenere in RAM pagine che prima sarebbero state scartate, senza alterare il pattern di utilizzo.
 
