@@ -6,33 +6,42 @@ Il problema è stabilire quanti frame assegnare a ciascun processo per bilanciar
 
 **1. Paginazione su Richiesta (Pure Demand Paging)** In questo scenario, il sistema non assegna preventivamente alcun frame al processo. All'inizio dell'esecuzione, tutte le pagine si trovano sul disco. È l'esecuzione stessa a determinare, tramite i page fault, quali pagine devono essere portate in RAM. Si osserva tipicamente un picco iniziale di page fault che tende poi a scendere verso una situazione di "normalità". Una frequenza troppo alta di page fault è problematica a causa dell'overhead di sistema che comporta.
 
-**2. Allocazione: Minimo e Massimo** • **Minimo Strutturale:** È il numero minimo di frame indispensabile perché un'istruzione possa essere eseguita. Dipende dall'architettura del set di istruzioni e dai livelli di indirizzamento indiretto. Ad esempio, se un'istruzione occupa più word (pagine diverse) o ha operandi multipli con indirizzamento indiretto, servono frame sufficienti a contenerli tutti contemporaneamente. • **Massimo:** Limite deciso dalla quantità totale di memoria libera nel sistema.
+**2. Allocazione: Minimo e Massimo** 
+• **Minimo Strutturale:** È il numero minimo di frame indispensabile perché un'istruzione possa essere eseguita. Dipende dall'architettura del set di istruzioni e dai livelli di indirizzamento indiretto. Ad esempio, se un'istruzione occupa più word (pagine diverse) o ha operandi multipli con indirizzamento indiretto, servono frame sufficienti a contenerli tutti contemporaneamente. • **Massimo:** Limite deciso dalla quantità totale di memoria libera nel sistema.
 
-**3. Strategie** Non tutti i processi hanno le stesse esigenze. Le strategie principali includono: • **Allocazione Equa:** Ogni processo riceve lo stesso numero di frame. • **Allocazione Proporzionale:** I frame vengono assegnati in base alla "taglia" (spazio di indirizzamento) del processo. ◦ Sia s_i la dimensione del processo i-esimo e S$la somma totale delle dimensioni di tutti i processi. formula • **Allocazione per Priorità:** I frame vengono distribuiti in base all'importanza del processo piuttosto che alla sua sola dimensione.
+**3. Strategie** Non tutti i processi hanno le stesse esigenze. Le strategie principali includono: 
+• **Allocazione Equa:** Ogni processo riceve lo stesso numero di frame. 
+• **Allocazione Proporzionale:** I frame vengono assegnati in base alla "taglia" (spazio di indirizzamento) del processo. 
+	• $a_i = s_i/S\,\,$ x $\,\,m$  , usiamo questa formula per assegnare i frame:
+	$a_i$ -> numero di frame
+	$s_i$ -> dimensione del processo (spazio di indirizzamento)
+	$S$ -> dimensione totale di tutti i processi nel sistema
+	$m$ -> numero totale di frame disponibili (RAM libera)
+• **Allocazione per Priorità:** I frame vengono distribuiti in base all'importanza del processo piuttosto che alla sua sola dimensione.
 
 ---
 
-Queste assegnazioni non sono statiche; devono adattarsi continuamente al livello di **multiprogrammazione.** Un principio fondamentale dell'allocazione riguarda la gestione del page fault: se un processo (es. P3) causa un fault, l'algoritmo di sostituzione dovrebbe idealmente selezionare una pagina da scartare tra quelle già assegnate a quel processo stesso, per evitare di sottrarre risorse ad altri processi.
+Queste assegnazioni non sono statiche; devono adattarsi continuamente al livello di **multiprogrammazione.** Un principio fondamentale dell'allocazione riguarda la gestione del page fault: se un processo (es. P3) causa un fault, l'algoritmo di sostituzione dovrebbe idealmente selezionare una pagina da scartare tra quelle già assegnate a quel processo stesso, per evitare di sottrarre risorse ad altri processi, ma questa non è l'unica soluzione.
 
 ![[Pasted image 20260516133032.png]]
 
 #### 1. Allocazione Locale e Globale
 
-Allocazione Locale: La scelta della "vittima" da scartare ricade solo sulle pagine appartenenti allo stesso processo che ha causato il fault. Il numero di frame assegnati al processo rimane quindi costante.
+**Allocazione Locale**: La scelta della "vittima" da scartare ricade solo sulle pagine appartenenti allo stesso processo che ha causato il fault. Il numero di frame assegnati al processo rimane quindi costante.
 
-Allocazione Globale: Il sistema può scegliere la vittima tra tutte le pagine presenti in memoria, incluse quelle di altri processi.
+**Allocazione Globale**: Il sistema può scegliere la vittima tra tutte le pagine presenti in memoria, incluse quelle di altri processi.
 
 In questo caso, un processo può "rubare" un frame a un altro per favorire la propria esecuzione.
 
 Qualunque algoritmo di sostituzione (FIFO, LRU, ecc.) può operare in entrambe le modalità; cambia solo l'insieme di pagine (il set) preso in considerazione.
 
-Cosa succede se a un processo vengono assegnati troppi pochi frame?
+**Cosa succede se a un processo vengono assegnati troppi pochi frame?**
 
-Sotto il minimo strutturale: Il processo non ha abbastanza pagine per eseguire nemmeno una singola istruzione; viene quindi sospeso e spostato su disco (swapping).
+*Sotto il minimo strutturale*: Il processo non ha abbastanza pagine per eseguire nemmeno una singola istruzione; viene quindi sospeso e spostato su disco (swapping).
 
-Poco sopra il minimo (Thrashing): Si verifica il fenomeno del thrashing, una situazione in cui il sistema passa più tempo a scambiare pagine con il disco che a eseguire codice, a causa di un numero eccessivo di page fault.
+*Poco sopra il minimo* (Thrashing): Si verifica il fenomeno del thrashing, una situazione in cui il sistema passa più tempo a scambiare pagine con il disco che a eseguire codice, a causa di un numero eccessivo di page fault.
 
-Se il thrashing si propaga tra i processi a causa di un'allocazione globale gestita mal, l'intero sistema va in sovraccarico. Questo accade spesso quando il livello di multiprogrammazione è troppo elevato per la RAM disponibile.
+Se il thrashing si propaga tra i processi a causa di un'allocazione globale gestita male, l'intero sistema va in sovraccarico. Questo accade spesso quando il livello di multiprogrammazione è troppo elevato per la RAM disponibile.
 
 
 ## Il Concetto di Località
@@ -56,7 +65,9 @@ Il **Working Set** è un concetto fondamentale per gestire la memoria basandosi 
 
 Anche all'interno dello stesso processo, il Working Set non è statico; la sua taglia e il suo contenuto cambiano nel tempo a seconda della fase di esecuzione.
 
-**Gestione del Thrashing** Conoscere il Working Set permette al sistema operativo di monitorare la salute della memoria globale: • **Richiesta Globale (D):** Si calcola come la somma delle dimensioni dei working set di tutti i processi attivi. • **Prevenzione del Thrashing:** Se la richiesta globale D supera la memoria fisica totale disponibile, il sistema entra in una situazione di sofferenza. Per prevenire il thrashing, il sistema può decidere di sospendere un processo (swapping) finché D non rientra nei limiti della capienza effettiva.
+**Gestione del Thrashing** Conoscere il Working Set permette al sistema operativo di monitorare la salute della memoria globale: 
+• **Richiesta Globale (D):** Si calcola come la somma delle dimensioni dei working set di tutti i processi attivi. 
+• **Prevenzione del Thrashing:** Se la richiesta globale D supera la memoria fisica totale disponibile, il sistema entra in una situazione di sofferenza. Per prevenire il thrashing, il sistema può decidere di sospendere un processo (swapping) finché D non rientra nei limiti della capienza effettiva.
 
 ---
 
@@ -66,8 +77,25 @@ Tracciare il working set in maniera puntuale è complesso (simile a quanto accad
 • **Log della "storia di R":** Viene conservato uno storico dell'utilizzo dei bit R per ricostruire quali pagine appartengono effettivamente alla finestra Delta stabilita.
 
 ![[Pasted image 20260516133157.png]]
+Questo è un altro modello per prevenire il thrashing:
+Mentre il _Working Set_ cerca di prevedere di quali pagine un processo avrà bisogno, la **PFF** guarda cosa sta succedendo realmente "sul campo" misurando la frequenza dei page fault.
 
-**FARE**
+1. **Il grafico in alto a destra: Controllo Dinamico**
+Il concetto fondamentale qui è l'uso di due soglie (limiti) per regolare il numero di frame assegnati a un processo:
+
+- **Upper Bound (Soglia superiore):** Se la frequenza dei page fault supera questo limite, significa che il processo sta faticando troppo perché ha pochi frame a disposizione. Il sistema operativo reagisce **aumentando il numero di frame** assegnati a quel processo.
+- **Lower Bound (Soglia inferiore):** Se la frequenza scende sotto questo limite, significa che il processo ha fin troppa memoria (più di quanta ne usi realmente). Il sistema operativo può quindi **togliere frame** al processo per darli ad altri che ne hanno più bisogno.
+- **Zona centrale:** È l'area di stabilità ottimale.
+
+ 1. **Il grafico in basso: Relazione con il Working Set**
+
+Questo grafico mostra come la frequenza dei page fault vari nel tempo in relazione alle fasi di esecuzione del programma:
+
+- **I picchi:** Coincidono con l'inizio di una nuova fase del programma (un nuovo _Working Set_). Quando il processo cambia località (ad esempio passa da una funzione di calcolo a una di stampa), ha bisogno di nuove pagine che non sono in RAM, causando un'impennata di page fault.
+- **Le valli:** Una volta che le pagine necessarie per la fase attuale sono state caricate in memoria (il _Working Set_ è "stabile"), la frequenza dei page fault crolla quasi a zero.
+- **Il rettangolo tratteggiato:** Indica il periodo in cui il processo sta caricando attivamente il suo working set attuale.
+
+
 
 ![[Pasted image 20260516133209.png]]
 
@@ -123,7 +151,7 @@ Esistono situazioni in cui processi distinti, pur avendo spazi di indirizzamento
 
 Questo scenario si verifica quando abbiamo istanze multiple dello stesso programma.
 
-Il codice eseguibile può essere condiviso tra i processi P1,P2 e P3, le pagine virtuali ed 1, ed 2 ed ed 3 di tutti e tre i processi puntano ai medesimi frame fisici (3, 4 e 6).
+Il codice eseguibile può essere condiviso tra i processi P1,P2 e P3, le pagine virtuali ed1, ed2 ed3 di tutti e tre i processi puntano ai medesimi frame fisici (3, 4 e 6).
 
 Ogni processo mantiene comunque il proprio stack e i propri dati privati (es. data 1, data 2), che risiedono in frame fisici separati.
 
@@ -134,10 +162,11 @@ I processi possono chiedere esplicitamente al Sistema Operativo di mappare pezzi
 - **Memoria Condivisa:** Si crea una vera "finestra di comunicazione" tra i processi. Questo è un modello primordiale di comunicazione tra processi.
 - In questo caso, i bit di protezione della tabella delle pagine abilitano anche la scrittura, permettendo ai processi di aggiornare i dati in tempo reale per coordinarsi.
 
-Il meccanismo di implementazione è identico a quello della paginazione standard,.
+Il meccanismo di implementazione è identico a quello della paginazione standard.
 
 - Invece di caricare tre copie dello stesso codice in RAM, ne carichiamo solo una, liberando spazio per altre attività.
 
+Con le pagine condivise è difficile gestire la cache
 ![[Pasted image 20260516133302.png]]
 
 **La Tabella delle Pagine Invertita**
