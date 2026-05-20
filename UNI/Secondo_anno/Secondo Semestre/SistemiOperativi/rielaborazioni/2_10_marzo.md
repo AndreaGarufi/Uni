@@ -1,4 +1,4 @@
-**Definizioni:**
+9_**Definizioni:**
 Gli utenti del sistema operativo sono i processi(system call);
 
 
