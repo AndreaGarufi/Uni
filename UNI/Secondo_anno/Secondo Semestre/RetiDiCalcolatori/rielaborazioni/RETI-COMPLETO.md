@@ -1365,7 +1365,7 @@ Immaginiamo che in questa rete PC1 debba mandare un messaggio in broadcast, inol
 *Alberi e grafi*
 Una topologia di rete può essere vista come un grafo:
 ![[Pasted image 20260520182424.png|414]]
-La differenza tra albero e grafo è che un albero è aciclico mentre un grafo normale lo può essere (come la rete in figura)
+La differenza tra albero e grafo è che un albero è aciclico mentre un grafo normale può avere cicli (come la rete in figura)
 
 *E' un protocollo di livello 2 (Data Link) progettato per prevenire cicli (loop) infiniti in reti Ethernet dotate di collegamenti ridondanti.*
 **Funzionamento**:
