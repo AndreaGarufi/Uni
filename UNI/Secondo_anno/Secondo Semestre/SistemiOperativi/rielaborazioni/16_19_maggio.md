@@ -25,6 +25,23 @@ Quando un programma chiede nuova memoria al sistema operativo (ad esempio per l'
 
 
 
-
 **librerie condivise e file mappati**
-distratto           
+*Questi 2 a tutti gli effetti sono esempi di pagine condivise tra processi*
+I programmi software usano le librerie che sono delle raccolte di funzioni.
+Abbiamo 2 modi per includerle nei nostri software:
+- **Linking statico**
+   -  Il codice della libreria viene copiato e incollato all'interno dell'eseguibile in fase di compilazione e questo avviene per ogni file che compiliamo
+   - *Svantaggio* -> se ho tanti programmi che usano la stessa libreria (magari anche una libreria di grandi dimensioni) il codice verrà copiato tante volte quanti sono i programmi quindi avrò uno spreco immenso di spazio su disco e quando li avvio anche sulla RAM
+- **Linking dinamico (librerie condivise)**
+  - Il programma contiene solo un "riferimento" alla libreria. Il caricamento avviene solo a **run-time** (quando lanci il programma).
+  - *Vantaggi* -> La libreria viene caricata in RAM **una sola volta** dal Sistema Operativo. Tutti i processi che ne hanno bisogno punteranno allo stesso frame fisico. Inoltre se la libreria viene aggiornata non serve ricompilare tutti i programmi ma al prossimo avvio useranno direttamente quella aggiornata
+
+**File mappati in memoria**
+- **Mappatura:** Il SO riserva un intervallo di indirizzi virtuali nei processi (le pagine 1-6 nel disegno) e li collega logicamente al file sul disco.
+- **Demand Paging:** Inizialmente, la RAM è vuota. Quando il Processo A prova a leggere la "pagina 3", avviene un **Page Fault**. Il SO va sul disco, legge il blocco 3 e lo carica in un frame della RAM fisica.
+- **Condivisione:** Se ora anche il Processo B vuole leggere la "pagina 3", il SO vede che è già in RAM. Quindi aggiorna la tabella delle pagine del Processo B per farlo puntare allo **stesso frame** usato dal Processo A.
+- **Automaticità:** Il sistema gestisce tutto da solo. Se la RAM finisce, il SO può scaricare le pagine non usate riportandole sul disco.
+![[Pasted image 20260521113716.png|499]]
+
+
+**Allocazione della memoria per il kernel**
