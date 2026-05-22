@@ -193,43 +193,6 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "floating": {
-    "id": "454e06bef44fd053",
-    "type": "floating",
-    "children": [
-      {
-        "id": "617e5ff76db80193",
-        "type": "window",
-        "children": [
-          {
-            "id": "a496efef9de963e0",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "103a14681b58a87c",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "Riassunto_Github"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 1533,
-        "height": 861,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "87563f8d22198e3a",
   "lastOpenFiles": [
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",

@@ -470,26 +470,27 @@ Esistono anche dei protocolli utilizzati per la diagnostica, uno di quelli più 
 ---
 
 # **TRANSPORT LAYER**
-
-Nello stack abbiamo diversi layer:
-- **Datalink layer**: comunicazione fisica tra gli host
-- **Network layer**: comunicazione logica tra gli host
+Il transport layer è situato tra l’application e il network layer.
+Questi sono i layer ancora da spiegare:
 - **Trasport layer**: comunicazione logica tra i processi (usando IP e porta)
+- **Network layer**: comunicazione logica tra gli host
+- **Data Link layer**: comunicazione fisica tra gli host
 
 Il trasporto a livello trasport viene fatto usando: 
-- il **multiplexing** (sorgente): è il processo con cui un host incapsula i frammenti di dati provenienti da uno o più sockets in segmenti del transport layer utilizzando opportuni header.
-- il **demultiplexing** (destinazione): Consiste nella consegna dei segmenti al socket corretto e quindi al processo corretto.
+- Il **multiplexing** (sorgente): è il processo con cui un host incapsula i frammenti di dati provenienti da uno o più sockets in segmenti del transport layer utilizzando opportuni header, che verranno poi usati in fase di demultiplexing dal receiver.
+- Il **demultiplexing** (destinazione): Consiste nella consegna dei segmenti al socket corretto e quindi al processo corretto.
 
+**Protocolli per fare multiplexing e demultiplexing (TCP e UDP)**
 Per fare queste cose vengono utilizzati due protocolli (uno o l'altro):
-- **RDT(Reliable Data Transfer)**: affidabile e lento, **TCP**(Trasmission Control Protocol) è la sua implementazione più famosa. Viene diviso in diverse versioni dal nostro libro per farci capire come si è arrivati storicamente a TCP, esiste una singola versione.
+- **RDT(Reliable Data Transfer)**: (RDT è un modello teorico non un protocollo) affidabile e lento, **TCP**(Trasmission Control Protocol) è la sua implementazione più famosa. Viene diviso in diverse versioni dal nostro libro per farci capire come si è arrivati storicamente a TCP, tuttavia esiste una singola versione.
 - **UDP**: inaffidabile ma molto veloce
 
-
-**UDP(User Datagram Protocol)**: offre un servizio "best effort". Visto che non garantisce l'arrivo dei dati è un protocollo molto semplice, non viene stabilita una connessione reale tra sorgente e destinazione, grazie a queste caratteristiche è molto veloce.
+#### Analisi protocollo UDP - User Datagram Protocol
+**UDP** offre un servizio "best effort". Visto che non garantisce l'arrivo dei dati è un protocollo molto semplice, non viene stabilita una connessione reale tra sorgente e destinazione e non ci sono messaggi di ACK, grazie a queste caratteristiche è molto veloce.
 - UDP è di tipo *connectionless* 
 - L’header del protocollo UDP occupa 8 byte. 2 byte per la porta del mittente, 2 per la porta del destinatario, 2 per la lunghezza del messaggio (header UDP + dati) e 2 per il checksum. Per confronto l’header del protocollo TCP occupa dai 20 ai 60 byte:
-- E' un meccanismo che consente di rilevare errori di trasmissione. Questi errori spesso consistono in bit-flip, che possono stravolgere del tutto il significato dei dati trasmessi. Detto ciò, la verifica consiste nel calcolo di un checksum, in italiano somma di controllo, sia al mittente (che la inserirà nel frame) che al destinatario. La somma è calcolata in virtù dei dati contenuti nel frame. Se le due somme non dovessero coincidere, il pacchetto sarà da considerarsi fallato, e verrà scartato (questo Checksum vale anche per TCP).
-![[Pasted image 20260317122348.png|398]]
+- Il *checksum* è un meccanismo che consente di rilevare errori di trasmissione. Questi errori spesso consistono in bit-flip, che possono stravolgere del tutto il significato dei dati trasmessi. Detto ciò, la verifica consiste nel calcolo di un checksum, in italiano somma di controllo, sia al mittente (che la inserirà nel frame) che al destinatario. La somma è calcolata in virtù dei dati contenuti nel frame. Se le due somme non dovessero coincidere, il pacchetto sarà da considerarsi fallato, e verrà scartato (questo Checksum vale anche per TCP).
+![[Pasted image 20260317122348.png|423]]
 
 *Il canale di comunicazione però è per sua stessa natura fisica inaffidabile, quindi certi pacchetti possono andare persi, ecco che si ricorre a RDT per una comunicazione affidabile*
 
@@ -503,14 +504,13 @@ Osserviamo in breve le caratteristiche dei vari RDT prima di studiarne le FSM al
 - *2.2.*: Si elimina il simbolo dedicato NAK, utilizzando in maniera differente gli ACK (ottimizzazione)
 - *3.0.*: Tutte le precedenti versioni gestiscono solo pacchetti corrotti. Con questa versione, si verifica anche la perdita dei pacchetti, introducendo il meccanismo di time-out.
 
-
 Di seguito la versione 3
 ![[Pasted image 20260317125005.png|500]]
 
+Prima di parlare di TCP vediamo altre importanti nozioni.
 
-
-### Throughput
-il throughput è un indice della capacità di trasmissione in un canale di comunicazione, più è alto più dati si possono far passare in quel canale:
+#### Throughput
+Il throughput è un indice della capacità di trasmissione in un canale di comunicazione, più è alto più dati si possono far passare in quel canale:
 $$ Throughput = \frac{Numero\,\,\,di\,\,\,bit\,\,\,(o\,\,\,byte)\,\,\,trasmessi\,\,\,con\,\,\,successo}{ tempo\,\,\,impiegato}$$
 ![[Pasted image 20260319101419.png|500]]
 Consideriamo un canale con *Bandwidth* pari 10 Mbps ovvero: $$BW = 10 \text{ Mbps } = 10^7 \text{ bit per secondo }$$da questo ne traiamo che:
