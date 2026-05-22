@@ -1,39 +1,35 @@
 **Andrea Garufi 2025/2026**
 
 # Reti di calcolatori
+## **INTRODUZIONE**
+**Cosa è una rete informatica?**
+E' una rete che permette di mettere in comunicazione 2 o più dispositivi:
+Abbiamo 2 tipologie di interconnessione:
+- Connessione fisica -> si riferisce al mezzo fisico di comunicazione (cavo, wireless ecc...)
+- Struttura logica -> si riferisce all'insieme di protocolli che garantiscono il funzionamento della rete
 
-## PROTOCOL HEADERS
+**PROTOCOL HEADERS**
+I protocolli di rete sono delle regole che definiscono il formato, lʼordine, la semantica e la sintassi dei ”messaggi” mandati e ricevuti tra entità interconnesse tramite la rete, ovvero le azioni per un servizio. *Garantire che i protocolli vengano utilizzati dai dispositivi è una condizione necessaria per permetterne la comunicazione.*
 
-I protocolli di rete sono delle regole che definiscono il formato, e lʼordine, la  
-semantica e la  
-sintassi dei ”messaggi” mandati e ricevuti tra entità interconnesse tramite la  
-rete, ovvero le azioni per un servizio. Garantire che i protocolli vengano  
-utilizzati dai dispositivi è una condizione necessaria per permetterne la  
-comunicazione.
+Ogni protocollo è associato ad un livello dello stack protocol (pila protocollare) che rappresenta un'astrazione che ordina i protocolli dall'alto verso il basso in base al loro ruolo, partendo da quelli più astratti e vicini all'utente e scendendo man man verso quelli più vicini ad un sistema fisico. Un messaggio quindi parte da un livello superiore per scendere verso quelli inferiori e ogni livello aggiunge un *header* al payload  
+![[Pasted image 20260522192217.png|166]]
+**Header**
+Come detto ogni protocollo oggiunge un header: un header è un insieme di dati che forniscono informazioni relative al protocollo utili alla giusta trasmissione del messaggio
+![[Pasted image 20260522192615.png|328]]
 
-Un protocollo serve a risolvere i problemi.
+---
 
-## SEGNALI
-
-Trasmissione del segnale
-
-Quando si trasmette un segnale ne arriva un altro. A livello fisico si genera un  
-segnale elettrico/elettromagnetico ma a destinazione arriva un qualcosa di  
-diverso, avviene una distorsione. Ciò che arriva a destinazione dipende dalla  
-distanza (attenuazione).
+#### SEGNALI
+Quando un mittente trasmette un segnale a destinazione solitamente ne arriva un altro. A livello fisico si genera un segnale elettrico/elettromagnetico ma a destinazione arriva un qualcosa di  
+diverso, avviene una **distorsione del segnale**. Ciò che arriva a destinazione dipende dalla distanza (attenuazione) ma anche dalla qualità e dalla affidabilità del mezzo di comunicazione fisico.
 
 ![[Pasted image 20260520184318.png]]
 
-
-
-È molto vantaggioso passare ai bit ( da 0 a 1 perché si passa per forza dal  
-mezzo) perché il sistema diventa “comprensibile”.
-- **Assenza di comunicazione**: rispetto alla sequenza di bit, se il segnale non cambia mai il sistema capisce che cʼè unʼinterruzione nella comunicazione.
-- **Cause di degradazione**: Oltre alla distanza, il segnale è influenzato da interferenze elettromagnetiche, rumore termico e attenuazione del mezzo.
 - **Codifica Binaria**: Un esempio semplice di interpretazione è associare un segnale alto al valore logico 1 e un segnale basso al valore 0.
 
-## PROBLEMI
+---
 
+#### PROBLEMI
 Per ridurre al minimo gli errori di comunicazione, è necessario istituire almeno  
 due canali distinti e separati: uno per la trasmissione in uscita e uno per la  
 ricezione in entrata. Non è fisicamente possibile trasmettere e ricevere  
@@ -44,57 +40,59 @@ Lʼobiettivo è offrire un canale virtuale che sia affidabile e senza errori, qu
 nella realtà viene costruito su un canali fisici che però presentano limiti e  
 problemi.
 
-Tipi di canali:
-- Simplex: La comunicazione è unidirezionale. Si ha unʼinformazione ma non il feedback di ritorno). ES: telecomando e proiettore, uno trasmette e lʼlatro riceve senza feedback.
-- Half-duplex:La comunicazione è bidirezionale, ma uno alla volta. ES: le radio che trasmettono o ricevono.
-- Full-duplex: Si può trasmettere e ricevere contemporaneamente.
+**Tipi di canali:**
+- *Simplex*: La comunicazione è unidirezionale. Si ha unʼinformazione ma non il feedback di ritorno). ES: telecomando e proiettore, uno trasmette e lʼlatro riceve senza feedback.
+- *Half-duplex*:La comunicazione è bidirezionale, ma uno alla volta. ES: le radio che trasmettono o ricevono.
+- *Full-duplex*: Si può trasmettere e ricevere contemporaneamente.
 
-Gestione della trasmissione e del flusso
-
+**Gestione della trasmissione e del flusso**
 - Si deve regolare il flusso dei dati attraverso un protocollo; (controllo dei flussi)
 - Bisogna determinare il percorso migliore per far arrivare il messaggio a destinazione; (routing)
 - Lʼordine di arrivo dei messaggi deve essere uguale allʼinvio. Se i messaggi seguono strade diverse potrebbero arrivare in ordine diverso, in questo caso è necessario ordinarli in seguito, si dovrebbe assegnare un numero di sequenza anche se occupa spazio. (sequenziamento)
 - I messaggi non possono avere una lunghezza arbitraria: se uso un sistema a dimensione fissa potrei sprecare spazio anche se più semplice da gestire, se non è a dimensione fissa è più efficiente ma devo trovare un modo per avvisare che la comunicazione è terminata.
   
   Ci sono due modi per avvisare che la comunicazione è terminata:
-1. Si usano sequenza di bit o variazioni elettriche per far capire che non cʼè più  
-    segnali.
+1. Si usano sequenze di bit o variazioni elettriche per far capire che non cʼè più  
+    segnale.
 2. Si inserisce un campo allʼinizio del messaggio che dichiara quanti byte seguono.
 
-Per trasmettere grandi quantità di dati, i protocolli non inviano un unico blocco  
+> [!tip] PACCHETTI
+> Per trasmettere grandi quantità di dati, i protocolli non inviano un unico blocco  
 monolitico, ma scompongono l'informazione in unità elementari chiamate  
-**pacchetti**.
+pacchetti.
 
-
-- **Divisione informazioni**: Ogni pacchetto è composto da una porzione di dati reali (payload) e da un'intestazione (header) che contiene le informazioni di controllo e routing.
+**Vantaggio dell'uso dei pacchetti a differenza dei blocchi monolitici di dati**
+- **Divisione informazioni**: Ogni pacchetto è composto da una porzione di dati reali (payload) e da un'intestazione (header).
 - **Vantaggi della suddivisione**:
 	- **Condivisione della banda**: Più flussi di dati possono coesistere contemporaneamente senza che uno solo monopolizzi la rete.
 	- **Eliminazione delle dipendenze**: Ogni pacchetto può percorrere strade diverse; se uno viene perso, si ritrasmette solo quello e non l'intera comunicazione.
 	- **Riduzione della latenza**: Il destinatario può iniziare a elaborare i primi pacchetti mentre gli altri sono ancora in transito.
 
+---
 
-## TIPI DI COMUNICAZIONE
-
+#### TIPI DI COMUNICAZIONE
 La comunicazione può essere divisa in due categorie principali basate sulle  
 modalità di connessione e sulla garanzia di consegna:
 
-
-1. CONNECTION-LESS E CONNECTION-ORIENTED
-- *Connection-less*: Non richiede una fase preliminare, ogni messaggio è indipendente e non serve una connessione potente per mandare un messaggio.
-- *Connection-Oriented*: Serve stabilire una connessione potente. Si sviluppa in tre fasi: Apertura, Comunicazione e Chiusura. Apertura: si stabilisce la connessione. Comunicazione: scambio dei dati. Chiusura: il protocollo deve gestire la fine della sessione. 
+1. **CONNECTION-LESS E CONNECTION-ORIENTED**
+- *Connection-less*: Non ha un meccanismo che permette di verificare se l’informazione è arrivata al ricevente (parzialmente o totalmente), e se la connessione è stata stabilita con successo. Il sistema non prevede segnali di ACK (acknowledgement signal).
   
-  **Meccanismo di Acknowledgment ACK**: In questi sistemi, il mittente si aspetta   una risposta di conferma per ogni pacchetto inviato. Rimane in attesa finché non riceve l'ACK o finché non scade un timeout che segnala la perdita del pacchetto.
+- *Connection-Oriented*: Serve stabilire una connessione migliore (non in termini di potenza). Si sviluppa in tre fasi: Apertura, Comunicazione e Chiusura. 
+  - Apertura: si stabilisce la connessione e ci si accerta che entrambi i dispositivi siano connessi. 
+  - Comunicazione: scambio dei dati. 
+  - Chiusura: il protocollo deve gestire la fine della sessione. 
+  **Meccanismo di Acknowledgment ACK**: In questi sistemi, il mittente si aspetta una risposta di conferma. Rimane in attesa finché non riceve l'ACK o finché non scade un timeout che segnala la perdita del pacchetto.
 
-2. AFFIDABILE E NON AFFIDABILE
+2. **AFFIDABILE E NON AFFIDABILE**
 - *Affidabile*: Si implementano dei meccanismi per garantire la consegna corretta.
 
 - *Non Affidabile*: Il trasmettitore invia i dati “contro un muro”, ma non sa se lʼinformazione è arrivata o è andata persa, il ricevente non ha modo di segnalare le anomalie.
 
-
 Se si scambia la stessa informazione si deve fare in modo di riconoscere e  
 capire che si tratta dello stesso tipo di informazione:
 
-- *Cronometro*: io mando un messaggio, attivo un cronometro e se non arriva in tempo la risposta rimando la stessa informazione. Se il tempo del cronometro è troppo breve rischio di trasmettere inutilmente ,se troppo lungo resto bloccato in attesa di risposta.
+**Consegna affidabile dei sistemi connetion-oriented**
+- *Cronometro*: L'host manda un messaggio, attiva un cronometro e se non arriva in tempo la risposta rimanda la stessa informazione (si suppone che il primo messaggio sia andato perso). Se il tempo del cronometro è troppo breve si rischia di ritrasmettere inutilmente, se troppo lungo si resta fermi in attesa di risposta.
 - *Riconoscimento dei duplicati*: Si deve associare la risposta al messaggio, per poter distinguere se un messaggio ricevuto è unʼinformazione nuova o una copia di una precedente già arrivata. Ogni risposta deve essere legata univocamente al suo messaggio tramite numeri di sequenza. Senza questa si rischia di scambiare le risposte.
 
 
@@ -102,7 +100,7 @@ capire che si tratta dello stesso tipo di informazione:
 che riguarda con la comunicazione ha un RFC, ogni RFC ha un codice numerico  
 associato.
 
-## TIPI DI SERVIZI
+**RIASSUNTO**
 Abbiamo quindi 4 combinazioni:
 
 | TIPO | AFFIDABILE | NON AFFIDABILE |
@@ -110,41 +108,47 @@ Abbiamo quindi 4 combinazioni:
 | **Orientata alla connessione** | È il massimo della sicurezza | Connessione senza garanzie. Si stabilisce un canale ma se si perde un pezzo non si recupera |
 | **Non Orientata** | Si ha una "ricevuta" di ritorno per ogni messaggio. | Non si ha una conferma di arrivo. |
 
-**Modello OSI e TCP/IP**
+## **Modello ISO/OSI e TCP/IP**
+È importante notare che alcuni dispositivi (come i ripetitori fisici) operano solo al livello fisico e non "vedono" i bit, ma solo i segnali elettromagnetici.
 
-**Modello OSI Composto da 7 livelli**. È importante notare che alcuni dispositivi (come i ripetitori fisici) operano solo al livello fisico e non "vedono" i bit, ma solo i segnali elettromagnetici.
-**Stack TCP/IP Si concentra su 4 livelli principali**: 
+**Modello ISO/OSI Composto da 7 livelli**. -> è più un modello teorico su come dovrebbe funzionare una rete
+
+**Stack TCP/IP** -> è il modello realmente usato nelle connessione (nato negli anni 70 per scopi militari)
+**Si concentra su 4 livelli principali + il livello fisico:** 
 1) Application
 2) Transport
 3) Network
 4) Data Link Layer
 5) Physical Layer
 
-## TYPES OF NETWORKS
+---
+
+#### TYPES OF NETWORKS
 Ci sono diversi tipi di reti:
 
-1) Point to point :
+1) *Point to point* :
 - Simplex: Uno parla, l'altro ascolta (es. telecomando).
 - Half-duplex: Uno alla volta (serve un protocollo per i turni).
-- Full-duplex: Ognuno trasmette quando vuole su canali separati.
+- Full-duplex: Ognuno trasmette quando vuole su canali separati gestiti da protocolli.
 
-2) Broadcast (shared bus): esiste un unico canale di comunicazione che viene condiviso da tutte le macchine connesse alla rete.
+2) *Broadcast (shared bus)*: esiste un unico canale di comunicazione che viene condiviso da tutte le macchine connesse alla rete *organizzate secondo una topologia di rete*.
 - Shared bus: Tutti ascoltano e tutti possono parlare. Il problema principale è la collisione del segnale, dove i segnali si sovrappongono e diventano indistinguibili.
 - Ring: Le macchine sono separate; ognuna legge, elabora e riscrive il segnale per la successiva (ormai non si usa più).
 - Star: C'è un concentratore centrale che riceve e riproduce i segnali per le macchine ai capi.
 la differenza tra gli ultimi due è di affidabilità.
-Il problema del broadcast è la collisione del segnale.
+**Il problema del broadcast è la collisione del segnale.**
 
-![[Pasted image 20260520185959.png|325]]
+![[Pasted image 20260520185959.png|372]]
 **Divisione delle reti in base alla loro dimensione:**
 Dalla più piccola alla più grande:
-1) PAN Personal area network): rete locale
-2) MAN Metropolitan area network): raggiungono velocità elevate.
-3) WAN Wide area network): reti ad ampia area.
+1) PAN Personal area network: rete personale
+2) LAN Local area network: rete locale 
+3) MAN Metropolitan area network: raggiungono velocità elevate.
+4) WAN Wide area network: reti ad ampia area.
 
+---
 
-
-### Evoluzione e Struttura delle reti
+#### Evoluzione e Struttura delle reti
 
 - **Arpanet:** Rappresenta il primo sistema di reti.
     
@@ -152,16 +156,20 @@ Dalla più piccola alla più grande:
     
 - **Comunicazione a pacchetto:** L'idea fondamentale è suddividere la comunicazione in pacchetti, ognuno dei quali deve scegliere la strada migliore per avanzare nella rete.
 
-## 2. Paradigma Client-Server
+---
 
-L'approccio principale della comunicazione in rete prevede due ruoli distinti:
+#### Paradigma Client-Server
 
-|**Caratteristica**|**Server**|**Client**|
-|---|---|---|
-|**Stato**|Sempre attivo (Always-on)|Può connettersi a intermittenza|
-|**Indirizzo IP**|Permanente (Statico)|Spesso dinamico|
-|**Iniziativa**|In attesa di contatto (Standby)|Inizia la comunicazione|
-|**Posizione**|Spesso in Data Center per scalabilità|Dispositivi utente|
+L'approccio principale della comunicazione in rete prevede due ruoli distinti: Client e Server
+
+Organizzazione teorica del modello:
+
+| **Caratteristica** | **Server**                            | **Client**                      |
+| ------------------ | ------------------------------------- | ------------------------------- |
+| **Stato**          | Sempre attivo (Always-on)             | Può connettersi a intermittenza |
+| **Indirizzo IP**   | Permanente (Statico)                  | Spesso dinamico                 |
+| **Iniziativa**     | In attesa di contatto (Standby)       | Inizia la comunicazione         |
+| **Posizione**      | Spesso in Data Center per scalabilità | Dispositivi utente              |
 
 > [!info] **Nota:** I client non comunicano direttamente tra loro in questo modello. Esempi tipici sono i protocolli HTTP, IMAP e FTP.
 

@@ -4,45 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "1ce2648ecce8ceb5",
+        "id": "a2f0923790b04284",
         "type": "tabs",
         "children": [
           {
-            "id": "5e46d6be5d38513f",
+            "id": "87563f8d22198e3a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "16_19_maggio"
+              "title": "RETI-COMPLETO"
             }
           },
           {
-            "id": "b88ff7b514f216bb",
+            "id": "5766de7936ec93cb",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "SO-04"
-            }
-          },
-          {
-            "id": "998b1e581d039a5f",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "SO-04"
+              "title": "1_Summary_N"
             }
           }
         ]
@@ -191,12 +179,55 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "3216613356f858dc",
+  "floating": {
+    "id": "454e06bef44fd053",
+    "type": "floating",
+    "children": [
+      {
+        "id": "617e5ff76db80193",
+        "type": "window",
+        "children": [
+          {
+            "id": "a496efef9de963e0",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "103a14681b58a87c",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Riassunto_Github"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 3,
+        "y": 3,
+        "width": 1530,
+        "height": 858,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "87563f8d22198e3a",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 16.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260522192615.png",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260522192217.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260522192215.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
-    "UNI/Callouts.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 16.md",
+    "UNI/Callouts.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-02.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-03.pdf",
@@ -205,7 +236,6 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260521113716.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/2_10_marzo.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/14_19_maggio.md",
@@ -227,11 +257,6 @@
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/1_5_marzo.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520184849.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520184318.png",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/14_19_maggio.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520182424.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520181751.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520180556.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/1_LAB_30_aprile.md",
