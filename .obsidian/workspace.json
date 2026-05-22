@@ -25,26 +25,26 @@
             "id": "b88ff7b514f216bb",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-03.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 16.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "SO-03"
+              "icon": "lucide-file",
+              "title": "Lezione 16"
             }
           },
           {
             "id": "998b1e581d039a5f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "UNI/Callouts.md",
-                "mode": "source",
-                "source": false
+                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Callouts"
+              "icon": "lucide-file-text",
+              "title": "SO-04"
             }
           }
         ]
@@ -195,13 +195,17 @@
   },
   "active": "5e46d6be5d38513f",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-03.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260521114257.png",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 16.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
     "UNI/Callouts.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-02.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-03.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260522150834.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260521114257.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260521113716.png",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/2_10_marzo.pdf",
@@ -227,19 +231,15 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520184318.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/14_19_maggio.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520182424.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520181751.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520180556.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260519153106.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/15_12_maggio.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/1_LAB_30_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 13.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/progetto/Consegna.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }

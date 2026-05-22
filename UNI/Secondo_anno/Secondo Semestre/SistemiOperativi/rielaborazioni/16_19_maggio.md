@@ -45,3 +45,64 @@ Abbiamo 2 modi per includerle nei nostri software:
 
 
 **Allocazione della memoria per il kernel**
+Ci sono grandi differenze in base a come il SO riserva la memoria ai processi utente o al kernel.
+- **Memoria Utente:** Viene gestita tramite la **paginazione**. È flessibile, ma soffre di **frammentazione interna**. Se un processo chiede 1 byte, il SO gli dà comunque un'intera pagina (solitamente 4KB), sprecando quasi tutto lo spazio rimanente.
+    
+- **Memoria Kernel:** Il Kernel non può permettersi questo spreco. Gestisce migliaia di piccole strutture dati (descrittori di processi, semafori) che devono essere create e distrutte continuamente. Inoltre, alcune parti del Kernel hanno bisogno di **pagine fisicamente contigue** (per interagire direttamente con l'hardware) e non possono essere paginate (cioè non possono finire nello swap su disco).
+
+**Slab allocator (soluzione usata su linux)**
+- **Slab:** È il blocco di base, composto da una o più **pagine fisicamente contigue** in RAM.
+    
+- **Cache:** Una cache è un insieme di uno o più Slab. La cosa fondamentale è che **ogni cache contiene solo un tipo di oggetto**. Esiste una cache specifica per i descrittori di processo, una per i file aperti, ecc. Questo garantisce che non ci sia frammentazione: se un oggetto occupa 3KB, la cache viene divisa esattamente in "slot" da 3KB.
+    
+- **Kernel Objects:** Sono le istanze reali delle strutture dati che il Kernel usa. Quando il Kernel ha bisogno di un nuovo oggetto, non va a chiedere RAM generica, ma va alla cache specifica e prende uno slot libero.
+![[Pasted image 20260522150834.png|492]]
+
+*In breve per evitare la frammentazione interna il SO dedica il giusto quantitativo di memoria perché sa che in ogni cache ci sarà sempre lo stesso oggetto che richiederà sempre la stessa memoria, ad esempio sa che in una cache ci saranno solo oggetti riguardanti i file aperti che peseranno tutti 3KB quindi assegna 3KB precisi*
+
+**Gestione**
+Uno slab può trovarsi in 3 stati:
+1) Full -> tutti gli slot sono occupati
+2) Empty -> tutti gli slot sono liberi
+3) Partial -> alcuni slot occupati altri liberi
+Il SO se può cerca di riempire gli slab *partial* così da ottimizzare l'uso della memoria
+
+**Vantaggi**
+I vantaggi più importanti sono sicuramente:
+- L'assenza della frammentazione interna -> ogni cache è divisa in base al tipo di oggetto che dovrà ospitare
+- Velocità -> anziché allocare e deallocare memoria (operazione lenta) per ogni oggetto, semplicemente lo slot all'interno della cache sarà segnato come pieno o come vuoto
+
+> [!warning] la cache che nomino qui non è la cache usata dalla CPU (cache l1,l2,l3) ma è una ottimizzazione software che risiede in RAM
+
+---
+
+### **File System**
+**I File e le Directory sono astrazioni.**
+Ogni File System può avere convenzioni diverse da SO a SO, come ad esempio:
+- **Nomenclatura**: L'estensione finale e ciò che descrive potrebbe cambiare.
+- **Tipi di file**: Potrebbero esserci file di dispositivo speciali che indirizzano una partizione o un canale audio.
+	- *(Nota: I primi 2 byte di ogni file rappresentano il tipo di file).*
+- **Tipi di accesso**: Come può essere aperto un file.
+- **Metadati (Attributi)**: Come la maschera dei permessi, la copia di backup, e vari timestamp per l'ultima modifica o la data di creazione.
+
+
+**Operazioni su File**
+Non esistono solo le operazioni di `read` e `write`. Le directory hanno operazioni varie, e i link di codice hanno operazioni a parte.
+
+> [!warning] Attenzione alla Concorrenza
+> Se più processi aprono lo stesso file contemporaneamente, si possono presentare problemi simili alle **Race Condition**.
+
+
+**Lock sui File**
+I lock sui file sono gestiti in maniera diversa per prevenire problemi di concorrenza:
+- **Lock di tipo Shared (Condiviso)**: Sono lock potenzialmente condivisi, come avviene ad esempio per le operazioni di sola lettura.
+- **Lock di tipo Exclusive (Esclusivo)**: Sono lock esclusivi, utilizzati per operazioni come la scrittura.
+
+> [!info] Convenzioni dei SO
+> SO diversi hanno convenzioni diverse anche sui lock (alcuni possono non supportare i lock *shared*, ma solo quelli *exclusive*).
+
+**Modalità di applicazione del Lock**
+Il lock può essere applicato in modi differenti:
+
+1. **Mandatory Lock (Obbligatorio)**: È il SO ad applicare il lock al processo (blocca le operazioni sui lock esclusivi).
+2. **Advisory Lock (Consultivo)**: Il lock viene acquisito o rilasciato dai processi stessi. Un altro processo potrebbe non preoccuparsi di verificare se vi è un lock o meno; potrebbe quindi operare sul file senza sapere se il lock è stato acquisito o meno.
