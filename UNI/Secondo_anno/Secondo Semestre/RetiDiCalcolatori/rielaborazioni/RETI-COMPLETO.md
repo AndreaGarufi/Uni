@@ -108,7 +108,7 @@ Abbiamo quindi 4 combinazioni:
 | **Orientata alla connessione** | È il massimo della sicurezza | Connessione senza garanzie. Si stabilisce un canale ma se si perde un pezzo non si recupera |
 | **Non Orientata** | Si ha una "ricevuta" di ritorno per ogni messaggio. | Non si ha una conferma di arrivo. |
 
-## **Modello ISO/OSI e TCP/IP**
+# **Modello ISO/OSI e TCP/IP**
 È importante notare che alcuni dispositivi (come i ripetitori fisici) operano solo al livello fisico e non "vedono" i bit, ma solo i segnali elettromagnetici.
 
 **Modello ISO/OSI Composto da 7 livelli**. -> è più un modello teorico su come dovrebbe funzionare una rete
@@ -146,6 +146,8 @@ Dalla più piccola alla più grande:
 3) MAN Metropolitan area network: raggiungono velocità elevate.
 4) WAN Wide area network: reti ad ampia area.
 
+Internet è considerabile una WAN (di WAN)
+
 ---
 
 #### Evoluzione e Struttura delle reti
@@ -158,10 +160,11 @@ Dalla più piccola alla più grande:
 
 ---
 
+# **APPLICATION LAYER**
+E' il protocollo più in alto nello stack protocol ed è quello più vicino all'utente, qui ci sono i protocolli che "parlano" con i programmi (come Telnet, HTTP per il web, FTP per i file, o DNS). Ogni applicazione di rete si può basare su uno tra 2 paradigmi:
+
 #### Paradigma Client-Server
-
-L'approccio principale della comunicazione in rete prevede due ruoli distinti: Client e Server
-
+**L'approccio principale della comunicazione in rete prevede due ruoli distinti: Client e Server**
 Organizzazione teorica del modello:
 
 | **Caratteristica** | **Server**                            | **Client**                      |
@@ -173,18 +176,9 @@ Organizzazione teorica del modello:
 
 > [!info] **Nota:** I client non comunicano direttamente tra loro in questo modello. Esempi tipici sono i protocolli HTTP, IMAP e FTP.
 
-## 3. Processi e Comunicazione Interprocesso
+---
 
-I processi sono programmi in esecuzione dotati di dati e stack di sistema.
-
-- **Nello stesso host:** Due processi comunicano tramite **IPC (Inter-process communication)** definita dal sistema operativo.
-    
-- **In host differenti:** Comunicano scambiandosi **messaggi**. Questo scambio permette la sincronizzazione tra i processi.
-    
-- **Identificazione:** Ogni processo è identificato dal kernel tramite un **Process ID** e, in rete, tramite una **Porta (Port)**.
-
-## 4. Architettura Peer-to-Peer (P2P)
-
+#### Paradigma Peer-to-Peer (P2P)
 A differenza del modello client-server, qui non esiste un server sempre attivo:
 
 - **Comunicazione Diretta:** I sistemi terminali comunicano direttamente tra loro.
@@ -195,11 +189,21 @@ A differenza del modello client-server, qui non esiste un server sempre attivo:
     
 - **Svantaggi:** Gestione complessa e connessioni intermittenti con IP variabili.
 
+---
 
-## 5. Porte e Sicurezza
+#### Processi e Comunicazione Interprocesso
+I processi sono programmi in esecuzione dotati di dati e stack di sistema e possono comunicare come fossero degli host.
 
+- **Nello stesso host:** Due processi comunicano tramite **IPC (Inter-process communication)** definita dal sistema operativo.
+    
+- **In host differenti:** Comunicano scambiandosi **messaggi**. Questo scambio permette la sincronizzazione tra i processi.
+    
+- **Identificazione:** Ogni processo è identificato dal kernel tramite un **Process ID** e, in rete, tramite una **Porta (Port)**.
+
+---
+
+#### Porte e Sicurezza
 Le porte sono fondamentali per indirizzare i dati al processo corretto in ascolto. Sono divise in tre gruppi:
-
 1. **Well Known Ports (0-1023):** Riservate a servizi di sistema e richiedono privilegi di amministratore.
     
 2. **Registered Ports (1024-49151):** Assegnate dall'ICANN per usi specifici.
@@ -208,7 +212,6 @@ Le porte sono fondamentali per indirizzare i dati al processo corretto in ascolt
     
 
 Esempi di Porte Standardizzate:
-
 - **FTP:** 20 (dati), 21 (controllo)
     
 - **SSH:** 22
@@ -218,15 +221,17 @@ Esempi di Porte Standardizzate:
 - **DNS:** 53 (TCP/UDP)
     
 
-> **Sicurezza:** Per evitare attacchi, si può cambiare la porta di default (es. SSH) o usare il **Port Knocking**, una tecnica che tiene le porte chiuse finché non viene ricevuta una sequenza segreta di tentativi di connessione.
+> [!hint] **Sicurezza** 
+> Per evitare attacchi, si può cambiare la porta di default (es. SSH) o usare il **Port Knocking**, una tecnica che tiene le porte chiuse finché non viene ricevuta una sequenza segreta di tentativi di connessione.
 
-## 6. Analisi del Protocollo Telnet
+---
 
-Telnet è un protocollo per l'accesso remoto che opera in chiaro, rendendolo pericoloso per la trasmissione di password.
+#### Analisi del Protocollo Telnet
+Telnet è un protocollo del livello applicativo che permette di controllare il terminale di un altro host da remoto e che opera in chiaro, rendendolo pericoloso per la trasmissione di password, infatti è ormai deprecato (usava TCP e la porta 23), è stato sostituito da SSH.
 
 **Diagramma della sessione (Scenario Host A e Host B):**
 
-![[Pasted image 20260520193409.png|403]]
+![[Pasted image 20260520193409.png|501]]
 
 1. **Invio:** L'utente su Host A digita 'C'. Host A invia un pacchetto con $Seq=42$, $ACK=79$ e $Data='C'$.
     
@@ -238,9 +243,8 @@ Telnet è un protocollo per l'accesso remoto che opera in chiaro, rendendolo per
 **Vantaggio del Piggybacking:** Unire l'ACK e il dato nello stesso pacchetto riduce il traffico di rete e il carico computazionale.
 
 
-
-**FTP - File Transfer Protocol**
-FTP lavora sulle porte 20 e 21, la 20 è usata per il passaggio dei dati e la 21 per i controlli/comandi
+#### Analisi del protocollo FTP - File Transfer Protocol
+Col protocollo FTP, il client carica o scarica file verso o dal server. FTP lavora sulle porte 20 e 21, la 20 è usata per il passaggio dei dati e la 21 per i controlli/comandi
 
 **Bidirezionale:** Lavora in entrambe le direzioni; permette sia di caricare (upload) che di scaricare (download) informazioni e file.
 
@@ -261,7 +265,6 @@ Il client apre una richiesta di connessione sulla sua porta (1742) il server apr
 
 
 **Differenza tra stateless e stateful**
-
 **Stateful**
 **Come funziona:** Il sistema (di solito un server) "ricorda" chi è l'utente e cosa ha fatto nelle richieste precedenti. Crea una vera e propria **sessione** continua.
 Ad esempio: Il protocollo **FTP** (che abbiamo appena visto: fai il login e la connessione rimane aperta in attesa dei tuoi comandi).
@@ -274,15 +277,14 @@ Ad esempio: Il protocollo **HTTP** (quello su cui si basa il web).
 - Le API REST (usate dalle app sui nostri smartphone per comunicare con i server).
 
 
-
-**HTTP**
-
+#### Analisi del protocollo HTTP - HyperText Transfer Protocol
+HTTP permette ad un host di richiedere delle risorse, chiamate oggetti, ad un Web Server.
 HTTP nasce perché verso gli anni 90 si aveva bisogno di contattare un server in modo da recuperare documenti pubblici (si dovevano visualizzare le pagine dei siti web in pratica), quindi era inutile usare un protocollo come FTP (stateful), si può invece usare un protocollo *stateless* per migliorare e velocizzare i processi.
 
 L'idea è quella di aprire una connessione TCP con il server e richiedere un documento che verrà così erogato del server.
 ![[Pasted image 20260316111955.png|361]]
 
-Quindi il client manda una richiesta di connessione TCP e il server approva sulla porta 80 mandando un messaggio di ACK poi il client richiedere un determinato file e il server lo eroga
+Quindi il client manda una richiesta di connessione TCP e il server approva sulla porta 80 mandando un messaggio di ACK poi il client richiede un determinato file e il server lo eroga
 
 HTTP è quindi stateless, ovvero il server non mantiene informazioni sulle richieste passate
 
@@ -290,7 +292,7 @@ HTTP è quindi stateless, ovvero il server non mantiene informazioni sulle richi
 Una pagina web è formata da un insieme di oggetti (che possono anche essere contenuti su diversi web servers), un oggetto può essere un file HTML, un immagine JPEG, un file audio ecc..., quindi una pagina web è composta da un file base HTML che include vari oggetti ognuno reperibile tramite un URL (Uniform Resource Locator) 
 Ad esempio: www.someschool.edu/someDept/pic.gif
 
-
+**Richiesta HTTP**
 ![[Pasted image 20260316120341.png|455]]
 Il messaggio si divide in tre blocchi principali:
 
@@ -319,11 +321,11 @@ Dopo la riga di richiesta ci possono essere diverse righe di intestazione (gli _
 - **Se usi il metodo GET:** Di solito l'entity body è completamente **vuoto**, perché stai solo chiedendo informazioni, non ne stai inviando (i parametri viaggiano nell'URL).
 - **Se usi il metodo POST:** L'entity body conterrà i dati effettivi. Ad esempio, se stai caricando un file o hai scritto un commento su un forum, il testo del commento o i byte del file viaggeranno all'interno di questo blocco.
 
-
+**Risposta HTTP**
 ![[Pasted image 20260316120919.png|417]]
 L'HTTP response è identica alla request.
 
-
+Questi sono i principali metodi che una richiesta può mandare:
 ![[Pasted image 20260316121005.png|473]]
 
 
@@ -336,21 +338,22 @@ I cookie sono sicuri perché non contengono codice eseguibile sul computer ma si
 
 **Versioni HTTP**
 Nel tempo si sono susseguiti vari aggiornamenti di questo protocollo, infatti un tempo si apriva la connessione usando un solo canale in cui veniva mandato tutto, creando rallentamenti ed errori, poi si è aggiunta una pipeline che spedisce ogni oggetto usando un canale diverso, in questo modo per siti molto grandi se un canale non ha ancora finito di mandare il suo oggetto nel frattempo gli altri sono già arrivati e l'utente può comunque vedere qualcosa del sito.
-In seguito sono stati aggiunti vari protocolli per la sicurezza
+In seguito sono stati aggiunti vari protocolli per la sicurezza.
 
-i protocolli sono retrocompatibili. Un protocollo si dice **retrocompatibile** (o _backward compatible_) quando una versione più recente o aggiornata è in grado di interagire correttamente con versioni precedenti dello stesso protocollo, o di gestire dati e dispositivi basati su standard più vecchi.
+I protocolli sono retrocompatibili. Un protocollo si dice **retrocompatibile** (o _backward compatible_) quando una versione più recente o aggiornata è in grado di interagire correttamente con versioni precedenti dello stesso protocollo, o di gestire dati e dispositivi basati su standard più vecchi.
 
 
-**Wireshark**: programma  che serve per vedere il traffico di rete
-
-abbiamo fatto delle prove in localhost praticamente abbiamo aperto un pagina web e abbiamo analizzato tutte le informazioni che vengono inviate al login (con username e password) vediamo che il server risponde con il Token di sessione, rubare il token di sessione è alla base del phishing
+**Wireshark**: programma che serve per vedere il traffico di rete
+Abbiamo fatto delle prove in localhost praticamente abbiamo aperto un pagina web e abbiamo analizzato tutte le informazioni che vengono inviate al login (con username e password) vediamo che il server risponde con il Token di sessione, rubare il token di sessione è alla base del phishing
 
 Ci sono due modi per risolvere questo problema:
 - Usare HTTPS
 - Refreshare il token di sessione spesso (così anche se rubato si ha poco tempo per usarlo)
 
-**Proxy Server** 
-serve per mascherare l'ip di un servizio sulla rete, è un server intermedio che permette di controllare, filtrare e mascherare il traffico da parte di uno o più client. Nello specifico:
+---
+
+#### Proxy Server 
+Serve per mascherare l'IP di un servizio sulla rete, è un server intermedio che permette di controllare, filtrare e mascherare il traffico da parte di uno o più client. Nello specifico:
 1. I client mandano le richieste al proxy. 
 2. Il proxy le invia al server destinazione. 
 3. Il server riceve la richiesta del proxy. 
@@ -361,21 +364,24 @@ I proxy sono utili anche per monitorare il traffico di rete da parte degli host 
 Avendo una cache interna alcune volte può rispondere con una pagina vecchia
 ![[Pasted image 20260317102439.png|500]]
 
+---
 
-**SMTP(Simple Mail Transfer Protocol)**: questo è il protocollo utilizzato per lo scambio di posta elettronica, in specifico si occupa di trasferire le mail dal server mittente a quello destinazione. Usa la porta 25 su TCP 
+#### Analisi del protocollo SMTP - Simple Mail Transfer Protocol
+Questo è il protocollo utilizzato per lo scambio di posta elettronica, in specifico si occupa di trasferire le mail dal mail server del mittente a quello del destinatario. Usa la porta 25 su TCP 
 ![[Pasted image 20260318113052.png]]
 
-Noi quindi usiamo SMTP per mandare la mail al nostro server di posta che (anche lui usando SMTP) la invierà al server di posta del destinatario che leggera questa mail usando o POP o IMAP
+Noi quindi usiamo SMTP per mandare la mail al nostro server di posta che (anche lui usando SMTP) la invierà al server di posta del destinatario che leggerà questa mail usando o POP o IMAP
 
 La @ nella mail viene inserita per distinguere il nome utente dal server di destinazione 
 Di seguito quello che accade veramente:
 ![[Pasted image 20260317103141.png|500]]
 L'immagine mostra perfettamente la natura "botta e risposta" del protocollo SMTP, basato su comandi testuali chiari (come `HELO`, `MAIL FROM`, `RCPT TO`) e codici di stato standardizzati. In questo scenario, l'email è stata autorizzata per Jones e Brown, ma la consegna a Green è fallita a causa di un indirizzo inesistente.
 
+**Protocolli di accesso al mail-server**
 Il client che si connette al server viene chiamato **user-agent**: si collega al server di posta e ci permette di interagire con le nostre mail, questo può essere fatto anche tramite SMPT ma è molto più conveniente usare **POP3** e **IMAP**
 
 **POP3(Post Office Protocol)**: scarica le mail dal server e ci permette la visualizzazione anche offline (cancella le mail dal server di posta)
-**IMAP**: ci permette la visualizzazione delle mail senza scaricarle, è più semplice ma non ci permette di visualizzare le mail se siamo offline,  usando questo protocollo ovviamente le mail non vengono cancellate dal server di posta (Google ha tutte le nostre email nei suoi database)
+**IMAP**: ci permette la visualizzazione delle mail senza scaricarle, è più semplice ma non ci permette di visualizzare le mail se siamo offline, usando questo protocollo ovviamente le mail non vengono cancellate dal server di posta (Google ha tutte le nostre email nei suoi database)
 
 | **Caratteristica**                           | **POP3**       | **IMAP**                        |
 | -------------------------------------------- | -------------- | ------------------------------- |
@@ -392,12 +398,13 @@ Il client che si connette al server viene chiamato **user-agent**: si collega al
 | Download parziale dei messaggi?              | No             | Sì                              |
 | Le quote disco sono un problema?             | No             | Potrebbero diventarlo nel tempo |
 | Semplice da implementare?                    | Sì             | No                              |
-| Supporto diffuso?                            | Sì             | In crescita                     |
-**Mail di SPAM**: lo spam di mail nasce dalla famosa azienda spam che un giorno per pubblicizzare il suo prodotto ha inviato un sacco di mail contemporaneamente.
+| Supporto diffuso?                            | Sì             | Sì                              |
+> [!cite] **Mail di SPAM**:
+>  Lo spam di mail nasce dalla famosa azienda spam che un giorno per pubblicizzare il suo prodotto ha inviato un sacco di mail contemporaneamente.
 
+---
 
-
-**DNS (Domain Name System)**
+#### DNS (Domain Name System)
 Gli indirizzi IP identificano in maniera univoca gli host in rete e la loro locazione: la struttura di un indirizzo IP, fornisce infatti informazioni sulla struttura della rete e la posizione dell’host all’interno di essa. Gli IP non sono facili da ricordare, per un umano, in quanto costituiti esclusivamente da caratteri numerici. 
 Gli hostname nascono con lo scopo di associare un nome a un IP: diventa però necessario introdurre un meccanismo che permetta la traduzione degli hostname in indirizzi IP. Nasce così il DNS
 
@@ -405,28 +412,23 @@ l'associazione nome-indirizzoIP *(hostname)* viene risolta usando il protocollo 
 ![[Pasted image 20260317110722.png|500]]
 
 **Una panoramica sui dominii**
-#### 1. Root Domain (.)
-
+##### 1. Root Domain (.)
 È il livello più alto della gerarchia.  
 Non si vede normalmente negli indirizzi (è implicito alla fine, es: *google.com.*).
 
-#### 2. Top-Level Domain (TLD)
-
+##### 2. Top-Level Domain (TLD)
 Sono i domini di primo livello e si trovano subito sotto il root.
 Esempi: .com .it .us .edu ecc...
 
-#### 3. Second-Level Domain (SLD)
-
-È solitamente il nome scelto dall’organizzazione o dal proprietario del sito.
-
+##### 3. Second-Level Domain (SLD)
+È solitamente il nome scelto dall'organizzazione o dal proprietario del sito.
 Esempi:
 
 - *google.com* → “google” è il secondo livello
     
 - *unict.it* → “unict” è il secondo livello
 
-#### 4. Sottodomini (Third-Level e oltre)
-
+##### 4. Sottodomini (Third-Level e oltre)
 Sono livelli aggiuntivi sotto il secondo livello.
 
 Esempi:
@@ -459,15 +461,15 @@ Il processo di aggiornamento è semplice:
 - Vengono aggiornati in automatico anche i record nel secondario
 ![[Pasted image 20260317112427.png|500]]
 
+---
+
 **Fuori contesto**: posso mettermi in mezzo alla comunicazione tra due PC diventando un *man in the middle* e riuscendo a catturare tutti i dati che vanno da A a B 
-
-
 Esistono anche dei protocolli utilizzati per la diagnostica, uno di quelli più utilizzati è **SNPM (Simple Network Management Protocol)**, non ci interessa in modo reale come funziona, dobbiamo solo sapere che esiste e per cosa viene utilizzato (ha solo detto il nome praticamente).
 
 
 ---
 
-Siamo passati a [[3 - Transport_N.pdf]]
+# **TRANSPORT LAYER**
 
 Nello stack abbiamo diversi layer:
 - **Datalink layer**: comunicazione fisica tra gli host
@@ -772,7 +774,7 @@ A parità di RTT e MSS, gli host in congestion avoidance crescono in maniera lin
 
 
 
-## **NETWORK LAYER**
+# **NETWORK LAYER**
 
 Possiamo immaginare la rete di connessioni tra dispositivi e tra router come un grafo in cui ogni nodo consiste in un router
 
@@ -1105,7 +1107,7 @@ Per questo motivo internet o comunque reti giganti sono divise in AS -> Autonomo
 
 
 
-## **DATA LINK LAYER - DLL**
+# **DATA LINK LAYER - DLL**
 
 Il DLL si occupa di trasformare il segnale in bit e i bit in segnale, si occupa anche degli errori, raggruppa i bit per creare i frame
 
