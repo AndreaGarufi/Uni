@@ -520,9 +520,9 @@ Se volessimo inviare un Frame di $1500$ bytes ovvero $12000$ bits impieghiamo:
 $$T_{\mathrm{frame}} = \frac{\text{Dimensione del frame (in bit)}}{\text{Bandwidth (in bit/s)}}$$
 Ad esempio per noi il tempo di frame sarebbe di 1.2 millisecondi
 
-il nostro segnale si deve propagare da $A$  a $B$, quindi dobbiamo mettere in considerazione anche il tempo di propagazione del segnale, di seguito in dettaglio:
+Il nostro segnale si deve propagare da $A$  a $B$, quindi dobbiamo mettere in considerazione anche il tempo di propagazione del segnale, di seguito in dettaglio:
 $$T_{\mathrm{propagazione}} = \frac{\text{Spazio di trasmissione}}{\text{Velocità di trasmissione}}$$
-
+Dove lo $spazio\,\,di\,\,trasmissione$ è la distanza che il segnale deve percorrere.
 Con questa informazione possiamo calcolare anche il numero di bit che possono stare contemporaneamente nel canale:
 $$\text{Bandwidth (in bit/s)} \cdot T_{\mathrm{propagazione}}(\text{in s})$$
 
@@ -538,12 +538,12 @@ Quindi il **throughput teorico** sarebbe il tempo impiegato per immettere tutti 
 Per calcolare il **throughput reale** dobbiamo considerare il tempo di $ACK$ e il tempo di $RTT$(Round-Trip Time) ovvero il tempo di andata e ritorno (quindi il $T_{propagazione}$ dell'andata + quello del ritorno dell' ACK), la formula diventa:
 $$T = T_{\text{frame}} + RTT + T_{\text{elaborazione}} + T_{\text{ACK}}$$
 $$T_{ACK} = \frac{\text{Dimensione dell'ACK (in bit)}}{\text{Bandwidth (in bit/s)}}$$
-il tempo di elaborazione è un tempo teorico (molto piccolo) che introduciamo perché il computer B dopo aver ricevuto un messaggio lo legge e crea un messaggio di ACK e lo fa nel tempo di elaborazione che è piccolo ma non 0
+Il tempo di elaborazione è un tempo teorico (molto piccolo) che introduciamo perché il computer B dopo aver ricevuto un messaggio lo legge e crea un messaggio di ACK e lo fa nel tempo di elaborazione che è piccolo ma non 0
 
 $RTT$ lo dà l'esercizio
 ![[Pasted image 20260319105431.png|500]]
 
-In questa maniera la reale velocità del canale non è molto alta, si decide quindi di implementare un meccanismo di pipeline...
+*In questa maniera la reale velocità del canale non è molto alta, si decide quindi di implementare un meccanismo di pipeline...*
 
 La modalità pipeline ci consente di aumentare il throughput di una rete. Invece di inviare un singolo frame ne inviamo $n$ e aspettiamo $n$ $ACK$, capiamo subito che è molto importante gestire i casi in cui il frame si rovina e l'ACK di risposta non arriva, usiamo principalmente questi due algoritmi:
 - **Go-Back-N (GBN)**: *Se si perde un pacchetto, si rimanda tutto da quel punto in poi.*
@@ -558,15 +558,14 @@ La modalità pipeline ci consente di aumentare il throughput di una rete. Invece
 Usando la pipeline si riesce ad aumentare la quantità di dati trasmessi.
 
 
-
-**Rumore**: dobbiamo mettere in considerazione anche il rumore, ovvero il disturbo al nostro segnale durante la sua trasmissione. 
+**Rumore**: dobbiamo mettere in considerazione anche il rumore, ovvero il disturbo al nostro segnale durante la sua trasmissione che può alterare il segnale inviato. 
 
 Meme tra TCP e UDP
 ![[Pasted image 20260319110552.png|407]]
 
 ---
-### TCP
-Nella ricostruzione delle versioni di TCP si dice ci siano 4 versioni, ma non è vero è una sola quella del 1981. Il TCP ha diverse funzionalità (feature):
+#### Analisi del protocollo TCP - Trasmission Control Protocol
+E' il protocollo del layer trasporto più importante ed è basato sul modello teorico di RDT, nella ricostruzione delle versioni di TCP si dice ci siano 4 versioni, ma non è vero è una sola quella, del 1981. Il TCP ha diverse funzionalità (feature) che nel tempo possono essere aggiunte/migliorate:
 
 - Indirizzamento/Multiplexing
 - Creazione, Gestione e Terminazione della Connessione
@@ -577,14 +576,14 @@ Nella ricostruzione delle versioni di TCP si dice ci siano 4 versioni, ma non è
 
 L'ultima è quella sulla quale stanno lavorando i ricercatori, per migliorarla. Ci sono delle cose a cui TCP non provvede: 
 - Non offre sicurezza 
-- Non garantisce una comunicazione 
+- Non garantisce prestazioni temporali 
 - Non mantiene i confini del messaggio (*message boundaries*), queste servono per riuscire ad interpretare e ricostruire messaggi.
 
 Di seguito la struttura del pacchetto TCP:
 ![[Pasted image 20260319115102.png|647]]
 
 Troviamo diverse informazioni:
-- **Destinatione e Source Port**
+- **Destination e Source Port**
   
 - **Sequence Number:** Campo di 32 bit che indica il numero di sequenza del primo byte dei dati contenuti nel segmento TCP.
   _Esempio pratico:_ Supponiamo che tu debba inviare 500 byte di dati. Il pacchetto parte con un Sequence Number impostato a `1000`. Questo significa che il pacchetto contiene i byte che vanno dal numero `1000` al `1499`.
@@ -598,7 +597,7 @@ Troviamo diverse informazioni:
   
 - **Flag** Quella fila di lettere in verticale rappresenta i Flag, ovvero dei piccoli interruttori di 1 bit che indicano lo stato del pacchetto o danno istruzioni speciali.
 
-- **Window size (Dimensione della finestra):** È il cuore del _controllo di flusso_ che avevamo menzionato prima. Indica quanti byte il computer ricevente è in grado di accettare in quel momento. Se il ricevente è sovraccarico, abbasserà questo valore per dire al mittente: "Rallenta, non ho più spazio in memoria!"
+- **Window size (Dimensione della finestra):** È il cuore del _controllo di flusso_. Indica quanti byte il computer ricevente è in grado di accettare in quel momento. Se il ricevente è sovraccarico, abbasserà questo valore per dire al mittente: "Rallenta, non ho più spazio in memoria!"
 
 - **Checksum:** È un valore matematico di controllo per la correzione degli errori
 
@@ -609,14 +608,25 @@ Tutto questo rende TCP affidabile ma non molto veloce, tuttavia anche il througp
 - **MSS(Maximum Segment Size)**: Indica la dimensione massima dei dati che possono essere inviati in un singolo segmento TCP
 - **MTU(Maximum Tramission Unit)**: -> $MSS+$$Header TCP+$$HeaderIP$ 
 
+##### Timer RTT
 Un'altro dato importante è RTT(Round Trip Time), questo tempo viene continuamente stimato in questo modo:
 - Per ogni comunicazione viene misurato il tempo che trascorre tra l'invio del pacchetto e il ritorno di un ipotetico ACK
 - Viene fatta la media di tutti i tempi salvati
-è importante che RTT siano stimato bene perché:
+è importante che RTT sia stimato bene perché:
 - RTT troppo lungo: si ha una reazione troppo lenta alla perdita di pacchetti
 - RTT troppo corto: gli ACK potrebbero non arrivare in tempo
 il calcolo del RTT viene fatto ad ogni invio di pacchetto, in modo che TCP sappia quanto aspettare. Il tipo di media che viene usata si chiama: **Exponential Weighted Moving Average**.  (Moving perché si muove un valore avanti ad ogni pacchetto)
 
+E' importante che il *timer venga stimato nel modo corretto*, perché:
+- Se troppo piccolo: i pacchetti non arrivano in tempo
+- Se troppo lungo: si ha una reazione lenta alla perdita di pacchetti
+
+Come stimiamo RTT?
+- *Sample RTT*: il tempo trascorso tra l'invio del pacchetto e la ricezione dell'ACK, basandoci su questo andiamo a calcolare *Estimated RTT* come di seguito: 
+- *Estimated RTT*: $$\text{Estimated\_RTT}_n = (1-\alpha)*\text{Estimated\_RTT}_{n-1} + \alpha * \text{Sample\_RTT}_n$$
+  il valore tipico di $\alpha$ è $0.125$
+
+Ovvero il tempo RTT stimato dopo l'arrivo del pacchetto numero $n$ viene calcolato usando il tempo stimato precedente e RTT dell'ultimo pacchetto arrivato
 
 **Deviazione standard RTT**
 Abbiamo detto che il tempo RTT viene calcolato attraverso una media dei vari tempi che si sono registrati, ma non sempre i tempi registrati sono tutti simili tra loro (es. 1 ms, 1.12 ms, 1.09 ms) potrebbero infatti esserci oscillazioni molto grandi tra i vari tempi misurati, (es. 1 ms, 0.3 ms, 3 ms) quindi il calcolo della deviazione standard RTT è proprio il calcolo di queste oscillazioni molto grandi:
@@ -630,42 +640,20 @@ Dove:
 
 A differenza dei modelli teorici RDT (che prevedono un timer per ogni singolo pacchetto), TCP riduce la complessità del sistema utilizzando **un solo timer di ritrasmissione globale**.
 
-Funziona in questo modo: quando TCP riceve un ACK che conferma un pacchetto, resetta il timer. Se ci sono altri dati già inviati ma non ancora confermati, il timer viene immediatamente riavviato per monitorare il segmento "più vecchio" ancora in volo (ad esempio, il segmento successivo _n+1_ in attesa di ACK).
-
+Funziona in questo modo: quando TCP riceve un ACK che conferma un pacchetto, resetta il timer. Dopo la ricezione dell'ACK dell'n-esimo pacchetto, il timer per il segmento n + 1 non ancora acknowledged viene avviato. 
+ 
 
 Per adattarsi alle condizioni della rete, TCP calcola dinamicamente il timer di ritrasmissione attraverso questi 4 passaggi:
 1. **SampleRTT (Campione):** Misurazione del tempo effettivo trascorso tra l'invio di un singolo segmento e la ricezione del suo ACK.
 2. **EstimatedRTT (Tempo stimato):** Media mobile ponderata dei campioni precedenti. Serve a "smussare" i picchi e le anomalie temporanee della rete.
 3. **DevRTT (Deviazione):** Calcolo della variabilità del RTT. Funge da margine di sicurezza per evitare timeout prematuri.
-4. **RTO (Retransmission Timeout):** Il timer effettivo da utilizzare, calcolato come la somma del tempo stimato più il margine di sicurezza $$EstimatedRTT + 4 * DevRTT$$
+4. **RTO (Retransmission Timeout):** Il timer effettivo da utilizzare, calcolato come la somma del tempo stimato più il margine di sicurezza $$RTO = EstimatedRTT + 4 * DevRTT$$
 la formula dell'RTO è progettata per essere prudente, il timer finale calcolato risulta spesso **molto lungo**. Se un pacchetto viene perso, aspettare la scadenza di questo timer causa un lungo periodo di inattività e rallenta la trasmissione. Per mettere una pezza a questo problema di latenza, TCP utilizza un meccanismo chiamato **Fast Retransmit** (Ritrasmissione Rapida):
 - Se il ricevitore rileva un "buco" nei pacchetti, continua a mandare ACK con il numero del pacchetto mancante.
 - Se il mittente riceve **3 ACK duplicati** di fila, deduce con certezza che il pacchetto successivo è andato perso.
 - A questo punto il mittente **ritrasmette immediatamente il pacchetto**, senza aspettare che il lungo timer RTO scada.
 
-###### Timer RTT
-è importante che il timer venga stimato nel modo corretto, perché:
-- Se troppo piccolo: i pacchetti non arrivano in tempo
-- Se troppo lungo: si ha una reazione lenta alla perdita di pacchetti
-
-Come stimiamo RTT?
-- *Sample RTT*: il tempo trascorso tra l'invio del pacchetto e la ricezione dell'ACK, basandoci su questo andiamo a calcolare *Estimated RTT* come di seguito: 
-- *Estimated RTT*: $$\text{Estimated\_RTT}_n = (1-\alpha)*\text{Estimated\_RTT}_{n-1} + \alpha * \text{Sample\_RTT}_n$$
-  il valore tipico di $\alpha$ è $0.125$
-
-Ovvero il tempo RTT stimato dopo l'arrivo del pacchetto numero $n$ viene calcolato usando il tempo stimato precedente e RTT dell'ultimo pacchetto arrivato
-
-La natura variabile del RTT ci porta a voler tener conto anche della deviazione standard dei valori (come già visto nella scorsa lezione)
-$$\text{DevRTT} = (1-\beta) \cdot \text{DevRTT} + \beta \cdot |\text{SampleRTT} - \text{EstimatedRTT}|$$
-Usando questo valore andiamo a calcolare il tempo massimo di ritrasmissione **RTO(Retransmission TimeOut)** come di seguito: 
-$$RTO = \text{EstimatedRTT} + 4 * DevRTT$$
-
-Nonostante RDT stabilisca che ad un pacchetto venga associato un timer, TCP riduce la complessità di gestione gestendo esclusivamente un timer alla volta. Dopo la ricezione dell'ACK dell'n-esimo pacchetto, il timer per il segmento n + 1 non ancora acknowledged viene avviato. 
-
-Per ridurre il tempo di attesa nasce la tecnica **Fast Retransmit**: se il reciver manda tre ACK consecutivi per lo stesso pacchetto mancante (ovvero l’ACK dell’ultimo pacchetto consegnato con successo), viene attivata istantaneamente la ritrasmissione del pacchetto corrente.
-
-###### Controllo del flusso
- 
+##### Controllo del flusso
 Cosa succede se il ricevitore non è abbastanza veloce a riceve i pacchetti? 
 Semplicemente viene usato un campo del pacchetto ACK chiamato *receive window* dove viene specificato dal mittente lo spazio massimo disponibile. ![[Pasted image 20260324103826.png|500]]
 Per gestire in modo ottimale questa finestra usiamo un algoritmo detto *Nagle Algorithm* che sarebbe questo:
@@ -688,8 +676,7 @@ Questo algoritmo si comporta in modo diverso in base alla rete in cui si trova:
 - In reti con un alto RTT, i dati vengono bufferizzati e inviati in grandi pacchetti
 Alcune volte per avere una forte reattività il sistema operativo disabilita questo algoritmo
 
-
-###### Apertura della connessione
+##### Apertura della connessione
 La connessione TCP funziona con il 3-way-handshake, ma prima di vederlo capiamo anche perché il 2 non viene utilizzato.
 
 *2-way-handshake*
@@ -710,16 +697,16 @@ Inizialmente si era pensato di stabilire una connessione usando questo metodo ch
 Questo è il metodo scelto da TCP per funzionare correttamente
 ![[Pasted image 20260325104738.png|606]]
 TCP è un protocollo di connessione full-duplex.
-Quindi il client manda una richiesta di connessione (vuole aprire il canale) al server, il server manda un ACK in cui accetta la connessione e contemporaneamente chieda al client di aprire il suo canale verso di lui (full-duplex) e allora il client manda un altro ACK per indicare che l'ACK precedente è stato ricevuto e la connessione funziona.
+Quindi il client manda una richiesta di connessione (vuole aprire il canale) al server, il server manda un ACK in cui accetta la connessione e contemporaneamente chiede al client di aprire il suo canale verso di lui (full-duplex) e allora il client manda un altro ACK per indicare che l'ACK precedente è stato ricevuto e la connessione funziona.
 Eventuali problemi di ACK non ricevuti si risolvono rimandando gli ACK precedenti (in caso non fossero arrivati) per un numero di tentativi limitato, se non si ha successo si interrompe la connessione
 
-###### Chiusura della connessione con 4-way-handshake (2x2 handshake)
+##### Chiusura della connessione con 4-way-handshake (2x2 handshake)
 Per chiudere la connessione TCP usa un doppio 2-way-handshake in questo modo:
 ![[Pasted image 20260325110513.png|621]]
 Il client quindi manda un messaggio con FINbit = 1 questo significa che non ha altri dati da inviare, il server manda un ACK (per dire che ha capito), dopo se il server ha ancora dati da trasmettere li trasmette (perché è il client che non ne deve inviare più), appena finisce il serve manda anche lui un FINbit = 1, il client manda un ACK per dire che ha ricevuto tutto e si chiude la connessione
 
 
-###### Controllo di congestione
+##### Controllo di congestione
 La gestione delle trasmissioni è fondamentale per evitare non solo di sovraccaricare i receiver (eventualità gestita tramite il controllo del flusso), ma anche per evitare il sovraccarico della rete, con conseguente congestione. Il protocollo TCP gode di meccanismi per gestire la congestione, per ridurre la velocità di trasmissione e minimizzare i danni della congestione.
 
 Abbiamo 3 scenari:
@@ -759,10 +746,9 @@ In questo scenario, quattro mittenti inviano pacchetti su percorsi composti da p
 Abbiamo quattro sender che inviano pacchetti in quattro percorsi con più router, e quindi più possibili percorsi. Ogni router trasmette a capacità $R$. A valori di λin piccoli, λin = λ′in, non si hanno overflow dei buffer e nemmeno ritrasmissioni. Al crescere del valore di λin, inizia il rischio di ritrasmissioni, per cui λ′in > λin.
 
 
-
 ##### TCP Fairness
 TCP è un protocollo fair? Cosa intendiamo per fairness?
-Si desidera che il controllo della congestione in TCP sia tale che, date $K$ connessioni attraverso la stessa rete con capacità trasmissiva $R$, la *cwnd* di ogni connessione sia $\frac{R}{K}$ in modo che ogni host abbia la stessa quantità di banda degli altri
+Si desidera che il controllo della congestione in TCP sia tale che, date $K$ connessioni attraverso la stessa rete con capacità trasmissiva $R$, la *cwnd* (finestra di congestione) di ogni connessione sia $\frac{R}{K}$ in modo che ogni host abbia la stessa quantità di banda degli altri
 
 **Dimostrazione**
 Date due connessioni con pari MSS (Maximum Segment Size) e RTT (tempo di propagazione andata e ritorno) (e nessun’altra connessione attraverso il collegamento) che operano in *congestion avoidance*. Con un throughput massimo pari a R, e tenendo a mente che al crescere di uno (connessione 1 ha più spazio), diminuisce l’altro (connessione 2 ha meno spazio), il throughput in una situazione di equilibrio è pari a $\frac{R}{2}$ 
