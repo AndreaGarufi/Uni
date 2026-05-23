@@ -705,6 +705,7 @@ Per chiudere la connessione TCP usa un doppio 2-way-handshake in questo modo:
 ![[Pasted image 20260325110513.png|621]]
 Il client quindi manda un messaggio con FINbit = 1 questo significa che non ha altri dati da inviare, il server manda un ACK (per dire che ha capito), dopo se il server ha ancora dati da trasmettere li trasmette (perché è il client che non ne deve inviare più), appena finisce il serve manda anche lui un FINbit = 1, il client manda un ACK per dire che ha ricevuto tutto e si chiude la connessione
 
+**Definizione** -> **cwnd** -> Congestion Window -> è una variabile e rappresenta la **quantità massima di dati** (espressa in byte o in numero di segmenti) che il mittente può immettere contemporaneamente nella rete **senza aver ancora ricevuto un feedback (ACK) dal destinatario**. *Serve a gestire la congestione della rete, se una rete è congestionata la cwnd sarà piccola al contrario invece potrà aumentare le sue dimensioni*
 
 ##### Controllo di congestione
 La gestione delle trasmissioni è fondamentale per evitare non solo di sovraccaricare i receiver (eventualità gestita tramite il controllo del flusso), ma anche per evitare il sovraccarico della rete, con conseguente congestione. Il protocollo TCP gode di meccanismi per gestire la congestione, per ridurre la velocità di trasmissione e minimizzare i danni della congestione.
@@ -745,6 +746,30 @@ In questo scenario, quattro mittenti inviano pacchetti su percorsi composti da p
 
 Abbiamo quattro sender che inviano pacchetti in quattro percorsi con più router, e quindi più possibili percorsi. Ogni router trasmette a capacità $R$. A valori di λin piccoli, λin = λ′in, non si hanno overflow dei buffer e nemmeno ritrasmissioni. Al crescere del valore di λin, inizia il rischio di ritrasmissioni, per cui λ′in > λin.
 
+##### Meccanismi di controllo di congestione (AIMD)
+La congestione della rete si verifica quando il *traffico raggiunge o supera la capacita della rete R*. Per limitare questo traffico si agisce aumentando e riducendo in maniera opportuna il numero di pacchetti consentiti contemporaneamente sulla rete.
+
+**2 approcci:**
+• *Approccio Network-assisted*. I router forniscono un feedback diretto agli host sender e receiver in merito alla congestione della rete. I router possono fornire il livello di congestione, o esplicitare una frequenza di invio. 
+• *Approccio end-to-end*. La rete non da alcun tipo di feedback: la congestione è dedotta da ritardi dei pacchetti e ritardi.
+
+**AIMD - Additive Increase Multiplicative Decrease**
+*Aumento lineare e decremento moltiplicativo della cwnd.*
+• Il sending rate è incrementato di 1 MSS a ogni RTT, fino a quando non è individuata una perdita di segmenti. 
+• Dimezza il rate d’invio per ogni evento di perdita segmenti.
+![[Pasted image 20260523140518.png|708]]
+Ogni incremento viene fatto operando sulla variabile cwnd, ovvero la finestra di congestione. Il grafico che si ottiene osservando la crescita (e decrescita) del sending rate nel tempo, è detto saw-tooth, dente di sega. Questa tecnica ha tre fasi:
+1) *Slow start* -> la variabile cwnd parte da 1 e cresce venendo moltiplicata per 2 fino ad una soglia stabilita dalla variabile *sstresh*. Superata sstresh si entra in congestion avoidance
+2) *Congestion avoidance* -> la crescita diventa lineare, la congestion avoidance procedere linearmente fino ad un time-out o 3 ACK duplicati (vuol dire che qualche pacchetto si è perso)
+3) *Fast recovery* -> 1) se si verifica un time-out la cwnd è settato a 1, 2) se si verifica un triplo ACK cwnd è dimezzato
+
+**Fast recovery**
+• **TCP-Tahoe**. *Se si perde un pacchetto (individuata da timeout o 3 ACK duplicati), la sstresh viene dimezzata, e il cwnd viene azzerato, ripartendo da 1 MSS a priori. Si rientra quindi sempre in slow start dopo qualsiasi evento di perdita.* 
+
+• **TCP-Reno**. *Se si perde un pacchetto (solo se individuata 3 ACK duplicati), fast recovery! sstresh viene dimezzata, e il cwnd riparte da un valore ≈ sstresh. Se si rileva la perdita di pacchetti tramite un time-out, si rientra in Slow Start.*
+
+**Quale uso dei 2?**
+*TCP Reno* è preferibile quando la rete è abbastanza stabile e le perdite di pacchetti sono occasionali: in questo caso, il suo meccanismo di Fast Recovery permette di mantenere buone prestazioni evitando di ritornare sempre allo slow start. *TCP Tahoe* è invece più adatto in canali altamente congestionati, perché reagisce in modo più drastico alle perdite (tornando sempre a slow start), offrendo un comportamento più prudente e sicuro a scapito dell’efficienza
 
 ##### TCP Fairness
 TCP è un protocollo fair? Cosa intendiamo per fairness?
@@ -755,12 +780,12 @@ Date due connessioni con pari MSS (Maximum Segment Size) e RTT (tempo di propaga
 ![[Pasted image 20260325114310.png|447]]
 Nel punto in cui si incontrano le rette perpendicolari si ha una perfetta divisione di banda tra le 2 connessioni.
 
-A parità di RTT e MSS, gli host in congestion avoidance crescono in maniera lineare: 1 MSS ad ogni RTT . Detto ciò, quando la somma del throughput di entrambi gli host supera R, questi si dimezzano. Con $x = throughput$ del primo host e $y = throughput$ del secondo host, e il comporta- mento di incremento lineare e divisione della finestra di congestione, il throughput delle connessioni convergerà sempre alla bisettrice x = y. In circostanze più vicine a quelle reali, le connessioni con RTT più basso ottengono un throughput maggiore a causa della velocità con cui possono ottenere la connessione. Ricordiamo che l’incremento, nella fase di congestion avoidance, avviene una volta per RTT.
+A parità di RTT e MSS, gli host in congestion avoidance crescono in maniera lineare: 1 MSS ad ogni RTT . Detto ciò, quando la somma del throughput di entrambi gli host supera R, questi si dimezzano. Con $x = throughput$ del primo host e $y = throughput$ del secondo host, e il comportamento di incremento lineare e divisione della finestra di congestione, il throughput delle connessioni convergerà sempre alla bisettrice x = y. In circostanze più vicine a quelle reali, le connessioni con RTT più basso ottengono un throughput maggiore a causa della velocità con cui possono ottenere la connessione. Ricordiamo che l’incremento, nella fase di congestion avoidance, avviene una volta per RTT.
 
-
-
+---
 
 # **NETWORK LAYER**
+*Il compito principale del Network Layer è instradare i pacchetti del livello transport, gestendo il trasferimento e la comunicazione host-to-host.*
 
 Possiamo immaginare la rete di connessioni tra dispositivi e tra router come un grafo in cui ogni nodo consiste in un router
 
