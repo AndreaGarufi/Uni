@@ -226,7 +226,7 @@ Esempi di Porte Standardizzate:
 
 ---
 
-#### Analisi del Protocollo Telnet
+#### Analisi del Protocollo Telnet (deprecato)
 Telnet è un protocollo del livello applicativo che permette di controllare il terminale di un altro host da remoto e che opera in chiaro, rendendolo pericoloso per la trasmissione di password, infatti è ormai deprecato (usava TCP e la porta 23), è stato sostituito da SSH.
 
 **Diagramma della sessione (Scenario Host A e Host B):**
@@ -864,6 +864,7 @@ Esistono degli indirizzi IP speciali:
 - *255.255.255.255*: indirizzo di broadcast
 - *127.0.0.0 - 127.255.255.255*: indirizzi di loopback (vengono utilizzati per quando la macchina parla con se stessa)
 - *10.0.0.0 - 10.255.255.255*: sono indirizzi IP privati, vengono usati all'interno delle reti locali. (questi sono quelli privati della classe B, esistono per ogni classe)
+Gli indirizzi IP hanno una lunghezza di 32 bit, avremo quindi in totale $2^{32}$ indirizzi diversi
 
 **Struttura del pacchetto IPv4**
 ![[Pasted image 20260523173445.png|484]]
@@ -887,28 +888,33 @@ Se un router non ha un MTU (Max Trasfer Size) tale da consentire il trasferiment
 Una corruzione dei dati di frammentazione solitamente porta a errori di ricostruzione del pachhetto originale
 
 **Indirizzamento IPv4**
+Ogni indirizzo IP identifica in maniera univoca un' interfaccia di rete ciò significa che se un host ha più interfacce di rete avrà più indirizzi IP, è il caso dei router. I router hanno $n$ interfacce di rete e quindi $n$ indirizzi IP. Ogni interfaccia sui router e sugli host su internet dovrebbero avere quindi un indirizzo IP univoco che le identifica, ma come immaginabile $2^{32}$ indirizzi non sarebbero abbastanza (circa 4 miliardi di indirizzi diversi) dato che al mondo sicuramente ci sono più di 4 miliardi di interfacce di rete attive ogni momento, per ovviare a questo problema ci sono delle soluzioni hardware e software come ad esempio il NAT oppure un nuovo protocollo IPv6, di questo ne parleremo in seguito. 
 
-
-
-
-
-Con il passare del tempo si pensa alla spaziatura variabile, ovvero non usare la divisione (indirizzi per la rete - indirizzi per l'indirizzamento) delle classi predefinite, con la spaziatura variabile è il tecnico a decidere quanti bit usare per indirizzi e quanti per la rete, da qui nasce la *subnet-mask*
+Ogni indirizzo IPv4 è idealmente diviso in 2 parti logiche:
+1) Network ID che identifica la rete/sottorete
+2) Host ID che identifica il singolo host nella rete
+Quindi una parte dell'indirizzo è legata alla sottorete a cui è collegato
+Prendiamo questa rete come esempio:
+![[Pasted image 20260523193438.png|469]]
+Questo è un router con 3 interfacce dei rete a cui sono collegati vari host. Prendiamo in esame i 3 host a sinistra, insieme all'interfaccia del router cui sono collegati formano una sottorete, a questi host è stato assegnato un indirizzo del tipo 223.1.1.XXX/24, dove lo /24 indica la **maschera di sottorete** (subnet mask)
 
 #### Subnet mask
-La maschera di rete con la notazione /X ci indica il primi X bit dedicati alla rete (32-X saranno quelli riservati agli indirizzi)
+Si utilizza quindi la notazione CIDR - Classless InterDomain Routing, che generalizza l'indirizzamento di sotto rete nel seguente modo:
+*La maschera di rete con la notazione /X ci indica il primi X bit dedicati alla rete, (32-X saranno quelli riservati agli indirizzi)*
 ![[Pasted image 20260407111150.png|500]]
 **Utilizzo della subnet mask**
-La maschera di rete viene usata per capire se un host alla quale inviare il pacchetto si trova in questa sotto-rete e agire di conseguenza. Oltre all'indirizzo IP/maschera ogni dispositivo nella rete ha anche un indirizzo fisico chiamato MAC, questo è univoco per ogni scheda di rete. Per indirizzare a livello fisico è importante avere un modo per riuscire ad ottenere l'indirizzo MAC partendo da IP, questo viene fatto usando il protocollo ARP
+La maschera di rete viene usata per capire se un host alla quale inviare il pacchetto si trova in questa sotto-rete e agire di conseguenza. *Oltre all'indirizzo IP/maschera ogni dispositivo nella rete ha anche un indirizzo fisico chiamato MAC, questo è univoco per ogni scheda di rete. Per indirizzare a livello fisico è importante avere un modo per riuscire ad ottenere l'indirizzo MAC partendo da IP, questo viene fatto usando il protocollo ARP*
 
-### Protocollo ARP (Address Resolution Protocol)
-Traduci gli indirizzi IP in MAC address
+#### Analisi del protocollo ARP - Address Resolution Protocol (deprecato in IPv6 ma in uso in IPv4)
+Traduce gli indirizzi IP in MAC address
 
-Ogni nodo della rete contiene una tabella ARP  i cui record contengono tre valori: Indirizzo IP - Indirizzo MAC - Time To Live. Il time-to-live specifica tra quanto tempo quel determinato record dovrà essere eliminato dalla tabella (20 minuti ad esempio). Distinguiamo i seguenti casi:
+**Come funziona?**
+Ogni nodo della rete contiene una tabella ARP i cui record contengono tre valori: Indirizzo IP - Indirizzo MAC - Time To Live. Il time-to-live specifica tra quanto tempo quel determinato record dovrà essere eliminato dalla tabella (20 minuti ad esempio). Distinguiamo i seguenti casi:
 
 - *ARP sulla stessa rete*
 1. Se un datagramma deve essere mandato da un host A a un host B nella stessa sottorete, A dovrà conoscere l’indirizzo MAC di quel dispositivo. 
 2. Se l’indirizzo MAC è già presente nella ARP del nodo, questo manderà il datagramma senza ulteriori passaggi. 
-3. Altrimenti, manderà una cosiddetta ”richiesta ARP” contenuta in un pacchetto ARP mandato all’indirizzo broadcast della rete FF-FF-FF-FF-FF-FF. 
+3. Altrimenti, manderà una cosiddetta ”richiesta ARP” contenuta in un pacchetto ARP mandato all’indirizzo MAC broadcast della rete: FF-FF-FF-FF-FF-FF. 
 4. Il pacchetto conterrà sia l’indirizzo IP e MAC del mittente, che l’indirizzo IP del destinatario. 
 5. La richiesta broadcast verrà mandata a tutte le schede di rete della sottorete. La risposta ARP verrà mandata in modalità non-broadcast dal dispositivo con indirizzo IP uguale a quello della richiesta, verso il richiedente. La risposta ARP conterrà al suo interno l’indirizzo MAC del ricevente della richiesta, e la tabella ARP verrà aggiornata.
 
@@ -939,13 +945,12 @@ Infatti quando viene mandata una richiesta ARP viene scelta la prima risposta an
 3) Session Hijacking
 
 
-### RARP (protocollo obsoleto per ottenere un indirizzo IP)
-la macchina conosce il suo indirizzo mac e invia una richiesta broadcast per avere un indirizzo IP 
-![[Pasted image 20260409104223.png|500]]
+#### Analisi del protocollo RARP - Reverse ARP (deprecato)
+La macchina conosce il suo indirizzo mac e invia una richiesta broadcast per avere un indirizzo IP.
+![[Pasted image 20260409104223.png|399]]
 
-### Comunicazione in LAN usando ARP
+#### Comunicazione in LAN usando ARP
 ![[Pasted image 20260409105101.png|500]]
-
 L'obiettivo di questa procedura è permettere a un host mittente di capire se il destinatario si trova nella sua stessa rete locale o in una rete esterna, in modo da sapere a chi consegnare fisicamente il pacchetto dati, e si fa un AND per capirlo
 
 - **Fase 1**:  prima di inviare qualsiasi richiesta ARP, il mittente deve fare un calcolo matematico usando la sua Subnet Mask:

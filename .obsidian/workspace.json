@@ -221,11 +221,11 @@
           }
         ],
         "direction": "vertical",
-        "x": 1,
-        "y": 1,
-        "width": 1535,
-        "height": 863,
-        "maximize": true,
+        "x": 3,
+        "y": 3,
+        "width": 1527,
+        "height": 858,
+        "maximize": false,
         "zoom": 0
       }
     ]
@@ -234,6 +234,7 @@
   "lastOpenFiles": [
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260523193438.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260523173445.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/3_Transport_N.pdf",
@@ -274,7 +275,6 @@
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/2_10_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/1_5_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520193409.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520185959.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
