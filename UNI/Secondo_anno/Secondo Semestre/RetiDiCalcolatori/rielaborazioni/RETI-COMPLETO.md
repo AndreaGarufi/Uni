@@ -852,11 +852,12 @@ I router sono sicuramente i dispositivi più responsabili dell'instradamento e d
 • *Porte di uscita*. Memorizzano i pacchetti che provengono dalla struttura di commutazione e li trasmettono sul collegamento d’uscita. Nei collegamenti bidirezionali, la porta d’uscita è accoppiata alla porta d’ingresso sulla stessa scheda di collegamento. 
 • *Processore d’instradamento*. Esegue le funzioni del control plane.
 
+**CONTINUA**
 
-### IPv4
-Un indirizzo IP ha un valore gerarchico, ci aiuta già a sapere come arrivare a destinazione, un indirizzo IP quindi è un codice associato ad un dispositivo. Esistono diverse classi di indirizzi
-![[Pasted image 20260407103211.png|590]]
-Gli indirizzi IP a livello rete hanno una struttura gerarchica (il mac address (indirizzo macchina) non cambia mai, l'ip si - continuamente). 
+#### Analisi del protocollo IPv4 - Internet Protocol v4
+Un indirizzo IP ha un valore gerarchico, ci aiuta già a sapere come arrivare a destinazione, un indirizzo IP quindi è un codice associato ad un dispositivo. Esistono diverse classi di indirizzi.
+![[Pasted image 20260407103211.png|654]]
+Gli indirizzi IP a livello rete hanno una struttura gerarchica (il mac address (indirizzo macchina) non cambia mai, l'IP si - continuamente). 
 
 Esistono degli indirizzi IP speciali:
 - *0.0.0.0*: this host, è l'indirizzo della macchina quando non gli ancora stato assegnato un IP (vale solo per IPv4)
@@ -864,9 +865,36 @@ Esistono degli indirizzi IP speciali:
 - *127.0.0.0 - 127.255.255.255*: indirizzi di loopback (vengono utilizzati per quando la macchina parla con se stessa)
 - *10.0.0.0 - 10.255.255.255*: sono indirizzi IP privati, vengono usati all'interno delle reti locali. (questi sono quelli privati della classe B, esistono per ogni classe)
 
+**Struttura del pacchetto IPv4**
+![[Pasted image 20260523173445.png|484]]
+Abbiamo i campi:
+- *Version* -> indica la versione del pacchetto IP
+- *Header Lenght* -> indica la lunghezza dell'header che è variabile a causa del campo options che è opzionale (l'header varia da 20 a 60 byte)
+- *Type of Service* -> da informazioni relative al servizio fornito, stabilendone le priorità
+- *Datagram lenght* -> indica la dimensione in byte dell'intero pacchetto (header+dati)
+- *ID, Flags e Fragmentation Offset* -> ne parleremo dopo
+- *TTL - Time To Live* -> indica il tempo di vita del pacchetto, ad ogni salto (hop) viene decrementato di 1, questo serve ad evitare che il pacchetto resti in un loop infinito senza mai essere consegnato e resta ad intasare il canale
+- *Protocol* -> specifica il protocollo del trasport layer (UDP o TCP)
+- *Header checksum* -> è un controllo matematico per la rilevazione degli errori, un pacchetto il cui header risulta corrotto viene scartato, il controllo viene fatto ad ogni hop (quindi ad ogni router)
+- *Options* -> opzioni aggiuntive se servono
+- *Source IP e Destination IP* -> 32 bit ciascuno, 64 in totale. Sono due campi separati.
+
+**PROBLEMA -> La frammentazione**
+Se un router non ha un MTU (Max Trasfer Size) tale da consentire il trasferimento dell'intero pacchetto si ricorre alla frammentazione, qui entrano in gioco i 3 campi di prima:
+- *ID* -> identificano un insieme di pacchetti che andranno a ricostruire quello originale intero
+- *Flags* -> i flag sono: DF (don't fragment) -> Non frammentare mai. Al massimo, scarta e MF (more fragment) -> Questo non è l'ultimo frammento.
+- *Fragmentation Offset* -> permette di ricostruire i pacchetti frammentati
+Una corruzione dei dati di frammentazione solitamente porta a errori di ricostruzione del pachhetto originale
+
+**Indirizzamento IPv4**
+
+
+
+
+
 Con il passare del tempo si pensa alla spaziatura variabile, ovvero non usare la divisione (indirizzi per la rete - indirizzi per l'indirizzamento) delle classi predefinite, con la spaziatura variabile è il tecnico a decidere quanti bit usare per indirizzi e quanti per la rete, da qui nasce la *subnet-mask*
 
-### Subnet mask
+#### Subnet mask
 La maschera di rete con la notazione /X ci indica il primi X bit dedicati alla rete (32-X saranno quelli riservati agli indirizzi)
 ![[Pasted image 20260407111150.png|500]]
 **Utilizzo della subnet mask**
