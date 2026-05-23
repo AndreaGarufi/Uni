@@ -27,10 +27,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "1_Summary_N"
+              "title": "4_Network_N"
             }
           },
           {
@@ -221,11 +221,11 @@
           }
         ],
         "direction": "vertical",
-        "x": 3,
-        "y": 3,
-        "width": 1530,
-        "height": 858,
-        "maximize": false,
+        "x": 2,
+        "y": 2,
+        "width": 1533,
+        "height": 861,
+        "maximize": true,
         "zoom": 0
       }
     ]
@@ -233,7 +233,9 @@
   "active": "87563f8d22198e3a",
   "lastOpenFiles": [
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/3_Transport_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande esame.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Capitolo 3.md",
@@ -257,7 +259,6 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260521113716.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/2_10_marzo.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/13_12_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/12_5_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/11_30_aprile.md",
@@ -273,7 +274,6 @@
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/1_5_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520193409.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520185959.png",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/1_5_marzo.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260520184849.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
