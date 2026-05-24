@@ -1308,16 +1308,16 @@ In ogni singolo host (device e router) di una rete, è implementato il Data Link
 - *Data framing*
   Dal fisico verso il logico -> raggruppa i bit del layer fisico in frame
   Dal logico verso il fisico -> incapsula i datagrammi del livello di rete in frame
-  ![[Pasted image 20260524183029.png|366]]
+  ![[Pasted image 20260524183029.png|306]]
 - *Gestione dell'accesso al mezzo fisico* 
   Si evitano le collisioni
 - *Gestione degli errori*
   Rilevandoli e se possibile correggendoli, gli errori possono essere causati da attenuazioni del segnale rumore e interferenze. Gli errori sono gestiti tramite diverse tecniche: checksum, CRC, controllo di parità, codici di Hamming ecc...
 - *Regolazione del flusso dati*
 
+---
 
-
-**Comunicazione tra 2 Network Interface Controller**
+#### Comunicazione tra 2 Network Interface Controller
 Lato mittente: 
 1. Il datagramma da trasmettere viene incapsulato in un frame del DLL. 
 2. I campi d’intestazione del DLL vengono riempiti. 
@@ -1330,7 +1330,7 @@ Dal lato del ricevente:
 3. Estrae il datagramma. 
 4. Manda il datagramma al livello superiore.
 
-##### **Data Framing**
+#### Data Framing
 Si potrebbe pensare che usare 2 segnali per la comunicazione possa essere sufficiente, ma non è così, infatti in questo caso non è possibile stabilire se una sequenza di 0 sia una parte della comunicazione o se ci sia assenza di comunicazione, per questo motivo si utilizzano codifiche a più livelli:
 
 **Tree level encoding**
