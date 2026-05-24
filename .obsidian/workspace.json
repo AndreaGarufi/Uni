@@ -47,7 +47,8 @@
               "title": "Possibili domande esame"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -230,10 +231,10 @@
       }
     ]
   },
-  "active": "87563f8d22198e3a",
+  "active": "5766de7936ec93cb",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260524183029.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande esame.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
