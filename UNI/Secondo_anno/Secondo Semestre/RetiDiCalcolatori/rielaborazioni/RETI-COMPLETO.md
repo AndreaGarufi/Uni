@@ -805,6 +805,9 @@ Un router ci instrada al router successivo, ad ogni nodo del grafo il router ci 
 
 In pratica quindi il data plane spedisce i pacchetti mentre il control plane li "guida" cercando il percorso migliore
 
+##### Da qui iniziamo a parlare di DATA PLANE
+Ovvero tutto quello che riguarda l'instradare i pacchetti sulla rete
+
 #### Routing
 **Esistono diversi modi per fare routing, ne vedremo 4:**
 - **Traditional Routing Algorithms (1)**: Effettuato dai singoli router senza una visibilità globale
@@ -852,7 +855,69 @@ I router sono sicuramente i dispositivi più responsabili dell'instradamento e d
 • *Porte di uscita*. Memorizzano i pacchetti che provengono dalla struttura di commutazione e li trasmettono sul collegamento d’uscita. Nei collegamenti bidirezionali, la porta d’uscita è accoppiata alla porta d’ingresso sulla stessa scheda di collegamento. 
 • *Processore d’instradamento*. Esegue le funzioni del control plane.
 
-**CONTINUA**
+**Definizione: Routing table**
+La **tabella di instradamento** (o _routing table_) è una struttura dati logica, che contiene la mappa delle reti conosciute e le regole necessarie per determinare il percorso ottimale che un pacchetto IP deve seguire per raggiungere una determinata destinazione.
+
+**Porte del router:**
+Le porte di input svolgono sia una funzione di terminazione elettrica (physical layer) sia di elaborazione per il DLL. Usando la routing table viene determinata la porta di uscita dei pacchetti. Una copia della routing table è solitamente memorizzata su ogni porta (le porte sono dotate di piccole CPU specializzate) così la decisione di inoltro può essere presa dalle porte stesse e non dal processore d'instradamento
+
+Questo è un esempio di *routing table*
+![[Pasted image 20260524114958.png|575]]
+Questa è la tabella "nuda e cruda" che legge il router, quei codici binari sono indirizzi IPv4.
+
+|     | Intervallo degli indirizzi di destinazione | Interfaccia |
+| --- | ------------------------------------------ | ----------- |
+| da  | 200.23.16.0                                | 0           |
+| a   | 200.23.23.255                              |             |
+| da  | 200.23.24.0                                | 1           |
+| a   | 200.23.24.255                              |             |
+| da  | 200.23.25.0                                | 2           |
+| a   | 200.23.31.255                              |             |
+|     | altrimenti                                 | 3           |
+Questa è quella tradotta
+
+**Instradamento - Longhest-Prefix-Matching**
+Con questa struttura il router *confronta il prefisso dell'indirizzo di destinazione con quelli nella tabella*, se c'è corrispondenza instraderà il pacchetto ad una di quelle porte, altrimenti alla porta 3. Quindi ragiona tramite un processo di *longhest-prefix-matching*. Ad esempio consideriamo il prefisso: 11001000 00010111 00010000 0000100 (200.23.16.4) c'è un match con la prima riga della tabella quindi il pacchetto verrà instradato nella porta 0
+
+**Problema della complessità**
+A parole può sembrare semplice trovare il prefisso più lungo ma a livello computazionale non è semplice, quindi sono state create delle componenti hardware specializzate nel fare queste operazioni ad altissima velocità, in particolare si usa un tipo di memoria chiamato *TCAM* per ottimizzare queste operazioni.
+
+**Struttura di commutazione**
+La struttura di commutazione è il cuore del router attraverso il quale i pacchetti vengono commutati (inoltrati) dalla porta d'ingresso a quella d'uscita, la commutazione può essere ottenuta in vari modi.
+
+- **Commutazione in memoria**
+  Avviene sotto il controllo della CPU (processore d'instradamento), con le porte di ingreso e uscita trattate come dispositivi di I/O. I primi router usavano questa struttura. Notiamo che se il router è in grado di leggere e scrivere $B$ pacchetti per unità di tempo, il troughput complessivo sarà di $\frac{B}{2}$ e le operazioni di inoltro su 2 porte differenti contemporaneamente non possono avvenire perché il processore non può fare 2 operazioni di lettura/scrittura in contemporanea.
+- **Commutazione tramite bus**
+  In questo approccio le porte di ingresso trasferiscono un pacchetto direttamente alle porte di uscita tramite un bus condiviso e senza intervento dal processore di instradamento. Si ottiene aggiungendo al pacchetto un’etichetta di commutazione: questa indicherà la porta locale di output da cui dovrà uscire. Il pacchetto verrà ricevuto da tutte le porte d’output, ma solo la porta corrispondente lo raccoglierà. Un difetto di questo sistema? Solo un pacchetto alla volta può occupare il bus: la larghezza di banda della commutazione sarà limitata da quella del bus. Più pacchetti da commutare saranno messi in coda. E' comunque un valido sistema per router in reti di accesso e aziendali.
+- **Commutazione attraverso rete di interconnessione**
+  Usa una rete di interconnessione più sofisticata, con una matrice di commutazione (crossbar switch): consiste in $2n$ bus che collegano n porte di ingresso a n porte d’uscita. Ogni bus verticale interseca tutti i bus orizzontali a un punto d’incrocio che può essere aperto o chiuso dal controller della struttura di commutazione in qualsiasi momento. Architetture più sofisticate utilizzano strutture per la commutazione a più stadi, che permette di spostare in contemporanea pacchetti da più porte verso una sola porta.
+  ![[Pasted image 20260524124628.png|693]]
+
+**Accodamento**
+L'accodamento è un fenomeno che se mal gestito porta alla saturazione totale della memoria e alla perdita di pacchetti (che vengono scartati dal router per fare spazio). Le code possono verificarsi sia sulle porte in ingresso che su quelle in uscita
+
+**Accodamento alle porte d'ingresso**
+Quando la struttura di commutazione non è sufficientemente rapida rispetto alle linee di ingresso, è proprio nelle porte d’input che si ha accodamento. I pacchetti sono serviti con un meccanismo FCFS (First-Come-First-Served).
+
+**Accodamento alle porte d'uscita**
+Supponiamo di avere $N$ pacchetti in arrivo da $N$ porte in ingresso e che tutti debbano essere instradati dalla stessa porta in uscita: per la porta in uscita avremo che per ogni pacchetto instradato ne arriveranno altri $N$, creando così una coda.
+
+**Packet Discarding Policy**
+*Tail drop*
+Quando la coda è piena i pacchetti vengono scartati a priori
+*Code con priorità*
+L'amministratore di rete può stabilire delle priorità per dei tipi particolari di pacchetti come ad esempio preferire i pacchetti di gestione della rete oppure quelli di voice-over-IP rispetto a quelli SMTP o POP/IMAP che possono aspettare
+
+**Scheduling in uscita dei pacchetti**
+Come determiniamo l'ordine di uscita dei pacchetti?
+*Meccanismo FIFO*: si implementa un meccanismo di tipo First-In-First-out
+*Priority Scheduling*: si estende la tecnica FIFO implementando una priorità tra i pacchetti: i pacchetti con maggiore priorità passeranno prima
+*Round Robin*: I pacchetti vengono suddivisi per classi e a turno viene trasmesso un pacchetto di ogni classe
+*WFQ - Weighted Fair Queuing*: accodamento equo ponderato. E' un round robin generalizzato in cui ogni classe può ricevere un servizio differenziato
+
+*I principali protocolli del livello di rete sono: IP protocol, Path-selection algorithm, protocollo ICMP*
+
+---
 
 #### Analisi del protocollo IPv4 - Internet Protocol v4
 Un indirizzo IP ha un valore gerarchico, ci aiuta già a sapere come arrivare a destinazione, un indirizzo IP quindi è un codice associato ad un dispositivo. Esistono diverse classi di indirizzi.
@@ -874,7 +939,7 @@ Abbiamo i campi:
 - *Type of Service* -> da informazioni relative al servizio fornito, stabilendone le priorità
 - *Datagram lenght* -> indica la dimensione in byte dell'intero pacchetto (header+dati)
 - *ID, Flags e Fragmentation Offset* -> ne parleremo dopo
-- *TTL - Time To Live* -> indica il tempo di vita del pacchetto, ad ogni salto (hop) viene decrementato di 1, questo serve ad evitare che il pacchetto resti in un loop infinito senza mai essere consegnato e resta ad intasare il canale
+- *TTL - Time To Live* -> indica il tempo di vita del pacchetto, questo serve ad evitare che il pacchetto resti in un loop infinito senza mai essere consegnato e resta ad intasare il canale
 - *Protocol* -> specifica il protocollo del trasport layer (UDP o TCP)
 - *Header checksum* -> è un controllo matematico per la rilevazione degli errori, un pacchetto il cui header risulta corrotto viene scartato, il controllo viene fatto ad ogni hop (quindi ad ogni router)
 - *Options* -> opzioni aggiuntive se servono
@@ -904,6 +969,8 @@ Si utilizza quindi la notazione CIDR - Classless InterDomain Routing, che genera
 ![[Pasted image 20260407111150.png|500]]
 **Utilizzo della subnet mask**
 La maschera di rete viene usata per capire se un host alla quale inviare il pacchetto si trova in questa sotto-rete e agire di conseguenza. *Oltre all'indirizzo IP/maschera ogni dispositivo nella rete ha anche un indirizzo fisico chiamato MAC, questo è univoco per ogni scheda di rete. Per indirizzare a livello fisico è importante avere un modo per riuscire ad ottenere l'indirizzo MAC partendo da IP, questo viene fatto usando il protocollo ARP*
+
+---
 
 #### Analisi del protocollo ARP - Address Resolution Protocol (deprecato in IPv6 ma in uso in IPv4)
 Traduce gli indirizzi IP in MAC address
@@ -944,10 +1011,13 @@ Infatti quando viene mandata una richiesta ARP viene scelta la prima risposta an
 2) Denial of Service (DoS)
 3) Session Hijacking
 
+---
 
 #### Analisi del protocollo RARP - Reverse ARP (deprecato)
 La macchina conosce il suo indirizzo mac e invia una richiesta broadcast per avere un indirizzo IP.
 ![[Pasted image 20260409104223.png|399]]
+
+---
 
 #### Comunicazione in LAN usando ARP
 ![[Pasted image 20260409105101.png|500]]
@@ -967,20 +1037,28 @@ L'obiettivo di questa procedura è permettere a un host mittente di capire se il
 	    - Il mittente invia una richiesta **ARP in broadcast**, ma questa volta chiede: _"Qual è l'indirizzo MAC del mio Default Gateway?"_ (Attenzione: non cerca il MAC del destinatario finale).
 	    - Il router risponde con il proprio MAC address. Il mittente invia il frame al router, che si occuperà di instradarlo verso la destinazione finale.
 
+---
 
-### DHCP - Dynamic Host Configuration Protocol (attuale)
-Questo protocollo serve per assegnare in modo dinamico un indirizzo IP ad ogni dispositivo nella rete. In una qualsiasi rete abbiamo un DHCP server che assegna indirizzi in tutta la rete. Nello specifico viene fatta in questo modo:
+#### Analisi del protocollo DHCP - Dynamic Host Configuration Protocol
+*Questo protocollo serve per assegnare in modo dinamico un indirizzo IP ad ogni dispositivo nella rete*. In una qualsiasi rete abbiamo un DHCP server che assegna indirizzi in tutta la rete. Nello specifico viene fatta in questo modo:
 ![[Pasted image 20260409105901.png|500]]
 Il client manda una DHCP discover in broadcast presentandosi con l'indirizzo IP di base che è 0.0.0.0, il server DHCP riceve questo messaggio e manda una DHCP offer al client, in cui comunica quale sarà l'indirizzo e per quanto tempo quell'indirizzo può essere usato, se il client accetta manda una DHCP request e il server risponde con una DHCP ACK da questo momento fino allo scadere del timer il client può usare quell'indirizzo IP
 (Nelle reti domestiche solitamente è il router di casa a fare anche da DHCP)
 
-### NAT - Network address translation
-Tutti i dispositivi in una rete locale condividono un singolo indirizzo IP su internet, questo lo fanno grazie al NAT, un servizio offerto dal router che ci permette di tradurre degli indirizzi privati (dei dispositivi interni della rete) in indirizzi pubblici (usati in internet)
+---
+
+#### Analisi del protocollo NAT - Network address translation
+Tutti i dispositivi in una rete locale condividono un singolo indirizzo IP su internet, questo lo fanno grazie al NAT, un servizio offerto dal router che ci permette di tradurre degli indirizzi privati (dei dispositivi interni della rete) in indirizzi pubblici (usati in internet), questo perché gli indirizzi IPv4 disponibili sono poco più di 4 miliardi e dato che non basterebbero per tutti gli host di tutte le reti del mondo connesse a internet si usa il NAT che ne riduce (virtualmente) la quantità utilizzata.
+
+Quindi se in una rete imposto il servizio di NAT nel router la rete intera verrà vista come un unico indirizzo IP. Questi indirizzi non saranno visibili all’esterno, e quindi potranno essere riutilizzati in tutte le possibili reti private separate da router abilitati al NAT.
 ![[Pasted image 20260409115653.png|500]]
 Quindi i messaggi al router arrivano tutti allo stesso IP sarà poi il router a mandarli agli host giusti
 
 ![[Pasted image 20260409121123.png|500]]
 
+Il NAT traduce gli indirizzi IP della sua sottorete sfruttando una *NAT table*
+
+**Funzionamento**
 1. **Invio del datagramma (Host interno):** L'host locale con indirizzo IP 10.0.0.1 invia un datagramma verso un server esterno (IP 128.119.40.186) sulla porta 80. Il pacchetto sorgente ha come coordinate `10.0.0.1, 3345`.
 2. **Traduzione e aggiornamento tabella (Router NAT):** Il router NAT riceve il pacchetto e sostituisce l'indirizzo IP e la porta sorgente privati con il proprio indirizzo IP pubblico e una porta univoca: cambia quindi da `10.0.0.1, 3345` a **`138.76.29.7, 5001`**. Contemporaneamente, memorizza questa associazione nella sua *tabella di traduzione NAT*.
 3. **Arrivo della risposta (Rete esterna):** Il server remoto risponde inviando un pacchetto che ha come destinazione l'indirizzo pubblico del router: **`138.76.29.7, 5001`**.
@@ -990,8 +1068,11 @@ Quindi i messaggi al router arrivano tutti allo stesso IP sarà poi il router a 
 *Ma perché serve usare il NAT?*
 Semplicemente prima o poi gli indirizzi IPv4 finiranno perché con il passare del tempo aumentano sempre di più i dispositivi che hanno bisogno di un indirizzo IP, quindi intanto si può tamponare con il NAT che fa usare molti meno indirizzi IPv4, per questo motivo è stato creato il protocollo IPv6
 
-### IPv6
-IPv6 implementa:
+---
+
+#### Analisi protocollo IPv6
+*Il protocollo IPv6 nasce dall'esigenza di avere uno spazio di indirizzamento più ampio rispetto a IPv4:*
+**IPv6 implementa:**
 • Header più semplici. 
 • Sicurezza, tramite un supporto nativo (IPsec). 
 • Quality of Service migliorata. 
@@ -1007,35 +1088,42 @@ Campi e funzionalità rimosse
 Struttura del datagramma IPv6
 ![[Pasted image 20260413115426.png|655]]
 
-• Version - Versione. Indica la versione di IP usata dal datagramma. 4 bit. 
+• *Version* -> Versione. Indica la versione di IP usata dal datagramma. 4 bit. 
 
-• Traffic Class - Classe di traffico. Somiglia al Type of Service di IPv4. Specifica la priorità di un determinato datagramma all’interno di un flusso. VoIP manderà datagrammi di priorità più alta rispetto a SMTP. 8 bit. 
+• *Traffic Class* -> Classe di traffico. Somiglia al Type of Service di IPv4. Specifica la priorità di un determinato datagramma all’interno di un flusso. VoIP manderà datagrammi di priorità più alta rispetto a SMTP. 8 bit. 
 
-• Flow label - Etichetta di flusso. Identifica un flusso di datagrammi. 20 bit. 
+• *Flow label* -> Etichetta di flusso. Identifica un flusso di datagrammi. 20 bit. 
 
-• Payload length - Lunghezza del Payload. Interpretato come un unsigned int, indica il numero di byte del datagramma IPv6 a seguire dell’header di dimensione fissa. Il massimo di dati che è possibile trasportare sul payload, è di 216 − 1 = 65, 535. 16 bit. 
+• *Payload length* -> Lunghezza del Payload. Interpretato come un unsigned int, indica il numero di byte del datagramma IPv6 a seguire dell’header di dimensione fissa. Il massimo di dati che è possibile trasportare sul payload, è di $2^{16}$ − 1 = 65, 535. 16 bit. 
 
-• Next header - Prossimo header. Specifica il tipo del prossimo header. Questo, può essere l’header del protocollo del livello di trasporto (TCP: 6, hex 0x06, UDP: 17, hex 0x11), o un header aggiuntivo (extension header ). Ognuno di questi header aggiuntivi, contiene al suo interno anche il campo next header, in modo da poter costruire, su un datagramma, una ”catena di header”. In questa catena, l’ultimo header aggiuntivo contiene al suo interno il tipo dell’header del livello di trasporto. 8 bit. Tra questi header aggiuntivi, abbiamo, ad esempio Authentication Header (AH): 51 e Encapsulating Security Payload (ESP): 60, entrambi meccanismi di IPsec. 
+• *Next header* -> Prossimo header. Specifica il tipo del prossimo header. Questo, può essere l’header del protocollo del livello di trasporto (TCP: 6, UDP: 17), o un header aggiuntivo (extension header). Ognuno di questi header aggiuntivi, contiene al suo interno anche il campo next header, in modo da poter costruire, su un datagramma, una ”catena di header”. In questa catena, l’ultimo header aggiuntivo contiene al suo interno il tipo dell’header del livello di trasporto. 8 bit. Tra questi header aggiuntivi, abbiamo, ad esempio Authentication Header (AH): 51 e Encapsulating Security Payload (ESP): 60, entrambi meccanismi di IPsec. 
 
-• Hop limit - Limite di Hop. Un numero che viene decrementato ad ogni inoltro, da parte di router, del datagramma che lo contiene. Quando questo numero diventa 0, viene cestinato. 8 bit. 
+• *Hop limit* -> Limite di Hop. Un numero che viene decrementato ad ogni inoltro, da parte di router, del datagramma che lo contiene. Quando questo numero diventa 0, viene cestinato. 8 bit. 
 
-• Indirizzi. Sorgente e destinazione, entrambi a 128 bit. 
+• *Indirizzi* -> Sorgente e destinazione, entrambi a 128 bit. 
 
-• Dati.
+• *Dati*.
 
-In breve comunque il vantaggio maggiore (e anche il motivo per cui è stato creato) è che abbiamo un numero totale di indirizzi pari a $2^{128}$ rispetto ai $2^{32}$ di IPv4
-
+**Funzionalità di IPv6**
+*indirizzamento esteso*
+In breve comunque il vantaggio maggiore (e anche il motivo per cui è stato creato) è che abbiamo un numero totale di indirizzi pari a $2^{128}$ rispetto ai $2^{32}$ di IPv4.
 Gli indirizzi IPv6 sono scritti in esadecimale perché molto lunghi:
 8000:0000:0000:000:0123:4567:89AB:CDEF
 
+*Unicast, multicast e anycast*
+Supporta indirizzi unicast, multicast ed anycast. Gli indirizzi multicast e anycast identificano insiemi di interfacce. Mandando un pacchetto a un’indirizzo multicast, questo verrà mandato a tutte le interfacce. Mandando un pacchetto a un’indirizzo anycast, questo verrà all’interfaccia più vicina (o una qualunque)
 
+*Etichettatura dei flussi*
+Etichettando in un determinato modo i pacchetti di un determinato flusso, diventa possibile dare priorità e offrire delle garanzie di servizio migliori.
+
+**Header sfoltito**
 ![[Pasted image 20260424085243.png]]
 Come possiamo vedere l'header IPv6 è più grande di quello di IPv4 in termini di byte ma è 
 molto più semplice, la dimensione maggiorata è dovuta ai 2 campi contenenti l'IP dato che l'indirizzo IPv6 è composto da 128 bit anziché i 32 di IPv4
 
-In IPv6 il campo hop limit sostituisce il time to live (TTL) ed è 255, lo stesso numero del time to live di IPv4, non è stato alzato perché gli hop sono i salti tra router quindi se un pacchetto deve fare 255 salti è già tantissimo,anche troppo, quindi un numero più alto non ha senso
+*In IPv6 il campo hop limit sostituisce il time to live (TTL) ed è 255*, lo stesso numero del time to live di IPv4, non è stato alzato perché gli hop sono i salti tra router quindi se un pacchetto deve fare 255 salti è già tantissimo,anche troppo, quindi un numero più alto non ha senso
 
-**Comunicazione tra reti IPv4 e IPv6**
+**Comunicazione tra reti IPv4 e IPv6 - TUNNELING**
 Si può comunicare tra IPv4 e IPv6 tramite incapsulamento, perché IPv4 non è compatibile con IPv6, quindi prendo il pacchetto IPv4 e lo incapsulo dentro un pacchetto IPv6 cosi che questo possa viaggiare in una rete IPv6 o viceversa. Questo meccanismo si chiama *tunneling*
 
 **NOVITA' assoluta di IPv6**: gli header opzionali 
@@ -1045,16 +1133,32 @@ Anziché mettere tutti i possibili header come in IPv4 che rallentano il lavoro 
 **DHCP 6**
 C'è anche il DHCP 6 che è migliore perché usando questi indirizzi non devo mandare una DHCP request in broadcast da anonimo ma questi server funzionano in multicast cioè: il client manda una richiesta solo ai server che gestiscono pacchetti DHCPv6 anziché mandarli in broadcast, questo riduce la congestione in rete.
 
-**Firewall**
-Un firewall serve a bloccare il traffico malevolo che vuole attaccare una rete e lo fa attraverso una serie di regole impostate dall'amministratore in base alla priorità di protezione.
+**Neighbour Discovery Protocol - il nuovo ARP** `
+E' il protocollo simil-ARP di IPv6. Migliore di ARP, usa ICMPv6, e sfrutta due tipi di messaggi: 
+• **Neighbour Solicitation (NS)**. Equivalente di un ARP request. Richiede l’indirizzo MAC di un dispositivo con un determinato indirizzo IPv6. 
+• **Neighbour Advertisement (NA)**. E' l’equivalente dell’ARP reply. Può essere anche spontanea senza previa NS, per avvisare i dispositivi di cambiamenti del MAC address. Questo protocollo permette anche di autoconfigurare gli host
 
-Queste regole chiamate regole di routing sono basate su:
+---
+
+#### Analisi del protocollo ICMP - Internet Control Protocol
+*E' un protocollo usato per la trasmissione di informazioni di controllo nella rete*. Viene in IP ed è utilizzato per strumenti vari, tra cui ping e traceroute. ICMP esiste sia per IPv4 che per IPv6, e in IPv6 trova importante applicazione per i messaggi del Neighbor Discovery Protocol. ICMP include i campi: 
+• *Tipo*. Specifica il formato dei messaggi.
+• *Codice*. Identifica il messaggio.
+• *Checksum*.
+• *Dati*. La lunghezza di questo campo cambia in base al campo ”tipo” e ”codice”.
+
+---
+
+#### Firewall
+*Un firewall serve a bloccare il traffico malevolo che vuole attaccare una rete e lo fa attraverso una serie di regole impostate dall'amministratore in base alla priorità di protezione.* E' un dispositivo hardware, software o ibrido.
+
+*Queste regole chiamate regole di routing sono basate su:*
 • Indirizzi IP e porte di origine e destinazione. 
 • Protocolli (TCP, UDP, ICMP...). 
 • Stato della connessione. 
 • Contenuto del pacchetto, in firewall con ispezione profonda. I firewall posso operare a livello di rete, di trasporto e/o al livello applicativo, a seconda delle esigenze di controllo
 
-Abbiamo 2 tipi firewall:
+*Abbiamo 2 tipi firewall:*
 - Firewall software -> che bloccano il pacchetto all'entrata (è comunque possibile attaccare, ma meglio di niente)
 - Firewall hardware -> dispositivo esterno che fa solo questo
 Questa è una possibile disposizione di firewall hardware.
@@ -1063,10 +1167,21 @@ La zona interna al cerchio è nascosta al mondo esterno, mentre per fare quel fi
 
 La soluzione sopra è molto costosa, se voglio risparmiare opto per un firewall software e basta.
 
+---
 
-**DMZ** **(Demilitarized Zone)**
+#### DMZ (Demilitarized Zone)
+Tra una rete locale e una WAN solitamente si crea una terza sottorete, questa zona contiene sistemi isolati dalla rete interna, ma raggiungibili dall'esterno: è qui che i firewall possono:
+- *Allow* -> far passare un pacchetto
+- *Deny* -> bloccare un pacchetto e notificare questo al mittente
+- *Drop* -> bloccare un pacchetto senza notificarlo al mittente
+
 Nella DMZ tipicamente metto dei server e metto delle regole di firewalling sia per uscire che per entrare, in base ai server la dentro imposto queste regole (ad esempio la comunicazione può arrivare solo alla porta 80 oppure entrano solo richieste HTTP ecc...)
 
+---
+##### Da qui iniziamo a parlare di CONTROL PLANE
+Ovvero tutto quello che riguarda la conoscenza della rete e i percorsi migliori da seguire per instradare un pacchetto
+
+---
 
 **Algoritmi di routing**
 Si ragiona per grafi pesati, ma bisogna stabilire il peso e sopratutto non è scontato conoscere già il grafo.
