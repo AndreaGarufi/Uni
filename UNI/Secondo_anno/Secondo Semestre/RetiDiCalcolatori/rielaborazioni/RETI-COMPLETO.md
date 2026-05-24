@@ -1302,7 +1302,20 @@ Per via di LSR che fatica su reti molto grandi internet o comunque reti giganti 
 
 Il DLL si occupa di trasformare il segnale in bit e i bit in segnale, si occupa anche degli errori, raggruppa i bit per creare i frame
 
-In ogni singolo host (device e router) di una rete, è implementato il Data Link Layer. Ciò avviene tramite una combinazione di hardware, software e firmware presente all’interno dei NIC (Network Interface Controller) dei dispositivi di rete. Buona parte del DLL è implementato in hardware, come il protocollo Ethernet nell’adattatore Intel 700, o il protocollo Wi-Fi nel chipset Atheros AR5006. Tuttavia, è il software a farsi ponte tra il livello di rete, e il livello fisico
+In ogni singolo host (device e router) di una rete, è implementato il Data Link Layer. Ciò avviene tramite una combinazione di hardware, software e firmware presente all’interno dei NIC (Network Interface Controller) dei dispositivi di rete. Buona parte del DLL è implementato in hardware, come il protocollo Ethernet nell’adattatore Intel 700, o il protocollo Wi-Fi nel chipset Atheros AR5006. Tuttavia, è il software a farsi ponte tra il livello di rete, e il livello fisico.
+
+**Servizi offerti dal DLL**
+- *Data framing*
+  Dal fisico verso il logico -> raggruppa i bit del layer fisico in frame
+  Dal logico verso il fisico -> incapsula i datagrammi del livello di rete in frame
+  ![[Pasted image 20260524183029.png|366]]
+- *Gestione dell'accesso al mezzo fisico* 
+  Si evitano le collisioni
+- *Gestione degli errori*
+  Rilevandoli e se possibile correggendoli, gli errori possono essere causati da attenuazioni del segnale rumore e interferenze. Gli errori sono gestiti tramite diverse tecniche: checksum, CRC, controllo di parità, codici di Hamming ecc...
+- *Regolazione del flusso dati*
+
+
 
 **Comunicazione tra 2 Network Interface Controller**
 Lato mittente: 
