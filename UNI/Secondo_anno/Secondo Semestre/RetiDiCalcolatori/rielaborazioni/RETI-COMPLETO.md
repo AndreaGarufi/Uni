@@ -1184,41 +1184,30 @@ Ovvero tutto quello che riguarda la conoscenza della rete e i percorsi migliori 
 ---
 
 **Algoritmi di routing**
-Si ragiona per grafi pesati, ma bisogna stabilire il peso e sopratutto non è scontato conoscere già il grafo.
+Per le reti si ragiona per grafi pesati, ma bisogna stabilire il peso e sopratutto non è scontato conoscere già il grafo.
+Lo scopo degli algoritmi di routing è determinare i migliori cammini da usare per la trasmissione di dati tra sorgente e destinazione
 
 Per stabilire il peso si usano diverse metriche (non ha specificato quali, forse il numero di hop)
 ![[Pasted image 20260423123136.png|517]]
 
-Se non conosciamo il grafo si deve fare una visita (algoritmi) e si guarda ogni cosa, l'algoritmo di si chiama flooding,
+Se non conosciamo il grafo si deve fare una visita (algoritmi), l'algoritmo usato di si chiama **flooding**
 
-Se non conosciamo il grafo si deve fare una visita (algoritmi) e si guarda ogni cosa, l'algoritmo usato di si chiama **flooding**
+#### Analisi Algoritmo di Flooding -> flooding vuol dire inondato
+Conoscere la topologia e i costi della rete è fondamentale nella ricerca dei cammini minimi. Il protocollo OSPF sfrutta un pacchetto che viene distribuito nella rete attraverso una tecnica chiama *flooding.*
 
-**Algoritmo di Flooding -> flooding vuol dire inondato**
-Un nodo manda un pacchetto ai vicini e i vicini lo mandano ai loro vicini e cosi via...
+E' usato dai router, questi inoltrano un pacchetto verso tutte le linee ad eccezione di quella da cui proviene, è usato per studiare la topologia della rete.
 ![[Pasted image 20260423123348.png|585]]
-Il problema è che si crea un circolo vizioso e si inonda la rete
+
+**Problema del flooding**
+Il problema è che si crea un circolo vizioso e si inonda la rete perché ogni nodo mandare pacchetti ovunque (tranne sulla linea da cui gli è arrivato). Esistono diversi meccanismi per risolvere il problema.
 ![[Pasted image 20260423123425.png]]
-
-Un primo metodo per risolvere questo problema è ricordarsi di aver già mandato quel pacchetto e quindi se lo ricevono di nuovo lo scartano
-
-seconda soluzione dopo un tot di hop (esempio 10) ogni router si ferma e non invia più i pacchetti
-
-Il flooding ha un vantaggio: trova la strada migliore perché trova ogni strada possibile 
-
-ha nominato STP spannig tree protocol
-in pratica serve trovare un albero per rappresentare questa rete quindi si organizza un torneo in cui i nodi a 2 a 2 si sfidano per chi ha il MAC ADDRESS più piccolo o più alto in questo modo l'informazione del vincitore si propaga a tutti e abbiamo un albero, questa cosa è implementata in STP
-
-**Soluzioni al problema**
-
-1) Un primo metodo per risolvere questo problema è ricordarsi di aver già mandato quel pacchetto e quindi se i router lo ricevono di nuovo lo scartano
-
-2) Seconda soluzione dopo un tot di hop (esempio 10) ogni router si ferma e non invia più i pacchetti
-
+*Soluzioni*
+• ID per pacchetto, per evitare i duplicati. 
+• Impostare un limite di hop. 
+• Rimuovere i cicli dal grafo della rete. 
+• Inoltrare i messaggi solo lungo uno spanning tree.
 
 **Il flooding ha un vantaggio: trova la strada migliore perché trova ogni strada possibile** 
-
-(ha nominato STP spannig tree protocol
-in pratica serve trovare un albero per rappresentare questa rete quindi si organizza un torneo in cui i nodi a 2 a 2 si sfidano per chi ha il MAC ADDRESS più piccolo o più alto in questo modo l'informazione del vincitore si propaga a tutti e abbiamo un albero, questa cosa è implementata in STP)
 
 *Vantaggi di flooding*
 - trova la strada per la destinazione se esiste
@@ -1226,14 +1215,30 @@ in pratica serve trovare un albero per rappresentare questa rete quindi si organ
 *Contro:* 
 - crea una quantità gigante di pacchetti duplicati anche se la situazione può essere controllata
 
-**Distance Vectors**
-E' stato il primo algoritmo di routing.
+--- 
 
-**Distance Vectors**
+#### Tipologie di algoritmi di routing
+- *Centralizzati*
+  Un algoritmo di instradamento centralizzato, calcola il percorso migliore avendo una conoscenza globale della rete. Ciò implica l’esistenza di un modo per conoscere i costi e la topologia relativi ad una rete. Il calcolo dei percorsi potrà poi essere effettuato da una struttura centralizzata e condiviso ai router, o replicato in ogni router. Un esempio di algoritmo a informazioni globali (centralizzato), è l’algoritmo *link-state*.
+- *Decentralizzati*
+  Un algoritmo di instradamento decentralizzato, effettua lo stesso calcolo in maniera distribuita e iterativa. Nessun nodo possiede informazioni di tipo globale relative alla rete, ma solo quelle relative ai collegamenti adiacenti. Lo scambio di informazioni permette gradualmente di valutare il percorso a distanza minima. L’algoritmo decentralizzato che tratteremo sfrutta un vettore, chiamato vettore delle distanze, presente in ogni router, e che contiene al suo interno le stime relative alla lunghezza dei cammini minimi. E' detto algoritmo *distance-vector.*
+- *Algoritmi statici*
+  Negli algoritmi di instradamento statici, raramente i percorsi stabiliti cambiano. Solitamente ciò avviene sotto intervento umano.
+- *Algoritmi dinamici*
+  Negli algoritmi di instradamento dinamici, gli instradamenti variano in funzione di fattori quali volume del traffico, topologia della rete. L’algoritmo viene eseguito periodicamente o in funzione di variazioni nella topologia o di costi relativi ai collegamenti
+- *Algoritmi sensibili al carico*
+  Gli algoritmi sensibili al carico usano il tasso di congestione dei collegamenti come criterio per valutarne il costo. Rispondono meglio ai cambiamenti della rete, ma sono molto sensibili a instradamento in loop e oscillazione dei percorsi.
+- *Algoritmi insensibili al carico*
+  Gli algoritmi insensibili al carico non valutano gli stessi fattori.
+
+---
+
+#### Distance Vectors
+*E' un algoritmo decentralizzato, ovvero quindi nessun nodo conosce la rete globalmente ma solo i suoi vicini (e quello che gli passano).*
 E' stato il primo algoritmo di routing ed è basato sull'idea dell'algoritmo di *Bellman-Ford*.
-Ogni nodo conosce sicuramente i suoi vicini e ha una tabella in cui le colonne sono le uscite del nodo e le righe sono le possibili destinazioni
+Ogni nodo conosce sicuramente i suoi vicini e ha una tabella in cui le colonne sono le uscite del nodo e le righe sono le possibili destinazioni, il valore della casella rappresenta il costo
 ![[Pasted image 20260423124824.png]]Sono il nodo E e uso l'uscita A per arrivare ad A -> peso 1
-Sono il nodo E e uso l'uscita D per andare a C -> peso 4
+Sono il nodo E e uso l'uscita D per arrivare a C -> peso 4
 
 Perché si chiama distance vectors? **(Ne dobbiamo parlare all'esame)**
 Ogni router mantiene e comunica una lista (un **vettore**) che contiene due informazioni fondamentali per ogni nodo della rete:
@@ -1241,24 +1246,30 @@ Ogni router mantiene e comunica una lista (un **vettore**) che contiene due info
     
 2. **Direzione/Vettore (Vector):** L'interfaccia di uscita o il router adiacente (next-hop) da utilizzare per inoltrare il pacchetto lungo il percorso scelto.
 
-**Sistemi centralizzati e decentralizzati**
-Nei sistemi che usano il distance vectors, ogni nodo è indipendente e pari rispetto agli altri, si dice che è un *sistema decentralizzato*. Al contrario, un *sistema centralizzato* è più semplice da gestire perché c'è un singolo nodo che comanda/gestisce tutti gli altri ma se questo nodo "capo" viene a mancare per un guasto o un attacco, la rete non funzionerà più bene. Nei sistemi decentralizzati (come quelli che implementano il distance vectors) ogni nodo conosce solo i suoi vicini diretti e conosce le informazioni che questi gli passano (cioè il vettore delle distanze)
-
 **Problema del Distance Vectors**
 Uno dei problemi più importanti del distance vectors è che le false notizie si propagano dato che il nodo conosce le informazioni che i suoi vicini gli passano, ma se quelle informazioni sono false verranno prese per vere
 
-**RIP e problema della distanza**
+#### Analisi protocollo RIP (implementazione di distance vectors) e problema della distanza (praticamente deprecato)
 Il protocollo di distance vectors è stato implementato nel protocollo RIP, in cui la distanza veniva misurata attraverso i salti (hop), 1 distanza = 1 hop, senza tener conto della distanza fisica nella realtà o della larghezza di banda di quel collegamento 
 Esempio: potrebbero esserci 2 router che hanno stessa distanza per il nodo (1 hop) ma uno si trova a 1 km l'altro a 10 metri.
+- RIP supporta al più 15 hop, significa che il 16-esimo router è irraggiungibile
+- I router si scambiano informazioni relative alle tabelle di routing ogni 30 secondi.
+- Un percorso non aggiornato da 180 secondi è marcato come irraggiungibile
+- Dopo altri 120 secondi viene rimosso dalla tabella
+Sfrutta 2 messaggi:
+- *Request* -> per richiedere info ai router vicini
+- *Response* -> per fornire info sulla sua tabella di routing
 
+---
 
-**Protocollo LINK STATE ROUTING**
-LSR ha sostituito il protocollo RIP.
+#### LINK STATE ROUTING
+*Un algoritmo di instradamento centralizzato, calcola il percorso migliore avendo una conoscenza globale della rete.*
+LSR ha sostituito il protocollo RIP basato su distance vectors.
 Questo protocollo usa un idea diversa (nel distance vectors si usava Bellman-Ford), qui si usa l'algoritmo di Dijkstra.
-L'obbietti di questo protocollo è avere una conoscenza completa della rete da parte di ogni nodo. Infatti qui ogni router investiga sui suoi vicini e poi manda le informazioni in multicast (quindi solo ai router) in modo che tutti possano conoscersi e determinare la via con minor costo. Il calcolo del percorso ottimale è basato sull'algoritmo di Dijkstra
+L'obbiettivo di questo protocollo è avere una conoscenza completa della rete da parte di ogni nodo. Infatti qui ogni router investiga sui suoi vicini e poi manda le informazioni in multicast (quindi solo ai router) in modo che tutti possano conoscersi e determinare la via con minor costo. Il calcolo del percorso ottimale è basato sull'algoritmo di Dijkstra
 
 LSR periodicamente manda dei pacchetti di aggiornamento sullo stato del link, questo pacchetto è chiamato Link State Packet (LSP) e contiene informazioni del tipo: mittente, interfacce attive, costo del collegamento ecc...
-Queste informazioni vengono inoltrate a tutti i nodi della rete attraverso l'algoritmo di flooding, quindi il primo router manda l' LSP ai suoi vicini e questi ultimi li inoltrano ai loro vicini (tranne a quello da cui l'hanno ricevuto) si fermeranno solo quando tutti i nodi hanno ricevuto il pacchetto e tutti hanno quindi ricevuto l'aggiornamento sullo stato della rete.
+Queste informazioni vengono inoltrate a tutti i nodi della rete *attraverso l'algoritmo di flooding*, quindi il primo router manda l' LSP ai suoi vicini e questi ultimi li inoltrano ai loro vicini (tranne a quello da cui l'hanno ricevuto) si fermeranno solo quando tutti i nodi hanno ricevuto il pacchetto e tutti hanno quindi ricevuto l'aggiornamento sullo stato della rete.
 
 Questo è utile quando ad esempio nella rete si verificano dei guasti a dei nodi o ne viene cambiata la configurazione, scambiandosi LSP i router possono aggiornarsi sulla nuova disposizione della rete
 
@@ -1271,17 +1282,21 @@ LSR non è perfetto anzi esistono diversi problemi come:
   ![[Pasted image 20260501100725.png|369]]
   Il calcolo del costo viene fatto anche in base alla larghezza di banda disponibile in quel collegamento, quindi immaginiamo questa situazione: i 4 router sono collegati da due collegamenti che offrono le stesse prestazioni: uno ha un flusso di traffico supponiamo ad intensità 1 mentre l'altro 1+e, i router quindi calcolano che il percorso con minor costo sia quello con intensità 1 quindi cominciano a mandare pacchetti in quel collegamento, nel frattempo il collegamento che aveva intensità 1+e ora si è svuotato, i router ricalcolano i costi e cambiano di nuovo collegamento. Questo effetto si chiama *Oscillazione delle rotte*, i router tenderanno ad alternare i 2 collegamenti anziché usarli entrambi dividendo il traffico, questo porta ad un calo di prestazioni sia della rete che dei router perché questi ultimi dovendo sempre ricalcolare dijkstra avranno sempre CPU e memoria occupate e potrebbero anche perdere dei pacchetti nel frattempo.
 
-![[Pasted image 20260430093905.png|481]]
+*L'implementazione di link state si ha con il protocollo OSPF - Open Shortest Path First*
 
 *LSR può lavorare su reti piccole e medio-grandi ma non conviene più su reti grandissime, perché la complessità e la matrice di adiacenza di dijkstra cresce sempre più quando aumenta il numero di nodi.*
 
-**AS: Autonomous System**
-Per questo motivo internet o comunque reti giganti sono divise in AS -> Autonomous system, gestite e amministrate da enti come ISP (Internet Services Provider) come TIM Vodafone e altri, ma anche grandi aziende come Google hanno il loro AS. Un AS può essere grande come un intera nazione.
+![[Pasted image 20260430093905.png|481]]
+
+---
+
+#### AS: Autonomous System
+Per via di LSR che fatica su reti molto grandi internet o comunque reti giganti sono divise in *AS Autonomous system*, gestite e amministrate da enti come ISP (Internet Services Provider) come TIM Vodafone e altri, ma anche grandi aziende come Google hanno il loro AS. Un AS può essere grande come un intera nazione.
 
 ![[Pasted image 20260430094927.png]]
 ![[Pasted image 20260501101700.png|447]]
 
-
+---
 
 # **DATA LINK LAYER - DLL**
 
