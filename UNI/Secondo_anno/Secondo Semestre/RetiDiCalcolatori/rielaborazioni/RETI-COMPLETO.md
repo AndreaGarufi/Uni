@@ -928,7 +928,7 @@ Esistono degli indirizzi IP speciali:
 - *0.0.0.0*: this host, è l'indirizzo della macchina quando non gli ancora stato assegnato un IP (vale solo per IPv4)
 - *255.255.255.255*: indirizzo di broadcast
 - *127.0.0.0 - 127.255.255.255*: indirizzi di loopback (vengono utilizzati per quando la macchina parla con se stessa)
-- *10.0.0.0 - 10.255.255.255*: sono indirizzi IP privati, vengono usati all'interno delle reti locali. (questi sono quelli privati della classe B, esistono per ogni classe)
+- *128.0.0.0 - 191.255.255.255*: sono indirizzi IP privati, vengono usati all'interno delle reti locali. (questi sono quelli privati della classe B, esistono per ogni classe)
 Gli indirizzi IP hanno una lunghezza di 32 bit, avremo quindi in totale $2^{32}$ indirizzi diversi
 
 **Struttura del pacchetto IPv4**
@@ -1121,7 +1121,7 @@ Etichettando in un determinato modo i pacchetti di un determinato flusso, divent
 Come possiamo vedere l'header IPv6 è più grande di quello di IPv4 in termini di byte ma è 
 molto più semplice, la dimensione maggiorata è dovuta ai 2 campi contenenti l'IP dato che l'indirizzo IPv6 è composto da 128 bit anziché i 32 di IPv4
 
-*In IPv6 il campo hop limit sostituisce il time to live (TTL) ed è 255*, lo stesso numero del time to live di IPv4, non è stato alzato perché gli hop sono i salti tra router quindi se un pacchetto deve fare 255 salti è già tantissimo,anche troppo, quindi un numero più alto non ha senso
+*In IPv6 il campo hop limit sostituisce il time to live (TTL) e il numero massimo è 255*, lo stesso numero del time to live di IPv4, non è stato alzato perché gli hop sono i salti tra router quindi se un pacchetto deve fare 255 salti è già tantissimo, anche troppo, quindi un numero più alto non ha senso
 
 **Comunicazione tra reti IPv4 e IPv6 - TUNNELING**
 Si può comunicare tra IPv4 e IPv6 tramite incapsulamento, perché IPv4 non è compatibile con IPv6, quindi prendo il pacchetto IPv4 e lo incapsulo dentro un pacchetto IPv6 cosi che questo possa viaggiare in una rete IPv6 o viceversa. Questo meccanismo si chiama *tunneling*
@@ -1499,7 +1499,7 @@ Se abbiamo $e$ errori e vogliamo correggerli abbiamo bisogno di una distanza $d=
 Questo algoritmo serve ad inserire dei bit di controllo prima di inviare il messaggio in modo che il destinatario possa risalire al messaggio originale in caso di errori dovuti al canale inaffidabile.
 
 E' composto da 2 fasi: una di creazione del messaggio e una di verifica e correzione (per il destinatario)
-- **Parte 1**
+- **Parte 1 - creazione messaggio**
   L'obbiettivo qui è prendere i bit contenenti i dati e infarcirli con altri bit di controllo in modo che diventino resistenti agli errori
   Indicheremo con $b_r$ i bit di controllo, questi bit vanno posizionati solo negli indici che sono potenze di 2.
   Prendiamo la stringa di esempio: `xx1x001x0`
@@ -1526,7 +1526,7 @@ L'operazione usata è lo *XOR* (se i bit sono uguali il risultato è 0, se sono 
 
 Sostituendo i valori calcolati ($b_1=0, b_2=0, b_4=1, b_8=0$) al posto delle `x` nella stringa di partenza, otteniamo il messaggio pronto per essere spedito: **`001100100`**
 
-- **Parte 2**
+- **Parte 2 correzione**
 ![[Pasted image 20260506124528.png|319]]
 Adesso il destinatario (che non sa ancora se c'è un errore) riesegue la stessa operazione di XOR di prima sugli stessi bit, i risultati trovati vanno confrontati con i bit di controllo (nelle pos. potenze di 2) e se sono uguali non ci sono errori, se sono diversi c'è un errore:
 ![[Pasted image 20260506124720.png]]
@@ -1537,7 +1537,7 @@ Per correggere semplicemente eseguiamo un bit flip
 
 
 
-### **Gestire gli accessi multipli**
+#### Gestire gli accessi multipli
 In una rete, possiamo individuare due tipi di collegamento: 
 *• Collegamenti punto a punto.* Sono collegamenti diretti tra trasmittente e ricevente. 
 *• Collegamenti broadcast.* Sono collegamenti in cui più nodi trasmittenti e riceventi sfruttano lo stesso canale broadcast.
@@ -1549,7 +1549,7 @@ Quando due nodi cercano di trasmettere sullo stesso canale nello stesso istante,
 
 • **Protocolli ad accesso casuale**. In cui l’accesso al canale avviene in maniera casuale. Il metodo in questione ammette collisioni, che verranno gestite in maniera opportuna. 
 
-• **Protocolli a rotazione** - senza collisioni. Coordinando opportunamente l’accesso al canale, è possibile evitare le collisioni.
+• **Protocolli a rotazione o senza collisioni** - senza collisioni. Coordinando opportunamente l’accesso al canale, è possibile evitare le collisioni.
 
 Iniziamo dai primi - *Protocolli a suddivisione del canale*
 Abbiamo 3 protocolli diversi:
@@ -1594,15 +1594,35 @@ I protocolli ALOHA, portano i nodi a decidere di trasmettere indipendentemente d
 Un miglioramento è ottenuto se si introduce un meccanismo di collision detection sopra quello di rileva- mento del carico: la scheda che avrà trasmesso un determinato frame continuerà a misurare il carico del canale. Se rileva rumore o energia di altre trasmissioni nel canale, il nodo interromperà istantaneamente la trasmissione del frame, manderà un segnale di jamming con backoff a tutti gli host, informando tutti i nodi della collisione, e attenderà un quantitativo di tempo casuale per poi ritrasmettere. Questo tempo è chiamato tempo di backoff, non è fissato (intuitivamente renderebbe inutilizzabile il protocollo), e dipende dall’algoritmo scelto dal protocollo.
 ![[Pasted image 20260506151900.png|565]]
 
+*Protocolli senza collisioni*
+Questi protocolli prevengono le collisioni introducendo dei meccanismi preliminari alle trasmissioni, ottenendo una sincronizzazione consona tra i vari nodi.
 
-**Protocollo Ethernet**
+**Protocollo bit map**
+Con N nodi, il tempo verrà in primis suddiviso in N mini-slot che consentono la trasmissione di un bit. Prima delle trasmissioni effettive, ogni nodo inserirà 1 o 0 nel proprio mini-slot. In questo modo, ogni nodo potrà annunciare se ha intenzione di trasmettere un frame (1) o di non trasmettere (0). Alla fine di questa trasmissione iniziale, si avrà una mappa di bit, che permetterà ai nodi di seguire un ordine di trasmissione tale da non causare collisioni.
+
+**Binary Backward Counting** 
+In questo protocollo, ogni nodo presenta un ID binario. Questo ID permetterà di risolvere il problema delle collisioni col seguente approccio. Supponiamo A, B, C, D siano dei nodi intenzionati a trasmettere: 
+1. Supponiamo che i nodi A, B, C, D abbiano rispettivamente id 0010, 1010, 0100. 1100. 
+2. Tutti i nodi condividono nel proprio mini-slot, la cifra più significativa del proprio id. A : 0, B : 1, C : 0, D : 1. 
+3. Escono dalla competizione i nodi con prima cifra 0. Si passa alla seconda cifra significativa. 
+4. B : 0 D : 1. D ha vinto la contesa, trasmetterà. Potrebbe essere unfair sotto determinate circostanze: gli ID binari sono calcolati anche in virtù dei MAC Address, rendendo alcuni dispositivi implicitamente avvantaggiati.
+
+**Taking turns protocol** 
+Ogni nodo manda 1 nel canale per segnalare di voler trasmettere dei frame. I nodi che hanno inviato 1, si inseriscono in un anello logico. Il primo dei frame di questo nodo sarà il primo a trasmettere. Dopo un tempo T , questo nodo passerà un token al prossimo nodo dell’anello, in modo da permettere al prossimo nodo di trasmettere. Tuttavia, un guasto di un nodo blocca il sistema di token-passing. Inoltre, l’anello è un circuito chiuso: occorrerà quindi includere l’intera subnet all’interno dell’anello di trasmissione, per non avere nodi bloccati.
+
+---
+
+#### Analisi del protocollo Ethernet
 Ethernet è di gran lunga lo standard di reti cablate più diffuso al mondo, per le reti locali. Rappresenta la prima LAN ad alta velocità con vasta diffusione. E' riuscito a rimanere al passo tramite versioni via via più veloci, e mantenendo i costi delle componenti hardware non particolarmente alti. E' parte dello standard IEEE 802.3
 
 Il formato originale del frame era:
-![[Pasted image 20260512120752.png|537]]
+![[Pasted image 20260512120752.png|460]]
 
+I campi *destination address e source address* usano il MAC address degli host.
 
-La velocità di comunicazione dipende dal canale, più il canale sarà pervaso dal rumore minore sarà il bit-rate. Possiamo identificare il rumore come un segnale che va a disturbare il segnale presente nel cavo e che sta "trasportando" i dati, l'idea è quindi quella di creare un cavo ben schermato dai rumori esterni in modo da preservare il segnale all'interno e aumentare quindi il bit-rate. 
+Ethernet usa CSMA/CD come protocollo d'accesso multiplo sul canale condiviso
+
+La velocità di comunicazione dipende dal canale, più il canale sarà pervaso dal rumore più errori si verificheranno e questi porteranno a scartare alcuni pacchetti rallentando di fatto la velocità. Possiamo identificare il rumore come un segnale che va a disturbare il segnale presente nel cavo e che sta "trasportando" i dati, l'idea è quindi quella di creare un cavo ben schermato dai rumori esterni in modo da preservare il segnale all'interno e evitare riduzioni di velocità.
 ![[Pasted image 20260515161353.png|717]]
 
 Prendendo come esempio i cavi il cui mezzo di trasmissione è il rame la varie categorie differiscono in velocità perché sono meglio schermati o adattati in modo da soffrire meno il rumore, ad esempio all'inizio c'era solo una guina di gomma, poi sono stati intrecciati, poi schermati con l'alluminio ecc... .
@@ -1610,8 +1630,9 @@ Prendendo come esempio i cavi il cui mezzo di trasmissione è il rame la varie c
 ![[Pasted image 20260515161726.png|619]]
 ![[Pasted image 20260515161744.png|521]]
 
+---
 
-### **Strutture Ethernet**
+#### Strutture Ethernet
 Hub e bridge sono dispositivi hardware e servono a collegare le varie sotto reti diverse, l'hub è ormai obsoleto mentre il bridge è alla base dei moderni switch
 
 L’ormai obsoleto hub: 
@@ -1629,24 +1650,26 @@ Il bridge, invece:
 **Switch**
 E' un dispositivo che trasmette pacchetti ricevuti a uno o più dispositivi destinatari. E' più espandibile in termini di numero di porte, rispetto al bridge, e effettua operazioni di inoltro (individuare a quale interfaccia mandare il frame) e filtraggio (capire quando scartare un frame). Uno switch contiene al suo interno una switch table con record del tipo Indirizzo MAC - Interfaccia - Tempo. Il tempo viene utilizzato per stabilire quando un dispositivo non è più presente nella rete: verrà dedotto in quanto non verranno mandati più pacchetti al suo indirizzo MAC per molto tempo. Gli switch sono full duplex, senza collisioni.
 
+---
 
-### **VLAN**
+#### VLAN
 Le LAN virtuali permettono di creare delle LAN logiche indipendenti sulla stessa struttura fisica.
 ![[Pasted image 20260520180556.png|608]]
 
-Permette di risparmiare su costi, sulla manodopera e sulla complessità dietro il ricablaggio di una rete, per modificarne la struttura logica. Sono quindi delle vere e proprie LAN logiche separate che risiedono sopra la struttura fisica. Le LAN virtuali rimappano le tabelle di forward del bridge senza modificare la cablatura. Una porta può essere associata a una e una sola VLAN, altrimenti si riscontrerebbero collisioni.
+Permette di risparmiare su costi, sulla manodopera e sulla complessità dietro il ricablaggio di una rete, per modificarne la struttura logica. Sono quindi delle vere e proprie LAN logiche separate che risiedono sopra la struttura fisica. Le LAN virtuali rimappano le tabelle di forward del bridge senza modificare la cablatura.
 
 *Scopo delle VLAN* 
 • Riutilizzo dell’architettura di partenza con conseguente risparmio. 
-• Flessibilità. Molto più facile spostare gli utenti tra le VLAN. • Prestazioni migliori. Isolando il broadcasting nelle VLAN, 
+• Flessibilità. Molto più facile spostare gli utenti tra le VLAN. 
+• Prestazioni migliori. Isolando il broadcasting nelle VLAN, 
 • Sicurezza. E' semplice isolare dei sistemi tramite le VLAN.
-
 
 *VLAN basata su porte* 
 Lo switch può essere partizionato logicamente in più insiemi di porte. Le porte possono essere associate a delle VLAN. Nell’header dei frame DLL è presente un identificatore di VLAN.
 
+---
 
-### **Spanning tree protocol - STP**
+#### Analisi del protocollo STP - Spanning tree protocol
 *Ridondanza e loop:*
 Solitamente una rete è collegata seguendo una topologia che preveda ridondanza, in parole povere se un collegamento si rompe la rete continua a funzionare, magari con dei rallentamenti ma funziona. *La ridondanza di per se è una cosa buona ma è soggetta al rischio di loop*. Ad esempio:
 ![[Pasted image 20260520181751.png]]

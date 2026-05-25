@@ -4,41 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "9ce2af37d3508150",
+        "id": "06b4c17973004fa9",
         "type": "tabs",
-        "dimension": 56.52472527472527,
         "children": [
           {
-            "id": "21316c7ddcf73e7e",
+            "id": "bc37913a642ed091",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "RETI-COMPLETO"
-            }
-          }
-        ]
-      },
-      {
-        "id": "a30d6f6102f098ff",
-        "type": "tabs",
-        "dimension": 43.47527472527473,
-        "children": [
-          {
-            "id": "5975dd1cab991874",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Riassunto_Github"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -202,11 +178,14 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "21316c7ddcf73e7e",
+  "active": "bc37913a642ed091",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260525103150.png",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260525103150.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260525102105.png",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/13_12_maggio.md",
@@ -218,13 +197,11 @@
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260523140518.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260522192615.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260522192217.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260522192215.png",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande esame.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/2_10_marzo.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/1_5_marzo.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/14_19_maggio.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/14_19_maggio.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/13_12_maggio.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
@@ -232,7 +209,6 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/14_7_maggio.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/12_5_maggio.md",
     "Callouts.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/11_30_aprile.md",
@@ -248,7 +224,6 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/8_9_aprile.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/9_14_aprile.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/10_16_aprile.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11_21_aprile.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/12_23_aprile.pdf"
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11_21_aprile.md"
   ]
 }
