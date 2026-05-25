@@ -1,74 +1,45 @@
 **Andrea Garufi 2025/2026 (Appunti misti)**
 
-## Cos’è un sistema operativo?
+# Sistemi operativi
+## **Cos’è un sistema operativo?**
 
-Un moderno calcolatore è formato da: uno o più processori, memoria centrale, dischi, stampanti e altre periferiche I/O.
+**Definizioni**
+- Un moderno calcolatore è formato da: uno o più processori, memoria centrale, dischi, stampanti e altre periferiche I/O. Per gestire tutte le componenti hardware serve uno strato intermedio software: il **Sistema Operativo.**
 
-Per gestire tutte le componenti serve uno strato intermedio software: il Sistema Operativo.(Sistema operativo software che gestisce l’hardware)
+- I processi sono dei programmi che una volta mandati in esecuzione diventano un'entità attiva. Nei sistemi multiprogrammati troviamo più processi. 
+  *-Programma: entità statica*
+  *-Processo: entità dinamica*
+  *-Multiprogrammazione: capacità del sistema operativo di gestire più processi.*
 
-I processi sono dei programmi che una volta mandati in esecuzione diventano un’entità attiva. Nei sistemi multiprogrammati troviamo più processi.
+- Qualunque elaboratore che ha delle risorse da gestire ha un sistema operativo, anche se non interagiamo direttamente con esso ma con delle applicazioni.
 
--Programma: entità statica
+- Il SO può essere visto da due punti di vista. Punto di vista basso (hardware) quindi il SO è un gestore di risorse; punto di vista alto(utente) chi utilizza un dispositivo che in realtà interagisce con le applicazioni.
 
--Processo: entità dinamica
+- I processi lavorano in spazi separati tra di loro, il Sistema Operativo agisce come un'entità separata e superiore che arbitra l'accesso alle risorse.
 
--Multiprogrammazione: capacità del sistema operativo di gestire più processi.
-
-Qualunque elaboratore che ha delle risorse da gestire ha un sistema operativo, anche se non interagiamo direttamente con esso ma con delle applicazioni.
-
-Tra i processi e l’hardware c’è questo strato software che possiamo indicare come sistema operativo, che può essere visto da due punti di vista. Punto di vista basso (hardware) quindi il SO è un gestore di risorse; punto di vista alto(utente) chi utilizza un dispositivo che in realtà interagisce con le applicazioni.
-
+#### Modalità di esecuzione (User-Kernel)
 ![[Pasted image 20260525170145.png|428]]
 
-Modalità di esecuzione:
+Abbiamo 2 modalità di esecuzione:
+1. **Kernel Mode** (Supervisor Mode): I programmi che girano in questa modalità (quali OS, driver e ulteriori software molto specifici), possono accedere alle risorse hardware senza particolari vincoli. E' meno restrittiva, ma da grandi poteri derivano grandi responsabilità: un crash in modalità Kernel può far fallire l’intero sistema.
+   Questi sono i suoi poteri (e doveri):
+   - *Manipolazione diretta della memoria* (allocazione, protezione, mappatura degli indirizzi fisici)
+   - *Accesso diretto all'hardware e ai registri di controllo*
+   - *Gestione delle interruzioni e delle eccezioni*
+   - *Configurazione della MMU* (Memory Management Unit)
+   - *Efficienza del sistema*: consente di gestire più richieste contemporaneamente senza colli di bottiglia.
+   - *Isolamento dei conflitti*: processi che competono per le stesse risorse vengono arbitrati dal kernel, evitando stati inconsistenti o deadlock.
 
-<aside> 📌
+Il kernel è il cuore del SO è viene caricato all'avvio del computer in RAM
 
-1. Kernel Mode (Supervisor Mode): È una modalità privilegiata. Il codice in esecuzione nella CPU può eseguire tutte le azioni previste dalla CPU. </aside>
 
-Può eseguire:
-
-**Manipolazione diretta della memoria** (allocazione, protezione, mappatura degli indirizzi
-
-fisici)
-
-Accesso diretto all'hardware e ai registri di controllo
-
-Gestione delle interruzioni e delle eccezioni
-
-Configurazione della MMU (Memory Management Unit)
-
-I processi eseguiti in modalità kernel vengono definiti **processi multiprogrammati:** possono avviare autonomamente altri programmi e/o sottoprocessi secondo quanto stabilito dalla loro logica interna.
-
-I processi lavorano in spazi separati tra di loro, il Sistema Operativo agisce come un'entità separata e superiore che arbitra l'accesso alle risorse.
-
-<aside> 💡
-
-Il **Kernel** è il nucleo del Sistema Operativo. Non è hardware, è software. A differenza dei normali programmi, il kernel è una componente **residente in memoria** (viene caricato nella RAM all'avvio del sistema e da quel momento in poi ha il controllo diretto dell’hardware)
-
-Il kernel, in particolare, è progettato per operare in maniera **parallela e compartimentata**.
-
-</aside>
-
-Questa caratteristica è fondamentale per due ragioni principali:
-
-1. **Efficienza del sistema**: consente di gestire più richieste contemporaneamente senza colli di bottiglia.
-2. **Isolamento dei conflitti**: processi che competono per le stesse risorse vengono arbitrati dal kernel, evitando stati inconsistenti o deadlock.
-
-Il codice in esecuzione nella CPU ha dei limiti, ci sono delle istruzioni privilegiate e non privilegiate.
-
-<aside> 📌
-
-1. User Mode: È una modalità **non privilegiata**. (ES. riprogrammare il controller della memoria o accedere direttamente al disco.) </aside>
-
-Quando un'applicazione ha bisogno di una risorsa hardware (es. leggere un file), non può farlo da sola. Deve invocare una **System Call** (chiamata di sistema). In quel momento, la CPU effettua un "trap" (un'interruzione software), passa dalla modalità utente alla modalità kernel, esegue il compito richiesto in modo sicuro e poi torna alla modalità utente.
+2. **User Mode**: È una modalità *non privilegiata*. (non può riprogrammare il controller della memoria o accedere direttamente al disco). E' la modalità con cui vengono eseguiti tutti i software sopra il sistema operativo. Questa modalità offre privilegi limitati al programma, il quale potrà accedere esclusivamente alla memoria ad esso dedicata, e non permette l’accesso a risorse hardware. A tale scopo, tramite delle *chiamate di sistema (system call) e il meccanismo di trap*, un programma può chiedere l’intervento dell’sistema operativo, che eseguirà istruzioni in modalità Kernel. Un crash in modalità utente non mette a rischio il resto del sistema.
 
 È importante non cadere nell'errore di credere che _tutto_ il codice eseguito in modalità utente sia completamente estraneo al kernel.
 
-In pratica, gli utenti interagiscono con il sistema tramite interfacce grafiche (**GUI — Graphical User Interface**), le quali consentono di compiere operazioni tipicamente riservate al sistema operativo in modo accessibile e sicuro, senza necessità di interagire direttamente con il kernel.
+continua
 
 **Chiamate di Sistema (System Call)**
-
 <aside> 💡
 
 Una system call è il meccanismo fondamentale tramite cui un programma in esecuzione (user mode) richiede un servizio al kernel del sistema operativo, che opera con privilegi elevati (kernel mode).
