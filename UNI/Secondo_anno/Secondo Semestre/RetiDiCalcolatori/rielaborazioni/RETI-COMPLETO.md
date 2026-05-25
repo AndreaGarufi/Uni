@@ -1331,10 +1331,10 @@ Dal lato del ricevente:
 4. Manda il datagramma al livello superiore.
 
 #### Data Framing
-Si potrebbe pensare che usare 2 segnali per la comunicazione possa essere sufficiente, ma non è così, infatti in questo caso non è possibile stabilire se una sequenza di 0 sia una parte della comunicazione o se ci sia assenza di comunicazione, per questo motivo si utilizzano codifiche a più livelli:
+Si potrebbe pensare che usare 2 segnali per la comunicazione possa essere sufficiente, ma non è così, infatti in questo caso non è possibile stabilire se una sequenza di 0 sia una parte della comunicazione o se ci sia assenza di comunicazione, bisogna avere una codifica univoca per questo motivo si utilizzano codifiche a più livelli:
 
 **Tree level encoding**
-Prevede 3 livelli di segnale: alto zero e basso.
+*Prevede 3 livelli di segnale: alto zero e basso.*
 Ci sono anche delle regole:
 - prossimo bit = 0 -> nessuna transizione del segnale
 - Prossimo bit = 1 e livello del segnale $\neq$ 0 -> Il segnale passa a 0.
@@ -1347,10 +1347,6 @@ Alcuni mezzi fisici come la gigabit Ethernet usano una codifica a 5 livelli che 
 **Problemi del tree level encoding**
 Il tree level encoding è la base per la comunicazione ma presenta 2 problematiche:
 
-1. **Il problema del DC-Balance (Componente Continua)**
-
-In un mondo ideale, vorremmo che la media dei voltaggi inviati su un cavo fosse **0V**. Se la media è diversa da zero, si crea quella che chiamiamo "Componente Continua" (DC Offset).
-
 - **Saturazione e Calore:** Se invii molti segnali positivi senza "compensarli" con quelli negativi, la linea accumula energia. Questo può surriscaldare i componenti o mandare in saturazione i trasformatori di accoppiamento che si trovano nelle schede di rete.
     
 - **Spostamento della soglia:** Il ricevitore deve capire se un segnale è "alto" o "basso" confrontandolo con una media. Se la media elettrica del cavo si sposta verso l'alto a causa del mancato bilanciamento, il ricevitore potrebbe fare fatica a distinguere uno zero da un uno, perché la sua "linea di terra" di riferimento è diventata instabile.
@@ -1360,10 +1356,10 @@ In un mondo ideale, vorremmo che la media dei voltaggi inviati su un cavo fosse 
 
 Per ovviare a questi problemi entra in gioco la codifica a blocchi:
 **Codifica a blocchi**
-sostituisce blocchi di bit di una determinata dimensione, con blocchi leggermente più grandi ( 4 → 5, 8 → 10), traducendo le sequenze in maniera tale da garantire un numero minimo di transizioni.
+Sostituisce blocchi di bit di una determinata dimensione, con blocchi leggermente più grandi ( 4 → 5, 8 → 10), traducendo le sequenze in maniera tale da garantire un numero minimo di transizioni.
 
 *4B5B*
-Associa a blocchi di 4 bit, blocchi di 5 bit. Richiede una bandwitdh del 25% più capiente. E' utilizzata per fast Ethernet.
+Associa a blocchi di 4 bit, blocchi di 5 bit. Richiede una bandwidth del 25% più capiente. E' utilizzata per fast Ethernet.
 ![[Pasted image 20260501211518.png|320]]
 
 Esiste anche la codifica 8B10B che è molto usata in vari standard:
@@ -1377,19 +1373,101 @@ Esiste anche la codifica 8B10B che è molto usata in vari standard:
 • USB 3.0
 
 
+#### Gestione degli errori
+• *L’error detection* consiste nell’individuare errori di trasmissione in un frame. Tuttavia non effettua correzione. 
+• *L'error correction* permette di individuare errori di trasmissione, ed effettuare correzioni (di dimensioni limitate).
 
-### ERROR DETECTION
 **Ridondanza: elemento di base per l’error detection** 
 Immaginiamo di voler trasmettere dei dati anagrafici all’interno di un generico pacchetto. Aggiungere allo stesso pacchetto un codice fiscale, mi fornisce delle informazioni si ridondanti, ma che mi permettono di individuare possibili errori di trasmissione successivamente alla comunicazione.
 
-**Error Detection**
-
-Nella realtà i pacchetti trasmetti contengono una sequenza di bit D (i dati) e un EDC (error detection and correction bits). L'EDC può essere una qualsiasi tecnica di controllo: CRC, Checksum, bit di parità ecc...
-Una volta che il datagramma con EDC passa per il canale inaffidabile al pacchetto viene applicata la funzione inversa a quella di partenza per risalire ai dati originali e capire se ci sono stati degli errori
+##### ERROR DETECTION
+*Nella realtà i datagrammi trasmessi contengono una sequenza di bit D (i dati) e un EDC (error detection and correction bits)*. L'EDC può essere una qualsiasi tecnica di controllo: CRC, Checksum, bit di parità ecc...
+Una volta che il datagramma con EDC passa per il canale inaffidabile al datagramma viene applicata la funzione inversa a quella di partenza per risalire ai dati originali e capire se ci sono stati degli errori
 ![[Pasted image 20260506115016.png|717]]
 
-### ERROR CORRECTION
-**Distanza Di Hamming**
+Vediamo delle tecniche:
+
+**Controllo di parità**
+*Consiste in un bit che specifica se il numero di bit = 1 è pari o dispari. Può essere un controllo parità a uno o due dimensioni.*
+
+- *Monodimensionale*
+  Consente esclusivamente di individuare un errore di trasmissione
+- *Bidimensionale*
+  Consente di individuare e correggere un errore:
+
+**CRC - Cyclic Redundancy Check**
+E' un metodo di error detection, non correzione. E' detto anche controllo dei codici polinomiali. Sfrutta l’aritmetica a: *mod 2*, in cui addizione e sottrazione diventano operazioni di XOR. La sequenza di bit D è rappresentata sottoforma di polinomio di grado $d − 1 = |D| − 1$, con coefficienti pari al valore del bit nella sequenza. Il bit più a sinistra è il coefficiente di grado $d − 1 (x^d−1)$, quello più a destra è il termine noto $(x^0)$. Alla sequenza $D\,\, 10010111$ coinciderà il polinomio: $$x^7 + x^4 + x^2 + x^1 + x^0 = x^7 + x^4 + x^2 + x^1 + 1$$
+
+• Sia $D(x)$ il polinomio associato al nostro messaggio $D$. 
+• Sia $G(x)$ il polinomio generatore dello standard di rete. La cifra più significativa è sempre 1. 
+• Sia $r$ il grado di $G(x)$, ed è quindi stabilito dallo standard. 
+• Sia $R(x) = x^r · D(x)\,\, mod\,\, G(x)$
+
+*Come si effettua il CRC*
+Al sender:
+1. $D$ sono i dati che vogliamo trasmettere. 
+2. Calcoliamo $D · 2^r$ , nel pratico $D << r$. 
+3. Effettuiamo la divisione $mod\,\, 2$ tra $\frac{D\,x\,2^r}{G}$ . 
+4. Il resto della nostra divisione sarà il nostro valore di $R$. 
+5. Il messaggio che manderemo sarà il risultato della concatenazione di $D + R$. In termini di bit: $D · 2^r \,\,XOR\,\, R$. 
+6. Questo valore sarà sempre divisibile per $G$, con resto nullo.
+
+Al receiver. 
+1. Calcola $\frac{Stringa \,\,ricevuta}{G}$ 
+2. Se questa divisione ha resto, ci sono stati problemi di trasmissione.
+
+*Esiti del CRC*
+![[Pasted image 20260525102105.png|532]]
+
+
+**(Spiegazione semplice e meno formale di gemini)**
+1. **L'Idea di base: La divisione**
+Il CRC si basa su una semplice divisione matematica:
+- Prendi i tuoi dati (**D**).
+- Li dividi per un numero speciale concordato prima (**G**, il Generatore).
+- Il **resto** di questa divisione (**R**) è il tuo codice di controllo.
+
+Quando il ricevente ottiene il messaggio, rifà la divisione. Se il resto è zero, il messaggio è perfetto. Se non è zero, qualcosa è cambiato durante il viaggio.
+
+2. **Le regole "strane" (Aritmetica Modulo 2)**
+Nelle slide si legge che si usa l'aritmetica a modulo 2. Questo significa che **non esistono riporti**.
+- In pratica: si usa lo **XOR**.
+- $1 + 1 = 0$
+- $1 - 1 = 0$
+- $1 + 0 = 1$
+- $0 + 0 = 0$
+- **Regola d'oro per la divisione:** Se il bit più a sinistra è **1**, "sottrai" (fai lo XOR) il generatore. Se è **0**, passi al bit successivo.
+
+ 3. **Analisi dell'esempio pratico (Immagine 2)**
+Guardiamo l'esempio fatto a mano per capire i passaggi:
+**I Protagonisti:**
+- **D (Dati):** `101110`
+- **G (Generatore):** `1001` (è di grado $r=3$ perché ha 4 bit, quindi aggiungiamo 3 zeri ai dati).    
+- **D operazione:** Diventa `101110 000` (gli zeri servono a "fare spazio" per il resto che calcoleremo).
+
+**I passaggi della divisione:**
+1. Prendi i primi 4 bit (`1011`) e fai lo XOR con `1001`.
+    - `1 XOR 1 = 0`
+    - `0 XOR 0 = 0`
+    - `1 XOR 0 = 1`
+    - `1 XOR 1 = 0`
+    - Risultato parziale: `0010`.
+2. Abbassa il bit successivo dei dati (lo `0`) e continua così finché non finisci i bit.
+3. Alla fine ottieni **R: 011**.
+**Cosa invii?**
+Invii i dati originali + il resto: `101110` + `011` = **`101110011`**.
+
+ 4. **Riassunto delle formule nella spiegazione formale**
+- **$D \cdot 2^r$**: Significa semplicemente "prendi i dati e aggiungi $r$ zeri alla fine" (shift a sinistra).
+- **$R(x) = x^r \cdot D(x) \mod G(x)$**: È il modo matematico per dire "il resto della divisione tra i dati con gli zeri e il generatore".
+- **Messaggio inviato ($D + R$):** Concateni il resto ai dati originali
+
+---
+
+##### ERROR CORRECTION
+Correggere un errore di trasmissione è molto difficile. Il linguaggio naturale gode di contesti (e semantica), tramite cui è possibile estrapolare il significato di una frase, anche quando essa è incompleta! ”Tetto casa rosso” → ”Il tetto della casa è rosso!”. All’interno di sequenze di bit, non esiste un modo del genere per correggere gli errori. Quello della correzione è un problema molto complesso. Quelle di error correction, tuttavia, sono metodologie importanti da conoscere, in quanto utilizzate in molteplici contesti relativi alla trasmissione dati, come all’interno delle RAM
+
+**Distanza Di Hamming e correzione**
 Misura la distanza tra 2 code word: 
 1000110
 1100110
@@ -1398,19 +1476,17 @@ distanza = 1
 *Vocabolario*
 Definiamo vocabolario un insieme di codeword. Un vocabolario si dirà completo se, con $n$ bit, avrà $2^n$ codeword
 ![[Pasted image 20260505102514.png|429]]
-In un vocabolario la distanza è misurata come il minimo tra tutte le distanze
-Per comunicare si possono usare solo le code word appartenenti al vocabolario.
-
-Se arriva questa code word: 101000 che non appartiene al vocabolario posso risalire in maniera probabilistica a capire qual'era la code word originale in base alla distanza dal vocabolario
-![[Pasted image 20260505102620.png|370]]
+*In un vocabolario la distanza è misurata come il minimo tra tutte le distanze.*
+*Per comunicare si possono usare solo le code word appartenenti al vocabolario.*
 
 
 > [!important] **Basi teoriche per poter fare rilevazione e correzione degli errori**
 > 
 Se abbiamo $e$ errori e vogliamo correggerli abbiamo bisogno di una distanza $d= 2e+1$ , invece per rilevarli abbiamo bisogno di una distanza $d = e+1$
+![[Pasted image 20260525103150.png|717]]
 
 
-
+**Dimostrazione distanza minima**
 >[!help] **Reminder - Formula coefficiente binomiale**
 >![[Pasted image 20260506122006.png|200]]
 
