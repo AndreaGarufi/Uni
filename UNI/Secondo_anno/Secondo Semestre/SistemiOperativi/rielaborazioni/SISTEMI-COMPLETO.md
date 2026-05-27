@@ -1,8 +1,8 @@
 **Andrea Garufi 2025/2026 (Appunti misti)**
 
 # Sistemi operativi
-## **Cos’è un sistema operativo?**
-
+## **INTRODUZIONE**
+Ci saranno una serie di concetti base e non molto approfonditi, andremo ad approfondirli successivamente.
 **Definizioni**
 - Un moderno calcolatore è formato da: uno o più processori, memoria centrale, dischi, stampanti e altre periferiche I/O. Per gestire tutte le componenti hardware serve uno strato intermedio software: il **Sistema Operativo.**
 
@@ -37,49 +37,36 @@ Il kernel è il cuore del SO è viene caricato all'avvio del computer in RAM
 
 È importante non cadere nell'errore di credere che _tutto_ il codice eseguito in modalità utente sia completamente estraneo al kernel.
 
-continua
+---
 
-**Chiamate di Sistema (System Call)**
-<aside> 💡
+#### System call
+*Una system call è il meccanismo fondamentale tramite cui un programma in esecuzione (user mode) richiede un servizio al kernel del sistema operativo, che opera con privilegi elevati (kernel mode).*
 
-Una system call è il meccanismo fondamentale tramite cui un programma in esecuzione (user mode) richiede un servizio al kernel del sistema operativo, che opera con privilegi elevati (kernel mode).
+![[Pasted image 20260527123500.png|555]]
+Questo avviene grazie al meccanismo di **TRAP**: quando avviene una system call la CPU passa dalla user mode alla kernel mode, quando la system call è finita attraverso al RETURN la CPU torna in user mode
 
-</aside>
+I programmi normali (excel, word, chrome) girano in user mode, quindi non possono accedere direttamente all'hardware o a risorse sensibili, per questo fanno le system call
 
-**Esempio: Apertura di un file**
+Una system call avviene quando ad esempio un processo deve accedere ad un file, quando si alloca memoria o quando si deve accedere all'hardware
 
-Quando un utente (o un programma) richiede l'apertura di un file, si innesca la seguente:
+Il passaggio da modalità utente a modalità kernel e ritorno avviene in maniera trasparente per l'utente finale (l'utente non se ne accorge), ma è un meccanismo fondamentale per garantire la **sicurezza e l'integrità del sistema**.
 
-1. **L'applicazione** esegue una serie di operazioni predefinite (es. chiamata a open() in C).
-    
-2. **La CPU passa in modalità kernel**.
-    
-3. **Il kernel** esegue una serie di controlli e operazioni: Verifica l'esistenza del file nel filesystem.
-    
-    Controlla i permessi di accesso dell'utente richiedente Alloca le strutture dati necessarie Restituisce il controllo all'applicazione con il risultato
-    
+---
 
-Il passaggio da modalità utente a modalità kernel e ritorno avviene in maniera trasparente per l'utente finale, ma è un meccanismo fondamentale per garantire la **sicurezza** e l'**integrità** del sistema.
-
-## **Astrazione**
-
+#### Il concetto di astrazione
 Il sistema operativo astrae l’interfaccia, usa l’hardware e offre ai programmi applicativi una propria interfaccia che sia ad alto livello, più comoda da gestire.
 
 Uno dei concetti chiave nell'architettura dei sistemi operativi è quello di **astrazione**. Il kernel opera a un livello di programmazione molto basso, a stretto contatto con l'hardware. Operazioni che sembrano banali nascondono in realtà una complessità considerevole.
 
-L'obiettivo dell'astrazione non è elencare queste complessità, ma **nasconderle**. Il kernel espone all'utente (e ai programmi applicativi) un'interfaccia semplificata — un insieme di istruzioni ad alto livello — che permette di eseguire operazioni complesse senza dover conoscere i dettagli implementativi dell'hardware sottostante. Questo rende il sistema più usabile e portabile.
+L'obiettivo dell'astrazione non è **nasconderle**. Il kernel espone all'utente (e ai programmi applicativi) un'interfaccia semplificata — un insieme di istruzioni ad alto livello — che permette di eseguire operazioni complesse senza dover conoscere i dettagli implementativi dell'hardware sottostante. Questo rende il sistema più usabile e portabile.
 
 ---
 
-## Cpu e memoria virtuali
-
-Su un protocollo posso avere una o più CPU, nel caso più semplice ne abbiamo una sola, sappiamo che si possono eseguire più processi contemporaneamente e questo può essere visto in tanti modi , ma anche come un’astrazione in cui il Sistema Operativo crea delle **CPU** **VIRTUALI**. Fa credere ad ogni processo di avere una propria CPU ma in realtà sta gestendo le n CPU virtuali con l’unica fisica che ha. Questo viene chiamato **time sharing.**
+#### CPU e memorie virtuali
+Posso avere una o più CPU, nel caso più semplice ne abbiamo una sola, sappiamo che si possono eseguire più processi contemporaneamente e questo può essere visto in tanti modi, ma anche come un’astrazione in cui il Sistema Operativo crea delle **CPU** **VIRTUALI**. Fa credere ad ogni processo di avere una propria CPU ma in realtà sta gestendo le $n$ CPU virtuali con l’unica fisica che ha. Questo viene chiamato **time sharing.**
 
 La **Memoria Virtuale** è un'astrazione fondamentale fornita dal Sistema Operativo che permette a ogni processo di operare in un ambiente di lavoro isolato e apparentemente illimitato.
-
 ![[Pasted image 20260525170242.png|527]]
-
-L’astrazione non è solo una semplificazione ma viene utilizzata dal SO per rendere l’hardware utilizzabile.
 
 - **Approccio Bottom-Up:** Il SO è un **Resource Manager**. Gestisce la complessità dei segnali elettrici e dei registri hardware, offrendo in cambio un'interfaccia pulita (File, Processi).
 - Gestire una risorsa significa arbitrare i conflitti(più processi potrebbero voler accedere ad uno stesso file), fornirne un utilizzo ordinato e coordinato.
@@ -88,198 +75,154 @@ L’astrazione non è solo una semplificazione ma viene utilizzata dal SO per re
 
 ![[Pasted image 20260525170253.png|540]]
 
-## Multiplexing
+---
 
+#### Multiplexing
 Un sistema operativo moderno deve essere in grado di gestire:
-
-**Più programmi in esecuzione contemporanea Più utenti connessi simultaneamente**
+- **Più programmi in esecuzione contemporanea 
+- **Più utenti connessi simultaneamente**
 
 Per farlo in maniera ordinata e controllata, si ricorre al concetto di **Multiplexing**.
-
 Strategie di gestione
 
-1. MULTIPLEXING NEL TEMPO: Si usa per risorse che non possono essere divise fisicamente (CPU). Passare da un processo P1 , all’altro P2, significa che il SO deve fare sia un lavoro di salvataggio (i dati dell’unica CPU fisica che ho) e di ripristino(ricaricare gli stessi valori lasciati nei registri della CPU, sostituire P2 con P1).
+1. *MULTIPLEXING NEL TEMPO*: Si usa per risorse che non possono essere divise fisicamente (CPU). Passare da un processo P1 , all’altro P2, significa che il SO deve fare sia un lavoro di salvataggio (i dati dell’unica CPU fisica che ho) che di ripristino(ricaricare gli stessi valori lasciati nei registri della CPU, sostituire P2 con P1).
 
 Il multiplexing nel tempo permette di creare CPU virtuali.
 
-1. MULTIPLEXING NELLO SPAZIO: Si usa per risorse che possono essere spezzettate (RAM). Rientra in questo caso tutto quello che riguarda degli spazi di memoria da gestire. Diversi processi occupano contemporaneamente porzioni differenti della risorsa, il Sistema Operativo divide la RAM in blocchi e li assegna ai processi dove c'è spazio, garantendo l'**isolamento**.
+1. *MULTIPLEXING NELLO SPAZIO*: Si usa per risorse che possono essere spezzettate (RAM). Rientra in questo caso tutto quello che riguarda gli spazi di memoria da gestire. Diversi processi occupano contemporaneamente porzioni differenti della risorsa, il Sistema Operativo divide la RAM in blocchi e li assegna ai processi dove c'è spazio, garantendo l'**isolamento**.
 
 Il multiplexing nello spazio permette di creare l’astrazione della memoria virtuale.
 
-<aside> 💡
+> [!info] **Perché il multiplexing è fondamentale?**
+Senza multiplexing, ogni processo dovrebbe attendere che tutti gli altri terminino prima di poter ottenere l'uso della CPU o della memoria. I sistemi moderni sarebbero di fatto inutilizzabili.
 
-**Perché è fondamentale? Senza multiplexing, ogni programma dovrebbe attendere che tutti gli altri terminassero prima di poter ottenere l'uso della CPU o della memoria. I sistemi moderni sarebbero di fatto inutilizzabili.**
+---
 
-</aside>
+#### Processi
+Mentre il "programma" è un'entità passiva (un file memorizzato su disco), il "processo" è un'**entità attiva** che possiede risorse assegnate dal sistema operativo per poter completare il suo compito.
 
-- **Thread:** Sono flussi di esecuzione multipli **dentro lo stesso processo**. Condividono lo stesso spazio di memoria (stesse variabili, stessi file aperti) ma hanno registri e stack separati.
+---
 
-In un programma multi-thread : il primo thread esegue una procedura , il secondo un’ altra ecc.. ma tutto questo avviene nello stesso ambiente.
+#### Thread
+Sono una suddivisione in sottoprocessi **dentro lo stesso processo** che agiscono in parallelo. Condividono lo stesso spazio di memoria (stesse variabili, stessi file aperti) ma hanno registri e stack separati.
 
-**Flusso di Esecuzione (Execution Flow)**
+In un programma multi-thread: il primo thread esegue una procedura , il secondo un’ altra ecc.. ma tutto questo avviene nello stesso ambiente.
 
+#### Flusso di Esecuzione (Execution Flow) e context switch
 Il **flusso di esecuzione** descrive la sequenza ordinata di istruzioni che la CPU elabora per portare a termine un programma. In un sistema multiprogrammato, questo flusso non è lineare: il sistema operativo può interrompere l'esecuzione di un processo (tramite un'**interruzione** o allo scadere del suo _time slice_), salvarne lo stato nel **PCB** (Process Control Block), e riprendere l'esecuzione di un altro processo dallo stesso punto in cui era stato sospeso.
 
 Questo meccanismo, noto come **context switch**, è ciò che rende possibile l'esecuzione parallela apparente su un singolo processore.
 
 ---
 
-## Il Calcolatore
-
+#### Il Computer
 ![[Pasted image 20260525170307.png|517]]
 
 Un calcolatore (in maniera generica o astratta)è caratterizzato dalla presenza di una o più CPU, ogni CPU è collegata alle periferiche tramite BUS, solitamente specializzati, che ottimizzano la comunicazione tra CPU e le varie componenti periferiche dell’hardware.
 
-Le componenti da attenzionare sono:
-
-RAM, memoria volatile(limitata ma veloce e direttamente accessibile dalla CPU).
-
 ---
 
-### Processore
+#### Processore
 
 ![[Pasted image 20260525170317.png|496]]
+E l’unità di elaborazione centrale (Central Processing Unit). Presenta un insieme di registri che possono contenere dei dati.
 
-Il processore è un’unità capace di unire codice, rilevato dal classico ciclo di fetch, decode, execute:
+A livello generale:
+- Preleva dalla RAM la prossima istruzione da eseguire;
+- La decodifica, capendo qual è la sua semantica e gli operandi necessari;
+- Nel momento in cui viene decodificata poi viene eseguita con operazioni logiche, aritmetica o altro…
 
-preleva dalla RAM la prossima istruzione da eseguire;
-
-la decodifica, capendo qual è la sua semantica e gli operandi necessari;
-
-nel momento in cui viene decodificata poi viene eseguita con operazioni logiche, aritmetica o altro…
-
-La **RAM** funge da memoria primaria ad alta velocità per i dati e le istruzioni in uso. Per accellerare ulteriormente l’accesso, utilizza anche la **cache**, posizionata vicinissima al processore.
+Per la CPU la **RAM** funge da memoria primaria ad alta velocità per i dati e le istruzioni in uso. Per accelerare ulteriormente l’accesso, utilizza anche la **cache**, posizionata vicinissima al processore.
 
 Dei registri generici della CPU ce ne occorrono un numero limitato, di appoggio per i dati provenienti dalle varie operazioni svolte nella CPU; ma ci sono anche dei “registri specifici” per la gestione del ciclo fetch, decode ed execute si chiamano UNIT.
 
-Il **Program Counter** è un registro che indica alla CPU qual è l’indirizzo della prossima istruzione da eseguire. o prende l’indirizzo successivo, o se siamo in caso di SALTO va a reimpostare l’indirizzo successivo. Il ciclo inizia proprio con l’istruzione localizzata esattamente nel PC.
+Il **Program Counter** è un registro che indica alla CPU qual è l’indirizzo della prossima istruzione da eseguire. Il ciclo inizia proprio con l’istruzione localizzata esattamente nel PC.
+##### Stack e stack pointer
+**Le esecuzioni effettuate nella CPU vengono affiancate da una struttura esterna, lo stack.**
+Lo stack di esecuzione di un programma è gestito come se fosse una pila, push e pop sempre sulla testa. In questa memoria di appoggio si allocano variabili e vengono inserite nello stack tramite una push, questo fa si che quando la procedura che aveva allocato una variabile finisce vengono fatti dei pop che deallocano quelle locazioni di memoria allocate dalla procedura.
+Alla fine della procedura, lo stack sa quanti elementi deve deallocare e quali sono i valori di ritorno.
 
-Le esecuzioni effettuate nella CPU vengono affiancate da una struttura esterna, lo stack.
+Tutto questo funziona anche per le funzioni ricorsive, infatti si utilizza uno stack per darle vita. Per crearlo, devo avere spazio in memoria e un puntatore alla testa(memorizzato nello **Stack Pointer**).
 
-Lo stack di esecuzione di un programma è gestito come se fosse una pila, push e pop sempre sulla testa. In questa memoria di appoggio alloco variabili(chiesto di istanziare variabile di nome A nella memoria) e viene inserito nello stack tramite un push, questo permette che quando la procedura si chiude(quando la routine dove avevo dichiarato A si chiude) vengono fatti dei pop che deallocano quelle locazioni di memoria allocate nella funzione. A potrebbe anche essere una procedura che ha argomenti( all’interno dello stack vengono memorizzati anche l’indirizzo di ritorno e gli argomenti x e y e inseriti nel frame di attivazione che sto creando in locazioni prefissate)
+Lo **Stack Pointer (SP)** è un registro speciale della CPU che contiene l'indirizzo di memoria dell'ultimo elemento inserito nello stack.
 
-alla fine della procedura, sa quanti elementi deve deallocare e quali sono i valori di ritorno. Ciò accade anche quando una procedura A chiama una procedura B. se A chiama B allora creo frame di attivazione per A e per B e anche per altri successivi che siano C,D ecc.. ma attenzione! il valore di ritorno di C sarà B, di B sarà A e cosi via…
+>[!warning] Le allocazioni di memoria dinamica (la malloc in C) non vengono fatte nello stack ma nello heap
 
-tutto questo funziona anche per la ricorsione, infatti si utilizza uno stack per darle vita. Per crearlo, devo avere spazio in memoria e un puntatore alla testa(memorizzato nello **Stack Pointer**).
+##### PSW - Program Status Word
+Il **PSW** (Program Status Word) è un registro che contiene informazioni relative a istruzioni di controllo, flag condizionali, modalità di esecuzione della CPU
+Il **PSW** è un registro che racchiude lo stato istantaneo del processore. Quando si verifica un evento inaspettato o una richiesta esterna, il contenuto del PSW viene salvato, permettendo al processo interrotto di riprendere l'esecuzione esattamente da dove si era fermato.
 
-Lo **Stack Pointer** è un registro della Cpu che si occupa di portare la CPU nella testa dello stack, registro importante che deve essere presente e lavora a stretto contatto con CALL, RETURN…
-
-(allocazione con new non va nello stack ma nell’heap)
-
-Altro registro importante è il Program Status Word **(PSW)**, o registro di stato, **è un registro hardware fondamentale della CPU che memorizza l’esito dell’ultimo compare attuale di un programma in esecuzione**. Contiene bit di flag che indicano i risultati delle operazioni (es. zero, riporto, overflow) e bit di controllo per la gestione degli interrupt e i privilegi.
-
-La PSW è un'area di memoria o un registro hardware che racchiude lo stato istantaneo del processore. Quando si verifica un evento inaspettato o una richiesta esterna, il contenuto della PSW viene salvato, permettendo al processo interrotto di riprendere l'esecuzione esattamente da dove si era fermato.
-
-Wikipedia
-
-**Componenti tipici:**
-
-- **Condition Codes (CC):** Risultati di operazioni (es. zero, overflow, riporto).
-- **Modalità di Privilegio:** Indica se la CPU opera in modalità "Kernel/Supervisore" o "Utente".
-- **Abilitazione Interrupt:** Bit che attivano o disattivano la ricezione di interrupt esterni.
-- **Program Counter (PC):** Spesso la PSW include o lavora in tandem con il PC, che contiene l'indirizzo della prossima istruzione da eseguire
-
-<aside> 💡
-
-- **Kernel Mode (Supervisore):** La PSW ha un bit impostato che permette l'esecuzione di istruzioni privilegiate (accesso diretto all'hardware, gestione della memoria). </aside>
-
-<aside> 💡
-
-- **User Mode (Utente):** La PSW indica una modalità a privilegi limitati. Se un programma utente cerca di eseguire istruzioni critiche (es. I/O), la CPU verifica la PSW e genera un'eccezione (trap). </aside>
-
-PSW è il registro che permette il **Context Switch** (cambio di contesto):
-
-- **Flag di Condizione:** Fondamentali per le decisioni logiche (se il flag `Zero` è attivo dopo un `compare`, allora le due variabili erano uguali).
-- **Protezione (Kernel vs User Mode):** Questo è il pilastro della sicurezza informatica moderna. Impedisce a un normale programma (User Mode) di "distruggere" il sistema operativo, limitando l'accesso diretto all'hardware
+PSW è quindi il registro che permette il **Context Switch** (cambio di contesto):
 
 ---
 
-**Definizioni:**
-Gli utenti del sistema operativo sono i processi(system call);
+#### Definizioni:
+- Gli utenti del sistema operativo sono i processi;
 
+- Le librerie sono raccolte di codice già scritto e riutilizzabile che possiamo utilizzare, ad esempio anziché andare a costruirsi una struttura dati (heap, pila, lista ecc...) possiamo usare questi sistemi già pronti che altri hanno già creato in precedenza (il vantaggio oltre al tempo risparmiato e ad avere un minor numero di errori è che le istruzioni di libreria sono ottimizzate in modo da avere una complessità il più bassa possibile) 
 
-Le librerie sono raccolte di codice già scritto e riutilizzabile che possiamo utilizzare, ad esempio anziché andare a costruirsi una struttura dati (heap, pila, lista ecc...) possiamo usare questi sistemi già pronti che altri hanno già creato in precedenza (il vantaggio oltre al tempo risparmiato e ad avere un minor numero di errori è che le istruzioni di libreria sono ottimizzate in modo da avere una complessità il più bassa possibile) 
+- L' **interrupt hardware** è simile ad un operazione di TRAP ma differisce per il fatto che l'interrupt è mandato dall'hardware (anziché dal software con la system call), gli interrupt sono un meccanismo che permette di notificare qualcosa alla CPU, interrompe quindi quello che sta facendo in quel momento per eseguire la routine associata all'interrupt (è questo ad esempio il motivo per cui la freccia del mouse è sempre fluida senza mai bloccarsi anche quando il computer è sotto sforzo, perché il mouse lancia un interrupt e si fa riservare un piccolo spazio di esecuzione per essere eseguito senza problemi). La CPU salva il minimo indispensabile per tornare a riprendere quello che stava facendo prima (salvataggio del contesto quindi Program Counter, PSW ecc...) in modo simile alla TRAP, la CPU riprende il suo lavoro. In generale un interrupt non deve procurare problemi, tutto poi deve continuare normalmente.
 
+---
 
-Una **system call** è il meccanismo con cui un programma utente chiede un servizio al sistema operativo, i programmi normali (excel, word, chrome) girano in user mode, quindi non possono accedere direttamente all'hardware o a risorse sensibili, per fare queste operazioni devono chiedere al kernel tramite una system call
-Esempi di system call:
-- usare hardware (tastiera, lettore dischi)
-- allocare memoria 
-- creare processi
+#### Ottimizzazione dei processi nella CPU 
+##### Multithreading
+Tra i vari meccanismi possiamo trovare il **multithreading**, si riferisce all' ottimizzazione di una CPU. Questo escamotage prevede di implementare un doppio contesto di esecuzione all'interno dello stesso core. 
+L'idea è: nel ciclo di decode e execute ci sono tempi morti(quando la CPU deve accedere a locazioni della RAM), nei registri vengono caricati i set di valori associati a due diversi processi: se ho il processo P1 che implica un certo numero di cicli affinché un suo fetch venga concluso, nel tempo morto verranno eseguiti degli step del P2. Sembra una complicazione, ma permette di lavorare su processi diversi in modo più efficace, *ma questa soluzione non è parallelismo*, non ce una doppia CPU, il multithreading viene effettuato sullo stesso core. in un dato istante si attenziona o uno o l'altro processo. Il sistema operativo deve però capire che l' ALU è sempre la stessa evitando di portare a utilizzi strani della risorsa, evitando quindi di bloccare i processi.  
 
-La **TRAP** è un eccezione usata per passare dalla user mode alla kernel mode quando si deve fare una system call generata dal programma in esecuzione
-![[Pasted image 20260311181510.png|590]]
-Si segue questo ordine: il programma è in esecuzione in user mode (CPU in user mode), avviene una system call (inizia la TRAP), quindi la CPU passa in kernel mode si esegue questa system call e poi si ritorna alla user mode. Quando si esegue questo switch la CPU si salva il contesto precedente alla TRAP, in modo da poter ritornare a eseguire correttamente le operazioni una volta tornata in user mode.
-Cosi qualunque processo può fare richiesta al sistema operativo che poi sceglierà se soddisfarla o no.
-
-L' **interrupt hardware** è simile ad un operazione di TRAP ma differisce per il fatto che l'interrupt è mandato dall'hardware (anziché dal software con la system call), gli interrupt sono un meccanismo che permette di notificare qualcosa alla CPU, interrompe quindi quello che sta facendo in quel momento per eseguire la routine associata all'interrupt (è questo ad esempio il motivo per cui la freccia del mouse è sempre fluida senza mai bloccarsi anche quando il computer è sotto sforzo, perché il mouse lancia un interrupt e si fa riservare un piccolo spazio di esecuzione per essere eseguito senza problemi). La CPU salva il minimo indispensabile per tornare a riprendere quello che stava facendo prima (salvataggio del contesto quindi Program Counter ecc...) in modo simile alla TRAP, la CPU riprende il suo lavoro.
-In generale un interrupt non deve procurare problemi, tutto poi deve continuare normalmente.
-
-
-**Ottimizzazione dei processi nella CPU**
-Tra i vari meccanismi possiamo trovare **multithreading**, si riferisce all' ottimizzazione di una CPU. Questo escamotage prevede di implementare un doppio contesto di esecuzione all'interno dello stesso core. 
-L'idea è: nel ciclo di decode execute ci sono tempi morti(quando la CPU deve accedere ad allocazioni vuote della RAM), nei registri vengono caricati i set di valori associati a due diversi processi: se ho il processo P1 che implica un certo numero di cicli affinché un suo fetch venga concluso, nel tempo morto verranno eseguiti degli step del P2. Sembra una complicazione, ma permette di lavorare su processi diversi in modo più efficace, *ma questa soluzione non è parallelismo*, non ce una doppia CPU, il multithreading viene effettuato sullo stesso core. in un dato istante si attenziona o uno o l'altro processo. Il sistema operativo deve però capire che l' ALU è sempre la stessa evitando di portare a utilizzi strani della risorsa, evitando quindi di bloccare i processi.  
-
-
-Un altro sistema sono i **multiprocessori** (*da notare NON multicore*) in cui aggiungo più CPU in modo da poter *parallelizzare* certi processi, accoppiando al multithreading e ad una buona pipeline si può migliorare molto la velocità di esecuzione. Questa scelta è stata fatta perché non si riesce a espandere all'infinito la cache o i registri ne si riescono ad aumentare troppo i GigaHertz della CPU, perché si va incontro a consumi elevati e problemi di surriscaldamento (al massimo si arrivare sui 5.5/6 GHz).
+##### Multiprocessori e multicore
+Un altro sistema sono i **multiprocessori** (*da notare NON multicore*) in cui aggiungo più CPU in modo da poter *parallelizzare* certi processi, accoppiando al multithreading e ad una buona pipeline si può migliorare molto la velocità di esecuzione. Questa scelta è stata fatta perché non si riesce a espandere all'infinito la cache o i registri ne si riescono ad aumentare troppo i GigaHertz della CPU, perché si va incontro a consumi elevati e problemi di surriscaldamento (al massimo si può arrivare sui 5.5/6 GHz).
 Diverso è il discorso del **multicore** in cui anziché avere ad esempio 4 CPU distinte montate sulla scheda madre abbiamo più core (e quindi più ALU) all'interno della stessa CPU, soluzione utilizzata in moltissimi scenari consumer, a differenza invece dei data center che spesso usano anche la tecnica del multiprocessori
 
-**Memorie**
-Memorie che possiamo trovare, dalla più piccola e veloce alla più grande e lenta:
-- Registri: memoria velocissima riesce a stare al passo della CPU è molto piccola (nell'ordine di pochi byte) e contiene i dati che servono ai processi per poter essere eseguiti, si trova dentro la CPU
-- Cache: memoria anch'essa piccola e veloce posizionata dentro la CPU, a differenza dei registri la cache è più capiente (siamo nell'ordine dei MegaByte, le più grandi arrivano sui 100 mega circa) ma anche più lenta dei registri, restando comunque la seconda memoria in termini di velocità e dimensione, la cache è divisa in 3 livelli: L1, L2, L3 rispettivamente il più veloce, quello nella media e il più lento, lo scopo principale della cache è evitare in ogni modo che durante la fase di fetch si debba passare per la RAM (cosa che comunque ogni tanto succede) in modo da evitare bottleneck, utilizzando le linee di cache da 64 byte ciascuna (ovvero quando si prendono dei dati dalla RAM si prendono anche i successivi, perché è molto probabile che quei dati saranno utili a breve, quindi il dato prelevato va nei registri mentre quelli successivi aspettano nella cache: cache hit quando quei dati sono serviti veramente e si è risparmiato tempo, cache miss quando quei dati non sono serviti e bisogna andare di nuovo nella RAM)
-- RAM, memoria principale dell'architettura di Von Neumann, è veloce anche se molto meno di cache e registri ma in compenso è più capiente (ordine di GigaByte) qui risiedono i dati che servono ai processi per poter essere eseguiti.
-- RAM, cache e registri sono memorie volativi ovvero quando il PC viene spento si svuota di tutti i lori dati
-- Memoria di massa, questa memoria comprende vari dispositivi, dischi ottici, hard disk, SSD, pen drive ecc..., sono memorie lente rispetto a quelle volatili ma con diverse velocità in base al dispositivo in uso (SSD è più veloce di HDD), sono memorie usate per immagazzinare i dati, quindi sono non volativi ovvero quando il computer si spegne non perdono il loro contenuto
+---
+
+#### Memorie
+*Memorie che possiamo trovare, dalla più piccola e veloce alla più grande e lenta:*
+- *Registri*: memoria velocissima riesce a stare al passo della CPU è molto piccola (nell'ordine di pochi byte) e contiene i dati che servono ai processi per poter essere eseguiti, si trova dentro la CPU
+- *Cache*: memoria anch'essa piccola e veloce posizionata dentro la CPU, a differenza dei registri la cache è più capiente (siamo nell'ordine dei Megabyte, le più grandi arrivano sui 100 mega circa) ma anche più lenta dei registri, restando comunque la seconda memoria in termini di velocità e dimensione, la cache è divisa in 3 livelli: L1, L2, L3 rispettivamente il più veloce, quello nella media e il più lento, lo scopo principale della cache è evitare in ogni modo che durante la fase di fetch si debba passare per la RAM (cosa che comunque ogni tanto succede) in modo da evitare bottleneck, utilizzando le linee di cache da 64 byte ciascuna (ovvero quando si prendono dei dati dalla RAM si prendono anche i successivi, perché è molto probabile che quei dati saranno utili a breve, quindi il dato prelevato va nei registri mentre quelli successivi aspettano nella cache: cache hit quando quei dati sono serviti veramente e si è risparmiato tempo, cache miss quando quei dati non sono serviti e bisogna andare di nuovo nella RAM)
+- *RAM*: memoria principale dell'architettura di Von Neumann, è veloce anche se molto meno di cache e registri ma in compenso è più capiente (ordine di Gigabyte) qui risiedono i dati che servono ai processi per poter essere eseguiti.
+- **RAM, cache e registri sono memorie volativi ovvero quando il PC viene spento si svuota di tutti i lori dati**
+- *Memoria di massa*: questa memoria comprende vari dispositivi, dischi ottici, hard disk, SSD, pen drive ecc..., sono memorie lente rispetto a quelle volatili ma con diverse velocità in base al dispositivo in uso (SSD è più veloce di HDD), sono memorie usate per immagazzinare i dati, quindi sono **non volatili** ovvero quando il computer si spegne non perdono il loro contenuto.
 - ![[Pasted image 20260311194821.png|544]]
 
+---
 
-**Dispositivi di I/O**
+#### Dispositivi di I/O
 Si individuano 2 componenti:
 - controller -> interfaccia per il SO
 - dispositivo in se
 
-Ad esempio la scheda video è un controller per il display. Un controller è quindi un mini calcolatore dotato di una propria unità di elaborazione e una memoria (le scheda video hanno un chip che esegue calcoli e una propria VRAM), usiamo l'esempio di un Hard Disk:
-Il controller dell' HDD è fisicamente collegato al disco, il controller si occupa di pilotare il motorino del disco e permette di inviare comandi (motore spento o acceso ad esempio), la CPU da se non riesce a comandare questo controllore, ha quindi bisogno di un driver proprietario, sviluppato dall'azienda dell'HDD che permetta di far dialogare bene SO CPU e controllore con la periferica.
+Ad esempio la scheda video è un controller per lo schermo. Un controller è quindi un mini calcolatore dotato di una propria unità di elaborazione e una memoria (le scheda video hanno un chip che esegue calcoli e una propria VRAM), usiamo l'esempio di un Hard Disk:
+Il controller dell' HDD è fisicamente collegato al disco, il controller si occupa di pilotare il motorino del disco e permette di inviare comandi (motore spento o acceso ad esempio), la CPU da se non riesce a comandare questo controllore, ha quindi bisogno di un driver proprietario, sviluppato dall'azienda dell'HDD che permetta di far dialogare bene SO, CPU e controllore con la periferica.
 Quando un controller sta lavorando (ad esempio per cercare un file in un HDD), la CPU deve aspettare che arrivi il risultato, ma anziché stare ferma svolge altri compiti, sarà quindi un interrupt mandato dal controller che segnalerà alla CPU che il dispositivo ha fornito la sua risposta 
 
 ---
 
+#### Tipologie di sistemi operativi
 ![[Pasted image 20260525170924.png|414]]
-Gli ambiti in cui si può sviluppare un sistema operativo sono molteplici: 
+Gli ambiti in cui si può sviluppare un sistema operativo sono molteplici e per questo esistono varie tipologie di SO: 
 
-- MAINFRAME: Si distinguono perché gestiscono risorse più abbondanti, dati enormi. Calcolatori che hanno capacità di gestire risorse con ordini di grandezza molto grandi in cui lo storage, la capacità di calcolo e la memoria sono grandi. Sono storicamente legati a Job non interattivi dove il sistema elabora grandi quantità di transazioni senza l'intervento costante dell'utente. 
+- *MAINFRAME*: Si distinguono perché gestiscono risorse più abbondanti, dati enormi. Calcolatori che hanno capacità di gestire risorse con ordini di grandezza molto grandi in cui lo storage, la capacità di calcolo e la memoria sono grandi. Sono storicamente legati a Job non interattivi dove il sistema elabora grandi quantità di transazioni senza l'intervento costante dell'utente. 
+  - *SERVER*: Evoluzione dei mainframe in ottica di rete. Si sottolinea la necessità di gestire un sistema con capacità sopra la media rispetto ad un personal computer. Devono gestire servizi specifici (web, mail, database) forniti a più utenti, si crea multi utenza. Tali sistemi devono garantire non solo la multi utenza ma anche la reattività, un sistema che deve essere interattivo e reattivo rispetto all'utente. 
 
-- SERVER: Evoluzione dei mainframe in ottica di rete. Si sottolinea la necessità di gestire un sistema con capacità sopra la media rispetto ad un personal computer. Devono gestire servizi specifici (web, mail, database) forniti a più utenti, si crea multi utenza.  Tali sistemi devono garantire non solo la multi utenza ma anche la reattività, un sistema che deve essere interattivo e reattivo rispetto all'utente. 
+- *PERSONAL COMPUTER*: Il SO per eccellenza che punta sull'interattività. Deve massimizzare l'esperienza utente. Parliamo di sistemi multiprogrammati con interfacce grafiche (GUI) complesse. Qui l'algoritmo di scheduling è fondamentale: deve dare l'illusione all'utente che tutti i processi (browser, musica, editor di testo) stiano girando perfettamente in contemporanea. 
 
+- *PALMARI/ SMARTPHONE*: Simili a PC ma hanno dei vincoli. Caratterizzati da sistema interattivo(processi con interfaccia grafica GUI) multiprogrammato quasi sempre mono utente. La gestione da parte del sistema operativo nello sfruttamento delle risorse è necessario soprattutto quando incontriamo problemi derivanti anche da app (ES: risparmio energetico). L'interattività esasperata dal touch screen richiede tempi di risposta più rapidi, necessita di un ulteriore grado di interattività. 
 
-- PERSONALCOMPUTER: Il SO per eccellenza che punta sull'interattività. Deve massimizzare l'esperienza utente. Parliamo di sistemi multiprogrammati con interfacce grafiche (GUI) complesse. Qui l'algoritmo di scheduling è fondamentale: deve dare l'illusione all'utente che tutti i processi (browser, musica, editor di testo) stiano girando perfettamente in contemporanea. 
+- *SISTEMI EMBEDDED (INTEGRATI)*: Hanno analogie con i personal computer. Si tratta di sistemi che troviamo a casa (ES: vecchie tv, router, stampanti ecc...). La struttura interna è quella di un calcolatore con la presenza di più processi , troviamo un SO simile a quello dei computer, in cui la differenza principale è che sono sistemi SEMI-CHIUSI: non sono progettati per installare qualsiasi app (come un PC), ma per eseguire un set di processi predefinito e prevedibile. Alcuni hanno anche risorse limitate da gestire con pochi KB o MB di memoria. 
 
-In Sistemi interattivi rientra sia server che personal computer, algoritmi scheduling decide quale scegliere per ogni processo, influenza il tipo di servizio , ci sono algoritmi pensati per ambiti interattivi. Sono multiprogrammati , multi utente. 
+- *SISTEMI REAL TIME*: Qui non conta solo cosa fa il sistema, ma quando lo fa. La correttezza del sistema dipende dal rispetto dei tempi (deadline). Hanno un compito ben specifico (es. macchinari industriali ,robot, catena di lavoro/ assemblaggio) è un sistema multiprogrammato ma hanno peculiarità in termini di esigenze, già il nome ne specifica l'esigenza (reattività in tempo reale), può essere considerato un sistema vicino all'interattività ma in realtà si basa sulle tempistiche di reazione dei processi (es. sensore che monitora posizione) per cui deve scattare una reazione ben precisa. I sistemi interattivi non sempre permettono di reagire nei momenti in cui serve, se questo accade su sistemi real time non si soddisfano le garanzie premesse e si può andare incontro a problemi non accettabili, non ci sono tolleranze rispetto alla reattività. possiamo fare un a distinzione tra due tipi di di sistemi real-time: 
 
-esempi passati spesso hanno so comuni con alcune eccezioni, caratteristica di poter gestire le proprie risorse pe piu utenti e quindi più processi, i sistemi devono funzionare a prescinder da tutto 
+| TIPO           | DESCRIZIONE                                                                            | ESEMPIO                                         |
+| -------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| HARD REAL-TIME | Le deadline e le<br>condizioni/reazioni sono<br>imprescindibili.                       | airbag, ABS, sistemi di razzi spaziali e aerei. |
+| SOFT REAL-TIME | Le scadenze sono importanti<br>ma dei ritardi occasionali<br>possono essere tollerati. | lettore multimediale.                           |
 
-- PALMARI/ SMARTPHONE: Simili a PC ma hanno dei vincoli. Caratterizzati da sistema interattivo(processi con interfaccia grafica GUI) multiprogrammato quasi sempre mono utente. La gestione da parte del sistema operativo nello sfruttamento delle risorse è necessario soprattutto quando incontriamo problemi derivanti anche da app �ES: risparmio energetico). Utilizzano sistemi di sicurezza e permessi molto rigidi per isolare un'app da un'altra. L'interattività esasperata da touch richiede tempi di risposta più rapidi, necessita di “ un ulteriore grado di interattività “. 
-
-- SISTEMI EMBEDDED (INTEGRATI): Hanno analogie con i personal computer. Si tratta di sistemi che troviamo a casa (ES: tv, router, stampanti ecc...). La struttura interna è quella di un calcolatore con la presenza di più processi , troviamo un SO simile a quello dei computer, in cui la differenza principale è che sono sistemi SEMI-CHIUSI: non sono progettati per installare qualsiasi app (come un PC), ma per eseguire un set di processi predefinito e prevedibile. Hanno anche risorse limitate da gestire con pochi KB o MB di memoria. 
-
-- SISTEMIREAL TIME: Qui non conta solo cosa fa il sistema, ma quando lo fa. La correttezza del sistema dipende dal rispetto dei tempi (deadline). Hanno un compito ben specifico (es. macchinari industriali ,robot, catena di lavoro/ assemblaggio) è un sistema multiprogrammato ma hanno peculiarità in termini di esigenze, già il nome ne specifica esigenza (reattività in tempo reale), può essere considerato un sistema vicino all'interattività ma in realtà si basa sulle tempistiche di reazione dei processi (es. sensore che monitora posizione) per cui deve scattare una reazione ben precisa. I sistemi interattivi non sempre 
-
-
-permettono di reagire nei momenti in cui serve, se questo accade su sistemi - real time non si soddisfano le garanzie premesse e si può andare incontro a problemi non accettabili, non ci sono tolleranze rispetto alla reattività. 
-
-possiamo fare un a distinzione tra due tipi di di sistemi real-time: 
-
-| TIPO           | DESCRIZIONE                                                                            | ESEMPIO                   |
-| -------------- | -------------------------------------------------------------------------------------- | ------------------------- |
-| HARD REAL-TIME | Le deadline e le<br>condizioni/reazioni sono<br>imprescindibili.                       | airbag,controllo reattori |
-| SOFT REAL-TIME | Le scadenze sono importanti<br>ma dei ritardi occasionali<br>possono essere tollerati. | lettore multimediale      |
-
-
-
-A differenza dei sistemi desktop che usano lo scheduling  (il SO toglie forza alla - CPU), molti sistemi Real Time usano un approccio collaborativo: il processo usa la CPU per il tempo strettamente necessario e poi la rilascia volontariamente. 
+A differenza dei sistemi desktop che usano lo scheduling in cui il SO da e toglie CPU quasi in continuazione ai processi, molti sistemi Real Time usano un approccio collaborativo: il processo usa la CPU per il tempo strettamente necessario e poi la rilascia volontariamente. 
 
 ---
+
+**FINE INTRODUZIONE**
 
 ![[Pasted image 20260525170942.png|488]]
 ## STRUTTURA DI UN SISTEMA OPERATIVO 
