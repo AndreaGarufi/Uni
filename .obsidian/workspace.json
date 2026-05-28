@@ -6,6 +6,7 @@
       {
         "id": "882307d74567adee",
         "type": "tabs",
+        "dimension": 49.38080495356037,
         "children": [
           {
             "id": "15b7ff51d151a951",
@@ -20,21 +21,27 @@
               "icon": "lucide-file",
               "title": "SISTEMI-COMPLETO"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "c5f0dd275464bcc9",
+        "type": "tabs",
+        "dimension": 50.61919504643962,
+        "children": [
           {
             "id": "d5b57de73f2a811e",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-lab.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "SO-lab"
+              "title": "Riassunto_Github"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -180,8 +187,9 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "3216613356f858dc",
+  "active": "d5b57de73f2a811e",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-lab.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-05-20.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-04-02.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-02-23.pdf",
@@ -192,7 +200,6 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-09-12.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-07-17.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-04-17.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-07-02.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/photo_5814423968692243958_y.jpg",
     "UNI/Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_115903_Samsung Notes.jpg",
