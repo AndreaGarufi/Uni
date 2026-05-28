@@ -416,42 +416,38 @@ Approfondiamo il punto 2:
 ##### Ciclo di vita di un processo
 ![[Pasted image 20260317162204.png|500]]
 1. **new**: il processo viene inizializzato
-2. **ready**: il processo è pronto ad essere eseguito dalla CPU, viene messo in una *coda dei processi* è il sistema operativo a scegliere quale processo in fase di ready eseguire
+2. **ready**: il processo è pronto ad essere eseguito dalla CPU, viene messo in una *coda dei processi* è il sistema operativo (scheduler in particolare) a scegliere quale processo in fase di ready eseguire
 3. **running**: Il processo che si trova nella coda dei processi viene scelto dal sistema operativo e viene eseguito 
-4. **blocked**: il processo in stato di running esegue una chiamata di input/output molto lenta, il processo è bloccato perché sta aspettando la risposta di questa chiamata, quello che succede praticamente è che il sistema operativo lo tira fuori dalla coda dei processi a causa di questa cosa quest'ultimo entra nello stato di blocked, appena la chiamata di sistema rientra il processo diventa ready.
+4. **blocked**: il processo in stato di running esegue una chiamata di input/output molto lenta (system call), il processo è bloccato perché sta aspettando la risposta di questa chiamata, quello che succede praticamente è che il sistema operativo lo tira fuori dalla coda dei processi a causa di questa cosa quest'ultimo entra nello stato di blocked, appena la chiamata di sistema rientra il processo diventa ready.
 5. **terminated**: il processo ha finito, tutte le sue risorse sono state liberate.
 
-
+**Tempo di CPU per ogni processo e prelazione**
 Se un processo non effettua operazioni di I/O rischia di monopolizzare la CPU. Per evitare che questo accada esiste la **prelazione**: un'operazione tramite la quale il Sistema Operativo sposta il processo dallo stato di _running_ a quello di _ready_. Questo avviene quando il processo ha esaurito la quantità massima di tempo CPU che gli era stata assegnata, ed è innescato direttamente tramite un *interrupt*.
 
-quando cambia il processo in esecuzione parliamo di cambio di contesto di esecuzione, questo viene fatto dall'operazione di **dispatch** gestita dal dispacher che è quell'unità del SO che gestisce il controllo della CPU da parte dei processi consegnandolo al processo che deve essere eseguito, lo scheduler invece è l'algoritmo che si occupa di scegliere quale processo deve essere eseguito
+Quando cambia il processo in esecuzione parliamo di cambio di contesto di esecuzione (context switch), questo viene fatto dall'operazione di **dispatch** gestita dal dispacher che è quell'unità del SO che gestisce il controllo della CPU da parte dei processi consegnandolo al processo che deve essere eseguito, lo scheduler invece è l'algoritmo che si occupa di scegliere quale processo deve essere eseguito
 
-###### Tabella dei processi
+| **Caratteristica**     | **Scheduler (CPU Scheduler)**                                        | **Dispatcher**                                                 |
+| ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Compito principale** | **Seleziona** un processo dalla _Ready Queue_.                       | Effettua il **Context Switch** (cambio di contesto).           |
+| **Obiettivo**          | Massimizzare l'efficienza (Throughput, Turnaround time).             | Minimizzare la **Dispatch Latency**. (tempo di context switch) |
+
+##### Tabella dei processi
 All'interno della tabella dei processi troviamo vari PCB, in un PCB come dicevamo prima troviamo le seguenti informazioni
 ![[Pasted image 20260317165352.png|267]]
-Queste informazioni vengono usate in diversi modi, sopratutto nella gestione degli interrupt.  Di seguito la gestione degli interrupt per il passaggio da un processo ad un altro:
-- salvataggio nello stack del PC e del PSW nello stack attuale;
-- caricamento dal vettore degli interrupt l'indirizzo della procedura associata;
-- salvataggio registri e impostazione di un nuovo stack;
-- esecuzione procedura di servizio per l'interrupt;
-- interrogazione dello scheduler per sapere con quale processo proseguire;
-- ripristino dal PCB dello stato di tale processo (registri, mappa memoria);
-- ripresa nel processo corrente.
+Queste informazioni vengono usate in diversi modi, sopratutto nella gestione degli interrupt per il cambio di contesto. 
 
-
-> [!TIP]
-> Il **PSW** (acronimo di **Program Status Word**, o a volte _Processor Status Word_) è un registro hardware fondamentale all'interno della CPU che descrive lo stato attuale del processore in un determinato istante.
-
-###### Code e accodamento
+##### Code e accodamento
 Di seguito la gestione delle code all'interno della CPU durante l'esecuzione dei processi
 ![[Pasted image 20260317170122.png|500]]
-Vediamo che per ogni caso abbiamo abbiamo una coda:
+Vediamo che per ogni caso abbiamo una coda:
 - I/O queue/request: la coda di tutti i processi blocked a causa di operazoni di input/output
 - time slice expired: la coda di tutti quei processi che "consumano" tutta la time slice
 - fork a child: qua troviamo tutti i processi che hanno bisogno di tempo per forkarsi 
 vediamo che tutto converge nella coda dei processi ready, da qui il sistema operativo pesca il processo da eseguire
 
-###### Thread
+---
+
+#### Thread
 All'interno di un processo si possono avere più flussi di esecuzione, questi flussi sono i thread (lightweight processes). 
 Ad esempio se ho il processo di brave browser ci sarà un thread che gestisce la visualizzazione delle pagine, un altro che gestisce l'animazione della barra di ricerca.
 Questo implica che la nostra CPU è formata da più CPU virtuali. Usare i thread ha dei benefici sopratutto durante lo stato "blocked" infatti al posto di bloccare tutto il processo si blocca solo lo specifico thread che fa l'operazione I/O.
