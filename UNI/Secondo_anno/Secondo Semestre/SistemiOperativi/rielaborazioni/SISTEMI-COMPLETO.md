@@ -456,7 +456,7 @@ Di seguito la differenza tra uso e non uso di thread
 ![[Pasted image 20260317174247.png|500]]
 Come possiamo notare un Thread è caratterizzato da:
 - Program Counter, registri, stack, stato
-e poi condivide tutto il resto con gli altri thread, nell'immagine vediamo che sia il codice, i dati e il file vengono condivisi. La condivisione dei dati crea dei bug se il programmatore non è molto abile nella programmazione concorrente
+e poi condivide tutto il resto con gli altri thread, nell'immagine vediamo che sia il codice, i dati e i file vengono condivisi. La condivisione dei dati crea dei bug se il programmatore non è molto abile nella programmazione concorrente
 
 > [!TIP] Vita del thread
 > Possiamo dire che i thread vivono dentro lo stesso processo, in pratica condivido lo spazio di indirizzamento del processo.
@@ -466,7 +466,7 @@ e poi condivide tutto il resto con gli altri thread, nell'immagine vediamo che s
 **Operazioni**: sui thread possiamo fare diverse operazioni necessarie per gestirli
 - *thread_create*: un thread ne crea un altro;
 - *thread_exit*: il thread chiamante termina;
-- *thread_join*: un thread si sincronizza con la fine di un altro thread, questa cosa è utile in alcuni casi, lo vedremo al lab.
+- *thread_join*: un thread si sincronizza con la fine di un altro thread, questa cosa è utile in alcuni casi.
 - *thread_yield*: il thread chiamante rilascia volontariamente la CPU.
 
 ---
