@@ -375,42 +375,45 @@ Esistono due tipi di Hypervisor:
 
 ---
 
-### Processi
+#### Processi
 
 ###### Definizione di processo
-Il processo è un istanza di un programma in memoria, ogni processo ha il proprio spazio di indirizzamento, questo è composto dalle seguenti cose
-- *codice*(text nell'img): questa è l'unica parte in comune tra due processi
-- *dati*: strutture statiche che hanno valore sempre (delle variabili valorizzate sin dall'avvio del programma) si trova vicino al codice perché anche questi dati vengono caricati in memoria insieme al codice
+Il processo è un istanza di un programma in memoria, ogni processo ha il proprio spazio di indirizzamento, il processo è composto dalle seguenti:
+- *codice*(text nell'img): il codice eseguibile
+- *dati*: strutture statiche che hanno valore (ci sono le variabili inizializzate sin dall'avvio del programma) si trova vicino al codice perché anche questi dati vengono caricati in memoria insieme al codice
 - *stack*: una struttura di supporto al processo, in pratica una memoria che gestisce le chiamate a funzione e la gestione delle variabili statiche
-- *heap*: memoria dinamica in cui vengono allocate le variabili dinamiche (classi, oggetti, malloc, new)
+- *heap*: memoria dinamica in cui vengono allocate le variabili dinamiche (classi, oggetti, malloc, new).
 
 ![[Pasted image 20260317180000.png|283]]
 > [!TIP]
-> Usiamo lo heap perché quando si ha un ritorno di una funzione nello stack tutte le variabili allocate vengono eliminate questo non succede con le cose allocate nello heap, che restano fisse fino a quando il programmatore non le elimina
+> Usiamo lo heap perché quando si ha un ritorno di una funzione nello stack tutte le variabili allocate vengono eliminate questo non succede con le cose allocate nello heap, che restano fisse fino a quando il programmatore non le elimina o il processo si chiude
 
 Per ogni processo abbiamo un **Process Control Block** dove sono contenuti diversi metadati, tutti i **PCB** si trovano dentro *una tabella dei processi* (nella realtà non è una tabella ma spesso è un albero rosso nero) ognuno è identificato univocamente. Tra i metadati troviamo diverse informazioni come lo stato del processo, i file aperti, la copia dei valori che deve usare nei registri(quando viene eseguito questi valori vengono caricati nei registri), processi imparentati e allarmi pendenti(interrupt/segnali)
 
-###### Modelli dei processi
+**Pseudo-Parallelismo dei processi**
 ![[Pasted image 20260319153905.png|622]]
-Se si dispone di una sola CPU questa può elaborare un solo processo alla volta, anche se poi nell'uso quotidiano i processi da eseguire sono molti di più, allora la CPU crea delle CPU virtuali usate per dare l'idea che ogni processo abbia la sua CPU personale, questo si chiama *pseudo-parallelismo* perché appunto da l'idea di parallelizzare i processi quando in realtà non lo fa, semplicemente li esegue in maniera ottimizzata saltando da processo a processo in base a dipendenze e altro, questo comunque ne migliora la velocità di esecuzione globale
+Se si dispone di una sola CPU questa può elaborare un solo processo alla volta, anche se poi nell'uso quotidiano i processi da eseguire sono molti di più, allora la CPU crea delle CPU virtuali usate per dare l'idea che ogni processo abbia la sua CPU personale, questo si chiama *pseudo-parallelismo* perché appunto da l'idea di parallelizzare i processi quando in realtà non lo fa, semplicemente li esegue in maniera ottimizzata saltando da processo a processo in base a dipendenze e altro, questo comunque ne migliora la velocità di esecuzione globale. Un ragionamento simile vale anche per altre risorse, in generale il processo ha l'impressione di avere CPU e memoria (virtualmente) infinite.
 
-###### Creazione e terminazione dei processi
-**Creazione di un processo processo**: Ogni processo ha un PID che è un codice univoco, il processo viene creato in fase di inizializzazione del sistema oppure viene creato un per azione dell'utente, questo viene fatto attraverso 2 metodologie 
+##### Creazione e terminazione dei processi
+**Creazione di un processo processo**: Ogni processo ha un PID che è un codice univoco. *La creazione di un processo può avvenire in 4 principali circostanze:*
+1) All'avvio del sistema (boot).
+2) Da parte di un processo padre (fork,exec,ecc...).
+3) Per azione dell'utente.
+4) Inizio di un job nei sistemi batch.
+
+Approfondiamo il punto 2:
 - **sdoppiamento del padre**: 
 	- usando fork un comando UNIX che crea un nuovo processo clonando il padre
 	- usando exec un comando UNIX che esegue un programma all'interno dello spazio di indirizzamento del processo chiamante, in pratica cancella tutte le informazioni del processo chiamante e inizializza al suo interno il nuovo processo (non crea un nuovo processo, semplicemente libera lo spazio usato da quello chiamante e in quello spazio vuoto esegue il processo nuovo)
-- **nuovo processo**: usando CreateProcess, un comando specifico per windows che prende 10 argomenti e crea un nuova entità con PID (Process ID) diverso, uno dei tanti argomenti indica il path del percorso dell'eseguibile
+- **nuovo processo**: usando CreateProcess, un comando specifico per windows che prende 10 argomenti e crea un nuova entità con PID (Process ID) diverso.
 
-fork e exec usate in un certo modo possono riprodurre il funzionamento di CreateProcess
 
-**Terminazione del processo**: esistono diverse modi per terminare un processo:
-- uscita normale: exit o ExitProcess, è il processo stesso che chiede al sistema operativo di voler terminare
-- uscita su errore
-- kill (UNIX) o TerminateProcess (windows) da parte di un altro processo (ad esempio quando chiudiamo una finestra con la X della GUI)
+**Terminazione del processo**: esistono diversi modi per terminare un processo:
+- *Uscita normale*: exit o ExitProcess, è il processo stesso che chiede al sistema operativo di voler terminare
+- *Uscita su errore*: il programma riconosce che c'è un errore e termina volontariamente.
+- *Terminato da un altro processo*: kill (UNIX) o TerminateProcess (windows) da parte di un altro processo (ad esempio quando chiudiamo una finestra con la X della GUI). Abbiamo soft-kill e hard-kill: il primo manda un segnale di terminazione, hard kill invece uccide "senza pietà" (ad esempio il termina attività del gestione attività)
 
-esiste soft-kill e hard-kill: il primo manda un segnale di terminazione, hard kill invece uccide "senza pietà" (ad esempio il termina attività del gestione attività)
-
-###### Stato di un processo
+##### Ciclo di vita di un processo
 ![[Pasted image 20260317162204.png|500]]
 1. **new**: il processo viene inizializzato
 2. **ready**: il processo è pronto ad essere eseguito dalla CPU, viene messo in una *coda dei processi* è il sistema operativo a scegliere quale processo in fase di ready eseguire
