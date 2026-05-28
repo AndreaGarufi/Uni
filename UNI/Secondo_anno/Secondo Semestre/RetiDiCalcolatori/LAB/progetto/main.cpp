@@ -180,7 +180,6 @@ void NetworkAccess::riceviPacchetto(Packet pacchetto){
     frame.push_back(Frame(pacchetto));
 }
 
-
 class Application{
 
     public:
@@ -252,7 +251,6 @@ public:
     nodo* next;
 };
 
-
 class Coda{
     private:
         nodo* head;
@@ -322,7 +320,6 @@ void InterNetwork::inviaNetwork(){
     }
     coda.stampa();
 }
-
 
 int main(){
 

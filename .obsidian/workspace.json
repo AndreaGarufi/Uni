@@ -6,7 +6,6 @@
       {
         "id": "882307d74567adee",
         "type": "tabs",
-        "dimension": 47.58203799654577,
         "children": [
           {
             "id": "15b7ff51d151a951",
@@ -21,27 +20,21 @@
               "icon": "lucide-file",
               "title": "SISTEMI-COMPLETO"
             }
-          }
-        ]
-      },
-      {
-        "id": "838d1ee7b24f422e",
-        "type": "tabs",
-        "dimension": 52.41796200345423,
-        "children": [
+          },
           {
-            "id": "07d6241d97994e8d",
+            "id": "d5b57de73f2a811e",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-lab.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Riassunto_Github"
+              "title": "SO-lab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -187,12 +180,20 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "15b7ff51d151a951",
+  "active": "3216613356f858dc",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-05-20.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-04-02.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-02-23.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-01-27.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-12-05.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-09-17.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-09-29.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-09-12.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-07-17.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-04-17.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-07-02.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/photo_5814423968692243958_y.jpg",
     "UNI/Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_115903_Samsung Notes.jpg",
     "UNI/Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_110943_Samsung Notes.jpg",
@@ -206,13 +207,9 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260525171650.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/3_12_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/1_5_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande esame.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/3_Transport_N.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/1_Summary_N.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Capitolo 3.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Capitolo 2.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Capitolo 1.md",
@@ -220,9 +217,6 @@
     "UNI/Callouts.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 16.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-02.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-03.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/13_12_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/12_5_maggio.md",
