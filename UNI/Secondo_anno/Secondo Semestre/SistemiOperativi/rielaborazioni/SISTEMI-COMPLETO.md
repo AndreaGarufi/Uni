@@ -669,7 +669,8 @@ Per il corretto funzionamento, bisogna fare in modo che *down* e *up* siano atom
 Esistono diversi **tipi di semaforo**: 
 - **Numerico**: S assume valori tra 1 e N, e si presta a problemi di conteggio delle risorse, bloccando il thread quando questo esaurisce la risorsa
 - **Mutex**: è un semaforo in cui S assume valori tra 0 e 1, usato come flag per garantire la mutua esclusione
-  
+- Alcuni sistemi operativi gestiscono anche i **Futex** (fast mutex) che gestiscono in maniera migliore *down* e *up*, che normalemente sono delle chiamate di sistema qui sono gestite a livello utente migliorandone le performance
+
 Soluzione per il problema di produttore-consumatore
 ![[Pasted image 20260327123503.png|612]]
 
@@ -697,7 +698,7 @@ Garantiscono prestazioni eccellenti riducendo drasticamente le costose chiamate 
 - **Libreria utente:** Tenta di acquisire il lock usando istruzioni hardware atomiche (come le TSL o XCHG viste prima). Se il lock è libero, lo prende e ritorna istantaneamente. Non essendoci chiamate al sistema operativo, l'operazione è velocissima.
 - **Servizio kernel:** Interviene **solo** in caso di contesa. Se la libreria utente trova il lock già occupato, effettua una chiamata a sistema per chiedere al kernel di bloccare il processo (mettendolo in _sleep_) e accodarlo finché la risorsa non si libera.
 
-### Monitor
+#### Monitor
 Sono delle astrazioni di alto livello disponibili su alcuni linguaggi, che offrono una gestione semplice della mutua esclusione, che sollevano il programmatore della responsabilità di usare bene i mutex.
 
 > [!TIP]
@@ -705,15 +706,10 @@ Sono delle astrazioni di alto livello disponibili su alcuni linguaggi, che offro
 
 Quando i linguaggi di programmazione introducono i monitor molto spesso integrano anche una gestione autonoma dei thread, per garantire la sincronizzazione il monitor crea una variabile condizione sulla quale esercita i *wait* e *signal* (simili a sleep e wake up)
 
- - fatta da Haore (so solo che non è stata mai implementata)
- - Mesa: implementazione usata anche da Java
- - concurrent Pascal: nessuna la usa, ma usa un approccio diverso
-
-
 Di seguito la soluzione dei produttori-consumatori ma usando i monitor
-![[Pasted image 20260326172735.png|500]]
+![[Pasted image 20260326172735.png|703]]
 
-### Scambio messaggi tra processi
+#### Scambio messaggi tra processi
 Questo approccio utilizza due primitive ad alto livello fornite dal sistema operativo: **`send(destination,message)`** e **`receive(source,message)`**.
 I concetti chiave da ricordare sono tre:
 - **Sincronizzazione implicita (Blocchi):** La `receive` è tipicamente _bloccante_: se non ci sono messaggi da leggere, il processo si mette in attesa. Anche la `send` può esserlo: se assumiamo che ci sia un **buffer** di appoggio con capienza finita _N_, e questo buffer è pieno, chi spedisce si blocca finché non si libera spazio.
@@ -725,10 +721,8 @@ I concetti chiave da ricordare sono tre:
 
 ---
 
-
-
-### Problema dei 5 filosofi
-Ciascuno di questi filosofi può mangiare o può pensare, per mangiare richiede due forchette (risorse), le forchette sono una per ogni filosofo e sono tutte condivise. Per risolvere questo problema abbiamo diverse soluzioni (è importante usare 5 filosofi, perché 5 è il numero minimo di filosofi che ci permettono di trovare una soluzione generalizzabile)
+#### Problema dei 5 filosofi
+Ciascuno di questi filosofi può mangiare o può pensare, per mangiare richiede due forchette (risorse), le forchette sono una per ogni filosofo e sono tutte condivise. Per risolvere questo problema abbiamo diverse soluzioni.
 ![[Pasted image 20260413150630.png|250]]
 
 ###### Soluzioni generali
@@ -752,27 +746,29 @@ Questa procedura non è esente da difetti. Se tutti i filosofi diventano affamat
 - **Soluzione 4:** La soluzione più elegante e robusta prevede l'utilizzo di primitive di sincronizzazione, come un semaforo o un monitor.
 
 ###### Codice usando un semaforo mutex
-Di seguito lo pseudocodice di una soluzione usando un semaforo mutex
+Di seguito lo pseudocodice della soluzione usando un semaforo mutex
 ![[Pasted image 20260409155222.png|700]]
-1. Inizializzazione e Variabili Globali (In alto a sinistra):
+1. Inizializzazione e Variabili Globali :
    In questa sezione vengono definiti i parametri del sistema:
 	- **Stati:** Ogni filosofo può essere in uno di tre stati: `THINKING` (pensa), `HUNGRY` (vorrebbe mangiare) o `EATING` (possiede le forchette e mangia).
 	- **Semaforo `mutex`:** Garantisce l'**esclusione mutua** quando si accede o si modifica l'array degli stati.
 	- **Semafori `s[N]`:** Un semaforo per ogni filosofo. Vengono usati per "bloccare" un filosofo se le forchette non sono disponibili.
-2. Funzione `philosopher` (Al centro a sinistra):
+2. Funzione `philosopher`:
    Rappresenta il **ciclo di vita infinito** di ogni singolo processo (filosofo). È strutturato in una sequenza logica: il filosofo pensa, cerca di prendere le forchette (`take_forks`), mangia e infine le posa (`put_forks`) per ricominciare il ciclo.
-3. Funzioni di Gestione Forchette (A destra)
+3. Funzioni di Gestione Forchette:
 	- **`take_forks(i)`:** Il filosofo dichiara di avere fame e prova a mangiare chiamando `test(i)`. Se i vicini non stanno mangiando, passa a `EATING`. Altrimenti, si blocca sull'istruzione `down(s[i])` finché un vicino non lo "sveglia".
 	- **`put_forks(i)`:** Dopo aver mangiato, il filosofo torna a pensare. Fondamentalmente, chiama `test` sui suoi vicini (`left` e `right`) per vedere se la sua azione di posare le forchette permette a uno di loro (che era in attesa) di iniziare a mangiare.
   4. Logica di Controllo e Vicinato (In basso)
 	- **`left` / `right`:** Funzioni matematiche (usando l'operatore modulo N) per identificare correttamente i vicini in un tavolo circolare.
 	- **`test(i)`:** È il cuore della logica. Verifica se il filosofo i è affamato e se **entrambi** i suoi vicini non stanno mangiando. Se queste condizioni sono vere, lo stato diventa `EATING` e viene inviato un segnale (`up`) al semaforo del filosofo per sbloccarlo.
+
 ###### Codice usando un monitor 
-![[Pasted image 20260409161642.png|500]]
-Questa è un implementazione è molto simile a quella fatta con il semaforo l'unica differenza è che qui sarà il sistema operativo a garantire l'accesso singolo al monitor e quindi alla gestione degli stati
+![[Pasted image 20260409161642.png|679]]
+Questa è un implementazione è molto simile a quella fatta con il semaforo l'unica differenza è che qui sarà il sistema operativo a garantire l'accesso singolo al filosofo grazie al monitor e quindi alla gestione degli stati
 
+---
 
-### Problema dei lettori-scrittori
+#### Problema dei lettori-scrittori
 Questo problema riguarda processi o thread che devono accedere ad una stessa risorsa (come potrebbe essere una tabella di un database o un'area di memoria):
 Abbiamo i lettori che hanno solamente bisogno di leggere i dati in quella locazione e gli scrittori che invece sovrascrivono quei dati: si capisce quindi che la sincronizzazione tra questi processi sia fondamentale per evitare problemi.
 
