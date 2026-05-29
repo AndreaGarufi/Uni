@@ -769,30 +769,25 @@ Questa è un implementazione è molto simile a quella fatta con il semaforo l'un
 ---
 
 #### Problema dei lettori-scrittori
-Questo problema riguarda processi o thread che devono accedere ad una stessa risorsa (come potrebbe essere una tabella di un database o un'area di memoria):
+Questo problema riguarda processi o thread che devono accedere ad una stessa risorsa.
 Abbiamo i lettori che hanno solamente bisogno di leggere i dati in quella locazione e gli scrittori che invece sovrascrivono quei dati: si capisce quindi che la sincronizzazione tra questi processi sia fondamentale per evitare problemi.
 
 **Soluzione basata sui semafori**
-
 ![[Pasted image 20260415130950.png|635]]
-
 *Problema*
 Il problema in questa soluzione è che i lettori hanno priorità assoluta e gli scrittori potrebbero non entrare mai perché mentre un lettore sta già leggendo ne potrebbe entrare un altro aumentando rc di 1 e quindi quando il primo ha finito di leggere rc sarà ancora 1 (perché era 2) e a questo punto il ciclo potrebbe continuare se entra un altro lettore, questo perché i lettori possono entrare in continuazione bloccando la risorsa per gli scrittori praticamente all'infinito 
 
 **Soluzione basata sui monitor**
-
-![[Pasted image 20260415133134.png|625]]
+![[Pasted image 20260415133134.png|717]]
 
 Questa soluzione funziona perché sia lettori che scrittori gestiscono bene l'uso della risorsa senza dare priorità solo ad uno o solo all'altro
 
-### Scheduling
+## **Scheduling**
 La scelta di quali processi va avviato viene fatta dallo scheduler, in pratica sceglie dalla coda dei processi pronti. Quindi lo scheduler entra in gioco alla terminazione o creazione di un processo, quando ci sono degli interrupt o si verificano chiamate bloccanti come l' I/O
-Per fare ciò i processi si dividono in due tipi: 
+Per fare ciò i processi si dividono in due tipi:
 - processi *CPU bounded*: un processo che usa principalmente la CPU 
 - processi *I/O bounded*: un processo che fa principalmente operazioni di input/output
-quello che fa lo scheduler è inserire tutti i processi I/O bound dentro la CPU in modo da avviare tutte le operazioni di I/O che sono lente, mentre aspetta una risposta avvia i processi CPU bounded, una volta che questi sono finiti riprende l'esecuzione dei processi I/O bounded che a quel punto avranno quasi sicuramente finito
-
-**Dispatcher**: è l'esecutivo dello scheduler, dopo aver fatto le scelte il dispatcher le mette in atto, il tempo che ci mette il dispatcher per fare le cose si chiama: *latenza di dispatcher*
+quello che fa lo scheduler generalmente è inserire tutti i processi I/O bound dentro la CPU in modo da avviare tutte le operazioni di I/O che sono lente, mentre aspetta una risposta avvia i processi CPU bounded, una volta che questi sono finiti riprende l'esecuzione dei processi I/O bounded che a quel punto avranno quasi sicuramente finito
 
 ---
 
@@ -801,19 +796,17 @@ CPU BURST -> indica il tempo in cui la CPU è impegnata a fare i calcoli di un p
 
 La parte vuota significa che sta aspettando il risultato di un operazione di I/O quindi magari la CPU va a svolgere altri compiti di altri processi
 
-### Obiettivi degli algoritmi di scheduling
+---
 
-Per trovare un algoritmo ottimale andremo a definire diverse metriche, queste saranno utili per definire degli algoritmi ottimali.
+#### Obiettivi degli algoritmi di scheduling
+Tutti gli scheduler hanno almeno questo obbiettivo in comune:
+- Equità nell'assegnamento della CPU 
 
 Definiamo diversi ambienti: batch, interattivi e real-time, questo perché in base allo scopo che devono perseguire i sistemi operativi si differenziano tra loro quindi lo farà anche lo scheduler:
 
 1) I sistemi *Batch* sono sistemi progettati per svolgere un grande lavoro in blocco senza molta interazione con l'utente: ad esempio un super computer che elabora una simulazione, gli vengono forniti tutti i dati e il computer parte a svolgere il suo lavoro
 2) I sistemi *Interattivi* sono quelli più comuni e devono interagire molto con l'utente (botta e risposta) sono i sistemi operativi dei cellulari o dei personal computer
 3) I sistemi *Real-time* sono sistemi che non hanno molta interazione con l'utente e la caratteristica principale e la velocità e il rispetto delle scadenze temporali: ad esempio il sistema che gestisce tutti i controlli elettronici di un auto come l'ABS che deve rispondere in maniera tempestiva oppure il pilota automatico di un aereo
-
- *Obiettivi comuni tra i sistemi:* 
- - equità nell'assegnazione della CPU; 
- - bilanciamento nell'uso delle risorse; 
  
  ● Obiettivi tipici dei sistemi batch: 
  - massimizzare il throughput (o produttività); 
@@ -827,14 +820,11 @@ Definiamo diversi ambienti: batch, interattivi e real-time, questo perché in ba
  - rispetto delle scadenze; 
  - prevedibilità.
 
-
-
-### Generalità
 > [!TIP] Ricordiamo
 > **Preemptive** = Il sistema operativo può interrompere a metà un processo in esecuzione per dare la CPU a qualcun altro.
 > **Non-preemptive** = Una volta che un processo ottiene l'uso della CPU, se la tiene stretta finché non ha finito.
 
-### Scheduling nei sistemi batch
+#### Scheduling nei sistemi batch
 Abbiamo diversi algoritmi che vengono usati nei sistemi batch:
 - **FCFS**(First-come first-served) - non preemptive: il primo che arriva è il primo che viene servito, praticamente una coda FIFO molto semplice ma non troppo utile
 
@@ -846,7 +836,10 @@ Abbiamo diversi algoritmi che vengono usati nei sistemi batch:
 ![[Pasted image 20260417165309.png|627]]
 Basandoci su questi esempi vediamo che SRTN è il più efficiente perché confrontando i tempi di arrivo e il restante tempo di completamento decide quale processo eseguire essendo preemptive può bloccare l'esecuzione di un processo per eseguirne un altro, questo unito alla caratteristica di SJF (cioè shortest job first) lo rendono il migliore
 
-### Scheduling nei sistemi interattivi
+---
+
+#### Scheduling nei sistemi interattivi
+**CONTINUA**
 Anche qui abbiamo diversi algoritmi per ottimizzare questo problema, uno di questo è: 
 - **Scheduling round robin**: (RR): questa è una versione con prelazione del FCFS, che si basa sullo gestire il tutto in un quanto di tempo
 
