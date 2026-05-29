@@ -375,8 +375,8 @@ Esistono due tipi di Hypervisor:
 
 ---
 
+## **Processi e thread**
 #### Processi
-
 ###### Definizione di processo
 Il processo è un istanza di un programma in memoria, ogni processo ha il proprio spazio di indirizzamento, il processo è composto dalle seguenti:
 - *codice*(text nell'img): il codice eseguibile
@@ -469,16 +469,11 @@ e poi condivide tutto il resto con gli altri thread, nell'immagine vediamo che s
 - *thread_join*: un thread si sincronizza con la fine di un altro thread, questa cosa è utile in alcuni casi.
 - *thread_yield*: il thread chiamante rilascia volontariamente la CPU.
 
----
+> [!tip] Riassumendo: le CPU di oggi hanno più core fisici, dove vengono eseguiti più processi/thread all'interno di ogni singolo core (contest switch) quindi ad oggi si sfrutta il parallelismo puro (tra core) e lo pseudo-parallelismo (all'interno di ogni singolo core).
 
 
-### Thread 
-(continuo di [[UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/4_17_marzo.pdf|4_17_marzo]])
-
-Riassumendo le CPU di oggi hanno più core fisici, dove vengono eseguiti più processi/thread all'interno di ogni singolo core (contest switch) quindi ad oggi si sfrutta il parallelismo puro (tra core) e lo pseudo-parallelismo (all'interno di ogni singolo core).
-
+##### Multicore programming
 ![[Pasted image 20260321133728.png|498]]
-###### Programmazione multicore
 Programmare pensando ad un sistema multi thread, ci permette di non cambiare nulla quando arriviamo in uno scenario multicore, nella pratica non cambia nulla, i thread vengono divisi sui vari core.
 
 **Problemi della programmazione multicore**
@@ -487,8 +482,9 @@ Scrivere programmi multi-core non è banale, dobbiamo stare attenti alle seguent
 - **Bilanciamento**: cioè la giusta suddivisione del lavoro tra i thread e i core 
 - **Suddivisione dei dati**: ognuno di questi task avrà bisogno di strutture dati che possono essere anche comuni (può capitare anche che più thread lavorano sulla stessa struttura dati) 
 - **Dipendenza dei dati**: visto che i dati possono essere condivisi tra i vari thread ci possono essere delle dipendenze tra un task (e quindi un thread) ed un altro, è importante tenere a mente questo dettaglio per cercare di creare thread indipendenti quando possibile.
-- **Test e debugging**: Ci possono essere diversi problemi quando si parla di processi multicore. Dato lo stesso input si possono avere output diversi questo perché ci possono essere problemi dovuti a come i thread vengono inseriti nello scheduler, questo ovviamente non va bene, il debugging e i test servono a cercare questo tipo di problemi.
+- **Test e debugging**: Ci possono essere diversi problemi quando si parla di processi multicore. Dato lo stesso input si possono avere output diversi questo perché ci possono essere problemi dovuti a come i thread vengono gestiti dallo scheduler, questo ovviamente non va bene, il debugging e i test servono a cercare questo tipo di problemi.
 
+Vediamo le 3 modelli di thread:
 ###### Thread a livello utente
 ![[Pasted image 20260321134253.png|203]]
 Le linee a zig-zag sono i thread generati dal programma in user mode (es. Excel) che confluiscono in un unico punto verso il kernel, *questo sta a indicare che il kernel non ha la minima idea di cosa sono questi thread lui li considera un unico processo*, quindi il programma usa una libreria che crea e gestisce una sua personale tabella dei thread (come se fosse un mini sistema operativo integrato)
@@ -497,7 +493,7 @@ Le linee a zig-zag sono i thread generati dal programma in user mode (es. Excel)
 - il dispatching non richiede trap nel kernel: il cambio di thread è velocissimo perché il programma fa tutto nella user mode, senza dover passare alla kernel mode
 *CONTRO*: 
 - chiamate bloccanti:
-	- *Chiamate di sistema bloccanti:* Quando un thread richiede un'operazione di I/O, l'operazione viene passata al kernel (trap). Dato che il sistema operativo vede e gestisce solo il processo nel suo insieme, mette in stato di attesa (_blocked_) l'intero processo finché l'operazione di I/O non è completata. Di conseguenza, tutti gli altri thread a livello utente si bloccano inevitabilmente, anche se avrebbero istruzioni pronte da eseguire e non dipendono da quel dato.
+	- *Chiamate di sistema bloccanti:* Quando un thread richiede un'operazione di I/O, l'operazione viene passata al kernel (trap). Dato che il sistema operativo vede e gestisce solo il processo nel suo insieme, mette in stato di attesa (_blocked_) l'intero processo finché l'operazione di I/O non è completata. Di conseguenza, tutti gli altri thread a livello utente si bloccano inevitabilmente, anche se avessero istruzioni pronte da eseguire e non dipendono da quel dato.
 	- *Page fault:* Se un thread tenta di accedere a una variabile o a un'istruzione che si trova in un'area di memoria non attualmente caricata nella memoria RAM (ad esempio perché è stata spostata nell'area di swap su disco), si genera un'eccezione hardware chiamata _page fault_. Il sistema operativo deve intervenire per leggere la pagina mancante dal disco. Essendo un'operazione molto lenta, il kernel sospende l'esecuzione dell'intero processo. Pertanto, anche se gli altri thread del processo avessero tutte le loro pagine già pronte in RAM e potessero continuare a lavorare, vengono bloccati tutti fino al completamento del caricamento della pagina richiesta.
 - nessun vero parallelismo tra i processi
 - non si ha possibilità di prelazione, ovvero c'è la possibilità che la CPU o in generale una risorsa non venga rilasciata
@@ -512,8 +508,8 @@ Il kernel gestisce i thread, conosce che cosa sono i thread e sa che dentro ogni
 - Un thread con chiamata bloccante non va ad intralciare gli altri, come succede a livello user, proprio perché il kernel li può vedere.
 - La prelazione è disponibile, quindi in caso di thread a livello kernel che occupano all'infinito una risorsa possono essere killati
 *CONTRO*:
-- si ha un cambio di contesto più lento, perché il kernel va a gestire tutti i thread e non solo quelli di uno specifico processo (richiede trap)
-- creazione e distruzione più costose (il numero di thread kernel è tipicamente limitato, è importante riciclarli)
+- Si ha un cambio di contesto più lento, perché il kernel va a gestire tutti i thread e non solo quelli di uno specifico processo (richiede trap)
+- Creazione e distruzione più costose (il numero di thread kernel è tipicamente limitato, è importante riciclarli)
 
 Il riciclo dei thread ci evita di utilizzare le chiamate thread_create e thread_delete in questo modo si risparmia molto tempo.
 
@@ -522,7 +518,7 @@ Con questo tipo di gestione il nostro sistema operativo vede tutto come thread a
 Questo modello viene chiamato modello "1 a 1"
 
 ###### Modello ibrido
-Questo modello mira a combinare i punti di forza dell'approccio a livello utente (efficienza e flessibilità) con quelli dell'approccio a livello kernel (vero parallelismo e tolleranza ai blocchi), mitigando i difetti di entrambi.
+Questo modello mira a combinare i punti di forza dell'approccio a livello utente (efficienza e flessibilità) con quelli dell'approccio a livello kernel (vero parallelismo), mitigando i difetti di entrambi.
 
 In pratica, il sistema effettua un **multiplexing** di numerosi thread a livello utente su un numero limitato (uguale o inferiore) di thread a livello kernel.
 - **Livello Utente:** Il programmatore, tramite la libreria, può creare tutti i thread necessari per la logica dell'applicazione. Il _context switch_ tra questi thread rimane rapido perché avviene nello spazio utente.
@@ -537,17 +533,20 @@ Tutti i sistemi operativi moderni supportano thread a livello kernel, anche supp
 - fiber su windows
 Esistono anche delle librerie di accesso ai thread, che ci aiutano ad interagire allo stesso modo con quest'ultimi indipendentemente dal sistema operativo usato
 
+---
 
-###### Comunicazione fra processi
+## **Comunicazione fra processi**
+Gestire in maniera opportuna la comunicazione tra $n$ processi, è fondamentale per ottenere sistemi reattivi, veloci e performanti.
 Spesso i processi hanno bisogno di cooperare, abbiamo diversi modi per fare ciò:
-- **Pipe**: collegamento tra processi, in pratica cmd1 | cmd2 | cmd3, quello che faccio è avviare tutti e tre i comandi in parallelo, quello che succede è l'output del primo va in input all'altro e cosi via
+- **Pipe**: è il modello più semplice che permette di mettere comunicazione più processi. Sfrutta i canali di input/output per far comunicare i processi:  *cmd1 | cmd2 | cmd3* . Con questa sintassi da terminale, vengono messi in comunicazione l’output del cmd1 con l’input del cmd2, e analogamente, l’output del cmd2 nell'input del cmd3. Naturalmente questi tre aspetti sono isolati, ma in questo modo è possibile concatenare più processi.
 - **IPC (Inter Process Communication)**: dei processi con il proprio spazio di indirizzamento riescono a comunicare grazie a dei segmenti di memoria condivisa, questo permette la comunicazione tra processi in modo efficiente.
 
-Possono verificarsi i seguenti problemi:
+**Possono verificarsi i seguenti problemi:**
 - come scambiarsi i dati
 - accavallamento delle operazioni su dati comuni
 - coordinamento tra le operazioni
 
+**Race condition**
 **Esempio:** Supponiamo di avere due processi P1 e P2 che aggiornano una variabile intera condivisa *x*. Entrambi eseguono un ciclo `for` che incrementa *x* di uno (`x = x + 1`) per 100 iterazioni ciascuno.
 
 L'istruzione `x = x + 1` non è atomica: il processore la scompone in tre passi distinti:
@@ -564,6 +563,7 @@ Il problema nasce quando i due processi si intersecano in mezzo a questi passi:
 
 Risultato: *x* vale 1 invece di 2 — un incremento è andato perso. Questo può ripetersi in qualsiasi iterazione, quindi al termine delle 100 iterazioni di entrambi i processi, il valore finale di *x* potrebbe essere molto inferiore a 200. Questo fenomeno prende il nome di **race condition** (corsa critica). Un altro esempio è quello dell'accredito di denaro sul conto bancario.
 
+
 **Sezioni critiche:** Per evitare le race condition, il programmatore deve garantire che i processi non accedano simultaneamente alla stessa risorsa condivisa. La porzione di codice in cui avviene questo accesso è detta *sezione critica*, e deve essere eseguita in mutua esclusione: un solo processo alla volta può trovarsi al suo interno.
 
 *Per avere una buona soluzione dobbiamo rispettare queste quattro condizioni:*
@@ -575,23 +575,18 @@ Di seguito il dettaglio di quello che succede realmente
 ![[Pasted image 20260319175036.png|500]]
 
 Ci sono diverse soluzioni a questo problema, come:
-- Disabilitare gli interrupt
-- Variabili di lock
-- Alternanza stretta: (o _strict alternation_) è un algoritmo software elementare utilizzato per garantire la **mutua esclusione** tra due processi concorrenti che devono accedere a una zona di memoria o a una risorsa condivisa, definita **sezione critica**. Il meccanismo si basa su un'unica variabile globale condivisa, tipicamente un intero chiamato `turno`, che indica esplicitamente quale processo ha il diritto di entrare nella propria sezione critica.
+- Disabilitare gli interrupt -> quindi anche il meccanismo di prelazione permette di evitare che l'esecuzione di una sezione critica di un processo venga interrotta.
+- Variabili di lock -> si usa una variabile booleana per capire se la sezione critica è vuota o no.
+- Alternanza stretta -> (o _strict alternation_) è un algoritmo software elementare utilizzato per garantire la **mutua esclusione** tra due processi concorrenti che devono accedere alla **sezione critica**. Il meccanismo si basa su un'unica variabile globale condivisa, tipicamente un intero chiamato `turno`, che indica esplicitamente quale processo ha il diritto di entrare nella propria sezione critica.
   ![[Pasted image 20260319175721.png|500]]
 
-
----
-
-Continuo di [[Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/5_19_marzo.pdf|5_19_marzo]]
-
-Un altro algoritmo per avere mutua esclusione tra i processi che accedono alle risorse è *l'algoritmo di Peterson*
+- Un altro algoritmo per avere mutua esclusione tra i processi che accedono alle risorse è *l'algoritmo di Peterson*
 
 **Algoritmo di Peterson**
-![[Pasted image 20260325174914.png|569]]
+![[Pasted image 20260325174914.png|665]]
 Riusciamo a gestire N processi, abbiamo una variabile turn che prende il valore del processo scelto per entrare nella sezione critica
 
-**Istruzioni TSL e XCHG per garantire mutua esclusione**
+- **Istruzioni TSL e XCHG per garantire mutua esclusione**
  
 L'istruzione `TSL (REGISTER, LOCK)` compie due azioni allo stesso tempo:
 
@@ -606,21 +601,23 @@ L'istruzione `TSL (REGISTER, LOCK)` compie due azioni allo stesso tempo:
     
 - All'uscita, il processo imposta `LOCK = 0`.
 
+
 Tutte queste soluzioni fanno **spin lock**
 Lo "spin lock" è una soluzione adottata in sistemi multicore e anziché mandare un processo in fase di attesa, resta attivo nella CPU anche se non produce lavoro utile, potrebbe sembrare contro intuitivo ma conviene dato che mettere un processo nella fase di wait (o ready) e poi riattivarlo (running) costa (solitamente) molto più tempo e risorse. E' spesso usato anche per sincronizzare tra loro i processi. Questa soluzione su sistemi single-core è da evitare a tutti i costi perché non è più conveniente
 
-**Problemi tra processi: sleep, wake up e semafori**
+---
 
+#### Problemi tra processi: sleep, wake up e semafori
 *Problema dell'inversione di priorità*
 E' un problema che si verifica quando un processo a bassa priorità viene eseguito bloccandone un altro con una priorità più alta.
 Esempio:
-Per capire il problema, immagina un sistema con tre processi:
+Per capire il problema, immaginiamo un sistema con tre processi:
 - **Processo H (High):** Priorità massima.
 - **Processo M (Medium):** Priorità media.    
 - **Processo L (Low):** Priorità minima.
 
-Ecco la sequenza degli eventi che porta al disastro:
-1. **L inizia:** Il Processo L è in esecuzione e acquisisce un lock per entrare in una sezione critica (ad esempio, per scrivere su un bus di memoria condiviso).
+Ecco la sequenza degli eventi:
+1. **L inizia:** Il Processo L è in esecuzione e acquisisce un lock per entrare in una sezione critica.
 2. **H si sveglia:** Il Processo H diventa pronto per l'esecuzione. Essendo ad altissima priorità, il sistema operativo blocca L e fa partire H.
 3. **H si blocca:** H tenta di accedere alla stessa risorsa condivisa di L. Trova il lock occupato (perché L ce l'ha ancora in mano) e quindi H viene messo in stato di attesa (wait/sleep) finché L non rilascia la risorsa. Fin qui tutto bene: è normale che H aspetti chi ha il lock. Il controllo torna a L affinché finisca in fretta.
 4. **M entra in scena (Il Disastro):** Mentre L cerca di finire il suo lavoro nella sezione critica per liberare H, si sveglia il Processo M. M ha una priorità _maggiore_ di L e _non gli serve_ quel lock. Il sistema operativo, vedendo che M > L, toglie la CPU a L e la dà a M.
@@ -635,8 +632,9 @@ Il processo in questo momento si trova nello stato di running e chiama:
 > [!ATTENTION]
 > Il processo dopo la wake up non si ritrova subito nello stato di running ma verrà inserito nello stato di ready quindi dovrà aspettare prima di avere di nuovo la CPU
 
+---
 
-*Problema del produttore consumatore - spesso si trova al laboratorio*
+#### Problema del produttore consumatore - spesso si trova al laboratorio
 Questo problema descrive un produttore che produce *item*, un consumatore che consuma questi *item* e un buffer di memoria condivisa tra i 2 (uno mette e l'altro toglie).
 Vediamo questo codice:
 ```
@@ -675,11 +673,11 @@ Esistono diversi **tipi di semaforo**:
 Soluzione per il problema di produttore-consumatore
 ![[Pasted image 20260327123503.png|612]]
 
----
-
 Tra i [[UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/5_19_marzo.pdf|Thread utente]] che fanno riferimento ad un unico processo, modello *1 a molti*, i mutex si possono usare in modo efficiente facendo uso di TSL (o XCHG)
 
-### Mutex e thread utente
+---
+
+#### Mutex e thread utente
 Tra i [[UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/5_19_marzo.pdf|Thread utente]] che fanno riferimento ad un unico processo, modello *1 a molti*, i mutex si possono usare in modo efficiente con TSL (o XCHG)
 
 > [!CITE]

@@ -6,7 +6,6 @@
       {
         "id": "882307d74567adee",
         "type": "tabs",
-        "dimension": 49.38080495356037,
         "children": [
           {
             "id": "15b7ff51d151a951",
@@ -20,25 +19,6 @@
               },
               "icon": "lucide-file",
               "title": "SISTEMI-COMPLETO"
-            }
-          }
-        ]
-      },
-      {
-        "id": "c5f0dd275464bcc9",
-        "type": "tabs",
-        "dimension": 50.61919504643962,
-        "children": [
-          {
-            "id": "d5b57de73f2a811e",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Riassunto_Github"
             }
           }
         ]
@@ -187,8 +167,48 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "d5b57de73f2a811e",
+  "floating": {
+    "id": "7fecfe68be7ca88c",
+    "type": "floating",
+    "children": [
+      {
+        "id": "08e51c550a44be37",
+        "type": "window",
+        "children": [
+          {
+            "id": "99a1f94357b4f5c0",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "d5b57de73f2a811e",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Riassunto_Github"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 3,
+        "y": 3,
+        "width": 1527,
+        "height": 858,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "15b7ff51d151a951",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/5_19_marzo.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-lab.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-05-20.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-04-02.pdf",
@@ -198,9 +218,6 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-09-17.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-09-29.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-09-12.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-07-17.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-04-17.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/photo_5814423968692243958_y.jpg",
     "UNI/Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_115903_Samsung Notes.jpg",
     "UNI/Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_110943_Samsung Notes.jpg",
