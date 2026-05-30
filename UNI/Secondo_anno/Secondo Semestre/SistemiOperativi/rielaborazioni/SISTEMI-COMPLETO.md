@@ -839,35 +839,26 @@ Basandoci su questi esempi vediamo che SRTN è il più efficiente perché confro
 ---
 
 #### Scheduling nei sistemi interattivi
-**CONTINUA**
-Anche qui abbiamo diversi algoritmi per ottimizzare questo problema, uno di questo è: 
-- **Scheduling round robin**: (RR): questa è una versione con prelazione del FCFS, che si basa sullo gestire il tutto in un quanto di tempo
+Anche qui abbiamo diversi algoritmi per ottimizzare questo scheduling, uno di questi è: 
+##### Scheduling round robin
+Questa è una versione con prelazione del FCFS, che si basa sullo gestire il tutto in un quanto di tempo
 
 Questa versione funziona in base a dei quanti di tempo o time slice che di solito hanno una durata di 20-50ms
-In sostanza ogni processo può occupare la CPU per un time slice appena finisce il tempo il processo verrà messo in fondo alla coda (FCFS usa una coda FIFO) e viene eseguito il processo successivo, se il processo completa il suo lavoro prima della fine del quanto di tempo allora libererà la CPU e inizierà l'esecuzione di un altro processo
+In sostanza ogni processo può occupare la CPU per un time slice appena finisce il tempo il processo verrà messo in fondo alla coda (FCFS usa una coda FIFO) e viene eseguito il processo successivo, se il processo completa il suo lavoro prima della fine del quanto di tempo allora libererà la CPU e inizierà l'esecuzione di un altro processo, se un processo esegue una chiamata bloccante anche lui verrà rimesso in fondo alla coda
 ![[Pasted image 20260417175441.png|551]]
 
 > [!EXAMPLE] Esempio:
 > Immagina di avere in background un rendering video pesantissimo e in primo piano Word, dove tu stai digitando. Se non ci fosse il Round Robin, il tuo clic sulla tastiera rimarrebbe bloccato ad aspettare per minuti interi che il video finisca di calcolare. Con il Round Robin, il rendering video lavora per (ad esempio) 20 millisecondi, poi viene sbattuto in fondo alla fila; tocca a Word, che elabora la tua lettera in 1 millisecondo e rilascia la CPU, poi tocca di nuovo al video, ecc.
 
-Continua nella prossima lezione...
 
----
-
-Continuo lezione [[9_14_aprile]]
-
-### Concetto di Priorità
-
+##### Scheduling a priorità
+**Concetto di Priorità**
 Introduciamo il concetto di **priorità**: si assegna la CPU al processo di priorità più alta. Viene così creata una **coda di priorità**.
-
 - I processi a priorità bassa possono essere eseguiti se nella coda non ci sono processi a priorità più alta.
-
 - La **prelazione** può essere applicata a questo meccanismo: se un processo ad alta priorità entra in coda ma la CPU è assegnata a un processo a bassa priorità, qui avviene la prelazione.
 
-L'assegnazione della priorità avviene tramite diverse motivazioni (es. fattori esterni)
-
-- **Priorità statiche**: Dovute a fattori esterni come utente admin o argomenti vari.
-
+Abbiamo 2 tipi di priorità:
+- **Priorità statiche**: Dovute a fattori esterni come utenti admin.
 - **Priorità dinamiche**: Il sistema può decidere di cambiare la priorità a determinati processi. Come per esempio lo scheduler decide di dare priorità ai processi **I/O bounded** invece che ai **CPU bounded**. Appena la risposta I/O arriva, i processi I/O bounded che erano bloccati tornano in coda pronti e sono con priorità alta.
 
 Per capire se un processo è I/O o CPU bounded bisogna osservare come usano il loro **quanto di tempo Q**. Il processo I/O di solito si blocca prima perché aspetta un device di I/O, mentre quello CPU se lo prende tutto.
@@ -883,21 +874,18 @@ La priorità qui è dinamica poiché se un processo cambia l'uso di Q avrà prio
 
 - *Nei sistemi interattivi è meglio applicare la prelazione.*
 
+**Starvation**
 La **starvation** si presenta quando non posso mai garantire a un processo in coda (bassa priorità) l'uso immediato della CPU.
-
 Per risolvere questo problema posso usare l'**aging**: esso aumenta temporaneamente la priorità dei processi che trascorrono troppo tempo nella coda dei processi pronti; più tempo aspetta, più aumenta di priorità. Dopo che viene eseguito, la priorità torna a quella di base.
 
 ---
-### Scheduling a Code Multiple
-
+##### Scheduling a Code Multiple
 Potremmo usare un sistema di **scheduling a code multiple**: avrò una coda per ogni livello di priorità, in ogni coda avrò processi della stessa priorità.
 
 Bisogna avere due scheduling diversi che scelgono quale processo far eseguire:
-
 1. **Scheduling verticale**: Viene scelta la prima coda non vuota dall'alto (priorità dall'alto al basso).
 
 2. **Scheduling orizzontale**: Scelta la coda, bisogna scegliere un processo tra quelli (insieme di uguale priorità). Utilizzo un algoritmo visto in precedenza come il **Round Robin (FIFO)**. Potrei avere diversi algoritmi di scheduling per ogni coda, potrei anche applicare $RR(Q)$ con Q variabile da un livello all'altro.
-   
 ![[Pasted image 20260419113959.png|435]]
 
 Metto a priorità alta processi I/O bounded e  bassa quelli CPU bounded in mezzo processi misti.
@@ -921,31 +909,27 @@ Avrò quanti di tempo più piccoli nelle priorità alte dato che ci sono process
 
 Per evitare la starvation posso realizzare un **up/down grade** della priorità in base all'uso del suo quanto di tempo. Potrei fare una media su come il processo usa il suo Q: se lo usa tutto, Q è troppo piccolo, quindi è CPU bounded e allora scenderà di un livello.
 
-Un altro modo è cambiare lo scheduling verticale assegnando un tempo T a un ciclo. Per ogni livello verrà assegnata una percentuale di T a ogni coda di priorità. Se una coda è vuota la percentuale di T sarà minore (es. _50%, 25%, 15%, 10%_).
+Un altro modo è cambiare lo scheduling verticale assegnando un tempo T a un ciclo. Per ogni livello verrà assegnata una percentuale di T a ogni coda di priorità. Se una coda è vuota la percentuale di T sarà minore.
 
 ---
-### SPN Shortest Process Next e Stima del CPU Burst
-
-Applico lo **SJF** ai processi interattivi. In questi sistemi devo però capire la durata del prossimo burst di CPU. Posso fare delle stime dei burst precedenti di quel processo dato che il burst di un processo è simile ai burst di quelli precedenti.
+##### SPN Shortest Process Next
+Applico lo **SJF** ai processi interattivi. In questi sistemi devo però capire la durata del prossimo burst di CPU (ovvero il momento in cui la CPU lavora su un processo). Posso fare delle stime dei burst precedenti di quel processo dato che il burst di un processo è simile ai burst di quelli precedenti.
 
 **CPU Burst**: Durata del tempo da quando il processo riceve la CPU a quando si blocca per I/O o timeout.
 
 Questo sistema è senza quanti di tempo.
-
 $S =$ Stima (do più valore ai valori recenti)
 
 $$S_{n+1} = a S_n + (1-a) T_n$$
 
 - $S_n$: Vecchia stima
-
 - $T_n$: Ultima misurazione
 
 Così la nuova stima considera l'ultima misurazione e la vecchia stima dando un determinato peso a $T_n$ e $S_n$. Il peso viene dato proprio da $a$ che rappresenta una costante $0<a<1$ che in base al suo valore scelto si sceglie se far valere di più la vecchia stima o l'ultima misurazione.
 (es $a = 0.5$ in questo caso avrò che $S_n$ e $T_n$  avranno lo stesso peso)
 
 ---
-### Altri tipi di Scheduling
-
+##### Altri tipi di Scheduling
 - **Scheduling Garantito**: Viene stabilita una percentuale di utilizzo per ogni processo e viene fatta rispettare. Bisogna quindi fare delle promesse ai processi e vedere poi se sono state rispettate. Chi è più indietro con le promesse avrà una percentuale più alta; va a dare la CPU a chi l'ha usata di meno. Non è basato sul quanto di tempo.
 
 - **Scheduling a Lotteria (Gambling)**: Assegno un tot numero di biglietti ai processi, estraggo un biglietto ed eseguo il processo a cui ho assegnato il biglietto. Dopo che lo estraggo brucio il biglietto. Se un processo finisce i biglietti non vedrà più la CPU. Quando i biglietti finiscono si parte da 0. I biglietti chiaramente possono essere assegnati tramite vari criteri (es processi I/O bounded assegno più biglietti rispetto che CPU bounded)
@@ -958,14 +942,24 @@ Così la nuova stima considera l'ultima misurazione e la vecchia stima dando un 
 
 ---
 
+#### Scheduling dei Thread
+**Per i thread utente:**
+• Sono ignorati dallo scheduler del Kernel. 
+• Possibilità di utilizzo di scheduling personalizzato
 
-### Scheduling su sistemi multiprocessore
-(Con multiprocessore intendiamo singola CPU con più core fisici)
+**Per i thread Kernel:**
+• O si considerano i thread tutti uguali 
+• O si pesa l’appartenenza a un determinato processo.
+
+---
+
+#### Scheduling su sistemi multicore
+(Con multicore intendiamo singola CPU con più core fisici)
 ###### Approcci di scheduling
 Abbiamo diversi modi per fare scheduling su questi tipi di dispositivi:
-- *multi-elaborazione asimmetrica*: uno dei processori assume il ruolo di *master-server* e decide quale processore esegue un certo processo (se abbiamo 8 core 1 fa girare il software dello scheduler e fa solo quello e gli altri tutti gli altri processi)
+- *multi-elaborazione asimmetrica*: uno dei processori assume il ruolo di *master* e decide quale processore esegue un certo processo (se abbiamo 8 core 1 fa girare il software dello scheduler e fa solo quello, tutti gli altri fanno girare i processi)
 	- *PRO*: Si azzerano i casi di race condition
-	- *CONTRO*: Quando un singolo core deve gestire le code per centinaia di core, questo rallenta e li rallenta tutti
+	- *CONTRO*: Quando un singolo core deve gestire le code per molti di core, questo rallenta e li rallenta tutti
 - *multi-elaborazione simmetrica*: coda unificata dei processi pronti o code separate per ogni processore/core
 	- *PRO*** 
 	  - Nessun collo di bottiglia: Non essendoci un processore "master", il carico di lavoro dello scheduling è distribuito.
@@ -973,7 +967,6 @@ Abbiamo diversi modi per fare scheduling su questi tipi di dispositivi:
 	- *CONTRO*: 
 	  - Problemi di race condition
 	  - *Cache Affinity*: Se un processo viene sospeso e poi ripreso da un _core diverso_, i dati che aveva salvato nella memoria cache della CPU originaria diventano inutili. Ricaricare i dati dalla memoria centrale alla cache del nuovo core rallenta notevolmente l'esecuzione.
-
 
 E' quindi importante che un processo riprenda e finisca la sua esecuzione nello stesso core in cui è iniziata, questo per via di come funziona la cache e il prefetching con linee di cache perché se un processo riprende l'esecuzione in un core diverso da quello di partenza si verificano ritardi dovuti all'accesso alla RAM anziché alla cache, ovviamente questo non può sempre accadere, delle volte si avranno core diversi per lo stesso processo. Infatti...
 
@@ -983,19 +976,21 @@ E' quindi importante che un processo riprenda e finisca la sua esecuzione nello 
 ###### Bilanciamento del carico vs. Predilezione
 - Il **bilanciamento del carico** spinge per muovere i processi da un core all'altro (migrazione) per assicurarsi che nessun processore rimanga con le mani in mano.
 - La **predilezione** spinge per tenere i processi fermi esattamente dove si trovano per massimizzare l'efficienza della memoria.
-Queste due politiche "remano contro" l'una all'altra. I sistemi operativi moderni (come Linux o FreeBSD citati nella slide) implementano algoritmi molto complessi per trovare un compromesso.
+Queste due politiche "remano contro" l'una all'altra. I sistemi operativi moderni (come Linux) implementano algoritmi molto complessi per trovare un compromesso.
 
 **Migrazione guidata (push)**
-**Migrazione spontanea (pull)**
+Una CPU qualsiasi verifica il carico sulle code del sistema. Se una coda è più piena delle altre, il carico viene distribuito sulle altre.
 
-### Cosa usano i nostri sistemi operativi
+**Migrazione spontanea (pull)**
+Un core con presumibilmente meno-processi può autonomamente avviare un controllo sulle code degli altri core e decidere di prelevare alcuni dei processi per distribuire il carico. Va contro la predilezione, tuttavia può essere integrato un meccanismo di predilezione forte che forzi un core a occuparsi di un determinato processo o insieme di processi.
+
+##### Cosa usano i nostri sistemi operativi
 ![[Pasted image 20260421161249.png|583]]
 
 
 ----
-Siamo passati al file [[SO-03.pdf]]
 
-### Gestione della memoria centrale
+## **Gestione della memoria centrale**
 Nelle memorie abbiamo una certa gerarchia (dalla più veloce alla più lenta), la RAM è il livello più basso che la CPU può direttamente usare:
 ![[Pasted image 20260422110825.png|379]]
 
@@ -1005,7 +1000,6 @@ In generale la memoria viene gestita usando degli indirizzi. Nel tempo la gestio
   
   Usare gli indirizzi fisici significa scrivere direttamente nella cella numerata della memoria, se in un programma c'è un'istruzione che dice "salva questo numero all'indirizzo 2000", il processore va _letteralmente_ nella cella di memoria numero 2000 e ci scrive dentro
   ![[Pasted image 20260421165603.png]]
-
 
 - **Multiprogrammazione senza astrazione**: in questo scenario, più programmi risiedono contemporaneamente nella memoria RAM. Gli indirizzi sono quelli fisici. Questo approccio introduce due problemi critici che devono essere risolti per garantire il corretto funzionamento del sistema:
 	1. **Rilocazione (Relocation):** Quando un programmatore scrive un codice, non può sapere in anticipo in quale zona di memoria verrà caricato il programma. Se il codice contiene riferimenti a indirizzi assoluti (es. "vai all'indirizzo 100"), e il programma viene caricato a partire dall'indirizzo 2000, il software fallirà.
@@ -1017,18 +1011,22 @@ In generale la memoria viene gestita usando degli indirizzi. Nel tempo la gestio
 - **Astrazione dello spazio di indirizzi**: per ogni processo viene specificato lo spazio di indirizzi, utilizzabile da un processo. In pratica viene fatta un'allocazione dinamica che permette ad ogni indirizzo di partire dall'indirizzo 0 rispetto al suo spazio, questo viene fatto usando:
 	- *registro base*: contiene l'indirizzo fisico di partenza dove il processo è effettivamente caricato in RAM. Ogni indirizzo generato dal programma (indirizzo logico) viene sommato al valore di questo registro per ottenere l'indirizzo fisico reale. Nei sistemi moderni, questo compito di traduzione da indirizzo logico a fisico è delegato a un'unità dedicata chiamata MMU.
 	- *registro limite*: definisce la dimensione massima del processo. Serve a garantire che il processo non acceda a memoria fuori dal suo intervallo consentito. La CPU verifica in tempo reale che l'indirizzo logico sia inferiore al valore nel registro limite. Se il controllo fallisce, viene generata una TRAP che passa il controllo al SO, che terminerà inevitabilmente il processo in questione. 
-  Questo modello, utilizzato in macchine storiche come il CDC 6600 o l'Intel 8088, rappresenta il primo vero passo verso l'isolamento dei processi.
+  Questo modello rappresenta il primo vero passo verso l'isolamento dei processi.
 
+---
 
-### Swapping
-Il livello di multiprogrammazione è limitato dalla dimensione della memoria centrale, da qui nascono diverse soluzioni, la prima di queste è lo *swapping* (non è l'area di swap famosa di win). Se viene richiesto di creare un nuovo processo ma la memoria centrale è piena, lo swapper (*scheduler di medio termine*) decide quale processo inserire nel disco (SSD o Hard Disk), in modo da liberare la memoria e poter creare il nuovo processo. 
+#### Swapping
+Il livello di multiprogrammazione è limitato dalla dimensione della memoria centrale, da qui nascono diverse soluzioni, la prima di queste è lo *swapping*. Se viene richiesto di creare un nuovo processo ma la memoria centrale è piena, lo swapper (*scheduler di medio termine*) decide quale processo inserire nel disco (SSD o Hard Disk), in modo da liberare la memoria e poter creare il nuovo processo. 
 
 > [!TIP]
 > Quando la RAM è piena e il sistema ha bisogno di eseguire un nuovo programma, lo swapper seleziona un processo in memoria che al momento non sta facendo nulla e compie un'operazione di **swap out**, parcheggiandolo temporaneamente su un disco capiente chiamato _backing store_. Lo spazio appena liberato viene subito riutilizzato per un'operazione di **swap in**, prelevando un nuovo processo dal disco e caricandolo nella memoria centrale affinché la CPU possa eseguirlo.
 
 Questa strategia crea delle problematiche, come i problemi delle operazioni di input/output: cosa succede se trasferiamo su disco un processo che stava aspettando la scrittura di un dato da parte dell'hardware? Il rischio è che la periferica finisca per scrivere quel dato nello stesso punto della RAM, ma che ora appartiene a un altro processo, corrompendone i dati. Per evitarlo, il sistema operativo deve ancorare in memoria i programmi impegnati in queste operazioni. 
 
-Oltre a questo, c'è il problema di come allocare lo spazio fisico. Sebbene si possa dividere la memoria in blocchi a **dimensione fissa**, spesso si usa una **dimensione dinamica** che dà a ogni processo l'esatta memoria richiesta. 
+---
+
+#### Frammentazione interna ed esterna
+C'è anche il problema di come allocare lo spazio fisico. Sebbene si possa dividere la memoria in blocchi a **dimensione fissa**, spesso si usa una **dimensione dinamica** che dà a ogni processo l'esatta memoria richiesta. 
 
 Questo però genera il fenomeno della **frammentazione**, dalla quale distinguiamo due casi:
 - *interna*: frammentazione interna al blocco assegnato ad un processo
@@ -1037,28 +1035,34 @@ Questo però genera il fenomeno della **frammentazione**, dalla quale distinguia
 
 Quando la frammentazione esterna diventa critica entra in gioco la **memory compaction**: il sistema operativo entra in azione riorganizzando fisicamente l'intera RAM: sposta e "schiaccia" tutti i processi verso un'estremità della memoria per fondere tutti i piccoli buchi in un unico grande spazio libero. È una manovra risolutiva, ma molto costosa in termini di prestazioni, poiché blocca temporaneamente l'esecuzione di tutto il resto
 
-### Gestione dell'allocazione
+---
+
+#### Gestione dell'allocazione
 Dopo che il SO ha deciso come gestire la memoria, ha bisogno di uno strumento pratico per farlo. Deve sapere in ogni istante, con precisione, quali parti della RAM sono libere e quali sono occupate. Qui distinguiamo due metodologie:
 - La bitmap:
 - Lista dei blocchi liberi e occupati:
 
+*Bitmap*
+![[Pasted image 20260530143010.png|564]]
+Avrà tanti bit quanti sono i blocchi allocati e il valore del bit specifica se quel particolare blocco è allocato oppure noi (allocato si = 1, allocato no = 0).
+
+*Liste dei blocchi liberi occupati*
+Ogni elemento della lista (doppiamente concatenata) contiene al suo interno un numero di blocchi e un elemento di tipo P (per processo) o H (per hole, buco). I nodi della lista sono ordinati per indirizzo.
+
+
 ---
 
-# Memoria Virtuale e Paginazione
-
-La **Memoria Virtuale** è un'astrazione: dà l'idea a noi e al processo che l'allocazione sia contigua, in realtà il sistema operativo spezzetta l'allocazione di RAM per quel processo.
+#### Memoria Virtuale e Paginazione - soluzione per la frammentazione esterna
+La **Memoria Virtuale** è un'astrazione: dà l'idea a noi e al processo che l'allocazione sia contigua e che si disponga di tutta la RAM, in realtà il sistema operativo spezzetta l'allocazione di RAM per quel processo.
 
 Questo meccanismo è la **paginazione**, che fa lavorare il processo in una memoria virtuale con indirizzi da $0$ a un tetto massimo virtuale. Questo elimina l'esigenza di avere una memoria massima o espandibile. In realtà, il pezzo di memoria dedicata al processo è composto da tante pagine della stessa dimensione.
 
-I vari processi poi condividono la stessa RAM per la loro memoria virtuale; anche se la RAM è piccola rispetto alle varie pagine, non cambia poiché le memorie sono virtuali.
-
 La **memoria fisica** è divisa in blocchi della stessa dimensione della pagina (**Frame**) per facilitare l'assemblaggio della memoria virtuale.
-
 - **Vantaggio:** Questo risolve la frammentazione esterna, perché si andranno ad evitare buchi nella RAM dato che il SO lo riempirà assegnandolo ad un processo.
-
 - **Svantaggio:** Non risolve la frammentazione interna (più la pagina è grande, più ci sarà frammentazione interna).
 
-Per ogni processo tengo in RAM solo alcune pagine, poiché il Sistema Operativo gestisce cosa a un determinato processo non serve in RAM, e il resto sta in disco.
+Per ogni processo tengo in RAM solo alcune pagine, poiché il Sistema Operativo gestisce cosa a un determinato processo non serve in RAM, e il resto sta in disco (swap).
+![[Pasted image 20260530143746.png|278]]
 
 > [!info] **Page Fault**
 > 
@@ -1072,13 +1076,23 @@ Nelle memorie virtuali abbiamo gli **indirizzi virtuali**. Questi indirizzi veng
 
 La CPU genera un indirizzo virtuale che deve essere tradotto in indirizzo fisico dalla **MMU** (Memory Management Unit).
 
----
-## Il ruolo della MMU nella Traduzione
+**E la frammentazione interna?**
+La dimensione prefissata dei frame può causare ancora problemi di frammentazione interna. Sistemi operativi come Solaris gestiscono frame di dimensione variabile, minimizzando il problema. Tuttavia, tra la frammentazione interna e quella esterna, la prima rappresenta il male minore
 
+**I processi sono protetti?**
+Si perché ogni processo conosce solo i suoi indirizzi virtuali e al massimo i corrispondenti indirizzi fisici ma non conosce quelli degli altri quindi i processi sono isolati da questo punto di vista.
+
+---
+#### Il ruolo della MMU nella Traduzione
+*La paginazione è gestita dalla MMU.*
 L'MMU per tradurre esegue una divisione:
 
-$$\frac{\text{Indirizzo}_V}{\text{Dim}} = \begin{cases} Q \rightarrow \text{Numero di Pagina} \\ R \rightarrow \text{Offset} \end{cases}$$
-
+$$\frac{\text{Indirizzo}_{Virt}}{\text{Dim}} = \begin{cases} Q \rightarrow \text{Numero di Pagina} \\ R \rightarrow \text{Offset} \end{cases}$$
+Dove:
+- l'indirizzo virtuale è quello che si vuole tradurre in indirizzo fisico.
+- La divisione indica il numero in byte della grandezza di ogni singola pagina.
+- $Q$ - quoziente - rappresenta il **Numero di Pagina** (Page Number), ovvero in quale pagina specifica "cade" quell'indirizzo.
+- $R$ - resto - rappresenta l'**Offset** (o spiazzamento) all'interno di quella specifica pagina, ovvero di quanti byte ti devi spostare dall'inizio della pagina per trovare il dato esatto.
 **Esempio:**
 
 Dati $I_V = 8196$ e $\text{Dim} = 4096$:
@@ -1087,7 +1101,7 @@ $$\frac{8196}{4096} = \begin{cases} 2 \text{ (Numero di Pagina)} \\ 4 \text{ (Of
 
 > [!info] **Definizione di Offset**
 > 
-> Distanza dall'inizio della pagina alla _word_ che sto referenziando.
+> Distanza dall'inizio della pagina alla _word_ che sto cercando.
 
 Dalla Tabella delle Pagine, associo il Numero di Pagina trovato al Frame. Dopodiché calcolo l'indirizzo fisico:
 
@@ -1095,7 +1109,7 @@ $$N_{FRAME} \cdot \text{DIM} + \text{OFFSET} = \text{Indirizzo Fisico}$$
 
 ---
 ## Tabella delle Pagine
-E' una per processo. La tabella delle pagine è contenuta in RAM, e gli aspetti da curare sono 2: la velocità di consultazione e la dimensione
+E' una per processo. La tabella delle pagine è contenuta in RAM, e gli aspetti da curare sono 2: la velocità di consultazione e la dimensione.
 ![[Pasted image 20260427165710.png|301]]
 
 - **Indice $K$**: per ogni pagina ho un _Bit di presenza_ e un _Numero di frame_.
