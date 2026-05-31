@@ -66,14 +66,10 @@ L'obiettivo dell'astrazione non è **nasconderle**. Il kernel espone all'utente 
 Posso avere una o più CPU, nel caso più semplice ne abbiamo una sola, sappiamo che si possono eseguire più processi contemporaneamente e questo può essere visto in tanti modi, ma anche come un’astrazione in cui il Sistema Operativo crea delle **CPU** **VIRTUALI**. Fa credere ad ogni processo di avere una propria CPU ma in realtà sta gestendo le $n$ CPU virtuali con l’unica fisica che ha. Questo viene chiamato **time sharing.**
 
 La **Memoria Virtuale** è un'astrazione fondamentale fornita dal Sistema Operativo che permette a ogni processo di operare in un ambiente di lavoro isolato e apparentemente illimitato.
-![[Pasted image 20260525170242.png|527]]
+![[Pasted image 20260525170242.png|439]]
 
 - **Approccio Bottom-Up:** Il SO è un **Resource Manager**. Gestisce la complessità dei segnali elettrici e dei registri hardware, offrendo in cambio un'interfaccia pulita (File, Processi).
 - Gestire una risorsa significa arbitrare i conflitti(più processi potrebbero voler accedere ad uno stesso file), fornirne un utilizzo ordinato e coordinato.
-
----
-
-![[Pasted image 20260525170253.png|540]]
 
 ---
 
@@ -123,8 +119,6 @@ Un calcolatore (in maniera generica o astratta)è caratterizzato dalla presenza 
 ---
 
 #### Processore
-
-![[Pasted image 20260525170317.png|496]]
 E l’unità di elaborazione centrale (Central Processing Unit). Presenta un insieme di registri che possono contenere dei dati.
 
 A livello generale:
@@ -137,6 +131,7 @@ Per la CPU la **RAM** funge da memoria primaria ad alta velocità per i dati e l
 Dei registri generici della CPU ce ne occorrono un numero limitato, di appoggio per i dati provenienti dalle varie operazioni svolte nella CPU; ma ci sono anche dei “registri specifici” per la gestione del ciclo fetch, decode ed execute si chiamano UNIT.
 
 Il **Program Counter** è un registro che indica alla CPU qual è l’indirizzo della prossima istruzione da eseguire. Il ciclo inizia proprio con l’istruzione localizzata esattamente nel PC.
+
 ##### Stack e stack pointer
 **Le esecuzioni effettuate nella CPU vengono affiancate da una struttura esterna, lo stack.**
 Lo stack di esecuzione di un programma è gestito come se fosse una pila, push e pop sempre sulla testa. In questa memoria di appoggio si allocano variabili e vengono inserite nello stack tramite una push, questo fa si che quando la procedura che aveva allocato una variabile finisce vengono fatti dei pop che deallocano quelle locazioni di memoria allocate dalla procedura.
@@ -238,7 +233,6 @@ A volte si parte da una base cercando di adattarla ai nuovi scopi. In generale d
 Vediamole una ad una.
 ---
 
-![[Pasted image 20260525171038.png|472]]
 #### SISTEMI MONOLITICI 
 Tutto il SO è eseguito in modalità kernel. (Il kernel  di Linux è monolitico)
 Nei sistemi monolitici, il Kernel è un unico, enorme file binario. Dal punto di vista del codice: 
@@ -266,8 +260,9 @@ Inizialmente (es. MS-DOS), non c'era protezione hardware: un'applicazione poteva
 
 ---
 
-![[Pasted image 20260525171415.png|447]]
+
 #### STRUTTURA A LIVELLI (O A STRATI) 
+![[Pasted image 20260531221210.png|211]]
 Un’organizzazione gerarchica, in cui ogni livello implementa funzioni impiegando quelle fornite dal livello inferiore. Potrebbe avere problemi di performance a causa delle numerose chiamate implicite del sistema a livelli. Tuttavia, semplifica la programmazione, in quanto ogni livello si dovrà interfacciare solo con il livello inferiore e superiore. *Principio di singola responsabilità*.
 
 Un sistema a strati è un'astrazione in cui si lavora in ogni livello con delle esigenze ben precise. Usare gli strati permette di facilitare la fase di testing di ognuno di essi. 
@@ -308,7 +303,6 @@ Rimane il problema di definire esattamente l'ordine di precedenza. Ogni passaggi
 
 ---
 
-![[Pasted image 20260525171605.png|460]]
 #### MICROKERNEL 
 L'idea centrale è avere un kernel più piccolo rispetto alla concezione generale. Si mantiene nel "nucleo" solo ciò che è strettamente fondamentale per far funzionare la macchina delegando il più possibile al livello utente. 
 
@@ -322,7 +316,6 @@ Poiché i servizi sono frammentati e isolati, il compito principale del microker
 
 ---
 
-![[Pasted image 20260525171650.png|468]]
 #### STRUTTURA A MODULI
 Linux e macOS usano una struttura a moduli.
 
@@ -354,7 +347,6 @@ Tuttavia, Linux "ruba" un'idea al microkernel per aumentare la stabilità: l'est
 
 ---
 
-![[Pasted image 20260525172050.png|478]]
 #### MACCHINE VIRTUALI
 Non è un tema recente, è nato insieme ai primi calcolatori, sono ritornate in auge da circa 10 anni e utilizzate per: 
 Istanziare una o più istanze virtuali, e dentro posso far girare un intero sistema operativo, mi permette un'istanza di Linux su macchina virtuale ospitata in una macchina reale windows o viceversa…. le combinazioni sono varie. 
