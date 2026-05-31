@@ -27,15 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
+                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "12_23_aprile"
+              "title": "14_7_maggio"
+            }
+          },
+          {
+            "id": "baade6b58dc30298",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Callouts.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Callouts"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -209,19 +224,24 @@
           }
         ],
         "direction": "vertical",
-        "x": 1,
+        "x": 0,
         "y": 0,
-        "width": 1535,
+        "width": 1538,
         "height": 864,
         "maximize": true,
         "zoom": 0
       }
     ]
   },
-  "active": "7dd1a946c5c4de2d",
+  "active": "ade47c0c0266b131",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
+    "UNI/Callouts.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260530143746.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260530143010.png",
@@ -256,15 +276,11 @@
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Capitolo 2.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Capitolo 1.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/14_19_maggio.md",
-    "UNI/Callouts.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 16.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/13_12_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/12_5_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/11_30_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/10_23_aprile.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/9_9_aprile.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }

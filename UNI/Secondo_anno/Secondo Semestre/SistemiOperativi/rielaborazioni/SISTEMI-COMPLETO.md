@@ -1108,113 +1108,56 @@ Dalla Tabella delle Pagine, associo il Numero di Pagina trovato al Frame. Dopodi
 $$N_{FRAME} \cdot \text{DIM} + \text{OFFSET} = \text{Indirizzo Fisico}$$
 
 ---
-## Tabella delle Pagine
-E' una per processo. La tabella delle pagine è contenuta in RAM, e gli aspetti da curare sono 2: la velocità di consultazione e la dimensione.
-![[Pasted image 20260427165710.png|301]]
+#### Tabella delle Pagine
+La tabella è una per processo e ad ogni record della tabella corrisponde una pagina di un processo. La tabella delle pagine è contenuta in RAM, e gli aspetti da curare sono 2: la velocità di consultazione e la dimensione. La tabella delle pagine è usata dall'MMU per capire quali pagine sono in RAM e quali su disco.
 
-- **Indice $K$**: per ogni pagina ho un _Bit di presenza_ e un _Numero di frame_.
-
-- **Numero di Pagina**: Saranno i bit più significativi dati da $M - m$, dove:
-
-    - $M$ = esponente dell'indirizzo virtuale ($2^M$)
-    
-    - $m$ = esponente della dimensione della pagina ($2^m$)
-    
-- **Offset**: Saranno gli $m$ bit meno significativi.
-
-Si può generalizzare con $2^{M-m}$ frame facendo uno shift.
-
----
-## Esercizio d'Esame
-
-**Input:**
-
-- Memoria Virtuale = 4 MB
-
-- Tabella Pagine = $2^{13}$ Voci $\implies$ Dim. Pagina Fisica = 13 bit
-
-- Numero Frame = 8 bit
-
-**Richiesta:**
-
-Dimensione Memoria Fisica (RAM)?
-
-**Svolgimento:**
-
-Sappiamo che:
-
-$4\text{ MB} = 2^{22}\text{ byte} \implies \text{Dimensione Indirizzo Virtuale} = 22\text{ bit}$
-
-Calcolo dell'Offset:
-
-$\text{Offset} = 22 - 13 = 9\text{ bit} \implies \text{Dimensione Pagina} = 2^9\text{ byte}$
-
-Calcolo della memoria fisica (RAM):
-
-$$2^8 \text{ (N. Frame)} \cdot 2^9 \text{ (Dim. Pagina)} = 2^{17} \text{ byte} = 128\text{ KB} \implies \text{RAM}$$
-
-_Oppure, calcolo alternativo per la dimensione della pagina:_
-
-$$\frac{2^{22}}{2^{13}} = 2^9 \text{ byte}$$
-# Tabella delle Pagine e PTE (Page Table Entry)
+##### Tabella delle Pagine e PTE (Page Table Entry)
 
 > [!info] **Page Table Entry (PTE)**
 > 
 > Ogni riga della tabella delle pagine è chiamata **PTE**. È il "ponte" che permette al processore di capire a quale indirizzo fisico corrisponda un indirizzo virtuale generato dal programma. Contiene una serie di campi e informazioni fondamentali gestiti in sinergia tra MMU e Sistema Operativo (SO).
 
----
-## I Campi di una PTE
+ **I Campi di una PTE**
 
-### 1. Numero del Frame (Indirizzo Fisico)
+1. **Numero del Frame (Indirizzo Fisico)**
 Contiene l'indirizzo fisico di base. Quando la CPU accede a un indirizzo virtuale, prende questo numero e lo concatena all'offset per calcolare l'indirizzo reale in RAM in cui si trova il dato.
 
-### 2. Bit Presente / Assente
+2. **Bit Presente / Assente**
 Indica se la pagina si trova attualmente in RAM (Frame) oppure se risiede solo su disco. Se assente, un accesso genererà un _Page Fault_.
 
-### 3. Bit di Protezione
+3. **Bit di Protezione**
 Definisce i diritti di accesso per quella specifica pagina: **Lettura**, **Scrittura** ed eventualmente **Esecuzione**.
 
-- **Protezione del Codice:** Lo spazio di memoria virtuale è diviso in _Stack_ (in alto, cresce verso il basso), _Heap_ (al centro, cresce verso l'alto) e l'_Area Dati/Codice_ (in basso). Spesso l'area del codice è di sola lettura. Dato che il codice non si automodifica (sarebbe più una complicazione che un vantaggio), più istanze dello stesso programma possono condividere in memoria la stessa area di codice.
-
+- **Protezione del Codice:** Lo spazio di memoria virtuale è diviso in _Stack_ , _Heap_ e l'_Area Dati/Codice_. Spesso l'area del codice è di sola lettura. Dato che il codice non si automodifica, più istanze dello stesso programma possono condividere in memoria la stessa area di codice.
 - **Perché risiede nella Tabella delle Pagine?** Perché la tabella è letta direttamente dalla **MMU**. La MMU fa da "guardia": se rileva un'operazione non consentita (es. scrittura su codice), blocca tutto e segnala un'eccezione al SO (che di norma termina il processo).
-
 - **Prevenzione attacchi:** Evita tecniche di _Code Injection_, in cui si cerca di inserire codice malevolo in aree destinate ai dati (come Heap o Stack) per poi eseguirlo o per mandare in crash l'applicazione.
 
-### 4. Bit di Modifica (Dirty Bit)
+3. **Bit di Modifica (Dirty Bit)**
 Segnala se la pagina in RAM è stata modificata ("sporca") rispetto alla sua copia originale salvata su disco.
 
 - **Flusso con Page Fault:** 
 	1. La CPU cerca una pagina non in RAM $\rightarrow$ si verifica un _Page Fault_.
-
     2. La pagina viene copiata dal disco alla RAM. La copia su disco non viene cancellata.
-
     3. All'inizio il Dirty Bit è a **0** (pagina pulita, identica alla copia su disco).
-
     4. Se il processo effettua una scrittura su quella pagina, la MMU aggiorna il Dirty Bit a **1**.
 
 - **Gestione della "Pagina Vittima":** Quando la RAM è piena e il SO deve fare spazio spostando pagine su disco, usa questo bit per ottimizzare le operazioni:
 
     - _Dirty Bit = 0:_ Il SO sovrascrive semplicemente il frame in RAM senza copiare nulla su disco (risparmiando un'operazione di I/O molto lenta).
-    
     - _Dirty Bit = 1:_ Il SO è obbligato a salvare le modifiche scrivendo la pagina su disco prima di liberare il frame.
 
-> [!info] A volte il SO approfitta dei momenti in cui non ha operazioni pendenti (inattività della CPU) per sincronizzare le pagine sporche su disco, riportando preventivamente il Dirty Bit a 0 per velocizzare future sostituzioni.
+> [!info] A volte il SO approfitta dei momenti in cui non ha operazioni pendenti (inattività della CPU) per sincronizzare le pagine sporche su disco.
 
-### 5. Bit di Referenziamento (Bit R)
+5. **Bit di Referenziamento (Bit R)**
 Viene impostato a **1** dalla MMU in automatico ogni volta che avviene un accesso alla pagina (sia in lettura che in scrittura).
 
 - **Utilità:** Fornisce una sorta di _microstatistica_ sull'uso delle pagine, a costo quasi nullo per il SO.
-
 - **Come funziona:** Il SO azzera periodicamente questi bit (es. ogni 500 ms). Se alla fine del periodo il bit è a 1, significa che il processo ha usato la pagina recentemente. Monitorando questi cicli, il SO capisce quali pagine sono usate attivamente e quali possono essere scartate in caso di necessità.
 
-### 6. Bit per Disabilitare la Cache
+6. **Bit per Disabilitare la Cache**
 Segnala che la linea di cache corrispondente a quella pagina non deve essere utilizzata, forzando la lettura direttamente dalla RAM (o dalla periferica).
 
-- **Il problema dell'I/O (Memory-Mapped I/O):** L'hardware mappa alcune porte delle periferiche I/O su specifici indirizzi di memoria, permettendo ai processi di leggere lo stato di un dispositivo tramite un normale "fetch" di memoria.
-
-- **Perché disabilitare la cache?** Se la cache fosse attiva su questi indirizzi speciali, restituirebbe un valore obsoleto salvato in cache, impedendo la lettura in tempo reale dello stato effettivo della porta I/O.
-
-### 7. Bit di Validità / Allocazione
+7. **Bit di Validità / Allocazione**
 Traccia se una determinata area dello spazio di indirizzamento è stata effettivamente allocata dal SO per il processo.
 
 - **Espansione dinamica:** Anche se le pagine tra Heap e Stack sembrano libere e appartenenti al processo, per usarle (es. allocando vettori con `malloc`) il processo deve chiedere al SO di spostare il limite dell'Heap ("più in alto").
@@ -1228,30 +1171,50 @@ Traccia se una determinata area dello spazio di indirizzamento è stata effettiv
 > 
 > Un Frame corrisponde esattamente ad una pagina, solo che il frame contiene gli indirizzi fisici presenti in RAM, mentre la pagina contiene gli indirizzi logici che vede il processo. Dal punto di vista del processo lui sta lavorando su indirizzi di memoria fisici tutti contigui, ma in realtà ne ha solo l'impressione perché gli indirizzi fisici reali li conosce solo il SO, questo viene fatto per evitare il problema della frammentazione esterna 
 
+##### Possibile esercizio d'Esame
+**Input:**
+- Memoria Virtuale = 4 MB
+- Tabella Pagine = $2^{13}$ Voci $\implies$ Dim. Pagina Fisica = 13 bit
+- Numero Frame = 8 bit
+
+**Richiesta:**
+Dimensione Memoria Fisica (RAM)?
+**Svolgimento:**
+
+Sappiamo che:
+$4\text{ MB} = 2^{22}\text{ byte} \implies \text{Dimensione Indirizzo Virtuale} = 22\text{ bit}$
+
+Calcolo dell'Offset:
+$\text{Offset} = 22 - 13 = 9\text{ bit} \implies \text{Dimensione Pagina} = 2^9\text{ byte}$
+
+Calcolo della memoria fisica (RAM):
+$$2^8 \text{ (N. Frame)} \cdot 2^9 \text{ (Dim. Pagina)} = 2^{17} \text{ byte} = 128\text{ KB} \implies \text{RAM}$$
+
+_Oppure, calcolo alternativo per la dimensione della pagina:_
+$$\frac{2^{22}}{2^{13}} = 2^9 \text{ byte}$$
+
 ---
 
-
-### Tabella dei frame
-Oltre alla tabella delle pagina che abbiamo per ogni processo, abbiamo anche la tabella dei frame, ogni record è formato in questo modo:
+#### Tabella dei frame
+Il sistema operativo tiene traccia dello stato di occupazione di ogni frame fisico attraverso la tabella dei frame, ogni record è formato in questo modo:
 - *stato*: occupato/libero
 - *author*: quale processo lo occupa
 
-Questa tabella viene consultata ogni volta che viene creato un processo per creare la sua relativa tabella delle pagine.
+Questa tabella viene consultata ogni volta che viene creato un processo per creare la sua relativa tabella delle pagine e quando il processo chiede di allocare nuove pagine.
 
-### Progettazione di una tabella delle pagine
+---
 
+#### Progettazione di una tabella delle pagine
 Per creare un ottima tabella delle pagine è importante curare i seguenti aspetti:
 - *velocità*: la velocità di consultazione 
 - *dimensione* in RAM o disco
 
-###### Affrontiamo il problema della velocità
-*Soluzione storica*: avere un registro per ogni entry della tabella delle pagine (per ogni processo), questa è una soluzione molto veloce, ma funziona solo se ho una tabella di dimensione ridotta. Inoltre il context switch diventa lento.
-
-*Soluzione moderna*: tabella interamente residente in memoria RAM con registro **PTBR (Page Table Base Register)** che vive anche esso in RAM - questo registro indica alla MMU quale tabella di paginazione usare in base al processo in esescuzione. In pratica in quel registro troviamo l'indirizzo fisico del primo record della tabella di paginazione. Servono due accessi alla memoria per prelevare il dato (uno al PTBR, uno al dato dopo aver calcolato il suo offset rispetto all'indirizzo PTBR), il context switch però è più veloce.
+##### Affrontiamo il problema della velocità
+*Soluzione moderna*: tabella interamente residente in RAM con registro **PTBR (Page Table Base Register)** che vive anche esso in RAM - questo registro indica alla MMU quale tabella di paginazione usare in base al processo in esescuzione. In pratica in quel registro troviamo l'indirizzo fisico del primo record della tabella di paginazione. Servono due accessi alla memoria per prelevare il dato (uno al PTBR, uno al dato dopo aver calcolato il suo offset rispetto all'indirizzo PTBR), il context switch però è più veloce.
 
 *La soluzione moderna è ottima, ma pagare due accessi alla RAM non è buono, cerchiamo una strategia migliore:*
 
-**Translation Lookaside Buffer (TLB)**: è una memoria ultra veloce che si frappone tra l'MMU e la RAM (la tabella delle pagine), è praticamente una cache per l'MMU, in questa memoria troviamo gli indirizzi fisici delle pagine virtuali più frequenti richiesti dall'MMU alla RAM. 
+**Translation Lookaside Buffer (TLB)**: è una memoria ultra veloce che si frappone tra l'MMU e la RAM, è praticamente una cache per l'MMU, in questa memoria troviamo gli indirizzi fisici delle pagine virtuali più frequentemente richieste dall'MMU alla RAM. 
 (è simile quindi ad un prefetch tramite cache per la CPU)
 
 Un programma userà sempre maggiormente una parte ridotta del codice, mettendo in conto questa cosa questo buffer diventa molto utile.
@@ -1264,35 +1227,29 @@ Un programma userà sempre maggiormente una parte ridotta del codice, mettendo i
 	 - codice di protezione; 
 	 - dirty bit: indica se la pagina è stata modificata in RAM rispetto alla versione originale in disco
 	 - numero di frame: questo insieme alla prima voce ci permette di trovare l'indirizzo fisico della pagina specificata
-- la ricerca viene fatta parallelizzando su tutte le voci (per questo è molto costosa e piccola, se fosse troppo grande non riusciremmo a parallelizzare)
+- la ricerca viene fatta parallelizzando su tutte le voci.
 - essendo molto simile ad una cache abbiamo i concetti di TLB miss e TLB hit
 - una volta che una pagina viene liberata dalla RAM il suo rispettivo bit di validità dentro la TLB deve essere modificato
 - Ci consente di vincolare alcune pagine alla TLB - è uno strumento che sfrutta il sistema operativo per pagine molto importanti e richieste di frequente
 - Quando faccio un context swtich faccio un flush della TLB - la prima ricerca di un processo dopo un flush sarà sempre un miss perché la TLB è vuota. 
   Per evitare il flush (è una perdita di tempo assurda se ci sono sempre gli stessi processi) andiamo ad aggiungere una voce extra detta ASID(address-space identifiers) che identifica il processo dentro la tabella TLB. In pratica adesso la ricerca viene eseguita usando la chiave (page number, ASID).
-![[Pasted image 20260428161016.png|700]]
-Riassumendo quando la CPU ha bisogno di un indirizzo se si ha un TLB hit avrò subito a disposizione pagina e frame del processo e quindi gli indirizzi fisici, se si verifica un TLB miss la CPU dovrà reperire la pagina o in RAM o sul disco
-
+![[Pasted image 20260428161016.png|553]]
+> [!isummary] Riassumendo 
+> Quando la CPU ha bisogno di un indirizzo se si ha un TLB hit avrò subito a disposizione pagina e frame del processo e quindi gli indirizzi fisici, se si verifica un TLB miss la CPU dovrà reperire la pagina o in RAM o sul disco
 
 **Quanto impatta l'utilizzo di una TLB?** Di seguito calcoli ci permettono di calcolare il tempo medio (*EAT: Effective access time*)
 ![[Pasted image 20260428172712.png|600]]
 (nel tempo effettivo di TLB miss è 220 perché 20 + 100 per accedere alla RAM e prendere il valore di PTBR e altri 100 per prendere il dato nella giusta locazione di memoria)
 
-###### Affrontiamo il problema della dimensione
-Nella realtà la tabella delle pagine è enorme e quindi non è mai mono-dimensione
-![[Pasted image 20260428164846.png|600]]
-In pratica dovremmo avere 4MB di RAM per ogni pagina (una memoria assurda). Da questo tipo di problema nascono le pagine multi-livello. (sarebbe la gestione multi livello di basi di dati) 
 
-**Tabelle delle pagine multi-livello**: il PTBR punta alla tabella di primo livello, nella tabella di primo livello troviamo dei gruppi di pagine. In pratica il PTRB punta ad uno dei gruppi. Dentro al record di primo livello troviamo il puntatore ad una tabella di secondo livello. La tabella di secondo livello è la solita tabella delle pagine (come la conosciamo).
+##### Affrontiamo il problema della dimensione
+Nei sistemi a 32 bit ogni tabella delle pagine pesa 4MB ed è una per processo. Già di per se non è una buona soluzione ma ancora è fattibile da utilizzare, ma nei sistemi a 64 bit il discorso cambia: qui dovremmo avere delle tabelle di 32 PetaByte per ogni processo. Per questo motivo nascono le *tabelle delle pagine multilivello*.
+
+**Tabelle delle pagine multi-livello**
+Il PTBR punta alla tabella di primo livello, nella tabella di primo livello troviamo dei gruppi di tabelle delle pagine. In pratica il PTRB punta ad uno dei gruppi. Dentro al record di primo livello troviamo il puntatore ad una tabella di secondo livello. Ci possono essere più livelli ma ad un certo punto si arriverà alla tabella delle pagine normale come la conosciamo.
 ![[Pasted image 20260428165612.png|500]]
 *Vantaggio:* consumo molta meno memoria
 *Svantaggio:* facciamo più accessi alla memoria quindi riduciamo la velocità
-
-**Cosa faccio per creare l'indirizzo fisico**: avendo in input solo il numero di pagina virtuale (che chiameremo n) e l'offset -  devo capire a quale gruppo appartiene questa pagina. Per farlo eseguo: $$\frac{n}{1024}$$ otterrò: 
-- quoziente: che diventa l'identificatore del gruppo
-- resto: l'offset dentro il gruppo specificato
-Usando questi due dati arrivo alla pagina specifica che mi indicherà l'indirizzo fisico.
-
 
 Per gestire i casi reali con 64 bit il numero di livelli aumenta (almeno 4 o 5 livelli), quindi aumenta il numero di accessi alla RAM, sulla carta questa soluzione non sembra ottima, ma realmente grazie all'utilizzo di diverse TLB lo diventa.
 
@@ -1300,21 +1257,20 @@ Per gestire i casi reali con 64 bit il numero di livelli aumenta (almeno 4 o 5 l
 > Se le pagine non hanno valore (il bit di validità è a 0) non ha senso gestirle. La struttura multi-livello viene usata solo per le pagine veramente utili 
 
 
-### Tabella delle pagine invertite
+**Tabella delle pagine invertite**
 Questa è un'altra soluzione nella gestione delle pagine in memoria, in pratica al posto di avere una tabella delle pagine enorme, creiamo una tabella dei frame ma con le seguenti voci:
 - idprocesso (PID)
 - pagina virtuale
 
-questo ci permette di sostituire le n tabelle della pagine usate per ogni processo ad una singola tabella usata per qualsiasi processo, in modo da diminuire la dimensione in RAM, dato che sono più compatte. 
+questo ci permette di sostituire le $n$ tabelle della pagine usate per ogni processo ad una singola tabella usata per qualsiasi processo, in modo da diminuire la dimensione in RAM, dato che sono più compatte. 
 **Come si trova l'indirizzo fisico?**
 - La CPU genera un indirizzo logico diviso in tre parti: **pid** (chi è il processo), **p** (pagina virtuale), **d** (offset/spiazzamento).
 - Si cerca nella tabella invertita la riga che contiene esattamente quella coppia `(pid, p)`.
 - L'**indice `i`** di quella riga (cioè la sua posizione nella tabella) corrisponde esattamente al **numero del frame fisico** nella RAM!
 - L'indirizzo fisico finale si ottiene unendo l'indice `i` trovato e l'offset `d`.
 
-**Riassumendo:**
+**Riassumendo le tabelle invertite**
 - **Per tradurre gli indirizzi in RAM:** Si usa **UNA SINGOLA** Tabella delle Pagine Invertita per tutto il sistema. È piccola perché ha una riga sola per ogni frame _fisicamente esistente_ nella RAM (se hai 4GB di RAM, la tabella mappa solo quei 4GB, indipendentemente da quanti processi hai).
-    
 - **Per gestire i Page Fault (quando la pagina non è in RAM):** La tabella invertita mappa _solo_ quello che si trova fisicamente in RAM. Se un processo cerca una pagina che è finita sul disco fisso (Swap), la tabella invertita non la troverà. Per questo motivo, il Sistema Operativo deve comunque mantenere salvate (magari su disco) le **tabelle delle pagine classiche (una per processo)** per sapere dove andare a recuperare i dati quando avviene un page fault.
 
 ---
