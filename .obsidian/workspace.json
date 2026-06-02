@@ -27,24 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
+                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "14_7_maggio"
-            }
-          },
-          {
-            "id": "baade6b58dc30298",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "SO-01"
+              "title": "15_12_maggio"
             }
           }
         ]
@@ -223,7 +211,7 @@
         "direction": "vertical",
         "x": 0,
         "y": 0,
-        "width": 1538,
+        "width": 1540,
         "height": 864,
         "maximize": true,
         "zoom": 0
@@ -232,15 +220,18 @@
   },
   "active": "15b7ff51d151a951",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260601122312.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260601122241.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260601115448.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260531221210.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
     "UNI/Callouts.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260530143746.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260530143010.png",
@@ -261,10 +252,6 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/photo_5814423968692243958_y.jpg",
     "UNI/Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_115903_Samsung Notes.jpg",
     "UNI/Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_110943_Samsung Notes.jpg",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_104458_Samsung Notes.jpg",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_103308_Samsung Notes.jpg",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260527123500.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260527123452.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/3_12_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/1_5_marzo.md",

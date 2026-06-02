@@ -1267,83 +1267,65 @@ questo ci permette di sostituire le $n$ tabelle della pagine usate per ogni proc
 
 ---
 
-
-![[Pasted image 20260510162108.png|626]]
-### Cache: Prima o Dopo la MMU?
-
+#### Cache: Prima o Dopo la MMU?
+![[Pasted image 20260601115448.png]]
 Il posizionamento della cache rispetto alla MMU determina se il sistema lavora con indirizzi fisici o virtuali, influenzando le prestazioni e la gestione del context-switch.
 
-### 1. Cache basata su indirizzi fisici (Posizionata dopo la MMU)
-
+##### 1. Cache basata su indirizzi fisici (Posizionata dopo la MMU)
 In questa configurazione, la cache si trova tra la MMU e la RAM.
-
 - **Funzionamento:** La CPU invia una richiesta alla MMU, che effettua la traduzione da indirizzo virtuale a fisico; solo a questo punto la richiesta arriva alla cache.
 - **Vantaggi:** Non è necessario azzerare (invalidare) la cache durante un context-switch. Poiché gli indirizzi fisici sono univoci per l'intero sistema, i dati del processo P1 e del processo P2 possono coesistere nella cache senza ambiguità.
 - **Svantaggi:** La traduzione dell'indirizzo da parte della MMU può diventare un collo di bottiglia, rendendo l'accesso ai dati più lento (caching meno efficace in termini di velocità pura).
 
-### 2. Cache basata su indirizzi virtuali (Posizionata tra CPU e MMU)
-
+##### 2. Cache basata su indirizzi virtuali (Posizionata tra CPU e MMU)
 In questa configurazione, la cache viene consultata direttamente utilizzando l'indirizzo virtuale generato dalla CPU.
-
 - **Vantaggi:** Maggiore efficacia e velocità, poiché si evita il ritardo della traduzione della MMU in caso di _cache hit_.
 - **Svantaggi :** Se non azzerassimo la cache al cambio di processo, P2 potrebbe accedere erroneamente ai dati di P1 (poiché entrambi usano gli stessi indirizzi virtuali locali).
-- **Soluzione:** Per evitare l'azzeramento continuo, si utilizzano gli **ASID** (Address Space Identifier). Etichettando ogni linea di cache con l'identificativo del processo, l'hardware può distinguere tra indirizzi virtuali identici appartenenti a processi diversi. Tuttavia, questo sistema ha un costo hardware che aumenta proporzionalmente alla dimensione della cache.
+- **Soluzione:** Per evitare l'azzeramento continuo, si utilizzano gli **ASID** (Address Space Identifier).
 
-### 3. Implementazione pratica.
-
+##### 3. Implementazione pratica.
 Nella realtà, si adotta una combinazione delle due strategie per massimizzare le prestazioni:
-
 - **Cache L1:** Solitamente interna alla CPU e basata su **indirizzi virtuali** per garantire la massima velocità.
 - **Cache L2 (e successive):** Progettate per lavorare con **indirizzi fisici** (dietro la MMU). Sono più capienti e leggermente più lente della L1, ma non richiedono l'azzeramento al context-switch.
 
 **Il lavoro in parallelo:**
-
 Per ottimizzare i tempi, il sistema non attende l'esito di una componente prima di attivare l'altra:
 
 1. Quando la CPU genera un indirizzo virtuale, inoltra contemporaneamente la richiesta alla **Cache L1** (per un riscontro immediato) e alla **MMU** (per avviare la traduzione). Se la L1 riporta un _cache miss_, la pratica di traduzione per accedere ai livelli successivi è già in corso.
 2. **Scrematura tramite Offset:** Mentre la MMU traduce l'indirizzo virtuale in fisico per consultare la **Cache L2**, è possibile iniziare a lavorare. Poiché l'ultima parte dell'indirizzo (l'**offset**) è identica sia nell'indirizzo virtuale che in quello fisico, il sistema può usarla immediatamente per identificare il set di linee potenziali nella cache L2, riducendo i tempi di attesa dell'output finale della MMU.
 
+---
 
-![[Pasted image 20260510162150.png|626]]
-### Algoritmi di Sostituzione delle Pagine
-
+#### Algoritmi di Sostituzione delle Pagine
 Quando un processo richiede una pagina non presente in RAM, si verifica un **page fault**. In questo caso, il SO deve intervenire per caricare la pagina mancante dalla memoria secondaria alla memoria principale e aggiornare la tabella delle pagine.
 
-### Pagina Vittima
-
+##### Pagina Vittima
 Se la RAM è già piena e non ci sono frame liberi per ospitare la nuova pagina, il SO deve scegliere una **pagina vittima** da espellere per fare spazio.
-
-- A differenza della cache (gestita dall'hardware), la gestione della memoria virtuale è affidata al **Sistema Operativo**.
+- La gestione della memoria virtuale è affidata al **Sistema Operativo**.
 - Ridurre al minimo il numero di page fault futuri, controllando i costi di overhead. La logica è simile a quella delle cache: decidere quale informazione rimuovere penalizzando il meno possibile l'esecuzione.
 
-*L'overhead è il lavoro che deve fare la CPU per pianificare/gestire la memoria senza quindi effettuare operazioni per i processi*
+> [!summary] L'overhead è il lavoro che deve fare la CPU per pianificare/gestire la memoria senza quindi effettuare operazioni per i processi
 
-### L'Algoritmo Ottimale (OPT)
+Vediamo degli algoritmi di sostituzione delle pagine:
 
+##### L'Algoritmo Ottimale (OPT)
 L'algoritmo **OPT** rappresenta la soluzione teorica perfetta per la sostituzione delle pagine.
 
 - **funzionamento:** Tra tutte le pagine presenti in memoria, l'algoritmo sceglie come vittima quella che **verrà referenziata nel futuro più lontano**. Se sapessimo che una pagina non verrà consultata per molto tempo (o mai più), rimuoverla sarebbe la scelta ideale perché non genererebbe overhead immediato.
-- **Vantaggi:** Garantisce il **costo minimo di overhead** (il minor numero possibile di page fault).
+- **Vantaggi:** Garantisce il **costo minimo di overhead** e il minor numero possibile di page fault.
 - **Limiti:** È un algoritmo **difficilmente realizzabile** nella pratica, poiché richiede al sistema operativo di prevedere il futuro comportamento del processo, informazione di cui il SO non dispone.
 - Viene utilizzato principalmente come **termine di paragone**. Serve a valutare l'efficacia degli altri algoritmi reali confrontando le loro prestazioni con il "massimo teorico" offerto da OPT.
 
+##### Algoritmo NRU (Not Recently Used)
+L'algoritmo **NRU** è una soluzione pratica per la sostituzione delle pagine che si basa su statistiche d'uso minime raccolte tramite la tabella delle pagine e raggruppa le pagine in classi.
 
-![[Pasted image 20260510162223.png]]
-
-### Algoritmo NRU (Not Recently Used)
-
-L'algoritmo **NRU** è una soluzione pratica per la sostituzione delle pagine che si basa su statistiche d'uso minime raccolte tramite la tabella delle pagine.
-
-### I Bit di Stato
-
+**I Bit di Stato**
 Per funzionare, l'algoritmo utilizza due bit specifici per ogni pagina, solitamente aggiornati direttamente dall'**hardware**:
-
 - **Bit di Referenziamento (R):** viene impostato a **1** ogni volta che la pagina viene consultata (lettura o scrittura). Il Sistema Operativo provvede ad azzerarlo periodicamente per distinguere le pagine usate di recente da quelle vecchie.
 - **Bit di Modifica (M):** viene impostato a **1** quando il contenuto della pagina viene scritto (pagina "dirty").
 
-### Classificazione delle Pagine
-
-In caso di _page fault_, l'algoritmo suddivide le pagine presenti in RAM in **4 classi** basate sulla combinazione dei bit R ed M:
+**Classificazione delle Pagine**
+L'algoritmo suddivide le pagine presenti in RAM in **4 classi** basate sulla combinazione dei bit R ed M:
 
 |**Classe**|**Stato Bit (R, M)**|**Descrizione**|
 |---|---|---|
@@ -1352,7 +1334,7 @@ In caso di _page fault_, l'algoritmo suddivide le pagine presenti in RAM in **4 
 |**Classe 2**|(1, 0)|Referenziato, non modificato.|
 |**Classe 3**|(1, 1)|Referenziato, modificato.|
 
-L'obiettivo è rimuovere una pagina che non sia stata usata recentemente.
+*L'obiettivo è rimuovere una pagina che non sia stata usata recentemente.*
 
 1. Il Sistema Operativo analizza le classi in ordine crescente, dalla **0** alla **3**.
 2. Viene scelta una pagina vittima appartenente alla **classe non vuota con il numero più basso**
@@ -1360,25 +1342,19 @@ L'obiettivo è rimuovere una pagina che non sia stata usata recentemente.
 
 Questo permette di eliminare prima le pagine che sono sia "vecchie" (non referenziate) che "pulite" (non modificate), minimizzando l'impatto sulle prestazioni del sistema.
 
-![[Pasted image 20260510162253.png]]
 
-### Algoritmi FIFO e della Seconda Chance
-
-Questi algoritmi si basano sul concetto di **età della pagina**, ovvero sul tempo trascorso da quando una pagina è stata caricata in RAM.
-
-### 1. Algoritmo First-In First-Out (FIFO)
-
+##### Algoritmi FIFO e della Seconda Chance
+Questi algoritmi si basano sul concetto di **età della pagina**, ovvero sul tempo trascorso da quando una pagina è stata caricata in RAM![[Pasted image 20260601122312.png|600]]
+1. **Algoritmo First-In First-Out (FIFO)**
 La logica è quella di una coda semplice: la prima pagina che entra è la prima a uscire.
 
 - Viene rimossa sempre la pagina più vecchia (quella che si trova in "testa" alla coda).
 - Basarsi solo sull'ordine di caricamento non è sempre una scelta felice. Una pagina potrebbe essere molto vecchia ma allo stesso tempo **molto usata** dal processo; rimuoverla causerebbe un immediato _page fault_, generando overhead inutile.
 
-### 2. Algoritmo della Seconda Chance
-
+2. **Algoritmo della Seconda Chance**
 Per migliorare il FIFO, questo algoritmo combina l'ordine temporale con le informazioni tracciate dalla MMU (il **bit di referenziamento R**). L'idea è quella di concedere una "seconda possibilità" alle pagine vecchie che sono state consultate di recente.
 
 **Come funziona:**
-
 1. Il sistema esamina la pagina più vecchia in testa alla coda.
 2. **Se il bit di referenziamento R è uguale a 1:**
     - La pagina non viene scartata.
@@ -1386,25 +1362,14 @@ Per migliorare il FIFO, questo algoritmo combina l'ordine temporale con le infor
 3. **Se il bit di referenziamento R è uguale a 0:**
     - La pagina viene scartata (vittima) poiché è sia vecchia che non utilizzata di recente.
 
-**Esempio:**
+Questo aggiustamento permette di mantenere in RAM le pagine più importanti anche se sono state caricate molto tempo fa.
 
-- La pagina **A** è la più vecchia (caricata al tempo 0).
-- Invece di rimuoverla subito come farebbe il FIFO , il sistema controlla il suo bit R.
-- Se R=1, **A** viene spostata alla fine della coda e il suo bit R viene azzerato. La ricerca della vittima prosegue quindi con la pagina **B**.
-
-Questo aggiustamento permette di mantenere in RAM le pagine più importanti (frequentemente accedute) anche se sono state caricate molto tempo fa.
-
-
-![[Pasted image 20260510162316.png]]
-
-### Algoritmo dell'Orologio (Clock)
-
+##### Algoritmo dell'Orologio (Clock)
 L'algoritmo **Clock** rappresenta un'evoluzione dell'algoritmo della Seconda Chance, progettata per essere implementata in modo più efficiente riducendo l'overhead dovuto allo spostamento continuo delle pagine nella coda.
 
-### Struttura e Funzionamento
-
+**Struttura e Funzionamento**
 Invece di una coda lineare, le pagine vengono organizzate in una **coda circolare** (o lista circolare).
-
+![[Pasted image 20260601122241.png|518]]
 - **Il Puntatore:** Un puntatore (simile alla lancetta di un orologio) indica la prossima pagina da esaminare, che rappresenta la "testa" della coda.
 - **Logica di Scelta:** Il criterio è identico a quello della Seconda Chance, basato sul **bit di referenziamento (R)**:
     - Quando si verifica un _page fault_, il sistema controlla la pagina indicata dal puntatore.
@@ -1413,21 +1378,12 @@ Invece di una coda lineare, le pagine vengono organizzate in una **coda circolar
 
 A differenza della Seconda Chance classica, non è necessario rimuovere fisicamente la pagina dalla testa per reinserirla in coda; è sufficiente spostare il puntatore e modificare il bit, rendendo l'operazione molto più rapida a livello hardware/software.
 
-### Esempio
-
-Nell'immagine, il puntatore "next victim" punta a una pagina con bit R=1. Secondo la logica dell'algoritmo, quel bit viene azzerato (portato a 0) e il puntatore scorre verso il basso finché non incontra la prima pagina che ha già il bit R=0, che sarà effettivamente rimossa.
-
-
-![[Pasted image 20260510162336.png]]
-
-### Algoritmo Least Recently Used (LRU)
-
+##### Algoritmo Least Recently Used (LRU)
 L'algoritmo **LRU** si basa sull'osservazione del comportamento passato del processo per cercare di prevedere le necessità future.
 
 L'idea fondamentale è che le pagine usate più di recente hanno un'alta probabilità di essere usate ancora nel prossimo futuro. Al contrario, una pagina che non viene consultata da tempo è probabilmente meno utile e può essere rimossa senza causare overhead immediato.
 
-### Funzionamento
-
+**Funzionamento**
 L'obiettivo è rimuovere la pagina che è stata utilizzata meno di recente. Sebbene sia un'ottima strategia teorica, la sua implementazione pratica è complessa:
 
 - **Contatore**: Per tenere traccia dell'uso, è necessario aggiornare un contatore ogni volta che avviene un accesso alla pagina (lettura o scrittura).
@@ -1438,12 +1394,7 @@ L'obiettivo è rimuovere la pagina che è stata utilizzata meno di recente. Sebb
 
 Mentre il FIFO guarda solo a quando la pagina è stata caricata, l'LRU cerca di fare la scelta migliore guardando a quando la pagina è stata effettivamente consultata l'ultima volta.
 
-
-![[Pasted image 20260510162404.png]]
-### Algoritmo NFU (Not Frequently Used)
-
-### Funzionamento del Contatore
-
+##### Algoritmo NFU (Not Frequently Used)
 L'idea centrale è associare un **contatore software** a ogni voce della tabella delle pagine.
 
 - **Aggiornamento Periodico**: Il SO esamina periodicamente le pagine.
@@ -1451,22 +1402,16 @@ L'idea centrale è associare un **contatore software** a ogni voce della tabella
 - **Significato del valore**: Il contatore diventa quindi un conteggio cumulativo dei cicli di azzeramento in cui la pagina è risultata referenziata.
 
 In caso di page fault, il SO cerca la pagina vittima basandosi sulla frequenza d'uso :
-
 - Viene rimossa la pagina che presenta il **contatore più basso**.
 - Si spera che un valore basso indichi una pagina utilizzata meno frequentemente nel tempo.
 
-### Problemi
-
+**Problemi**
 Nonostante offra un criterio di scelta, guardare semplicemente al valore più basso può essere fuorviante:
 
 - Il problema principale è che l'algoritmo può "privilegiare" erroneamente pagine che sono state utilizzate intensamente in un passato lontano, ma che ora non servono più.
 - Queste pagine manterranno un contatore alto per molto tempo, occupando frame che dovrebbero essere assegnati a pagine usate meno in passato ma fondamentali nel presente (e probabilmente nel prossimo futuro).
 
-
-![[Pasted image 20260510162434.png]]
-
-### Algoritmo di Aging
-
+##### Algoritmo di Aging
 Invece di sommare semplicemente il bit di referenziamento, il sistema esegue un'operazione bit a bit più complessa a ogni scadenza del clock:
 
 - **Shift a destra**: Il contatore di ogni pagina viene spostato di una posizione verso destra, scartando il bit meno significativo.
@@ -1483,30 +1428,25 @@ Scegliere il contatore più basso è coerente con la logica dell'algoritmo **NRU
 
 In termini di costo, pur richiedendo operazioni di shift, l'Aging rimane una soluzione software efficiente che offre un'ottima approssimazione dell'algoritmo ottimale (OPT).
 
+---
 
-![[Pasted image 20260510162453.png]]
-
-### Prestazioni
-
+#### Confronto sulle prestazioni
+![[Pasted image 20260510162453.png|609]]
 Per confrontare l'efficacia dei diversi algoritmi di sostituzione, si utilizza come metrica principale il **numero di fault di pagina**.
 
-### Page Fault
-
+##### Page Fault
 Il grafico nell'immagine mostra il comportamento atteso del sistema:
 
 - **All'aumentare del numero di frame** disponibili in RAM, il numero di page fault diminuisce progressivamente.
 - Idealmente, con un numero di frame sufficiente a ospitare tutte le pagine richieste dal processo, il numero di fault tende a stabilizzarsi o ad azzerarsi (fatta eccezione per i fault iniziali necessari a caricare le pagine per la prima volta).
 
-### Configurazione del Test
-
+##### Configurazione del Test
 Vengono fissate le seguenti condizioni:
-
 - **Numero di frame:** 3 frame fisici disponibili.
 - **Sequenza di accesso:** Una "sequenza compatta" di pagine virtuali: **7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1**.
     - Le ripetizioni consecutive vengono scartate nella sequenza compatta perché non genererebbero nuovi eventi rilevanti per la logica di sostituzione.
 
-### Applicazione dell'Algoritmo Ottimale (OPT)
-
+##### Applicazione dell'Algoritmo Ottimale (OPT)
 L'algoritmo OPT effettua le scelte di sostituzione guardando al **futuro** anziché al passato.
 
 1. **Fase Iniziale (Riempimento):**
@@ -1520,35 +1460,30 @@ L'algoritmo OPT effettua le scelte di sostituzione guardando al **futuro** anzic
 
 In questo modo e con l'uso dell'algoritmo OPT, si ottengono complessivamente **9 fault di pagina**. Questo valore rappresenta il limite minimo (ottimale) con cui confrontare gli altri algoritmi reali.
 
+
 ![[Pasted image 20260516132824.png|632]]
-## Algoritmo FIFO e Anomalia di Belady
-
-L'algoritmo **FIFO (First-In, First-Out)** è un metodo di sostituzione delle pagine che si basa sulla semplicità: la prima pagina che entra in memoria è la prima a essere scartata. Per valutarne le prestazioni, usiamo come indice il numero di **page fault** generati rispetto a una sequenza di accessi.
-
-### Il confronto con l'algoritmo OPT
-
+##### Algoritmo FIFO e Anomalia di Belady
+**Il confronto con l'algoritmo OPT**
 Garantisce sempre il minor numero possibile di page fault. Tuttavia, FIFO presenta un comportamento che lo rende meno affidabile in certi scenari.
 
-### L'Anomalia di Belady
-
+**L'Anomalia di Belady**
 Ci si aspetta che all'aumentare della memoria RAM (ovvero dei frame disponibili), il numero di page fault diminuisca. FIFO soffre dell'**Anomalia di Belady**: un fenomeno per cui, aumentando i frame, il numero di fault di pagina può aumentare anziché scendere.
 
 - **1 Frame**: si registrano **12 fault**.
 - **2 Frame**: la situazione non cambia, restano **12 fault**.
 - **3 Frame**: i fault scendono a **9**.
 - **4 Frame**: **anomalia**; invece di scendere ancora, i fault **aumentano a 10**.
-
 Il problema di fondo è che FIFO usa solo l'**età della pagina** come criterio per decidere cosa scartare. Questo non è sempre un parametro sensato: una pagina potrebbe essere in memoria da molto tempo (quindi "vecchia" per FIFO), ma essere usata spessissimo dal programma. Scartarla solo perché è arrivata per prima genera inutili page fault aggiuntivi.
 
-![[Pasted image 20260516132853.png]]
 
-## **L'Algoritmo LRU e la Proprietà di Inclusione**
-
+![[Pasted image 20260516132853.png|602]]
+##### L'Algoritmo LRU e la Proprietà di Inclusione
 A differenza di FIFO, LRU si comporta molto bene anche su sequenze lunghe e **non soffre dell'Anomalia di Belady**.
 
-**La Proprietà di Inclusione**. Il motivo per cui LRU è immune all'anomalia risiede nella **proprietà di inclusione**. Questa proprietà garantisce che, aumentando la memoria, le prestazioni non possano peggiorare.
+**La Proprietà di Inclusione**
+Il motivo per cui LRU è immune all'anomalia risiede nella **proprietà di inclusione**. Questa proprietà garantisce che, aumentando la memoria, le prestazioni non possano peggiorare.
 
-L'insieme delle pagine caricate avendo n frame è incluso in quello che si avrebbe avendo n+1 frame. Se aggiungiamo uno spazio, questo ospiterà una pagina in più senza stravolgere l'ordine di quelle già presenti. LRU guarda a quando le pagine sono state referenziate l'ultima volta; avere più spazio permette solo di mantenere in RAM pagine che prima sarebbero state scartate, senza alterare il pattern di utilizzo.
+L'insieme delle pagine caricate avendo $n$ frame è incluso in quello che si avrebbe avendo $n+1$ frame. Se aggiungiamo uno spazio, questo ospiterà una pagina in più senza stravolgere l'ordine di quelle già presenti. LRU guarda a quando le pagine sono state referenziate l'ultima volta; avere più spazio permette solo di mantenere in RAM pagine che prima sarebbero state scartate, senza alterare il pattern di utilizzo.
 
 ---
 
@@ -1561,18 +1496,15 @@ Non tutti gli algoritmi godono di questa proprietà.
 
 ---
 
-![[Pasted image 20260516132938.png]]
-
-## **Allocazione dei Frame**
-
+#### Allocazione dei Frame
 Il problema è stabilire quanti frame assegnare a ciascun processo per bilanciare l'efficienza del sistema e minimizzare l'overhead causato dai page fault.
 
-**1. Paginazione su Richiesta (Pure Demand Paging)** In questo scenario, il sistema non assegna preventivamente alcun frame al processo. All'inizio dell'esecuzione, tutte le pagine si trovano sul disco. È l'esecuzione stessa a determinare, tramite i page fault, quali pagine devono essere portate in RAM. Si osserva tipicamente un picco iniziale di page fault che tende poi a scendere verso una situazione di "normalità". Una frequenza troppo alta di page fault è problematica a causa dell'overhead di sistema che comporta.
+• **Minimo Strutturale:** È il numero minimo di frame indispensabile affinché un'istruzione possa essere eseguita. Dipende dall'architettura del set di istruzioni e dai livelli di indirizzamento indiretto. Ad esempio, se un'istruzione occupa più word (pagine diverse) servono frame sufficienti a contenerli tutti contemporaneamente. 
+• **Massimo:** Limite deciso dalla quantità totale di memoria libera nel sistema.
 
-**2. Allocazione: Minimo e Massimo** 
-• **Minimo Strutturale:** È il numero minimo di frame indispensabile perché un'istruzione possa essere eseguita. Dipende dall'architettura del set di istruzioni e dai livelli di indirizzamento indiretto. Ad esempio, se un'istruzione occupa più word (pagine diverse) o ha operandi multipli con indirizzamento indiretto, servono frame sufficienti a contenerli tutti contemporaneamente. • **Massimo:** Limite deciso dalla quantità totale di memoria libera nel sistema.
+**1. Paginazione su Richiesta (Pure Demand Paging)**. In questo scenario, il sistema non assegna preventivamente alcun frame al processo. All'inizio dell'esecuzione, tutte le pagine si trovano sul disco. È l'esecuzione stessa a determinare, tramite i page fault, quali pagine devono essere portate in RAM. Si osserva tipicamente un picco iniziale di page fault che tende poi a scendere verso una situazione di "normalità". Una frequenza troppo alta di page fault è problematica a causa dell'overhead di sistema che comporta.
 
-**3. Strategie** Non tutti i processi hanno le stesse esigenze. Le strategie principali includono: 
+**2. Strategie**. Non tutti i processi hanno le stesse esigenze. Le strategie principali includono: 
 • **Allocazione Equa:** Ogni processo riceve lo stesso numero di frame. 
 • **Allocazione Proporzionale:** I frame vengono assegnati in base alla "taglia" (spazio di indirizzamento) del processo. 
 	• $a_i = s_i/S\,\,$ x $\,\,m$  , usiamo questa formula per assegnare i frame:
@@ -1586,43 +1518,36 @@ Il problema è stabilire quanti frame assegnare a ciascun processo per bilanciar
 
 Queste assegnazioni non sono statiche; devono adattarsi continuamente al livello di **multiprogrammazione.** Un principio fondamentale dell'allocazione riguarda la gestione del page fault: se un processo (es. P3) causa un fault, l'algoritmo di sostituzione dovrebbe idealmente selezionare una pagina da scartare tra quelle già assegnate a quel processo stesso, per evitare di sottrarre risorse ad altri processi, ma questa non è l'unica soluzione.
 
-![[Pasted image 20260516133032.png]]
-
-#### 1. Allocazione Locale e Globale
-
-**Allocazione Locale**: La scelta della "vittima" da scartare ricade solo sulle pagine appartenenti allo stesso processo che ha causato il fault. Il numero di frame assegnati al processo rimane quindi costante.
+#### Allocazione Locale e Globale
+**Allocazione Locale**: La scelta della "vittima" da scartare ricade solo sulle pagine appartenenti allo stesso processo che ha causato il fault. Il numero di frame assegnati al processo rimane quindi lo stesso.
 
 **Allocazione Globale**: Il sistema può scegliere la vittima tra tutte le pagine presenti in memoria, incluse quelle di altri processi.
-
 In questo caso, un processo può "rubare" un frame a un altro per favorire la propria esecuzione.
 
 Qualunque algoritmo di sostituzione (FIFO, LRU, ecc.) può operare in entrambe le modalità; cambia solo l'insieme di pagine (il set) preso in considerazione.
 
 **Cosa succede se a un processo vengono assegnati troppi pochi frame?**
-
 *Sotto il minimo strutturale*: Il processo non ha abbastanza pagine per eseguire nemmeno una singola istruzione; viene quindi sospeso e spostato su disco (swapping).
 
 *Poco sopra il minimo* (Thrashing): Si verifica il fenomeno del thrashing, una situazione in cui il sistema passa più tempo a scambiare pagine con il disco che a eseguire codice, a causa di un numero eccessivo di page fault.
 
 Se il thrashing si propaga tra i processi a causa di un'allocazione globale gestita male, l'intero sistema va in sovraccarico. Questo accade spesso quando il livello di multiprogrammazione è troppo elevato per la RAM disponibile.
 
+---
 
-## Il Concetto di Località
-
+#### Il Concetto di Località
 Per un sistema ideale, l'allocazione dovrebbe basarsi sulle reali esigenze del processo, concetto strettamente legato alla **località**:
-
-- **Definizione di Località:** È l'insieme di informazioni (istruzioni e dati) necessarie all'esecuzione in una data fase di vita del processo.
+- **Definizione di Località:** 
+  È l'insieme di informazioni (istruzioni e dati) necessarie all'esecuzione in una data fase di vita del processo.
 - **Dinamicità:** La località muta nel tempo; ad esempio, il codice può passare dalla fase di inizializzazione a un ciclo di elaborazione dati differente.
 
 Se il sistema riuscisse a identificare la dimensione della località attuale, potrebbe assegnare esattamente il numero di frame necessari per ospitarla. Garantire questo spazio permette al processo di lavorare correttamente senza thrashing.
 
-![[Pasted image 20260516133135.png]]
-
-## **Working Set**
-
-Il **Working Set** è un concetto fondamentale per gestire la memoria basandosi sulla **località** di un processo. Si definisce come l'insieme delle pagine referenziate da un processo durante gli ultimi (delta) accessi alla memoria.
-
 ---
+
+#### Working Set
+![[Pasted image 20260516133135.png|619]]
+Il **Working Set** è un concetto fondamentale per gestire la memoria basandosi sulla **località** di un processo. Si definisce come l'insieme delle pagine referenziate da un processo durante gli ultimi (delta) accessi alla memoria.
 
 • **Delta:** Rappresenta il numero di accessi, considerati per definire la località corrente.
 
@@ -1636,104 +1561,88 @@ Anche all'interno dello stesso processo, il Working Set non è statico; la sua t
 
 Tracciare il working set in maniera puntuale è complesso (simile a quanto accade per l'algoritmo LRU). 
 • **Interrupt periodici:** Il sistema controlla lo stato delle pagine a intervalli regolari. 
-• **Bit di referenziamento (R):** Si utilizza il bit hardware per capire se una pagina è stata toccata recentemente. 
+• **Bit di referenziamento (R):** Si utilizza il bit R per capire se una pagina è stata toccata recentemente. 
 • **Log della "storia di R":** Viene conservato uno storico dell'utilizzo dei bit R per ricostruire quali pagine appartengono effettivamente alla finestra Delta stabilita.
 
-![[Pasted image 20260516133157.png]]
+---
+
+#### Page Fault Frequency
+![[Pasted image 20260516133157.png|632]]
 Questo è un altro modello per prevenire il thrashing:
 Mentre il _Working Set_ cerca di prevedere di quali pagine un processo avrà bisogno, la **PFF** guarda cosa sta succedendo realmente "sul campo" misurando la frequenza dei page fault.
 
 1. **Il grafico in alto a destra: Controllo Dinamico**
-Il concetto fondamentale qui è l'uso di due soglie (limiti) per regolare il numero di frame assegnati a un processo:
+Il concetto fondamentale qui è l'uso di due soglie (limite) per regolare il numero di frame assegnati a un processo:
 
 - **Upper Bound (Soglia superiore):** Se la frequenza dei page fault supera questo limite, significa che il processo sta faticando troppo perché ha pochi frame a disposizione. Il sistema operativo reagisce **aumentando il numero di frame** assegnati a quel processo.
 - **Lower Bound (Soglia inferiore):** Se la frequenza scende sotto questo limite, significa che il processo ha fin troppa memoria (più di quanta ne usi realmente). Il sistema operativo può quindi **togliere frame** al processo per darli ad altri che ne hanno più bisogno.
 - **Zona centrale:** È l'area di stabilità ottimale.
 
- 1. **Il grafico in basso: Relazione con il Working Set**
-
-Questo grafico mostra come la frequenza dei page fault vari nel tempo in relazione alle fasi di esecuzione del programma:
+ 2. **Il grafico in basso: Relazione con il Working Set**
+Questo grafico mostra la frequenza dei page fault vari nel tempo in relazione alle fasi di esecuzione del programma:
 
 - **I picchi:** Coincidono con l'inizio di una nuova fase del programma (un nuovo _Working Set_). Quando il processo cambia località (ad esempio passa da una funzione di calcolo a una di stampa), ha bisogno di nuove pagine che non sono in RAM, causando un'impennata di page fault.
 - **Le valli:** Una volta che le pagine necessarie per la fase attuale sono state caricate in memoria (il _Working Set_ è "stabile"), la frequenza dei page fault crolla quasi a zero.
-- **Il rettangolo tratteggiato:** Indica il periodo in cui il processo sta caricando attivamente il suo working set attuale.
 
+---
 
-
-![[Pasted image 20260516133209.png]]
-
-## Politica di pulitura
-
-Quando una pagina viene portata in RAM, il sistema deve gestire non solo la sua presenza, ma anche il suo stato (come il **bit di modifica)** per ottimizzare le prestazioni.
+#### Politica di pulitura
+Come abbiamo visto, quando una pagina viene portata in RAM, il sistema deve gestire non solo la sua presenza, ma anche il suo stato (come il **bit di modifica)** per ottimizzare le prestazioni.
 
 Il meccanismo di gestione dei page fault è molto più efficiente se il sistema riesce a garantire la presenza di **frame liberi** pronti all'uso. Si aprono quindi due scenari:
-
 1. Esiste almeno un frame libero. La richiesta di caricamento dal disco al frame può procedere immediatamente.
 2. Tutti i frame sono occupati. In questo caso, il sistema deve prima liberare un frame (scelta della vittima e eventuale scrittura su disco), rallentando notevolmente l'operazione.
 
 Per rimanere sempre nel "caso migliore", il sistema operativo cerca di mantenere una riserva o un **pool di frame liberi**.
 
-### Il Paging Daemon
+---
 
+#### Il Paging Daemon
 Per garantire che ci siano sempre frame disponibili senza aspettare che la memoria si esaurisca, entra in gioco il **paging daemon**.
 
-Un processo di servizio che controlla periodicamente lo stato di occupazione globale della memoria. Utilizza gli algoritmi di sostituzione per selezionare pagine "vittime" (scelte tra i processi che non le stanno utilizzando bene) per spostarle nel pool dei liberi. Se una pagina è stata modificata, il daemon si occupa di "pulirla" (scriverla su disco) prima di renderla disponibile nel pool.
+Un processo di servizio che controlla periodicamente lo stato di occupazione globale della memoria. Utilizza gli algoritmi di sostituzione per selezionare pagine "vittime" (scelte tra i processi che non le stanno utilizzando bene) per "pulirle" (scriverla su disco) e liberare il frame. 
 
-Possibilità di **ripescaggio:** Se un processo richiede una pagina che è stata appena messa nel pool dei liberi ma non ancora sovrascritta, il sistema può recuperarla istantaneamente senza dover accedere al disco.
+Possibilità di **ripescaggio:** Se un processo richiede una pagina che è stata appena messa nel pool dei liberi ma non ancora sovrascritta, il sistema può recuperarla istantaneamente senza dover accedere al disco, questo perché la vecchia pagina non è ancora stata sovrascritta nella RAM.
 
+---
 
-![[Pasted image 20260516133226.png]]
+#### Dimensione della pagina
 
-## Dimensione della pagina
-
-### 1. Vantaggi delle Pagine Grandi
-
+1. **Vantaggi delle Pagine Grandi**
 L'utilizzo di pagine di dimensioni maggiori offre dei vantaggi:
 
-- **Tabella delle pagine più grandi**: ogni pagina copre una porzione più ampia dello spazio di indirizzamento, sono necessarie meno voci nella tabella, riducendo l'occupazione di memoria della tabella stessa.
+- **Tabelle delle pagine più piccole**: ogni pagina copre una porzione più ampia dello spazio di indirizzamento, sono necessarie meno voci nella tabella, riducendo l'occupazione di memoria della tabella stessa.
 - **Efficienza nell'I/O**: Il trasferimento di dati tra disco e RAM è ottimizzato. È più veloce salvare o ripristinare pochi blocchi grandi rispetto a molti blocchi piccoli.
 - **Riduzione dei Page Fault**: Tende a minimizzare il numero di fault, poiché ogni caricamento porta in memoria una quantità maggiore di dati correlati, riducendo l'overhead complessivo di gestione.
 
-### 2. Vantaggi delle Pagine Piccole
-
+2. **Vantaggi delle Pagine Piccole**
 Le pagine di dimensioni ridotte permettono una gestione più granulare e precisa:
 
 - **Minore frammentazione interna**: Si riduce lo spazio sprecato all'interno dell'ultimo frame assegnato a un processo.
 - **Migliore risoluzione del Working Set**: Permette di definire con maggiore precisione quali informazioni sono realmente necessarie in RAM. Con pagine grandi, si rischia di occupare memoria con dati "inutili" che vengono consultati una sola volta ma che devono restare in RAM perché fanno parte di una pagina enorme. Questo si traduce in meno memoria sprecata.
 
-Un fattore determinante nella scelta è la **dimensione del blocco su disco**. I dischi lavorano per blocchi di dimensione fissa; per ottimizzare i trasferimenti, la dimensione della pagina deve essere in correlazione con quella del blocco fisico.
+---
 
-
-![[Pasted image 20260516133240.png]]
-
-## Pagine condivise
-
+#### Pagine condivise
+![[Pasted image 20260516133240.png|546]]
 Esistono situazioni in cui processi distinti, pur avendo spazi di indirizzamento separati e privati, hanno la necessità di condividere contenuti comuni. Questo avviene mappando diverse pagine virtuali di processi differenti sullo stesso frame di memoria fisica.
 
 **1. Condivisione in Sola Lettura (Codice Rientrante)**
-
 Questo scenario si verifica quando abbiamo istanze multiple dello stesso programma.
-
 Il codice eseguibile può essere condiviso tra i processi P1,P2 e P3, le pagine virtuali ed1, ed2 ed3 di tutti e tre i processi puntano ai medesimi frame fisici (3, 4 e 6).
 
 Ogni processo mantiene comunque il proprio stack e i propri dati privati (es. data 1, data 2), che risiedono in frame fisici separati.
 
 **2. Condivisione in Lettura/Scrittura**
-
 I processi possono chiedere esplicitamente al Sistema Operativo di mappare pezzi di memoria comuni per scambiarsi informazioni.
-
 - **Memoria Condivisa:** Si crea una vera "finestra di comunicazione" tra i processi. Questo è un modello primordiale di comunicazione tra processi.
 - In questo caso, i bit di protezione della tabella delle pagine abilitano anche la scrittura, permettendo ai processi di aggiornare i dati in tempo reale per coordinarsi.
 
-Il meccanismo di implementazione è identico a quello della paginazione standard.
 
-- Invece di caricare tre copie dello stesso codice in RAM, ne carichiamo solo una, liberando spazio per altre attività.
+- Invece di caricare più copie dello stesso codice in RAM, ne carichiamo solo una, liberando spazio per altre attività.
+- Con le pagine condivise è difficile gestire la cache
 
-Con le pagine condivise è difficile gestire la cache
-![[Pasted image 20260516133302.png]]
-
-**La Tabella delle Pagine Invertita**
-
+#### La Tabella delle Pagine Invertita
 A differenza delle tabelle standard (che hanno una voce per ogni pagina virtuale), esiste un'unica tabella per tutto il sistema che tiene traccia di cosa contiene ogni singolo frame fisico.
 
 - La tabella contiene una voce per ogni frame della memoria RAM.
@@ -1750,8 +1659,8 @@ A differenza delle tabelle standard (che hanno una voce per ogni pagina virtuale
 
 ---
 
-### **Ottimizzazioni usate per risparmiare RAM**
-**Copy-on-write**
+#### Ottimizzazioni usate per risparmiare RAM
+##### Copy-on-write
 E' un ottimizzazione software fatta dal SO che permette di risparmiare memoria in situazioni in cui processi diversi hanno delle pagine che hanno lo stesso contenuto.
 Utilizzando la *fork* il processo P1 si clona in P2 (cambia solo il PID il resto è uguale) anziché duplicare le pagine usate dal processo P1 (che sono già in RAM), faccio puntare l'indice delle pagine di P2 a quelle di P1 in questo modo risparmio RAM.
 In pratica entrambi i processi accedono alla stessa area di memoria.
