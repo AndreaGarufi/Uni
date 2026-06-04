@@ -22,27 +22,17 @@
             }
           },
           {
-            "id": "fc6c44b307a11c30",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Riassunto_Github"
-            }
-          },
-          {
             "id": "94d403cf96e0063f",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Setup virtualBox.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "SO-04"
+              "icon": "lucide-file",
+              "title": "Setup virtualBox"
             }
           }
         ]
@@ -193,20 +183,22 @@
   },
   "active": "8e8de6b454f79639",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604211915.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604211858.png",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Setup virtualBox.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/RetiConMacchineVirtuali.md",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604211623.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604180643.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604180624.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604180445.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604180312.png",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Setup virtualBox.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/RetiConMacchineVirtuali.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/17_4_giugno.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604164525.png",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604161643.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604160349.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604155354.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604152436.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/socketClient.c",
@@ -220,8 +212,6 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260601122312.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260601122241.png",
     "UNI/Callouts.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",

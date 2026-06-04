@@ -54,41 +54,37 @@ Attivare la modalità promiscua è fondamentale per non far scartare i pacchetti
 ---
 
 #### Rete con Router, switch e 3 host
-Qui dobbiamo solo aggiungere una scheda di rete allo switch, cioè eth2 che si collegherà con il nostro
-router per poter parlare ad un nodo collegato ad un altra rete (esterna).
-Quindi andiamo sulla VM nello switch->rete->scheda di rete->rete interna->cavoRouter (ovviamente da fare anche
-con il nostro router, ma servirà solo eth0 ed eth1.
-(ricorda di andare su rete di ogni nodo e consentire tutto su modalità promiscua)
-
-Adesso creiamo anche il nodo3 e avviamo le nostre macchine (il nodo 3 dovrà avere solo il cavo_3, anche il router dovrà averlo ovviamente)
-Dovremo ovviamente settare nuovamente gli ip del nodo1 e del nodo2 (ricordo che non si salvano, dopo vedremo come
-fare).
-
-Per lo switch ovviamente dovremo fare i comandi di prima, anche qui dobbiamo settarlo nuovamente, ma stavolta
-dovremmo anche aggiungere in up la scheda eth2 responsabile della connessione con il router 
+Qui dobbiamo solo aggiungere una scheda di rete allo switch, (cioè eth2 nei comandi) che si collegherà con il nostro router per poter parlare ad un nodo collegato ad un altra rete (esterna).
+Quindi andiamo sulla VM nello switch->rete->scheda di rete->rete interna->cavoRouter, stesso procedimento anche sul router.
+(Ricorda di consentire tutto su modalità promiscua)
+![[Pasted image 20260604211858.png|518]]
+Adesso creiamo anche il nodo3 e avviamo le nostre macchine (il nodo 3 dovrà avere solo una scheda chiamata cavo3, così come il router).
+![[Pasted image 20260604211915.png|518]]
+Dovremo ovviamente settare nuovamente gli ip del nodo1 e del nodo2, per lo switch ovviamente dovremo fare i comandi di prima, anche qui dobbiamo settarlo nuovamente, ma stavolta dovremmo anche aggiungere in up la scheda eth2 responsabile della connessione con il router 
 (ip link set eth2 up, ip link set eth2 master br0, ip link set eth2 promisc on)
 
 Dopo aver fatto questi passaggi dovremo sistemare il nostro router
 
-Comandi per il router:
-	Router: ip addr flush dev eth0 per pulire magari vecchie configurazioni
-	Router: ip addr add 192.168.1.254/24 dev eth0 ip per eth0
+*Comandi per il router:*
+	Router: ip addr flush dev eth0 =  per pulire magari vecchie configurazioni
+	Router: ip addr add 192.168.1.254/24 dev eth0 = ip per eth0
 	Router: ip link set eth0 up
-
 	Router: ip addr flush dev eth1
-	Router: ip addr add 192.168.2.254/24 dev eth1 #ip per eth1
+	Router: ip addr add 192.168.2.254/24 dev eth1 = ip per eth1
 	Router: ip link set eth1 up
-	
-	Router: sysctl -w net.ipv4.ip_forward=1 questo serve ad abilitare l'inoltro dei pacchetti
-		e a far diventare la macchina un router
-
-	Nodo3: ip addr add 192.168.2.10/24 dev eth0
-	Nodo3: ip link set up eth0
-	Nodo3: ip route add default via 192.168.2.254 (Dice al nodo: "Se non sai dove mandare un pacchetto, dallo al router")
-
+	Router: sysctl -w net.ipv4.ip_forward=1 questo serve ad abilitare l'inoltro dei pacchetti e a far diventare la macchina un router
+*Comandi per lo switch*
+	switch: ip link set eth2 up
+	switch: ip link set eth2 promisc on
+	switch: ip link set eth2 master br0
+*Comandi per i nodi:*
+	NODO3: ip addr add 192.168.2.10/24 dev eth0
+	NODO3: ip link set up eth0
+	NODO3: ip route add default via 192.168.2.254 (Dice al nodo: "Se non sai dove mandare un pacchetto, dallo al router")
 	NODO 1: ip route add default via 192.168.1.254 
 	NODO 2: ip route add default via 192.168.1.254
-
+Adesso eseguiamo un ping dal nodo 1 al nodo 3
+![[Pasted image 20260604211623.png]]
 
 ALTRI COMANDI POSSIBILMENTE UTILI
 	ip neigh show: 		    			mostra il contenuto attuale della tabella ARP.
