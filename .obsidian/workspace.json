@@ -11,14 +11,12 @@
             "id": "15b7ff51d151a951",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
-                "mode": "source",
-                "source": false
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf"
               },
-              "icon": "lucide-file",
-              "title": "RETI-COMPLETO"
+              "icon": "lucide-file-text",
+              "title": "slides_computer_networks_pub"
             }
           }
         ]
@@ -169,6 +167,16 @@
   },
   "active": "15b7ff51d151a951",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/socket.c",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/endianess.c",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/a.out",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/prova.c",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/a.out",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/prova.c",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/SISTEMI-COMPLETO.pdf",
@@ -179,25 +187,16 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260601122241.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260601115448.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260531221210.png",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
     "UNI/Callouts.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260530143746.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260530143010.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Setup virtualBox.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260527130323.png",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11_21_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/10_16_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/9_14_aprile.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/5_19_marzo.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-lab.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-05-20.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-04-02.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-02-23.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-01-27.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/photo_5814423968692243958_y.jpg",
     "UNI/Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_115903_Samsung Notes.jpg",
     "UNI/Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_110943_Samsung Notes.jpg",
