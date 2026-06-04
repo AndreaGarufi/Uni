@@ -1,54 +1,59 @@
-Connessione punto a punto
+#### Connessione punto a punto
 Dati due host, nodo1 e nodo2 creare una connessione punto a punto
-
+*Quando si clona un host assicurarsi di inserire l'opzione "Genera nuovi indirizzi MAC per tutte le schede di rete".*
+![[Pasted image 20260604180445.png|574]]
 La prima cosa da fare è andare su impostazioni del nodo nella vm e abilitare
 la scheda di rete e cambiare da "Connessa a: Nat " a "Connessa a: Rete Interna"
 questo bisogna farlo per entrambi i nodi, e mettere il nome della scheda uguale
-per entrambi (IMPORTANTE) per far capire che entrambi i nodi hanno lo stesso cavo, come nodo useremo "cavo1".
-Adesso clono il nodo1 (dopo aver settato la vm) e possiamo avviarle.
-(puoi configurarle inizialmente con setup-alpine).
+per entrambi (IMPORTANTE) per far capire che entrambi i nodi hanno lo stesso cavo, come nome useremo "cavo1".
+![[Pasted image 20260604180312.png]]
+Stessa cosa sul nodo2
 
-COMANDI per connessione punto a punto:
-ip a = ti permette di vedere ip (internet protocol) della macchina
-ip addr add 192.168.56.3/24 dev eth0 = ti permette di settare un ip momentaneo
-	(si resetta al riavvio della macchina per renderlo statico (vi etc/netwrok/interfaces))
-ping -c 4 192.168.52.2 (invia 4 pacchetti)
-ip addr del 192.168.56.2/24 dev eth0 per eliminare un ip
-ip link set eth0 down/up per chiudere o aprire la porta
+**COMANDI per connessione punto a punto:**
+*ip a* = ti permette di vedere ip (internet protocol) della macchina
+*ip addr add 192.168.56.3/24 dev eth0* = ti permette di settare un ip momentaneo
+*ping -c 3 192.168.52.2* (il numero dopo -c indica quanti pacchetti inviare, così invia 3 pacchetti)
+*ip addr del 192.168.56.2/24 dev eth0* per eliminare un ip
+*ip link set eth0 down/up* per chiudere o aprire la porta
 
+---
 
-Connessione switch
-ATTIVARE LA MODALITA' PROMISCUA IN TUTTE LE MACCHINE, SI ATTIVA DA VIRTUAL BOX NELLA SEZIONE RETE
-Dati 3 host, nodo1, nodo2 e switch creare una connessione tra nodo1 e nodo2 usando cavi diversi
-(quindi con nome diverso). Utilizzare lo switch per fare da tramite tra nodo1 e nodo2
+#### Rete con switch
+*ATTIVARE LA MODALITA' PROMISCUA IN TUTTE LE MACCHINE, SI ATTIVA DA VIRTUAL BOX NELLA SEZIONE RETE.*
+Dati 3 host, nodo1, nodo2 e switch creare una connessione tra nodo1 e nodo2 usando cavi diversi (quindi schede di rete con nome diverso). Utilizzare lo switch per fare da tramite tra nodo1 e nodo2.
 
-Per questo compito dobbiamo spegnere entrambe le vm e creare un clone di un nodo e chiamarlo per
-facilità "switch". Adesso cambiamo la scheda di rete del nodo2 e la chiamiamo cavo2 (quella del
-nodo1 l'ho rinominata cavo1). Se adesso provassimo la connessione punto a punto non funzionerebbe.
+Cloniamo un nodo e diamogli il nome "switch".
+
+Adesso cambiamo la scheda di rete del nodo2 e la chiamiamo cavo2 (quella del
+nodo1 va rinominata cavo1). Se adesso provassimo la connessione punto a punto non funzionerebbe.
 Lo switch dovrà avere due schede di rete attivate, quindi una la nominiamo cavo1 (per il nodo 1) e l'altra cavo 2 (per il nodo 2). 
-eth0 = cavo1 ed eth1 = cavo2 per esempio, si possono anche invertire i cavi. (eth0 e eth1 non rappresentano i nomi delle schede di rete, su linux questo è proprio il comando da usare.)
+![[Pasted image 20260604180624.png|459]]
+![[Pasted image 20260604180643.png|459]]
+Stabiliamo per convenzione che: eth0 = cavo1 ed eth1 = cavo2. (eth0 e eth1 non rappresentano i nomi delle schede di rete, su linux questo è proprio il comando da usare.)
 Avviamo le macchine e settiamo gli ip soltanto per i nodi, lo switch non necessita di ip.
 
-Vediamo i procedimenti:
+**Vediamo i procedimenti:**
 	Nodo1 = ip addr add 192.168.1.2/24 dev eth0
 	Nodo2 = ip addr add 192.168.1.3/24 dev eth0
-Adesso creo un bridge (è letteralmente un ponte digitale che permette di far comunicare più host)
+*Adesso* creo un bridge per far comunicare i 2 host.
 	Switch = ip link add br0 type bridge
+*In questo modo le schede di rete ora fanno parte dello switch (diventano slave).*
 	Switch = ip link set eth0 master br0
 	Switch = ip link set eth1 master br0
-In questo modo le schede di rete ora fanno parte dello switch (diventano slave)
+*Settiamo le schede in modalità promiscua.*
 	Switch = ip link set eth0 promisc on
 	Switch = ip link set eth1 promisc on
-Attivare la modalità promiscua è fondamentale per non far scartare i pacchetti che non sono indirizzati
-al suo MAC.
+Attivare la modalità promiscua è fondamentale per non far scartare i pacchetti che non sono indirizzati al suo MAC.
+*Mi assicuro che tutto sia attivo.*
 	Switch = ip link set br0 up
 	Switch = ip link set eth0 up
 	Switch = ip link set eth1 up
-Mi assicuro che tutto sia attivo
-E adesso nodo1 fa il ping su nodo2 e dovrebbe funzionare.
 
+*E adesso nodo1 fa il ping su nodo2.*
 
-Inseriamo un Router
+---
+
+#### Rete con Router, switch e 3 host
 Qui dobbiamo solo aggiungere una scheda di rete allo switch, cioè eth2 che si collegherà con il nostro
 router per poter parlare ad un nodo collegato ad un altra rete (esterna).
 Quindi andiamo sulla VM nello switch->rete->scheda di rete->rete interna->cavoRouter (ovviamente da fare anche
