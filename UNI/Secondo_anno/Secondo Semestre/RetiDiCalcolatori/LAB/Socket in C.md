@@ -91,6 +91,8 @@ Oltre a specificare la porta all'interno dell'indirizzo (`addr`), il server può
 >Se nel codice inserisci un IP specifico, il tuo server accetterà connessioni **solo** da quella specifica rete.
 Usando invece **`INADDR_ANY`**, dici al sistema operativo: _"Non mi importa da quale scheda di rete arrivi la richiesta (Wi-Fi, cavo Ethernet o locale), se qualcuno bussa alla porta 8080, tu passami la connessione"_. È il modo standard per rendere un server accessibile da ovunque.
 
+---
+
 #### Funzione listen()
 Il server garantisce l'ascolto su quella porta tramite la funzione `listen`. Più precisamente **Cambia lo stato del socket:** Dice al sistema operativo che quel socket non è più un socket normale (attivo, che avvia connessioni), ma diventa un socket **passivo** (che può solo ricevere chiamate).
 
@@ -98,6 +100,8 @@ Il server garantisce l'ascolto su quella porta tramite la funzione `listen`. Pi�
 
 Il parametro ==int s== è il valore di ritorno della funzione socket()
 Il parametro ==backlog== è un numero interno che definisce la lunghezza massima della coda delle connessioni in attesa
+
+---
 
 #### Funzione accept()
 Il server accetta la connessione tramite la funzione accept().
@@ -113,6 +117,6 @@ Il parametro ==socklen_t * addrlen== è un **puntatore a un intero** che rappres
     - **In Input:** Dice al sistema operativo quanto spazio massimo ha a disposizione nella struttura `addr` che gli stiamo passando.
     - **In Output:** Poiché è la `accept()` che compila la struttura con i dati del client che si è appena connesso, prima di terminare la funzione **sovrascrive** questa variabile inserendo il numero esatto di byte che ha realmente utilizzato per scrivere l'indirizzo del client
 
-Se la funzione accept() ritorna un numero intero $\ge 0$ (Successo): Rappresenta un **nuovo File Descriptor** (ovvero una nuova socket di connessione). Altrimenti ritorna -1
+Se la funzione accept() ritorna un numero intero $\ge 0$ (Successo): Rappresenta un **nuovo File Descriptor** (ovvero una nuova socket di connessione). Altrimenti ritorna -1.
 
 

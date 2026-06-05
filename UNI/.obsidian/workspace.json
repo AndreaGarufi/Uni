@@ -20,18 +20,6 @@
               "icon": "lucide-file",
               "title": "Socket in C"
             }
-          },
-          {
-            "id": "45ea512ad99f7fac",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "slides_computer_networks_pub"
-            }
           }
         ]
       }
@@ -196,6 +184,7 @@
   },
   "active": "e309467b29ef0164",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605120517.png",
