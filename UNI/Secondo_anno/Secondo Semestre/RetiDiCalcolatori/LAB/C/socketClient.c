@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
     
     sa.sin_family = AF_INET;   //inet di base sta per IPv4 se volessi IPv6 dovrei mettere inet6
     sa.sin_port = htons(13); // Porta 13: Daytime Protocol
-    sa.sin_addr.s_addr = inet_addr("193.204.114.105");
+    sa.sin_addr.s_addr = inet_addr("193.204.114.105"); //questo è un ip pubblico di un server italiano per l'ora esatta
 
     // 3. Connessione al server
     if (connect(s, (struct sockaddr *)&sa, sizeof(sa)) < 0) {
@@ -36,7 +36,8 @@ int main(int argc, char* argv[]) {
     // Leggiamo a blocchi finché il server non chiude la connessione (read torna 0)
     while ((numBytes = read(s, buffer, BUFSIZ)) > 0) {
         // Scriviamo direttamente sullo standard output (file descriptor 1) //molto simile ad usare un printf
-        write(1, buffer, numBytes);
+        //write(1, buffer, numBytes);
+        //printf("ciao: %s , numBytes %d",buffer,numBytes);
     }
 
     // 5. Chiusura del socket

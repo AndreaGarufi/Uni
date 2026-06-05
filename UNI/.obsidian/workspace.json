@@ -4,72 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "c46e49dd9897b71c",
+        "id": "b94af082dfbec5cc",
         "type": "tabs",
-        "dimension": 48.55769230769231,
         "children": [
           {
-            "id": "04a4c092ae7fbe60",
+            "id": "e309467b29ef0164",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SISTEMI-COMPLETO"
+              "title": "Socket in C"
             }
           },
           {
-            "id": "86bb7e26ea6879d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2_10_marzo"
-            }
-          },
-          {
-            "id": "5d1618a3350d004f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Callouts.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Callouts"
-            }
-          }
-        ]
-      },
-      {
-        "id": "24521d3e5be5a4e7",
-        "type": "tabs",
-        "dimension": 51.442307692307686,
-        "children": [
-          {
-            "id": "ab6dae78ca5be8fe",
+            "id": "45ea512ad99f7fac",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf"
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Riassunto_Github"
+              "title": "slides_computer_networks_pub"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -230,28 +195,38 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "04a4c092ae7fbe60",
+  "active": "45ea512ad99f7fac",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605120517.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605120045.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605113846.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605113248.png",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/RetiConMacchineVirtuali.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Setup virtualBox.md",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604211915.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604211858.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604211623.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604180643.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604180624.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604180445.png",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/17_4_giugno.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/SISTEMI-COMPLETO.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-05-20.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-04-02.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-02-23.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-01-27.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-12-05.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-09-29.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-09-17.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-09-12.pdf",
     "Callouts.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260527123500.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260527123452.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260527123257.png",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/21 - 26 maggio 2026.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
-    "Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_115903_Samsung Notes.jpg",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260527114558.png",
-    "Secondo_anno/Secondo Semestre/modelli/photo_5814423968692243983_y.jpg",
-    "Secondo_anno/Secondo Semestre/modelli/photo_5814423968692243980_y.jpg",
-    "Secondo_anno/Secondo Semestre/modelli/photo_5814423968692243958_y.jpg",
-    "Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_110943_Samsung Notes.jpg",
-    "Secondo_anno/Secondo Semestre/modelli/SmartSelect_20260527_104458_Samsung Notes.jpg",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-01.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-02.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
@@ -266,16 +241,6 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/5_19_marzo.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/4_17_marzo.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/3_12_marzo.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/3_12_marzo.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/1_5_marzo.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/1_5_marzo.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/2_10_marzo.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/5_DLL_N.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/13_12_maggio.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/2_10_marzo.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/1_5_marzo.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/14_19_maggio.md"
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/1_5_marzo.md"
   ]
 }
