@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
     // Leggiamo a blocchi finché il server non chiude la connessione (read torna 0)
     while ((numBytes = read(s, buffer, BUFSIZ)) > 0) {
         // Scriviamo direttamente sullo standard output (file descriptor 1) //molto simile ad usare un printf
-        //write(1, buffer, numBytes);
+        write(1, buffer, numBytes);
         //printf("ciao: %s , numBytes %d",buffer,numBytes);
     }
 
