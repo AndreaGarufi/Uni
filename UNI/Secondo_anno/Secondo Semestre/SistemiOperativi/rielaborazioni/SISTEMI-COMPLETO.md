@@ -1789,12 +1789,12 @@ All'interno di ogni partizione abbiamo:
 • *Superblock*. Contiene dei metadati relativi alla partizioni: specifica il tipo di file system, la dimensione dei cluster. Il resto della partizione sarà gestita in cluster. 
 • *Free space management*. Strutture dati che si occupano di gestire lo spazio libero.
 • *I-nodes.* 
-• *Rood directory*. La radice della directory del file system. 
+• *Root directory*. La radice della directory del file system. 
 • *File e directories.*
 
 
 **GPT (Guide Partition Table)**
-E' un modello più moderno che elimina certi limiti di dimensione legati a MBR.
+E' un modello più moderno che elimina certi limiti di dimensione legati a MBR, ad esempio può gestire molto più spazio (fino a 9.4 zettabyte e 128 partizioni massime).
 
 ---
 

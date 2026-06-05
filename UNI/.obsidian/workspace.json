@@ -34,24 +34,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "17acc305dd3e8146",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "31f9ec6a9672d3b8",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Riassunto_Github"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
