@@ -118,5 +118,3 @@ Il parametro ==socklen_t * addrlen== è un **puntatore a un intero** che rappres
     - **In Output:** Poiché è la `accept()` che compila la struttura con i dati del client che si è appena connesso, prima di terminare la funzione **sovrascrive** questa variabile inserendo il numero esatto di byte che ha realmente utilizzato per scrivere l'indirizzo del client
 
 Se la funzione accept() ritorna un numero intero $\ge 0$ (Successo): Rappresenta un **nuovo File Descriptor** (ovvero una nuova socket di connessione). Altrimenti ritorna -1.
-
-

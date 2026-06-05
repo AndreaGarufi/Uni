@@ -60,15 +60,50 @@ La tabella si legge così, il file A inizia alla riga 4, il next si trova alla r
 > [!info] Le dimensioni della FAT sono legate alla grandezza del disco e alla grandezza del singolo blocco. Se uso blocchi grandi la FAT diventa piccola (e risparmierei RAM) ma c'è un problema: aumento molto la frammentazione interna. 
 
 
-##### Allocazioni con nodi indice
+##### Allocazioni con nodi indice (i-node)
+Gli *i-node* sono delle strutture dati associate ad un file. Gli i-node contengono dei metadati come permessi e dimensione (tranne il nome del file che sta nella directory) e le informazioni per tracciare le sequenze dei blocchi che compongono i file.
 **Approccio collegato**
-Gli i-node sono delle strutture dati associate ad un file. Gli i-node devono contenere le informazioni per tracciare le sequenze dei blocchi che compongono i file. La loro strategia è:
-L'i-node è diviso in righe in cui ogni riga mi da la locazione di un nodo nella lista (blocco), se il file è piccolo e entra dentro l'i-node possono eseguire un accesso diretto (controllo direttamente la riga nell'i-node che mi interessa e so dove trovare il blocco), in alternativa posso estendere l'i-node.
-SISTEMARE
+La strategia è:
+L'i-node è diviso in righe in cui ogni riga mi da la locazione di un nodo nella lista (blocco), se il file è piccolo e entra dentro l'i-node possono eseguire un accesso diretto (controllo direttamente la riga nell'i-node che mi interessa e so dove trovare il blocco).
 **Approccio multilivello**
-
+Qui l'i-node può puntare a:
+– *Un blocco diretto*: è un blocco effettivo del file. 
+– *Un blocco indiretto singolo*: questo, punta a n blocchi del disco. 
+– *Un blocco indiretto doppio*: questo, punta a n blocchi indiretti singoli. 
+– *Un blocco indiretto triplo*: questo, punta a n blocchi indiretti doppi.
+Questo approccio è sconveniente perché se il file è piccolo dovrò fare molti accessi prima di arrivare al blocco di dati, conveniente invece per file grandi
 **Approccio ibrido**
-
+Questo approccio mischia i 2 precedenti gestendo sia file piccoli che grandi:
+- **Come funziona:** L'i-node contiene sia puntatori diretti (per l'accesso immediato) sia puntatori indiretti a più livelli (singolo, doppio, triplo).
+- **Perché è ibrida:** Combina la velocità dell'accesso diretto per i file piccoli (nessun blocco d'indice intermedio da consultare) con la capacità dell'approccio multilivello per i file giganti
+![[Pasted image 20260605170914.png|502]]
 ---
 
-#### Implementazione della directory
+#### Implementazione delle directory
+##### Dove vengono inseriti i metadati e attributi?
+• In un file system FAT, i metadati sono contenuti all’interno della directory del file. 
+• In un file system con i-node, i metadati sono contenuti all’interno della tabella degli i-node, tranne il nome! Il nome sta nella directory.
+
+Tutti gli attributi hanno lunghezza fissa tranne il nome che nei sistemi moderni può essere molto lungo.
+
+**Come gestire in maniera opportuna i nomi**
+Ci sono 2 strategie:
+• Strategia 1 
+- *lunghezza variabile.* Il primo campo del file stabilisce la lunghezza in byte dell’entry, (o del nome, negli i-node). L’unico valore di dimensione variabile è il nome: ponendo il nome come ultimo attributo del file, diventa possibile stabilire quando inizia e quando finisce il nome. A fine nome, è presente un carattere di terminazione
+  ![[Pasted image 20260605171449.png|211]]
+
+• Strategia 2 
+- *heap, suddivisione tra parte fissata e variabile.* Le parti di dimensione fissa dei record, vengono unificate in una parte di memoria. In questo modo, si evita totalmente la frammentazione esterna. Tra gli attributi, si ha un puntatore al nome del file. Le parti variabili (i nomi) si trovano in una sezione a parte, chiamata heap. Un’accozzaglia di nomi, separati da carattere di terminazione. Separare parte variabile e fissa, permette di facilitarne la gestione.
+  ![[Pasted image 20260605171520.png|218]]
+
+---
+#### Condivisione di un File System tra utenti
+Immaginiamo di voler condividere un file tra due o più utenti.
+1. **Duplicare le FAT.**
+   l'idea banale è quella di duplicare le tabelle FAT (quindi la lista) per entrambi gli utenti. Il *problema* è che se un utente aggiorna un file e alloca un nuovo blocco l'altro non ne è a conoscenza quindi la sua tabella FAT non si aggiorna e non funziona più.
+2. **Usando i-node, gli hard link.** 
+   All’interno di un i-node, inseriamo un contatore che tiene traccia degli utenti che hanno accesso al file. Possiamo mettere riferimenti diversi allo stesso file. Non ci sarà l’esigenza di aggiornare i metadati, in quanto questi sono situati proprio dentro l’i-node. Il nome può infatti essere diverso tra i vari utenti! Il vero *problema* (Iniquità della cancellazione): Il File System cancella i dati fisici dal disco solo quando il contatore dei collegamenti (Link Count) nell'i-node scende a 0.
+   ![[Pasted image 20260605172438.png|404]]
+3. **Soft link.**
+   Anziché creare un hard link come prima, si crea un soft link ovvero un riferimento al *path* del file nel disco in questo modo risolviamo molti problemi: non ci sono duplicati, se un utente modifica il file il soft link funziona e il proprietario del file può decidere di eliminarlo senza alcun problema (in questo caso resta il soft link che non porta a niente ma questi link occupano poco spazio).
+
