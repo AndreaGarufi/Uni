@@ -64,15 +64,16 @@ int main(){
         }
         
         read(client_fd,arrayDest,sizeof(arrayDest));
+        printf("Numeri forniti dal client: ");
         for(int i = 0; i < 2; i++){     //scrivo i dati
             printf("%d ",arrayDest[i]);
             somma = somma + arrayDest[i];
         }
-        printf("\n%d\n",somma);
+        printf("\nLa somma dei numeri: %d\n",somma);
         write(client_fd,&somma,sizeof(somma));
 
         close(client_fd);
-        break;
+        //break;
     }
     close(server_fd);
 
