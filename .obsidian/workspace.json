@@ -108,6 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/RetiConMacchineVirtuali.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti"
+              "title": "Riferimenti a RetiConMacchineVirtuali"
             }
           },
           {
@@ -166,7 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -183,31 +184,32 @@
   },
   "active": "8e8de6b454f79639",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605172438.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605171520.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605171519.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605171449.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605170914.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605120517.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605120045.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605113846.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605113248.png",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/serverEsercizio.c",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/clientEsercizio.c",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/client.out",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/a.out",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604211915.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604211858.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Setup virtualBox.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/RetiConMacchineVirtuali.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604211623.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604180643.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604180624.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604180445.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604180312.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/17_4_giugno.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604164525.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604161643.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604160349.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604155354.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/socketClient.c",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/socketServer.c",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/socket.c",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/endianess.c",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/a.out",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/prova.c",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
@@ -228,7 +230,6 @@
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Capitolo 1.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/14_19_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Lezione 16.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/13_12_maggio.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
