@@ -6,7 +6,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-#define ever (;;)
+#define ever (;;)   //è una define per far fare un ciclo infintio al for scrivendo for ever
 #define BACKLOG 4 //max clients in queue
 #define PORT 8080
 

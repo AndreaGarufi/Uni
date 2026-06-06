@@ -18,6 +18,18 @@
               "icon": "lucide-file-text",
               "title": "Socket in C"
             }
+          },
+          {
+            "id": "a4a696faf3e814e8",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "slides_computer_networks_pub"
+            }
           }
         ]
       }
@@ -182,10 +194,19 @@
   },
   "active": "3653b1db0aac5d0d",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/a.out",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/a.out.exe",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/a-out.exe",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/a.exe",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/client.out",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/serverEsercizio.c",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/clientEsercizio.c",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/client.out",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/client",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/17_4_giugno.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605172438.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605171520.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605171519.png",
@@ -198,8 +219,6 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Capitolo 4.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Capitolo 5.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605120517.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605120045.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605113846.png",
@@ -207,12 +226,6 @@
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/RetiConMacchineVirtuali.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Setup virtualBox.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260604211915.png",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/SISTEMI-COMPLETO.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-05-20.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-04-02.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-02-23.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-01-27.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-12-05.pdf",
     "Callouts.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
