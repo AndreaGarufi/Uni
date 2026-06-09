@@ -139,3 +139,28 @@ Riceve i dati che arrivano dal socket e li copia all'interno di un buffer nel tu
 - **`size_t len`**: La dimensione massima del tuo buffer (la capienza massima del "secchio" in cui raccogli i dati, ad esempio `BUFFER_MAX`). Serve a evitare che `recv` scriva più dati di quanti la memoria possa contenerne, causando un crash.    
 - **`int flags`**: Opzioni speciali per la ricezione. Anche qui, di solito si passa `0` per il comportamento standard.
 
+---
+
+#### Funzione phtread_mutex_init
+`int pthread_mutex_init(pthread_mutex_t *mutex, const pthread_mutexattr_t *attr);`
+La funzione **`pthread_mutex_init`** serve a **inizializzare un Mutex**
+
+- **`pthread_mutex_t *mutex`**: È il puntatore alla variabile di tipo `pthread_mutex_t` che vuoi inizializzare (nel tuo caso, l'indirizzo della memoria `&clients.mutex`). La funzione imposta lo stato iniziale di questo lucchetto come "aperto/sbloccato".
+    
+- **`const pthread_mutexattr_t *attr`**: È un puntatore a una struttura che definisce gli attributi e il comportamento del lucchetto (ad esempio, se il lucchetto può essere ricorsivo). Passando **`NULL`**, stai dicendo al sistema di usare gli **attributi predefiniti** (un lucchetto normale standard).
+A livello pratico...
+```
+pthread_mutex_lock(&clients.mutex);   // 1. Chiudo il lucchetto. Se è già chiuso da un altro thread, mi fermo e aspetto.
+
+// --- ZONA SICURA (Critical Section) ---
+// Qui modifico o leggo la struttura 'clients' in totale sicurezza.
+// Nessun altro thread può toccarla finché sono qui dentro.
+// --------------------------------------
+
+pthread_mutex_unlock(&clients.mutex); // 2. Riapro il lucchetto, permettendo ad altri thread di usarlo.
+```
+
+---
+#### Funzioni eseguite dai thread
+`void * nomeFunzione(void *argomenti)`     
+la libreria `pthread.h` impone una regola rigida: qualsiasi funzione tu voglia dare in pasto a un thread deve avere tassativamente questa identica struttura

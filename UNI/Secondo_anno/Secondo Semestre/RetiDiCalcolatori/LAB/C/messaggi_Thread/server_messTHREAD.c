@@ -10,17 +10,17 @@
 #define BUFFER_MAX 160
 #define MAX_CLIENTS 64
 
-typedef struct{
-
+typedef struct{     //La struct raggruppa logicamente tutto ciò che definisce un client connesso al server.
+                    //Al momento contiene solo il socket e l'indirizzo
     int socketClient;
     struct sockaddr_in indirizzoPorta;
     //possiamo mettere altre informazioni sul client
-} client_info_t;
+} client_info_t;        //ognuno di questo mi rappresenta un client
 
-typedef struct{
-
+typedef struct{     //Il suo scopo è raggruppare in un unico posto tutti i client attualmente connessi
+                    //e fornire gli strumenti per gestirli in totale sicurezza.
     int count;
-    client_info_t* list[MAX_CLIENTS];
+    client_info_t* list[MAX_CLIENTS];   //array di puntatori che può contenere fino a MAX_CLIENTS
     pthread_mutex_t mutex;
 }clients_list_t;
 
@@ -42,7 +42,7 @@ void broadcast_message(const char* messaggio, int socketCheHaInviato){
     pthread_mutex_unlock(&clients.mutex);    
 }
 
-void * gestione_client(void *arg){
+void * gestione_client(void *arg){      //funzione eseguita dal thread (la libreria pthread.h impone una regola rigida: qualsiasi funzione tu voglia dare in pasto a un thread deve avere tassativamente questa identica struttura)
     client_info_t *client = (client_info_t*)arg;
     int socketClient = client->socketClient;
     char buffer[BUFFER_MAX];
@@ -104,7 +104,7 @@ int main(int argc, char* argv[]) {
 
     int socketServer;
     struct sockaddr_in ipPortaServer;
-    pthread_mutex_init(&clients.mutex, NULL);
+    pthread_mutex_init(&clients.mutex, NULL);   //La funzione pthread_mutex_init serve a inizializzare un Mutex
     socketServer = socket(AF_INET, SOCK_STREAM,0);
 
     ipPortaServer.sin_family = AF_INET;
@@ -121,18 +121,16 @@ int main(int argc, char* argv[]) {
 
     printf("Server in ascolto sulla porta: %s\n",argv[1]);
 
-    /////////////////////////////////////
-
+    //////////////////////////////////////////////
+    //zona di accept e creazione dei thread
     for(;;){
-
-        client_info_t *client = malloc(sizeof(client_info_t));
+        client_info_t *client = malloc(sizeof(client_info_t));  //alloco spazio per la struct client_info_t, "client" punta a questa struct
         socklen_t addrlen = sizeof(client->indirizzoPorta);
 
-
-        client->socketClient = accept(socketServer,(struct sockaddr*)&client->indirizzoPorta,&addrlen);
+        client->socketClient = accept(socketServer,(struct sockaddr*)&client->indirizzoPorta,&addrlen);  //il server si ferma qui finché qualche client non l'ho contatta
 
         pthread_t clientThread;
-        pthread_create(&clientThread, NULL, gestione_client, (void*)client);
+        pthread_create(&clientThread, NULL, gestione_client, (void*)client);    //se mi si collegano n client nell'accept mi si creano n thread che vanno a eseguire la funzione gestione_client
 
     }
     close(socketServer);
