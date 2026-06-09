@@ -11,28 +11,28 @@
 
 int socketFD;       //è globale perche è in comune con altri thread
 
-void* gestioreInvio(void* argomenti){       //funzioni dei thread
+void* gestioreInvio(void* argomenti){       //funzione thread invio
 
     char buffer[BUFFER_MAX];
+    //loop logico
     for(;;){
-        fflush(stdout);
-        fgets(buffer, BUFFER_MAX, stdin);
-
-        buffer[strcspn(buffer, "\n")] = '\0';
-        if(strcmp(buffer, "esci") == 0){
+        fflush(stdout); //pulisco lo standard out
+        fgets(buffer, BUFFER_MAX, stdin);       //fgets(dove scrivo,quanto è grande questo spazio dove scrivere, da dove prendo i dati), è una sorta di scanf
+        buffer[strcspn(buffer, "\n")] = '\0';  //quando scriviamo una stringa e premiamo invio (\n) questo fa parte della stringa, ma a noi non serve quindi dato che buffer è un array di char diciamo che alla posizione "strcspn(buffer, "\n")" sostiuiamo \n con '\0'
+        if(strcmp(buffer, "esci") == 0){        //strcspn restituisce la posizione in cui si trova il carattere tra "" in questo caso \n
             break;
+            exit(-1);
         }
 
         send(socketFD,buffer, strlen(buffer),0);
         memset(buffer, 0, strlen(buffer)); //svuoto il buffer per prepararlo all'arrivo della risposta
-
     }
 
     return NULL;
 
 }
 
-void* gestioreRicezione(void* argomenti){       //funzioni dei thread
+void* gestioreRicezione(void* argomenti){       //funzione thread ricezione
 
     char buffer[BUFFER_MAX];
     int bytesRicevuti = 0;
@@ -48,7 +48,7 @@ void* gestioreRicezione(void* argomenti){       //funzioni dei thread
             break;
         }
 
-        printf("Ho ricevuto %s\n", buffer);
+        printf("Ho ricevuto: %s\n", buffer);
         
     }
     fflush(stdout);
@@ -81,8 +81,8 @@ int main(int argc, char* argv[]) {
     printf("Connesso al server %s:%s\n", argv[1],argv[2]);
 
     //fin qui ci siamo solamente connessi al server, questa parte è abbastanza standard per ogni esercizio
-    //loop logico
 
+    //per chiarire queste funzioni sui thread guardare "Thread in C" nelle note di obsidian
     pthread_t thread_invio, thread_ricezione;
     pthread_create(&thread_invio, NULL, gestioreInvio, NULL);
     pthread_create(&thread_ricezione, NULL, gestioreRicezione, NULL);

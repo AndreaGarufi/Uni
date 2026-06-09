@@ -118,3 +118,24 @@ Il parametro ==socklen_t * addrlen== è un **puntatore a un intero** che rappres
     - **In Output:** Poiché è la `accept()` che compila la struttura con i dati del client che si è appena connesso, prima di terminare la funzione **sovrascrive** questa variabile inserendo il numero esatto di byte che ha realmente utilizzato per scrivere l'indirizzo del client
 
 Se la funzione accept() ritorna un numero intero $\ge 0$ (Successo): Rappresenta un **nuovo File Descriptor** (ovvero una nuova socket di connessione). Altrimenti ritorna -1.
+
+---
+#### Funzioni send e receive
+Send
+`send(int sockfd, const void *buf, size_t len, int flags);`
+Invia i dati contenuti in un buffer di memoria attraverso il socket specificato.
+
+- **`int sockfd`**: Il descrittore del socket (es. il tuo `socketFD`). È l'ID della connessione aperta verso l'altro computer.
+- **`const void *buf`**: Il puntatore alla memoria dove risiedono i dati che vuoi spedire (nel tuo codice, la variabile `buffer`). Può essere del testo, un file, o qualsiasi tipo di dato.
+- **`size_t len`**: La quantità esatta di byte che vuoi inviare. Nel tuo codice hai usato `strlen(buffer)`, che è perfetto per le stringhe perché calcola quanti caratteri ci sono prima del `\0`.
+- **`int flags`**: Opzioni speciali per l'invio. Nella stragrande maggioranza dei casi si passa `0`, che indica un comportamento standard (bloccante finché i dati non vengono presi in carico dal sistema).
+
+Receive
+`recv(int sockfd, void *buf, size_t len, int flags);`
+Riceve i dati che arrivano dal socket e li copia all'interno di un buffer nel tuo programma. Di base, **`recv` è una funzione bloccante**: se non ci sono dati in arrivo, il thread che la esegue si "addormenta" su quella riga e si risveglia solo quando l'altro computer invia qualcosa (o si disconnette).
+
+- **`int sockfd`**: Il descrittore del socket da cui vuoi "ascoltare" e prelevare i dati in arrivo.
+- **`void *buf`**: Il puntatore all'area di memoria (il buffer) dove la funzione deve _scrivere_ i byte che riceve dalla rete.
+- **`size_t len`**: La dimensione massima del tuo buffer (la capienza massima del "secchio" in cui raccogli i dati, ad esempio `BUFFER_MAX`). Serve a evitare che `recv` scriva più dati di quanti la memoria possa contenerne, causando un crash.    
+- **`int flags`**: Opzioni speciali per la ricezione. Anche qui, di solito si passa `0` per il comportamento standard.
+

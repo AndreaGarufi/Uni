@@ -4,34 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "7332604cb37cbba2",
+        "id": "964f9d4e4dd1d7b8",
         "type": "tabs",
         "children": [
           {
-            "id": "3653b1db0aac5d0d",
+            "id": "49cfbe2bb8e2279a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf"
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Socket in C"
+              "icon": "lucide-file",
+              "title": "Thread in C"
             }
           },
           {
-            "id": "a4a696faf3e814e8",
+            "id": "f6582da290dedea8",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf"
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "slides_computer_networks_pub"
+              "icon": "lucide-file",
+              "title": "Socket in C"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -192,19 +197,21 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "3653b1db0aac5d0d",
+  "active": "f6582da290dedea8",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/a.out",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/a.out.exe",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/a-out.exe",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/a.exe",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/client.out",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/serverEsercizio.c",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma/clientEsercizio.c",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/ClientServer_somma",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/client.out",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/client",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/messaggi_Thread/a.out",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/messaggi_Thread/server",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/messaggi_Thread/client",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/messaggi_Thread/server_messTHREAD.c",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/messaggi_Thread/client_messTHREAD.c",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/messaggi_Thread",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Nuova cartella",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/server_messTHREAD.c",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/server_messTHREAD",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/server",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/Giga(niga)bit ethernet.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/17_4_giugno.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605172438.png",
@@ -218,7 +225,6 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Capitolo 3.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Capitolo 4.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Capitolo 5.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605120517.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605120045.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260605113846.png",
@@ -238,7 +244,6 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11_21_aprile.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/10_16_aprile.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/9_14_aprile.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/8_9_aprile.md"
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/9_14_aprile.md"
   ]
 }
