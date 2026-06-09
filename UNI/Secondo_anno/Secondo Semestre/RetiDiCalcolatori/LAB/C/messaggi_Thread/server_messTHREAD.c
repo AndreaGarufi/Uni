@@ -26,7 +26,6 @@ typedef struct{     //Il suo scopo è raggruppare in un unico posto tutti i clie
 
 clients_list_t clients = {.count = 0};
 
-
 void broadcast_message(const char* messaggio, int socketCheHaInviato){
     pthread_mutex_lock(&clients.mutex);
 
@@ -130,6 +129,5 @@ int main(int argc, char* argv[]) {
                                                             //qui passo client che però va prima castato a void*, questo per qualsiasi tipo di variabile
     }
     close(socketServer);
-
 
 }
