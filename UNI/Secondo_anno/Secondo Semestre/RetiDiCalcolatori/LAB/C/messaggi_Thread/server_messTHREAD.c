@@ -30,48 +30,44 @@ clients_list_t clients = {.count = 0};
 void broadcast_message(const char* messaggio, int socketCheHaInviato){
     pthread_mutex_lock(&clients.mutex);
 
-    for(int i = 0; i < clients.count; i++){
+    for(int i = 0; i < clients.count; i++){     //scorro tutti i client
 
         if(clients.list[i]->socketClient == socketCheHaInviato){
-            continue;
+            continue;   //se l'if è vero passa al prossimo ciclo perché non deve mandare al client che ha scritto
         }
         send(clients.list[i]->socketClient,messaggio,strlen(messaggio),0);
 
     }
-
     pthread_mutex_unlock(&clients.mutex);    
 }
 
 void * gestione_client(void *arg){      //funzione eseguita dal thread (la libreria pthread.h impone una regola rigida: qualsiasi funzione tu voglia dare in pasto a un thread deve avere tassativamente questa identica struttura)
-    client_info_t *client = (client_info_t*)arg;
+    client_info_t *client = (client_info_t*)arg;    //faccio il un-casting del parametro passato prima nel main (da void a client_info_t)
     int socketClient = client->socketClient;
     char buffer[BUFFER_MAX];
     char ipAddress[INET_ADDRSTRLEN];
-    int port = ntohs(client->indirizzoPorta.sin_port);
+    int port = ntohs(client->indirizzoPorta.sin_port);          //con queste righe prendiamo i valori di indirizzo ip e porta del client collegato per stamparli
     inet_ntop(AF_INET, &client->indirizzoPorta.sin_addr,ipAddress,INET_ADDRSTRLEN);
 
     printf("Si e' collegato il client: %s:%d\n",ipAddress,port);
     
-    pthread_mutex_lock(&clients.mutex);
-    clients.list[clients.count] = client;
+    pthread_mutex_lock(&clients.mutex);         //servono i mutex per gestire l'accesso concorrente da parte di più thread a queste locazioni
+    clients.list[clients.count] = client;   //dentro la lista metto un client collegato e aggiorno la variabile count
     clients.count++;
     pthread_mutex_unlock(&clients.mutex);
 
     for(;;){
 
-        int numBytes = recv(socketClient, buffer,BUFFER_MAX,0);
+        int numBytes = recv(socketClient, buffer,BUFFER_MAX,0); //in numBytes mette il numero di byte letti
         if(numBytes < 0){
-
             printf("Errore in ricezione");
             continue;
         }
-
         if(numBytes == 0){
             printf("Il client %s:%d si e' disconnesso\n",ipAddress,port);
             break;
         }
-
-        printf("Il client %s:%d ha inviato %s a tutti\n", ipAddress,port,buffer);
+        printf("Il client %s:%d ha inviato: "%s" a tutti i client\n", ipAddress,port,buffer);
         broadcast_message(buffer,socketClient);
 
         memset(buffer, 0, BUFFER_MAX);
@@ -83,7 +79,7 @@ void * gestione_client(void *arg){      //funzione eseguita dal thread (la libre
         if(clients.list[i]->socketClient == socketClient){
         //ho trovato il client che si sta disconnettendo
         free(clients.list[i]);
-        for(int j = i; j < clients.count-1; j++){
+        for(int j = i; j < clients.count-1; j++){   //qui chiudo lo spazio vuoto lasciato dal client disconnesso
             clients.list[j] = clients.list[j+1];
         }
         clients.count--;
@@ -131,7 +127,7 @@ int main(int argc, char* argv[]) {
 
         pthread_t clientThread;
         pthread_create(&clientThread, NULL, gestione_client, (void*)client);    //se mi si collegano n client nell'accept mi si creano n thread che vanno a eseguire la funzione gestione_client
-
+                                                            //qui passo client che però va prima castato a void*, questo per qualsiasi tipo di variabile
     }
     close(socketServer);
 

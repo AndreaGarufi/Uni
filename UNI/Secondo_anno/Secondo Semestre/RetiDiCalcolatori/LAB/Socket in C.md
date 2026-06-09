@@ -121,7 +121,7 @@ Se la funzione accept() ritorna un numero intero $\ge 0$ (Successo): Rappresenta
 
 ---
 #### Funzioni send e receive
-Send
+**Send**
 `send(int sockfd, const void *buf, size_t len, int flags);`
 Invia i dati contenuti in un buffer di memoria attraverso il socket specificato.
 
@@ -129,8 +129,10 @@ Invia i dati contenuti in un buffer di memoria attraverso il socket specificato.
 - **`const void *buf`**: Il puntatore alla memoria dove risiedono i dati che vuoi spedire (nel tuo codice, la variabile `buffer`). Può essere del testo, un file, o qualsiasi tipo di dato.
 - **`size_t len`**: La quantità esatta di byte che vuoi inviare. Nel tuo codice hai usato `strlen(buffer)`, che è perfetto per le stringhe perché calcola quanti caratteri ci sono prima del `\0`.
 - **`int flags`**: Opzioni speciali per l'invio. Nella stragrande maggioranza dei casi si passa `0`, che indica un comportamento standard (bloccante finché i dati non vengono presi in carico dal sistema).
+**Valore di ritorno:** Restituisce il numero di byte _effettivamente_ inviati
 
-Receive
+
+**Receive**
 `recv(int sockfd, void *buf, size_t len, int flags);`
 Riceve i dati che arrivano dal socket e li copia all'interno di un buffer nel tuo programma. Di base, **`recv` è una funzione bloccante**: se non ci sono dati in arrivo, il thread che la esegue si "addormenta" su quella riga e si risveglia solo quando l'altro computer invia qualcosa (o si disconnette).
 
@@ -139,28 +141,7 @@ Riceve i dati che arrivano dal socket e li copia all'interno di un buffer nel tu
 - **`size_t len`**: La dimensione massima del tuo buffer (la capienza massima del "secchio" in cui raccogli i dati, ad esempio `BUFFER_MAX`). Serve a evitare che `recv` scriva più dati di quanti la memoria possa contenerne, causando un crash.    
 - **`int flags`**: Opzioni speciali per la ricezione. Anche qui, di solito si passa `0` per il comportamento standard.
 
----
-
-#### Funzione phtread_mutex_init
-`int pthread_mutex_init(pthread_mutex_t *mutex, const pthread_mutexattr_t *attr);`
-La funzione **`pthread_mutex_init`** serve a **inizializzare un Mutex**
-
-- **`pthread_mutex_t *mutex`**: È il puntatore alla variabile di tipo `pthread_mutex_t` che vuoi inizializzare (nel tuo caso, l'indirizzo della memoria `&clients.mutex`). La funzione imposta lo stato iniziale di questo lucchetto come "aperto/sbloccato".
-    
-- **`const pthread_mutexattr_t *attr`**: È un puntatore a una struttura che definisce gli attributi e il comportamento del lucchetto (ad esempio, se il lucchetto può essere ricorsivo). Passando **`NULL`**, stai dicendo al sistema di usare gli **attributi predefiniti** (un lucchetto normale standard).
-A livello pratico...
-```
-pthread_mutex_lock(&clients.mutex);   // 1. Chiudo il lucchetto. Se è già chiuso da un altro thread, mi fermo e aspetto.
-
-// --- ZONA SICURA (Critical Section) ---
-// Qui modifico o leggo la struttura 'clients' in totale sicurezza.
-// Nessun altro thread può toccarla finché sono qui dentro.
-// --------------------------------------
-
-pthread_mutex_unlock(&clients.mutex); // 2. Riapro il lucchetto, permettendo ad altri thread di usarlo.
-```
-
----
-#### Funzioni eseguite dai thread
-`void * nomeFunzione(void *argomenti)`     
-la libreria `pthread.h` impone una regola rigida: qualsiasi funzione tu voglia dare in pasto a un thread deve avere tassativamente questa identica struttura
+**Valore di ritorno: ** È fondamentale per capire lo stato della connessione:
+- **Maggiore di 0:** Indica il numero di byte effettivamente ricevuti.
+- **Uguale a 0:** Significa che **l'altro computer ha chiuso la connessione** ordinatamente (ha fatto la `close`).
+- **Uguale a -1:** Significa che si è verificato un errore di rete.
