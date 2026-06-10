@@ -141,7 +141,7 @@ Riceve i dati che arrivano dal socket e li copia all'interno di un buffer nel tu
 - **`size_t len`**: La dimensione massima del tuo buffer (la capienza massima del "secchio" in cui raccogli i dati, ad esempio `BUFFER_MAX`). Serve a evitare che `recv` scriva più dati di quanti la memoria possa contenerne, causando un crash.    
 - **`int flags`**: Opzioni speciali per la ricezione. Anche qui, di solito si passa `0` per il comportamento standard.
 
-**Valore di ritorno: ** È fondamentale per capire lo stato della connessione:
+**Valore di ritorno: È fondamentale per capire lo stato della connessione:
 - **Maggiore di 0:** Indica il numero di byte effettivamente ricevuti.
 - **Uguale a 0:** Significa che **l'altro computer ha chiuso la connessione** ordinatamente (ha fatto la `close`).
 - **Uguale a -1:** Significa che si è verificato un errore di rete.
