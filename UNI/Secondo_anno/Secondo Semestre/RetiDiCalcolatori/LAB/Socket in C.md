@@ -150,3 +150,30 @@ Riceve i dati che arrivano dal socket e li copia all'interno di un buffer nel tu
 ---
 
 ### SOCKET DATAGRAM
+#### Funzioni sendto() e recvfrom()
+`sendto(int sockfd, const void *buf, size_t len, int flags, const struct sockaddr *dest_addr, socklen_t addrlen)`
+
+Serve ad inviare messaggi con UDP.
+
+Il parametro `int sockfd` è il file descriptor della socket creata precedentemente con la funzione socket().
+Il parametro `const void *buf` è un puntatore al buffer di memoria che contiene i dati da inviare.
+Il parametro `size_t len` rappresenta la quantità di byte che si vogliono mandare.
+Il parametro `int flags` sono dei flag per delle opzioni particolari.
+Il parametro `const struct sockaddr *dest_addr` è un puntatore alla struttura che contiene indirizzo IP e porta del destinatario.
+Il parametro `socklen_t addrlen` rappresenta la dimensione della struttura passata precedentemente.
+
+**Valore di ritorno:** in caso di successo ritorna il numero di byte inviati, se fallisce ritorna -1.
+
+
+`recvfrom(int sockfd, void *buf, size_t len, int flags, struct sockaddr *src_addr, socklen_t *addrlen)` 
+
+Questa è la esatta controparte della funzione sendto. La recvfrom è bloccante.
+
+Il parametro `int sockfd` è il file descriptor della socket creata precedentemente con la funzione socket().
+Il parametro `void *buf` è un puntatore al buffer di memoria in cui verranno scritti i dati.
+Il parametro `size_t len` rappresenta la dimensione massima in byte del buffer.
+Il parametro `int flags` sono dei flag per delle opzioni particolari.
+Il parametro **`struct sockaddr *src_addr`** è un puntatore a una struttura vuota. La funzione **la riempirà automaticamente** con l'indirizzo IP e la porta del mittente. Se non ti interessa sapere chi ha inviato il dato, puoi passare `NULL`.
+Il parametro **`socklen_t *addrlen`**,**attenzione, questo è un puntatore,** prima della chiamata deve contenere la dimensione della struttura passata in `src_addr`. Al ritorno dalla funzione, conterrà la dimensione effettiva dell'indirizzo memorizzato.
+
+**Valore di ritorno:** in caso di successo ritorna il numero di byte ricevuti altrimenti ritorna -1.

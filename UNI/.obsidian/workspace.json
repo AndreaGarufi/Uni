@@ -4,53 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "620169dcb7f88b37",
+        "id": "4088a6db02908e48",
         "type": "tabs",
         "children": [
           {
-            "id": "f617ff25e105ae66",
+            "id": "a639fa0a9017224e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "19_11_giugno"
-            }
-          },
-          {
-            "id": "b4350a7c486b5bbf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SISTEMI-COMPLETO"
-            }
-          },
-          {
-            "id": "4bad74f6afa43c94",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SISTEMI-COMPLETO"
+              "title": "Nuova scheda"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -211,10 +178,13 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "4bad74f6afa43c94",
+  "active": "a639fa0a9017224e",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184644.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184452.png",
@@ -223,7 +193,6 @@
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184017.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611183404.png",
     "Callouts.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Senza nome 1.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C.rar",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/sensoriRete/serverinoCentrale.c",
@@ -232,14 +201,12 @@
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/sensoriRete/mioProtocollo.h",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/sensoriRete/a.out",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/sensoriRete",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/messaggi_Thread/a.out",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/18_9_giugno.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610215732.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610215538.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610215332.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610215043.png",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/17_4_giugno.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/Giga(niga)bit ethernet.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/20 - 4 giugno 2026.md",
