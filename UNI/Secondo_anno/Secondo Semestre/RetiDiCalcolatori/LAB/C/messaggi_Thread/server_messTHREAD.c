@@ -66,7 +66,7 @@ void * gestione_client(void *arg){      //funzione eseguita dal thread (la libre
             printf("Il client %s:%d si e' disconnesso\n",ipAddress,port);
             break;
         }
-        printf("Il client %s:%d ha inviato: "%s" a tutti i client\n", ipAddress,port,buffer);
+        printf("Il client %s:%d ha inviato: '%s' a tutti i client\n", ipAddress,port,buffer);
         broadcast_message(buffer,socketClient);
 
         memset(buffer, 0, BUFFER_MAX);

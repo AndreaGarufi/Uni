@@ -14,6 +14,7 @@ Questo è il funzionamento teorico di una socket:
 
 ---
 
+
 #### Funzione Socket()
 Solitamente si comunica tra client e server e la funzione comune tra i 2 è *socket()*
 - `int socket(int domain, int type, int protocol);`
@@ -31,7 +32,7 @@ Per il parametro ==int type== sono definiti 5 valori, tutti iniziano con "`SOCK_
 Nel parametro ==int protocol== noi andremo ad inserire sempre "0".
 
 ---
-
+### SOCKET STREAM
 #### Il Problema del linguaggio C
 Funzioni come `bind()`, `connect()` e `accept()` devono poter accettare **qualsiasi tipo di indirizzo** (IPv4, IPv6, Unix Local, ecc.). Tuttavia, il C non supporta il polimorfismo o l'ereditarietà: una funzione non può accettare tipi di dato diversi nello stesso parametro
 Per risolvere questo limite, gli ingegneri di Berkeley hanno creato la **`struct sockaddr`** (definita in `<sys/socket.h>`). Che è una sorta di prototipo generale, poi esistono varie specifiche.
@@ -145,3 +146,7 @@ Riceve i dati che arrivano dal socket e li copia all'interno di un buffer nel tu
 - **Maggiore di 0:** Indica il numero di byte effettivamente ricevuti.
 - **Uguale a 0:** Significa che **l'altro computer ha chiuso la connessione** ordinatamente (ha fatto la `close`).
 - **Uguale a -1:** Significa che si è verificato un errore di rete.
+
+---
+
+### SOCKET DATAGRAM
