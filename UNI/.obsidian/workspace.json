@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Callouts.md",
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Callouts"
+              "title": "SISTEMI-COMPLETO"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -211,7 +211,7 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "b4350a7c486b5bbf",
+  "active": "4bad74f6afa43c94",
   "lastOpenFiles": [
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
