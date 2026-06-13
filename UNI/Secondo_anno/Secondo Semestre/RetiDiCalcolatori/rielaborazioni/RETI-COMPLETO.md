@@ -751,7 +751,7 @@ La congestione della rete si verifica quando il *traffico raggiunge o supera la 
 
 **2 approcci:**
 • *Approccio Network-assisted*. I router forniscono un feedback diretto agli host sender e receiver in merito alla congestione della rete. I router possono fornire il livello di congestione, o esplicitare una frequenza di invio. 
-• *Approccio end-to-end*. La rete non da alcun tipo di feedback: la congestione è dedotta da ritardi dei pacchetti e ritardi.
+• *Approccio end-to-end*. La rete non da alcun tipo di feedback: la congestione è dedotta da perdita dei pacchetti e ritardi.
 
 **AIMD - Additive Increase Multiplicative Decrease**
 *Aumento lineare e decremento moltiplicativo della cwnd.*

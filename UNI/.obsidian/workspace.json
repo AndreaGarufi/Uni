@@ -8,13 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a639fa0a9017224e",
+            "id": "a55a5b7ffd5955b4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Socket in C"
             }
           }
         ]
@@ -178,14 +180,24 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "a639fa0a9017224e",
+  "active": "a55a5b7ffd5955b4",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/server",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/serverino.c",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/serverino.c",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/sensore",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/Esercizio 1 Sensore.pdf",
+    "Esercizio 1 Sensore.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/sensorino.c",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/SEensore",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/SISTEMI-COMPLETO.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-04.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184644.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184452.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184323.png",
@@ -194,13 +206,6 @@
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611183404.png",
     "Callouts.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Senza nome 1.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C.rar",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/sensoriRete/serverinoCentrale.c",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/sensoriRete/sensorino",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/sensoriRete/sensor_device.c",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/sensoriRete/mioProtocollo.h",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/sensoriRete/a.out",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/sensoriRete",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/18_9_giugno.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610215732.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610215538.png",
@@ -220,10 +225,8 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/21 - 26 maggio 2026.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md"
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md"
   ]
 }
