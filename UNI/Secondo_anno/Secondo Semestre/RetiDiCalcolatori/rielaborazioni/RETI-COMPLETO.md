@@ -848,7 +848,7 @@ Tabella riassuntiva:
 ---
 
 #### Router
-I router sono sicuramente i dispositivi più responsabili dell'instradamento e dell'inoltro, al giorno d'oggi i router lavorano sui livelli DLL network e trasport, il principale però è il trasport. Sono formati da diversi componenti. In un router, mentre il processo d’instradamento è principalmente software, le porte di ingresso, di uscita e le strutture di commutazione, sono gestite da hardware dedicato. In questo modo, è possibile ottenere le performance richieste dalla rete, operando in lassi temporali dell’ordine dei millisecondi.
+I router sono sicuramente i dispositivi più responsabili dell'instradamento e dell'inoltro, al giorno d'oggi i router lavorano sui livelli DLL network e trasport, il principale però è il network. Sono formati da diversi componenti. In un router, mentre il processo d’instradamento è principalmente software, le porte di ingresso, di uscita e le strutture di commutazione, sono gestite da hardware dedicato. In questo modo, è possibile ottenere le performance richieste dalla rete, operando in lassi temporali dell’ordine dei millisecondi.
 
 • *Porte di ingresso*. Sono le terminazioni a livello fisico per i collegamenti in ingresso al router. Inoltre, è sempre nella porta d’ingresso che si effettua la decisione di forwarding. Ogni porta contiene infatti una copia della tabella di routing. In questo caso, il termine ”porta” fa riferimento a interfacce fisiche d’input (e output), ben diversi dalle porte software dei processi e dei socket. 
 • *Struttura di commutazione*. Connette fisicamente le porte d’ingresso a quelle di uscita. Una sorta di rete interna al router.
