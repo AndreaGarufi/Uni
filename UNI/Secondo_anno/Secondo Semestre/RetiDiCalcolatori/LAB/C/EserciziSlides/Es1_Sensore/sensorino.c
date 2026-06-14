@@ -46,14 +46,16 @@ int main(int argc, char* argv[]){
     for(;;){
         sleep(3);
         //creo e invio dati
+        printf("Creo e invio dati\n");
         float temp = (((float)rand() /RAND_MAX) *35.0); //dovro poi dividere per 100 al server
         datiDaInviare.temperature = htonl(temp*100);
         datiDaInviare.humidity = htons(((float)rand() /RAND_MAX) *100.0);
         datiDaInviare.air = htons(((float)rand() /RAND_MAX) *20.0);
         datiDaInviare.sensorID = htons((atoi(argv[3]))); 
         //printf("dati inviati: %d, %d, %d, %d\n",datiDaInviare.temperature,datiDaInviare.humidity,datiDaInviare.air,datiDaInviare.sensorID);
-        sendto(socketSensor,&datiDaInviare,sizeof(datiDaInviare),0,(struct sockaddr*)&indirizzoPortaServer,sizeof(indirizzoPortaServer));   //UDP
-
+        if(sendto(socketSensor,&datiDaInviare,sizeof(datiDaInviare),0,(struct sockaddr*)&indirizzoPortaServer,sizeof(indirizzoPortaServer)) == -1){ //UDP
+            fprintf(stderr,"Errore nella sendto()\n");
+        }   
 
     }
     close(socketSensor);

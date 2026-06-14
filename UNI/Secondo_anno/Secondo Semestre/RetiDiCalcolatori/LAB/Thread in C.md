@@ -48,6 +48,12 @@ pthread_mutex_lock(&clients.mutex);   // 1. Chiudo il lucchetto. Se è già chiu
 pthread_mutex_unlock(&clients.mutex); // 2. Riapro il lucchetto, permettendo ad altri thread di usarlo.
 ```
 
+La sezione critica si gestisce trami 2 funzioni:  `pthread_mutex_lock(&sensori.mutex);` e     `pthread_mutex_unlock(&sensori.mutex);` nel mezzo il codice della sezione critica.
+
+---
+
+
+
 ---
 #### Funzioni eseguite dai thread
 `void * nomeFunzione(void *argomenti)`     
