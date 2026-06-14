@@ -18,7 +18,10 @@ Crea un nuovo thread di esecuzione all'interno del processo chiamante. Il nuovo 
 - **`void *arg`**: È il parametro di input da passare alla funzione eseguita dal thread. È un puntatore generico (`void *`), il che significa che puoi passarci l'indirizzo di qualsiasi cosa (un intero, una stringa, una struttura dati complessa). Passando `NULL`, indichi che la funzione non ha bisogno di argomenti.
 
 ---
+#### Funzione pthread_detach
+Normalmente un thread è in modalità *joinable* il che significa che una volta finito il suo compito, la memoria allocata per lui resta ancora riservata anche se il thread ha finito il suo lavoro. Con `thread_detach(nomeThread)` rendiamo il thread *detached* in questa maniera una volta finito il suo lavoro libererà automaticamente le risorse a lui allocate.
 
+---
 #### Funzione pthread_join
 `int pthread_join(pthread_t thread, void **retval);`
 Sospende l'esecuzione del thread chiamante (di solito il `main`) finché il thread specificato dal parametro `thread` non termina la sua esecuzione. È l'equivalente della funzione `wait()` che si usa per i processi.
@@ -49,10 +52,6 @@ pthread_mutex_unlock(&clients.mutex); // 2. Riapro il lucchetto, permettendo ad 
 ```
 
 La sezione critica si gestisce trami 2 funzioni:  `pthread_mutex_lock(&sensori.mutex);` e     `pthread_mutex_unlock(&sensori.mutex);` nel mezzo il codice della sezione critica.
-
----
-
-
 
 ---
 #### Funzioni eseguite dai thread
