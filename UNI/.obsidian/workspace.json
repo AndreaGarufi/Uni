@@ -46,7 +46,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -207,8 +207,9 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "cd7a0b4d79d7b1d0",
+  "active": "c84a89d7530e3013",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es2_CartaFobiceSasso/Esercizio 2 Carta Forbice Sasso.pdf",
@@ -218,7 +219,6 @@
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/controllino.c",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/controllino.c",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/controllinoServer",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/LOG.txt",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/LOG.txt",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/controllinoServer",
