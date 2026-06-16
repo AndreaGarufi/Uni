@@ -10,7 +10,7 @@
 #include <stdbool.h>
 
 #define MAX_CLIENTS 2
-
+#define MAX_DATABASE 6
 
 typedef struct {
     char bufferMail[64];
@@ -31,39 +31,90 @@ typedef struct        //struct con tutti i dati del client (tolta la password)
 typedef struct           //struct con la lista dei client
 {
     int count;
-    Client_info *list[MAX_CLIENTS];
+    Client_info *list[MAX_DATABASE];
     pthread_mutex_t mutex;
 
 } Client_list;
 
 Client_list clients = {.count = 0};
 
+typedef struct           //struct con la lista dei client IN ATTESA per il matchmaking
+{
+    int countWAIT;
+    Client_info *ClientWAIT[MAX_DATABASE];
+    pthread_mutex_t mutex;
+
+} Client_list_waiting;
+
+Client_list_waiting clients_waiting = {.countWAIT = 0};
+
+void *gestioneCodaAttesa(void * arg){
+    
+    //int bytesRicevuti = recv(player->socketClient);
+    //if()
+}
+
 void *gestioneAutenticazione(void *arg){
 
     Client_info *player = (Client_info*)arg;
-    Client_list giocatori;
     Accesso datiRicevuti;
-
+    bool emailCorretta = 0;
     int bytesRicevuti = recv(player->socketClient,&datiRicevuti,sizeof(Accesso),0);
 
     if(bytesRicevuti <= 0){
         fprintf(stderr,"Il client non manda dati, potrebbe essersi disconnesso.\n");
-        //exit(EXIT_FAILURE);
+        close(player->socketClient);
+        free(player);
+        return NULL;
     }
-    
+
+    pthread_mutex_lock(&clients.mutex);
     if(datiRicevuti.registrazione == 0){
         //caso del login
-
-    }else if(datiRicevuti.registrazione == 1){
-        //caso della registrazione
-        pthread_mutex_lock(&giocatori.mutex);
-        for(int i = 0; i < clients.count; i++){
-            //if(clients.list[i]->)
+        for(int i = 0; i < clients.count;i++){
+            if(strcmp(clients.list[i]->email,datiRicevuti.bufferMail) == 0){
+                emailCorretta = 1;
+                if(strcmp(clients.list[i]->password,datiRicevuti.bufferPass) == 0){
+                    printf("Accesso Eseguito\n");
+                    player->autenticato = 1;
+                    strcpy(player->email,datiRicevuti.bufferMail);
+                    strcpy(player->password,datiRicevuti.bufferPass);
+                    send(player->socketClient,player,sizeof(player),0);
+                    break;
+                }else{
+                    printf("Password sbagliata\n");
+                    break;
+                }
+            }else{
+                printf("Questa e-mail non corrisponde vado avanti\n");
+            }
         }
 
-        pthread_mutex_unlock(&giocatori.mutex);
+        if(emailCorretta == 0){
+            printf("Email errata\n");
+        }
+        
+    }else if(datiRicevuti.registrazione == 1){
+        //caso della registrazione
+        for(int i = 0; i < clients.count;i++){
+            if(strcmp(clients.list[i]->email,datiRicevuti.bufferMail) == 0){
+                printf("Email gia utilizzata.\n");
+                close(player->socketClient);
+                free(player);
+                pthread_mutex_unlock(&clients.mutex);
+                return NULL;
+            }
+        }
+        clients.list[clients.count] = player;
+        player->autenticato = 1;
+        strcpy(player->email,datiRicevuti.bufferMail);
+        strcpy(player->password,datiRicevuti.bufferPass);
+        clients.count++;
+        send(player->socketClient,player,sizeof(player),0);
+        
     }
-
+    pthread_mutex_unlock(&clients.mutex);
+    return NULL;
 
 }
 
@@ -77,6 +128,7 @@ int main(int argc, char *argv[]){
     }
 
     pthread_mutex_init(&clients.mutex, NULL);
+    pthread_mutex_init(&clients_waiting.mutex, NULL);
 
     int socketServer;
     struct sockaddr_in indirizzoServer;
@@ -108,6 +160,8 @@ int main(int argc, char *argv[]){
         //creare thread che gestisce l'autencazione/registrazione con un limite di tentaviti, in caso di successo aggiungere il client in lista
         pthread_t threadAutenticazione;
         pthread_create(&threadAutenticazione,NULL,gestioneAutenticazione,(void*)player);
+        pthread_detach(threadAutenticazione);
+
 
     }
 }

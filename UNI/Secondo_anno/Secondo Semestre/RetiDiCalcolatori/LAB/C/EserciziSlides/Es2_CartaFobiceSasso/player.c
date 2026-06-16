@@ -90,7 +90,6 @@ void gestioneAccesso(int socketServer){
             fgets(dati.bufferPass,sizeof(dati.bufferPass),stdin);
             dati.bufferPass[strcspn(dati.bufferPass, "\n")] = '\0';
             dati.registrazione = 1;
-            dati.registrazione = htons(dati.registrazione);
             //inserire send con un bit che indica la registrazione
             send(socketServer,&dati,sizeof(Accesso),0);
             
@@ -116,10 +115,18 @@ void gestioneAccesso(int socketServer){
 
     }while(accessoEseguitoCorrettamente == 0);
 
-    printf("Accesso Eseguito correttamente.\n");
-
 }
 
+bool gestioneWaiting(){
+    printf("Avvio la ricerca...\n");
+    
+}
+
+void gioca(){
+    printf("Inizia il gioco.\n");
+
+
+}
 
 int main(int argc, char *argv[]){
 
@@ -132,11 +139,13 @@ int main(int argc, char *argv[]){
 
     int operazione = 0;
     char operazioneChar[3];
-
+    bool autenticato = 0;
     printf("Benvenuto in carta forbice sasso.\nPremi 1 per connetterti al server-> ");
 
     do{
-        //scanf("%d",&operazione);
+        if(autenticato == 1){
+            printf("Sei nella LOBBY, vuoi metterti in attesa per giocare? In tal caso premi 2\n");
+        }
         fgets(operazioneChar,sizeof(operazioneChar),stdin);
         operazione = atoi(operazioneChar);
         switch (operazione)
@@ -145,9 +154,15 @@ int main(int argc, char *argv[]){
             socket = connectServer(atoi(argv[1]),argv[2]);
             printf("Connesso al server %s | %s\n", argv[1],argv[2]);
             gestioneAccesso(socket);
-            
+            autenticato = 1;
             break;
-        
+        case 2:
+            bool partitaTrovata = 0;
+            partitaTrovata = gestioneWaiting();
+            if(partitaTrovata == 1){
+                gioca();
+            }
+            break;
         default:
             break;
         }

@@ -45,7 +45,8 @@
               "title": "slides_computer_networks_pub"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -206,7 +207,7 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "a55a5b7ffd5955b4",
+  "active": "cd7a0b4d79d7b1d0",
   "lastOpenFiles": [
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
