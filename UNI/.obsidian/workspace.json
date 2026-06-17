@@ -37,12 +37,14 @@
             "id": "cd7a0b4d79d7b1d0",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf"
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "slides_computer_networks_pub"
+              "icon": "lucide-file",
+              "title": "Possibili domande_esercizi esame"
             }
           }
         ],
@@ -209,9 +211,14 @@
   },
   "active": "cd7a0b4d79d7b1d0",
   "lastOpenFiles": [
+    "Esercizio gioco dell'Impiccato Client-Server.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es3_GiocoImpiccato/Esercizio gioco dell'Impiccato Client-Server.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es3_GiocoImpiccato",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Nuova cartella",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es2_CartaFobiceSasso/Esercizio 2 Carta Forbice Sasso.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es2_CartaFobiceSasso",
     "Esercizio 2 Carta Forbice Sasso.md",
@@ -219,9 +226,6 @@
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/controllino.c",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/controllino.c",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/controllinoServer",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/LOG.txt",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/LOG.txt",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/controllinoServer",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "Esercizio 1 Sensore.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
@@ -250,9 +254,7 @@
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/RetiConMacchineVirtuali.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Setup virtualBox.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/21 - 26 maggio 2026.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md"
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md"
   ]
 }
