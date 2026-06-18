@@ -47,8 +47,7 @@
               "title": "Possibili domande_esercizi esame"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -209,15 +208,15 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "cd7a0b4d79d7b1d0",
+  "active": "a55a5b7ffd5955b4",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
     "Esercizio gioco dell'Impiccato Client-Server.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es3_GiocoImpiccato/Esercizio gioco dell'Impiccato Client-Server.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es3_GiocoImpiccato",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Nuova cartella",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es2_CartaFobiceSasso/Esercizio 2 Carta Forbice Sasso.pdf",
@@ -226,7 +225,6 @@
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/controllino.c",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/controllino.c",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/controllinoServer",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "Esercizio 1 Sensore.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
