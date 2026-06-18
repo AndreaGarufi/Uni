@@ -22,7 +22,6 @@ Ogni router mantiene e comunica una lista (un **vettore**) che contiene due info
 
 
 **Esercizi**
-
 *Un amministratore di rete sbaglia la configurazione della maschera di rete in un host: che succede?*
 (Le maschere di rete servono a un host per capire che percorso seguire)
 Definiamo lo scenario:
