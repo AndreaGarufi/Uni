@@ -1528,8 +1528,8 @@ Sostituendo i valori calcolati ($b_1=0, b_2=0, b_4=1, b_8=0$) al posto delle `x`
 
 - **Parte 2 correzione**
 ![[Pasted image 20260506124528.png|319]]
-Adesso il destinatario (che non sa ancora se c'è un errore) riesegue la stessa operazione di XOR di prima sugli stessi bit, i risultati trovati vanno confrontati con i bit di controllo (nelle pos. potenze di 2) e se sono uguali non ci sono errori, se sono diversi c'è un errore:
-![[Pasted image 20260506124720.png]]
+Adesso il destinatario (che non sa ancora se c'è un errore) riesegue la stessa operazione di XOR di prima sugli stessi bit + il bit di controllo di quel gruppo. Se lo XOR fa 0 non ci sono errori, se fa 1 ci sono degli errori.
+![[Pasted image 20260619173249.png|640]]
 
 Per trovare il bit errato basta sommare gli indici dei bit di controllo che hanno fallito il test: in questo caso $b_2 + b_4 = b_6$ -> l'errore è in posizione 6. 
 **Correzione**
