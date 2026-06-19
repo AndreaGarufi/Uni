@@ -177,3 +177,17 @@ Il parametro **`struct sockaddr *src_addr`** è un puntatore a una struttura vuo
 Il parametro **`socklen_t *addrlen`**,**attenzione, questo è un puntatore,** prima della chiamata deve contenere la dimensione della struttura passata in `src_addr`. Al ritorno dalla funzione, conterrà la dimensione effettiva dell'indirizzo memorizzato.
 
 **Valore di ritorno:** in caso di successo ritorna il numero di byte ricevuti altrimenti ritorna -1.
+
+---
+#### Buona Prassi Di Programmazione
+**Questo discorso vale sia per socket TCP che per socket UDP**
+
+##### 1. Quando si usano le struct nei socket?
+Le struct si usano solitamente quando devi scambiare **più dati eterogenei contemporaneamente** (es. un intero, tre float e una stringa) in un'unica spedizione (`send`), senza dover fare mille chiamate a funzioni di rete separate.
+
+Raggruppare tutto in un unico "pacchetto" binario rende il codice più pulito e riduce il carico sulla rete.
+
+##### 2. Le struct devono essere IDENTICHE tra Client e Server?
+Se utilizziamo questo approccio (ovvero mandare tutta la struct in un unica send) allora **si** le struct devono essere identiche sia lato client che lato server, anche se magari nella logica del server un campo della struct non viene utilizzato.
+
+(Per evitare che client e server abbiano la stessa struct anche se non serve, i programmatori o fanno più send per inviare i dati oppure mandano tutti i dati come un testo unico e poi separano tutti i dati a destinazione, ma per noi va bene anche usare 2 struct identiche in ogni caso).

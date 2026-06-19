@@ -8,45 +8,35 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a55a5b7ffd5955b4",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Socket in C"
-            }
-          },
-          {
             "id": "c84a89d7530e3013",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Thread in C"
+              "title": "Socket in C"
             }
           },
           {
             "id": "cd7a0b4d79d7b1d0",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Riassunto_Github"
+              "icon": "lucide-file",
+              "title": "Socket in C"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -209,21 +199,22 @@
   },
   "active": "cd7a0b4d79d7b1d0",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es4_IndovinaNumero/server",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es4_IndovinaNumero/client",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es4_IndovinaNumero/server.c",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es4_IndovinaNumero/Esercizio Il Server Indovina il Numero Multi-Thread.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es4_IndovinaNumero",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Nuova cartella",
+    "Esercizio Il Server Indovina il Numero Multi-Thread.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
     "Esercizio gioco dell'Impiccato Client-Server.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es3_GiocoImpiccato/Esercizio gioco dell'Impiccato Client-Server.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es3_GiocoImpiccato",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Nuova cartella",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es2_CartaFobiceSasso/Esercizio 2 Carta Forbice Sasso.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es2_CartaFobiceSasso",
     "Esercizio 2 Carta Forbice Sasso.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es1_Sensore/controllino.c",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/controllino.c",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "Esercizio 1 Sensore.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
@@ -252,7 +243,6 @@
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/RetiConMacchineVirtuali.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Setup virtualBox.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/2_10_marzo.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/21 - 26 maggio 2026.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md"
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/21 - 26 maggio 2026.md"
   ]
 }
