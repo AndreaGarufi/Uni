@@ -34,9 +34,21 @@
               "icon": "lucide-file",
               "title": "Socket in C"
             }
+          },
+          {
+            "id": "c371d5ded1bb6ebd",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "RETI-COMPLETO"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -197,11 +209,11 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "cd7a0b4d79d7b1d0",
+  "active": "c371d5ded1bb6ebd",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260619173249.png",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
