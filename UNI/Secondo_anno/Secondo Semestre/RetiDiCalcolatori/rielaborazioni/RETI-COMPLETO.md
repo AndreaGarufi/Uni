@@ -1619,6 +1619,11 @@ Il formato originale del frame era:
 ![[Pasted image 20260512120752.png|460]]
 
 I campi *destination address e source address* usano il MAC address degli host.
+- *Type:* consente a Ethernet di supportare diversi protocolli di rete. Oltre a IP, gli host possono infatti supportare altri protocolli di rete e utilizzare protocolli differenti per applicazioni differenti. La scheda di rete ricevente deve quindi sapere a quale protocollo di rete consegnare il contenuto del campo dati di ogni frame ricevuto. IP e gli altri protocolli di rete dispongono ciascuno di un proprio numero di tipo standardizzato
+- *Preamoble:* i frame Ethernet iniziano con un campo formato da 8 byte. I primi sette presentano la sequenza di bit "10101010" , mentre l’ultimo presenta la sequenza "10101011" . I primi sette byte servono a risvegliare le schede di rete riceventi e a sincronizzarne il clock con quello della scheda trasmittente
+
+**Connection less e non affidabile**
+Ethernet è un protocollo di tipo connection less, quindi non esegue alcun handshake prima di spedire i dati sul canale, non esiste quindi neanche un messaggio di ACK per la conferma di ricezione o errori.
 
 Ethernet usa CSMA/CD come protocollo d'accesso multiplo sul canale condiviso
 
@@ -1629,6 +1634,11 @@ Prendendo come esempio i cavi il cui mezzo di trasmissione è il rame la varie c
 
 ![[Pasted image 20260515161726.png|619]]
 ![[Pasted image 20260515161744.png|521]]
+
+**Codifica e decodifica di Manchester**
+La codifica di Manchester nasce per risolvere alcune criticità relative alla trasmissione dati.
+*Ambiguità delle lunghe sequenze*: la codifica di Manchester impone transizioni obbligatorie durante la trasmissione dei bit. In questo modo diventa più semplice riconoscere eventuali malfunzionamenti e interruzioni della trasmissione.
+*Sincronizzazione precaria*: ogni bit contiene al proprio interno una transizione, impedendo la perdita della sincronizzazione.
 
 ---
 
