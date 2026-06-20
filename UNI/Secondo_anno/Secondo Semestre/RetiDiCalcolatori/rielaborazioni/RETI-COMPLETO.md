@@ -1695,4 +1695,4 @@ La differenza tra albero e grafo è che un albero è aciclico mentre un grafo no
 - STP trasforma una topologia fisica a grafo (dotata di cicli) in una **topologia logica ad albero** (senza cicli), *disabilitando selettivamente le porte ridondanti*.
 - A questo punto sceglie un *root bridge* o switch capo (che funge da root dell'albero) e tutte le altre porte degli altri switch calcoleranno i costi (per mandare i frame) prendendo come riferimento lo switch capo.
 - Le altre porte (quelle ridondanti) saranno accese e funzionanti ma bloccate in modo da "fare finta" che nella rete ci sia un solo collegamento ovvero quello che porta al root bridge.
-- Se quel collegamento si guasta, gli altri switch ricalcoleranno il percorso più breve sbloccando un delle altre porte
+- Se quel collegamento si guasta, gli altri switch ricalcoleranno il percorso più breve sbloccando una delle altre porte.
