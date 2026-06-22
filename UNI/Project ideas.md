@@ -1,0 +1,1 @@
+Progettare attraverso IA un app di car spotting che funzioni sia su PC che su telefono e che sia il più possibile in locale.

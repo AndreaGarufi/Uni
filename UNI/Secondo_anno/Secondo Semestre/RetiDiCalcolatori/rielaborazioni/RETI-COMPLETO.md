@@ -1249,6 +1249,7 @@ Ogni router mantiene e comunica una lista (un **vettore**) che contiene due info
 **Problema del Distance Vectors**
 Uno dei problemi più importanti del distance vectors è che le false notizie si propagano dato che il nodo conosce le informazioni che i suoi vicini gli passano, ma se quelle informazioni sono false verranno prese per vere
 
+---
 #### Analisi protocollo RIP (implementazione di distance vectors) e problema della distanza (praticamente deprecato)
 Il protocollo di distance vectors è stato implementato nel protocollo RIP, in cui la distanza veniva misurata attraverso i salti (hop), 1 distanza = 1 hop, senza tener conto della distanza fisica nella realtà o della larghezza di banda di quel collegamento 
 Esempio: potrebbero esserci 2 router che hanno stessa distanza per il nodo (1 hop) ma uno si trova a 1 km l'altro a 10 metri.
