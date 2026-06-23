@@ -1000,7 +1000,7 @@ In generale la memoria viene gestita usando degli indirizzi. Nel tempo la gestio
 	    - **Soluzione (Lock & Key):** Si divide la memoria in blocchi e a ciascuno si assegna una "chiave" (un codice numerico). Il processo può accedere solo ai blocchi la cui chiave corrisponde a quella memorizzata nel suo registro di stato
 
 
-- **Astrazione dello spazio di indirizzi**: per ogni processo viene specificato lo spazio di indirizzi, utilizzabile da un processo. In pratica viene fatta un'allocazione dinamica che permette ad ogni indirizzo di partire dall'indirizzo 0 rispetto al suo spazio, questo viene fatto usando:
+- **Astrazione dello spazio di indirizzi**: per ogni processo viene specificato lo spazio di indirizzi, utilizzabile da un processo. In pratica viene fatta un'allocazione dinamica che permette ad ogni processo di partire dall'indirizzo 0 rispetto al suo spazio, questo viene fatto usando:
 	- *registro base*: contiene l'indirizzo fisico di partenza dove il processo è effettivamente caricato in RAM. Ogni indirizzo generato dal programma (indirizzo logico) viene sommato al valore di questo registro per ottenere l'indirizzo fisico reale. Nei sistemi moderni, questo compito di traduzione da indirizzo logico a fisico è delegato a un'unità dedicata chiamata MMU.
 	- *registro limite*: definisce la dimensione massima del processo. Serve a garantire che il processo non acceda a memoria fuori dal suo intervallo consentito. La CPU verifica in tempo reale che l'indirizzo logico sia inferiore al valore nel registro limite. Se il controllo fallisce, viene generata una TRAP che passa il controllo al SO, che terminerà inevitabilmente il processo in questione. 
   Questo modello rappresenta il primo vero passo verso l'isolamento dei processi.
@@ -1036,7 +1036,7 @@ Dopo che il SO ha deciso come gestire la memoria, ha bisogno di uno strumento pr
 
 *Bitmap*
 ![[Pasted image 20260530143010.png|564]]
-Avrà tanti bit quanti sono i blocchi allocati e il valore del bit specifica se quel particolare blocco è allocato oppure noi (allocato si = 1, allocato no = 0).
+Avrà tanti bit quanti sono i blocchi totali e il valore del bit specifica se quel particolare blocco è allocato oppure noi (allocato si = 1, allocato no = 0).
 
 *Liste dei blocchi liberi occupati*
 Ogni elemento della lista (doppiamente concatenata) contiene al suo interno un numero di blocchi e un elemento di tipo P (per processo) o H (per hole, buco). I nodi della lista sono ordinati per indirizzo.
