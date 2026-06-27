@@ -4,20 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "cfd126db002cefd9",
+        "id": "83e9cae008b2576a",
         "type": "tabs",
         "children": [
           {
-            "id": "e3d3f63d3438ffcd",
+            "id": "bde2ee7210d9b4c4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Possibili domande_esercizi esame"
+            }
+          },
+          {
+            "id": "18b43063a39f6434",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Riassunto_Github"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,16 +195,19 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "4371091dceb8cd7d",
+  "active": "18b43063a39f6434",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos/clima_thapsos.log",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos/server",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos/Esercizio Collettore Ambientale di Thapsos I_O Multiplexing TCP.pdf",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Nuova cartella",
     "Esercizio Collettore Ambientale di Thapsos I_O Multiplexing TCP.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "Project ideas.md",
     "Esercizio Gateway di Telemetria Formula 1_TCP_UDP.md",
@@ -195,11 +215,7 @@
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es7_TelemetriaMotoreF1_UDP_TCP",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es6_TelemetriaSatellitare_UDP/a.out",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es6_TelemetriaSatellitare_UDP/server",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es6_TelemetriaSatellitare_UDP/client",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es6_TelemetriaSatellitare_UDP/server.c",
     "Esercizio Collettore di Telemetria Satellitare_Socket UDP.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es6_TelemetriaSatellitare_UDP/Esercizio Collettore di Telemetria Satellitare_Socket UDP.pdf",
     "Esercizio_Server di Rifornimento Razzi Multi-Thread con Mutex.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260619173249.png",
     "Esercizio Il Server Indovina il Numero Multi-Thread.md",

@@ -35,10 +35,14 @@ Sospende l'esecuzione del thread chiamante (di solito il `main`) finché il thre
 #### Funzione phtread_mutex_init
 `int pthread_mutex_init(pthread_mutex_t *mutex, const pthread_mutexattr_t *attr);`
 La funzione **`pthread_mutex_init`** serve a **inizializzare un Mutex**
-
+I parametri sono:
 - **`pthread_mutex_t *mutex`**: È il puntatore alla variabile di tipo `pthread_mutex_t` che vuoi inizializzare (nel tuo caso, l'indirizzo della memoria `&clients.mutex`). La funzione imposta lo stato iniziale di questo lucchetto come "aperto/sbloccato".
     
 - **`const pthread_mutexattr_t *attr`**: È un puntatore a una struttura che definisce gli attributi e il comportamento del lucchetto (ad esempio, se il lucchetto può essere ricorsivo). Passando **`NULL`**, stai dicendo al sistema di usare gli **attributi predefiniti** (un lucchetto normale standard).
+
+In alternativa posso usare la macro: `PTHREAD_MUTEX_INITIALIZER` (anche fuori dal main) come in questo esempio: `pthread_mutex_t mutexLog = PTHREAD_MUTEX_INITIALIZER;`
+
+
 A livello pratico...
 ```
 pthread_mutex_lock(&clients.mutex);   // 1. Chiudo il lucchetto. Se è già chiuso da un altro thread, mi fermo e aspetto.
