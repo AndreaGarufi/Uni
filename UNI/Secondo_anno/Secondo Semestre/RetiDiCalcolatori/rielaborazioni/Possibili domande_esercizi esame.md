@@ -157,3 +157,5 @@ Per trovare il bit errato basta sommare gli indici dei bit di controllo che hann
 Per correggere semplicemente eseguiamo un bit flip
 
 ---
+*Distance vectors-Bellman-Ford*
+![[Pasted image 20260628104253.png]]
