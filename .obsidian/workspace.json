@@ -4,37 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "6e67c1ca2efbaacb",
+        "id": "98d183ece17fdb8d",
         "type": "tabs",
         "children": [
           {
-            "id": "39cd66b96076f2dd",
+            "id": "7f12eef3341f12eb",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "RETI-COMPLETO"
+              "title": "Socket in C"
             }
           },
           {
-            "id": "bbe6985e0ff2d955",
+            "id": "dbb92bbe827d0e14",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
-                "mode": "source",
-                "source": false
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Thread in C.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Possibili domande_esercizi esame"
+              "icon": "lucide-file-text",
+              "title": "Thread in C"
+            }
+          },
+          {
+            "id": "c63b6fab06fa544d",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "slides_computer_networks_pub"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -181,8 +191,15 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "bbe6985e0ff2d955",
+  "active": "c63b6fab06fa544d",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es9_Messagistica/client",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es9_Messagistica/server",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es9_Messagistica/server.c",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es9_Messagistica/client.c",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es9_Messagistica",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Thread in C.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260628104253.png",
@@ -190,12 +207,6 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/SISTEMI-COMPLETO.pdf",
     "Senza nome.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Slide/SO-03.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos/server",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos/sensorTCP.c",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos/sensor",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos/collettoreCentrale.c",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos/clima_thapsos.log",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260627152931.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260619173249.png",
