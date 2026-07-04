@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "98d183ece17fdb8d",
+        "id": "1b80847a1b86fa9d",
         "type": "tabs",
         "children": [
           {
-            "id": "7f12eef3341f12eb",
+            "id": "c0dff434d33db3c3",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Socket in C.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/SISTEMI-COMPLETO.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Socket in C"
-            }
-          },
-          {
-            "id": "dbb92bbe827d0e14",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/Thread in C.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Thread in C"
-            }
-          },
-          {
-            "id": "c63b6fab06fa544d",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "slides_computer_networks_pub"
+              "title": "SISTEMI-COMPLETO"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -191,8 +166,9 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "c63b6fab06fa544d",
+  "active": "c0dff434d33db3c3",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es9_Messagistica/client",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es9_Messagistica/server",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es9_Messagistica/server.c",
@@ -206,7 +182,6 @@
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/SISTEMI-COMPLETO.pdf",
     "Senza nome.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Riassunto_Github.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260627152931.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260619173249.png",
