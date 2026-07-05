@@ -4,37 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "83e9cae008b2576a",
+        "id": "2ddedd8b3b549bf9",
         "type": "tabs",
         "children": [
           {
-            "id": "bde2ee7210d9b4c4",
+            "id": "6ebfddabb58e1437",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Possibili domande_esercizi esame"
-            }
-          },
-          {
-            "id": "18b43063a39f6434",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Riassunto_Github"
+              "title": "Laboratorio"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -195,52 +182,52 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "18b43063a39f6434",
+  "active": "6ebfddabb58e1437",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos/clima_thapsos.log",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos/server",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/1_LAB_30_aprile.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611172515.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610184753.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610183406.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610181521.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610174950.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610174445.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610173343.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610160116.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610160035.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610155839.png",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/apri_chiudi_stream.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/scrivi_file.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/seek.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/creazione_maschera_file.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/crea_chiudi_file.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/gestioneExit.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-05-20.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-09-12.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-07-02.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-01-31.pdf",
+    "CAR SPOTTING DATABASE.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos/Esercizio Collettore Ambientale di Thapsos I_O Multiplexing TCP.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es8_SensoriTCP_Thapsos",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Nuova cartella",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
     "Esercizio Collettore Ambientale di Thapsos I_O Multiplexing TCP.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "Project ideas.md",
     "Esercizio Gateway di Telemetria Formula 1_TCP_UDP.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es7_TelemetriaMotoreF1_UDP_TCP/Esercizio Gateway di Telemetria Formula 1_TCP_UDP.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es7_TelemetriaMotoreF1_UDP_TCP",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es6_TelemetriaSatellitare_UDP/a.out",
     "Esercizio Collettore di Telemetria Satellitare_Socket UDP.md",
     "Esercizio_Server di Rifornimento Razzi Multi-Thread con Mutex.md",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260619173249.png",
     "Esercizio Il Server Indovina il Numero Multi-Thread.md",
     "Esercizio gioco dell'Impiccato Client-Server.md",
     "Esercizio 2 Carta Forbice Sasso.md",
     "Esercizio 1 Sensore.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184644.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184452.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184323.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184212.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184017.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611183404.png",
     "Callouts.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Senza nome 1.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/18_9_giugno.md",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610215732.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610215538.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610215332.png",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/17_4_giugno.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/Giga(niga)bit ethernet.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/20 - 4 giugno 2026.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Capitolo 1.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Capitolo 2.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Capitolo 3.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Capitolo 4.md"
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Capitolo 1.md"
   ]
 }
