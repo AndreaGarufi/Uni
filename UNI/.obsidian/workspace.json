@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "2ddedd8b3b549bf9",
+        "id": "bff61566e6e17b40",
         "type": "tabs",
         "children": [
           {
-            "id": "6ebfddabb58e1437",
+            "id": "ad0fd561a6118dc3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
+                "file": "Piano di studi Terzo Anno.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Laboratorio"
+              "title": "Piano di studi Terzo Anno"
             }
           }
         ]
@@ -182,20 +182,23 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "6ebfddabb58e1437",
+  "active": "ad0fd561a6118dc3",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/1_LAB_30_aprile.md",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260724174938.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260724174623.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260724174559.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260724174534.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260724174444.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260724174202.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260724174151.png",
+    "CAR SPOTTER.md",
+    "Piano di studi Terzo Anno.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/1_LAB_30_aprile.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611172515.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610184753.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610183406.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610181521.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610174950.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610174445.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610173343.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610160116.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610160035.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610155839.png",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/apri_chiudi_stream.c",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/scrivi_file.c",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/seek.c",
@@ -226,8 +229,6 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Senza nome 1.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/18_9_giugno.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/17_4_giugno.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/Giga(niga)bit ethernet.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/20 - 4 giugno 2026.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Capitolo 1.md"
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/Giga(niga)bit ethernet.md"
   ]
 }
