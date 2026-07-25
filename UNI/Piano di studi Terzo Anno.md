@@ -440,3 +440,88 @@ La terza parte del corso, infine, è dedicata alla costruzione del Business Plan
 
 ---
 
+Big Data 
+
+Programma Riassunto: 
+![[Pasted image 20260725171231.png]]
+
+
+**Obiettivi Chiav**e:Comprendere e padroneggiare i paradigmi di calcolo distribuito (MapReduce, Spark) per la manipolazione di dataset massivi. Apprendere le tecniche di hashing probabilistico (LSH, Min-Hashing) e di riduzione dimensionale (SVD, CUR, PCA) per la ricerca di similarità in spazi ad alta dimensione. Sviluppare competenze avanzate nell'analisi e modellazione di grafi complessi e reti sociali (PageRank, Community Detection, Graph Neural Networks). Progettare e valutare architetture per sistemi di raccomandazione, text mining e frequent itemset mining.
+
+**Modalità d'Esame**:L'esame finale consiste in **una prova scritta** ed un **colloquio orale** nel quale viene discusso un progetto.
+
+ La prova scritta è costituita da esercizi e domande di teoria.
+
+Chi non supera la prova scritta, non può sostenere l'orale. La prova scritta può essere visionata prima delle prove orali.
+
+**Esempio Pratico** di Attività:Implementare una pipeline distribuita in PySpark o PyTorch Geometric per generare node embedding (Node2Vec / GCN) ed eseguire community detection su una rete di citazioni scientifiche o su un grande grafo d'acquisto; oppure realizzare un sistema di raccomandazione ed elaborazione con LSH (Locality-Sensitive Hashing) per la deduplicazione veloce di milioni di documenti testuali.
+
+**Opinione Personale (Peso Pratico & Concettuale)**:È uno dei corsi più moderni, dinamici e concreti del percorso accademico. Riesce a combinare in modo eccellente rigore matematico (algebra lineare, probabilità, teoria dei grafi) e strumentazione software di livello industriale (Spark, PyTorch Geometric). Invece di limitarsi ad applicare librerie ad alto livello, spinge a comprendere a fondo i trade-off tra approssimazione algoritmica, memoria ed efficienza computazionale necessari quando i dati non entrano in RAM.
+
+**Sbocchi Professionali in Italia**:Big Data Engineer: Progettazione, implementazione e gestione di pipeline di elaborazione e architetture dati distribuite in ambienti aziendali. Data Scientist / ML Engineer: Realizzazione di sistemi di raccomandazione, modellazione predittiva e analisi di grafi complessi per settori Tech, e-Commerce e Finance. Data & Business Intelligence Analyst: Estrazione di pattern ad alto valore strategico, text mining e analisi di grandi dataset per la consulenza e la gestione aziendale. Consulting & Cloud Tech Specialist: Inserimento in grandi system integrator (es. Reply, Accenture, Deloitte) come specialista in soluzioni Cloud, Spark e Data Analytics.
+
+Indice di Difficoltà: 76 / 100 *(Richiede solide basi di algoritmi su grafi, algebra lineare e probabilità, unite alla capacità di gestire framework di programmazione distribuita e librerie di Graph Machine Learning).*
+
+---
+
+### CURRICULUM: Programming Web, Mobile and Virtualized Environment
+
+#### Materie obbligatorie
+**Web and Service Oriented Systems and Laboratory**
+Programma Riassunto: 
+![[Pasted image 20260725171643.png|569]]
+![[Pasted image 20260725171657.png|568]]
+
+**Obiettivi Chiave**:Acquisire i fondamenti concettuali e le competenze operative per la progettazione e lo sviluppo di sistemi distribuiti e applicazioni web server-side. Padroneggiare la programmazione a basso livello tramite socket di rete (Java e C/Unix) e i meccanismi di invocazione remota (RPC/RMI). Sviluppare applicazioni web scalabili e strutturate adottando il pattern MVC, container di servlet e framework enterprise (Spring Boot, Laravel). Progettare, implementare ed esporre API RESTful e servizi web sicuri e manutenibili.
+
+**Modalità d'Esame**: Colloquio orale sugli argomenti del corso, a partire dalla correzione e discussione delle prove in laboratorio svolte e superate in precedenza.
+
+**Esempio Pratico di Attività**: Realizzare una web application full-stack basata su architettura 3-tier utilizzando Spring Boot o Laravel (MVC), integrando un database relazionale tramite ORM/JPA, autenticazione basata su sessioni o token, ed esponendo un set di API RESTful consumate da un client dinamico asincrono.
+
+**Opinione Personale (Peso Pratico & Concettuale):** È l'insegnamento che fa da ponte definitivo tra i concetti teorici delle reti di calcolatori e la programmazione software professionale per il web. Richiede di padroneggiare sia la parte sistemica e di basso livello (gestione manuale dei socket, thread concorrenti, chiamate remote) sia i moderni framework aziendali (Spring Boot, Laravel). È altamente formativo e spendibile immediatamente nel mondo del lavoro.
+
+**Sbocchi Professionali in Italia**:Full-Stack / Backend Web Developer: Sviluppatore di applicazioni web complesse, portali aziendali e servizi backend scalabili. Java / Enterprise Developer: Specialista nello sviluppo di applicazioni enterprise basate su ecosistemi Java (Spring Boot, Servlets, JPA). Software Engineer per Sistemi Distribuiti: Progettista di architetture a microservizi, API REST e infrastrutture di comunicazione di rete. Consulting & System Integration: Inserimento in società di consulenza e system integrator IT (es. Reply, Accenture) per lo sviluppo di soluzioni web e system integration.
+
+Indice di Difficoltà: 74 / 100 *(Richiede un salto di qualità nella gestione della concorrenza, della programmazione di rete a basso livello e nella padronanza simultanea di più piattaforme tecnologiche tra Java, PHP e framework moderni).*
+
+---
+
+**Technologies for Advanced Programming** 
+
+**Programma Riassunto:** ![[Pasted image 20260725172058.png]]
+    
+
+**Obiettivi Chiave**:Progettare e realizzare un'architettura di pipeline di dati end-to-end distribuita, scalabile e resiliente. Padroneggiare la containerizzazione con Docker per garantire l'isolamento e la riproducibilità degli ambienti di esecuzione. Applicare i principi del paradigma Event-Driven e la gestione di flussi di dati in tempo reale con Apache Kafka. Integrare pratiche DevOps automatizzate (CI/CD) per la fase di testing, build e deployment continuo del software.
+
+**Modalità d'Esame**:![[Pasted image 20260725172155.png]]
+
+**Esempio Pratico di Attività**:Realizzare ed orchestrare (con Docker Compose) una pipeline in tempo reale che cattura eventi da una sorgente esterna (es. API di social media, dati finanziari o meteo), li invia a un cluster Apache Kafka, li elabora con Spark Streaming per ricavare metriche o aggregazioni live, salva i risultati su Elasticsearch e ne mostra l'andamento in tempo reale su una dashboard Kibana, il tutto coperto da test automatizzati via GitHub Actions.
+
+**Opinione Personale (Peso Pratico & Concettuale)**:È uno dei corsi più moderni, orientati al mercato del lavoro e pratici dell'intero percorso di studi. Lascia ampio spazio all'ingegnerizzazione del software e alla comprensione del ciclo di vita dei dati. Sviluppare il progetto finale richiede impegno e pazienza nel far comunicare correttamente più tecnologie eterogenee dentro container separati, ma fornisce un bagaglio di competenze in ambito Data Engineering e DevOps immediatamente spendibile nei colloqui tecnici.
+
+**Sbocchi Professionali in Italia:** Data Engineer: Progettista e sviluppatore di infrastrutture per la gestione, l'elaborazione e il flusso di grandi volumi di dati. DevOps / Cloud Engineer: Specialista nella gestione di container, orchestrazione e automazione di pipeline CI/CD in ambienti cloud. Backend & Distributed Systems Engineer: Sviluppatore di architetture a microservizi reattive ed event-driven. IT Tech Consultant: Inserimento in grandi società di consulenza tecnologica (es. Accenture, Reply, Deloitte) per la modernizzazione delle architetture enterprise.
+
+Indice di Difficoltà: 75 / 100 *(Richiede ottime doti pratiche di configurazione e debugging sistemico per far interagire correttamente molteplici tecnologie distribuite all'interno di container Docker).*
+
+---
+
+#### Materie Opzionali A6
+Mobile Programming Insegnamento: 
+**Programma Riassunto**: 
+![[Pasted image 20260725172410.png|523]]
+![[Pasted image 20260725172429.png|526]]
+
+**Obiettivi Chiave**:Comprendere l'architettura dei sistemi operativi mobile e governare il ciclo di vita dei componenti software. Progettare interfacce utente fluide, reattive e conformi ai principi del Material Design e della User Experience mobile. Sviluppare la persistenza dei dati in locale e sincronizzare le informazioni con servizi backend e API REST in modalità asincrona. Accedere alle funzionalità hardware native del dispositivo (GPS, sensori, fotocamera) e gestire notifiche e permessi.
+
+**Modalità d'Esame**:![[Pasted image 20260725172514.png]]
+
+**Esempio Pratico di Attività**:Progettare e sviluppare un'applicazione Android nativa in Kotlin seguendo l'architettura MVVM, che permetta di visualizzare punti di interesse su una mappa interattiva (Google Maps API), scaricare dati dinamici via API REST (Retrofit), salvarli in un database locale (Room) per la consultazione offline e inviare notifiche quando ci si trova nelle vicinanze di un luogo salvato.
+
+**Opinione Personale (Peso Pratico & Concettuale)**:È uno dei corsi più concreti e appaganti del percorso, dato che permette di toccare con mano il risultato del proprio codice direttamente sullo schermo dello smartphone. Richiede però ordine nell'adottare pattern architetturali puliti (es. MVVM/Clean Architecture) e particolare attenzione alla gestione delle risorse (memoria, batteria, connettività di rete) per evitare memory leak o blocchi dell'interfaccia.
+
+**Sbocchi Professionali in Italia**:Android / Mobile Software Engineer: Sviluppatore specializzato nell'ingegnerizzazione e creazione di applicazioni native per il mercato mobile. Frontend / App Developer: Programmatore focalizzato sull'integrazione di servizi backend, API e progettazione di UI mobile. Mobile Application Architect: Designer di architetture software per ecosistemi mobile enterprise e integrazioni di sistemi. Consulting & Software House Specialist: Inserimento in agenzie digitali e società di consulenza IT (es. Reply, Accenture, Deloitte) per lo sviluppo di soluzioni B2C e B2B.
+
+Indice di Difficoltà: 68 / 100 *(Molto accessibile se si hanno buone basi di programmazione ad oggetti, ma richiede attenzione nel comprendere il ciclo di vita dei componenti e la gestione dei task asincroni).*
+
+---
+
