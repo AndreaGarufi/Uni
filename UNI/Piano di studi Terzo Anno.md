@@ -276,3 +276,167 @@ Artificial Intelligence and Robotics, Data Science, Programming Web, Mobile and 
 ---
 
 ### CURRICULUM: Data Science
+#### 1. Materie d'Indirizzo (Obbligatorie)
+
+##### **Introduzione al Data Mining**
+
+- **Insegnamento:** Obbligatorio d'indirizzo
+    
+- **Settore Scientifico-Disciplinare:** INF/01
+    
+- **Programma Riassunto:**
+    
+![[Pasted image 20260725111347.png|584]]
+        
+- **Obiettivi Chiave:**
+    
+    - Preparazione dei dati grezzi all'estrazione di conoscenza.
+        
+    - Saper scegliere, implementare e tarare l'algoritmo giusto (supervisionato o non supervisionato) in base al tipo di problema e di dataset.
+        
+    - Pulire e trasformare i dati per renderli idonei all'analisi statistica e al Machine Learning.
+        
+    - Valutare rigorosamente le prestazioni dei modelli ed evitare problemi di overfitting.
+        
+- **Modalità d'Esame:**
+    
+   ![[Pasted image 20260725111503.png|507]]
+        
+- **Esempio Pratico di Attività:**
+    
+    - Prendere un dataset di e-commerce o bancario (es. prevenzione dell'abbandono dei clienti / _churn prediction_): pulire i dati mancanti e bilanciare il dataset, applicare il **K-Means** per segmentare la clientela in gruppi comportamentali, e addestrare un **Albero di Decisione** o un classificatore **Random Forest** per predire quali clienti rischiano di cancellare l'abbonamento.
+        
+- **Opinione Personale (Peso Pratico & Concettuale):**
+    
+    - È la **pietra angolare e la materia simbolo** di tutto il curriculum di Data Science. A differenza di corsi più focalizzati su modelli complessi o AI generativa, qui ci si sporca davvero le mani con i dati tabellari e con la fase di _data cleaning_ e _feature engineering_ (che nella realtà lavorativa occupa l'80% del tempo di un Data Scientist). Fondamentale per costruire un approccio solido e pragmatico.
+        
+- **Sbocchi Professionali in Italia:**
+    
+    - **Junior Data Scientist:** Modellazione e sviluppo di algoritmi predittivi per settori e-commerce, bancario, assicurativo e industriale.
+        
+    - **Data Analyst:** Analisi esplorativa dei dati e generazione di insight aziendali per guidare decisioni di business.
+        
+    - **Business Intelligence & Analytics Consultant:** Inserimento in grandi società di consulenza tech (es. Deloitte, PwC, Reply, Accenture) per la trasformazione data-driven delle aziende.
+        
+- **Indice di Difficoltà:** **74 / 100** _(Materia altamente applicativa; richiede una buona padronanza di Python, abilità di ragionamento analitico e comprensione di metriche statistiche/probabilistiche)._
+
+---
+
+**Data Analysis and Predictive Techniques and Laboratory NON TROVATA** 
+
+---
+
+#### 2. Materie Opzionali (Gruppo A5)
+
+##### **Startup di Impresa e Modelli di Business**
+
+- **Insegnamento:** Opzionale (Gruppo A5)
+    
+- **Settore Scientifico-Disciplinare:** SECS-P/08 (o ambito gestionale/aziendale)
+    
+- **Programma Riassunto:**
+    
+Negli ultimi anni, l’interesse per le startup ha registrato una crescita significativa, alimentata dall’accelerazione dei processi di digitalizzazione, dalla diffusione di tecnologie emergenti e dalla progressiva centralità dell’innovazione nei sistemi economici contemporanei. In tale contesto, la creazione di una nuova impresa è sempre più percepita non solo come opzione professionale, ma anche come possibile percorso di valorizzazione delle competenze tecniche e progettuali, soprattutto da parte di studenti e laureati in ambito ingegneristico e informatico.
+
+Sebbene l’imprenditorialità costituisca da tempo un tema consolidato nella letteratura economico-aziendale, l’enfasi crescente sul fenomeno startup rischia talvolta di generare una rappresentazione semplificata del processo imprenditoriale. In particolare, l’attenzione mediatica verso i casi di successo può alimentare una visione riduttiva della startup come veicolo rapido di affermazione economica o sociale, trascurandone invece la complessità gestionale, l’elevato grado di incertezza e le condizioni necessarie alla sua effettiva sostenibilità.
+
+La nascita di una startup rappresenta, infatti, un processo articolato, sperimentale e intrinsecamente fragile, che richiede non soltanto intuizione, creatività ed energia, ma anche metodo, competenze multidisciplinari e capacità di analisi. L’obiettivo è comprendere che il valore di una nuova iniziativa imprenditoriale non risiede esclusivamente nella qualità tecnica della soluzione proposta, ma nella sua capacità di rispondere a un bisogno reale, di generare valore per gli utenti e di tradursi in un modello di business sostenibile, scalabile e verificabile nel tempo. In questa prospettiva, il rischio della cosiddetta _death valley_ evidenzia come molte iniziative, pur tecnologicamente promettenti, non riescano a consolidarsi per carenze di validazione, organizzazione, posizionamento strategico o sostenibilità economico-finanziaria.
+
+Il corso è articolato in tre nuclei tematici principali. La prima parte è dedicata alla figura dell’imprenditore e analizza il ruolo delle caratteristiche individuali, delle motivazioni, delle competenze e delle capacità decisionali che incidono sull’avvio di un nuovo progetto imprenditoriale. In questa sezione, particolare rilievo sarà dato anche alla dimensione del team, alla complementarità delle competenze e al contributo che profili tecnico-ingegneristici possono offrire nella generazione di soluzioni innovative.
+
+La seconda parte affronta il concetto di startup nelle sue diverse configurazioni, approfondendone le specificità rispetto ad altre forme d’impresa, incluse le PMI innovative. Saranno esaminati i principali aspetti relativi alla costituzione della startup, al suo ciclo di vita, agli attori dell’ecosistema dell’innovazione e alle criticità che caratterizzano le prime fasi di sviluppo. In tale ambito, il confronto con testimonianze ed esperienze applicative consentirà agli studenti di comprendere più concretamente le sfide connesse alla trasformazione di un’idea tecnologica in un’iniziativa imprenditoriale strutturata.
+
+La terza parte del corso, infine, è dedicata alla costruzione del Business Plan, inteso non come adempimento formale, ma come strumento di sintesi strategica, organizzativa ed economico-finanziaria del progetto imprenditoriale. Attraverso l’analisi delle sue componenti fondamentali e lo svolgimento di esercitazioni applicative, gli studenti saranno guidati nella traduzione di un’idea innovativa in una proposta imprenditoriale coerente, argomentata e sostenibile
+
+
+- **Obiettivi Chiave:**
+    
+    - Imparare a validare un'idea tecnologica sul mercato prima di spendere mesi a programmarla.
+        
+    - Saper analizzare la sostenibilità economica di un progetto software tramite il Business Model Canvas.
+        
+    - Padroneggiare le tecniche di comunicazione e presentazione (_pitching_) per vendere un'idea a clienti o investitori.
+        
+    - Comprendere il linguaggio economico e gestionale indispensabile per dialogare con manager e stakeholder.
+        
+- **Modalità d'Esame:**
+    
+    ![[Pasted image 20260725111948.png]]
+        
+- **Esempio Pratico di Attività:**
+    
+    - Ideare una piattaforma SaaS di Data Analytics per piccoli e-commerce: identificare la proposta di valore nel **Value Proposition Canvas**, definire la strategia di prezzo (es. abbonamento mensile a scaglioni), identificare le metriche per l'**MVP** e presentare un **pitch visivo di 5 minuti** per convincere una giuria o una commissione a "investire" nel progetto.
+        
+- **Opinione Personale (Peso Pratico & Concettuale):**
+    
+    - È un esame **estremamente rinfrescante e strategico**, ideale per spezzare il carico di materie fortemente algoritmiche o matematiche. Insegna la lezione fondamentale che ogni informatico dovrebbe apprendere: _"scrivere del codice perfetto è inutile se l'applicazione non risolve un reale problema di mercato"_. Utilissimo se sogni di fondare una tua azienda o se vuoi ricoprire ruoli a metà tra tecnologia e gestione del prodotto.
+        
+- **Sbocchi Professionali in Italia:**
+    
+    - **IT Startup Founder / Tech Entrepreneur:** Creazione di una propria startup software o spin-off universitario.
+        
+    - **Technical Product Manager / Product Owner:** Gestione del ciclo di vita dei prodotti software allineando i requisiti tecnici agli obiettivi di business.
+        
+    - **Innovation Consultant / Analyst:** Ruolo in acceleratori d'impresa, incubatori o nelle divisioni di "Digital Innovation" delle grandi società di consulenza.
+        
+- **Indice di Difficoltà:** **55 / 100** _(Un esame leggero dal punto di vista matematico e di codice; la difficoltà risiede nel cambio di mentalità, nell'analisi critica del valore di business e nella capacità di esposizione in pubblico)._
+
+---
+
+##### **Programmazione Parallela su Architetture GPU**
+
+- **Insegnamento:** Opzionale
+    
+- **Settore Scientifico-Disciplinare:** INF/01
+    
+- **Programma Riassunto:**
+    
+	- breve storia delle schede grafiche e nascita del GPGPU
+	- fondamenti di GPGPU; introduzione a CUDA ed OpenCL
+	- programmi imbarazzentemente paralleli in CUDA ed OpenCL
+	- benchmarking, ottimizzazione e debugging
+	- primitive parallele per riduzioni e scan; implementazione OpenCL e/o CUDA
+	- cenni su multi-GPU
+        
+- **Obiettivi Chiave:**
+    
+    - Comprendere l'architettura interna delle GPU e il paradigma di calcolo parallelo GPGPU (General-Purpose Computing on GPUs).
+        
+    - Saper progettare e implementare kernel parallelizzati ad altissime prestazioni in linguaggio C/C++ tramite framework come NVIDIA **CUDA**.
+        
+    - Individuare e risolvere i colli di bottiglia legati all'accesso in memoria e al trasferimento dati CPU-GPU.
+        
+    - Accelerare computazioni scientifiche, algoritmi su matrici e pipeline di elaborazione dati.
+        
+- **Modalità d'Esame:**
+    
+	    Sono ammesse due modalità per l'esame di fine corso:
+	
+	- esame di laboratorio: viene assegnato un problema, da affrontare scrivendo un programma per il calcolo parallelo; durata: 3 ore;
+	- progettino finale, da concordare con il docente, e da sviluppare in maniera individuale o al piú in coppia; il progetto va consegnato entro 3 mesi, insieme ad una relazione ed una presentazione orale;
+	- la consegna della relazione del progettino e la presentazione potranno anche essere effettuati per via telematica.
+        
+- **Esempio Pratico di Attività:**
+    
+    - Implementare un **kernel CUDA per la moltiplicazione di grandi matrici** sfruttando la **shared memory** in blocchi (_tiling_) per minimizzare i tempi di lettura dalla memoria globale, dimostrando che l'esecuzione passa da diversi minuti su CPU a pochi millisecondi su GPU per matrici di dimensioni $4000 \times 4000$.
+        
+- **Opinione Personale (Peso Pratico & Concettuale):**
+    
+    - È un esame **ad altissimo valore tecnico e strategico**, specialmente per chi sceglie il percorso _Data Science_ o _AI_. Oggi l'addestramento e l'inferenza di qualsiasi modello di Machine Learning/Deep Learning avvengono su GPU. Capire cosa succede "sotto il cofano" a livello di memoria e concorrenza hardware ti trasforma da semplice utilizzatore di librerie ad alto livello a un ingegnere software capace di ottimizzare davvero le prestazioni dei sistemi.
+        
+- **Sbocchi Professionali in Italia:**
+    
+    - **HPC (High Performance Computing) Engineer:** Specialista nell'ottimizzazione di algoritmi per supercomputer, simulazioni fisiche e finanza quantitativa.
+        
+    - **GPU / CUDA Software Developer:** Sviluppatore di librerie ad alte prestazioni per grafica 3D, motori di rendering o sistemi di percezione visiva.
+        
+    - **AI Hardware & Performance Optimization Specialist:** Ingegnere focalizzato sull'accelerazione hardware dei modelli di Deep Learning presso centri R&D e grandi aziende tech (es. STMicroelectronics, realtà di consulenza avanzata o centri di ricerca).
+        
+- **Indice di Difficoltà:** **84 / 100** _(Richiede solide competenze di programmazione C/C++, familiarità con i puntatori e una notevole capacità di astrazione per gestire la concorrenza di migliaia di thread in parallelo)._
+
+---
+
+**CALCOLO NUMERICO SO GIA CHE NON MI INTERESSA**
+
+---
+
