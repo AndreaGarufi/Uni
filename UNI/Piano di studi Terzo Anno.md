@@ -525,3 +525,59 @@ Indice di Difficoltà: 68 / 100 *(Molto accessibile se si hanno buone basi di pr
 
 ---
 
+**Web Programming** 
+**Programma Riassunto**:
+![[Pasted image 20260727120846.png|426]]
+![[Pasted image 20260727120934.png|426]]
+![[Pasted image 20260727120957.png|421]]
+
+
+**Obiettivi Chiave**:Comprendere l'architettura Client-Server e le dinamiche di comunicazione del protocollo HTTP. Progettare e sviluppare interfacce web responsive, usabili e dinamiche con HTML5, CSS3 e JavaScript. Realizzare applicazioni backend con gestione della persistenza dei dati, routing e autenticazione utenti. Identificare le principali minacce alla sicurezza delle applicazioni web e applicare le opportune contromisure.
+
+**Modalità d'Esame**:![[Pasted image 20260727121041.png]]
+
+**Esempio Pratico di Attività**:Sviluppare un'applicazione web completa per la prenotazione di eventi o e-commerce: interfaccia frontend responsive in HTML/CSS/JS che invia richieste asincrone (Fetch API), backend in Node.js/Express o PHP per la gestione della logica di business e delle sessioni, e database MySQL/MongoDB per memorizzare catalogo, utenti e transazioni in sicurezza.
+
+**Opinione Personale (Peso Pratico & Concettuale)**:È la materia di riferimento per chiunque desideri muovere i primi passi concreti nello sviluppo software applicativo per il web. Permette di acquisire una visione a tutto tondo del ciclo di vita di un'applicazione full-stack. Essendo un corso estremamente pratico, offre grande soddisfazione immediata nel vedere le proprie idee prendere forma nel browser, fornendo le fondamenta necessarie prima di approcciare framework più complessi.
+
+**Sbocchi Professionali in Italia**:Frontend Web Developer: Sviluppatore focalizzato sulle interfacce utente, responsive design e logica client-side. Full-Stack Web Developer: Figura versatile in grado di gestire sia il frontend che il backend e i database delle applicazioni web. Backend Developer (Junior): Specialista nello sviluppo di API, integrazione di database e logica di business server-side. Web Application Specialist: Inserimento presso software house, agenzie di comunicazione digitale e società di consulenza IT.
+
+Indice di Difficoltà: 65 / 100 *(Molto intuitivo e gratificante nelle fasi iniziali, richiede ordine mentale quando occorre coordinare contemporaneamente client, server e database garantendo la sicurezza del sistema).*
+
+---
+
+**Sistemi Centrali** 
+**Programma Riassunto:** 
+    ![[Pasted image 20260727121438.png]]
+![[Pasted image 20260727121453.png]]
+![[Pasted image 20260727121505.png]]
+
+**Obiettivi Chiave:** Comprendere l'architettura hardware e software dei sistemi mainframe enterprise (IBM zSystems e z/OS). Scrivere ed eseguire script di controllo dei lavori in batch tramite JCL e gestire dataset tradizionali e VSAM. Sviluppare ed eseguire programmi in linguaggio COBOL integrati con database Db2 e gestori transazionali CICS. Acquisire dimestichezza con l'interfaccia a carattere TSO/ISPF e con i principi di sicurezza e virtualizzazione enterprise.
+
+**Modalità d'Esame:** ![[Pasted image 20260727121522.png]]
+
+**Esempio Pratico di Attività:** Creare ed eseguire tramite JCL su sistema IBM z/OS un job batch in COBOL che legge dati da un file VSAM, esegue query SQL embedded su Db2 per aggiornare saldi bancari o inventari, gestisce le transazioni tramite CICS e genera un report di output strutturato.
+
+**Opinione Personale (Peso Pratico & Concettuale):** È una materia unica nel suo genere, fortemente indirizzata verso le infrastrutture ad alte prestazioni utilizzate da banche, assicurazioni e grandi istituzioni. Sebbene richieda di adattarsi a un paradigma di interazione diverso da quello moderno (interfacce a carattere TSO, sintassi rigida del JCL e COBOL), offre un vantaggio competitivo enorme sul mercato lavorativo, data la fortissima richiesta di figure specializzate su tecnologia IBM Mainframe di difficile reperimento.
+
+**Sbocchi Professionali in Italia:** Mainframe System Specialist / z/OS Systems Programmer: Gestione, manutenzione e ottimizzazione di infrastrutture IBM zSystems presso grandi data center. Enterprise COBOL / CICS / Db2 Developer: Sviluppatore backend per applicazioni mission-critical in ambito bancario, assicurativo e PA. IT Infrastructure & Enterprise Services Analyst: Consulente tecnico specializzato nella migrazione, integrazione e gestione di sistemi centralizzati. Consulting & Financial Tech Specialist: Inserimento immediato presso grandi società di consulenza (es. Accenture, DXC, IBM, Reply) gestori di core banking e sistemi di pagamento.
+
+**Indice di Difficoltà:** 67 / 100 (I concetti teorici non sono insormontabili, ma la sintassi dei linguaggi legacy e l'ambiente di lavoro non convenzionale richiedono un periodo iniziale di adattamento).
+
+---
+
+**Cybersecurity**
+**Programma Riassunto:** 
+![[Pasted image 20260727121715.png]]
+
+**Obiettivi Chiave:** Comprendere i principi fondamentali della sicurezza informatica (il modello CIA: Riservatezza, Integrità, Disponibilità) e il funzionamento dei meccanismi crittografici. Analizzare e identificare le principali vulnerabilità nelle reti, nei sistemi operativi e nelle applicazioni web per prevenirne l'esploitation. Progettare e configurare architetture di rete sicure utilizzando protocolli crittografici e strumenti di difesa (TLS, Firewall, IDS). Eseguire analisi di sicurezza, audit e simulazioni di attacco/difesa secondo gli standard di settore.
+
+**Modalità d'Esame:** ![[Pasted image 20260727121739.png]]
+
+**Esempio Pratico di Attività:** Svolgere un'attività di Vulnerability Assessment e Penetration Testing in un ambiente virtuale isolato (utilizzando strumenti come Kali Linux, Wireshark, Nmap, Metasploit e Burp Suite) per individuare falle di sicurezza su un server web target (es. SQL Injection o cattiva configurazione TLS), redigere un Security Audit Report e applicare le opportune contromisure di hardening e filtering.
+
+**Opinione Personale (Peso Pratico & Concettuale):** È una materia fondamentale che cambia profondamente il modo di pensare di uno sviluppatore o di un amministratore di sistema. Insegna a non analizzare il software solo per ciò che _deve_ fare, ma per quello che _potrebbe_ fare se manipolato da un attaccante. Unisce la bellezza concettuale della crittografia ad aspetti estremamente pratici e dinamici. Padroneggiare le basi della Cybersecurity è una delle competenze più spendibili in assoluto nel panorama IT contemporaneo.
+
+**Sbocchi Professionali in Italia:** Cyber Security Analyst / Consultant: Gestione della sicurezza delle informazioni, monitoraggio delle minacce (SOC) e analisi dei rischi per aziende e PA. Ethical Hacker / Penetration Tester: Identificazione e verifica sul campo di vulnerabilità software, web e infrastrutturali per conto di terzi. Security Engineer / Architect: Progettazione e implementazione di infrastrutture di rete sicure, sistemi di autenticazione e meccanismi di protezione dati. SOC & Incident Response Specialist: Monitoraggio in tempo reale, analisi forense e risposta tempestiva agli attacchi e ai data breach.
+
+**Indice di Difficoltà:** 73 / 100 *(Richiede una preparazione trasversale che spazia dalle reti ai sistemi operativi, oltre alla capacità di combinare teorie crittografiche con tool di analisi e difesa).*

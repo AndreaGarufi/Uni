@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
 
     int file1 = open("meme.txt", O_RDONLY); // Apre il file in modalità lettura
     int file2 = open("meme1.txt", O_RDONLY); // Apre il file in modalità lettura
-
+    printf("\nfile 1 = %d, file 2 = %d\n",file1,file2);
     if(file1 == -1) exit_with_sys_err("Errore nel file1")
     if(file2 == -1) exit_with_sys_err("Errore nel file2")
 

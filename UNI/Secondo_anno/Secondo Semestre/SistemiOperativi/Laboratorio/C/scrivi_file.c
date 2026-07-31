@@ -11,7 +11,7 @@
  * > du --block-size=1 test.hole
  */
 
-#include "../FattiInAula/lib-misc.h"
+#include "lib-misc.h"
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -30,7 +30,7 @@ int main(void) {
 
     // scrive il primo blocco di 10 byte sul file (offset 0): notare che il
     // buffer avrà dimensione 11 byte poiché è inizializzato con una stringa C
-    // con il byte nullo finale
+    // con il byte nullo finale (carattere di terminazione)
     if (write(fd, buffer1, sizeof(buffer1) - 1) != 10)
         exit_with_sys_err("write");
     // adesso il file offset sarà a 10 (sizeof(buffer1) - 1)

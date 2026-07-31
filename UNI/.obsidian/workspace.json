@@ -4,24 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "bff61566e6e17b40",
+        "id": "e5d8976e7b285732",
         "type": "tabs",
         "children": [
           {
-            "id": "ad0fd561a6118dc3",
+            "id": "e46c10a560b26a19",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/SO-lab.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "SO-lab"
+            }
+          },
+          {
+            "id": "edb98d2e2fb99235",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Piano di studi Terzo Anno.md",
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Piano di studi Terzo Anno"
+              "title": "Laboratorio"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -41,10 +54,12 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Esplora risorse"
+              "title": "Esplora file"
             }
           },
           {
@@ -78,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 255.50584411621094
   },
   "right": {
     "id": "b0f0301d976babf0",
@@ -171,51 +186,53 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "switcher:Apri selettore rapido": false,
+      "daily-notes:Apri nota giornaliera": false,
       "bases:Crea nuova Base": false,
-      "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
       "canvas:Crea nuova lavagna": false,
-      "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
       "command-palette:Apri riquadro comandi": false,
       "obsidian-git:Open Git source control": false,
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "ad0fd561a6118dc3",
+  "active": "edb98d2e2fb99235",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260725172514.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260725172429.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260725172410.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260725172155.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260725172058.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260725171657.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260725171643.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260725171231.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260725111948.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260725111503.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260725111347.png",
-    "CAR SPOTTER.md",
-    "Piano di studi Terzo Anno.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/editorByteMinimale.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/bucoNelFile.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/permessiSuFile.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/contatoreByte.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/copiaFile.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/test.hole",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/test2.txt",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/test1.txt",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/hello.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/lib-misc.c",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
+    "Propedeuticità.md",
+    "Piano di studi Terzo Anno.md",
+    "Project ideas.md",
+    "Cose da fare.md",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121739.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121715.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121522.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121505.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121453.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121438.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121041.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727120957.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727120934.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727120846.png",
+    "CAR SPOTTER.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/1_LAB_30_aprile.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/apri_chiudi_stream.c",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/scrivi_file.c",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/seek.c",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/creazione_maschera_file.c",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/crea_chiudi_file.c",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/gestioneExit.c",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2026-05-20.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-09-12.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-07-02.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/compito_2025-01-31.pdf",
     "CAR SPOTTING DATABASE.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
     "Esercizio Collettore Ambientale di Thapsos I_O Multiplexing TCP.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
-    "Project ideas.md",
     "Esercizio Gateway di Telemetria Formula 1_TCP_UDP.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "Esercizio Collettore di Telemetria Satellitare_Socket UDP.md",
@@ -227,8 +244,6 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
     "Callouts.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/Senza nome 1.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/18_9_giugno.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/17_4_giugno.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/Giga(niga)bit ethernet.md"
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/18_9_giugno.md"
   ]
 }

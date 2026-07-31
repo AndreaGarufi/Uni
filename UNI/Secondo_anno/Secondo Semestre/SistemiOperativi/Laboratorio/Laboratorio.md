@@ -24,7 +24,7 @@ BUFSIZ \\definita in stdio.h e viene usata per i buffer interni alla libreria (c
 ```
 
 ###### Gestione degli errori
-Includendo l'header *errno.h* viene definita una variabile *errno* dove vengono inseriti i codici di errore
+Includendo l'header *errno.h* viene definita una variabile *errno* (error number) dove vengono inseriti i codici di errore
 - *strerror(errno)* passando errno questa ci ritorna delle stringhe in linguaggio umano, utili per debbuggare. 
 - *perror("Errore")* questa funzione scrive a schermo "Errore: " seguito dalla stringa dell'ultimo errore.
 ![[gestioneErrori.c]]
@@ -37,14 +37,13 @@ Includendo l'header *errno.h* viene definita una variabile *errno* dove vengono 
 ```
 #include "fcntl.h"
 ```
-- *open("path", int flag)*, apre il file specificato nel path, -1 nel caso di errore un int identificativo del file in caso di successo, di seguito i vari flag
+- *open("path", int flag)*, apre il file specificato nel path, -1 nel caso di errore, un int identificativo del file in caso di successo, di seguito i vari flag
   ![[Pasted image 20260608112024.png|700]]
 - *creat("path", mode_t mode)* crea il file nel path specifico con i permessi definiti in mode (man creat per vedere tutti i permessi disponibili)
 - *close(id)* chiude il file specificato da quel id 
 ![[crea_chiudi_file.c]]
 
-###### Permesssi sugli oggetti
-
+###### Permessi sugli oggetti
 - **Permessi sugli Oggetti del File-System UNIX**
     - Ogni oggetto ha tre tipi di permessi: lettura (R), scrittura (W) ed esecuzione (X).
     - Il tipo `mode_t` è un intero che codifica una maschera con i permessi divisi per utente proprietario (USR), gruppo proprietario (GRP) e tutti gli altri utenti (OTH).
@@ -58,7 +57,7 @@ Includendo l'header *errno.h* viene definita una variabile *errno* dove vengono 
     - Ogni processo possiede la propria maschera di creazione, che viene regolarmente ereditata dai processi figli.
     - In ambiente C si controlla tramite la funzione `mode_t umask(mode_t cmask);` inclusa nell'header `<sys/stat.h>`.
     - Anche la shell dispone di una propria maschera di creazione, modificabile direttamente con il comando `umask`.
-Nell'esempio del file C troveremo una maschera di qeusto tipo: 
+Nell'esempio del file C troveremo una maschera di questo tipo: 
 ```
 #define RWRWRW_MASK (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH)
 ```
@@ -412,3 +411,24 @@ La struttura di riferimento è *pthread_cond_t*
 - *pthread_cond_wait()*: se la condizione associata è false allora dobbiamo richiamare *pthread_cond_wait()*
 - *pthread_cond_{signal, broadcast}()*: risveglia uno (non si sa quale,  non possiamo fare affidamento che questa cosa accada in modo sequenziale) o più thread bloccati
 Dopo che un thread viene risvegliato deve necessariamente ricontrollare la condizione tramite la *...wait*. 
+
+###### Barriere
+La struttura di riferimento è _pthread_barrier_t_
+
+```c
+int pthread_barrier_init(pthread_barrier_t *barrier,
+    const pthread_barrierattr_t *attr, unsigned int count);
+int pthread_barrier_destroy(pthread_barrier_t *barrier);
+int pthread_barrier_wait(pthread_barrier_t *barrier);
+```
+
+- _pthread_barrier_init_ crea una barriera pensata per _count_ thread (_attr_ per ora sempre NULL)
+- _pthread_barrier_destroy_ distrugge la barriera
+- _pthread_barrier_wait_ blocca il thread chiamante finché non arrivano alla barriera tutti i _count_ thread previsti; solo quando l'ultimo thread atteso chiama questa funzione, tutti vengono sbloccati insieme
+    - ritorna 0 per tutti i thread tranne uno, che riceve _PTHREAD_BARRIER_SERIAL_THREAD_ (-1): questo thread "speciale" può essere usato per eseguire un'operazione di coordinamento tra una fase e l'altra (es. stampare un risultato intermedio)
+    - ritorna un codice d'errore (>0) in caso di problemi
+La barriera è **riutilizzabile**: una volta sbloccata tutti i thread, può essere riusata per una nuova fase, mantenendo sempre lo stesso numero di thread attesi (_count_).
+
+Le barriere sono utili quando serve dividere un algoritmo in **fasi** e assicurarsi che nessun thread passi alla fase successiva finché tutti gli altri non hanno completato quella corrente (es. algoritmi di ordinamento paralleli).
+
+![[thread-barrier.c]] ![[thread-sort-with-barrier.c]]
