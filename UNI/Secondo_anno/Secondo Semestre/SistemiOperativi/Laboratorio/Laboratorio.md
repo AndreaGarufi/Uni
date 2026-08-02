@@ -133,14 +133,14 @@ dup2(FileId, STDOUT_FILENO); // l'id di stdout diventa quello del file
 printf("\n Sto scrivendo nel file usando printf \n"); // scrivo sul file
 fflush(stdout); // forzo la scrittura reale nel file 
 dup2(standardOutput, STDOUT_FILENO); // resetto stdout con il riferimento salvato
-printf("\n Sto scrivendo nella console \n"); //scrivo nella consoel
+printf("\n Sto scrivendo nella console \n"); //scrivo nella console
 ```
 
-Il Sistema Operativo usa la RAM libera come cache del disco, anche in scrittura questo ritarda le scritture per ragioni di efficienza (in genere per massimo 30 s) questo può creare problemi indesiderati è sempre possibile forzare il sistem operativo tramite *0_SYNC* in fase di apertura di una file o anche attraverso le seguenti chiamate di sistema:
+Il Sistema Operativo usa la RAM libera come cache del disco, anche in scrittura questo ritarda le scritture per ragioni di efficienza (in genere per massimo 30 s) questo può creare problemi indesiderati è sempre possibile forzare il sistema operativo tramite *0_SYNC* in fase di apertura di un file o anche attraverso le seguenti chiamate di sistema:
 - *int fsync(int fd);* 
 - *void sync(void);*
 
-![[Pasted image 20260608194514.png|500]]
+![[Pasted image 20260608194514.png|651]]
 ![[redirect.c]]
 ### Stream
 ###### Apri e chiudi stream
