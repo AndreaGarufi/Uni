@@ -2,7 +2,7 @@
 #include "stdlib.h"
 #include "fcntl.h"
 #include "unistd.h"
-#include "../FattiInAula/lib-misc.h"
+#include "lib-misc.h"
 int main(){
 
     int fileId = open("test1.txt", O_RDONLY);

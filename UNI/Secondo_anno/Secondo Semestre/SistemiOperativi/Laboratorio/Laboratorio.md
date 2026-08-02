@@ -180,7 +180,7 @@ I comandi sotto fanno lo stesso ma si basano su uno specifico pattern (*format*)
 ![[my-cat.c]]
 
 ![[Pasted image 20260610155839.png]]
-leggono e scrivono nobj record dentro il file ciasuno di *size byte*, ritornano entrambi il numero di record effettivamente trasferiti
+leggono e scrivono *nobj* record dentro il file ciascuno di *size byte*, ritornano entrambi il numero di record effettivamente trasferiti
 
 Queste funzioni sono simili tra di loro solo che in alcune situazioni una è migliore dell'altra
 ![[Pasted image 20260610160035.png|700]]
@@ -301,9 +301,10 @@ questa funzione ritorna *MAP_FAILED* in caso di errore l'indirizzo di mappatura 
 - *int msync(void \*addr, size_t len, int flag);* : forza il sistema operativo a scrivere su disco eventuali modifiche in sospeso, i flag che possiamo usare specificano solo il tipo di richiesta che possiamo fare:
 	- *MS_ASYNC*: richiesta asincrona
 	- *MS_SYNC*: richiesta sincrona (bloccante)
-- *int munmap(void \*addr, size_t len);* annulla la mappatura del file salvando le evntuali modifiche in caso di mappatura condivisa (effetti comunque applicati alla terminazione del processo)
-### Gestione dei processi
+- *int munmap(void \*addr, size_t len);* annulla la mappatura del file salvando le eventuali modifiche in caso di mappatura condivisa (effetti comunque applicati alla terminazione del processo)
 
+
+### Gestione dei processi
 ###### FORK
 - *pid_t getpid(void);* ritorna il pid del processo
 - *pid_t getppid(void);* ritorna il pid del processo padre
@@ -312,11 +313,11 @@ questa funzione ritorna *MAP_FAILED* in caso di errore l'indirizzo di mappatura 
 	- il PID del processo figlio
 	- oppure 0 nel figlio
 
-incotriamo *snprintf()* la usiamo principalmente per scrivere una stringa formattata dentro un buffer in modo sicuro, evitando overflow.
+incontriamo *snprintf()* la usiamo principalmente per scrivere una stringa formattata dentro un buffer in modo sicuro, evitando overflow.
 
 Il processo padre condivide con i propri figli *la tabella globale dei file* e quindi i *flag di apertura* e  i *file di offset*, questo può essere utile quando più figli devono accedere allo stesso file.
 - *pid_t wait(int statloc);*  il processo che lo avvia si mette in attesa del primo figlio che finisce
-- *pid_t waitpid(pid_t pid, int statloc, int options);* il processo che lo avvia si mette in attesa che il figli con il pid specificato finisca,  se specifichiamo un puntatore per statloc trovermo qui il codice di terminazione del figlio, options non lo usiamo (sempre 0)
+- *pid_t waitpid(pid_t pid, int statloc, int options);* il processo che lo avvia si mette in attesa che il figlio con il pid specificato finisca,  se specifichiamo un puntatore per statloc troveremo qui il codice di terminazione del figlio, options non lo usiamo (sempre 0)
 Entrambe le funzioni ritornatno -1 in caso di errore, il PID del figlio che ha terminato altrimenti
 
 ###### Esecuzione programmi esterni
@@ -336,7 +337,7 @@ Entrambe le funzioni ritornatno -1 in caso di errore, il PID del figlio che ha t
 - A differenza di `exec*()`, `system()` ritorna al programma chiamante dopo l’esecuzione del comando.
 
 ###### Invio di segnali ai processi
-- *int kill(pid_t pid, int signo);* invia al processo specificato il segnale singno (non solo il kill)
+- *int kill(pid_t pid, int signo);* invia al processo specificato il segnale signo (non solo il kill)
 - *int raise(int signo);* invia il segnale al processo chiamante stesso
 
 ci sono diverse costanti signo definite in signal.h
@@ -353,17 +354,18 @@ gcc -l pthread -o eseguibile sorgente.c
 ```
 
 ![[Pasted image 20260610174445.png|700]]
-questa funzioene crea un nuovo thread che eseguirà la funzione *thread_func* con argomento *thread_arg*.
+questa funzione crea un nuovo thread che eseguirà la funzione *thread_func* con argomento *thread_arg*.
 - il prototipo di thread_func deve essere di questo tipo: *void funzione(void *argomento) { / corpo funz. / }*
 - l'identificativo del thread è conservato dentro *tidp*
 - *attr* per adesso NULL (vedremo successivamente)
-ritorna il threadId
+ritorna il thread
 ###### Coordinamento
 ![[Pasted image 20260610174950.png]]
-- *pthread_exit()* termina il thread chiamante, il valore di ritorno del thread verra salvato in *rval_ptr* se un puntatote è fornito
-- *pthread_join()* attende la terminzaione di uno specifico thread, diventa importante conservare il *thread id*, ritorna:
+- *pthread_exit()* termina il thread chiamante, il valore di ritorno del thread verrà salvato in *rval_ptr* se un puntatore è fornito
+- *pthread_join()* attende la terminazione di uno specifico thread, diventa importante conservare il *thread id*, ritorna:
 	- 0 in caso di successo
 	- il codice d'errore >0 altrimenti
+- *pthread_detach()* termina il thread chiamante liberandone la memoria allocata in automatico
 
 ###### Condivisione dei dati
 Tutti i thread di uno stesso processo condividono, in linea di principio, quasi tutto lo spazio di memoria del processo. Bisogna però rispettare lo **scope** delle variabili imposto dal linguaggio C.
