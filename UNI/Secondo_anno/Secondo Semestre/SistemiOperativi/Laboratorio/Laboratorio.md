@@ -313,6 +313,9 @@ questa funzione ritorna *MAP_FAILED* in caso di errore l'indirizzo di mappatura 
 	- il PID del processo figlio
 	- oppure 0 nel figlio
 
+![[forkWait.c]]
+![[forkComando.c]]
+
 incontriamo *snprintf()* la usiamo principalmente per scrivere una stringa formattata dentro un buffer in modo sicuro, evitando overflow.
 
 Il processo padre condivide con i propri figli *la tabella globale dei file* e quindi i *flag di apertura* e  i *file di offset*, questo può essere utile quando più figli devono accedere allo stesso file.
@@ -366,6 +369,7 @@ ritorna il thread
 	- 0 in caso di successo
 	- il codice d'errore >0 altrimenti
 - *pthread_detach()* termina il thread chiamante liberandone la memoria allocata in automatico
+![[raceCondition.c]]
 
 ###### Condivisione dei dati
 Tutti i thread di uno stesso processo condividono, in linea di principio, quasi tutto lo spazio di memoria del processo. Bisogna però rispettare lo **scope** delle variabili imposto dal linguaggio C.
@@ -386,6 +390,7 @@ La struttura *pthread_mutex_t* va usata da tutti i thread come riferimento al lo
 - *pthread_mutex_lock* e *pthread_mutex_unlock*: acquisiscono e rilascino il lock
 - *pthread_mutex_trylock*: prova il lock e ritorna subito con *EBUSY* se non riesce
 in thread-conc-problem-fixed-with-mutex.c il problema citato prima si è sistemato, il valore finale è quello che ci aspettiamo.
+![[mutex.c]]
 
 ###### Semafori numerici
 ![[Pasted image 20260610183406.png|700]]
