@@ -402,6 +402,7 @@ La struttura dati di riferimento è *sem_t*
 - *sem_post* incrementa il semaforo
 
 I semafori ci permettono di controllare quante entità possono accedere contemporaneamente a una risorsa.
+![[semafori.c]]
 
 ###### Lock per lettori/scrittori
 ![[Pasted image 20260610184753.png|700]]
