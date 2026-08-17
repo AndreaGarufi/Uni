@@ -20,6 +20,18 @@
               "icon": "lucide-file",
               "title": "Laboratorio"
             }
+          },
+          {
+            "id": "9371ad415346cfd0",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/SO-lab.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "SO-lab"
+            }
           }
         ]
       }
@@ -186,6 +198,9 @@
   },
   "active": "e46c10a560b26a19",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/variabiliCondizione.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/SO-lab.pdf",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
     "Solar Panel.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/panel-3.txt",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/panel-1.txt",
@@ -195,9 +210,7 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/s",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/a.out",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/PilaProduttoreConsumatore.c",
     "!raceCondition.c.md",
     "Propedeuticità.md",
     "Piano di studi Terzo Anno.md",

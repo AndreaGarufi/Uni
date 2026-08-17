@@ -411,7 +411,7 @@ La struttura di riferimento è *pthread_rwlock_t*
 - *pthread_rwlock_\[try]{rd|wr}lock* acquisiscono il lock condiviso o esclusivo
 - *pthread_rwlock_unlock* rilascia il lock precedentemente acquisito 
 
-###### Monitor
+###### Variabili condizione
 ![[Pasted image 20260611172515.png|700]]
 La struttura di riferimento è *pthread_cond_t*
 - *pthread_cond_init()* passiamo la condizione da far rispettare tramite il monitor - *attr* non lo usiamo
@@ -419,6 +419,8 @@ La struttura di riferimento è *pthread_cond_t*
 - *pthread_cond_wait()*: se la condizione associata è false allora dobbiamo richiamare *pthread_cond_wait()*
 - *pthread_cond_{signal, broadcast}()*: risveglia uno (non si sa quale,  non possiamo fare affidamento che questa cosa accada in modo sequenziale) o più thread bloccati
 Dopo che un thread viene risvegliato deve necessariamente ricontrollare la condizione tramite la *...wait*. 
+Più thread possono aspettare sulla stessa `cond` — ma **devono usare sempre lo stesso mutex**
+![[VariabiliCondizione.c]]
 
 ###### Barriere
 La struttura di riferimento è _pthread_barrier_t_
