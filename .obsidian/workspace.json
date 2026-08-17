@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1b80847a1b86fa9d",
+        "id": "d94e32d98931ac6d",
         "type": "tabs",
         "children": [
           {
-            "id": "c0dff434d33db3c3",
+            "id": "d1c87d9b2693929a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/SISTEMI-COMPLETO.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "SISTEMI-COMPLETO"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -39,10 +37,12 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Esplora risorse"
+              "title": "Esplora file"
             }
           },
           {
@@ -156,18 +156,19 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
+      "switcher:Apri selettore rapido": false,
+      "daily-notes:Apri nota giornaliera": false,
       "bases:Crea nuova Base": false,
-      "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
       "canvas:Crea nuova lavagna": false,
-      "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
-      "command-palette:Apri riquadro comandi": false
+      "command-palette:Apri riquadro comandi": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c0dff434d33db3c3",
+  "active": "3216613356f858dc",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/SISTEMI-COMPLETO.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/slides_computer_networks_pub.pdf",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es9_Messagistica/client",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/C/EserciziSlides/Es9_Messagistica/server",
@@ -180,7 +181,6 @@
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260628104253.png",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Riassunto_Github.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/PDF_LEZIONI/SISTEMI-COMPLETO.pdf",
     "Senza nome.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260627152931.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
