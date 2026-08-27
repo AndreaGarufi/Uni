@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e5d8976e7b285732",
+        "id": "1afc5660c4681f9c",
         "type": "tabs",
         "children": [
           {
-            "id": "e46c10a560b26a19",
+            "id": "6e082bf4f828a0fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,18 +19,6 @@
               },
               "icon": "lucide-file",
               "title": "Laboratorio"
-            }
-          },
-          {
-            "id": "9371ad415346cfd0",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/SO-lab.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "SO-lab"
             }
           }
         ]
@@ -196,21 +184,22 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "e46c10a560b26a19",
+  "active": "6e082bf4f828a0fd",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/variabiliCondizione.c",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/fileBinari/numeri.bin",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/fileBinari/a.out",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/SO-lab.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/variabiliCondizione.c",
     "Solar Panel.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/panel-3.txt",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/panel-1.txt",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/panel-2.txt",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/Solar Panel.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/solar-panel-screener.c",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/s",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/a.out",
     "!raceCondition.c.md",
     "Propedeuticità.md",
     "Piano di studi Terzo Anno.md",
@@ -235,7 +224,6 @@
     "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "Esercizio Gateway di Telemetria Formula 1_TCP_UDP.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "Esercizio Collettore di Telemetria Satellitare_Socket UDP.md",
     "Esercizio_Server di Rifornimento Razzi Multi-Thread con Mutex.md",
     "Esercizio Il Server Indovina il Numero Multi-Thread.md",

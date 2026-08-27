@@ -291,7 +291,7 @@ PROT_WRITE  // posso scrivere nella memoria mappata
 PROT_EXEC   // posso eseguire codice da quella memoria
 PROT_NONE   // nessun accesso
 ```
-se lasciamo *addr* a *NULL* il sistema operativo trova un indrizzo idoneo
+se lasciamo *addr* a *NULL* il sistema operativo trova un indirizzo idoneo
 il campo *flag* serve a specificare **che tipo di mappatura vuoi creare**. I principali sono:
 - `MAP_SHARED`: le modifiche fatte in memoria vengono riflesse sul file e sono visibili anche ad altri processi che mappano lo stesso file.
 - `MAP_PRIVATE`: le modifiche restano private al processo; non vengono salvate nel file. Di solito usa il meccanismo copy-on-write.
@@ -302,6 +302,68 @@ questa funzione ritorna *MAP_FAILED* in caso di errore l'indirizzo di mappatura 
 	- *MS_ASYNC*: richiesta asincrona
 	- *MS_SYNC*: richiesta sincrona (bloccante)
 - *int munmap(void \*addr, size_t len);* annulla la mappatura del file salvando le eventuali modifiche in caso di mappatura condivisa (effetti comunque applicati alla terminazione del processo)
+
+
+
+
+----
+(scritto da gemini per maggiore chiarezza)
+
+void *mmap(void *addr, size_t length, int prot, int flags, int fd, off_t offset);
+
+**Analisi dei 6 argomenti**
+
+- **`addr`** (_Puntatore all'indirizzo di memoria desiderato_):
+    
+    - Nella quasi totalità dei casi si passa `NULL`. In questo modo il kernel sceglie automaticamente l'indirizzo migliore dove posizionare la mappatura.
+        
+- **`length`** (_Dimensione in byte_):
+    
+    - Indica quanti byte allocare/mappare in memoria. Deve essere un valore maggiore di `0` (generalmente si usa `st_size` ricavato con `fstat`).
+        
+- **`prot`** (_Protezione della memoria_):
+    
+    - Specifica i permessi di accesso alle pagine di memoria (combinabili tramite l'operatore bitwise OR `|`):
+        
+        - `PROT_READ`: Lettura consentita.
+            
+        - `PROT_WRITE`: Scrittura consentita.
+            
+        - `PROT_EXEC`: Esecuzione di codice consentita.
+            
+        - `PROT_NONE`: Nessun accesso consentito.
+            
+    - _Nota:_ I permessi devono essere compatibili con la modalità con cui è stato aperto il file in `open()` (es. non puoi richiedere `PROT_WRITE` se hai aperto con `O_RDONLY`).
+        
+- **`flags`** (_Comportamento e visibilità della mappatura_):
+    
+    - Deve contenere obbligatoriamente uno tra questi due flag:
+        
+        - `MAP_SHARED`: Le modifiche in memoria vengono scritte sul file fisico e sono visibili ad altri processi che mappano lo stesso file.
+            
+        - `MAP_PRIVATE`: Crea una mappatura _Copy-On-Write_. Le modifiche restano private e **non** vengono scritte sul file sottostante.
+            
+    - Altri flag comuni:
+        
+        - `MAP_ANONYMOUS` (o `MAP_ANON`): Alloca memoria pura non associata ad alcun file (`fd` viene ignorato e impostato a `-1`).
+            
+- **`fd`** (_File Descriptor_):
+    
+    - Il descrittore del file aperto ottenuto tramite `open()`.
+        
+- **`offset`** (_Punto di partenza nel file_):
+    
+    - Il byte da cui iniziare la mappatura all'interno del file.
+        
+    - **Regola ferrea:** Deve essere `0` oppure un multiplo esatto della dimensione della pagina di sistema (solitamente 4096 byte, verificabile con `sysconf(_SC_PAGE_SIZE)`).
+        
+
+**Valore di ritorno**
+
+- **Successo:** Restituisce un puntatore generico (`void *`) all'area di memoria mappata.
+    
+- **Fallimento:** Restituisce la costante `MAP_FAILED` (che corrisponde a `(void *) -1`) e imposta la variabile globale `errno`. Non restituisce `NULL` in caso di errore.
+---
 
 
 ### Gestione dei processi
