@@ -65,7 +65,9 @@ void *gestioneLettura(void *arg){
         exit(EXIT_FAILURE);
     }
 
-    
+    for(int i = 0; i < dimensioneFile.st_size; i++){
+        
+    }
 
 
 
