@@ -27,7 +27,7 @@ int main(){
         exit(EXIT_FAILURE);
     }
 
-    for(size_t i = 0; i < infoFile.st_size; i++){
+    for(int i = 0; i < infoFile.st_size; i++){
         printf("%d, ",datiFile[i]);
     }
 
