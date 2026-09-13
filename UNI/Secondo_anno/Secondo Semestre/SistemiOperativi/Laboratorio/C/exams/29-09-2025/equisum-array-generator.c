@@ -4,6 +4,7 @@
 #include <semaphore.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 
 #define RECORDSLEN 5
 
