@@ -39,25 +39,144 @@ typedef struct{
 
 }datiThread;
 
-void *gestioneRiparazione(void *arg){
-    datiThread *dati = (datiThread*)arg;
-    printf("Entrano i riparatori.\n");
-
-
-
+bool isEqui(vettoreGenerato *elemento){
+    return false;
 }
 
 void *gestioneGenerazione(void *arg){
     datiThread *dati = (datiThread*)arg;
-    printf("Entra il generatore.\n");
+    //printf("Entra il generatore.\n");
+
+    int vettoriDaGenerare = dati->condivisione->numeroVettori;
+    int dimensioneVettore = dati->condivisione->numeroElementiVettori;
+    for(int i = 0; i < vettoriDaGenerare; i++){
+        vettoreGenerato *array = malloc(sizeof(vettoreGenerato));
+        array->vettore = calloc(1,sizeof(int)*dimensioneVettore);
+        for(int j = 0; j < dimensioneVettore; j++){
+            array->vettore[j] = rand() % (99 - 0 + 1) + 0;
+        }
+        array->round = i+1;
+        sem_wait(&dati->condivisione->semaforoProposteLiberi);
+        pthread_mutex_lock(&dati->condivisione->mutexProposte);
+
+        dati->condivisione->codaProposte[dati->condivisione->numeroElementi] = array;
+        printf("[GEN] vettore candidato numero %d: ",dati->condivisione->codaProposte[dati->condivisione->numeroElementi]->round);
+        for(int k = 0; k < dimensioneVettore; k++){
+            printf("%d ",dati->condivisione->codaProposte[dati->condivisione->numeroElementi]->vettore[k]);
+        }
+        printf("\n");
+        dati->condivisione->numeroElementi++;
+
+        pthread_mutex_unlock(&dati->condivisione->mutexProposte);
+        sem_post(&dati->condivisione->semaforoProposteOccupati);
+
+    }
+
+    //poison pill
+
 
 }
 
 void *gestioneVerifica(void *arg){
     datiThread *dati = (datiThread*)arg;
-    printf("Entra il verificatore.\n");
+    //printf("Entra il verificatore.\n");
+
+    int vettoriDaGenerare = dati->condivisione->numeroVettori;
+    int dimensioneVettore = dati->condivisione->numeroElementiVettori;
+    int contatore = 0;
+    vettoreGenerato *elementoEstratto;
+    while(true){
+
+        sem_wait(&dati->condivisione->semaforoProposteOccupati);
+        pthread_mutex_lock(&dati->condivisione->mutexProposte);
+
+        elementoEstratto = dati->condivisione->codaProposte[0];
+        for(int j = 1; j < dati->condivisione->numeroElementi; j++){
+            dati->condivisione->codaProposte[j-1] =  dati->condivisione->codaProposte[j];
+        }
+        dati->condivisione->numeroElementi--;
+
+        pthread_mutex_unlock(&dati->condivisione->mutexProposte);
+        sem_post(&dati->condivisione->semaforoProposteLiberi);
+
+        printf("[VERIF] estratto un vettore candidato con round pari a %d: ",elementoEstratto->round);
+        for(int j = 0; j < dimensioneVettore; j++){
+            printf("%d ",elementoEstratto->vettore[j]);
+        }
+        printf("\n");
+
+        if(isEqui(elementoEstratto)){
+            contatore++;
+            printf("[VERIF] vettore verificato e accettato dopo %d aggiustamenti (%d/10).\n",elementoEstratto->round,contatore);
+        }else{
+            
+            sem_wait(&dati->condivisione->semaforoScartatiLiberi);
+            pthread_mutex_lock(&dati->condivisione->mutexScartati);
+            
+            dati->condivisione->codaScartati[dati->condivisione->numeroElementiScartati] = elementoEstratto;
+            dati->condivisione->numeroElementiScartati++;
+            printf("[VERIF] vettore non verificato e rigettato");
+
+            pthread_mutex_unlock(&dati->condivisione->mutexScartati);
+            sem_post(&dati->condivisione->semaforoScartatiOccupati);
+        }
+
+    }
 
 }
+
+void *gestioneRiparazione(void *arg){
+    datiThread *dati = (datiThread*)arg;
+    //printf("Entrano i riparatori.\n");
+
+    int vettoriDaGenerare = dati->condivisione->numeroVettori;
+    int dimensioneVettore = dati->condivisione->numeroElementiVettori;
+
+    while(true){
+        vettoreGenerato *elementoEstratto;
+        sem_wait(&dati->condivisione->semaforoScartatiOccupati);
+        pthread_mutex_lock(&dati->condivisione->mutexScartati);
+
+        elementoEstratto = dati->condivisione->codaScartati[0];
+        for(int i = 1; i < dimensioneVettore; i++){
+            dati->condivisione->codaScartati[i-1] = dati->condivisione->codaScartati[i];
+        }
+        dati->condivisione->numeroElementiScartati--;
+
+        printf("[REP-%d] estratto un vettore da riparare:",dati->id);
+        for(int i = 0; i < dimensioneVettore; i++){
+            printf("%d ",elementoEstratto->vettore[i]);
+        }
+        printf("\n");
+        pthread_mutex_unlock(&dati->condivisione->mutexScartati);
+        sem_post(&dati->condivisione->semaforoScartatiLiberi);
+
+        if(elementoEstratto->round == -1){
+            return NULL;
+        }
+
+        elementoEstratto->round++;
+        int numeroDaCambiare = rand() % (dimensioneVettore - 0 + 1) + 0;
+        int numeroNuovo = rand() % (99 - 0 + 1) + 0;
+        int numeroVecchio = elementoEstratto->vettore[numeroDaCambiare];
+        elementoEstratto->vettore[numeroDaCambiare] = numeroNuovo;
+
+        sem_wait(&dati->condivisione->semaforoScartatiLiberi);
+        pthread_mutex_lock(&dati->condivisione->mutexScartati);
+
+        dati->condivisione->codaScartati[dati->condivisione->numeroElementiScartati] = elementoEstratto;
+        dati->condivisione->numeroElementiScartati++;
+        printf("[REP-%d] reinserito vettore riparato (%d->%d) con round pari a %d.\n",dati->id,numeroVecchio,numeroNuovo,elementoEstratto->round);
+        
+        pthread_mutex_unlock(&dati->condivisione->mutexScartati);
+        sem_post(&dati->condivisione->semaforoScartatiOccupati);
+    
+    }
+
+
+
+}
+
 
 
 int main(int argc, char *argv[]){
@@ -66,6 +185,8 @@ int main(int argc, char *argv[]){
         fprintf(stderr,"Errore devi avviarmi con: <N> <T> <R>.\n");
         exit(EXIT_FAILURE);
     }
+
+    srand(time(NULL));
 
     int numeroE = atoi(argv[1]);
     int numeroV = atoi(argv[2]);
@@ -85,6 +206,8 @@ int main(int argc, char *argv[]){
     sem_init(&condiviso->semaforoProposteOccupati,0,0);
     sem_init(&condiviso->semaforoScartatiLiberi,0,5);
     sem_init(&condiviso->semaforoScartatiOccupati,0,0);    
+
+    printf("[MAIN] creazione di un thread generatore, di un thread verificatore e di %d thread riparatori",numeroRiparatori);
 
     for(int i = 0; i < numeroRiparatori; i++){
         datiThread *dati = malloc(sizeof(datiThread));
