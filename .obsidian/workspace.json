@@ -11,14 +11,12 @@
             "id": "7aa63c9ff534466e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "UNI/Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
-                "mode": "source",
-                "source": false
+                "file": "UNI/Terzo_anno/TAP/Introduction.pdf"
               },
-              "icon": "lucide-file",
-              "title": "1 TAP Introduzione"
+              "icon": "lucide-file-text",
+              "title": "Introduction"
             }
           }
         ]
@@ -172,9 +170,11 @@
   },
   "active": "7aa63c9ff534466e",
   "lastOpenFiles": [
+    "UNI/Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
+    "UNI/Terzo_anno/TAP/Introduction.pdf",
+    "UNI/Terzo_anno/TAP/syllabus.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/27-01-2026/mirror-vector-generatorGarufi.c",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/14-07-2026/crc-records-checkerGarufi.c",
-    "UNI/Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/1 Embededd System introduzione.md",
     "UNI/Terzo_anno/Embededd System/file_condivisi/Introduction_handsout.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141637.png",
@@ -192,10 +192,7 @@
     "UNI/Terzo_anno/TAP/Lezioni",
     "UNI/Terzo_anno/TAP",
     "UNI/Terzo_anno/Embededd System/Lezioni",
-    "UNI/Terzo_anno/Embededd System",
     "README.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/29-09-2025/equisum-array-generatorGarufi.c",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/23-07-26/matrix-type-checkerGarufi.c",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
