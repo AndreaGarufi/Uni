@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a07c870d93787df4",
+        "id": "1d09aaca27fbcf2e",
         "type": "tabs",
         "children": [
           {
-            "id": "15fdd7d61255b62a",
+            "id": "7aa63c9ff534466e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "1 TAP Introduzione"
             }
           }
         ]
@@ -166,35 +170,37 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3216613356f858dc",
+  "active": "7aa63c9ff534466e",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/27-01-2026/mirror-vector-generatorGarufi.c",
+    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/14-07-2026/crc-records-checkerGarufi.c",
+    "UNI/Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
+    "UNI/Terzo_anno/Embededd System/Lezioni/1 Embededd System introduzione.md",
+    "UNI/Terzo_anno/Embededd System/file_condivisi/Introduction_handsout.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141637.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141617.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141537.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141530.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141007.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140614.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140551.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140201.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140157.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140141.png",
+    "UNI/Terzo_anno/orario.pdf",
+    "UNI/Terzo_anno/Embededd System/file_condivisi",
+    "UNI/Terzo_anno/TAP/Lezioni",
+    "UNI/Terzo_anno/TAP",
+    "UNI/Terzo_anno/Embededd System/Lezioni",
+    "UNI/Terzo_anno/Embededd System",
+    "README.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/29-09-2025/equisum-array-generatorGarufi.c",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/23-07-26/matrix-type-checkerGarufi.c",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/23-07-26/matrices-C.bin",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/23-07-26/matrices-B-bad.bin",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/23-07-26/matrices-A.bin",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/23-07-26/a.out",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/23-07-26/compito_2026-07-23.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/23-07-26",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/17-07-2025/semi-magic-squares-screenerGarufi.c",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/21-02-2025/Originale/calc-verifier-5Garufi.c",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/17-09-2025/equisum-array-screenerGarufi.c",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260628104253.png",
-    "Senza nome.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260627152931.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260619173249.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184644.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184452.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184323.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184212.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611184017.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260611183404.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20260610215732.png",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/18_9_giugno.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/RetiConMacchineVirtuali.md",
@@ -212,8 +218,6 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/3_12_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/1_5_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande esame.md",
-    "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Da Sapere.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Capitolo 3.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
