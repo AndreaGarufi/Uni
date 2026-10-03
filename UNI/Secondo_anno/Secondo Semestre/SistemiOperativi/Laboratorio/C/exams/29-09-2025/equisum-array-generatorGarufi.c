@@ -30,6 +30,8 @@ typedef struct{
     int numeroVettori;
     int numeroElementiVettori;
 
+    int numeroRiparatoriThread;
+
 }shared;
 
 typedef struct{
@@ -39,8 +41,26 @@ typedef struct{
 
 }datiThread;
 
-bool isEqui(vettoreGenerato *elemento){
-    return false;
+bool isEqui(vettoreGenerato *elemento,datiThread *dati){
+    
+    int dimensioneVettore = dati->condivisione->numeroElementiVettori;
+    int sommaPari = 0;
+    int sommaDispari = 0;
+
+    for(int i = 0; i < dimensioneVettore; i++){
+        if(i % 2 == 0){
+            sommaPari = sommaPari + elemento->vettore[i];
+        }else{
+            sommaDispari = sommaDispari + elemento->vettore[i];
+        }
+    }
+
+    if(sommaDispari == sommaPari){
+        return true;
+    }else{
+        return false;
+    }
+
 }
 
 void *gestioneGenerazione(void *arg){
@@ -55,7 +75,7 @@ void *gestioneGenerazione(void *arg){
         for(int j = 0; j < dimensioneVettore; j++){
             array->vettore[j] = rand() % (99 - 0 + 1) + 0;
         }
-        array->round = i+1;
+        array->round = 0;
         sem_wait(&dati->condivisione->semaforoProposteLiberi);
         pthread_mutex_lock(&dati->condivisione->mutexProposte);
 
@@ -71,8 +91,8 @@ void *gestioneGenerazione(void *arg){
         sem_post(&dati->condivisione->semaforoProposteOccupati);
 
     }
-
-    //poison pill
+    printf("[GEN] terminato.\n");
+    return NULL;
 
 
 }
@@ -85,6 +105,7 @@ void *gestioneVerifica(void *arg){
     int dimensioneVettore = dati->condivisione->numeroElementiVettori;
     int contatore = 0;
     vettoreGenerato *elementoEstratto;
+
     while(true){
 
         sem_wait(&dati->condivisione->semaforoProposteOccupati);
@@ -105,9 +126,29 @@ void *gestioneVerifica(void *arg){
         }
         printf("\n");
 
-        if(isEqui(elementoEstratto)){
+        if(isEqui(elementoEstratto,dati)){
             contatore++;
-            printf("[VERIF] vettore verificato e accettato dopo %d aggiustamenti (%d/10).\n",elementoEstratto->round,contatore);
+            printf("[VERIF] vettore verificato e accettato dopo %d aggiustamenti (%d/%d).\n",elementoEstratto->round,contatore,dati->condivisione->numeroVettori);
+            if(contatore == dati->condivisione->numeroVettori){
+                free(elementoEstratto->vettore);
+                free(elementoEstratto);
+                
+                //poison pill per i riparatori
+                for(int i = 0; i < dati->condivisione->numeroRiparatoriThread; i++){
+                    sem_wait(&dati->condivisione->semaforoScartatiLiberi);
+                    pthread_mutex_lock(&dati->condivisione->mutexScartati);
+                    vettoreGenerato *sentinella = calloc(1,sizeof(vettoreGenerato));
+                    sentinella->round = -1;
+                    dati->condivisione->codaScartati[dati->condivisione->numeroElementiScartati] = sentinella;
+                    dati->condivisione->numeroElementiScartati++;
+                    
+                    
+                    pthread_mutex_unlock(&dati->condivisione->mutexScartati);
+                    sem_post(&dati->condivisione->semaforoScartatiOccupati);
+                }
+                printf("[VERIF] terminato.\n");
+                return NULL;
+            }
         }else{
             
             sem_wait(&dati->condivisione->semaforoScartatiLiberi);
@@ -115,11 +156,13 @@ void *gestioneVerifica(void *arg){
             
             dati->condivisione->codaScartati[dati->condivisione->numeroElementiScartati] = elementoEstratto;
             dati->condivisione->numeroElementiScartati++;
-            printf("[VERIF] vettore non verificato e rigettato");
+            printf("[VERIF] vettore non verificato e rigettato.\n");
 
             pthread_mutex_unlock(&dati->condivisione->mutexScartati);
             sem_post(&dati->condivisione->semaforoScartatiOccupati);
         }
+
+
 
     }
 
@@ -138,38 +181,41 @@ void *gestioneRiparazione(void *arg){
         pthread_mutex_lock(&dati->condivisione->mutexScartati);
 
         elementoEstratto = dati->condivisione->codaScartati[0];
-        for(int i = 1; i < dimensioneVettore; i++){
+        for(int i = 1; i < dati->condivisione->numeroElementiScartati; i++){
             dati->condivisione->codaScartati[i-1] = dati->condivisione->codaScartati[i];
         }
         dati->condivisione->numeroElementiScartati--;
+
+        pthread_mutex_unlock(&dati->condivisione->mutexScartati);
+        sem_post(&dati->condivisione->semaforoScartatiLiberi);
+        
+        if(elementoEstratto->round == -1){
+            free(elementoEstratto);
+            printf("[REP-%d] terminato.\n",dati->id);
+            return NULL;
+        }
 
         printf("[REP-%d] estratto un vettore da riparare:",dati->id);
         for(int i = 0; i < dimensioneVettore; i++){
             printf("%d ",elementoEstratto->vettore[i]);
         }
         printf("\n");
-        pthread_mutex_unlock(&dati->condivisione->mutexScartati);
-        sem_post(&dati->condivisione->semaforoScartatiLiberi);
-
-        if(elementoEstratto->round == -1){
-            return NULL;
-        }
 
         elementoEstratto->round++;
-        int numeroDaCambiare = rand() % (dimensioneVettore - 0 + 1) + 0;
+        int numeroDaCambiare = rand() % dimensioneVettore;
         int numeroNuovo = rand() % (99 - 0 + 1) + 0;
         int numeroVecchio = elementoEstratto->vettore[numeroDaCambiare];
         elementoEstratto->vettore[numeroDaCambiare] = numeroNuovo;
 
-        sem_wait(&dati->condivisione->semaforoScartatiLiberi);
-        pthread_mutex_lock(&dati->condivisione->mutexScartati);
+        sem_wait(&dati->condivisione->semaforoProposteLiberi);
+        pthread_mutex_lock(&dati->condivisione->mutexProposte);
 
-        dati->condivisione->codaScartati[dati->condivisione->numeroElementiScartati] = elementoEstratto;
-        dati->condivisione->numeroElementiScartati++;
+        dati->condivisione->codaProposte[dati->condivisione->numeroElementi] = elementoEstratto;
+        dati->condivisione->numeroElementi++;
         printf("[REP-%d] reinserito vettore riparato (%d->%d) con round pari a %d.\n",dati->id,numeroVecchio,numeroNuovo,elementoEstratto->round);
         
-        pthread_mutex_unlock(&dati->condivisione->mutexScartati);
-        sem_post(&dati->condivisione->semaforoScartatiOccupati);
+        pthread_mutex_unlock(&dati->condivisione->mutexProposte);
+        sem_post(&dati->condivisione->semaforoProposteOccupati);
     
     }
 
@@ -200,6 +246,7 @@ int main(int argc, char *argv[]){
     condiviso->numeroElementiScartati = 0;
     condiviso->numeroElementiVettori = numeroE;
     condiviso->numeroVettori = numeroV;
+    condiviso->numeroRiparatoriThread = numeroRiparatori;
     pthread_mutex_init(&condiviso->mutexProposte,NULL);
     pthread_mutex_init(&condiviso->mutexScartati,NULL);
     sem_init(&condiviso->semaforoProposteLiberi,0,5);
