@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1d09aaca27fbcf2e",
+        "id": "4abed8fc50f88b13",
         "type": "tabs",
         "children": [
           {
-            "id": "7aa63c9ff534466e",
+            "id": "e4a46f8819d75cb3",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Terzo_anno/TAP/Introduction.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Introduction"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -168,15 +166,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7aa63c9ff534466e",
+  "active": "3216613356f858dc",
   "lastOpenFiles": [
+    "UNI/Terzo_anno/orario.pdf",
+    "UNI/Terzo_anno/Embededd System/file_condivisi/DigitalSTM32_handsout.pdf",
+    "UNI/Terzo_anno/Embededd System/C/prog3_terzoProg/src/main.c",
+    "UNI/Terzo_anno/Embededd System/C/prog2_secondoProg/src/main.c",
+    "UNI/Terzo_anno/Embededd System/C/prog1_ledAccendiSpegni/src/main.c",
+    "UNI/Terzo_anno/Embededd System/C/prog3_terzoProg/platformio.ini",
+    "UNI/Terzo_anno/Embededd System/C/prog2_secondoProg/platformio.ini",
+    "UNI/Terzo_anno/Embededd System/C/prog1_ledAccendiSpegni/platformio.ini",
+    "UNI/Terzo_anno/Embededd System/C/prog3_terzoProg/src",
+    "UNI/Terzo_anno/Embededd System/C/prog3_terzoProg",
+    "UNI/Terzo_anno/Embededd System/C/prog2_secondoProg/src",
+    "UNI/Terzo_anno/Embededd System/2.md",
     "UNI/Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
-    "UNI/Terzo_anno/TAP/Introduction.pdf",
-    "UNI/Terzo_anno/TAP/syllabus.pdf",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/27-01-2026/mirror-vector-generatorGarufi.c",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/14-07-2026/crc-records-checkerGarufi.c",
     "UNI/Terzo_anno/Embededd System/Lezioni/1 Embededd System introduzione.md",
-    "UNI/Terzo_anno/Embededd System/file_condivisi/Introduction_handsout.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141637.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141617.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141537.png",
@@ -187,11 +192,6 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140201.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140157.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140141.png",
-    "UNI/Terzo_anno/orario.pdf",
-    "UNI/Terzo_anno/Embededd System/file_condivisi",
-    "UNI/Terzo_anno/TAP/Lezioni",
-    "UNI/Terzo_anno/TAP",
-    "UNI/Terzo_anno/Embededd System/Lezioni",
     "README.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
@@ -214,7 +214,6 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/9_14_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/3_12_marzo.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/1_5_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande esame.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
