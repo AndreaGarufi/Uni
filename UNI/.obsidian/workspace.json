@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "1afc5660c4681f9c",
+        "id": "0c76c01a13e30880",
         "type": "tabs",
         "children": [
           {
-            "id": "6e082bf4f828a0fd",
+            "id": "3df2920b0a86a8a5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
+                "file": "Terzo_anno/TAP/Lezioni/2 Docker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Laboratorio"
+              "title": "2 Docker"
+            }
+          },
+          {
+            "id": "efcceed52ce4705d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Callouts.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Callouts"
             }
           }
         ]
@@ -184,37 +198,41 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "6e082bf4f828a0fd",
+  "active": "3df2920b0a86a8a5",
   "lastOpenFiles": [
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/exams/17-09-2025/prova.c",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/fileBinari/numeri.bin",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/fileBinari/a.out",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/Slide/4_Network_N.pdf",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/PDF_LEZIONI/RETI-COMPLETO.pdf",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/SO-lab.pdf",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261003175438.png",
+    "Callouts.md",
+    "Terzo_anno/TAP/Lezioni/2 Docker.md",
+    "Terzo_anno/orario.pdf",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261003173834.png",
+    "Terzo_anno/TAP/Docker.pdf",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261003103607.png",
+    "Terzo_anno/TAP/Introduction.pdf",
+    "Terzo_anno/TAP/Docker.html",
+    "Terzo_anno/Docker.html",
+    "Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
+    "Terzo_anno/TAP/syllabus.pdf",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/eserciziPiccoli/variabiliCondizione.c",
+    "Terzo_anno/Embededd System/Lezioni/1 Embededd System introduzione.md",
+    "Terzo_anno/Embededd System/file_condivisi/Introduction_handsout.pdf",
+    "Terzo_anno/TAP/Lezioni",
+    "Terzo_anno/Embededd System/Lezioni",
+    "Terzo_anno/Embededd System/file_condivisi",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141637.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141617.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141537.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141530.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141007.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140614.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140551.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140201.png",
+    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "Solar Panel.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/panel-3.txt",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/panel-1.txt",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/panel-2.txt",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/C/esamiGemini/solarPanel/Solar Panel.pdf",
     "!raceCondition.c.md",
     "Propedeuticità.md",
     "Piano di studi Terzo Anno.md",
     "Project ideas.md",
     "Cose da fare.md",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121739.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121715.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121522.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121505.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121453.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121438.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727121041.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727120957.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727120934.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20260727120846.png",
     "CAR SPOTTER.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/1_LAB_30_aprile.md",
     "CAR SPOTTING DATABASE.md",
@@ -227,10 +245,6 @@
     "Esercizio Collettore di Telemetria Satellitare_Socket UDP.md",
     "Esercizio_Server di Rifornimento Razzi Multi-Thread con Mutex.md",
     "Esercizio Il Server Indovina il Numero Multi-Thread.md",
-    "Esercizio gioco dell'Impiccato Client-Server.md",
-    "Esercizio 2 Carta Forbice Sasso.md",
-    "Esercizio 1 Sensore.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
-    "Callouts.md"
+    "Esercizio gioco dell'Impiccato Client-Server.md"
   ]
 }
