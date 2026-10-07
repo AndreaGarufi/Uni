@@ -1,3 +1,6 @@
+
+# **Introduzione**
+
 Un **Embededd system** è un dispotivo creato per rispondere a esigenze specifiche.
 - Domatica
 - IOT
@@ -68,4 +71,78 @@ Noi useremo una libreria creare da unict per interfacciarci facilmente all'inizi
 ![[Pasted image 20261002141537.png|228]]
 
 ![[Pasted image 20261002141637.png|631]]
+
+---
+
+# **Circuiti Logici**
+I circuiti logici sono caratterizzati dal fatto che il voltaggio sui cavi può essere solo:
+- $0\,\, V$ -> valore 0/bit 0
+- $+ Vdd$ -> valore 1/bit 1
+
+Dove $Vdd$ è il power supply dell'intero circuito, può essere 5V, 3.3V, 1.8V ecc...
+
+---
+
+##### Circuiti combinatori
+
+Sono dei circuiti il cui output dipende solo dal valore della tensione in ingresso.
+
+*Porte logiche*
+Le porte logiche sono un tipo di circuiti combinatori.
+![[Pasted image 20261005123849.png|661]]
+
+*Multiplexer*
+I multiplexer sono altri circuiti combinatori che hanno lo scopo di switchare il segnale in base al valore in input e al valore dei control input bits:
+![[Pasted image 20261005124028.png|662]]
+
+
+
+*Circuiti sequenziali*
+- Sono circuiti il cui output dipende solo dallo stato attuale e passato degli input
+- Sono quindi sensibili alle variazioni degli input
+- Sono circuiti logici che hanno una memoria
+![[Pasted image 20261005124751.png|527]]
+
+
+# **Segnali logici**
+Si dividono in segnali costanti e segnali variabili.
+- I segnali costanti restano uguali nel tempo
+- I segnali variabili possono cambiare e sono caratterizzati da degli "edges" ovvero dei fronti.
+
+si può avere un falling edge ovvero una variazione da 1 a 0 oppure si può avere un rising edge ovvero una variazione da 0 a 1.
+![[Pasted image 20261007104351.png]]
+
+**Circuiti sequenziali e edges**
+I circuiti sequenziali sono sensibili agli edges e nelle rappresentazioni grafiche gli edges sono rappresentati da dei triangoli:
+Triangolo normale = rising edge
+Triangolo + cerchio = falling edge
+![[Pasted image 20261007104543.png|479]]
+
+##### Segnali periodici
+Sono un particolare tipo di segnali variabili la cui caratteristica è che la distanza in termini di tempo tra 2 edges è sempre la stessa:
+![[Pasted image 20261007104724.png|491]]
+
+Questa distanza è chiamata *periodo* (P) ed è misurata in secondi.
+La *frequenza* è il numero di periodi per secondo ed è calcolata come: $f=\frac{1}{P}$ , si misura in Hertz (Hz)
+
+I segnali periodici possono essere di 2 tipi:
+- Simmetrici
+- Asimmetrici
+
+*Simmetrici*
+La distanza temporale tra lo stato 0 e lo stato 1 è la stessa ed è uguale: $T_0 = T_1 = \frac{P}{2}$
+![[Pasted image 20261007105156.png|351]]
+
+*Asimmetrici*
+La distanza temporale tra lo stato 0 e lo stato 1 è diversa: $T_0 \neq T_1$ 
+![[Pasted image 20261007105325.png|355]]
+
+L'asimmetria è chiamata *duty cicle* e rappresenta la durata percentuale di periodo in cui lo stato è 1
+$$
+DC = \frac{T_1}{T_0 + T_1} \cdot 100 = \frac{T_1}{P} \cdot 100
+$$
+
+---
+
+![[Pasted image 20261007105537.png|649]]
 
