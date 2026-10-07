@@ -57,3 +57,109 @@ Come vedremo ci sono moltissimi container, ad esempio c'è quello di ubuntu che 
 Ad esempio se devo usare lo standard POSIX che non è presente in maniera nativa su windows posso programmare il codice su windows e poi farlo funzionare dentro il container ubuntu.
 In pratica è un mini-filesystem Ubuntu pronto per farti installare solo i pacchetti strettamente necessari al tuo progetto.
 
+##### Vediamo qualche comando di docker.
+Possiamo sia usare docker desktop con interfaccia grafica che usarlo da terminale.
+```
+# Docker version
+
+docker --version
+
+Docker version 29.5.2, build 79eb04c
+```
+`
+
+```
+# Runnare i container
+
+docker run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+```
+Quando eseguiamo questo comando cercherà l'immagine prima sul dispositivo e se non la trova proverà a carcarla sul server delle immagini, se la trova la scarica e la avvia
+
+
+```
+# Visionare la lista delle immagini sul dispositivo
+
+ docker image ls
+											                                                                                        i Info →   U  In Use
+IMAGE                ID             DISK USAGE   CONTENT SIZE   EXTRA
+hello-world:latest   5e2309035332       25.9kB         9.49kB    U
+```
+
+```
+# Visionare la lista di tutti i container
+
+docker container ls -a
+CONTAINER ID   IMAGE         COMMAND    CREATED             STATUS                         
+5bfd23731b3b   hello-world   "/hello"   About an hour ago   Exited (0) About an hour ago             
+
+PORTS     NAMES
+
+		elegant_lewin
+```
+se dal comando si toglie il -a (che sta per all) si vedranno solo i container attivi
+
+
+```
+# cambiare il nome ad un container
+
+docker run --name CIAO Hello-world
+```
+Possiamo riferirci ai container per nome:
+
+```
+# chiudere un container
+
+docker stop CIAO
+CIAO
+
+# rimuovere e cancellare definitivamente il container e ogni dato al suo interno
+
+docker rm CIAO
+CIAO
+```
+
+
+
+Se volessimo scaricare o eseguire l'immagine di ubuntu potremmo scrivere:
+```
+docker run ubuntu
+```
+
+se invece vogliamo anche "entrare" e utilizzare il container che abbiamo scaricato o avviato possiamo fare cosi:
+
+```
+docker run -it ubuntu
+
+root@b54f29d8ad2f:/#
+```
+e ci ritroviamo dentro il terminale di ubuntu
+
+Se cancelliamo un container perdiamo tutti i dati che quel container possedeva a meno che non usiamo un *volume*
+
+Se si collega un volume al container, tutto ciò che scriviamo in quella cartella specifica finisce direttamente sul disco del computer host. Quindi se si esegue: docker rm "name" i dati restano salvati su quella cartella,  vediamo il comando:
+
+```
+#creare un volume
+
+docker run -v app-data:/data ...
+```
+
+![[Pasted image 20261007172343.png]]
+
+*Altri comandi*
+- Quale immagine e quale comando hanno creato questo container? `docker inspect`
+    
+- Cosa ha stampato a schermo l'applicazione? `docker logs`
+    
+- È in esecuzione, e quali porte sono pubblicate? `docker ps`
+    
+- Posso ispezionare un processo attivo? `docker exec -it <container> sh`
+
+
+**Un container è solo una parte dell'intera applicazione**
+Un' applicazione avrà anche bisogno di porte per comunicare client-server, volumi per salvare i dati del container e connessioni per far comunicare i container
+
+
