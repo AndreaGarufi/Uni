@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "4abed8fc50f88b13",
+        "id": "e2702d3eda1ba34f",
         "type": "tabs",
         "children": [
           {
-            "id": "e4a46f8819d75cb3",
+            "id": "062f7ab00da5edc3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Terzo_anno/TAP/Docker.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Docker"
             }
           }
         ]
@@ -166,8 +168,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3216613356f858dc",
+  "active": "062f7ab00da5edc3",
   "lastOpenFiles": [
+    "UNI/Terzo_anno/Embededd System/Lezioni/2 2_ottobre_26.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007172343.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007114904.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007114842.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007114803.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007114750.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007114627.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007114606.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007113219.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007112821.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007111308.png",
+    "Senza nome.md",
+    "UNI/Terzo_anno/TAP/Lezioni/2 Docker.md",
+    "UNI/Terzo_anno/TAP/Docker.pdf",
     "UNI/Terzo_anno/orario.pdf",
     "UNI/Terzo_anno/Embededd System/file_condivisi/DigitalSTM32_handsout.pdf",
     "UNI/Terzo_anno/Embededd System/C/prog3_terzoProg/src/main.c",
@@ -177,21 +193,9 @@
     "UNI/Terzo_anno/Embededd System/C/prog2_secondoProg/platformio.ini",
     "UNI/Terzo_anno/Embededd System/C/prog1_ledAccendiSpegni/platformio.ini",
     "UNI/Terzo_anno/Embededd System/C/prog3_terzoProg/src",
-    "UNI/Terzo_anno/Embededd System/C/prog3_terzoProg",
-    "UNI/Terzo_anno/Embededd System/C/prog2_secondoProg/src",
     "UNI/Terzo_anno/Embededd System/2.md",
     "UNI/Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/1 Embededd System introduzione.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141637.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141617.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141537.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141530.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002141007.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140614.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140551.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140201.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140157.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261002140141.png",
     "README.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
@@ -212,8 +216,6 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11_21_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/10_16_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/9_14_aprile.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/3_12_marzo.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/1_5_marzo.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
