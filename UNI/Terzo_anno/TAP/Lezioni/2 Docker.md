@@ -158,8 +158,74 @@ docker run -v app-data:/data ...
     
 - Posso ispezionare un processo attivo? `docker exec -it <container> sh`
 
+(vedremo come creare le immagini dopo.)
+```
+#creare un immagine 
+
+docker image build -t bulletinboard:1.0 .
+
+# runnare il container
+
+docker container run -d -p 8080:8080 --name myapp bulletinboard:1.0
+```
+-t serve a dare un nome e una versione, noi useremo -t
+
+Se dobbiamo buildare ma nel terminale non ci troviamo nella cartella con il DockerFile possiamo scrivere cosi: `docker build -f /path/to/a/Dockerfile`
+(in caso poi aggiungere -t ...)
+
+---
 
 **Un container è solo una parte dell'intera applicazione**
 Un' applicazione avrà anche bisogno di porte per comunicare client-server, volumi per salvare i dati del container e connessioni per far comunicare i container
 
+---
 
+##### Ricapitolando
+- **Immagine**: Un immagine è un modello di sola lettura con le istruzioni per creare un container docker.
+- Un immagine può essere basata su un altra immagine con l'aggiunta di altri dettagli/funzionalità.
+- Ad esempio possiamo "buildare" un image basata su quella di ubuntu ma con l'aggiunta di alcuni servizi che in quella base non ci sono.
+
+- **Container**: sono l'istanza dell'immagine e vengono visti come un normale processo, quindi hanno risorse, permessi ecc... .
+- Il container si sostituisce alla macchina virtuale perché può svolgere quasi gli stessi compiti ma occupando molte meno risorse.
+- Il container contiene il codice e tutte le sue dipendenze per far funzionare correttamente un programma in qualsiasi ambiente ci si trovi.
+
+---
+
+##### Creare un immagine
+Possiamo usare immagini fatte da altri o crearne di nostre.
+*Per creare un immagine bisogna fare un "DockerFile"* che contiene le istruzioni per creare ed eseguire la nostra immagine.
+Ogni istruzione all'interno del DockerFile contiene le istruzioni per creare un determinato layer dell'immagine. Se modifichiamo un layer e ricreiamo l'immagine cambieranno solo quelli, in questo modo si risparmia tempo nell'esecuzione dei comandi.
+![[Pasted image 20261008204913.png|467]]
+
+
+##### Vediamo un esempio (RepoClonataEsempio):
+Illustriamo come creare ed eseguire un'applicazione **Node.js**
+
+>[!info] Node.js è un ambiente di esecuzione (_runtime_) open-source e multipiattaforma che permette di eseguire codice JavaScript al di fuori del browser web
+
+Questo è quello scritto dentro il DockerFile.
+```
+1  FROM node:current-slim
+2  WORKDIR /usr/src/app
+3  COPY package*.json ./
+4  RUN npm install
+5  COPY . .
+6  EXPOSE 8080
+7  CMD ["npm", "start"]
+```
+
+![[Pasted image 20261008210608.png|713]]
+
+Possiamo visionare la sintassi a questo indirizzo: <https://docs.docker.com/reference/dockerfile/>
+
+Se copiassi subito tutto il codice sorgente con `COPY . .` prima di `npm install`, **ogni singola modifica a un file JavaScript invaliderebbe la cache**, costringendo Docker a riscaricare tutte le dipendenze (`npm install`) ad ogni build, operazione che richiede tempo e banda.
+Copiando prima solo i file `package*.json`, Docker rieseguirà `npm install` **soltanto** se hai aggiunto o modificato una libreria. Se modifichi solo il codice sorgente dell'app, Docker riutilizzerà il layer delle dipendenze dalla cache e aggiornerà solo il passaggio finale (`COPY . .`), rendendo la build quasi istantanea.
+
+
+**Creazione dell'immagine "build"**
+Posizioniamoci all'interno della cartella dove si trova il DockerFile e lanciamo questi comandi:
+```
+docker image build -t bulletinboard:1.0 .
+docker container run -d -p 8080:8080 --name myapp bulletinboard:1.0
+```
+Il primo creerà l'immagine mentre il secondo eseguirà il container, possiamo poi andare sul browser e digitare "http://localhost:8080" oppure cliccare sullo stesso testo all'interno di dockerDesktop per visualizzare l'applicazione che in questo momento sta girando su un container.
