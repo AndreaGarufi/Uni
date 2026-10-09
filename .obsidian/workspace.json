@@ -4,19 +4,51 @@
     "type": "split",
     "children": [
       {
-        "id": "e2702d3eda1ba34f",
+        "id": "0e6cbc55090139ba",
         "type": "tabs",
         "children": [
           {
-            "id": "062f7ab00da5edc3",
+            "id": "9f9506aa9ab3398e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Terzo_anno/Embededd System/Lezioni/3 9_ottobre_26.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3 9_ottobre_26"
+            }
+          },
+          {
+            "id": "17159a8d80ede970",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "UNI/Terzo_anno/TAP/Docker.pdf"
+                "file": "UNI/Terzo_anno/Embededd System/file_condivisi/4_Electronics_handsout.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Docker"
+              "title": "4_Electronics_handsout"
+            }
+          }
+        ]
+      },
+      {
+        "id": "b140db5fe4301f94",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8264bae6abd9bb93",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Terzo_anno/Embededd System/file_condivisi/4_Electronics_handsout.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "4_Electronics_handsout"
             }
           }
         ]
@@ -168,31 +200,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "062f7ab00da5edc3",
+  "active": "9f9506aa9ab3398e",
   "lastOpenFiles": [
+    "UNI/Terzo_anno/Embededd System/file_condivisi/4_Electronics_handsout.pdf",
+    "UNI/Terzo_anno/Embededd System/Lezioni/3 9_ottobre_26.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261009142951.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261009142905.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261009142728.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261009142528.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261009142504.png",
+    "UNI/Callouts.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261009135842.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261009135752.png",
+    "UNI/Terzo_anno/Embededd System/file_condivisi/3_DigitalSTM32_handsout.pdf",
     "UNI/Terzo_anno/Embededd System/Lezioni/2 2_ottobre_26.md",
+    "UNI/Terzo_anno/Embededd System/Lezioni/Piano di studi Terzo Anno.md",
+    "UNI/Terzo_anno/TAP/Docker.pdf",
+    "UNI/Terzo_anno/TAP/RepoClonataEsempio/node-bulletin-board",
+    "UNI/Terzo_anno/TAP/RepoClonataEsempio",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261008210608.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261008204913.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007172343.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007114904.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007114842.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007114803.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007114750.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007114627.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007114606.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007113219.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007112821.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261007111308.png",
     "Senza nome.md",
     "UNI/Terzo_anno/TAP/Lezioni/2 Docker.md",
-    "UNI/Terzo_anno/TAP/Docker.pdf",
     "UNI/Terzo_anno/orario.pdf",
     "UNI/Terzo_anno/Embededd System/file_condivisi/DigitalSTM32_handsout.pdf",
     "UNI/Terzo_anno/Embededd System/C/prog3_terzoProg/src/main.c",
     "UNI/Terzo_anno/Embededd System/C/prog2_secondoProg/src/main.c",
     "UNI/Terzo_anno/Embededd System/C/prog1_ledAccendiSpegni/src/main.c",
-    "UNI/Terzo_anno/Embededd System/C/prog3_terzoProg/platformio.ini",
-    "UNI/Terzo_anno/Embededd System/C/prog2_secondoProg/platformio.ini",
-    "UNI/Terzo_anno/Embededd System/C/prog1_ledAccendiSpegni/platformio.ini",
-    "UNI/Terzo_anno/Embededd System/C/prog3_terzoProg/src",
     "UNI/Terzo_anno/Embededd System/2.md",
     "UNI/Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/1 Embededd System introduzione.md",
@@ -210,12 +245,8 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
-    "UNI/Callouts.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/12_23_aprile.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/11_21_aprile.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/10_16_aprile.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/9_14_aprile.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
