@@ -229,3 +229,5 @@ docker image build -t bulletinboard:1.0 .
 docker container run -d -p 8080:8080 --name myapp bulletinboard:1.0
 ```
 Il primo creerà l'immagine mentre il secondo eseguirà il container, possiamo poi andare sul browser e digitare "http://localhost:8080" oppure cliccare sullo stesso testo all'interno di dockerDesktop per visualizzare l'applicazione che in questo momento sta girando su un container.
+
+
