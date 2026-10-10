@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "prog1_ledAccendiSpegni",
+			"path": "prog1_ledAccendiSpegni"
+		},
+		{
+			"name": "prog2_secondoProg",
+			"path": "prog2_secondoProg"
+		},
+		{
+			"name": "prog3_terzoProg",
+			"path": "prog3_terzoProg"
+		},
+		{
+			"name": "Prova1",
+			"path": "../../../../../../Documents/PlatformIO/Projects/Prova1"
+		}
+	],
+	"settings": {
+		"C_Cpp.default.configurationProvider": "platformio.platformio-ide"
+	}
+}
