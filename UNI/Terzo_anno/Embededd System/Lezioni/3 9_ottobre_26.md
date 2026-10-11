@@ -91,3 +91,80 @@ Altro esercizio:
 
 ![[Pasted image 20261010184859.png|453]]
 
+---
+##### Transistor
+*Un transistor è un componente elettronico composto da materiali "semi-conduttori"* (germano, silicio, arsenico, gallio ecc...).
+
+- Fa da amplificatore di corrente/voltaggio
+- Ci sono diverse tipologie di transistor che differiscono nella struttura, nel funzionamento e nelle applicazioni
+  - Bipolar Junction Transistor (BJT)
+  - Junction Field-Effect Transistor (JFET)
+  - Metal-Oxide-Semiconductor Field-Effect Transistor (MOSFET)
+
+![[Pasted image 20261011114500.png|344]]
+
+
+---
+##### MOSFET Transistor
+Il MOSFET riceve in ingresso una tensione e restituisce in uscita una corrente.
+
+**I tre terminali (pin):**
+- **Gate (G):** il terminale di controllo (ingresso).
+    
+- **Source (S):** la sorgente di carica, spesso presa come riferimento comune.
+    
+- **Drain (D):** il terminale di scarico da cui scorre la corrente principale verso il Source.
+
+![[Pasted image 20261011120430.png|258]]
+
+
+**Il MOSFET come interruttore digitale**
+- Nei circuiti digitali (logica binaria), non interessa una risposta proporzionale/lineare continua, ma due stati ben distinti: **acceso (ON)** e **spento (OFF)**.
+
+Il MOSFET viene modellato come un classico interruttore meccanico posto tra il terminale di **Drain** e quello di **Source**, il cui stato è regolato dalla tensione di ingresso sul **Gate** ($V_{GS}$).
+
+
+**Esempio:** guidare un motore con un MCU
+- I componenti di potenza (es. motori elettrici) non possono essere pilotati direttamente da un'uscita digitale di un MCU
+- Piccolo motore elettrico:
+    - Tensione di funzionamento di $6\text{ V}$, $12\text{ V}$, $24\text{ V}$, $48\text{ V}$ (e anche tensioni superiori)
+        
+    - Corrente tipica nell'ordine di $100\text{ mA} - 10\text{ A}$
+
+- Uscite digitali del MCU:
+    - Tensione di uscita di $5\text{ V}$ o $3.3\text{ V}$
+        
+    - In grado di erogare correnti nell'ordine di $100\ \mu\text{A} - 200\text{ mA}$
+        
+- Un MOSFET può essere utilizzato come **driver per motori**: attivato da un'uscita digitale, può pilotare il motore collegato nella rete **drain-source**:
+
+![[Pasted image 20261011120948.png|310]]
+
+
+---
+
+##### Lo stadio di uscita di una porta digitale di un microcontrollore (MCU)
+
+![[Pasted image 20261011121414.png|349]]
+
+Questa foto rappresenta una porta GPIO ed è composta da 2 parti:
+- *Output logic*
+  È la parte a monte, gestita direttamente dal processore e dai registri periferici (come i registri dati `ODR` / `BSRR` dei microcontrollori).
+  Lavora su semplici segnali logici binari (`0` o `1`).Decide **cosa** il pin deve trasmettere (livello logico alto o basso), ma non ha la capacità di pilotare direttamente correnti o gestire la modalità elettrica del pin fisico verso l'esterno.
+- *Output Stage*
+  È la circuiteria fisica (interfaccia elettrica) posta a valle, collegata direttamente alle linee di alimentazione **VDD** e di massa **GND**, e al piedino fisico (**output pin**). Riceve il dato dalla logica interna e si occupa di pilotare fisicamente il pin.
+
+Vediamo 2 configurazioni circuitali:
+**Push-Pull**
+La configurazione Push-Pull è composta da 2 MOSFETs connessi come in figura: sono Upper e Lower.
+![[Pasted image 20261011121904.png|308]]
+
+Quando arriva il segnale 1 (programmato lato software) si attiva l'upper MOSFET, mentre se arriva 0 si attiva il lower MOSFET
+
+**Open-Drain**
+Qui l'unico MOSFET che resta è il lower.
+![[Pasted image 20261011122119.png|308]]
+Quando il software scrive 1 non succede nulla ma lo stato logico deve essere mantenuto da un pull-up resistor esterno
+
+Quando il software scrive 0 si attiva il lower MOSFET come nella configurazione Push-Pull
+
