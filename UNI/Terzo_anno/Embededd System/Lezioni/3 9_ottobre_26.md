@@ -168,3 +168,18 @@ Quando il software scrive 1 non succede nulla ma lo stato logico deve essere man
 
 Quando il software scrive 0 si attiva il lower MOSFET come nella configurazione Push-Pull
 
+
+
+
+
+***Continua dopo spiegazione***
+
+
+
+
+
+---
+##### Bouncing Effect
+Interruttori e pushbutton contengono delle molle per tanto da un punto di vista meccanico sono dei sistemi oscillanti, nei circuiti digitali provocano un bouncing effect quindi un rimbalzo, e quindi quando il pulsante viene premuto e rilasciato il valore oscilla tra 0 e 1, il software potrebbe rilevare queste oscillazioni e provocare degli errori. È possibile eliminare il fenomeno del rimbalzo utilizzando dei condensatori.
+![[Pasted image 20261011182213.png]]
+
