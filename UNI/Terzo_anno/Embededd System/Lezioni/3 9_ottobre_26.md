@@ -188,6 +188,18 @@ Si elimina questo effetto attraverso dei filtri, ripulendo il segnale in ingress
 ---
 
 ##### Condensatori
-funzionamento condensatore
+- Un condensatore (capacitor) è un elemento circuitale in grado di assorbire/stoccare carica elettrica.
+- E' composto da 2 piastre separate da un dielettrico (isolante)
+- L'energia elettrica è stoccata nelle piastre e la sua quantità dipende dalla grandezza e dal materiale delle piastre e dell'isolante.
+- La *capacità* (abilità di immagazzinare corrente) è misurata in Farad. $μF , nF , pF$
+- 
+![[Pasted image 20261013143421.png|403]]
+
+
+Possiamo dire che il condensatore si carica e si scarica come in figura:
+![[Pasted image 20261013143438.png|512]]
+
+Piano piano "assorbe" la tensione che proviene da $Vg$ e quindi $Vc$ sale fino ad arrivare ad assorbire tutta $Vg$ (questo si dice periodo di carica) quando il condensatore è carico 
+
 
 **Circuito di debouncing**
