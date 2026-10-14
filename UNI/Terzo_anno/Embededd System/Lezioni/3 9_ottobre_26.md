@@ -199,7 +199,12 @@ Si elimina questo effetto attraverso dei filtri, ripulendo il segnale in ingress
 Possiamo dire che il condensatore si carica e si scarica come in figura:
 ![[Pasted image 20261013143438.png|512]]
 
-Piano piano "assorbe" la tensione che proviene da $Vg$ e quindi $Vc$ sale fino ad arrivare ad assorbire tutta $Vg$ (questo si dice periodo di carica) quando il condensatore è carico 
+Piano piano "assorbe" la tensione che proviene da $Vg$ e quindi $Vc$ sale fino ad arrivare ad assorbire tutta $Vg$ (questo si dice periodo di carica) quando il condensatore è carico non passa più corrente perché non c'è più differenza di potenziale. Quando chiudo lo switch 1 (come in figura), e chiudo lo switch 2, il condensatore comincia a scaricarsi perche si viene a creare di nuovo una differenza di potenziale e la corrente scorre dal + del condensatore ($Vc$) fino a rientrare sul - di $Vc$
 
 
 **Circuito di debouncing**
+Un debounce capacitor è piazzato in parallelo ad un pushbutton o a uno switch e serve appunto a rimuovere il "bouncing effect" di questi componenti dovuto alle parti meccaniche.
+Durante il fenomeno del rimbalzo, quando il pulsante è in stato di riposo ("off"), il condensatore si carica attraverso la resistenza; di conseguenza, la tensione aumenta ma non raggiunge un valore sufficiente a far sì che la porta legga un livello logico "1".
+
+![[Pasted image 20261014111826.png|495]]
+
