@@ -11,7 +11,7 @@ void setup(void){
     prev_pin_state = GPIO_read(GPIOB,4);
 }
 
-void loop(void){
+void loop(void){                                //in questo programma il led si accende e si spegne ad ogni click di pulsante
     
     int current_pin_state = GPIO_read(GPIOB,4);
     if(prev_pin_state == 1 && current_pin_state == 0){
