@@ -1,0 +1,44 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "/home/andrea/Documenti/Uni/UNI/Terzo_anno/Embededd System/C/prog3_terzoProg/src",
+                "/home/andrea/Documenti/Uni/UNI/Terzo_anno/Embededd System/C/prog3_terzoProg/.pio/libdeps/prog3_terzoProg/stm32_unict_lib",
+                "/home/andrea/.platformio/packages/framework-cmsis/CMSIS/Include",
+                "/home/andrea/.platformio/packages/framework-cmsis-stm32f4/Include",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/andrea/Documenti/Uni/UNI/Terzo_anno/Embededd System/C/prog3_terzoProg/src",
+                    "/home/andrea/Documenti/Uni/UNI/Terzo_anno/Embededd System/C/prog3_terzoProg/.pio/libdeps/prog3_terzoProg/stm32_unict_lib",
+                    "/home/andrea/.platformio/packages/framework-cmsis/CMSIS/Include",
+                    "/home/andrea/.platformio/packages/framework-cmsis-stm32f4/Include",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60200",
+                "STM32F4",
+                "STM32F401xE",
+                "STM32F40_41xxx",
+                "F_CPU=84000000L",
+                ""
+            ],
+            "compilerPath": "/home/andrea/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mthumb",
+                "-mcpu=cortex-m4",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
