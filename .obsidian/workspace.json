@@ -25,12 +25,14 @@
             "id": "17159a8d80ede970",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "UNI/Terzo_anno/Embededd System/file_condivisi/5_ExtInterrupt_handsout.pdf"
+                "file": "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Riassunto KS PARTI MANCANTI (fare da slide).md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "5_ExtInterrupt_handsout"
+              "icon": "lucide-file",
+              "title": "Riassunto KS PARTI MANCANTI (fare da slide)"
             }
           }
         ],
@@ -93,7 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 208.5
+    "width": 261.3144989013672
   },
   "right": {
     "id": "60ceb3bf826ca8d1",
@@ -185,6 +187,10 @@
   },
   "active": "17159a8d80ede970",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Riassunto_KSP-1.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Riassunto KS PARTI MANCANTI (fare da slide).md",
+    "UNI/Terzo_anno/Embededd System/file_condivisi/5_ExtInterrupt_handsout.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261014111826.png",
     "UNI/Terzo_anno/IoT/C/Hello_world/test/README",
     "UNI/Terzo_anno/IoT/C/Hello_world/src/main.cpp",
@@ -195,7 +201,6 @@
     "UNI/Terzo_anno/IoT/C/Hello_world/platformio.ini",
     "UNI/Terzo_anno/IoT/C/Hello_world/lib",
     "UNI/Terzo_anno/IoT/C/Hello_world/include",
-    "UNI/Terzo_anno/IoT/C/Hello_world",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261013143438.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261013143421.png",
     "UNI/Terzo_anno/Embededd System/Lezioni/4 12_ottobre.md",
@@ -207,7 +212,6 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261011120948.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261011120430.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261011114500.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261010184859.png",
     "UNI/Callouts.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/2 2_ottobre_26.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/Piano di studi Terzo Anno.md",
@@ -229,8 +233,6 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/17_4_giugno.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/16_19_maggio.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/15_12_maggio.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/14_7_maggio.md",
-    "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/13_28_aprile.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
