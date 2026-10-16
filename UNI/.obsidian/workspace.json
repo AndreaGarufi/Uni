@@ -11,12 +11,14 @@
             "id": "44e8dd50b2fa353a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Terzo_anno/Embededd System/file_condivisi/4_Electronics_handsout.pdf"
+                "file": "Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "4_Electronics_handsout"
+              "icon": "lucide-file",
+              "title": "Link_Slide"
             }
           }
         ]
@@ -182,19 +184,21 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "44e8dd50b2fa353a",
+  "active": "4371091dceb8cd7d",
   "lastOpenFiles": [
-    "Terzo_anno/Embededd System/C/AccendiSpegniLedPulsante/src/main.c",
-    "Terzo_anno/Embededd System/C/AccendiSpegniLedPulsante/test/README",
-    "Terzo_anno/Embededd System/C/AccendiSpegniLedPulsante/test",
-    "Terzo_anno/Embededd System/C/AccendiSpegniLedPulsante/lib/README",
-    "Terzo_anno/Embededd System/C/AccendiSpegniLedPulsante/lib",
-    "Terzo_anno/Embededd System/C/AccendiSpegniLedPulsante/include/README",
-    "Terzo_anno/Embededd System/C/AccendiSpegniLedPulsante/include",
-    "Terzo_anno/Embededd System/C/AccendiSpegniLedPulsante/src",
-    "Terzo_anno/Embededd System/C/AccendiSpegniLedPulsante/platformio.ini",
-    "Terzo_anno/Embededd System/C/AccendiSpegniLedPulsante",
-    "Terzo_anno/Embededd System/C/pulsanteAccendiLed/src/main.c",
+    "Terzo_anno/Embededd System/file_condivisi/4_Electronics_handsout.pdf",
+    "Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
+    "Terzo_anno/IoT/Rielaborazioni",
+    "Terzo_anno/IoT/C/Led_Buttons_Display/test/README",
+    "Terzo_anno/IoT/C/Led_Buttons_Display/src/main.cpp",
+    "Terzo_anno/IoT/C/Led_Buttons_Display/lib/README",
+    "Terzo_anno/IoT/C/Led_Buttons_Display/include/README",
+    "Terzo_anno/IoT/C/Led_Buttons_Display/test",
+    "Terzo_anno/IoT/C/Led_Buttons_Display/src",
+    "Terzo_anno/IoT/C/Led_Buttons_Display/platformio.ini",
+    "Terzo_anno/IoT/C/Led_Buttons_Display/lib",
+    "Terzo_anno/IoT/C/Led_Buttons_Display/include",
+    "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Riassunto KS PARTI MANCANTI (fare da slide).md",
     "Terzo_anno/Embededd System/Lezioni/3 9_ottobre_26.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261014111826.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261013143438.png",
@@ -228,8 +232,6 @@
     "Cose da fare.md",
     "CAR SPOTTER.md",
     "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/1_LAB_30_aprile.md",
-    "CAR SPOTTING DATABASE.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md"
+    "CAR SPOTTING DATABASE.md"
   ]
 }
