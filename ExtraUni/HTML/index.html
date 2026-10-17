@@ -1,49 +1,168 @@
-<html>
-    <title>APPUNTI UNICT GARUFI</title>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appunti UniCT | Andrea Garufi - Informatica</title>
+    
+    <!-- Meta SEO & Social -->
+    <meta name="description" content="Appunti completi del corso di Laurea in Informatica UniCT: Programmazione 1, Programmazione 2, Strutture Discrete, Architettura degli Elaboratori, Algoritmi, Reti, Sistemi Operativi, IoT, Embedded Systems e altre materie.">
+    <meta name="author" content="Andrea Garufi">
 
-    <head>
-        <link href="graphic.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-        <link rel="icon" type="image/png" href="liotru.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="liotru.png">
 
-        <meta name="description" content="Appunti completi Programmazione 1, Strutture Discretere e molto altro - Corso di Laurea Informatica">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts & Animate.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-    </head>
+    <!-- Fogli di stile personalizzati (con query string per evitare problemi di cache su Altervista/Google) -->
+    <link rel="stylesheet" href="graphic.css?v=2.2">
+</head>
 
-    <body class="sfondo" link="#ff5733" vlink="#ff5733" alink="#FF0000">
-        <h1 class="audiowide-regular">Appunti Andrea Garufi UniCT - Primo Anno -</h1>
+<body class="sfondo">
 
-        <br><br><br>
-        <p class = "audiowide-regular-TEXT1">Consiglio di scaricare <a href="https://obsidian.md/download" target="_blank">Obsidian</a> e la cartella con tutti i file, in seguito trascinarla 
-            nell'ambiente di Obsidian, in modo che tutti i link alle varie immagini e riferimenti ad altre note rimangano intatti e funzionanti</p>
-        <br><br><br>
-        
-        <p class = "audiowide-regular-TEXT1">Questo sito ha l'obbiettivo di fornire una panoramica veloce sugli argomenti di studio nel corso di laurea
-             direttamente da uno studente <br>(per informazioni ufficiali -> <a href="https://web.dmi.unict.it" target="_blank">sito UNICT - DMI -</a>)</p>
+    <div class="main-wrapper">
+        <!-- Header con Logo UniCT Liotru e Titolo -->
+        <header class="header-container animate__animated animate__fadeInDown">
+            <img src="liotru.png" alt="Liotru Catania - Logo UniCT" class="header-logo">
+            <div class="header-titles">
+                <h1 class="audiowide-regular">Appunti Andrea Garufi</h1>
+                <div class="header-subtitle">
+                    <span>Corso di Laurea in Informatica</span>
+                    <span class="header-badge">UniCT • DMI</span>
+                </div>
+            </div>
+        </header>
 
-        <br>
-        <ul>
-            <li class = "audiowide-regular-TEXT"> Materie Complete Presenti: </li>
-            <ul class = "audiowide-regular-TEXT1" style="margin-bottom: 4px;">Programmazione I</a></ul>
-            <ul class = "audiowide-regular-TEXT1" style="margin-bottom: 4px;">Programmazione II</ul>
-            <ul class = "audiowide-regular-TEXT1" style="margin-bottom: 4px;">Strutture Discrete</ul>
-            <ul class = "audiowide-regular-TEXT1" style="margin-bottom: 4px;">Architettura degli elaboratori</ul>
-            <ul class = "audiowide-regular-TEXT1" style="margin-bottom: 4px;">(Sono presenti anche altri appunti di altre materie)</ul>
-        </ul>
+        <main>
+            <!-- Introduzione e Obiettivo del sito -->
+            <section class="card-section animate__animated animate__fadeIn">
+                <h2 class="audiowide-regular-TEXT">
+                    <span>🎯</span> Panoramica
+                </h2>
+                <p class="audiowide-regular-TEXT1">
+                    Questo sito ha l'obiettivo di fornire una panoramica veloce e organizzata sugli argomenti di studio affrontati nel <strong>Corso di Laurea in Informatica</strong>, direttamente dagli appunti presi da uno studente durante le lezioni.
+                </p>
+                <p class="audiowide-regular-TEXT1" style="margin-top: 0.75rem;">
+                    👉 Per informazioni ufficiali su corsi, piani di studio e docenti, visita il <a href="https://web.dmi.unict.it" target="_blank" rel="noopener noreferrer">sito ufficiale UNICT - DMI</a>.
+                </p>
+            </section>
 
-        <br><br><br>
-        <li class = "audiowide-regular-TEXT"> Download: </li>
-        <br>
-        <div class = "audiowide-regular-TEXT1" style="display: flex; align-items: center;">Dowload cartella intera (GitHub)-->
-            <a href="https://github.com/AndreaGarufi/Uni"  target="_blank"><img src="cartella.png" width="12%" style="margin-left: 50px;" class="animate__pulse"></a>
-        </div>
+            <!-- Consiglio Obsidian -->
+            <section class="card-section obsidian-box animate__animated animate__fadeIn">
+                <div class="obsidian-icon">💎</div>
+                <div class="obsidian-content">
+                    <h3 class="audiowide-font">Come utilizzare al meglio gli appunti (Obsidian)</h3>
+                    <p>
+                        Consiglio vivamente di installare <a href="https://obsidian.md/download" target="_blank" rel="noopener noreferrer" class="obsidian-link">Obsidian</a>.
+                        Dopo aver scaricato la cartella con tutti i file, aprila come <em>Vault</em> o trascinala nell'ambiente di Obsidian: in questo modo tutti i grafici, le immagini, i collegamenti bidirezionali e i riferimenti tra le note rimarranno perfettamente intatti, collegati e navigabili.
+                    </p>
+                </div>
+            </section>
 
-        <br><br><br>
+            <!-- Materie con Appunti Presenti -->
+            <section class="card-section animate__animated animate__fadeIn">
+                <h2 class="audiowide-regular-TEXT">
+                    <span>📚</span> Materie con Appunti Disponibili
+                </h2>
+                <p class="audiowide-regular-TEXT1">
+                    Di seguito le principali materie del corso di laurea per cui sono disponibili appunti, dispense e riassunti dettagliati:
+                </p>
 
-    </body>
-    <footer class = "audiowide-regular-FOOTER">Realizzato nel mese di febbraio 2025</footer>
+                <div class="subjects-grid">
+                    <!-- Prog 1 -->
+                    <div class="subject-item">
+                        <span class="subject-name">Programmazione I (Prog 1)</span>
+                    </div>
+
+                    <!-- Strutture Discrete -->
+                    <div class="subject-item">
+                        <span class="subject-name">Strutture Discrete</span>
+                    </div>
+
+                    <!-- Architettura degli elaboratori -->
+                    <div class="subject-item">
+                        <span class="subject-name">Architettura degli Elaboratori</span>
+                    </div>
+
+                    <!-- Prog 2 -->
+                    <div class="subject-item">
+                        <span class="subject-name">Programmazione II (Prog 2)</span>
+                    </div>
+
+                    <!-- Algoritmi e Laboratorio -->
+                    <div class="subject-item">
+                        <span class="subject-name">Algoritmi e Laboratorio</span>
+                    </div>
+
+                    <!-- Sistemi Operativi -->
+                    <div class="subject-item">
+                        <span class="subject-name">Sistemi Operativi</span>
+                    </div>
+
+                    <!-- Reti di Calcolatori -->
+                    <div class="subject-item">
+                        <span class="subject-name">Reti di Calcolatori</span>
+                    </div>
+
+                    <!-- Interazione e Multimedia -->
+                    <div class="subject-item">
+                        <span class="subject-name">Interazione e Multimedia</span>
+                    </div>
+
+                    <!-- IoT -->
+                    <div class="subject-item">
+                        <span class="subject-name">IoT (Internet of Things)</span>
+                    </div>
+
+                    <!-- Embedded Systems -->
+                    <div class="subject-item">
+                        <span class="subject-name">Embedded Systems</span>
+                    </div>
+                </div>
+
+                <!-- Altre Materie -->
+                <div class="other-subjects-box">
+                    <span class="other-subjects-icon">✨</span>
+                    <p class="other-subjects-text">
+                        <strong>E molte altre materie!</strong> All'interno della repository sono presenti anche appunti, schemi riassuntivi, laboratori ed esercizi di <strong>ulteriori materie</strong> e corsi del percorso universitario, costantemente aggiornati.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Sezione Download -->
+            <section class="card-section download-card animate__animated animate__fadeIn">
+                <div class="download-info">
+                    <h2 class="audiowide-regular-TEXT" style="margin-bottom: 0.35rem;">
+                        <span>📥</span> Download Appunti
+                    </h2>
+                    <p class="audiowide-regular-TEXT1">
+                        Scarica l'intera cartella degli appunti sincronizzata direttamente dal repository GitHub:
+                    </p>
+                </div>
+
+                <div class="download-action">
+                    <a href="https://github.com/AndreaGarufi/Uni" target="_blank" rel="noopener noreferrer" class="btn-github">
+                        <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                        </svg>
+                        <span>Apri su GitHub</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer pulito e responsive -->
+    <footer class="footer-container">
+        <p class="audiowide-regular-FOOTER">Realizzato da Andrea Garufi • UniCT DMI</p>
+        <p style="margin-top: 0.35rem; font-size: 0.8rem; color: #888;">
+            Tutti i contenuti sono a scopo didattico e condivisi per la community studentesca.
+        </p>
+    </footer>
+
+</body>
 </html>
-

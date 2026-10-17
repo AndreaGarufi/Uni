@@ -1,65 +1,451 @@
+/* ==========================================================================
+   Stili Grafici - Appunti UniCT Andrea Garufi
+   ========================================================================== */
+
+:root {
+  --primary-color: #ff5733;
+  --primary-hover: #e04422;
+  --primary-light: #fff2ef;
+  --text-main: #1d2125;
+  --text-muted: #535d67;
+  --card-bg: rgba(255, 255, 255, 0.90);
+  --card-border: rgba(255, 87, 51, 0.25);
+  --badge-bg: rgba(255, 87, 51, 0.12);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 12px 24px -4px rgba(0, 0, 0, 0.1), 0 4px 8px -4px rgba(0, 0, 0, 0.06);
+  --transition-fast: all 0.25s ease-in-out;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sfondo della pagina con overlay per massimizzare la leggibilità */
 .sfondo {
-  background-image: url('indexBackgrund.jpg');
+  background-image: linear-gradient(rgba(245, 245, 247, 0.75), rgba(245, 245, 247, 0.85)), url('indexBackgrund.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment:scroll;
+  background-attachment: fixed;
+}
+
+/* Container centrale */
+.main-wrapper {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  flex: 1 0 auto;
+}
+
+/* Tipografia Audiowide (mantenuta per coerenza e stile) */
+.audiowide-font {
+  font-family: "Audiowide", cursive, sans-serif;
 }
 
 .audiowide-regular {
-    font-family: "Audiowide", serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 50px;
-    color: #ff5733;
-  }
-
-
-  .audiowide-regular-TEXT {
-    font-family: "Audiowide", serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 40px;
-    color: #ff5733;
-  }
-
-
-  .audiowide-regular-TEXT1 {
-    font-family: "Audiowide", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    color: #131211;
-  }
-
-  .audiowide-regular-FOOTER {
-    font-family: "Audiowide", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 12px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    color: #131211;
-  }
-
-  a:hover .animate__pulse {
-    animation: pulse 1s infinite; /* Imposta l'animazione pulse */
+  font-family: "Audiowide", cursive, sans-serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  color: var(--primary-color);
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(255, 87, 51, 0.2);
 }
 
-/* La definizione dell'animazione pulse */
+.audiowide-regular-TEXT {
+  font-family: "Audiowide", cursive, sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.4rem, 3.5vw, 1.85rem);
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.audiowide-regular-TEXT1 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: var(--text-main);
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(10px);
+}
+
+.header-logo {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.header-subtitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.header-badge {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: "Audiowide", cursive, sans-serif;
+}
+
+/* Link stilizzati */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Sezioni a card */
+.card-section {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(8px);
+  transition: var(--transition-fast);
+}
+
+.card-section:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--card-border);
+}
+
+/* Callout Obsidian */
+.obsidian-box {
+  border-left: 5px solid #7c3aed;
+  background: rgba(248, 245, 255, 0.95);
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.obsidian-icon {
+  background: #7c3aed;
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
+}
+
+.obsidian-content h3 {
+  color: #5b21b6;
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+
+.obsidian-content p {
+  color: #374151;
+  font-size: 0.98rem;
+}
+
+.obsidian-link {
+  color: #7c3aed;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.obsidian-link:hover {
+  color: #5b21b6;
+}
+
+/* Presentazione Griglia Materie */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.subject-item {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid var(--primary-color);
+  padding: 0.95rem 1.25rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: var(--transition-fast);
+}
+
+.subject-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-color);
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 6px 14px rgba(255, 87, 51, 0.15);
+}
+
+.subject-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--badge-bg);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.subject-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.subject-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.subject-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
+}
+
+/* Box altre materie */
+.other-subjects-box {
+  background: var(--primary-light);
+  border: 1px dashed var(--primary-color);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.35rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.other-subjects-icon {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.other-subjects-text {
+  font-size: 0.98rem;
+  color: #431407;
+}
+
+.other-subjects-text strong {
+  color: var(--primary-color);
+}
+
+/* Sezione Download */
+.download-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 245, 242, 0.95));
+  border: 1px solid var(--card-border);
+}
+
+.download-info {
+  flex: 1 1 320px;
+}
+
+.download-info p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+}
+
+.download-action {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #24292f;
+  color: #ffffff !important;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: var(--transition-fast);
+  text-decoration: none !important;
+}
+
+.btn-github:hover {
+  background: #111417;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.folder-icon {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12));
+}
+
+.folder-icon:hover {
+  animation: pulse 1s infinite;
+}
+
+/* Animazione pulsante */
+a:hover .animate__pulse,
+.animate__pulse:hover {
+  animation: pulse 1s infinite;
+}
+
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
+/* Footer elegante e non sovrapposto */
+.footer-container {
+  width: 100%;
+  padding: 1.75rem 1rem;
+  background: rgba(255, 255, 255, 0.92);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 2rem;
+  backdrop-filter: blur(8px);
+}
 
+.footer-container a {
+  color: var(--primary-color);
+}
+
+.audiowide-regular-FOOTER {
+  font-family: "Audiowide", cursive, sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 640px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
   
+  .header-subtitle {
+    justify-content: center;
+  }
+
+  .main-wrapper {
+    padding: 1.25rem 1rem;
+  }
+
+  .card-section {
+    padding: 1.25rem 1rem;
+  }
+
+  .subjects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .download-card {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .download-action {
+    justify-content: center;
+  }
+
+  .obsidian-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
