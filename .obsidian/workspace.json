@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "84159a3fd4a57c7c",
+        "id": "e3db78d987207c8b",
         "type": "tabs",
         "children": [
           {
-            "id": "3348c60701b14c68",
+            "id": "7a8e3f770558f3a0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
+                "file": "UNI/Terzo_anno/Embededd System/Lezioni/4 12_ottobre.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Da Sapere"
-            }
-          },
-          {
-            "id": "7b7b75ace460cfa0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Callouts.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Callouts"
+              "title": "4 12_ottobre"
             }
           }
         ]
@@ -184,8 +170,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3348c60701b14c68",
+  "floating": {
+    "id": "d38f8b2d4b89866e",
+    "type": "floating",
+    "children": [
+      {
+        "id": "e8ced0c5706d150f",
+        "type": "window",
+        "children": [
+          {
+            "id": "97ca50589f68a29e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f5cc5ca0db8f82b4",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "UNI/Terzo_anno/Embededd System/file_condivisi/5_ExtInterrupt_handsout.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "5_ExtInterrupt_handsout"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": -1,
+        "y": -1,
+        "width": 1538,
+        "height": 434,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "7a8e3f770558f3a0",
   "lastOpenFiles": [
+    "UNI/Terzo_anno/Embededd System/file_condivisi/5_ExtInterrupt_handsout.pdf",
+    "UNI/Terzo_anno/Embededd System/Lezioni/4 12_ottobre.md",
+    "UNI/Terzo_anno/Embededd System/file_condivisi/1_Introduction_handsout.pdf",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261018120812.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261018115902.png",
+    "UNI/Terzo_anno/Embededd System/Lezioni/3 9_ottobre_26.md",
+    "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
+    "UNI/Callouts.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261017112004.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261017111737.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261017102402.png",
@@ -194,27 +225,18 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261017095412.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261017095258.png",
     "UNI/Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
-    "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
-    "UNI/Callouts.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261016195142.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261016194622.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261016193127.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261016192959.png",
     "UNI/Terzo_anno/IoT/Senza nome.md",
     "UNI/Terzo_anno/IoT/Rielaborazioni",
-    "UNI/Terzo_anno/Embededd System/Lezioni/3 9_ottobre_26.md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Riassunto KS PARTI MANCANTI (fare da slide).md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Riassunto_KSP-1.pdf",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/java.md",
-    "UNI/Terzo_anno/Embededd System/file_condivisi/5_ExtInterrupt_handsout.pdf",
     "UNI/Terzo_anno/IoT/C/Hello_world/test/README",
     "UNI/Terzo_anno/IoT/C/Hello_world/src/main.cpp",
     "UNI/Terzo_anno/IoT/C/Hello_world/lib/README",
     "UNI/Terzo_anno/IoT/C/Hello_world/include/README",
     "UNI/Terzo_anno/IoT/C/Hello_world/test",
     "UNI/Terzo_anno/IoT/C/Hello_world/src",
-    "UNI/Terzo_anno/IoT/C/Hello_world/platformio.ini",
-    "UNI/Terzo_anno/Embededd System/Lezioni/4 12_ottobre.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/2 2_ottobre_26.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/Piano di studi Terzo Anno.md",
     "Senza nome.md",
