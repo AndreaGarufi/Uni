@@ -170,43 +170,6 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "d38f8b2d4b89866e",
-    "type": "floating",
-    "children": [
-      {
-        "id": "e8ced0c5706d150f",
-        "type": "window",
-        "children": [
-          {
-            "id": "97ca50589f68a29e",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "f5cc5ca0db8f82b4",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "UNI/Terzo_anno/Embededd System/file_condivisi/5_ExtInterrupt_handsout.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "5_ExtInterrupt_handsout"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": -1,
-        "y": -1,
-        "width": 1538,
-        "height": 434,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "7a8e3f770558f3a0",
   "lastOpenFiles": [
     "UNI/Terzo_anno/Embededd System/file_condivisi/5_ExtInterrupt_handsout.pdf",
