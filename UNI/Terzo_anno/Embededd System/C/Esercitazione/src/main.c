@@ -146,6 +146,10 @@
             centesimi = 0;
         }
 
+        if(secondi == 100){
+            secondi = 0;
+        }
+
         //printf("Secondi: %d, centesimi: %d.\n",secondi,centesimi);
 
     }
