@@ -238,11 +238,90 @@ void loop() {
 
 
 ---
-##### Tecnologia NFC
-L'NFC è l'evoluzione di High Frequency RFID. 
+##### Tecnologia NFC (Near Field Communication)
+L'NFC è l'evoluzione di High Frequency RFID. Possiamo quindi dire che NFC sia un sottoinsieme di RFID.
+- NFC funziona ad una frequenza di **13.56 MHz**.
+- A differenza degli RFID normali, un dispositivo NFC può essere un reader, un tag o tutti e 2 (ad esempio lo smartphone).
+![[Pasted image 20261021164630.png|341]]
 
+- Il range di comunicazione così piccolo non è un problema ma bensì una feature.
+
+**Possibili utilizzi**
+- Un telefono può leggere/scrivere un tag NFC passivo.
+- Card Emulation, ovvero un dispositivo come un telefono può emulare il comportamento del tag di una carta di credito (pagamenti contactless).
+- 2 dispositivi NFC possono scambiarsi dei dati.
+
+**Tipologie di comunicazione NFC**
+
+2 dispositivi NFC possono comunicare in 2 modalità diverse in base alla tipologia di tag:
+- *Comunicazione Passiva*
+  Solo un dispositivo è dotato di alimentazione propria e il tag passivo comunica tramite "load modulation" ovvero per comunicare assorbe più o meno energia (fornita dal reader) e quindi ne riflette di più o di meno (se assorbe di più rifletterà di meno e quindi magari è uno 0).
+- *Comunicazione Attiva*
+  Entrambi i dispositivi sono dotati di alimentazione propria e quindi ognuno emette onde elettromagnetiche per comunicare, quando uno comunica l'altro sta in ricezione e viceversa.
+
+**Standard di NFC**
+![[Pasted image 20261021170257.png|720]]
 
 
 ---
 
-La comunicazione wireless è half duplex e volendo è anche broadcast, usando (l'aria) un canale condiviso
+##### Il frame NFC -> NDEF (NFC Data Exchange Format)
+Analizziamo l'immagine:
+![[Pasted image 20261021170738.png|606]]
+
+NDEF message -> non è altro che il messaggio che contiene vari record
+Ora analizziamo la struttura del record:
+- *Header 1 Byte* -> un byte di controllo che contiene vari flag al suo interno:
+  - *MB* -> message begin: vale 1 se è il primo record del messaggio
+  - *ME* -> message end: vale 1 se è l'ultimo record del messaggio
+  - *CF* -> chunk flag: vale 1 se il payload del messaggio è frammentato in più record consecutivi
+  - *SR* -> short record: se vale 1 il campo payload length è di solo 1 byte
+  - *IL* -> ID length present: Se vale 1, segnala che il campo ID LENGTH (e il successivo campo ID) è presente nel record.
+  - *TNF* -> Type Name Format: bit che specificano come interpretare la struttura del campo TYPE
+- *Type length 1 Byte* -> indica la lunghezza in byte del campo type
+- *Payload length 1 o 4 Byte* -> indica la dimensione del payload
+- *ID length 0 o 1 byte* -> è presente solo se il campo IL è 1
+- *Type* -> Definisce il tipo di dati contenuti (es. "U" per URI/URL, "T" per testo formattato, oppure tipi MIME come text/vcard)
+- *ID* -> Identificatore univoco del record (utilizzato per correlare record multipli)
+- *Payload* -> i dati effettivi
+
+---
+##### Struttura interna di un tag NFC
+I tag RFID erano organizzati in settori e blocchi, i tag NFC sono organizzati in pagine, ogni pagina è composta da 4 byte.
+![[Pasted image 20261021172457.png]]
+
+Le pagine disponibili iniziano dalla 3 perche le altre sono riservate dal costruttore per inserire i propri dati.
+
+---
+![[Pasted image 20261021172745.png|655]]
+
+---
+
+##### WLAN (Wireless LAN)
+La comunicazione wireless è half duplex e volendo è anche broadcast, usando (l'aria) un canale condiviso.
+
+Una *WLAN* connette in maniera wireless e quindi usando le onde radio i device all'interno di una certa area come una stanza, una casa, un ufficio. Per accedere ad internet una WLAN utilizza un gateway (solitamente un router come quello di casa).
+
+L'IEEE 802.11 è lo standard internazionale che definisce come devono essere organizzate le comunicazione wireless a corto raggio.
+
+![[Pasted image 20261021174135.png|535]]
+
+![[Pasted image 20261021174204.png|333]]
+
+
+**Tipologie di reti WLAN**
+![[Pasted image 20261021174300.png|177]]
+I client parlano tra di loro solo attraverso l'access point (normale rete casalinga o di ufficio).
+
+![[Pasted image 20261021174351.png|180]]
+I dispositivi parlano direttamente tra di loro.
+
+![[Pasted image 20261021174453.png|183]]
+Gli access point sono connessi tra loro in maniera wireless anziché con un cavo.
+
+![[Pasted image 20261021174528.png|185]]
+Ogni nodo inoltra i frame per gli altri.
+
+**Versioni di WI-FI**
+![[Pasted image 20261021174746.png|720]]
+
