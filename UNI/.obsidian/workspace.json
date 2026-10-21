@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c23ba17c100e7ecb",
+        "id": "3c10c6fed826fa1f",
         "type": "tabs",
         "children": [
           {
-            "id": "44e8dd50b2fa353a",
+            "id": "9c0b9c89a90703fe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
+                "file": "Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Link_Slide"
+              "title": "Da Sapere"
             }
           }
         ]
@@ -184,33 +184,35 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "4371091dceb8cd7d",
+  "active": "9c0b9c89a90703fe",
   "lastOpenFiles": [
-    "Terzo_anno/Embededd System/file_condivisi/4_Electronics_handsout.pdf",
+    "Terzo_anno/Embededd System/Lezioni/4 12_ottobre.md",
+    "Terzo_anno/Embededd System/file_condivisi/6_Display_handsout.pdf",
+    "Terzo_anno/Embededd System/C/esercizio/test/README",
+    "Terzo_anno/Embededd System/C/esercizio/lib/README",
+    "Terzo_anno/Embededd System/C/esercizio/include/README",
+    "Terzo_anno/Embededd System/C/esercizio/src/main.c",
+    "Terzo_anno/Embededd System/C/esercizio/lib",
+    "Terzo_anno/Embededd System/C/esercizio/platformio.ini",
+    "Terzo_anno/Embededd System/C/esercizio/test",
+    "Terzo_anno/Embededd System/C/esercizio/src",
+    "Terzo_anno/Embededd System/C/esercizio/include",
+    "formule_calcolo_rarita_iconicita.md",
+    "Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
+    "Propedeuticità.md",
     "Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
-    "Terzo_anno/IoT/Rielaborazioni",
-    "Terzo_anno/IoT/C/Led_Buttons_Display/test/README",
-    "Terzo_anno/IoT/C/Led_Buttons_Display/src/main.cpp",
-    "Terzo_anno/IoT/C/Led_Buttons_Display/lib/README",
-    "Terzo_anno/IoT/C/Led_Buttons_Display/include/README",
-    "Terzo_anno/IoT/C/Led_Buttons_Display/test",
-    "Terzo_anno/IoT/C/Led_Buttons_Display/src",
-    "Terzo_anno/IoT/C/Led_Buttons_Display/platformio.ini",
-    "Terzo_anno/IoT/C/Led_Buttons_Display/lib",
-    "Terzo_anno/IoT/C/Led_Buttons_Display/include",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261018120812.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261018115902.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261017112004.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261017111737.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261017102402.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261017102342.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261017101528.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261017095412.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261017095258.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261016195142.png",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Riassunto KS PARTI MANCANTI (fare da slide).md",
     "Terzo_anno/Embededd System/Lezioni/3 9_ottobre_26.md",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261014111826.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261013143438.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261013143421.png",
-    "Terzo_anno/Embededd System/Lezioni/4 12_ottobre.md",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261011182213.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261011122119.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261011121904.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261011121414.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261011120948.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261011120430.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261011114500.png",
     "Terzo_anno/TAP/Lezioni/2 Docker.md",
     "Terzo_anno/TAP/RepoClonataEsempio/node-bulletin-board/bulletin-board-app/readme.md",
     "Terzo_anno/TAP/RepoClonataEsempio/node-bulletin-board/README.md",
@@ -226,12 +228,9 @@
     "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
     "Solar Panel.md",
     "!raceCondition.c.md",
-    "Propedeuticità.md",
     "Piano di studi Terzo Anno.md",
     "Project ideas.md",
     "Cose da fare.md",
-    "CAR SPOTTER.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/1_LAB_30_aprile.md",
-    "CAR SPOTTING DATABASE.md"
+    "CAR SPOTTER.md"
   ]
 }

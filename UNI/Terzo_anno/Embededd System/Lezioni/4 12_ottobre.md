@@ -1,6 +1,6 @@
 # **Interrupt**
 
-Ogni linea di ingresso digitale puo attivare un **IRQ** (interruzione hardware).
+Ogni linea di ingresso digitale può attivare un **IRQ** (interruzione hardware).
 Ad esempio con la pressione di un pulsante o la lettura di un sensore.
 L'interruzione non deve essere attiva continuamente ma solo in determinati casi.
 Un IRQ può essere configurato per essere attivato:
