@@ -325,3 +325,52 @@ Ogni nodo inoltra i frame per gli altri.
 **Versioni di WI-FI**
 ![[Pasted image 20261021174746.png|720]]
 
+**Banda WI-FI a 2.4 GHz**
+![[Pasted image 20261021223041.png|598]]
+
+**Spettro complessivo**: La banda va da $2400\text{ MHz}$ a $2483.5\text{ MHz}$
+
+Lo spettro è diviso in 13 canali (14 per il Giappone), e la spaziatura tra ogni canale dista 5 MHz, il segnale emanato non è una singola linea che ricade precisamente al centro di ogni canale (canale 1, canale 2 ecc...) ma ha un ampiezza più grande, circa 20-22 MHz, per questo motivo i canali si sovrappongono tra loro creando interferenze tra di loro, è opportuno quindi scegliere dai canali che non si sovrappongono (dalla figura notiamo che il canale 3 si sovrappone dal canale 1 fino al quasi al 6) l'unica combo di canali che non si sovrappongono tra loro sono l'1 il 6 e l'11. 
+
+La frequenza a 2.4 GHz è condivisa tra più standard perché è una frequenza libera, banalmente questa banda è la stessa del Bluetooth di Zigbee o dei forni a microonde.
+
+---
+
+##### CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)
+A differenza delle reti cablate Ethernet che usano **CSMA/CD** (Collision _Detection_), nel wireless un'antenna **non può ascoltare l'aria mentre sta trasmettendo**. Poiché il segnale inviato localmente oscurerebbe qualsiasi segnale in arrivo, le collisioni sull'etere risultano "invisibili" per chi trasmette.
+
+Non potendo rilevare le collisioni al volo, il protocollo deve fare di tutto per **evitarle preventivamente** (_Collision Avoidance_):
+Analizziamo la time line del protocollo:
+![[Pasted image 20261021224838.png]]
+
+- **Listen first (Carrier Sense)**: Il mittente ascolta prima il canale per verificare se sia libero.
+- **Attesa DIFS e Random Backoff**: Se il canale è o è diventato libero, non trasmette subito ma attende un intervallo prefissato (DIFS) più un tempo casuale (backoff).
+- **ACK obbligatorio**: Per ogni frame unicast inviato correttamente, il ricevente deve restituire un riscontro (**ACK**) dopo un intervallo chiamato **SIFS**. Se il mittente non riceve l'ACK, presuppone che ci sia stata una collisione o una perdita di segnale e pianifica un reinvio.
+
+*Come funziona il timer di backoff?*
+Si sceglie un intervallo che va da 0 a $CW$ (Contention Window), il contatore viene decrementato solo fino a quando il canale è libero, se viene rilevato come occupato il time si blocca, e riprenderà solo quando il canale si libera di nuovo. Ad ogni fallimento di trasmissione (mancata ricezione di un ACK), la finestra di contesa $CW$ raddoppia, questo riduce di molto la probabilità che 2 nodi trasmettano di nuovo nello stesso istante.
+**Priorità dell'ACK ($\text{SIFS} < \text{DIFS}$)**: Poiché l'intervallo SIFS è **più corto** dell'intervallo DIFS, il ricevente ha la garanzia di poter inviare l'ACK senza essere interrotto da altre stazioni che vogliono iniziare una nuova trasmissione (le quali devono aspettare almeno DIFS).
+
+*Questo protocollo (come praticamente tutto nelle comunicazione wireless) confida nel fatto che la probabilità di scontri si abbassi, quindi va un po' a fortuna*
+
+---
+##### Problema del nodo nascosto (hidden node)
+![[Pasted image 20261021225507.png|375]]
+Come vediamo dall'immagine sia il nodo A che il nodo C hanno nel raggio di comunicazione l'access point ma non l'altro nodo.
+Quando devono comunicare utilizzano CSMA/CA, quindi partono dall'ascoltare il canale e dato che non si "sentono tra loro" crederanno che il canale sia vuoto, se comunicano nello stesso istante collidono.
+
+*Soluzione: meccanismo RTS/CTS*
+Per evitare queste collisioni "invisibili", si introduce una handshake di prenotazione del canale:
+
+- RTS (Request To Send): il nodo A prima di parlare manda un pacchetto RTS all'access point, per chiedere se può comunicare,
+- CTS (Clear To Send): se l'AP è disponibile manda un' ACK chiamato CTS, e dato che AP raggiunge sia A che C, C noterà questo pacchetto CTS (C sa che non ha mandato lui RTS) quindi non comunicherà. (ricordiamo che il mezzo non è cablato ma è l'aria quindi le onde si propagano a 360 gradi).
+
+- Ogni frame (inclusi RTS e CTS) contiene un campo **Duration** che specifica per quanto tempo il canale rimarrà occupato per completare lo scambio di dati.
+- Quando C intercetta il CTS trasmesso dall'AP, legge questo valore e imposta un timer interno chiamato *NAV (Network Allocation Vector)*.
+- Durante tutta la durata del NAV, C starà in silenzio facendo quello che viene chiamato Virtual Sense Carrier.
+![[Pasted image 20261021230103.png|490]]
+
+Il sistema RTS/CTS implica una certa quantità di overhead (messaggi in più in questo caso), quindi non è sempre conveniente, infatti *quando si devono scambiare piccoli frame questo sistema non viene usato,* *conviene invece usarlo quando il frame da mandare o comunque il messaggio è più grande*, perché stare sicuri di evitare collisioni in questo caso è più conveniente anche aggiungendo overhead.
+
+---
+##### Frame WI-FI
