@@ -237,3 +237,12 @@ void loop() {
 ```
 
 
+---
+##### Tecnologia NFC
+L'NFC è l'evoluzione di High Frequency RFID. 
+
+
+
+---
+
+La comunicazione wireless è half duplex e volendo è anche broadcast, usando (l'aria) un canale condiviso
