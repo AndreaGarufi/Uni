@@ -1,4 +1,8 @@
 #include "stm32_unict_lib.h"
+#include <stdio.h>
+#include <stdbool.h>
+
+bool start = false;
 
 void setup(void)
 {
@@ -6,8 +10,9 @@ void setup(void)
     // configure the clock @ 84 MHz
     GPIO_init(GPIOB); // initialize port B
     GPIO_init(GPIOC); // initialize port C
-    GPIO_config_output(GPIOB, 0); // configure pin PB0 as output
-    GPIO_config_output(GPIOC, 3); // configure pin PB3 as output
+    GPIO_config_output(GPIOB, 0); // configure pin PB0 as output    led rosso
+    GPIO_config_output(GPIOC, 2); // configure pin PC2 as output    led giallo
+    GPIO_config_output(GPIOC, 3); // configure pin PC3 as output    led verde
 
     GPIO_config_input(GPIOB, 10); // configure pin PB10 as input
     GPIO_config_input(GPIOB, 4); // configure pin PB4 as input
@@ -25,10 +30,30 @@ void setup(void)
     EXTI_enable(EXTI6, FALLING_EDGE);
 }
 
+void startSemaforo(bool start){
+    
+    if(start == true){
+        GPIO_write(GPIOB,0,1);
+        delay_ms(2000);
+        GPIO_write(GPIOB,0,0);
+
+        GPIO_write(GPIOC,2,1);
+        delay_ms(2000);
+        GPIO_write(GPIOC,2,0);
+
+        GPIO_write(GPIOC,3,1);
+        delay_ms(2000);
+        GPIO_write(GPIOC,3,0);
+
+    }
+
+}
+
 void EXTI15_10_IRQHandler(void)
 {
     if (EXTI_isset(EXTI10)) {
         // pushbutton X
+        start = !start;
         EXTI_clear(EXTI10);
     }
 }
@@ -56,8 +81,8 @@ void EXTI9_5_IRQHandler(void)
 
 void loop(void)
 {
-    delay_ms(200);
-    GPIO_toggle(GPIOC, 3);
+    startSemaforo(start);
+    
 }
 
 int main()
