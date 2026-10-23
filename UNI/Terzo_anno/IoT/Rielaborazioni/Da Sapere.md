@@ -370,7 +370,38 @@ Per evitare queste collisioni "invisibili", si introduce una handshake di prenot
 - Durante tutta la durata del NAV, C starà in silenzio facendo quello che viene chiamato Virtual Sense Carrier.
 ![[Pasted image 20261021230103.png|490]]
 
-Il sistema RTS/CTS implica una certa quantità di overhead (messaggi in più in questo caso), quindi non è sempre conveniente, infatti *quando si devono scambiare piccoli frame questo sistema non viene usato,* *conviene invece usarlo quando il frame da mandare o comunque il messaggio è più grande*, perché stare sicuri di evitare collisioni in questo caso è più conveniente anche aggiungendo overhead.
+Il sistema RTS/CTS implica una certa quantità di over-head (messaggi in più in questo caso), quindi non è sempre conveniente, infatti *quando si devono scambiare piccoli frame questo sistema non viene usato,* *conviene invece usarlo quando il frame da mandare o comunque il messaggio è più grande*, perché stare sicuri di evitare collisioni in questo caso è più conveniente anche aggiungendo over-head.
 
 ---
 ##### Frame WI-FI
+![[Pasted image 20261023190112.png|720]]
+
+L'Header del frame Wi-Fi può variare da 24 a 36 Byte.
+
+- *FC* -> Frame Control 2 Byte: contiene i metadati fondamentali per il controllo del frame (sotto le specifiche).
+- *DUR* -> Duration 2 Byte: specifica il tempo in microsecondi necessario per riservare il canale wireless. Viene usato dalle altre stazioni per aggiornare il NAV del CSMA/CA.
+- *Address 1,2,3* -> 6 Byte ciascuno: tre indirizzi MAC obbligatori (es. Receiver Address, Transmitter Address, BSSID/Source Address).
+- *Seq* -> Sequence Control 2 Byte: gestisce il numero di sequenza del frame e il frammento, per riordinare i pacchetti e rilevare duplicati.
+- *Address 4* -> 6 Byte: utilizzato principalmente nei collegamenti bridge wireless quando sia la sorgente originale che la destinazione finale sono al di fuori dell'AP trasmettitore/ricevitore.
+- *QoS* -> 2 Byte e *HT* -> 4 byte: entrambi opzionali, campi aggiunti negli standard più recenti (802.11e/n/ac/ax) per la gestione della qualità del servizio (priorità del traffico) e per funzionalità ad alto rendimento (High Throughput).
+- *Frame Body* -> 0-2304 Byte: è il payload.
+- *FCS* -> Frame Check Sequence 4 Byte: Codice di controllo della ridondanza ciclica (CRC-32) per rilevare eventuali errori di trasmissione sul canale radio.
+
+Dettaglio del campo FC:
+- **Protocol**: Versione del protocollo 802.11.
+- **Type (2 bit)** & **Subtype (4 bit)**: Identificano in modo univoco il tipo preciso di frame.
+- **To DS / From DS**: Flag che indicano se il frame è diretto a o proviene dal _Distribution System_ (la rete cablata dietro l'Access Point).
+- **More frag**: Indica se il frame corrente è seguito da altri frammenti.
+- **Retry**: Impostato a `1` se il frame è una ritrasmissione di un frame precedente non confermato.
+- **Pwr mgt**: Stato di gestione dell'energia (Power Save) del dispositivo.
+- **More data**: Rileva se l'AP ha ulteriori frame memorizzati nel buffer per una stazione in modalità risparmio energetico.
+- **Protected**: Indica se il payload è crittografato (es. WPA2/WPA3).
+- **+HTC**: Segnala la presenza del campo opzionale High Throughput Control nell'header.
+
+Vediamo il campo Type:
+![[Pasted image 20261023192110.png]]
+
+- Management -> Usati per la gestione e l'esplorazione della rete.
+- Control -> Usati per coordinare l'accesso al canale e confermare la ricezione.
+- Data -> Usati per il trasporto effettivo del traffico utente.
+

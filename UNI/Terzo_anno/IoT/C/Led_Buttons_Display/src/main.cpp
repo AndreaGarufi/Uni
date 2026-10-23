@@ -23,11 +23,10 @@ void setup() {
   
   digitalWrite(LED_RED, LOW);
   digitalWrite(LED_GREEN, LOW);
-  display->println("LEDs spenti.");
+  display->println("LEDs spenti.");   //la println cosi come la printf o la print scrivono sul buffer di memoria, quindi serve mettere la funzione sotto
+  display->display();                  //perché scuota il buffer e quindi stampa a schermo
 
-  display->display();
-
-  buttons->onBtn1Release(pulsanteOnePremuto);
+  buttons->onBtn1Release(pulsanteOnePremuto); //onBtn1Release funzione della libreria che quando si verifica l'evento (bt1 rilasciato) esegue la funzione tra parentesi
   buttons->onBtn2Release(pulsanteDosPremuto);
   display->println("Pulsanti Configurati.");
   display->display();
@@ -41,7 +40,7 @@ void setup() {
 
 void loop() {
 
-  buttons->update();
+  buttons->update();    //come fa onBtn1Release a capire in che stato è il pulsante? update() nella loop controlla continuamente lo stato dei pulsanti e in caso richiama quelle funzioni associate
 
 
 
