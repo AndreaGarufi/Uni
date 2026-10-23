@@ -1,15 +1,15 @@
 #include <iot_board.h>
 #include <WiFi.h>
 
-const char *ssid = "ARSLab-IoT_2G";
-const char *password = "arslabiot";
+//const char *ssid = "ARSLab-IoT_2G";
+//const char *password = "arslabiot";
 
-//const char *ssid = " Galaxy S21 5G";
-//const char *password = "campobasso12345";
+const char *ssid = " Galaxy S21 5G";
+const char *password = "campobasso12345";
+
 
 void onWiFi(WiFiEvent_t event, WiFiEventInfo_t info) {
-  display->clearDisplay();
-  display->setCursor(0,0);
+
   switch (event) {
     case ARDUINO_EVENT_WIFI_STA_CONNECTED:
       display->println("Associated to the AP");
@@ -34,17 +34,8 @@ void setup() {
   IoTBoard::init_display();
   IoTBoard::init_leds();
   
-
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
-  //WiFi.begin(ssid,password);    
-  WiFi.onEvent(onWiFi);
-  
-  //display->printf("Connessione in corso a: \n %s\n.", ssid);
-  //display->display();  
-  
-  //mi sono collegato
-
 
   int numeroReti = WiFi.scanNetworks();
 
@@ -57,7 +48,18 @@ void setup() {
 
   }
   WiFi.scanDelete();
-  delay(10000);
+  delay(1000);  
+
+  display->clearDisplay();
+  display->setCursor(0,0);
+
+  display->printf("Connessione in corso a: \n %s\n", ssid);
+  display->display();
+
+  WiFi.onEvent(onWiFi);
+  WiFi.begin(ssid,password);    
+  
+  
 
 
 }

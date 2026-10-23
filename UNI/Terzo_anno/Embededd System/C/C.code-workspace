@@ -1,23 +1,20 @@
 {
 	"folders": [
 		{
-			"name": "prog1_ledAccendiSpegni",
-			"path": "prog1_ledAccendiSpegni"
+			"path": "../../IoT/C"
 		},
 		{
-			"name": "prog2_secondoProg",
-			"path": "prog2_secondoProg"
+			"name": "Led_Buttons_Display",
+			"path": "../../IoT/C/Led_Buttons_Display"
 		},
 		{
-			"name": "prog3_terzoProg",
-			"path": "prog3_terzoProg"
+			"name": "prova",
+			"path": "../../IoT/C/prova"
 		},
 		{
-			"name": "Prova1",
-			"path": "../../../../../../Documents/PlatformIO/Projects/Prova1"
+			"name": "WIFI",
+			"path": "../../IoT/C/WIFI"
 		}
 	],
-	"settings": {
-		"C_Cpp.default.configurationProvider": "platformio.platformio-ide"
-	}
+	"settings": {}
 }
