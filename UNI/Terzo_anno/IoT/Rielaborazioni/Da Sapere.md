@@ -469,6 +469,9 @@ Ci sono delle funzioni come:
 > - Negli esercizi spesso inseriremo manualmente nel codice SSID e password da fornire alla funzione begin, ma nei casi reali si usa il provisioning, ovvero si utilizzano vari metodi per fornire tutto il necessario (vedi sopra punti di forza e debolezze del wifi per IoT)
 > - Bisogna sempre usare un timeout in modo da non bloccare il flusso di esecuzione all'infinito in caso di credenziali errate o impossibilità a connettersi
 
+- `WiFi.disconnet()`
+
+
 **Eventi WiFi**
 Gli **eventi Wi-Fi** sono notifiche generate dall'ESP32 per avvisare il programma quando cambia lo stato della connessione o della radio Wi-Fi.
 Invece di obbligare il programma ad attendere o a fare _polling_ continuo nel `loop()` (ovvero controllare continuamente se la rete è connessa o disconnessa), l'ESP32 avvisa l'applicazione **solo quando si verifica un cambiamento**.
