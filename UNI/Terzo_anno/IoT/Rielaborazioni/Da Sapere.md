@@ -405,3 +405,182 @@ Vediamo il campo Type:
 - Control -> Usati per coordinare l'accesso al canale e confermare la ricezione.
 - Data -> Usati per il trasporto effettivo del traffico utente.
 
+---
+##### Connessione di un client ad un access point (AP)
+La connessione si divide in 4 fasi:
+1) *Discovery*: individuazione della rete -> può avvenire in maniera attiva o passiva
+   - Passive scan: la station ascolta i frame di beacon mandati periodicamente dagli AP, che contengono informazioni come SSID, parametri di sicurezza ecc...
+   - Active scan: la station invia un frame di *Probe request* per cercare delle reti e l'AP risponde con una *Probe response* contenente i dettagli della rete
+   
+2) *Auth + association*: autenticazione e associazione -> si compone di 2 fasi
+   - Autenticazione: La Station invia un frame di _Authentication (Open System)_ e l'AP risponde con _Authentication: success_. Nelle reti moderne con WPA2/WPA3 questa è un'autenticazione puramente formale (a sistema aperto).
+   - Associazione: La Station invia una *Association Request* specificando capacità e parametri di sicurezza. L'AP accetta inviando un'*Association Response* e assegnando alla Station un AID (Association Identifier).
+   - NON viene ancora usata alcuna password
+
+3) *Key Handshake*: Scambio delle chiavi di cifratura -> viene eseguito un *4-way handshake* (previsto negli standard WPA2 e WPA3). Durante questo scambio di messaggi, il client e l'AP derivano in modo sicuro le chiavi di sessione crittografiche per cifrare il traffico. **Nota importante:** Solo al termine con successo di questo handshake l'AP inizia a inoltrare i frame dati reali del client.
+
+> [! question] Nota sulla password
+> La password non viene mai inviata nell'etere ma si effettuano dei calcoli matematici in cui una delle componenti è la password e da li l'AP riesce a capire se la station che si vuole connettere ha la password giusta, in sostanza la password serve alle station e agli AP per generare dei messaggi/calcoli, la password resta "in locale" su ogni dispositivo
+
+4) *IP*: a questo punto tramite servizio DHCP la station ottiene un indirizzo IP e lo stack TCP/IP è completamente funzionante.
+
+
+Esempio di una tipica connessione:
+![[Pasted image 20261024121436.png|472]]
+
+---
+##### Sicurezza Wi-Fi
+![[Pasted image 20261024121540.png]]
+
+---
+##### Il Wi-Fi per l'IoT
+**Punti di forza**
+- Implementazione della comunicazione IP che quindi permette in maniera facile e veloce di comunicare su internet
+- L'infrastruttura è già diffusissima
+- Alto throughput, per quello che serve all'IoT almeno  
+
+**Punti di debolezza**
+- Power: le radio/antenne consumano molta energia e dato che molto spesso i dispositivi IoT sono a batteria è un problema 
+- Un AP può gestire un numero limitato di dispositivi
+- Il dispositivo ha bisogno di tutte le credenziali (*provisioning*) e fornirle non è immediato, possono essergli date in vari modi, tramite connessione bluetooth con un altro dispositivo che le ha, tramite portale web, tramite qr code ecc...
+
+---
+##### Wi-Fi su ESP32
+Vediamo ora dal punto di vista pratico come connettere l'ESP32 al Wi-Fi:
+![[Pasted image 20261024122552.png]]
+
+Un ESP32 può lavorare come station che quindi vuole connettersi, come AP o entrambi.
+
+Vediamo come collegare l'ESP32 come station ad un AP utilizzando la libreria WiFi.h:
+Ci sono delle funzioni come:
+- `bool mode(wifi_mode_t mode);` a cui possiamo fornire come parametro la modalità di utilizzo della board: 
+  - `WIFI_OFF` per disattivare l'antenna wifi
+  -  `WIFI_STA` per usare la board come station
+  - `WIFI_AP` per usare la board come AP
+  - `WIFI_AP_STA` per usare la board sia come AP che come station
+
+- `wl_status_t begin(parametri)` inizia tutta la fase per una connessione con un AP che abbiamo visto prima, la libreria fornisce diversi prototipi per questa funzione tramite overload degli operatori di C++, quella che useremo di più sarà:
+  - `wl_status_t begin(const char* ssid, const char* passphrase);` a cui passiamo SSID e password della rete a cui connettersi
+
+- `WiFi.status()` restituisce lo stato della connessione, utile quando utilizzata insieme alla costante `WL_CONNECTED` che è true se la station è associata ed ha ottenuto un IP, come in questo esempio:
+  - `while (WiFi.status() != WL_CONNECTED && millis() - t0 < 15000) delay(250);` ovvero finché il valore di `WiFi.status()` è diverso da quello di `WL_CONNECTED` resta nel ciclo.
+
+>[! abstract] Buone pratiche di programmazione
+> - Negli esercizi spesso inseriremo manualmente nel codice SSID e password da fornire alla funzione begin, ma nei casi reali si usa il provisioning, ovvero si utilizzano vari metodi per fornire tutto il necessario (vedi sopra punti di forza e debolezze del wifi per IoT)
+> - Bisogna sempre usare un timeout in modo da non bloccare il flusso di esecuzione all'infinito in caso di credenziali errate o impossibilità a connettersi
+
+**Eventi WiFi**
+Gli **eventi Wi-Fi** sono notifiche generate dall'ESP32 per avvisare il programma quando cambia lo stato della connessione o della radio Wi-Fi.
+Invece di obbligare il programma ad attendere o a fare _polling_ continuo nel `loop()` (ovvero controllare continuamente se la rete è connessa o disconnessa), l'ESP32 avvisa l'applicazione **solo quando si verifica un cambiamento**.
+C'è un elenco di eventi wifi:
+![[Pasted image 20261024142635.png|265]]
+
+La funzione gestore dell'evento viene eseguita nel task di sistema dedicato al Wi-Fi (in un thread separato). (ESP32 può fare multiprogrammazione perché è dual-core)
+È quindi importante far si che l'evento triggheri una funzione il più ottimizzata possibile e che non faccia un lavoro troppo grande per evitare rallentamenti o blocchi.
+
+Vediamo un esempio di codice per connettersi ad un AP utilizzando gli eventi:
+```
+#include <WiFi.h>
+
+const char *ssid = " Galaxy S21 5G";
+const char *password = "campobasso12345";
+
+void onWiFi(WiFiEvent_t event, WiFiEventInfo_t info) {
+  switch (event) {
+    case ARDUINO_EVENT_WIFI_STA_CONNECTED:
+      Serial.println("Associated to the AP");
+      break;
+    case ARDUINO_EVENT_WIFI_STA_GOT_IP:
+      Serial.print("IP: ");
+      Serial.println(IPAddress(info.got_ip.ip_info.ip.addr));
+      break;
+    case ARDUINO_EVENT_WIFI_STA_DISCONNECTED:
+      Serial.printf("Link lost, reason %d\n",
+                    info.wifi_sta_disconnected.reason);
+      break;                      // auto-reconnect is on
+    default:
+      break;
+  }
+}
+
+void setup() {
+  Serial.begin(115200);
+  WiFi.onEvent(onWiFi);           // un handler per tutti gli eventi
+  WiFi.begin(ssid, password);     // attesa non bloccante: gli eventi ci notificheranno lo stato
+}
+
+void loop() {
+
+}
+```
+
+Elenco di eventi WiFi triggherabili su ESP32 tramite la funzione onEvent()
+![[Pasted image 20261024143600.png|720]]
+
+---
+##### Range di connettività
+Quando si parla di IoT la distanza dall'access point non deve essere eccessiva, altrimenti la rete rallenta troppo e si perdono pacchetti.
+È utile seguire questa tabella:
+![[Pasted image 20261024143945.png|262]]
+
+Con la ESP32 possiamo fare uno scan delle reti per vedere il valore di dBm, e quindi sapere se il segnale sarà buono o no. Vediamo il codice per farlo:
+
+```
+#include <WiFi.h>
+
+void setup() {
+  Serial.begin(115200);
+  
+  WiFi.mode(WIFI_STA);
+  WiFi.disconnect();               // scansione soltanto, non effettua la connessione[cite: 2]
+
+  int numeroReti = WiFi.scanNetworks(); // scansione attiva su tutti i canali[cite: 2]
+  Serial.printf("%d reti trovate\n", numeroReti);
+
+  for (int i = 0; i < numeroReti; i++) {
+    Serial.printf("%-20s ch %2d %4d dBm %s\n",
+      WiFi.SSID(i).c_str(), 
+      (int)WiFi.channel(i),
+      (int)WiFi.RSSI(i),
+      WiFi.encryptionType(i) == WIFI_AUTH_OPEN ? "open" : "secured");
+  }
+
+  WiFi.scanDelete();               // libera la memoria con la lista dei risultati[cite: 2]
+}
+
+void loop() {
+
+}
+```
+
+---
+##### Connettività tramite softAP (Software Access Point)
+L'ESP32 può lavorare anche da AP tramite solo una configurazione software, non necessita quindi di un hardware dedicato per farlo.
+
+Vediamo un pezzo di codice che lo rende AP:
+```
+#include <iot_board.h>
+#include <WiFi.h>
+
+void setup() {
+  // IoTBoard::init_serial();
+  WiFi.mode(WIFI_AP);
+  
+  // Parametri: ssid, password, channel, hidden, max clients
+  WiFi.softAP("IoTBoard-42", "iot-lab-2026", 6, 0, 4);
+  
+  Serial.print("AP address: ");
+  Serial.println(WiFi.softAPIP());   // Indirizzo IP di default del SoftAP: 192.168.4.1
+}
+
+void loop() {
+  // Stampa il numero di client attualmente connessi alla rete SoftAP
+  Serial.printf("Clients: %d\n", WiFi.softAPgetStationNum());
+  delay(5000);
+}
+```
+Parametri in dettaglio della funzione `WiFi.softAP("IoTBoard-42", "iot-lab-2026", 6, 0, 4);`
+![[Pasted image 20261024150445.png|249]]
+
+(Basta aggiungere un web server sulla porta 80 e abbiamo un portale di configurazione, il metodo classico per dare ad un device IoT le credenziali del wifi di casa.)
+
