@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
+                "file": "UNI/Project ideas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Da Sapere"
+              "title": "Project ideas"
             }
           },
           {
@@ -200,6 +200,10 @@
   },
   "active": "7a8e3f770558f3a0",
   "lastOpenFiles": [
+    "UNI/Terzo_anno/IoT/C/credentialExample.c",
+    "UNI/Terzo_anno/IoT/C/Documento senza nome",
+    "UNI/Terzo_anno/IoT/C/ConnessioneSwitchAP/include/credentials.h",
+    "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
     "UNI/Project ideas.md",
     "UNI/Terzo_anno/IoT/C/ConnessioneSwitchAP/src/main.cpp",
     "UNI/Terzo_anno/IoT/C/ConnessioneSwitchAP/test/README",
@@ -209,9 +213,6 @@
     "UNI/Terzo_anno/IoT/C/ConnessioneSwitchAP/include/README",
     "UNI/Terzo_anno/IoT/C/ConnessioneSwitchAP/include",
     "UNI/Terzo_anno/IoT/C/ConnessioneSwitchAP/src",
-    "UNI/Terzo_anno/IoT/C/ConnessioneSwitchAP/platformio.ini",
-    "UNI/Terzo_anno/IoT/C/ConnessioneSwitchAP",
-    "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261024150445.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261024143945.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261024143600.png",
@@ -245,7 +246,6 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/18_9_giugno.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Thread in C.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/RetiConMacchineVirtuali.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Setup virtualBox.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
