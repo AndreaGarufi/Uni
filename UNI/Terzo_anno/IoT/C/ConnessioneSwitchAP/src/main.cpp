@@ -1,9 +1,7 @@
 #include <iot_board.h>
 #include <WiFi.h>
+#include "credentials.h"
 
-
-const char *ssid = " Galaxy S21 5G";
-const char *password = "campobasso12345";
 bool stampa = false;
 int numeroClient = 0;
 int previusNumeroClient = 0;
@@ -36,11 +34,11 @@ void connetti(uint8_t pinBtn){
   display->clearDisplay();
   display->setCursor(0,0);
 
-  display->printf("Connessione in corso a: %s\n", ssid);
+  display->printf("Connessione in corso a: %s\n", SECRET_SSID);
   display->display();
   
   WiFi.onEvent(onWiFi);
-  WiFi.begin(ssid,password);     
+  WiFi.begin(SECRET_SSID, SECRET_PASS);     
 
 }
 
