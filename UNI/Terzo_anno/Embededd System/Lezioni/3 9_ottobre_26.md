@@ -101,7 +101,7 @@ Altro esercizio:
   - Junction Field-Effect Transistor (JFET)
   - Metal-Oxide-Semiconductor Field-Effect Transistor (MOSFET)
 
-![[Pasted image 20261011114500.png|344]]
+![[Pasted image 20261011114500.png|402]]
 
 
 ---
@@ -110,12 +110,10 @@ Il MOSFET riceve in ingresso una tensione e restituisce in uscita una corrente.
 
 **I tre terminali (pin):**
 - **Gate (G):** il terminale di controllo (ingresso).
-    
 - **Source (S):** la sorgente di carica, spesso presa come riferimento comune.
-    
 - **Drain (D):** il terminale di scarico da cui scorre la corrente principale verso il Source.
 
-![[Pasted image 20261011120430.png|258]]
+![[Pasted image 20261011120430.png|295]]
 
 
 **Il MOSFET come interruttore digitale**
@@ -123,22 +121,23 @@ Il MOSFET riceve in ingresso una tensione e restituisce in uscita una corrente.
 
 Il MOSFET viene modellato come un classico interruttore meccanico posto tra il terminale di **Drain** e quello di **Source**, il cui stato è regolato dalla tensione di ingresso sul **Gate** ($V_{GS}$).
 
+I MOSFET sono poi utili per creare porte logiche nei circuiti
 
 **Esempio:** guidare un motore con un MCU
 - I componenti di potenza (es. motori elettrici) non possono essere pilotati direttamente da un'uscita digitale di un MCU
 - Piccolo motore elettrico:
     - Tensione di funzionamento di $6\text{ V}$, $12\text{ V}$, $24\text{ V}$, $48\text{ V}$ (e anche tensioni superiori)
-        
     - Corrente tipica nell'ordine di $100\text{ mA} - 10\text{ A}$
 
 - Uscite digitali del MCU:
     - Tensione di uscita di $5\text{ V}$ o $3.3\text{ V}$
-        
     - In grado di erogare correnti nell'ordine di $100\ \mu\text{A} - 200\text{ mA}$
         
 - Un MOSFET può essere utilizzato come **driver per motori**: attivato da un'uscita digitale, può pilotare il motore collegato nella rete **drain-source**:
 
 ![[Pasted image 20261011120948.png|310]]
+
+
 
 
 ---
@@ -164,7 +163,7 @@ Quando arriva il segnale 1 (programmato lato software) si attiva l'upper MOSFET,
 **Open-Drain**
 Qui l'unico MOSFET che resta è il lower.
 ![[Pasted image 20261011122119.png|308]]
-Quando il software scrive 1 non succede nulla ma lo stato logico deve essere mantenuto da un pull-up resistor esterno
+Quando il software scrive 1 non succede nulla e lo stato di output pin è flottante (indefinito) 
 
 Quando il software scrive 0 si attiva il lower MOSFET come nella configurazione Push-Pull
 
