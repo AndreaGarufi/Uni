@@ -587,3 +587,15 @@ Parametri in dettaglio della funzione `WiFi.softAP("IoTBoard-42", "iot-lab-2026"
 
 (Basta aggiungere un web server sulla porta 80 e abbiamo un portale di configurazione, il metodo classico per dare ad un device IoT le credenziali del wifi di casa.)
 
+---
+# **Reti Wi-Fi - MESH su ESP32**
+I dispositivi hanno antenne Wi-Fi che per costruzione e funzionamento fisico hanno una portata limitata a delle decine di metri al massimo. In una configurazione sensoristica reale i dispositivi potrebbero essere messi distanti dall'access point più vicino, è utile pensare quindi ad una tipologia di collegamento chiamato MESH che collega i dispositivi tra loro e all'AP:
+![[Pasted image 20261030123953.png]]
+
+Una rete mesh è una rete che si *organizza da sola* (i nodi si organizzano tra padri e figli in automatico) e si *ripara da sola* (se un link si rompe la rete lo rileva e si auto ripara risistemando l'albero).
+
+---
+Vedremo 3 protocolli mesh.
+
+---
+##### Rete ESP-MESH
