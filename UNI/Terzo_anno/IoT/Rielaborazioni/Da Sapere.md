@@ -599,3 +599,173 @@ Vedremo 3 protocolli mesh.
 
 ---
 ##### Rete ESP-MESH
+![[Pasted image 20261030144015.png|442]]
+
+Questa tipologia di protocollo mesh richiede obbligatoriamente che nella rete sia presente un AP, altrimenti la rete intera non si può formare. I dispositivi eleggono un nodo root che sarà l'unico a poter comunicare direttamente con il router, ogni altro nodo farà capo alla root, come tutte le reti mesh anche in questo protocollo la rete si ribilancia e ripara in autonomia.
+Un router può gestire più reti mesh indipendenti, basta cambiare il mesh-id e il mesh-pass.
+
+*Livelli di lavoro*
+- I nodi della rete ESP-MESH lavorano al livello 2 (data link layer) e non hanno quindi un indirizzo IP, la comunicazione avviene tramite MAC address, mentre la root (che è la sola connessa all'AP) lavora fino al livello 4 dello stack TCP/IP, perché lei ottiene un indirizzo IP e instrada i pacchetti verso l'AP tramite UDP. Quindi la root arriva fino al livello 3 e 4 in comunicazione out-mesh quindi verso l'AP.
+
+A livello implementativo andiamo a gestire il programma in base agli eventi:
+![[Pasted image 20261030144628.png|390]]
+
+> [!warning] Radio Wi-Fi
+> Il protocollo ESP-MESH utilizza la radio Wi-Fi della board quindi non possiamo implementare la wifi.begin() dato che l'antenna è già occupata, se l'AP a cui la rete è collegata è connesso ad internet possiamo utilizzarlo
+
+**Funzioni di send in ESP-MESH e altro**
+![[Pasted image 20261030144957.png|720]]
+
+
+Esempio:
+Supponiamo di voler creare una rete mesh e far comunicare le board con un server in ascolto (del server dobbiamo fornire indirizzo IP e porta e deve essere connesso allo stesso AP delle board).
+
+![[Pasted image 20261030183516.png]]
+
+Questo è il percorso che farà un messaggio proveniente da un nodo delle rete mesh
+- ESP-MESH utilizza *UDP* come protocollo di comunicazione 
+
+> [!info] UDP vs TCP
+> In generale per il traffico IoT è molto più utilizzato UDP rispetto a TCP proprio perché è un protocollo più leggero e più veloce
+
+Vediamo il codice:
+```
+// su linux apriamo un server in ascolto sulla porta 5000 tramite il comando: nc -ul 5000
+// (cambiare l'indirizzo ip nel codice con il nuovo e in caso le credenziali dell'AP a cui connettersi)
+
+#include <iot_board.h>
+//#include <WiFi.h>
+#include "credentials.h"
+#include <sys/socket.h>
+#include <IPAddress.h>
+
+// per connettersi alla mesh gli esp32 hanno prima bisogno di connettersi ad un AP come il router di casa o l'hotspot cellulare
+
+//const char *SSID = "ARSLab-IoT_2G";
+//const char *PASS = "arslabiot";
+
+float tempInt = temperatureRead();
+String Nome;
+String Cognome;
+
+IPAddress ipPortatile;
+
+String array[6] = {"Archimede", "Galileo", "Oppenheimer", "bello", "brutto", "cattivo"};
+
+void onMesh(const EspMeshEvent &e) {    // evento di tipo espmesh
+
+  switch (e.type)   // controlla il tipo di evento, se di tipo connected, disconnected, became root o message
+  {
+  case EspMeshEventType::Connected:
+    digitalWrite(LED_GREEN, HIGH);
+    break;
+  case EspMeshEventType::Disconnected:
+    digitalWrite(LED_GREEN, LOW);
+    digitalWrite(LED_YELLOW, LOW);
+    break;
+  case EspMeshEventType::BecameRoot:
+    digitalWrite(LED_YELLOW, HIGH);
+    break;
+  case EspMeshEventType::Message:
+    Serial.printf("From " MACSTR "\n", MAC2STR(e.from));
+  default:
+    break;
+  }
+
+}
+
+void setup() {
+
+  IoTBoard::init_serial();
+  IoTBoard::init_leds();
+  IoTBoard::init_display();
+  ipPortatile.fromString("10.21.62.233");  // diamo l'ip che in questo momento ha il portatile alla stringa ipPortatile
+
+  uint32_t var1 = esp_random() % 3;
+  uint32_t var2 = (esp_random() % 3) + 3;
+
+  Nome = array[var1];
+  Cognome = array[var2];
+
+  EspMeshConfig configMesh;             // raggruppiamo in un unica struct tutti i parametri per poter avviare la rete mesh
+  configMesh.router_ssid = SECRET_SSID; // SSID dell'AP
+  configMesh.router_pass = SECRET_PASS; // Password per connettersi ad AP
+  configMesh.on_event = onMesh;         // automaticamente chiamerà la funzione onMesh sopra quando si verifica un evento mesh
+  configMesh.forward_ip = ipPortatile;  // forniamo l'IP del portatile con cui comunicare
+  configMesh.forward_port = 5000;       // forniamo la porta su cui comunicare
+
+  IoTBoard::init_espmesh(configMesh);   // funzione di inizializzazione espmesh a cui passiamo configMesh
+
+  display->clearDisplay();
+  display->setCursor(0,0);
+  display->display();
+
+}
+
+void loop() {
+  espmesh->update();          // update di espmesh (stesso discorso di quando lo facciamo per i pulsanti)
+  tempInt = temperatureRead();
+
+  if(IoTBoard::runEvery(3000)) {
+    String messaggio = Nome + " " + Cognome + " " + String(tempInt) + "\n";
+    espmesh->sendToServer(ipPortatile, 5000, messaggio.c_str(), messaggio.length());  // noi usiamo sendToServer (UDP) perche vogliamo comunicare con il PC portatile, altrimenti se volessimo comunicare con la root avremmo fatto sendToRoot (che non prende IP e porta)
+    display->clearDisplay();
+    display->setCursor(0,0);
+    display->print(messaggio);
+    display->printf("\n");
+    display->display();
+  }
+
+}
+```
+
+---
+##### Painless Mesh
+Questa è una libreria open source per Arduino e non è basata sul protocollo ESP-MESH.
+![[Pasted image 20261030184250.png]]
+
+Painless Mesh come protocollo di rete utilizza TCP.
+
+>[!info] Come usare Painless Mesh su platformIO
+>Bisogna andare nel platform.ini e inserire questa riga:
+>lib_deps = painlessmesh/painlessMesh@^1.5.7
+
+![[Pasted image 20261030184556.png|343]]
+
+---
+Finite le reti mesh, adesso vediamo un altro protocollo di comunicazione tra dispositivi che non crea una rete mesh per comunicare, ma utilizza solo il mac address.
+
+---
+##### ESP-NOW
+Questo protocollo lavora esclusivamente a livello 2, infatti a differenza di ESP-MESH *non ha bisogno di avere una root che si connette ad un AP per funzionare*. ESP-NOW però non potrà mai andare su internet perché lavora esclusivamente al livello 2 dello stack. (l'unico modo sarebbe mandare i dati ad un server e il server li gira ad un router).
+
+I dati viaggiano quindi in un frame speciale e vengono indirizzati tramite MAC address.
+ESP-NOW è un protocollo connection less, infatti prima di inviare non effettua nessun handshake o altro.
+
+![[Pasted image 20261030192228.png|247]]
+
+**Topologie di comunicazione**
+ESP-NOW offre 3 topologie di comunicazione:
+- Punto-punto
+- 1 Trasmettitore $\rightarrow$ Più Ricevitori
+- Più Trasmettitori $\rightarrow$ 1 Ricevitore / Gateway
+
+![[Pasted image 20261030192553.png|513]]
+
+**Frame ESP-NOW**
+![[Pasted image 20261030192614.png]]
+
+Come si può vedere il frame è molto piccolo e contiene solo informazioni essenziali, questo ne favorisce a velocità e anche la distanza di comunicazione dato che con un frame piccolo le frequenze possono essere più spinte e ne migliora il raggio di comunicazione.
+
+>[!info] ACK
+>Da notare che i messaggi mandati in broadcast non richiedono ACK di conferma, mente quelli mandati in unicast si.
+
+Vediamo un codice che fa comunicare 2 schede mandando delle stringhe:
+Abbiamo quindi una parte di sender e una di receiver nello stesso programma:
+![[Terzo_anno/IoT/C/ESP_NOW/src/main.cpp]]
+
+
+---
+
+![[Pasted image 20261030193018.png]]
+
