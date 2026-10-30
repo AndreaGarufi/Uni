@@ -1,3 +1,5 @@
+//su linux apriamo un serve in ascolto sulla porta 5000 tramite il comando: nc -ul 5000
+//(cambiare l'indirizzo ip nel codice con il nuovo e in caso le credenziali dell'AP a cui connettersi)
 #include <iot_board.h>
 //#include <WiFi.h>
 #include "credentials.h"
@@ -46,7 +48,7 @@ void setup(){
   IoTBoard::init_serial();
   IoTBoard::init_leds();
   IoTBoard::init_display();
-  ipPortatile.fromString("192.168.0.125");  //diamo l'ip che in questo momento ha il portatile alla stringa ipPortatile
+  ipPortatile.fromString("10.21.62.233");  //diamo l'ip che in questo momento ha il portatile alla stringa ipPortatile
 
   uint32_t var1 = esp_random() % 3;
   uint32_t var2 = (esp_random() % 3) + 3;
