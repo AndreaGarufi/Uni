@@ -68,4 +68,8 @@ void loop() {
     timer();
   }
 
+  if(minuti == 1){  //sistemare con 60 minuti
+    
+  }
+
 }
