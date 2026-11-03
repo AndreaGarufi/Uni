@@ -5,7 +5,7 @@ Ad esempio con la pressione di un pulsante o la lettura di un sensore.
 L'interruzione non deve essere attiva continuamente ma solo in determinati casi.
 Un IRQ può essere configurato per essere attivato:
 - *Falling edge* -> si attiva solo se il segnale proveniente dalla linea di input passa da 1 a 0
-- *Risign edge* -> si attiva solo se il segnale proveniente dalla linea di input passa da 0 a 1ù
+- *Risign edge* -> si attiva solo se il segnale proveniente dalla linea di input passa da 0 a 1
 - *Both edge* -> si attiva ad ogni variazione di segnale
 
 
