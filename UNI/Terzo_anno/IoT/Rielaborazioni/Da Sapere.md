@@ -7,7 +7,7 @@ E' un ecosistema dove qualcosa ha le capacità di condividere le proprie informa
 Un oggetto completo è formato da:
 ![[Pasted image 20261016192725.png|628]]
 
-Quindi: sensori,motori,controller(CPU),antenna che puo comunicare in rete
+Quindi: sensori,motori,controller(CPU),antenna che può comunicare in rete
 
 ![[Pasted image 20261016192850.png|667]]
 
