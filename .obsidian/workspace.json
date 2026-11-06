@@ -4,37 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "4562dc53b1331385",
+        "id": "f5c884f0a5a9940a",
         "type": "tabs",
         "children": [
           {
-            "id": "1d7108ae158c0c33",
+            "id": "01e05e29eeccb2c7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Terzo_anno/Embededd System/Lezioni/5.md",
+                "file": "UNI/Terzo_anno/Embededd System/Lezioni/6.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5"
-            }
-          },
-          {
-            "id": "581a4aec5293ddc9",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "UNI/Terzo_anno/Embededd System/file_condivisi/7_BitwiseOperations.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "7_BitwiseOperations"
+              "title": "6"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -183,11 +170,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "581a4aec5293ddc9",
+  "active": "01e05e29eeccb2c7",
   "lastOpenFiles": [
-    "UNI/Terzo_anno/Embededd System/Lezioni/5.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261102201534.png",
+    "UNI/Terzo_anno/Embededd System/file_condivisi/10_TimersCCP_handsout.pdf",
     "UNI/Terzo_anno/Embededd System/file_condivisi/7_BitwiseOperations.pdf",
+    "UNI/Terzo_anno/Embededd System/Lezioni/5.md",
+    "UNI/Terzo_anno/Embededd System/Lezioni/6.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103110353.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103101545.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103101350.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103100937.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103100659.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103100533.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261102201534.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261102201132.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261102200130.png",
     "UNI/Terzo_anno/Embededd System/file_condivisi/5_ExtInterrupt_handsout.pdf",
@@ -203,13 +198,7 @@
     "UNI/Terzo_anno/IoT/C/ESP-NOW_SENDER_RECEIVER/ESP-NOW_receiver/include/README",
     "UNI/Terzo_anno/IoT/C/ESP-NOW_SENDER_RECEIVER/ESP-NOW_receiver/include",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261030193018.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261030192614.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261030192553.png",
     "Senza nome.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261030192228.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261030184556.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261030184554.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261030184250.png",
     "UNI/Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
     "Esercizio nano esp32.md",
     "UNI/Project ideas.md",
@@ -229,7 +218,6 @@
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/SISTEMI-COMPLETO.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/rielaborazioni/19_11_giugno.md",
     "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/LAB/Socket in C.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
