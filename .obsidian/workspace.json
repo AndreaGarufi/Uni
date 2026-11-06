@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "01e05e29eeccb2c7",
+            "id": "b53544a8ebf8aac8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -74,6 +74,18 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "Segnalibri"
+            }
+          },
+          {
+            "id": "01e05e29eeccb2c7",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Terzo_anno/Embededd System/file_condivisi/10_TimersCCP_handsout.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "10_TimersCCP_handsout"
             }
           }
         ]
@@ -170,12 +182,60 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "01e05e29eeccb2c7",
+  "floating": {
+    "id": "1aa6c1110b13c1d5",
+    "type": "floating",
+    "children": [
+      {
+        "id": "54246a9b5a1a50e9",
+        "type": "window",
+        "children": [
+          {
+            "id": "e5070796095e400b",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "c3608b1d66602632",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "UNI/Terzo_anno/Embededd System/file_condivisi/10_TimersCCP_handsout.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "10_TimersCCP_handsout"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 665,
+        "y": 30,
+        "width": 1042,
+        "height": 685,
+        "maximize": true,
+        "zoom": 1
+      }
+    ]
+  },
+  "active": "b53544a8ebf8aac8",
   "lastOpenFiles": [
     "UNI/Terzo_anno/Embededd System/file_condivisi/10_TimersCCP_handsout.pdf",
-    "UNI/Terzo_anno/Embededd System/file_condivisi/7_BitwiseOperations.pdf",
-    "UNI/Terzo_anno/Embededd System/Lezioni/5.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/6.md",
+    "UNI/Terzo_anno/Embededd System/C/reactionTest/src/main.c",
+    "UNI/Terzo_anno/Embededd System/C/reactionTest/test/README",
+    "UNI/Terzo_anno/Embededd System/C/reactionTest/test",
+    "UNI/Terzo_anno/Embededd System/C/reactionTest/lib/README",
+    "UNI/Terzo_anno/Embededd System/C/reactionTest/lib",
+    "UNI/Terzo_anno/Embededd System/C/reactionTest/include/README",
+    "UNI/Terzo_anno/Embededd System/C/reactionTest/include",
+    "UNI/Terzo_anno/Embededd System/C/reactionTest/src",
+    "UNI/Terzo_anno/Embededd System/C/reactionTest/platformio.ini",
+    "UNI/Terzo_anno/Embededd System/C/reactionTest",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261106211957.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261106205909.png",
+    "UNI/Terzo_anno/Embededd System/Lezioni/5.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103110353.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103101545.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103101350.png",
@@ -184,20 +244,9 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103100533.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261102201534.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261102201132.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261102200130.png",
-    "UNI/Terzo_anno/Embededd System/file_condivisi/5_ExtInterrupt_handsout.pdf",
     "UNI/Terzo_anno/Embededd System/Lezioni/4 12_ottobre.md",
-    "UNI/Terzo_anno/Embededd System/file_condivisi/6_Display_handsout.pdf",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
     "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
-    "UNI/Terzo_anno/IoT/C/ESP-NOW_SENDER_RECEIVER/ESP-NOW_receiver/src/main.cpp",
-    "UNI/Terzo_anno/IoT/C/ESP-NOW_SENDER_RECEIVER/ESP-NOW_receiver/test/README",
-    "UNI/Terzo_anno/IoT/C/ESP-NOW_SENDER_RECEIVER/ESP-NOW_receiver/test",
-    "UNI/Terzo_anno/IoT/C/ESP-NOW_SENDER_RECEIVER/ESP-NOW_receiver/lib/README",
-    "UNI/Terzo_anno/IoT/C/ESP-NOW_SENDER_RECEIVER/ESP-NOW_receiver/lib",
-    "UNI/Terzo_anno/IoT/C/ESP-NOW_SENDER_RECEIVER/ESP-NOW_receiver/include/README",
-    "UNI/Terzo_anno/IoT/C/ESP-NOW_SENDER_RECEIVER/ESP-NOW_receiver/include",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261030193018.png",
     "Senza nome.md",
     "UNI/Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
     "Esercizio nano esp32.md",
