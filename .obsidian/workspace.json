@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b53544a8ebf8aac8",
+            "id": "9e05d09f0bfb1607",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -182,57 +182,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "1aa6c1110b13c1d5",
-    "type": "floating",
-    "children": [
-      {
-        "id": "54246a9b5a1a50e9",
-        "type": "window",
-        "children": [
-          {
-            "id": "e5070796095e400b",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "c3608b1d66602632",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "UNI/Terzo_anno/Embededd System/file_condivisi/10_TimersCCP_handsout.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "10_TimersCCP_handsout"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 665,
-        "y": 30,
-        "width": 1042,
-        "height": 685,
-        "maximize": true,
-        "zoom": 1
-      }
-    ]
-  },
-  "active": "b53544a8ebf8aac8",
+  "active": "9e05d09f0bfb1607",
   "lastOpenFiles": [
     "UNI/Terzo_anno/Embededd System/file_condivisi/10_TimersCCP_handsout.pdf",
     "UNI/Terzo_anno/Embededd System/Lezioni/6.md",
-    "UNI/Terzo_anno/Embededd System/C/reactionTest/src/main.c",
-    "UNI/Terzo_anno/Embededd System/C/reactionTest/test/README",
-    "UNI/Terzo_anno/Embededd System/C/reactionTest/test",
-    "UNI/Terzo_anno/Embededd System/C/reactionTest/lib/README",
-    "UNI/Terzo_anno/Embededd System/C/reactionTest/lib",
-    "UNI/Terzo_anno/Embededd System/C/reactionTest/include/README",
-    "UNI/Terzo_anno/Embededd System/C/reactionTest/include",
-    "UNI/Terzo_anno/Embededd System/C/reactionTest/src",
-    "UNI/Terzo_anno/Embededd System/C/reactionTest/platformio.ini",
-    "UNI/Terzo_anno/Embededd System/C/reactionTest",
+    "UNI/Terzo_anno/Embededd System/C/LedIntensityControlPWMoutput/src/main.c",
+    "UNI/Terzo_anno/Embededd System/C/LedIntensityControlPWMoutput/test/README",
+    "UNI/Terzo_anno/Embededd System/C/LedIntensityControlPWMoutput/test",
+    "UNI/Terzo_anno/Embededd System/C/LedIntensityControlPWMoutput/lib/README",
+    "UNI/Terzo_anno/Embededd System/C/LedIntensityControlPWMoutput/lib",
+    "UNI/Terzo_anno/Embededd System/C/LedIntensityControlPWMoutput/include/README",
+    "UNI/Terzo_anno/Embededd System/C/LedIntensityControlPWMoutput/include",
+    "UNI/Terzo_anno/Embededd System/C/LedIntensityControlPWMoutput/src",
+    "UNI/Terzo_anno/Embededd System/C/LedIntensityControlPWMoutput/platformio.ini",
+    "UNI/Terzo_anno/Embededd System/C/LedIntensityControlPWMoutput",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261107192243.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261106211957.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261106205909.png",
     "UNI/Terzo_anno/Embededd System/Lezioni/5.md",
@@ -243,7 +207,6 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103100659.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103100533.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261102201534.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261102201132.png",
     "UNI/Terzo_anno/Embededd System/Lezioni/4 12_ottobre.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
     "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
