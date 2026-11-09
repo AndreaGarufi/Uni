@@ -1,30 +1,14 @@
-### 1. **Orologio Sincronizzato con Meteo Live (NTP + OpenWeatherMap)**
+- rete di sensori su esp32 che comunicano con un server centrale
 
-- **Come funziona**:
+- ### Progetto: Quick Share for Linux
+Sviluppare, tramite vibe coding (Codex/Claude Code), un'applicazione Linux non ufficiale compatibile con **Google Quick Share**.
+**Obiettivo:** permettere l'invio e la ricezione di file tra:
+- Linux ↔ Linux
     
-    1. L'ESP32 si connette alla rete Wi-Fi e sincronizza l'orario perfetto tramite un server NTP (senza bisogno di un modulo orologio hardware RTC).
-        
-    2. Invia una richiesta HTTP ad un'API gratuita di meteo (es. OpenWeatherMap) passando le coordinate della tua città.
-        
-- **Cosa mostrare sul display (128x64)**:
+- Linux ↔ Windows
     
-    - In alto in grande: Ora e minuti (es. `14:30:45`).
-        
-    - In basso: Temperatura attuale, umidità e un'icona testuale/grafica (es. `22°C - Nuvoloso`).
-
-
-### 4. **Display di Monitoraggio Rete Wi-Fi (Wi-Fi Scanner / Monitor)**
-
-- **Come funziona**: Sfrutti le funzioni integrate nella libreria `WiFi.h` (come `WiFi.scanNetworks()`).
+- Linux ↔ Android
     
-- **Cosa mostrare sul display**:
-    
-    - Un grafico o una lista dinamica delle reti Wi-Fi vicine con la relativa potenza di segnale (RSSI) espressa in dBm o in tacche della rete.
-        
-    - Puoi usare i pulsanti della scheda per scorrere la lista delle reti trovate sullo schermo.
-
-### 5. **Orologio Pomodoro / Timer di Studio Connesso**
-
-- **Come funziona**: Sfrutti il display e i pulsanti integrati per gestire le sessioni di studio/lavoro (25 min di lavoro, 5 min di pausa).
-    
-- **La chicca Wi-Fi**: Alla fine di ciascuna sessione o pausa, l'ESP32 può effettuare una chiamata Webhook a servizi come IFTTT per accendere la tua luce smart, inviarti una notifica o salvare lo storico delle sessioni su un foglio Google Sheets.
+Senza richiedere applicazioni aggiuntive sugli altri dispositivi.
+**Approccio:** partire da un progetto open source esistente, come [open-quickshare](https://github.com/), riutilizzandone il motore di comunicazione e sviluppando una GUI moderna, notifiche, cronologia e integrazione con il desktop Linux.
+**Obiettivo finale:** un client Quick Share nativo per Linux, semplice da utilizzare e compatibile con l'ecosistema Google.
