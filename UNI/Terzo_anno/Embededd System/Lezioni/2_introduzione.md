@@ -76,8 +76,8 @@ Esempio: utilizzare PA5 come output.
 
 
 
-Supponiamo di utilizzare questo schema:
-![[Pasted image 20261007114606.png|481]]
+Utilizzeremo questo schema questo schema:
+![[Pasted image 20261007114606.png|720]]
 
 Programmiamo qualcosa:
 ![[Pasted image 20261007114627.png|595]]

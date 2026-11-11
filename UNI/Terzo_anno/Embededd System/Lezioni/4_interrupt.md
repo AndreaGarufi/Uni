@@ -9,7 +9,7 @@ Un IRQ può essere configurato per essere attivato:
 - *Both edge* -> si attiva ad ogni variazione di segnale
 
 
-*External interupt controller* (EXTI)
+*External interrupt controller* (EXTI)
 È il modulo hardware/circuito all'interno del microcontrollore dedicato a gestire queste interruzioni esterne.
 Si occupa di rilevare le transizioni sui pin di I/O, applicare le configurazioni selezionate (fronte di salita, discesa o entrambi) e inoltrare la richiesta di interruzione (IRQ) al processore centrale.
 
@@ -121,12 +121,12 @@ Queste funzioni usano TIM5 (timer 5 che poi vedremo meglio cosa è), quindi quan
 I numeri del display si contano da sinistra verso destra e vanno da 0 a 3
 
 - Inizializzazione del display:
-  `void DISPLAY init(void)`
+  `void DISPLAY_init(void)`
 - Scrivere un carattere "c" nel numero "d"
-  `void DISPLAY putc(int d, char c)`
+  `void DISPLAY_putc(int d, char c)`
 - Scrivere una stringa "s" partendo da un numero "d"
-  `void DISPLAY puts(int digit, char * s)`
+  `void DISPLAY_puts(int digit, char * s)`
 - "Accendere e spegnere" la cifra decimale del numero "d"
-  `void DISPLAY dp(int digit, int on off)`
+  `void DISPLAY_dp(int digit, int on off)`
 
 
