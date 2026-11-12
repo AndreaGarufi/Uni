@@ -10,7 +10,7 @@ int main(void)
     GPIO_init(GPIOB);
     GPIO_config_alternate(GPIOB, 0, 2); // AF2 --> TIM3_CH3     //configura il pin 0 della porta B in alternate funciton, si collega al canale 3 del timer 3
 
-    ADC_init(ADC1, ADC_RES_8, ADC_ALIGN_RIGHT); //l'ADC converta una lettura analogica in un valore numerico digitale (quindi discreto),imposta la risoluzione a 8 bit, quindi i valori analogici saranno mappati su 8 bit quindi da 0 a 255, allinea il risultato a destra del registro
+    ADC_init(ADC1, ADC_RES_8, ADC_ALIGN_RIGHT); //l'ADC converte una lettura analogica in un valore numerico digitale (quindi discreto),imposta la risoluzione a 8 bit, quindi i valori analogici saranno mappati su 8 bit quindi da 0 a 255, allinea il risultato a destra del registro
     ADC_channel_config(ADC1, GPIOC, 0, 10); //associa la GPIOC pin 0 (PC0) al canale 10 dell'ADC1 (guardare foto schema di collagamento nella nota obsidian 2 2_ottobre_26)
     ADC_on(ADC1);   //accende il modulo ADC1
     ADC_sample_channel(ADC1, 10);   //seleziona il canale 10 come il canale da campionare   (in totale ho 16 canali)

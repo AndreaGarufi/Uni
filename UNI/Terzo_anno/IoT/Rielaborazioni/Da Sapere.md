@@ -769,3 +769,18 @@ Abbiamo quindi una parte di sender e una di receiver nello stesso programma:
 
 ![[Pasted image 20261030193018.png]]
 
+# **Wireless Personal Area Network (WPAN)**
+![[Pasted image 20261112142729.png]]
+
+Questa tipologia di reti è centrata sulla singola persona, infatti si connettono dispositivi molto vicini tra loro, il range operativo è intorno ai 10/20 metri, il protocollo sicuramente più famoso è Bluetooth, inizialmente creato per sostituire le connessioni via cavo.
+
+---
+##### Bluetooth
+![[Pasted image 20261112143046.png]]
+
+sulle nostre ESP32 possiamo arrivare fino a BLE 5 (2016)
+
+Il Bluetooth originale (c'è differenza con BLE (low energy)), andava a creare una *piconet*, con al più 8 nodi, la rete era organizzata tramite un sistema master/slave, in cui il dispositivo master (tecnicamente client) gestiva e organizzava i dispositivi slave (tecnicamente dei server in quanto i dispositivi collegati offrivano dei servizi), se si volevano aggiungere più di 8 dispositivi, si aveva bisogno di un dispositivo slave che facesse da bridge tra 2 piconet.
+In questo sistema master slave le periferiche parlano solo tramite il nodo centrale e mai tra di loro direttamente.
+
+![[Pasted image 20261112144219.png|505]]
