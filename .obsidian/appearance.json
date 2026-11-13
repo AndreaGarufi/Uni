@@ -3,5 +3,6 @@
   "accentColor": "#2bd3fd",
   "baseFontSize": 16,
   "theme": "obsidian",
-  "nativeMenus": true
+  "nativeMenus": true,
+  "showRibbon": true
 }

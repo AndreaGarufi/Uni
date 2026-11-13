@@ -784,3 +784,59 @@ Il Bluetooth originale (c'è differenza con BLE (low energy)), andava a creare u
 In questo sistema master slave le periferiche parlano solo tramite il nodo centrale e mai tra di loro direttamente.
 
 ![[Pasted image 20261112144219.png|505]]
+
+**Hop sequence**
+*Il dispositivo centrale decide su quali frequenze radio saltare, e con quale ritmo e tutti gli altri dispositivi lo seguono:*
+Il bluetooth opera nella frequenza a 2.4GHz la stessa del wifi o di zigbee e molte altre comunicazioni, è quindi una frequenza molto affollata. Per evitare interferenze e quindi perdita di dati il bluetooth non trasmette sempre nella stessa indentaci frequenza ma cambia canale centinaia di volte al secondo seguendo un determinato ordine chiamato *Hop sequence*, la hop sequence viene calcolata dal dispositivo centrale seguendo 2 parametri unici del dispositivo: il suo mac address e il suo orologio interno (clock), questo calcolo viene effettuato utilizzando questi 2 parametri per evitare che 2 piconet vicine calcolino per sbaglio la stessa hop sequence e si disturbino a vicenda (così è praticamente impossibile).
+
+La divisione del canale cambia tra bluetooth classic e BLE, ma in generale possiamo dire che si prende la banda 2.4GHz e la si divide in tante parti (79 canali per BC con differenze di 1MHz tra ogni canale e 40 per BLE con 2MHz di differenza).
+
+Per ora parliamo di Bluetooth classic:
+![[Pasted image 20261113180630.png|450]]
+
+Questo è lo stack a livelli implementato dal bluetooth, come vediamo una parte è eseguita dall'hardware chiamato controller, e un altra dall'host e quindi viene eseguita dal sistema operativo in uso.
+
+Partiamo dal basso: Controller
+- *radio* -> è il livello fisico vero e proprio e gestisce la trasmissione e ricezione delle onde radio sui 79 canali di divisione e usa 2 modulazioni: GFSK -> velocità base, e DPSK -> enhanced data rate
+- *baseband/link controller* -> gestisce varie cose come: il formato dei pacchetti, il controllo della potenza e la ritrasmissione automatica dei pacchetti corrotti
+- *LMP (Link Menager Protocol)* -> gestisce la parte di collegamento tra 2 controller come il pairing (accoppiamento), cifratura, autenticazione, scambio di ruoli ecc...
+
+
+- *HCI (host controller interface)* -> è il "ponte" standardizzato (un bus praticamente) che permette di far comunicare e inviare comandi sia all'host verso il controller che viceversa.
+
+
+Ora saliamo: Host
+- *L2CAP (Logica Link Control and Adaptation Protocol)* -> è il livello centrale dell'host, fa multiplexing dei protocolli e gestisce il controllo del flusso
+- *SPD (Service Discovery Protocol)* -> Permette ad un dispositivo di interrogarne un altro per scoprire quali servizi offre
+- *RFCOMM* -> emula una porta seriale cablata
+- *AVDTP/HIDP* -> protocolli di trasporto specifici rispettivamente per lo streaming audio/video e per i dispositivi di input
+- *Profili* -> definiscono come combinare i livelli sottostanti per un caso d'uso reale.
+  - *SPP* -> comunicazione seriale generica
+  - *HFP* -> chiamate viva-voce (es. chiamata in auto)
+  - *A2DP* -> streaming audio ad alta qualità (es cuffiette)
+  - *HID* -> usato per tastiere mouse controller ecc...
+
+
+> [!Attention] Il dongle USB che si attacca al computer ad esempio, è solo il controller, lo stack bluetooth gira sul sistema operativo
+
+---
+##### Sicurezza del Bluetooth
+- **Autenticazione:** verifica l'identità del dispositivo controllando che possieda la chiave crittografica corretta per potersi connettere (l'autenticazione non riguarda l'umano)
+- **Confidenzialità**: cifra il traffico dati sul canale radio per impedire che eventuali attaccanti in ascolto possano leggere le informazioni trasmesse
+- **Autorizzazione**: stabilisce i permessi di accesso, ovvero decide quale dispositivo ha il diritto di utilizzare un determinato profilo e altri permessi
+- **Integrità**: garantisce che i pacchetti non siano stati modificati o manomessi durante il trasferimento wireless
+- **Pairing/bonding**: è il processo in due fasi con cui i dispositivi si connettono tra loro nella piconet, il pairing genera le chiavi segrete, mentre il bonding le salva in memoria permanentemente per riconnettersi in futuro senza dover ripetere la procedura 
+
+*Evoluzione del pairing:*
+Bluetooth 1.0 e 2.0
+generava una chiave partendo da un pin corto e semplice e la usava per cifrare il traffico, me era molto debole, se l'attaccante sniffava lo scambio dei pin o delle chiavi poteva risalire alla cifratura
+
+Bluetooth 2.1
+Introduceva una crittografia che non permetteva ad uno sniffer di risalire alle chiavi durante il pairing,
+
+Bluetooth 4.1
+Potenzia ulteriormente lo standard utilizzato dal 2.1
+
+
+
+
