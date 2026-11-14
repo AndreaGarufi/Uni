@@ -8,17 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5b65bdba77dea321",
+            "id": "285a042d1ab16937",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
+                "file": "UNI/Terzo_anno/Embededd System/Lezioni/7_display7Segmenti.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Da Sapere"
+              "title": "7_display7Segmenti"
+            }
+          },
+          {
+            "id": "aa1e63718d4392b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Terzo_anno/Embededd System/Lezioni/4_interrupt.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "4_interrupt"
             }
           }
         ]
@@ -182,37 +196,74 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5b65bdba77dea321",
+  "floating": {
+    "id": "5577696e52e2b461",
+    "type": "floating",
+    "children": [
+      {
+        "id": "b883aca483d6eaa1",
+        "type": "window",
+        "children": [
+          {
+            "id": "086ca5ee83d56ef8",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "521228fa718a4c45",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "UNI/Terzo_anno/Embededd System/file_condivisi/11_DisplayDriver.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "11_DisplayDriver"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": -1,
+        "y": -1,
+        "width": 1538,
+        "height": 414,
+        "maximize": true,
+        "zoom": 1
+      }
+    ]
+  },
+  "active": "285a042d1ab16937",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261113180630.png",
+    "UNI/Terzo_anno/Embededd System/file_condivisi/11_DisplayDriver.pdf",
+    "UNI/Terzo_anno/Embededd System/Lezioni/7_display7Segmenti.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114180512.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114180137.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114180054.png",
+    "UNI/Terzo_anno/Embededd System/C/Display/src/main.c",
+    "UNI/Terzo_anno/Embededd System/C/Display/test/README",
+    "UNI/Terzo_anno/Embededd System/C/Display/test",
+    "UNI/Terzo_anno/Embededd System/C/Display/lib/README",
+    "UNI/Terzo_anno/Embededd System/C/Display/lib",
+    "UNI/Terzo_anno/Embededd System/C/Display/include/README",
+    "UNI/Terzo_anno/Embededd System/C/Display/include",
+    "UNI/Terzo_anno/Embededd System/C/Display/src",
+    "UNI/Terzo_anno/Embededd System/C/Display/platformio.ini",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114174833.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114174304.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114174216.png",
     "UNI/Terzo_anno/Embededd System/Lezioni/4_interrupt.md",
-    "UNI/Terzo_anno/Embededd System/Lezioni/2_introduzione.md",
     "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261113180630.png",
+    "UNI/Terzo_anno/Embededd System/Lezioni/2_introduzione.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261112144219.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261112143046.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261112142729.png",
     "UNI/Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/6_timer.md",
-    "UNI/Terzo_anno/Embededd System/C/ProvaComponenti/src/main.c",
-    "UNI/Terzo_anno/Embededd System/C/ProvaComponenti/test/README",
-    "UNI/Terzo_anno/Embededd System/C/ProvaComponenti/test",
-    "UNI/Terzo_anno/Embededd System/C/ProvaComponenti/lib/README",
-    "UNI/Terzo_anno/Embededd System/C/ProvaComponenti/lib",
-    "UNI/Terzo_anno/Embededd System/C/ProvaComponenti/include/README",
-    "UNI/Terzo_anno/Embededd System/C/ProvaComponenti/include",
-    "UNI/Terzo_anno/Embededd System/C/ProvaComponenti/src",
-    "UNI/Terzo_anno/Embededd System/C/ProvaComponenti/platformio.ini",
-    "UNI/Terzo_anno/Embededd System/C/ProvaComponenti",
     "UNI/Terzo_anno/Embededd System/Lezioni/6.md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Senza nome.canvas",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261107192243.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261106211957.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261106205909.png",
     "UNI/Terzo_anno/Embededd System/Lezioni/5.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103110353.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103101545.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103101350.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261103100937.png",
     "UNI/Terzo_anno/Embededd System/Lezioni/4 12_ottobre.md",
     "UNI/Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
     "Senza nome.md",
@@ -230,7 +281,6 @@
     "UNI/Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/1 Embededd System introduzione.md",
     "README.md",
-    "UNI/Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/Possibili domande_esercizi esame.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
