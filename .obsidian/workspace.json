@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "bc7ac2a17aba078a",
+        "id": "f0820a61afe37d1c",
         "type": "tabs",
         "children": [
           {
-            "id": "285a042d1ab16937",
+            "id": "b0c35c64d64346d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Terzo_anno/Embededd System/Lezioni/7_display7Segmenti.md",
+                "file": "UNI/Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7_display7Segmenti"
-            }
-          },
-          {
-            "id": "aa1e63718d4392b5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UNI/Terzo_anno/Embededd System/Lezioni/4_interrupt.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "4_interrupt"
+              "title": "Link_Slide"
             }
           }
         ]
@@ -196,47 +182,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "5577696e52e2b461",
-    "type": "floating",
-    "children": [
-      {
-        "id": "b883aca483d6eaa1",
-        "type": "window",
-        "children": [
-          {
-            "id": "086ca5ee83d56ef8",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "521228fa718a4c45",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "UNI/Terzo_anno/Embededd System/file_condivisi/11_DisplayDriver.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "11_DisplayDriver"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": -1,
-        "y": -1,
-        "width": 1538,
-        "height": 414,
-        "maximize": true,
-        "zoom": 1
-      }
-    ]
-  },
-  "active": "285a042d1ab16937",
+  "active": "b0c35c64d64346d5",
   "lastOpenFiles": [
-    "UNI/Terzo_anno/Embededd System/file_condivisi/11_DisplayDriver.pdf",
+    "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/7_display7Segmenti.md",
+    "UNI/Terzo_anno/Embededd System/Lezioni/4_interrupt.md",
+    "UNI/Terzo_anno/Embededd System/file_condivisi/11_DisplayDriver.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114180512.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114180137.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114180054.png",
@@ -252,8 +203,6 @@
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114174833.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114174304.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114174216.png",
-    "UNI/Terzo_anno/Embededd System/Lezioni/4_interrupt.md",
-    "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261113180630.png",
     "UNI/Terzo_anno/Embededd System/Lezioni/2_introduzione.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261112144219.png",
