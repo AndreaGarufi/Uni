@@ -981,3 +981,17 @@ Scegliere piccoli intervalli permette di avere poca latenza ma frequenti sveglie
 >Per evitare che il Peripheral venga disconnesso per errore mentre sta legittimamente dormendo durante i suoi cicli di latenza, il _Supervision Timeout_ deve rispettare la formula: $$\text{timeout} > (1 + \text{latency}) \times \text{interval} \times 2$$
 Il x 2 finale è messo per tollerare almeno la perdita di un pacchetto per via di interferenze (comuni nella comunicazione wireless)
 
+---
+**Struttura profilo GATT**
+GATT è il modo in cui un server BLE (che sono le periferiche di solito) organizza e memorizza i dati in una tabella di attributi.
+![[Pasted image 20261115184739.png]]
+
+Ogni riga della tabella rappresenta un singolo attributo, composto da 4 elementi principali:
+- *Handle* -> indirizzo a 16 bit univoco assegnato dal server GATT per indentificare ogni riga della tabella
+- *Type (UUID)* -> identifica che cosa è quell'attributo (l'inizio di un servizio, la dichiarazione di una caratteristica ecc...)
+- *Permissions* -> definiscono le regole di accesso al livello ATT (lettura/scrittura, crittografia o autenticazione)
+- *Value* -> il dato grezzo memorizzato in quella riga
+
+---
+
+**Struttura protocollo ATT**
