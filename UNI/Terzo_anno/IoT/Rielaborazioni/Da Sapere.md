@@ -892,5 +892,92 @@ Parte da standby e entra nella fase di scanning per trovare delle periferiche, u
 
 Quando la connessione termina passa di nuovo allo stato di standby
 
+---
 
+##### Frame di advertising di BLE
+Quello in figura è il frame di advertising quindi non è la struttura classica del frame di comunicazione dati.
+![[Pasted image 20261115171643.png]]
+
+- *Preamble* -> è una sequenza fissa (0xAA) usata dal ricevitore per sincronizzare la frequenza e la temporizzazione
+- *Access address* -> Valore fisso (`0x8E89BED6`) che identifica il pacchetto come un messaggio di advertising (a differenza delle connessioni attive, dove questo indirizzo è casuale).
+- *Header* -> contiene informazioni di controllo, tra cui il tipo di PDU e la lunghezza del payload
+- *Payload* -> suddiviso in:
+  - *AdvA* -> indirizzo MAC del dispositivo che sta trasmettendo (advertiser address)
+  - *AdvData* -> i dati veri e propri (nome del dispositivo, servizi offerti, dati di telemetria ecc...)
+  - *CRC* -> controllo sugli errori
+
+La parte del PDU può essere di vari tipi:
+
+| **PDU**             | **Codice**      | **Conn.** | **Scan.** | **Utilizzo principale**                                                                                                                                       |
+| ------------------- | --------------- | --------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ADV_IND**         | `0000`          | ✓         | ✓         | **Periferica standard:** il dispositivo è rilevabile, accetta richieste di connessione e può fornire dati aggiuntivi se interrogato.                          |
+| **ADV_DIRECT_IND**  | `0001`          | ✓         | —         | **Riconnessione rapida:** indirizzato a un dispositivo specifico già noto per ristabilire velocemente una connessione (non trasmette _AdvData_).              |
+| **ADV_NONCONN_IND** | `0010`          | —         | —         | **Beacon:** trasmette solo dati in broadcast senza accettare connessioni né risposte a scansioni (es. iBeacon, Eddystone).                                    |
+| **ADV_SCAN_IND**    | `0110`          | —         | ✓         | **Broadcaster + dati extra:** non accetta connessioni, ma permette a uno scanner di richiedere ulteriori informazioni.                                        |
+| **SCAN_REQ / RSP**  | `0011` / `0100` |           |           | **Scansione attiva:** se un dispositivo centrale invia una _SCAN_REQ_, l'advertiser risponde con una _SCAN_RSP_, ottenendo fino a **+31 Byte** extra di dati. |
+| **CONNECT_IND**     | `0101`          |           |           | **Avvio connessione:** inviato dal dispositivo centrale per passare dallo stato di advertising a una connessione vera e propria.                              |
+
+Questi pacchetti contenenti questi frame vengono inviati solo sui canali 37-38-39
+Per gestire le collisioni si usa un intervallo compreso tra 20 e 10,24 ms a cui viene aggiunto un ritardo casuale tra 0 e 10 ms per evitare che 2 frame collidano se inviati da dispositivi diversi
+
+**Extended Advertising (BLE 5.0):** Supera il limite storico dei 31 Byte di dati. Sui canali primari (37–39) viene inviato solo un piccolo pacchetto con un **puntatore** che rimanda a un canale dati secondario, dove è possibile trasmettere pacchetti molto più grandi: fino a **254 Byte per singola PDU**, concatenabili fino a **1650 Byte** complessivi.
+
+*Entriamo nel dettaglio del campo AdvData*, quindi vediamo come vengono effettivamente formattati i dati dentro un pacchetto di advertising BLE:
+Questa figura mostra il campo AdvData del programma IoT-Lamp
+![[Pasted image 20261115173813.png]]
+
+I dati non vengono mandati in un unico blocco sequenziale ma piuttosto si usa una lista sequenziale di strutture chiamate *AD structures*, ogni struttura (a livello di codice non si intende una struct C, è un altra cosa) è formata da 3 campi: 
+- *Length* -> indica quanti byte seguono dopo questo campo
+- *AD type* -> identifica il tipo di dato contenuto (nome del dispositivo, codice del servizio ecc...)
+- *Data* -> il valore vero e proprio
+
+Analizziamo i byte in figura sopra:
+Da 0 a 2 (3 byte) c'è la prima AD structure.
+Da 3 a 20 (18 byte) c'è la seconda, in questo caso il campo data è più grande (tutti i byte grigio chiaro)
+Da 21 a 30 (10 byte) c'è la terza, che indica il nome del dispositivo
+
+I valori dentro i rettangoli rappresentano il valore (scritto in decimale) dei byte, ad esempio nel byte 21 il campo length ha valore 9, indica quindi che seguiranno altri 9 byte, i valori del campo data sono valori ASCII e rappresentano la parola "IoT-Lamp".
+
+---
+
+Questa tabella riassume i valori più utilizzati nel campo *AD type* delle AD structures
+
+| Type       | Nome                               | Esempio / Significato                                                                                                          |
+| :--------- | :--------------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
+| **`0x01`** | **Flags**                          | `02 01 06` — definisce modalità di scoperta e supporto Bluetooth.                                                              |
+| **`0x03`** | **Complete list of 16-bit UUIDs**  | `03 03 0F 18` — usato per servizi standard Bluetooth SIG (es. `0x180F` = Battery Service, scritto `0F 18` in little-endian).   |
+| **`0x07`** | **Complete list of 128-bit UUIDs** | Usato per servizi proprietari/custom (come quello della lampada).                                                              |
+| **`0x09`** | **Complete Local Name**            | `"IoT-Lamp"` — il nome completo leggibile del dispositivo.                                                                     |
+| **`0x16`** | **Service Data (16-bit UUID)**     | Permette di inviare un UUID a 16 bit seguito direttamente dal valore letto da un sensore (utile nei beacon senza connessione). |
+
+**Regole pratiche**
+- **Ordine Little-Endian:** Tutti i valori multi-byte (come gli UUID a 16 o 128 bit) vengono trasmessi partendo dal byte meno significativo (quindi invertiti rispetto a come li leggi nel codice).
+- **Saturazione dei 31 Byte:** Sommando le tre strutture dell'esempio si ottiene $3 + 18 + 10 = \mathbf{31\text{ Byte}}$. Lo spazio è completamente pieno: se il nome della lampada fosse stato più lungo anche di un solo carattere, non ci sarebbe stato nello stesso pacchetto e sarebbe stato **troncato** (usando il tipo `0x08`, _Shortened Local Name_) oppure spostato nel pacchetto aggiuntivo di **Scan Response** (`SCAN_RSP`).
+
+---
+
+##### Gestione della batteria durante la connessione 
+Vediamo come BLE gestisce il risparmio energetico durante una connessione attiva
+![[Pasted image 20261115175607.png]]
+
+4 parametri principali:
+1) *Connection interval* -> 7.5 ms - 4 s è l'intervallo regolare con cui i due dispositivi si "danno appuntamento" (connection events) per scambiarsi pacchetti, viene configurato a scatti (step) di 1.25 ms
+2) *Peripheral Latency* -> 0 - 499 indica quanti connection events consecutivi il peripheral può saltare (rimanendo quindi con la radio spenta) se non ha nuovi dati da inviare al central senza che la connessione venga considerata scaduta
+3) *Supervision timeout* -> 100 ms - 32 s è il tempo massimo che può trascorrere senza ricevere alcun pacchetto valido prima che i dispositivi dichiarino la connessione persa
+4) *Chi decide?* Central, è sempre il dispositivo central a stabilire i parametri della connessione, il peripheral può solo inviare una richiesta di modifica
+
+> [!info] Latency e timeout (punti 2 e 3)
+> la **Latency** dice _"per quanti turni puoi restare in silenzio per risparmiare batteria"_, mentre il **Supervision Timeout** dice _"dopo quanti secondi di silenzio totale do per scontato che tu sia sparito o spento e chiudo la connessione"_
+
+Vediamo il diagramma della figura (Peripheral Latency = 3):
+- Il *central* (rettangoli grigi) ad ogni scadenza del connection interval manda puntualmente un messaggio per capire se il peripheral vuole comunicare
+- *Primo blocco (risparmio normale):* Il Peripheral si sveglia (primo rettangolo giallo), scambia i dati e poi tiene la **radio spenta (`radio off`)** saltando esattamente **3 eventi consecutivi** del Central, risvegliandosi al 4° appuntamento (secondo rettangolo giallo).
+- *Secondo* *blocco* (`data ready: wakes up early`): Il Peripheral avrebbe diritto a saltare altri 3 eventi, ma dopo un solo evento interviene un evento esterno (es. la pressione di un pulsante o una lettura urgente di un sensore). Il Peripheral **non è obbligato ad aspettare** la fine dei 3 cicli di latenza: si sveglia subito al primo appuntamento utile (rettangolo rosso) per inviare immediatamente i dati, per poi tornare a dormire.
+
+**Compromesso reale**
+Scegliere piccoli intervalli permette di avere poca latenza ma frequenti sveglie per la radio che consumerà quindi più energia, intervalli lunghi, invece permettono di tener spenta la radio per più tempo e quindi consumare di meno, ma aumenta la latenza (consumi nell'ordine dei µs).
+
+>[!warning] Vincolo di stabilità
+>Per evitare che il Peripheral venga disconnesso per errore mentre sta legittimamente dormendo durante i suoi cicli di latenza, il _Supervision Timeout_ deve rispettare la formula: $$\text{timeout} > (1 + \text{latency}) \times \text{interval} \times 2$$
+Il x 2 finale è messo per tollerare almeno la perdita di un pacchetto per via di interferenze (comuni nella comunicazione wireless)
 
