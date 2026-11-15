@@ -89,7 +89,7 @@ void EXTI9_5_IRQHandler(void)
 }
 
 void TIM4_IRQHandler(void){
-    printf("trimmer sotto 10: %4d\n", t_on_2);
+    printf("Trimmer sopra (11): %4d\n", t_on_2);
 
 
     TIM_update_clear(TIM4);

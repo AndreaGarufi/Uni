@@ -115,18 +115,6 @@ void EXTI4_IRQHandler(void)
 ```
 
 ---
-# **Funzioni per il display a 7 segmenti**
-La libreria stm32_unict_lib fornisce delle funzioni utili che semplificano l'utilizza dello shcermo.
-Queste funzioni usano TIM5 (timer 5 che poi vedremo meglio cosa è), quindi quando il display è attivo questo timer non è disponibile.
-I numeri del display si contano da sinistra verso destra e vanno da 0 a 3
 
-- Inizializzazione del display:
-  `void DISPLAY_init(void)`
-- Scrivere un carattere "c" nel numero "d"
-  `void DISPLAY_putc(int d, char c)`
-- Scrivere una stringa "s" partendo da un numero "d"
-  `void DISPLAY_puts(int digit, char * s)`
-- "Accendere e spegnere" la cifra decimale del numero "d"
-  `void DISPLAY_dp(int digit, int on off)`
 
 

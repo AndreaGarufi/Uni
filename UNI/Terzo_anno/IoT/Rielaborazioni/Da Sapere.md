@@ -784,3 +784,113 @@ Il Bluetooth originale (c'è differenza con BLE (low energy)), andava a creare u
 In questo sistema master slave le periferiche parlano solo tramite il nodo centrale e mai tra di loro direttamente.
 
 ![[Pasted image 20261112144219.png|505]]
+
+**Hop sequence**
+*Il dispositivo centrale decide su quali frequenze radio saltare, e con quale ritmo e tutti gli altri dispositivi lo seguono:*
+Il bluetooth opera nella frequenza a 2.4GHz la stessa del wifi o di zigbee e molte altre comunicazioni, è quindi una frequenza molto affollata. Per evitare interferenze e quindi perdita di dati il bluetooth non trasmette sempre nella stessa indentaci frequenza ma cambia canale centinaia di volte al secondo seguendo un determinato ordine chiamato *Hop sequence*, la hop sequence viene calcolata dal dispositivo centrale seguendo 2 parametri unici del dispositivo: il suo mac address e il suo orologio interno (clock), questo calcolo viene effettuato utilizzando questi 2 parametri per evitare che 2 piconet vicine calcolino per sbaglio la stessa hop sequence e si disturbino a vicenda (così è praticamente impossibile).
+
+La divisione del canale cambia tra bluetooth classic e BLE, ma in generale possiamo dire che si prende la banda 2.4GHz e la si divide in tante parti (79 canali per BC con differenze di 1MHz tra ogni canale e 40 per BLE con 2MHz di differenza).
+
+Per ora parliamo di Bluetooth classic:
+![[Pasted image 20261113180630.png|450]]
+
+Questo è lo stack a livelli implementato dal bluetooth, come vediamo una parte è eseguita dall'hardware chiamato controller, e un altra dall'host e quindi viene eseguita dal sistema operativo in uso.
+
+Partiamo dal basso: Controller
+- *radio* -> è il livello fisico vero e proprio e gestisce la trasmissione e ricezione delle onde radio sui 79 canali di divisione e usa 2 modulazioni: GFSK -> velocità base, e DPSK -> enhanced data rate
+- *baseband/link controller* -> gestisce varie cose come: il formato dei pacchetti, il controllo della potenza e la ritrasmissione automatica dei pacchetti corrotti
+- *LMP (Link Menager Protocol)* -> gestisce la parte di collegamento tra 2 controller come il pairing (accoppiamento), cifratura, autenticazione, scambio di ruoli ecc...
+
+
+- *HCI (host controller interface)* -> è il "ponte" standardizzato (un bus praticamente) che permette di far comunicare e inviare comandi sia all'host verso il controller che viceversa.
+
+
+Ora saliamo: Host
+- *L2CAP (Logica Link Control and Adaptation Protocol)* -> è il livello centrale dell'host, fa multiplexing dei protocolli e gestisce il controllo del flusso
+- *SPD (Service Discovery Protocol)* -> Permette ad un dispositivo di interrogarne un altro per scoprire quali servizi offre
+- *RFCOMM* -> emula una porta seriale cablata
+- *AVDTP/HIDP* -> protocolli di trasporto specifici rispettivamente per lo streaming audio/video e per i dispositivi di input
+- *Profili* -> definiscono come combinare i livelli sottostanti per un caso d'uso reale.
+  - *SPP* -> comunicazione seriale generica
+  - *HFP* -> chiamate viva-voce (es. chiamata in auto)
+  - *A2DP* -> streaming audio ad alta qualità (es cuffiette)
+  - *HID* -> usato per tastiere mouse controller ecc...
+
+
+> [!Attention] Il dongle USB che si attacca al computer ad esempio, è solo il controller, lo stack bluetooth gira sul sistema operativo
+
+---
+##### Sicurezza del Bluetooth
+- **Autenticazione:** verifica l'identità del dispositivo controllando che possieda la chiave crittografica corretta per potersi connettere (l'autenticazione non riguarda l'umano)
+- **Confidenzialità**: cifra il traffico dati sul canale radio per impedire che eventuali attaccanti in ascolto possano leggere le informazioni trasmesse
+- **Autorizzazione**: stabilisce i permessi di accesso, ovvero decide quale dispositivo ha il diritto di utilizzare un determinato profilo e altri permessi
+- **Integrità**: garantisce che i pacchetti non siano stati modificati o manomessi durante il trasferimento wireless
+- **Pairing/bonding**: è il processo in due fasi con cui i dispositivi si connettono tra loro nella piconet, il pairing genera le chiavi segrete, mentre il bonding le salva in memoria permanentemente per riconnettersi in futuro senza dover ripetere la procedura 
+
+*Evoluzione del pairing:*
+Bluetooth 1.0 e 2.0
+generava una chiave partendo da un pin corto e semplice e la usava per cifrare il traffico, me era molto debole, se l'attaccante sniffava lo scambio dei pin o delle chiavi poteva risalire alla cifratura
+
+Bluetooth 2.1
+Introduceva una crittografia che non permetteva ad uno sniffer di risalire alle chiavi durante il pairing,
+
+Bluetooth 4.1
+Potenzia ulteriormente lo standard utilizzato dal 2.1
+
+---
+##### BLE - Bluetooth Low Energy
+Unito al bluetooth dal 2010 (v. 4.0) è un design separato dal bluetooth classico: nuova radio, nuovo link layer e stack, studiato per dispositivi che "dormono" la maggior parte del tempo (come i sensori): 
+![[Pasted image 20261115111215.png]]
+
+> [! info] Cosa è l'advertising?
+> L'advertising è il meccanismo con cui un dispositivo periferico (come esp32) trasmette periodicamente in broadcast dei pacchetti per farsi scoprire dai dispositivi circostanti
+
+
+**Protocollo BLE**
+
+![[Pasted image 20261115111440.png]]
+Come detto prima Bluetooth e quindi anche BLE occupano le stesse frequenze del Wi-Fi e molti altri dispositivi
+BLE suddivide l'intera frequenza in 40 canali con salti di 2MHz tra ogni canale, ne sfrutta 3 per l'advertising, quindi quando dovrà farsi scoprire userà quei canali, gli altri sono invece per comunicare dati utili durante la sessione. I canali di advertising sono posti nei gap tra i canali più usati dal wifi, infatti come mostra la figura non si sovrappongono (almeno quelli).
+
+Il BLE supporta diverse modalità di comunicazione: 1M (standard 1Mbps), 2M (alta velocità 2Mbps) e coded con correzione degli errori per coprire "lunghe" distanze.
+
+**Vediamo lo stack BLE**
+![[Pasted image 20261115112258.png|592]]
+
+La struttura è abbastanza simile a quella del classic ma con alcune differenze, anche qui c'è una parte gestita dal controller BLE e una dall' host, gestite da un interfaccia che permette loro di comunicare.
+
+- *PHY* -> livello fisico cioè l'antenna che deve comunicare
+- *Link Layer* -> gestisce gli stati del dispositivo: advertising, scansione, connessione ecc...
+
+- *HCI* -> è il ponte che fa comunicare il controller con l'OS
+
+- *L2CAP (Logical Link Control and Adaptation Protocol)* -> incapsula i dati dei livelli superiori e li instrada su canali logici fissi verso il link layer
+- *SMP (Security Manager Protocol)* -> Si occupa della sicurezza gestendo pairing e chiavi crittografiche
+- *ATT (Attribute Protocol)* -> definisce come i dati vengono rappresentati e scambiati sotto forma di una semplice tabella di attributi
+- *GATT (Generic Attribute Profile)* -> Si appoggia su ATT e dà una struttura gerarchica ai dati organizzandoli in Servizi (Services) e Caratteristiche (Characteristics)
+- *GAP (Generic Access Profile)* ->  è il livello trasversale che controlla la visibilità e le interazioni tra dispositivi: definisce i ruoli (Peripheral vs Central), gestisce l'advertising per farsi scoprire, avvia le connessioni e gestisce la privacy dell'indirizzo MAC.
+
+- *Application* -> è il codice utente che gira dentro il dispositivi
+
+**GAP** 
+Un dispositivo BLE può assumere 4 ruoli:
+1) *Broadcaster* -> solo trasmissione, non connettibile, invia pacchetti di advertising in broadcast a chiunque sia in ascolto. (es. sensori di dati ambientali)
+2) *Observer* -> solo ascolto non connettibile, scansiona continuamente l'etere per catturare i pacchetti dei broadcaster senza però mai connettersi. (es. un gateway fisso che raccoglie i dati di vari sensori broadcaster)
+3) *Peripheral* -> annuncia e accetta connessioni, fa advertising per farsi trovare da un altro dispositivo e connettersi. (es. cuffie bluetooth)
+4) *Central* -> scansiona e avvia connessioni, cerca le periferiche nei dintorni e decide quando stabilire una connessione con esse. (es. smartphone)
+
+**Stati del link layer**
+![[Pasted image 20261115114432.png|311]]
+
+Il chip radio transita sempre da questi 5 stati, partendo sempre dallo stato di standby, il grafico è diviso in 2 parti: a sinistra lato periferica e a destra lato centrale
+
+*Lato periferica*:
+Parte da standby e entra nella fase di advertising per farsi vedere. quando riceve un pacchetto di richiesta di connessione (CONNECT_IND) va nello stato di connection assumendo il ruolo di periferica
+
+*Lato Centrale*:
+Parte da standby e entra nella fase di scanning per trovare delle periferiche, una volta trovata una periferica, passa allo stato di initiating per preparare la connessione, invia il pacchetto CONNECT_IND e appena è accettato passa allo stato di connection in cui assume il ruolo di central
+
+Quando la connessione termina passa di nuovo allo stato di standby
+
+
+
