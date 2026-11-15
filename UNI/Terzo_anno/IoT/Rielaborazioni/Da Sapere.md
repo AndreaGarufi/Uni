@@ -837,6 +837,60 @@ Introduceva una crittografia che non permetteva ad uno sniffer di risalire alle 
 Bluetooth 4.1
 Potenzia ulteriormente lo standard utilizzato dal 2.1
 
+---
+##### BLE - Bluetooth Low Energy
+Unito al bluetooth dal 2010 (v. 4.0) è un design separato dal bluetooth classico: nuova radio, nuovo link layer e stack, studiato per dispositivi che "dormono" la maggior parte del tempo (come i sensori): 
+![[Pasted image 20261115111215.png]]
+
+> [! info] Cosa è l'advertising?
+> L'advertising è il meccanismo con cui un dispositivo periferico (come esp32) trasmette periodicamente in broadcast dei pacchetti per farsi scoprire dai dispositivi circostanti
+
+
+**Protocollo BLE**
+
+![[Pasted image 20261115111440.png]]
+Come detto prima Bluetooth e quindi anche BLE occupano le stesse frequenze del Wi-Fi e molti altri dispositivi
+BLE suddivide l'intera frequenza in 40 canali con salti di 2MHz tra ogni canale, ne sfrutta 3 per l'advertising, quindi quando dovrà farsi scoprire userà quei canali, gli altri sono invece per comunicare dati utili durante la sessione. I canali di advertising sono posti nei gap tra i canali più usati dal wifi, infatti come mostra la figura non si sovrappongono (almeno quelli).
+
+Il BLE supporta diverse modalità di comunicazione: 1M (standard 1Mbps), 2M (alta velocità 2Mbps) e coded con correzione degli errori per coprire "lunghe" distanze.
+
+**Vediamo lo stack BLE**
+![[Pasted image 20261115112258.png|592]]
+
+La struttura è abbastanza simile a quella del classic ma con alcune differenze, anche qui c'è una parte gestita dal controller BLE e una dall' host, gestite da un interfaccia che permette loro di comunicare.
+
+- *PHY* -> livello fisico cioè l'antenna che deve comunicare
+- *Link Layer* -> gestisce gli stati del dispositivo: advertising, scansione, connessione ecc...
+
+- *HCI* -> è il ponte che fa comunicare il controller con l'OS
+
+- *L2CAP (Logical Link Control and Adaptation Protocol)* -> incapsula i dati dei livelli superiori e li instrada su canali logici fissi verso il link layer
+- *SMP (Security Manager Protocol)* -> Si occupa della sicurezza gestendo pairing e chiavi crittografiche
+- *ATT (Attribute Protocol)* -> definisce come i dati vengono rappresentati e scambiati sotto forma di una semplice tabella di attributi
+- *GATT (Generic Attribute Profile)* -> Si appoggia su ATT e dà una struttura gerarchica ai dati organizzandoli in Servizi (Services) e Caratteristiche (Characteristics)
+- *GAP (Generic Access Profile)* ->  è il livello trasversale che controlla la visibilità e le interazioni tra dispositivi: definisce i ruoli (Peripheral vs Central), gestisce l'advertising per farsi scoprire, avvia le connessioni e gestisce la privacy dell'indirizzo MAC.
+
+- *Application* -> è il codice utente che gira dentro il dispositivi
+
+**GAP** 
+Un dispositivo BLE può assumere 4 ruoli:
+1) *Broadcaster* -> solo trasmissione, non connettibile, invia pacchetti di advertising in broadcast a chiunque sia in ascolto. (es. sensori di dati ambientali)
+2) *Observer* -> solo ascolto non connettibile, scansiona continuamente l'etere per catturare i pacchetti dei broadcaster senza però mai connettersi. (es. un gateway fisso che raccoglie i dati di vari sensori broadcaster)
+3) *Peripheral* -> annuncia e accetta connessioni, fa advertising per farsi trovare da un altro dispositivo e connettersi. (es. cuffie bluetooth)
+4) *Central* -> scansiona e avvia connessioni, cerca le periferiche nei dintorni e decide quando stabilire una connessione con esse. (es. smartphone)
+
+**Stati del link layer**
+![[Pasted image 20261115114432.png|311]]
+
+Il chip radio transita sempre da questi 5 stati, partendo sempre dallo stato di standby, il grafico è diviso in 2 parti: a sinistra lato periferica e a destra lato centrale
+
+*Lato periferica*:
+Parte da standby e entra nella fase di advertising per farsi vedere. quando riceve un pacchetto di richiesta di connessione (CONNECT_IND) va nello stato di connection assumendo il ruolo di periferica
+
+*Lato Centrale*:
+Parte da standby e entra nella fase di scanning per trovare delle periferiche, una volta trovata una periferica, passa allo stato di initiating per preparare la connessione, invia il pacchetto CONNECT_IND e appena è accettato passa allo stato di connection in cui assume il ruolo di central
+
+Quando la connessione termina passa di nuovo allo stato di standby
 
 
 
