@@ -995,3 +995,46 @@ Ogni riga della tabella rappresenta un singolo attributo, composto da 4 elementi
 ---
 
 **Struttura protocollo ATT**
+ATT è il meccanismo di messaggistica a livello applicativo con cui un **GATT client** (es. lo smartphone) e un **GATT server** (es. il dispositivo IoT) leggono, scrivono e ricevono aggiornamenti sugli attributi visti nelle slide precedenti.
+![[Pasted image 20261116121340.png|434]]
+
+Il client manda una richiesta di lettura passando il codice che indentifica il battery level, il server risponde restituendola,
+Il client invia Write Request (0x12) per scrivere 01 00 nell'handle 0x0004 (abilitazione notifiche, CCCD), il server risponde con una write response che conferma l'avvenuta scrittura, ora che il CCCD è attivo, quando la batteria scende al 89%, il server invia autonomamente una Notification sull'handle 0x0003. Il client non invia alcuna risposta a livello ATT. A questo punto il client manda una write command, comando simile alla write precedente ma che non richiede risposta poi Il server invia una Indication per un dato critico che richiede garanzia di consegna applicativa e il client è obbligato a dare conferma di ricezione
+
+![[Pasted image 20261116122506.png|345]]
+
+---
+**Connessioni multiple**
+A partire dalla versione **Bluetooth 4.1**, un singolo dispositivo BLE non è più vincolato a un solo collegamento: può mantenere **più connessioni simultanee** e persino ricoprire **ruoli diversi allo stesso tempo** (ad esempio agire contemporaneamente da _Central_ verso un sensore e da _Peripheral_ verso uno smartphone).
+
+Tuttavia, nella pratica, i dispositivi **Peripheral semplici** (come un sensore a batteria) **interrompono l'advertising non appena si connettono** a un Central, scegliendo deliberatamente di servire un solo dispositivo alla volta per semplicità e risparmio energetico.
+
+---
+##### Pairing BLE
+Approfondiamo il pairing BLE ovvero il processo crittografico con cui due dispositivi già connessi stabiliscono un canale cifrato si autenticano e si scambiano le chiavi per le connessioni future.
+
+Le 3 fasi del pairing:
+1) *Feature exchange*: i 2 dispositivi si scambiano in chiaro i pacchetti di pairing request e response, negoziano le capacità di input/output e altre informazioni sulla sicurezza che possono offrire alla connessione e infine concordano la dimensione massima della chiave e quali chiavi distribuirsi al termine della procedura
+2) *Key generation*: **BLE Legacy (BLE 4.0):** Usa una chiave temporanea (**TK**, _Temporary Key_ — impostata a 0, a un PIN a 6 cifre o a un segreto OOB) per derivare una **STK** (_Short Term Key_) con cui cifrare temporaneamente la connessione. **BLE Secure Connections (BLE 4.2+):** utilizza uno scambio di chiavi crittografiche (utilizzando un algoritmo di nome ECDHP P-256) per generare delle chiavi long term
+3) *key distribution*: a questo punto il canale è ormai cifrato e i dispositivi si scambiano le chiavi: LTK (long term key) usata per ri-cifrare istantaneamente la connessione nelle sessioni successive senza dover rifare il pairing, IRK (identity resolving key) permette di risolvere gli indirizzi MAC casuali privati usati dal BLE per evitare il tracciamento fisico del dispositivo. (Per non far tracciare i dispositivi, questi ultimi utilizzano dei MAC address che non sono i loro reali e che cambiano ogni tot di tempo).
+
+Il salvataggio permanente di queste chiavi nella memoria dei dispositivi prende il nome di *bonding*
+
+**4 modelli di associazione:**
+In base alle **IO capabilities** scambiate nella Fase 1 (es. se entrambi i dispositivi hanno uno schermo, se uno ha solo un tastierino o se entrambi sono privi di interfaccia come un sensore IoT), lo stack BLE sceglie automaticamente uno di questi 4 metodi per autenticarsi:
+- *Just works* -> Nessuna interazione richiesta all'utente. Usato quando almeno uno dei dispositivi non ha né schermo né tastiera (es. auricolari o sensori). **Non offre protezione contro attacchi MITM** durante lo scambio iniziale.
+- *Numeric comparison* -> (BLE 4.2+) Entrambi i dispositivi hanno un display; mostrano lo stesso codice a 6 cifre e l'utente deve confermare su entrambi che i numeri coincidono.
+- *Passkey entry* -> Un dispositivo mostra un codice a 6 cifre sul display e l'utente lo digita sulla tastiera dell'altro dispositivo.
+- *Out of band (OOB)* -> Le informazioni crittografiche vengono scambiate su un canale fisico alternativo e ravvicinato (es. avvicinando i dispositivi tramite **NFC** o scansionando un QR code).
+
+> [!warning] Vulnerabilità
+> - **Vulnerabilità di LE Legacy:** Il vecchio meccanismo di pairing introduzione con BLE 4.0 è crittograficamente compromesso. Se un attaccante intercetta (_sniffing_) i pacchetti radio durante la fase di pairing Legacy, tool noti come **crackle** (2013) riescono a forzare (_brute-force_) la chiave temporanea `TK` in pochi secondi e decifrare tutto il traffico successivo.
+- Per qualsiasi applicazione moderna è quindi indispensabile abilitare **LE Secure Connections (SC)**.
+
+![[Pasted image 20261116151435.png]]
+
+---
+
+Vediamo uno schema della logica di implementazione di BLE sulla nostra NANO ESP32-S3 con la libreria di unict:
+![[Pasted image 20261116151706.png]]
+
