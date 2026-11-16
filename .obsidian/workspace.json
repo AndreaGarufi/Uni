@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
+                "file": "UNI/Terzo_anno/Embededd System/Lezioni/4_interrupt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Da Sapere"
+              "title": "4_interrupt"
             }
           }
         ],
@@ -199,18 +199,22 @@
   },
   "active": "b19d688d10ba5166",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115184739.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115175607.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115173813.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115172638.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115171643.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115171640.png",
+    "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115114432.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115112258.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115111440.png",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115111215.png",
     "UNI/Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
-    "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/7_display7Segmenti.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/4_interrupt.md",
     "UNI/Terzo_anno/Embededd System/file_condivisi/11_DisplayDriver.pdf",
     "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114180512.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114180137.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114180054.png",
     "UNI/Terzo_anno/Embededd System/C/Display/src/main.c",
     "UNI/Terzo_anno/Embededd System/C/Display/test/README",
     "UNI/Terzo_anno/Embededd System/C/Display/test",
@@ -220,10 +224,6 @@
     "UNI/Terzo_anno/Embededd System/C/Display/include",
     "UNI/Terzo_anno/Embededd System/C/Display/src",
     "UNI/Terzo_anno/Embededd System/C/Display/platformio.ini",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114174833.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114174304.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261114174216.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261113180630.png",
     "UNI/Terzo_anno/Embededd System/Lezioni/2_introduzione.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/6_timer.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/6.md",
