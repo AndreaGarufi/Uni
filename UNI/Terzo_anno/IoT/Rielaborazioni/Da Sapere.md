@@ -1038,3 +1038,22 @@ In base alle **IO capabilities** scambiate nella Fase 1 (es. se entrambi i dispo
 Vediamo uno schema della logica di implementazione di BLE sulla nostra NANO ESP32-S3 con la libreria di unict:
 ![[Pasted image 20261116151706.png]]
 
+---
+
+Esempio di codice di una lampada IoT (il codice ha i commenti):
+![[Terzo_anno/IoT/C/IoT_lamp/src/main.cpp]]
+
+In questo codice c'è una così detta caratteristica, è l'unita fondamentale che contiene un singolo dato scambiato tra 2 dispositivi (possiamo vederla come una variabile scambiata via radio), *come si inserisce nella gerarchia BLE?*
+- **Server BLE (`Garufi's-Lamp`)**: È l'intero dispositivo (l'ESP32).
+- **Servizio (`SERVICE_UUID`)**: È una cartella logica che raggruppa funzioni correlate. Qui rappresenta l'intera "Lampada". Se la scheda avesse anche un sensore di temperatura, potresti creare un secondo servizio separato per quello.
+- **Caratteristica (`LED_UUID`)**: È il singolo dato dentro la cartella. Nel tuo codice c'è una sola caratteristica, che contiene lo stato del LED (`"on"` oppure `"off"`). Se la lampada fosse RGB, avresti ad esempio una caratteristica per l'accensione e una seconda caratteristica per il colore.
+
+Nel codice, `ledChar` è un oggetto che racchiude tre elementi principali:
+- **UUID (`LED_UUID`)**: Il codice univoco che la identifica, così il telefono sa che scrivendo lì dentro sta comandando proprio quel LED e non qualcos'altro.
+- **Valore (_Value_)**: Il dato vero e proprio memorizzato al suo interno in quel momento (nel tuo codice è una stringa di testo: `"on"` o `"off"`).
+- **Proprietà (_Properties_)**: I "permessi" che stabiliscono cosa può fare il telefono con quel dato. Nel `setup()` li hai definiti così:
+    - `PROPERTY_READ`: Il telefono può _leggere_ il valore attuale.
+    - `PROPERTY_WRITE`: Il telefono può _sovrascrivere_ il valore (inviando `"on"` o `"off"`).
+    - `PROPERTY_NOTIFY`: L'ESP32 può _avvisare automaticamente_ il telefono appena il valore cambia (utile quando premi il pulsante fisico sulla scheda).
+
+---
