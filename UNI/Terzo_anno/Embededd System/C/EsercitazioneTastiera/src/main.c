@@ -44,7 +44,7 @@ switch (contatore) {
         break;
 }
 
-    delay_ms(70);
+    delay_ms(100);
     contatore++;
     if(contatore > 4){
         contatore = 1;
