@@ -1057,3 +1057,135 @@ Nel codice, `ledChar` è un oggetto che racchiude tre elementi principali:
     - `PROPERTY_NOTIFY`: L'ESP32 può _avvisare automaticamente_ il telefono appena il valore cambia (utile quando premi il pulsante fisico sulla scheda).
 
 ---
+##### Protocollo 802.15.4
+Questo è un protocollo particolare perché fa da base per altri protocolli *LR-WPAN* (low rate wireless personal area network), dato che gestisce solo il livello fisico e livello MAC, tutto il resto sopra è lasciato ad altri protocolli come ZigBee, Thread, 6LowPAN ecc...
+
+Caratteristiche:
+- low cost -> una semplice radio
+- low power -> può far durare anni i dispositivi a batteria
+- low rate -> ha un troughput ≤ 250 kbps, e frames ≤ 127 B
+- short range -> ufficialmente 10 metri ma nella pratica possono essere di più anche in base a ostacoli ecc...
+
+![[Pasted image 20261121104936.png|445]]
+
+![[Pasted image 20261121105007.png]]
+
+![[Pasted image 20261121105104.png]]
+Questo protocollo può funzione in queste 3 frequenze ma quella più utilizzata è sicuramente la 2.4 GHz, frequenza già utilizzata da Bluetooth e wifi.
+
+*Suddivisione dei canali:*
+![[Pasted image 20261121105318.png]]
+
+Come possiamo vedere 802.15.4 suddivide l'intera banda in 26 canali con salti di 5MHz tra uno e l'altro, i canali primari sono il 15-20-25-26 perché sono gli unici che non si sovrappongono ai canali più utilizzati del wifi quindi sono un po' più liberi dalle interferenze, (anche Bluetooth li usa), di base quindi si prediligono questi canali.
+
+**Struttura del pacchetto al livello fisico**
+Un frame a livello fisico è composto da 3 macro blocchi principali per un massimo di 133 byte
+- *SHR* -> synchronization header, 5 byte, serve a preparare e sincronizzare il ricevitore prima dei dati veri e propri. È composto dal preambolo di 4 byte tutti a 0 che permette all'antenna del ricevente di sincronizzarsi con la comunicazione, e da un byte di valore fisso che segnala la fine di un preambolo
+- *PHR* -> 1 byte, contiene la lunghezza del payload fisico che segue.
+- *PSDU* -> va da 0 a 127 byte, che corrisponde all'intera trama del frame al livello superiore
+
+Il livello fisico non ha controllo degli errori, quest'ultimo è delegato al livello superiore
+![[Pasted image 20261121110354.png|636]]
+
+- Ad ogni trasmissione abbiamo 6 byte di overhead, dato che mandiamo 4 byte di preambolo, 1 di SFD e 1 di PHR ad ogni frame mandato
+- 4,26 ms è la durata massima di trasmissione di un singolo frame (se mandiamo meno byte è minore)
+- 800 micro secondi invece per mandare un messaggio come Hello 0 che occupa 25 byte totali
+- Sulla maggior parte dei dispositivi il livello fisico è già gestito dal driver dell'antenna e quindi il programmatore deve solo occuparsi del livello MAC
+
+---
+**Device types**
+Il protocollo 802.15.4 divide logicamente i dispositivi in 3 categorie:
+- RFD -> reduced function device, ovvero un dispositivo che è a batteria e dorme la maggior parte del tempo, si sveglia solo per mandare dati
+- FFD -> full function device, ovvero un dispositivo collegato alla corrente in modo continuo, è un nodo che quindi non ha particolari bisogni di risparmiare energia e può svolgere compiti più pesanti rispetto a RFD
+- PAN coordinator -> è l'FFD che starta la PAN e in qualche modo fa da gestore e organizzatore di quest'ultima
+
+![[Pasted image 20261121111444.png]]
+Queste sono le linee guida per che topologie realizzare con questo protocollo
+
+---
+**Passiamo al livello superiore: MAC**
+Questo livello corrisponde al PSDU del livello fisico:
+![[Pasted image 20261121111712.png]]
+
+Anche questo livello è logicamente diviso in 3 parti: header payload e controllo degli errori
+- *FCF (frame control field 2 byte)* -> è il campo regista dell'intero frame, specifica il tipo di trama (Data, ACK, Beacon, Command), la versione del protocollo, se è richiesta conferma di ricezione (ACK) e soprattutto quali campi di indirizzamento seguono e con quale lunghezza.
+- *Seq number (1 byte)* -> Un contatore incrementale (0–255) usato per associare un pacchetto di riscontro (**ACK**) alla rispettiva trama dati e per rilevare ed eliminare eventuali pacchetti duplicati.
+- *Addressing field:* identificano rete e nodi coinvolti
+  - *Dest PAN (0/2 byte) & Dest address (0/2/8 byte)* -> identificativo della rete e indirizzo del destinatario
+  - *Src PAN (0/2 byte) & Src address (0/2/8 byte)* -> identificativo della rete e indirizzo del mittente
+- *AUX security (0/5/6/10/14 byte)* -> Campo opzionale presente solo se la cifratura/autenticazione a livello MAC è abilitata; contiene i parametri crittografici (es. frame counter e identificativo della chiave).
+- *MAC payload* -> Campo opzionale presente solo se la cifratura/autenticazione a livello MAC è abilitata; contiene i parametri crittografici (es. frame counter e identificativo della chiave).
+- *MFR (MAC footer 2 byte)* -> contiene un CRC per il controllo degli errori
+
+I campi multi byte sono mandati in little endian (LSB first)
+
+![[Pasted image 20261121112611.png|442]]
+
+Vediamo nel dettaglio i 16 bit del campo FCF
+**FCF**
+![[Pasted image 20261121113059.png|675]]
+
+- I primi 3 bit (0-2) sono il frame type, ovvero la natura del pacchetto:
+	- `000`: **Beacon** (usato dai coordinatori per sincronizzare la rete).
+	- `001`: **Data** (trasporto dati applicativi).
+	- `010`: **Acknowledgment** (conferma di ricezione ACK).
+	- `011`: **MAC command** (comandi di controllo come associazione/disassociazione).
+	- `1xx`: Riservati (estesi nelle revisioni 2015+).
+
+- il bit 3 è un bit che indica se la cifratura è on oppure off
+- il bit 4 se è = 1 indica che il mittente ha altri dati da inviare al destinatario
+- il bit 5 se è = 1 richiede al destinatario di rispondere con un ack
+- il bit 6 se è = 1 omette il campo src pan poiché coincide con il campo dest pan (permettendo cosi di comprimere l'header)
+- bit 7-9 sono bit riservati per usi futuri e sono impostati a 0
+- bit 10-11 indicano il formato dell'indirizzo di destinazione:
+	- `00` = assente, `10` = corto a 16 bit, `11` = esteso a 64 bit
+- bit 12-13 versione del protocollo 802.15.4
+- bit 14-15 formato dell'indirizzo sorgente
+
+Tabella riassuntiva:
+![[Pasted image 20261121113952.png]]
+
+**Command**
+Vediamo il meccanismo con cui avviene il controllo e la gestione della comunicazione
+![[Pasted image 20261121114429.png|470]]
+
+Quando il campo FCF è impostato a `011` il pacchetto non trasporta dati applicativi ma un messaggio di gestione della rete, il primo byte del payload del MAC identifica il comando:
+- **`0x01` – Association request:** Inviato da un nodo per chiedere a un coordinatore di entrare a far parte della rete (PAN).
+- **`0x02` – Association response:** Risposta del coordinatore che assegna al nodo un indirizzo corto a 16 bit oppure rifiuta l'accesso.
+- **`0x03` – Disassociation notification:** Comunica l'uscita volontaria di un nodo dalla PAN oppure la sua espulsione da parte del coordinatore.
+- **`0x04` – Data request:** Usato dai dispositivi in risparmio energetico (_polling_) per chiedere al coordinatore se ci sono pacchetti in coda per loro (segnalati in precedenza tramite il bit `Pend = 1`).
+- **`0x05` – PAN ID conflict notification:** Segnala al coordinatore che due reti vicine stanno usando lo stesso identificativo PAN.
+- **`0x06` – Orphan notification:** Inviato da un dispositivo che ha perso la sincronizzazione con il proprio coordinatore per provare a rintracciarlo.
+- **`0x07` – Beacon request:** Utilizzato durante una scansione attiva (_active scan_) per sollecitare i coordinatori nelle vicinanze a trasmettere il proprio _Beacon_ e scoprire le reti disponibili.
+- **`0x08` – Coordinator realignment:** Inviato dal coordinatore per informare i nodi di un cambio di canale radio o di PAN ID (oppure in risposta a una _Orphan notification_).
+- **`0x09` – GTS request:** Richiede l'allocazione di un _Guaranteed Time Slot_ (un intervallo temporale riservato senza contesa) nelle reti che operano in _beacon-enabled mode_.
+
+Riguardo agli ACK:
+Quando un nodo riceve un frame unicast con richiesta di ACK, il nodo lo invia immediatamente senza utilizzare CSMA/CA (quindi non ci prova nemmeno a evitare le collisioni). I pacchetti broadcast non richedono mai ACK. Il mittente attende l'ACK per una certa quantità di tempo se non arriva reinvia di nuovo il messaggio fino ad un massimo di 3 volte, dopo se l'ACK non è ancora arrivato segnale l'errore ai livelli superiori
+
+---
+**Security in 802.15.4**
+Questi meccanismi sono attivi a partire dalla versione del 2006, e si utilizzano quando il bit `sec` è impostato a 1.
+![[Pasted image 20261121122145.png|476]]
+
+Quando la sicurezza è attiva, alla fine dell'intestazione MAC viene aggiunto un blocco opzionale di 5,6,10,14 byte suddiviso in 3 campi:
+*Security Control 1 byte*: definisce le impostazioni crittografiche del pacchetto
+- bit 0-2 sceglie uno degli 8 livelli di protezione (da 0 a 7)
+- bit 3-4 indica come identificare la chiave crittografica condivisa, determinando la lunghezza del successivo campo key Identifier
+- bit 5-7 bit riservati a usi futuri impostati a 0
+*Frame counter 4 byte*: un contatore a 32 bit strettamente crescente ad ogni pacchetto inviato. Se un ricevitore riceve una trama con un contatore uguale o inferiore all'ultimo registrato per quel mittente, la scarta immediatamente (protezione contro gli attacchi di replay). 
+*Key identifier 0/1/5/9 byte*: Presente solo se _Key ID mode_ $\neq 0$; contiene l'indice della chiave e, opzionalmente, l'identificativo della sorgente della chiave
+
+**Algoritmo crittografico**
+Utilizza una variante dell'algoritmo CCM basata su una singola chiave per svolgere due funzioni:
+1) *Cifratura*: rende i payload illegibili a terzi
+2) *Integrità e autenticazione*: Calcola un codice che viene posto alla fine del payload che garantisce che il messaggio non sia stato alterato e provenga da chi possiede la chiave
+
+Il livello MAC fornisce solo i meccanismi crittografici di basso livello (_"offers the tools"_); la generazione, distribuzione e rotazione delle chiavi (**key management**) sono interamente demandate ai livelli superiori (es. Zigbee, Thread o livello applicativo).
+
+Tabella dei livelli di sicurezza:
+![[Pasted image 20261121123151.png|357]]
+
+---
+##### Protocollo ZigBee
+

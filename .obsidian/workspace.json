@@ -11,10 +11,14 @@
             "id": "cdfb777992958cae",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Da Sapere"
             }
           }
         ]
@@ -180,6 +184,17 @@
   },
   "active": "cdfb777992958cae",
   "lastOpenFiles": [
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121123151.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121122145.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121114429.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121113952.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121113059.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121112611.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121111712.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121111444.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121110354.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121105318.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121105104.png",
     "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
     "Progetto.md",
     "UNI/Terzo_anno/IoT/C/DisplayBluetooth/src/main.cpp",
@@ -195,18 +210,8 @@
     "UNI/Terzo_anno/Embededd System/Lezioni/6_timer.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/7_display7Segmenti.md",
     "conflict-files-obsidian-git.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261116151706.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261116151435.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261116122506.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261116121340.png",
     "UNI/Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/4_interrupt.md",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115184739.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115175607.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115173813.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115172638.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115171643.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115171640.png",
     "UNI/Terzo_anno/Embededd System/Lezioni/2_introduzione.md",
     "UNI/Terzo_anno/Embededd System/Lezioni/6.md",
     "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Senza nome.canvas",
