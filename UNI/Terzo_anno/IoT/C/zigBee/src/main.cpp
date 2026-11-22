@@ -25,7 +25,8 @@ void onBt1Pressed(uint8_t btn){
 
 
 void setup() {
-
+  
+  IoTBoard::init_serial();
   IoTBoard::init_leds();
   IoTBoard::init_display();
   IoTBoard::init_buttons();
@@ -36,6 +37,7 @@ void setup() {
     display->setCursor(0,0);
     display->println("ZIGBEE Buono");
     display->display();
+    Serial.printf("ZigBee Buono");
   }
 
   zigbee->setPanId(PAN_ID);      // hardware address filter
