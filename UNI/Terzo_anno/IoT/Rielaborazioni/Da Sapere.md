@@ -1188,4 +1188,79 @@ Tabella dei livelli di sicurezza:
 
 ---
 ##### Protocollo ZigBee
+ZigBee è un protocollo aperto che aggiunge il layer network, sicurezza e applicativo al di sopra della struttura già consolidata dal protocollo 802.15.4
+![[Pasted image 20261123174546.png|313]]
+
+*Caratteristiche:*
+- Una delle topologie più utilizzate con questo protocollo è la topologia mesh, in cui la rete si autoripara.
+- Basso consumo energetico, i dispositivi si identificano in maniera molto simile a quella di 802.15.4, spesso stanno spenti
+
+**Stack ZigBee**
+![[Pasted image 20261123174847.png|479]]
+
+Come vediamo si poggia su 802.15.4, e aggiunge:
+- *NWK (Network Layer)* -> gestisce indirizzi da 16 bit per ogni dispositivo, il routing all'interno della mesh, l'ingresso del dispositivo in rete ecc...
+- *APS (Application Support Sublayer* -> gestisce la comunicazione unicast tra i dispositivi anche con messaggi di ACK e le frammentazioni dei pacchetti.
+- *Application Framework (AF)* -> è l'ambiente dove gira il nostro codice applicativo, ogni dispositivo ZigBee è in grado di gestire 240 porte (*endpoint*) per indirizzare i giusti messaggi (come le porte utilizzate da TCP/UDP)
+	  - **Endpoint 0:** È riservato allo **ZDO** (_Zigbee Device Object_), che gestisce la rete e la sicurezza a livello di sistema.
+	  - **Endpoint 1 – 240:** Sono quelli disponibili per le nostre applicazioni utente. Ad esempio, su una ciabatta smart a 3 prese avrai la Presa 1 sull'EP 1, la Presa 2 sull'EP 2 e la Presa 3 sull'EP 3. (Gli endpoint 241–254 sono riservati per usi futuri/speciali, il 255 è broadcast).
+
+
+**Device types**
+![[Pasted image 20261123175539.png]]
+Funzionano esattamente come i dispositivi di 802.15.4
+
+![[Pasted image 20261123175733.png]]
+
+- **IEEE address (EUI-64) — 64 bit:** È l'equivalente del MAC address nelle reti Ethernet/Wi-Fi. Viene inciso in fabbrica ed è unico al mondo e immutabile.
+- **Network address — 16 bit:** È l'indirizzo logico dinamico (simile a un indirizzo IP locale), assegnato al dispositivo nel momento in cui entra nella rete (_join_). In Zigbee PRO viene generato casualmente; l'unica eccezione fissa è il **Zigbee Coordinator (ZC)**, che ha sempre indirizzo `0x0000`.
+- **PAN ID — 16 bit:** Identifica la specifica rete locale (_Personal Area Network_). Viene scelto dal Coordinator e inserito nell'header di ogni frame MAC per separare reti Zigbee vicine che operano sullo stesso canale radio.
+- **Extended PAN ID — 64 bit:** Essendo il PAN ID a 16 bit soggetto a possibili collisioni tra reti vicine, questo identificativo esteso (spesso impostato pari all'IEEE address del Coordinator) garantisce l'univocità globale della rete e permette di risolvere eventuali conflitti.
+- **Endpoint — 8 bit:** Identifica la singola istanza applicativa dentro un dispositivo fisico (come visto nella slide precedente).
+- **Profile / Cluster ID — 16 bit:** Specifica il contesto applicativo (es. _Home Automation_) e la tipologia di comando/dato trasportato secondo la libreria ZCL (es. `0x0006` per On/Off).
+
+**Indirizzi di Broadcast (Tabella a destra)**
+Invece di inviare un messaggio a un singolo nodo, Zigbee riserva alcuni indirizzi NWK a 16 bit speciali per inviare messaggi in broadcast a gruppi specifici di dispositivi:
+- **`0xFFFF`:** Tutti i dispositivi della rete.
+- **`0xFFFD`:** Solo i dispositivi con il ricevitore sempre acceso (_RX always on_, quindi Coordinator, Router ed eventuali End Device alimentati da rete elettrica, escludendo i dispositivi a batteria che dormono).
+- **`0xFFFC`:** Solo i **Router** e il **Coordinator** (utile per il routing e la gestione dell'infrastruttura).
+- **`0xFFFB`:** Solo i router a basso consumo (_Low-power routers_).
+
+
+**Come si inoltrano i pacchetti**
+La comunicazione attraverso il network layer funziona cosi:
+Il layer si occupa di inoltrare il pacchetto in base all'indirizzo che contiene e poi una volta trovato il dispositivo usa l'endpoint per trovare la giusta funzione che lo ha richiesto/ricevuto
+Una volta ricevuto il pacchetto ci sono 2 campi: *Profile + Cluster ID* che specificano come il codice applicativo debba interpretare il pacchetto arrivato (cosa fare nella pratica).
+
+---
+
+**Clustering**
+Un **Cluster** è un insieme standardizzato di **attributi** (variabili di stato) e **comandi** (azioni) legati a una specifica funzione, identificato da un codice esadecimale a 16 bit. Ogni cluster divide i dispositivi in due ruoli:
+- **Server (chi possiede lo stato e esegue):** È il dispositivo che implementa fisicamente la funzione e memorizza lo stato nei propri attributi. Ad esempio, uno **Smart bulb** è il **server** del cluster `On/Off` (`0x0006`): conserva l'attributo booleano `OnOff` (`0` = spenta, `1` = accesa) e accende/spegne fisicamente il LED quando riceve un comando.
+- **Client (chi invia i comandi):** È il dispositivo che controlla o interroga il server. Un **Wall switch** non ha una lampadina propria, quindi agisce come **client** del cluster `On/Off` (`0x0006`): sa inviare i comandi previsti dal cluster (`Off`, `On`, `Toggle`), ma non mantiene l'attributo `OnOff`.
+
+![[Pasted image 20261123183658.png]]
+
+Alcuni esempi di codici cluster:
+![[Pasted image 20261123183819.png]]
+
+---
+**Joining nella rete**
+Vediamo prima il lavoro svolto dal coordinator
+![[Pasted image 20261123184016.png|334]]
+
+In questi passi il coordinator sta creando la PAN, attraverso questi 5 step.
+
+![[Pasted image 20261123184256.png|439]]
+Questo è invece il meccanismo di joining per un nuovo dispositivo:
+1) **`Beacon Request` (broadcast, comando MAC `0x07`)** Il nuovo dispositivo esegue un _Active Scan_ sui vari canali radio inviando un frame di comando MAC `0x07` in broadcast ("C'è qualche rete Zigbee su questo canale?").
+2) **`Beacon` (PAN ID, permit join, Ext. PAN ID)** I Router e il Coordinator nelle vicinanze rispondono inviando un frame _Beacon_ contenente l'identificativo della rete (`PAN ID` e `Extended PAN ID`) e soprattutto il flag **`permit join`**: se è attivo (`1`), il nodo accetta nuovi ingressi nella rete.
+3) **`Association Request` (comando MAC `0x01`: capabilities)** Il dispositivo sceglie il genitore migliore (in base al segnale RSSI/LQI e al `permit join` attivo) e invia una richiesta di associazione. Nel payload dichiara le proprie _capabilities_ (es. se è alimentato a batteria o da rete elettrica, se deve fungere da Router o da End Device, se tiene il ricevitore sempre acceso).
+4) **`Data Request` (comando MAC `0x04`: "any answer for me?")** In 802.15.4 la risposta di associazione non viene spedita subito a raffica, perché il genitore ha bisogno di tempo per elaborare la richiesta e generare un indirizzo. Il nuovo nodo attende un breve intervallo e invia un _polling_ tramite comando MAC `0x04` chiedendo se c'è un pacchetto pronto nel buffer del genitore.
+5) **`Association Response`: NWK address `0x3F2A`** Il genitore conferma l'associazione e assegna al dispositivo il suo nuovo **indirizzo di rete logico a 16 bit** (nell'esempio `0x3F2A`), con cui verrà identificato all'interno della rete mesh.
+6) **`Transport Key`: network key (TC link key)** A questo punto il nodo è associato a livello MAC/NWK, ma non può ancora decifrare il traffico della rete. Il **Trust Center (TC)** gli invia la **Network Key** (la chiave condivisa da tutti i nodi per cifrare i pacchetti NWK), proteggendo questo invio con una **TC Link Key** nota (ad esempio la chiave standard preconfigurata di default `ZigBeeAlliance09` o una chiave derivata da un _Install Code_ scansionato tramite QR code).
+7) **`ZDO Device Announce` (broadcast): NWK + IEEE** Ottenuta la Network Key, il dispositivo può finalmente inviare traffico cifrato valido nella rete. Trasmette in broadcast un messaggio ZDO (sull'Endpoint 0) annunciando a tutti i nodi: _"Sono entrato nella rete, questo è il mio indirizzo NWK `0x3F2A` associato al mio indirizzo IEEE a 64 bit"_, permettendo ai vicini di aggiornare le tabelle di routing e di indirizzamento.
+8) **`ZigBee 3.0`: Request / Verify Key (unique key)** Nelle reti Zigbee 3.0, usare la chiave di link globale di default per comunicare col Trust Center non è considerato sicuro a lungo termine. Il dispositivo chiede quindi al Trust Center di negoziare e verificare una **Link Key univoca** (valida solo tra quel singolo nodo e il TC) per mettere in sicurezza le future comunicazioni di gestione e aggiornamenti chiave.
+
+(parleremo dopo del trust center)
 
