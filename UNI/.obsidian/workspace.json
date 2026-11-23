@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "f04dee75f4d78f01",
+        "id": "593c993335bf1e14",
         "type": "tabs",
         "children": [
           {
-            "id": "07987156b720b3fd",
+            "id": "6f7c9b0ce7c43504",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Project ideas.md",
-                "mode": "source",
-                "source": false
+                "file": "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/studio.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Project ideas"
+              "icon": "lucide-file-text",
+              "title": "studio"
             }
           }
         ]
@@ -184,29 +182,32 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "07987156b720b3fd",
+  "active": "6f7c9b0ce7c43504",
   "lastOpenFiles": [
+    "Terzo_anno/IoT/C/zigBee/src/main.cpp",
+    "Terzo_anno/IoT/C/zigBee/lib/README",
+    "Terzo_anno/IoT/C/zigBee/test/README",
+    "Terzo_anno/IoT/C/zigBee/include/README",
+    "Terzo_anno/IoT/C/zigBee/src",
+    "Terzo_anno/IoT/C/zigBee/lib",
+    "Terzo_anno/IoT/C/zigBee/platformio.ini",
+    "Terzo_anno/IoT/C/zigBee/test",
+    "Terzo_anno/IoT/C/zigBee/include",
+    "Terzo_anno/IoT/C/zigBee",
+    "Terzo_anno/IoT/C/TelecomandoBLE/Peripheral/src/main.cpp",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121123151.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121122145.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121114429.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121113952.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121113059.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121112611.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121111712.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121111444.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121110354.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121105318.png",
+    "conflict-files-obsidian-git.md",
+    "Project ideas.md",
     "Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
-    "Terzo_anno/IoT/C/IoT_lamp/test/README",
-    "Terzo_anno/IoT/C/IoT_lamp/test",
-    "Terzo_anno/IoT/C/IoT_lamp/lib/README",
-    "Terzo_anno/IoT/C/IoT_lamp/lib",
-    "Terzo_anno/IoT/C/IoT_lamp/include/README",
-    "Terzo_anno/IoT/C/IoT_lamp/include",
-    "Terzo_anno/IoT/C/IoT_lamp/src",
-    "Terzo_anno/IoT/C/IoT_lamp/platformio.ini",
-    "Terzo_anno/IoT/C/IoT_lamp",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261116151706.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261116151435.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261116122506.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261116121340.png",
-    "Terzo_anno/Embededd System/C/EsercitazioneTastiera/test/README",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115184739.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115175607.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115173813.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115172638.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115171643.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261115171640.png",
     "Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
     "Terzo_anno/Embededd System/Lezioni/7_display7Segmenti.md",
     "Terzo_anno/Embededd System/Lezioni/4_interrupt.md",
@@ -215,7 +216,6 @@
     "Terzo_anno/Embededd System/Lezioni/6_timer.md",
     "Terzo_anno/Embededd System/Lezioni/5_bassoLivello.md",
     "Terzo_anno/Embededd System/Lezioni/1 Embededd System introduzione.md",
-    "Project ideas.md",
     "Senza nome 1.md",
     "Senza nome.md",
     "formule_calcolo_rarita_iconicita.md",
@@ -230,7 +230,6 @@
     "Senza nome.canvas",
     "Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
     "Callouts.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md",
-    "Secondo_anno/Secondo Semestre/RetiDiCalcolatori/rielaborazioni/RETI-COMPLETO.md"
+    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md"
   ]
 }
