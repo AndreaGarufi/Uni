@@ -1264,3 +1264,25 @@ Questo è invece il meccanismo di joining per un nuovo dispositivo:
 
 (parleremo dopo del trust center)
 
+---
+Vediamo il livello di rete di ZigBee
+**ZigBee Mesh Routing**
+ZigBee utilizza principalmente un protocollo fortemente inspirato al *Distance Vectors*, principalmente per la sua leggerezza rispetto al Link State Routing, ma può utilizzare anche metodi diversi:
+
+I 3 metodi di routing di ZigBee
+*Mesh route discovery - simile al DV*
+- La sorgente trasmette in broadcast una **Route Request** (Richiesta di percorso); ogni router aggiunge il proprio costo di collegamento. La destinazione risponde con una **Route Reply** (Risposta di percorso) lungo il cammino più economico. I router memorizzano solo l'hop successivo (_next hop_).
+
+*Routing molti-a-uno + source routing*
+- Un gateway (concentratore) propaga in rete (_floods_) un'unica richiesta di percorso: ogni router impara la strada di ritorno. I dispositivi inviano un **Route Record** (registro del percorso); le risposte trasportano l'**intero percorso** nell'header NWK.
+
+*Routing ad albero*
+- Gli indirizzi seguono la struttura ad albero (_Cskip_), quindi l'hop successivo viene calcolato matematicamente. Non è usato in ZigBee PRO, dove gli indirizzi sono assegnati in modo casuale.
+
+L'utilizzo di uno o di un altro, varia in base ai dispositivi ZigBee, alla tipologia di traffico e alle versioni dello standard ZigBee
+
+Funzionamento del primo caso di routing:
+![[Pasted image 20261123203336.png|402]]
+
+---
+**ZigBee trust center**
