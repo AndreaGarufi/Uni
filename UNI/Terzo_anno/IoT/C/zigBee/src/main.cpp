@@ -7,6 +7,7 @@
 bool received = false;
 uint16_t lastAddrRecv;
 char lastPayload[109];
+
 void onZigbeeReceive(rx_info_t *packet){
   lastAddrRecv = zigbee->readUnsignedInt();  // same order
   strcpy(lastPayload,zigbee->readString());
