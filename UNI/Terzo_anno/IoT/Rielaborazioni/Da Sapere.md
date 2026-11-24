@@ -1286,3 +1286,38 @@ Funzionamento del primo caso di routing:
 
 ---
 **ZigBee trust center**
+Qui illustriamo i meccanismi di sicurezza implementati da ZigBee
+![[Pasted image 20261124100458.png]]
+Vediamo i 3 tipi di chiavi utilizzate:
+- **Network key (Chiave di rete — livello NWK)**
+    - **Chi la usa:** È condivisa da **tutti** i dispositivi appartenenti alla stessa rete Zigbee.
+    - **Come funziona:** Protegge il traffico a livello di rete (_NWK layer_) con cifratura **hop-by-hop** (ogni router intermedio decifra il pacchetto per leggere l'header NWK e instradarlo, poi lo ricifra prima di inoltrarlo al salto successivo).
+    - **Aggiornamento:** Può essere rinnovata periodicamente dal Trust Center; ogni versione è identificata da un **Key Sequence Number** per evitare che i nodi usino chiavi obsolete.
+
+- **TC link key (Trust Center Link Key — livello APS)**
+    - **Chi la usa:** È una chiave punto-punto valida esclusivamente tra il **Trust Center (TC)** e **un singolo dispositivo** (lavora al livello _Application Support sublayer_).
+    - **Come funziona:** Serve a creare un canale sicuro per inviare la _Network Key_ al nuovo dispositivo durante la fase di ingresso in rete (_join_) e per le successive comunicazioni di gestione/rinnovo delle chiavi.
+    
+- **Application link key (Chiave di collegamento applicativa — livello APS)**
+    - **Chi la usa:** Viene negoziata (tramite il Trust Center) tra **due specifici dispositivi** che devono comunicare tra loro (ad esempio una serratura smart e il suo tastierino).
+    - **Come funziona:** Garantisce una cifratura **end-to-end** attraverso l'intera mesh. Anche se il pacchetto attraversa più router (che conoscono la _Network Key_ per fare routing), **i router intermedi non possono leggere il payload applicativo** perché non possiedono questa chiave APS.
+
+Queste chiavi vengono utilizzate tutte e 3 durante il funzionamento di dispositivi ZigBee, per quanto riguarda la sicurezza, offre 2 modalità diverse:
+![[Pasted image 20261124102434.png]]
+- **Centralized security (Sicurezza centralizzata)**
+    - È il modello standard delle reti con un hub o gateway centrale, dove il **Coordinator** funge da **Trust Center (TC)**.
+    - Il TC autorizza ogni singolo ingresso (_join_) nella rete, distribuisce la _Network Key_ protetta dalla _TC Link Key_ e gestisce le chiavi applicative. Offre il massimo livello di controllo e sicurezza.
+        
+- **Distributed security (Sicurezza distribuita)**
+    - Pensata per reti semplici prive di un hub/coordinator (es. un telecomando Zigbee abbinato direttamente a una lampadina).
+    - **Non esiste un Trust Center:** qualsiasi **Zigbee Router (ZR)** può autorizzare un nuovo nodo e passargli la _Network Key_, cifrandola con una chiave globale preconfigurata (_Distributed Security Global Link Key_). È più semplice da configurare ma offre meno controllo centralizzato sugli accessi.
+
+
+Nella nostra IoT-Board non implementiamo un vero e proprio ZigBee, ci basiamo su 802.15.4 al cui di sopra applichiamo un "nostro protocollo" scritto dal singolo programmatore che si ispira un po' a ZigBee
+![[Pasted image 20261124102913.png|410]]![[Pasted image 20261124102923.png|410]]
+
+**Funzioni utili fornite dalla libreria IoT_board:**
+![[Pasted image 20261124103005.png]]
+
+![[Pasted image 20261124103116.png|232]]
+La libreria può gestire fino a 8 frame in coda prima di iniziare a scartarli.
