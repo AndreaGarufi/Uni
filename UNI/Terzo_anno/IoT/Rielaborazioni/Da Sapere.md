@@ -1321,3 +1321,7 @@ Nella nostra IoT-Board non implementiamo un vero e proprio ZigBee, ci basiamo su
 
 ![[Pasted image 20261124103116.png|232]]
 La libreria può gestire fino a 8 frame in coda prima di iniziare a scartarli.
+
+Vediamo un esempio di codice che manda dei messaggi ogni volta che si preme il Bt1:
+![[Terzo_anno/IoT/C/ZigBee/src/main.cpp]]
+
