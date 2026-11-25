@@ -11,10 +11,14 @@
             "id": "dd0f5bfa100df65c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Chiarimenti Studio.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Chiarimenti Studio"
             }
           }
         ]
@@ -182,6 +186,8 @@
   },
   "active": "dd0f5bfa100df65c",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261125193326.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261125185105.png",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Chiarimenti Studio.md",
     "README.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261125103922.png",
@@ -195,7 +201,6 @@
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261124100458.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261123203336.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261123203325.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261123184256.png",
     "Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/studio.pdf",
     "Terzo_anno/IoT/C/zigBee/src/main.cpp",
@@ -227,7 +232,6 @@
     "Terzo_anno/TAP/RepoClonataEsempio/node-bulletin-board/CONTRIBUTING.md",
     "Terzo_anno/TAP/RepoClonataEsempi/node-bulletin-board/bulletin-board-app/readme.md",
     "Terzo_anno/TAP/RepoClonataEsempi/node-bulletin-board/CONTRIBUTING.md",
-    "Senza nome.canvas",
-    "Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md"
+    "Senza nome.canvas"
   ]
 }

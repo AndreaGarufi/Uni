@@ -3,7 +3,7 @@ Chiarimenti sul PDF ![[studio.pdf]]
 ### Java imperativo VS Java funzionale (cap. 6 pag 60)
 ##### 1. Approccio Imperativo (Come farlo)
 In questo stile, descrivi **passo dopo passo** come il computer deve eseguire l'operazione, gestendo manualmente lo stato (le variabili che cambiano) e i cicli.
-```
+```java
 import java.util.List;
 
 public class EsempioImperativo {
@@ -30,7 +30,7 @@ public class EsempioImperativo {
 ### 2. Approccio Funzionale (Cosa ottenere)
 
 Introdotto con Java 8 tramite la **Stream API** e le **Lambda Expressions**. Qui non gestisci indici o variabili d'appoggio: dichiari una pipeline di trasformazioni su dati immutabili.
-```
+```java
 import java.util.List;
 
 public class EsempioFunzionale {
@@ -65,7 +65,7 @@ Lo `Stream` non crea copie profonde degli oggetti contenuti nella lista: traspor
 ##### 1. La struttura "a catena" (Method Chaining)
 In Java, quando un metodo restituisce un oggetto, puoi chiamare subito un altro metodo usando il punto (`.`). Qui stiamo creando una **catena di montaggio** (pipeline) dove l'output di una riga diventa l'input della riga successiva.
 
-```
+```java
 numeri.stream()      // Restituisce uno Stream
       .filter(...)   // Prende lo Stream, lo filtra e ne restituisce uno nuovo
       .mapToInt(...) // Prende lo Stream filtrato, lo trasforma e restituisce un IntStream
@@ -111,7 +111,7 @@ Se traduci i simboli in parole, la riga si legge quasi come una frase:
 >[!warning] Lo stream è usa e getta
 >Una volta eseguita un operazione terminale sullo stream questo non è più accessibile, se serve ancora al massimo se ne apre un altro uguale.
 Errore:
-```
+```java
 Stream<Integer> flusso = numeri.stream().filter(n -> n % 2 == 0);
 
 // Prima operazione terminale: funziona e consuma lo stream
@@ -135,14 +135,14 @@ Nel dettaglio, definisce una condizione chiamata `positive` che prende un numero
 
 alcuni esempi:
 1) 
-```
+```java
 Predicate<Integer> positive = x -> x >= 0;
 
 boolean risultato1 = positive.test(10);  // true
 boolean risultato2 = positive.test(-5);  // false
 ```
 2) 
-```
+```java
 List<Integer> numeri = List.of(-3, 0, 4, -1, 8);
 Predicate<Integer> positive = x -> x >= 0;
 
@@ -223,7 +223,7 @@ Per chiudere la porta a creazioni esterne e fornire comunque l'oggetto a chi lo 
 
 ##### 3. Esempio pratico (dal pdf)
 Guarda la classe `Logs` della dispensa:
-```
+```java
 public final class Logs {
     // 1. Riferimento statico all'unica istanza
     private static Logs obj; 
@@ -279,3 +279,142 @@ Costruttore privato, riferimento e accesso statici; operazioni sullo stato dell�
 
 ---
 
+#### FACTORY METHOD
+Il **Factory Method** è il secondo pattern creazionale ed entra in gioco quando **il codice generale sa _quando_ creare un oggetto e _come_ usarlo, ma non deve sapere _quale classe concreta_ istanziare**.
+
+##### 1. L'idea di fondo: delegare alle sottoclassi
+Immagina di scrivere un _framework_ o una logica generale che lavora su un tipo astratto (es. `Document`, `Studente` o `Posto`). Il codice generale non può fare `new posto()` perché è un'interfaccia o una classe astratta, ma se scrivesse `new postoPlatea()` resterebbe bloccato su un solo formato (non potrebbe avere anche postoPalco ad esempio).
+
+La soluzione del **Factory Method** è definire un metodo "fabbrica" (es. `factoryMethod()`) nella superclasse e **lasciare alle sottoclassi il compito di decidere quale oggetto concreto creare**. Il tutto funziona grazie al **dispatch dinamico** (_late binding_): a runtime, quando il codice generale chiama il metodo di creazione su `this`, Java esegue l'override definito nella sottoclasse concreta.
+
+##### 2. I quattro ruoli fondamentali
+
+- **`Product`**: l'interfaccia (o classe astratta) comune a tutti gli oggetti creati. È l'unico tipo che il client conosce e usa.
+- **`ConcreteProduct`**: le singole implementazioni concrete del prodotto (es. `PdfDocument`, `StudenteAttivo`, `PostoPlatea`).
+- **`Creator`**: la classe (spesso astratta) che dichiara il `factoryMethod()` con tipo di ritorno `Product`. Può anche contenere operazioni concrete che chiamano il `factoryMethod()` per ottenere un prodotto e lavorarci sopra (ad esempio aggiornando un contatore delle istanze create).
+- **`ConcreteCreator`**: la sottoclasse che ridefinisce il `factoryMethod()` e restituisce l'istanza del `ConcreteProduct` scelto (`return new ConcreteProductA();`).
+
+
+##### 3. Perché conviene e qual è il costo
+
+- **Vantaggio:** puoi aggiungere nuovi tipi di prodotto (es. `WordDocument` o un nuovo tipo di posto a teatro) semplicemente aggiungendo una nuova sottoclasse, **senza modificare il codice del client** né la logica generale del `Creator`.
+    
+- **Costo:** aumenta il numero di classi nel progetto (spesso serve una sottoclasse di `Creator` per ogni tipo di `Product`). Se hai un solo prodotto concreto e non prevedi variazioni, questo pattern è eccessivo.
+
+
+Vediamo un esempio di codice:
+```java
+import java.util.*;
+
+// 1. PRODUCT: il contratto comune che il client e il creator astratto conoscono
+interface Posto {
+    String getPosizione();
+    int getCosto();
+    String getSettore();
+}
+
+// 2. CONCRETE PRODUCT A
+class PostoPalco implements Posto {
+    private final int numero;
+
+    public PostoPalco() {
+        // Sceglie un numero casuale tra 1 e 20
+        this.numero = new Random().nextInt(20) + 1;
+    }
+
+    @Override public String getPosizione() { return "Palco-" + numero; }
+    @Override public int getCosto() { return (numero <= 10) ? 40 : 50; }
+    @Override public String getSettore() {
+        if (numero <= 10) return "Blu";
+        if (numero <= 19) return "Verde";
+        return "Centrale";
+    }
+}
+
+// 2. CONCRETE PRODUCT B
+class PostoPlatea implements Posto {
+    private final int numero;
+
+    public PostoPlatea() {
+        this.numero = new Random().nextInt(80) + 1;
+    }
+
+    @Override public String getPosizione() { return "Platea-" + numero; }
+    @Override public int getCosto() { return 30; }
+    @Override public String getSettore() { return "Platea"; }
+}
+
+// 3. CREATOR: definisce la logica generale (quando creare e come registrare)
+//    ma delega alle sottoclassi la creazione effettiva tramite il factory method
+abstract class Posizioni {
+    private final Set<String> postiPieni = new HashSet<>();
+    private final List<Posto> posti = new ArrayList<>();
+
+    // Operazione generale del framework: usa getPosto() senza sapere quale classe concreta crea
+    public Posto prendiPosto(int tipo) {
+        if (postiPieni.size() == 100) return null;
+        Posto p;
+        do {
+            p = getPosto(tipo); // <-- Chiamata al Factory Method (dispatch dinamico!)
+        } while (postiPieni.contains(p.getPosizione()));
+        
+        postiPieni.add(p.getPosizione());
+        posti.add(p);
+        return p;
+    }
+
+    public void printPostiPieni() {
+        for (Posto p : posti) {
+            System.out.println(p.getPosizione() + " - " + p.getSettore() + " (" + p.getCosto() + "€)");
+        }
+    }
+
+    // IL FACTORY METHOD (astratto) ridefinito poi in CreatorPosti
+    public abstract Posto getPosto(int tipo);
+}
+
+// 4. CONCRETE CREATOR: decide quale classe concreta istanziare
+class CreatorPosti extends Posizioni {
+    @Override
+    public Posto getPosto(int tipo) {
+        if (tipo == 1) {
+            return new PostoPalco();
+        }
+        return new PostoPlatea();
+    }
+}
+
+// CLIENT: lavora solo con i tipi astratti Posizioni e Posto
+public class MainTeatro {
+    public static void main(String[] args) {
+        // L'unico punto in cui si nomina una classe concreta è la configurazione iniziale
+        Posizioni gestore = new CreatorPosti();
+
+        Posto p1 = gestore.prendiPosto(1); // Chiede un palco
+        Posto p2 = gestore.prendiPosto(2); // Chiede una platea
+
+        System.out.println("Assegnato: " + p1.getPosizione() + " costo " + p1.getCosto());
+        gestore.printPostiPieni();
+    }
+}
+```
+
+- `p1` e `p2` sono 2 `posto` ovvero 2 *concrete product* che implementano l'interfaccia `posto`
+- `gestore.prendiPosto()` va in prendi posto (dentro posizioni, dato che non ha fatto l'override nella sua classe va nella sua superclasse)
+- `public Posto prendiPosto(int tipo)` ritorna il tipo `posto` e dentro di se crea una variabile di tipo posto e chiama il *factory method* che dentro la classe `posizioni` è solo dichiarato come prototipo, l'implementazione è dentro `CreatorPosti`, quindi si esegue l'override dentro `CreatorPosti` e se il tipo passato è 1 allora si ritorna postoPalco altrimenti postoPlatea
+
+###### Questo è il diagramma dei posti a teatro
+![[Pasted image 20261125193326.png|720]]
+
+> [!info] UTILITÀ 
+> In questo modo potrei anche definire più tipologie di posti (postoBalcone, postoLusso ecc...) ma anche più creatorPosti differenti (classi diverse) che implementano ognuno una versione diversa del factory method (getPosto) senza dover cambiare il codice già scritto
+
+###### Diagramma UML del factory method
+![[Pasted image 20261125185105.png]]
+
+- Il client fa ottiene oggetti dell'`interfaccia prodotto`
+- l'interfaccia è in relazione con la classe `Creator` che a sua volta ha delle operazioni al suo interno e la definizione (firma) del factory method
+- la classe `ConcreteCreatore` è una sotto classe di `Creator`, al suo interno c'è la definizione effettiva del factory method
+- i `concreteProductA e B` implementano l' `interfaccia prodotto` 
+
+---
