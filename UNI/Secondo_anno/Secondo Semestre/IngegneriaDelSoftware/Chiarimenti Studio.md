@@ -203,3 +203,79 @@ Richiede due parametri:
 | `sum()`                           | Terminale (Primitivi)         | Somma tutti gli elementi di uno stream primitivo (`IntStream`).    | Calcolare rapidamente il totale di numeri primitivi.                  |
 | `findFirst()`                     | Terminale (short-circuiting)  | Restituisce il primo elemento (`Optional`) e ferma il flusso.      | Cercare il primo elemento che soddisfa una condizione.                |
 | `findAny()`                       | Terminale (short-circuiting)  | Restituisce un elemento qualsiasi (`Optional`) e si ferma.         | Verificare se esiste almeno un elemento (ideale in parallelo).        |
+
+---
+### DESIGN PATTERN
+
+#### SINGLETON
+##### 1. Il problema: unicità + accesso ovunque
+In molti programmi esistono risorse che, per loro natura, devono essere **uniche** e condivise da tutto il sistema (come un registro di log in cui tutte le classi scrivono errori, o uno spooler di stampa che gestisce una singola stampante).
+
+- **Perché non basta una variabile globale?** Se dichiari una variabile globale `public static Logger log = new Logger();`, chiunque può raggiungerla, ma **nessuno impedisce** a un altro sviluppatore di scrivere altrove nel codice `Logger altroLog = new Logger();`, creando un secondo oggetto e rompendo l'unicità.
+- **La soluzione Singleton:** La responsabilità di garantire che esista _al massimo un'istanza_ viene affidata direttamente alla classe stessa.
+
+##### 2. I tre ingranaggi tecnici del Singleton
+Per chiudere la porta a creazioni esterne e fornire comunque l'oggetto a chi lo chiede, la classe usa tre elementi combinati:
+
+1. **Costruttore `private`:** Impedisce a qualsiasi classe esterna di invocare `new Singleton()`. Se provi a farlo, il compilatore dà errore. Solo i metodi _interni_ alla classe stessa possono chiamare il costruttore.
+2. **Campo `private static`:** È una variabile interna alla classe (es. `private static Logs obj;`) che conserva il riferimento all'unica istanza creata. Essendo `static`, questo campo non appartiene a un singolo oggetto, ma alla classe stessa (quindi esiste in memoria anche prima che venga creato l'oggetto).
+3. **Metodo `public static getInstance()`:** È l'unico "sportello" pubblico attraverso cui i client possono ottenere l'oggetto. Poiché non possono fare `new`, devono per forza chiamare `NomeClasse.getInstance()`. Essendo `static`, questo metodo può essere invocato direttamente sul nome della classe, senza avere già un'istanza in mano.
+
+##### 3. Esempio pratico (dal pdf)
+Guarda la classe `Logs` della dispensa:
+```
+public final class Logs {
+    // 1. Riferimento statico all'unica istanza
+    private static Logs obj; 
+    private final List<String> righe = new ArrayList<>();
+
+    // 2. Costruttore privato: nessuno fuori da qui può fare "new Logs()"
+    private Logs() { } 
+
+    // 3. Punto di accesso globale e statico
+    public static Logs getInstance() {
+        if (obj == null) {       // Se l'istanza non esiste ancora...
+            obj = new Logs();    // ...la creo ora (solo la prima volta!)
+        }
+        return obj;              // Restituisco sempre la stessa istanza
+    }
+    
+    public void record(String s) { righe.add(s); }
+}
+```
+
+**Cosa succede a runtime?**
+- Quando la classe `A` chiama `Logs l1 = Logs.getInstance();`, `obj` è `null`, quindi viene eseguito `new Logs()` e restituito il riferimento.
+- Quando, poco dopo, la classe `B` chiama `Logs l2 = Logs.getInstance();`, `obj` **non è più `null`**, quindi l'`if` viene saltato e viene restituito **esattamente lo stesso oggetto** (`l1 == l2` è `true`). Quello che `A` scrive nel log sarà visibile anche a `B`.
+
+###### Due sfumature importanti (Eager vs Lazy e Concorrenza)
+- **Lazy (pigra) vs Eager (impaziente):** Nell'esempio `Logs` sopra, l'oggetto viene creato solo quando serve la prima volta (_lazy_), risparmiando memoria se non viene mai usato. Al contrario, nell'esempio `Fib`, si scrive `private static final Fib obj = new Fib();` (_eager_): l'istanza nasce subito al caricamento della classe.
+
+- **Il rischio multithreading:** Nella versione _lazy_, se due thread chiamano `getInstance()` nello stesso identico istante mentre `obj` è ancora `null`, entrambi potrebbero superare l'`if` e creare due istanze diverse. Per evitarlo in ambienti concorrenti si usa la variante _eager_ oppure si aggiunge `synchronized` al metodo `getInstance()`.
+
+
+> [!summary] RIEPILOGO SINGLETON
+> Quindi si usa singleton quando ho bisogno di usare un'oggetto di una classe che però deve restare 1 solo per tutto il tempo, magari una struttura dati, e voglio evitare che altre classi/oggetti ne creino altri, quindi dichiaro il costruttore dela classe "private" (così che sia impossibile per altri oggetti fare new classe()) e uso un metodo static (che appartiene quindi alla classe e posso richiamarlo con NomeClasse.metodoStatic()) e l'oggetto si crea una sola volta (versione lazy) oppure si crea quando la classe si carica in memoria (versione eager). All'interno della classe è presente un riferimento all'oggetto della classe stessa
+
+> [!info] VARIANTE MULTITON
+> Il **Multiton** è la variante che consente un numero finito di istanze, eventualmente associandone una a una chiave
+
+
+##### Diagramma UML della classe singleton
+![[Pasted image 20261125103922.png|453]]
+
+Diagramma UML della classe Singleton (è più un mockup che un diagramma reale) 
+
+- in alto: nome classe -> Singleton
+
+- al centro: la singola istanza alla classe singleton stessa (privata) -> -uniqueIstance:Singleton
+  - altri dati  sempre privati
+
+- in basso: costruttore privato cosi che nessuno possa fare new Singleton()
+  -  metodo pubblico per creare una singola istanza
+  - altre operazioni
+
+Costruttore privato, riferimento e accesso statici; operazioni sullo stato dell’unica istanza.
+
+---
+
