@@ -418,3 +418,126 @@ public class MainTeatro {
 - i `concreteProductA e B` implementano l' `interfaccia prodotto` 
 
 ---
+#### OBJECT POOL
+Immaginiamo di usare oggetti che sono delle forme geometriche.
+##### 1. Il problema: oggetti costosi da creare + riuso controllato
+Creare e distruggere continuamente certi oggetti (come connessioni a un database, thread, socket o figure grafiche pesanti) costa molto tempo e risorse.
+
+- **Perché non basta fare `new` ogni volta?** Se ogni client crea un oggetto nuovo e poi lo butta via al garbage collector, il sistema rallenta o esaurisce le risorse disponibili.
+    
+- Nell'Object Pool, hai un **deposito (una collezione) di più istanze** che vengono **prestate in uso esclusivo** a un client alla volta e poi **restituite** al deposito per essere riutilizzate da altri.
+
+##### 2. I tre ingranaggi tecnici dell'Object Pool
+Il gestore del pool (spesso combinato con un **Factory Method** come `ConcreteCreator` o con un **Singleton** affinché il deposito sia unico) gestisce il ciclo di vita degli oggetti attraverso tre meccanismi:
+
+1. **Un deposito interno (es. una `List`):** conserva le istanze già create e attualmente **libere** (disponibili).
+    
+2. **Metodo di acquisizione (`getShape()` / `acquire()`):** quando un client chiede una risorsa, il pool controlla se nel deposito c'è un oggetto libero:
+    
+    - Se c'è, lo **toglie** dalla lista dei liberi (`pool.remove(0)`) e lo consegna al client. È fondamentale rimuoverlo dal deposito perché **l'uso deve essere esclusivo**: finché un client lo usa, nessun altro può riceverlo.
+        
+    - Se il deposito è vuoto, il comportamento dipende dalla politica scelta: un **pool estendibile** ne crea uno nuovo (`new Circle()`), mentre un **pool a dimensione fissa** blocca la creazione (rifiuta la richiesta, restituisce `null` o fa attendere).
+        
+3. **Metodo di rilascio (`releaseShape(s)` / `release()`):** quando il client ha finito di usare l'oggetto, **deve restituirlo** al pool, che lo rimette nella lista dei disponibili (`pool.add(s)`). Prima di consegnarlo di nuovo a un altro client, è necessario **reimpostarne lo stato (reset)**, altrimenti il nuovo utilizzatore vedrebbe i dati lasciati dal precedente.
+    
+
+##### 3. Esempio pratico (dal pdf)
+
+Guarda la classe `CreatorPool` della dispensa, che realizza un pool **estendibile** di `Shape`:
+
+```java
+public class CreatorPool {
+    // 1. Il deposito delle istanze
+    private List<Shape> pool = new ArrayList<>();
+
+    // 2. Acquisizione: riusa se disponibile, altrimenti crea
+    public Shape getShape() {
+        if (pool.size() > 0) {
+            return pool.remove(0); // Rimuove e consegna in uso esclusivo
+        }
+        return new Circle();       // Deposito vuoto: crea nuova istanza (pool estendibile)
+    }
+
+    // 3. Rilascio: rimette l'oggetto nel deposito per il riuso
+    public void releaseShape(Shape s) {
+        // Qui, se Shape avesse uno stato sporco, andrebbe fatto il reset!
+        pool.add(s);
+    }
+}
+```
+
+**Cosa succede a runtime?**
+
+- Il client A chiama `Shape s1 = gestore.getShape();`. La lista `pool` è vuota, quindi viene creato un nuovo `Circle` e consegnato ad A.
+    
+- Il client A finisce il suo lavoro e chiama `gestore.releaseShape(s1);`. L'oggetto torna nella lista `pool`.
+    
+- Il client B chiama `Shape s2 = gestore.getShape();`. Stavolta `pool.size() > 0` è vero: il pool estrae quell'oggetto con `remove(0)` e lo dà a B senza fare alcun `new` (`s1 == s2` è `true`!).
+
+###### Quattro regole/rischi da ricordare (molto richiesti all'esame)
+1. **Pool fisso vs Pool estendibile:** In un pool a **capacità limitata** (fisso), devi distinguere il numero di istanze _create complessivamente_ dal numero di istanze _attualmente libere_: la sola `pool.size()` ti dice solo quante sono libere in quel momento, non quante sono in giro presso i client.
+    
+2. **Reset dello stato:** Se l'oggetto ha attributi mutabili (es. colore, posizione o dati di una sessione), va ripulito al momento del rilascio o prima della nuova consegna.
+    
+3. **Integrità dei rilasci:** Il pool deve proteggersi da errori dei client, evitando **rilasci duplicati** (lo stesso oggetto restituito due volte di fila, che verrebbe poi consegnato contemporaneamente a due client diversi!) e **oggetti estranei** (oggetti creati fuori dal pool e inseriti con `release`).
+    
+4. **Combinazione con Singleton e Factory Method:**
+    
+    - Combinato con **Factory Method**, `CreatorPool` funge da `ConcreteCreator` e nasconde al client il fatto che l'oggetto sia nuovo o riciclato.
+        
+    - Combinato con **Singleton**, si rende unico il _gestore del pool_ (`CreatorPool`), **non** il numero di risorse (`Shape`) contenute al suo interno.
+
+Diagramma UML
+![[Pasted image 20261126123046.png|355]]
+
+
+---
+
+### DEPENDENCY INJECTION
+La **Dependency Injection (DI)** è un design pattern che invece di far creare a una classe gli oggetti da cui dipende (tramite `new`), questi le vengono **passati dall'esterno**.
+
+##### Come funziona (con esempio in Java)
+**Senza Dependency Injection (forte accoppiamento):**
+La classe `OrderService` crea internamente il proprio repository. Se domani vuoi cambiare database o scrivere un test unitario senza toccare il DB vero, devi modificare `OrderService`.
+
+```java
+public class OrderService {
+    private MySQLOrderRepository repository;
+
+    public OrderService() {
+        // La classe decide e crea la propria dipendenza
+        this.repository = new MySQLOrderRepository(); 
+    }
+}
+```
+
+**Con Dependency Injection (disaccoppiamento):**
+`OrderService` dichiara solo di aver bisogno di un'interfaccia `OrderRepository` e la riceve dall'esterno.
+
+```java
+public class OrderService {
+    private final OrderRepository repository;
+
+    // Constructor Injection: la dipendenza viene iniettata dall'esterno
+    public OrderService(OrderRepository repository) {
+        this.repository = repository;
+    }
+}
+```
+
+##### Le 3 modalità principali di iniezione
+1. **Constructor Injection (la più consigliata):** Le dipendenze vengono passate nei parametri del costruttore. Garantisce che l'oggetto nasca già in uno stato valido e permette di dichiarare i campi `final` (immutabili).
+2. **Setter Injection:** Le dipendenze vengono fornite tramite metodi `setDipendenza(...)` dopo la creazione dell'oggetto. Utile solo per dipendenze opzionali o riconfigurabili a runtime.
+3. **Field / Property Injection:** Le dipendenze vengono inserite direttamente negli attributi tramite reflection o annotazioni. È comoda ma nasconde le dipendenze della classe e rende più scomodi i test senza framework.
+
+###### Perché si usa
+- **Testabilità (JUnit / Mock):** Puoi passare facilmente un oggetto finto (_mock_ o _stub_) nel costruttore per testare la logica di `OrderService` in totale isolamento.
+- **Flessibilità e manutenibilità:** Puoi sostituire un'implementazione con un'altra (es. passare da `MySQLOrderRepository` a `PostgresOrderRepository`) senza toccare una riga del codice che la usa.
+- **Gestione centralizzata:** Nei progetti grandi, un _DI Container_ (come Spring, Guice o Dagger) si occupa automaticamente di istanziare tutte le classi e collegare il grafo delle dipendenze al posto tuo.
+
+###### Controindicazioni
+- **Complessità iniziale e "magia" dei framework:** Se ti affidi a un container automatico, il flusso di creazione degli oggetti non è più visibile leggendo direttamente il codice, e gli errori di configurazione possono emergere solo a runtime.
+- **Over-engineering su classi banali:** Creare interfacce e iniettare qualsiasi classe di utilità che non cambierà mai né richiede mock aggiunge solo codice boilerplate inutile.
+
+---
+
