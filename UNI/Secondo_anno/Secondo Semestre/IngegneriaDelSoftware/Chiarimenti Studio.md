@@ -1,4 +1,16 @@
 Chiarimenti sul PDF ![[studio.pdf]]
+### Regola per leggere bene i diagrammi UML
+La regola d'oro per leggere quasi tutte le frecce UML è **partire dalla coda e andare verso la punta**: la punta indica sempre **chi viene usato, esteso o posseduto**.
+
+- **Guarda prima la punta:**
+    - **Triangolo vuoto (`▷`)** = gerarchia di tipi (`extends` se linea continua, `implements` se tratteggiata).
+    - **Punta aperta (`→`)** = utilizzo (`Associazione` se linea continua / attributo di classe, `Dipendenza` se tratteggiata / uso al volo).
+        
+- **Guarda il rombo (`◇` / `◆`):**
+    - Il rombo sta **sempre dalla parte del "contenitore"** (il tutto), mai dalla parte del componente.
+    - **Vuoto** = contenitore "leggero" (puoi togliere il pezzo e resta vivo).
+    - **Pieno** = contenitore "totale" (il ciclo di vita è legato al contenitore).
+
 
 ### Java imperativo VS Java funzionale (cap. 6 pag 60)
 ##### 1. Approccio Imperativo (Come farlo)
@@ -538,6 +550,216 @@ public class OrderService {
 ###### Controindicazioni
 - **Complessità iniziale e "magia" dei framework:** Se ti affidi a un container automatico, il flusso di creazione degli oggetti non è più visibile leggendo direttamente il codice, e gli errori di configurazione possono emergere solo a runtime.
 - **Over-engineering su classi banali:** Creare interfacce e iniettare qualsiasi classe di utilità che non cambierà mai né richiede mock aggiunge solo codice boilerplate inutile.
+
+---
+### ABSTRACT FACTORY
+L'**Abstract Factory** è il fratello maggiore del _Factory Method_. Se il Factory Method serviva a delegare la creazione di **un singolo prodotto**, l'Abstract Factory serve a creare **intere famiglie di prodotti correlati** garantendo che siano coerenti tra loro.
+##### 1. Il problema: creare una "famiglia" coerente senza mescolare i pezzi
+Immagina di sviluppare un'applicazione lingua **Inglese** e **Giapponese**, come nell'esempio del pdf). Ogni versione richiede più componenti diversi — ad esempio un'icona `Icon` e un testo `Text`.
+
+- **Il rischio:** Se il codice client istanziasse manualmente i singoli pezzi (`new EnglishText()` e `new JapaneseText()`), potrebbe mescolare componenti di famiglie diverse, ottenendo un'interfaccia incoerente. Inoltre, per cambiare tema o lingua dovresti riscrivere tutti i `new` sparsi nel programma.
+- **La soluzione Abstract Factory:** Crei un'interfaccia fabbrica (`AbstractFactory`) che dichiara un metodo di creazione per **ciascun tipo di prodotto** della famiglia (`getIcon()`, `getText()`). Poi crei una fabbrica concreta per ogni variante (`EnglishText`, `JapaneseText`) che produce **solo** i pezzi compatibili tra loro.
+
+##### 2. L'idea della griglia (molto utile per capire il diagramma UML)
+La dispensa suggerisce di visualizzare il pattern come una **tabella (griglia)** di $m \times n$ prodotti concreti:
+
+| **Tipo di Prodotto (AbstractProduct)** | **Famiglia 1: Inglese (CreatorEng)** | **Famiglia 2: Giapponese (CreatorJ)** |
+| -------------------------------------- | ------------------------------------ | ------------------------------------- |
+| **`Icon`** (metodo `getIcon()`)        | `Box`                                | `Circle`                              |
+| **`Text`** (metodo `getText()`)        | `English`                            | `Japanese`                            |
+
+- **Le righe ($m$)** sono i **tipi di prodotto** astratti (es. riga 1: `AbstractProductA` / `Icon`; riga 2: `AbstractProductB` / `Text`).
+    
+- **Le colonne ($n$)** sono le **famiglie** (es. colonna 1: `ConcreteFactory1` / Inglese; colonna 2: `ConcreteFactory2` / Giapponese).
+    
+- Ogni `ConcreteFactory` corrisponde a **un'intera colonna**: il client riceve una factory tramite l'interfaccia `AbstractFactory` e usa solo i prodotti astratti, avendo la certezza che tutti gli oggetti chiesti a quella factory appartengano alla stessa colonna (famiglia).
+    
+
+##### 3. I ruoli e l'esempio pratico della dispensa (`Icon` e `Text`)
+
+Vediamo un esempio con due tipi di prodotto (`Icon` e `Text`) e due famiglie (`Inglese` e `Giapponese`):
+
+```java
+// 1. ABSTRACT PRODUCT A e B: i contratti dei singoli tipi di prodotto
+interface Icon {
+    void happy();
+    void sad();
+}
+
+interface Text {
+    void welcome();
+    void attention();
+}
+
+// 2. CONCRETE PRODUCT della Famiglia 1 (Inglese: Box + English)
+class Box implements Icon {
+    @Override public void happy() { System.out.println("[ :- ) ]"); }
+    @Override public void sad()   { System.out.println("[ :-( ]"); }
+}
+
+class English implements Text {
+    @Override public void welcome()   { System.out.println("Welcome!"); }
+    @Override public void attention() { System.out.println("Attention!"); }
+}
+
+// 2. CONCRETE PRODUCT della Famiglia 2 (Giapponese: Circle + Japanese)
+class Circle implements Icon {
+    @Override public void happy() { System.out.println("( ^_^ )"); }
+    @Override public void sad()   { System.out.println("( T_T )"); }
+}
+
+class Japanese implements Text {
+    @Override public void welcome()   { System.out.println("Yokoso!"); }
+    @Override public void attention() { System.out.println("Chui!"); }
+}
+
+// 3. ABSTRACT FACTORY: dichiara un metodo per ogni tipo di prodotto (le righe della griglia)
+interface Creator {
+    Icon getIcon();
+    Text getText();
+}
+
+// 4. CONCRETE FACTORY 1 e 2: ciascuna produce una colonna coerente
+class CreatorEng implements Creator {
+    @Override public Icon getIcon() { return new Box(); }
+    @Override public Text getText() { return new English(); }
+}
+
+class CreatorJ implements Creator {
+    @Override public Icon getIcon() { return new Circle(); }
+    @Override public Text getText() { return new Japanese(); }
+}
+
+// 5. CLIENT: lavora solo con Creator, Icon e Text (zero dipendenze dalle classi concrete!)
+public class MainApp {
+    public static void main(String[] args) {
+        // Scegliendo la factory, fissi l'intera famiglia
+        Creator c = new CreatorJ(); // Basta cambiare questo in "new CreatorEng()" per cambiare tutto!
+
+        Icon ic = c.getIcon();
+        Text t = c.getText();
+
+        ic.happy();
+        t.welcome();
+    }
+}
+```
+
+###### 4. Differenza chiave con Factory Method e compromessi
+- **Factory Method vs Abstract Factory:** Il Factory Method usa l'ereditarietà (una sottoclasse ridefinisce un metodo) per creare **un solo prodotto**; l'Abstract Factory usa la composizione (il client riceve un oggetto factory con più metodi) per creare **un'intera famiglia di prodotti correlati**.
+- **Vantaggio:** Cambiare l'intera famiglia di prodotti è immediato (basta sostituire l'istanza di `ConcreteFactory` passata al client) ed è facile aggiungere una _nuova famiglia_ (aggiungi una colonna alla griglia, es. `CreatorIta`, senza toccare il resto).
+- **Svantaggio (costo):** Aggiungere un _nuovo tipo di prodotto_ (una nuova riga, es. `Audio`) è oneroso, perché obbliga a modificare l'interfaccia `AbstractFactory` e **tutte** le `ConcreteFactory` esistenti per implementare il nuovo metodo.
+
+---
+### BUILDER
+Il design pattern **Builder** serve a **separare la costruzione di un oggetto complesso dalla sua rappresentazione**, permettendo di assemblarlo **passo dopo passo** prima di consegnarlo definitivo e (spesso) immutabile.
+
+##### 1. Il problema: oggetti con molti parametri (obbligatori e opzionali)
+Immagina di dover creare un oggetto `Biglietto` che ha diversi campi: `titolare` (obbligatorio), `agente`, `data` e `prezzo` (opzionali o con valori di default). Prima di usare Builder hai due strade tradizionali, entrambe scomode:
+
+- **Costruttori telescopici:** scrivi tanti costruttori quanti sono i possibili sottogruppi di parametri (`Biglietto(t)`, `Biglietto(t, a)`, `Biglietto(t, a, d)`, `Biglietto(t, a, d, p)`). Il problema è che quando i campi aumentano esplodono le combinazioni ed è facilissimo invertire due argomenti dello stesso tipo.
+- **Costruttore vuoto + Setter (`setTitolare`, `setPrezzo`...):** è comodo, ma costringe a rinunciare all'immutabilità (i campi non possono più essere `final`) e lascia l'oggetto in uno **stato incompleto e inconsistente** tra una chiamata `set` e l'altra (magari qualcuno usa il biglietto prima di aver impostato il titolare) (vediamo meglio alla fine).
+
+**La soluzione Builder:** sposti tutti i dati provvisori in un oggetto intermedio di appoggio (il _Builder_). Configuri i pezzi uno alla volta con metodi chiari e leggibili, e solo alla fine chiami un metodo conclusivo (es. `build()` o `getBiglietto()`) che controlla che tutto sia valido e istanzia l'oggetto vero e proprio tutto in una volta.
+
+##### 2. I quattro ruoli del pattern
+- **`Product` (es. `Biglietto`):** l'oggetto complesso finale che vogliamo ottenere, con i campi di costruzione resi `final`.
+- **`Builder` (es. `BBuilder`):** l'interfaccia che dichiara i passi di configurazione (`agente(...)`, `titolare(...)`, `sconto(...)`, `data(...)`) e il metodo finale di consegna (`getBiglietto()`).
+- **`ConcreteBuilder` (es. `BigliettoBuilder`):** conserva i dati provvisori durante l'assemblaggio, implementa i passi restituendo `this` (stile **fluente** / _method chaining_) e nel metodo finale valida i vincoli prima di fare `new Biglietto(...)`.
+- **`Director` (es. `InitBiglietto`):** un oggetto opzionale che conosce una sequenza standard di passi per costruire una particolare configurazione (es. un biglietto preconfigurato per un certo venditore) usando l'interfaccia `Builder`.
+
+##### 3. Esempio pratico (dal pdf)
+
+```java
+import java.time.LocalDateTime;
+
+// 1. PRODUCT: campi finali impostati una sola volta alla creazione
+class Biglietto {
+    final String titolare, agente;
+    final LocalDateTime data;
+    final double prezzo;
+
+    Biglietto(String t, String a, double p, LocalDateTime d) {
+        titolare = t;
+        agente = a;
+        prezzo = p;
+        data = d;
+    }
+}
+
+// 2. BUILDER: contratto dei passi di costruzione
+interface BBuilder {
+    BBuilder agente(String a);
+    BBuilder titolare(String t);
+    BBuilder sconto(double sc);
+    BBuilder data(LocalDateTime d);
+    Biglietto getBiglietto();
+}
+
+// 3. CONCRETE BUILDER: accumula lo stato provvisorio, valida e costruisce
+class BigliettoBuilder implements BBuilder {
+    // Valori provvisori e di default
+    private String titolare;
+    private String agente = "SingleSeller";
+    private LocalDateTime data;
+    private double prezzo = 50;
+
+    @Override
+    public BigliettoBuilder agente(String a) {
+        agente = agente + " " + a;
+        return this; // Restituisce se stesso per concatenare le chiamate!
+    }
+
+    @Override
+    public BigliettoBuilder titolare(String t) {
+        titolare = t;
+        return this;
+    }
+
+    @Override
+    public BigliettoBuilder data(LocalDateTime d) {
+        data = d;
+        return this;
+    }
+
+    @Override
+    public BigliettoBuilder sconto(double sc) {
+        if (prezzo >= 40 && sc <= 10) {
+            prezzo = (1 - sc / 100) * prezzo;
+        }
+        return this;
+    }
+
+    @Override
+    public Biglietto getBiglietto() {
+        // Validazione finale prima di consegnare il prodotto
+        if (titolare == null) return null; 
+        return new Biglietto(titolare, agente, prezzo, data);
+    }
+}
+
+// 4. DIRECTOR (opzionale): incapsula una ricetta standard di costruzione
+class InitBiglietto {
+    Biglietto getBiglietto() {
+        return new BigliettoBuilder()
+                .agente("Tim Seller")
+                .titolare("Mario Rossi")
+                .sconto(5)
+                .data(LocalDateTime.now())
+                .getBiglietto();
+    }
+}
+```
+
+##### Due punti chiave da ricordare all'esame
+1. **Perché i metodi restituiscono `this`?** Si chiama **interfaccia fluente** (_method chaining_): poiché ogni metodo (`titolare(...)`, `sconto(...)`) restituisce il riferimento al `BigliettoBuilder` stesso, puoi scrivere tutta la configurazione in un'unica catena leggibile `.agente(...).titolare(...).getBiglietto()`.
+2. **Validazione e immutabilità:** Il `Builder` non impedisce a priori di dimenticare un campo obbligatorio (perché ogni passo è un metodo separato); per questo il metodo finale `getBiglietto()` (o `build()`) **deve controllare esplicitamente** che i campi richiesti non siano `null` prima di creare il `Product`. Inoltre, se il `Product` espone altri metodi che modificano campi non `final` (come il campo `acconto` citato nella precisazione del tuo testo), l'oggetto non sarà strettamente immutabile: il Builder garantisce solo che i parametri di costruzione nascano già consistenti.
+
+###### Potrei usare Costruttore vuoto + Setter anziché builder? A cosa dovrei rinunciare?
+Usare un costruttore vuoto con i `set...()` funziona, ma comporta **tre conseguenze pratiche** che il pattern Builder invece evita:
+1. **Perdi l'immutabilità (`final`):** Per poter chiamare `setTitolare(...)` o `setPrezzo(...)` _dopo_ aver fatto `new Biglietto()`, i campi non possono più essere dichiarati `final`. Chiunque abbia un riferimento a quel `Biglietto` potrà modificarne i dati anche in seguito, quando l'oggetto dovrebbe già essere definitivo.
+2. **Stato intermedio inconsistente (oggetto "a metà"):** Tra il momento in cui fai `Biglietto b = new Biglietto();` e il momento in cui chiami l'ultimo setter, esiste in memoria un oggetto incompleto (magari con `titolare == null`) che può già essere passato ad altri metodi o usato per sbaglio prima che la configurazione sia finita (magari c'è un thread che ottiene quell'oggetto quando ancora non ho finito di crearlo).
+3. **Nessun controllo centralizzato in creazione:** Il chiamante può dimenticare di chiamare un setter obbligatorio (es. `setTitolare`) senza ricevere alcun blocco immediato, perché non c'è un punto finale come `getBiglietto()` / `build()` che verifica che tutti i dati richiesti siano presenti prima di consegnare l'oggetto vero e proprio.
 
 ---
 
