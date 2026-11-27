@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Da Sapere"
             }
+          },
+          {
+            "id": "c54da35a3f075a0b",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "UNI/Terzo_anno/Embededd System/file_condivisi/11_DisplayDriver.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "11_DisplayDriver"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -182,20 +195,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cdfb777992958cae",
+  "active": "c54da35a3f075a0b",
   "lastOpenFiles": [
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121123151.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121122145.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121114429.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121113952.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121113059.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121112611.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121111712.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121111444.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121110354.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121105318.png",
-    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261121105104.png",
     "UNI/Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261124103116.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261124103005.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261124102923.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261124102913.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261124102434.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261124100458.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261123203336.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261123184256.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261123184016.png",
+    "UNI/Secondo_anno/Secondo Semestre/modelli/Pasted image 20261123183819.png",
+    "UNI/Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Chiarimenti Studio.md",
     "Progetto.md",
     "UNI/Terzo_anno/IoT/C/DisplayBluetooth/src/main.cpp",
     "UNI/Terzo_anno/IoT/C/DisplayBluetooth/test/README",
@@ -230,7 +243,6 @@
     "UNI/Terzo_anno/TAP/Lezioni/2 Docker.md",
     "UNI/Terzo_anno/Embededd System/2.md",
     "UNI/Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
-    "UNI/Terzo_anno/Embededd System/Lezioni/1 Embededd System introduzione.md",
     "UNI/Secondo_anno/Primo Semestre/Algoritmi e Laboratorio/Senza nome.canvas"
   ]
 }
