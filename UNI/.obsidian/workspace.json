@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1e73d82cfa3b2d1e",
+        "id": "83e48b5d7557a226",
         "type": "tabs",
         "children": [
           {
-            "id": "de590e7927129a98",
+            "id": "dd0f5bfa100df65c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -184,9 +184,16 @@
       "webpage-html-export:Esporta come HTML": false
     }
   },
-  "active": "de590e7927129a98",
+  "active": "dd0f5bfa100df65c",
   "lastOpenFiles": [
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261126123046.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261126123042.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261125193326.png",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261125185105.png",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/Chiarimenti Studio.md",
+    "README.md",
+    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261125103922.png",
+    "Callouts.md",
     "Terzo_anno/IoT/Rielaborazioni/Da Sapere.md",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261124103116.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261124103005.png",
@@ -194,10 +201,6 @@
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261124102913.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261124102434.png",
     "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261124100458.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261123203336.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261123203325.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261123184256.png",
-    "Secondo_anno/Secondo Semestre/modelli/Pasted image 20261123184016.png",
     "Terzo_anno/IoT/Rielaborazioni/Link_Slide.md",
     "Secondo_anno/Secondo Semestre/IngegneriaDelSoftware/studio.pdf",
     "Terzo_anno/IoT/C/zigBee/src/main.cpp",
@@ -229,9 +232,6 @@
     "Terzo_anno/TAP/RepoClonataEsempio/node-bulletin-board/CONTRIBUTING.md",
     "Terzo_anno/TAP/RepoClonataEsempi/node-bulletin-board/bulletin-board-app/readme.md",
     "Terzo_anno/TAP/RepoClonataEsempi/node-bulletin-board/CONTRIBUTING.md",
-    "Senza nome.canvas",
-    "Terzo_anno/TAP/Lezioni/1 TAP Introduzione.md",
-    "Callouts.md",
-    "Secondo_anno/Secondo Semestre/SistemiOperativi/Laboratorio/Laboratorio.md"
+    "Senza nome.canvas"
   ]
 }
