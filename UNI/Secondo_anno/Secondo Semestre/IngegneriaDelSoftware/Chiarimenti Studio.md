@@ -1019,5 +1019,83 @@ public class MainAdapter {
 >[!info] In breve...
 >Se ad esempio sul quel codice, in futuro dovessi cambiare libreria non devo modificare il main, ma solo la classe adapter in modo da tradurre le operazioni del nuovo adaptee in base all'interfaccia che il client (main) usa
 
+###### Diagramma UML
+![[Pasted image 20261128105120.png|647]]
+
+---
+#### FACADE
+Il **Facade** è il secondo pattern strutturale ed è esattamente il contrario di un pannello pieno di levette e manopole: **nasconde la complessità di un intero sottosistema dietro un unico pulsante semplice e ad alto livello**.
+
+#### 1. Il problema: troppe classi e troppe chiamate da coordinare
+Immagina un sottosistema formato da molte classi che svolgono ciascuna un compito specifico — ad esempio, in una biblioteca (l'esempio `Registro` del tuo testo) hai:
+
+- `Soci` (per controllare se un utente è iscritto),
+- `BlockList` (per verificare se l'utente è abilitato ai prestiti),
+- `ListaLibri` (per vedere se il libro è libero e rimuoverlo dagli scaffali),
+- `Prestiti` (per registrare l'associazione tra socio e libro).
+
+**Cosa succede senza Facade?** Ogni client che vuole semplicemente "prestare un libro" deve conoscere tutte e quattro queste classi, sapere in quale ordine esatto chiamarle e gestire ogni controllo intermedio. Se domani cambia una regola interna (ad esempio si aggiunge un quinto controllo), devi modificare tutti i client.
+
+**La soluzione Facade:** Crei una classe "facciata" (es. `Registro`) che espone al client **poche operazioni semplici orientate al suo obiettivo** (es. `prestaLib(socio, lib)`) e, al proprio interno, orchestra nell'ordine giusto tutte le classi del sottosistema, facendo i vari controlli ecc... .
+
+#### 2. Come funziona e cosa cambia nella struttura
+![[Pasted image 20261128111117.png|423]]
+
+- **Prima della Facade:** ogni `Client` ha frecce di dipendenza verso tutte le classi interne (`ClassA`, `ClassB`, `ClassC`).
+- **Con la Facade:** i `Client` puntano **solo** a `Facade`, mentre è `Facade` a possedere i riferimenti e a coordinare `ClassA`, `ClassB` e `ClassC`.
+- **Nota importante:** Facade **non nasconde per forza** le classi interne ai client avanzati (chi ha bisogno di funzioni di basso livello può ancora usarle, a meno che non vengano rese private o chiuse in un package/modulo). Inoltre, le classi del sottosistema **non conoscono la Facade**: la comunicazione è a senso unico, dal client verso la facciata e dalla facciata verso il sottosistema.
+
+#### 3. Esempio pratico (dal pdf: `Translator`)
+Guarda, dove `Translator` fa da facciata coordinando due dizionari separati (`English` e `Italian`):
+Il `Translator` espone ai client solo `addEnglish(String)` e `multiPrinting()`, le funzioni delle classi che gestisce invece il client non le vede.
+```java
+import java.util.List;
+
+// SOTTOSISTEMA - Classe 1
+class English {
+    private String text = " ";
+    private final List<String> d = List.of("Alright", "Hello", "Understood", "Yes");
+
+    boolean test(String s) { return d.contains(s); }
+    void add(String s) { text = text + " " + s; }
+    int getIndex(String s) { return d.indexOf(s); }
+    void printText() { System.out.println(text); }
+}
+
+// SOTTOSISTEMA - Classe 2
+class Italian {
+    private String text = " ";
+    private final List<String> d = List.of("Va bene", "Ciao", "Capito", "Sì");
+
+    void add(int i) { text = text + " " + d.get(i); }
+    void printText() { System.out.println(text); }
+}
+
+// FACADE: offre un punto di accesso semplice e coordinato al client
+class Translator {
+    private final English e = new English();
+    private final Italian i = new Italian();
+
+    // Il client chiama un solo metodo; la Facade coordina entrambi i dizionari
+    void addEnglish(String s) {
+        if (e.test(s)) {
+            e.add(s);
+            i.add(e.getIndex(s));
+        }
+    }
+
+    void multiPrinting() {
+        System.out.print("Italiano: "); i.printText();
+        System.out.print("English: ");  e.printText();
+    }
+}
+```
+
+Il client chiama solo `translator.addEnglish("Hello")` e `translator.multiPrinting()`, senza dover sapere che dietro ci sono due liste parallele da tenere sincronizzate tramite `getIndex(s)`.
+  
+###### Tre distinzioni fondamentali per l'esame
+1. **Facade vs Adapter:** _Adapter_ serve a **tradurre** un'interfaccia incompatibile in un'altra attesa dal client; _Facade_ non traduce contratti incompatibili, ma **semplifica e unifica** l'accesso a un gruppo di classi già esistenti.
+2. **Facade vs Mediator:** Anche _Mediator_ coordina più oggetti, ma in modo **bidirezionale** tra pari (`Colleague` $\leftrightarrow$ `Mediator` $\leftrightarrow$ `Colleague`, dove i colleghi conoscono il mediatore); _Facade_ invece è **unidirezionale** (`Client` $\rightarrow$ `Facade` $\rightarrow$ `Sottosistema`, dove il sottosistema ignora la facciata).
+3. **Cosa NON fa una Facade:** Una facciata non deve limitarsi a ripubblicare tutti i 14 metodi delle classi interne (altrimenti non semplifica nulla). Inoltre, la sola presenza di una Facade non garantisce automaticamente transazioni atomiche o sicurezza nei thread: quelli richiedono sincronizzazione esplicita.
 ---
 
