@@ -217,7 +217,7 @@ Richiede due parametri:
 | `findAny()`                       | Terminale (short-circuiting)  | Restituisce un elemento qualsiasi (`Optional`) e si ferma.         | Verificare se esiste almeno un elemento (ideale in parallelo).        |
 
 ---
-### DESIGN PATTERN
+### DESIGN PATTERN CREAZIONALI
 
 #### SINGLETON
 ##### 1. Il problema: unicità + accesso ovunque
@@ -505,7 +505,7 @@ Diagramma UML
 
 ---
 
-### DEPENDENCY INJECTION
+#### DEPENDENCY INJECTION
 La **Dependency Injection (DI)** è un design pattern che invece di far creare a una classe gli oggetti da cui dipende (tramite `new`), questi le vengono **passati dall'esterno**.
 
 ##### Come funziona (con esempio in Java)
@@ -552,7 +552,7 @@ public class OrderService {
 - **Over-engineering su classi banali:** Creare interfacce e iniettare qualsiasi classe di utilità che non cambierà mai né richiede mock aggiunge solo codice boilerplate inutile.
 
 ---
-### ABSTRACT FACTORY
+#### ABSTRACT FACTORY
 L'**Abstract Factory** è il fratello maggiore del _Factory Method_. Se il Factory Method serviva a delegare la creazione di **un singolo prodotto**, l'Abstract Factory serve a creare **intere famiglie di prodotti correlati** garantendo che siano coerenti tra loro.
 ##### 1. Il problema: creare una "famiglia" coerente senza mescolare i pezzi
 Immagina di sviluppare un'applicazione lingua **Inglese** e **Giapponese**, come nell'esempio del pdf). Ogni versione richiede più componenti diversi — ad esempio un'icona `Icon` e un testo `Text`.
@@ -651,7 +651,7 @@ public class MainApp {
 - **Svantaggio (costo):** Aggiungere un _nuovo tipo di prodotto_ (una nuova riga, es. `Audio`) è oneroso, perché obbliga a modificare l'interfaccia `AbstractFactory` e **tutte** le `ConcreteFactory` esistenti per implementare il nuovo metodo.
 
 ---
-### BUILDER
+#### BUILDER
 Il design pattern **Builder** serve a **separare la costruzione di un oggetto complesso dalla sua rappresentazione**, permettendo di assemblarlo **passo dopo passo** prima di consegnarlo definitivo e (spesso) immutabile.
 
 ##### 1. Il problema: oggetti con molti parametri (obbligatori e opzionali)
@@ -760,6 +760,264 @@ Usare un costruttore vuoto con i `set...()` funziona, ma comporta **tre consegue
 1. **Perdi l'immutabilità (`final`):** Per poter chiamare `setTitolare(...)` o `setPrezzo(...)` _dopo_ aver fatto `new Biglietto()`, i campi non possono più essere dichiarati `final`. Chiunque abbia un riferimento a quel `Biglietto` potrà modificarne i dati anche in seguito, quando l'oggetto dovrebbe già essere definitivo.
 2. **Stato intermedio inconsistente (oggetto "a metà"):** Tra il momento in cui fai `Biglietto b = new Biglietto();` e il momento in cui chiami l'ultimo setter, esiste in memoria un oggetto incompleto (magari con `titolare == null`) che può già essere passato ad altri metodi o usato per sbaglio prima che la configurazione sia finita (magari c'è un thread che ottiene quell'oggetto quando ancora non ho finito di crearlo).
 3. **Nessun controllo centralizzato in creazione:** Il chiamante può dimenticare di chiamare un setter obbligatorio (es. `setTitolare`) senza ricevere alcun blocco immediato, perché non c'è un punto finale come `getBiglietto()` / `build()` che verifica che tutti i dati richiesti siano presenti prima di consegnare l'oggetto vero e proprio.
+
+---
+#### PROTOTYPE
+
+Il **Prototype** è l'ultimo dei cinque pattern creazionali classici del catalogo GoF e affronta la creazione degli oggetti da un punto di vista completamente diverso: **invece di costruire un oggetto nuovo da zero con `new`, lo si ottiene clonando (copiando) un'istanza prototipo già esistente e configurata**.
+##### 1. Il problema: oggetti costosi da configurare + dipendenza dalle classi concrete
+Immagina di dover creare ripetutamente oggetti che hanno uno **stato iniziale complesso** — ad esempio un `Documento` con font, margini, lingua e stili già impostati tramite decine di operazioni, oppure un'agenda (`Calendario`) che parte già con una serie di impegni ricorrenti.
+
+- **Perché non basta fare `new` ogni volta?** Ricostruire da zero tutta la configurazione ogni volta è scomodo, ripetitivo o costoso; inoltre, scrivere `new ClasseConcreta()` nel codice client lo lega rigidamente a quella specifica classe.
+- **Perché non usare una gerarchia di `Factory Method`?** Se hai tante varianti di stato (es. _CerchioRosso_, _CerchioBlu_, _CerchioGrande_), creare una sottoclasse `ConcreteCreator` per ciascuna variante farebbe esplodere inutilmente la gerarchia delle classi.
+- **La soluzione Prototype:** Prepari alcune istanze modello già configurate (i **prototipi**), eventualmente salvate in un registro (`PrototypeRegistry`). Quando al client serve un nuovo oggetto, non fa `new`: chiama `prototipo.clone()` attraverso l'interfaccia comune `Prototype` e poi modifica solo i pochi dettagli specifici che cambiano (es. il titolo del nuovo documento).
+
+##### 2. I ruoli e il meccanismo UML
+![[Pasted image 20261128100446.png|539]]
+
+- **`Prototype`:** l'interfaccia (o classe astratta) che dichiara l'operazione di clonazione (`+clone(): Prototype`).
+- **`ConcretePrototype1 / 2`:** le classi concrete che implementano `clone()` restituendo una copia di se stesse.
+- **`Client`:** conserva un riferimento di tipo `Prototype` e crea nuove istanze invocando `prototipo.clone()`, senza conoscere né nominare la classe concreta sottostante.
+- **`PrototypeRegistry` (opzionale):** una mappa (`Map<String, Prototype>`) che associa una chiave semantica (es. `"documentoStandard"`, `"cerchioRosso"`) a un'istanza prototipo già pronta. Permette di registrare, cercare o rimuovere prototipi dinamicamente a runtime senza creare gerarchie parallele di creatori.
+
+##### 3. Il nodo cruciale: Copia Superficiale vs Copia Profonda
+Quando implementi `clone()`, devi decidere **quanto in profondità** duplicare lo stato dell'oggetto originale:
+
+1. **Copia superficiale:** duplica l'oggetto principale, ma **copia solo i riferimenti** agli oggetti interni contenuti nei suoi campi.
+    - _Conseguenza:_ originale e clone condividono gli stessi oggetti interni. Se sono oggetti immutabili (come `String` o `LocalDate`) va benissimo; ma se condividono una lista mutabile (es. la lista degli impegni in `Agenda`), aggiungere un impegno al clone lo fa comparire anche nell'originale.
+2. **Copia profonda:** duplica l'oggetto principale **e ricorsivamente anche tutti gli oggetti mutabili** che compongono il suo stato, creando nuove copie indipendenti.
+    - _Attenzione ad `addAll()`:_ come avverte la dispensa, fare `nuovaLista.addAll(vecchiaLista)` crea un contenitore nuovo, ma i singoli elementi dentro la lista restano comunque condivisi. Se anche gli elementi interni sono mutabili (es. un oggetto `Impegno` modificabile), bisogna clonare anche ciascun elemento.
+
+
+Vediamo l'esempio con i documenti:
+##### 1. L'idea intuitiva: il "modello da fotocopiare"
+Immagina di dover generare 50 lettere aziendali o relazioni tecniche. Ogni `Documento` ha una configurazione iniziale lunga e noiosa da preparare:
+- **Font:** `"Times New Roman"`, dimensione `12`
+    
+- **Margini:** `2.5 cm` su tutti i lati
+    
+- **Lingua:** `"Italiano"`
+    
+- **Intestazione / Stile:** logo aziendale, piè di pagina, interlinea `1.5`
+    
+Senza Prototype, ogni volta che devi creare una nuova lettera dovresti fare `new Documento()` e richiamare 10 metodi di configurazione uno dopo l'altro, oppure dover conoscere nel tuo codice il nome esatto della classe concreta (`new DocumentoAziendale()`, `new DocumentoLegale()`, ecc.).
+
+**Con Prototype, invece, fai come con una fotocopiatrice:**
+1. **Prepari un solo "originale" (il prototipo):** crei e configuri **una volta sola** un `Documento` con tutti i font, i margini, la lingua e lo stile già impostati, e lo metti da parte (ad esempio in un registro dei modelli).
+2. **Quando ti serve un nuovo documento, lo cloni:** chiami `prototipo.clone()`. Ottieni istantaneamente un documento nuovo che ha già tutti i margini, il font e lo stile del modello.
+3. **Personalizzi solo ciò che cambia:** sul documento appena clonato imposti soltanto il titolo e il testo specifico di quella lettera, lasciando intatto il modello originale.
+
+
+```java
+import java.util.*;
+
+// 1. PROTOTYPE: il contratto che dice "questo oggetto sa clonarsi"
+interface DocumentoPrototype {
+    DocumentoPrototype clone();
+}
+
+// 2. CONCRETE PROTOTYPE: il documento vero e proprio
+class Documento implements DocumentoPrototype {
+    private String titolo;
+    private String font;
+    private double margine;
+    private String lingua;
+    private final List<String> paragrafi; // Oggetto interno mutabile!
+
+    public Documento(String font, double margine, String lingua) {
+        this.font = font;
+        this.margine = margine;
+        this.lingua = lingua;
+        this.paragrafi = new ArrayList<>();
+    }
+
+    public void setTitolo(String titolo) { this.titolo = titolo; }
+    public void aggiungiParagrafo(String testo) { this.paragrafi.add(testo); }
+
+    // IL CUORE DEL PATTERN: crea e restituisce una copia di se stesso
+    @Override
+    public Documento clone() {
+        // Copio i campi base (font, margine, lingua, titolo)
+        Documento copia = new Documento(this.font, this.margine, this.lingua);
+        copia.setTitolo(this.titolo);
+
+        // COPIA PROFONDA della lista: creo una nuova ArrayList con gli stessi paragrafi,
+        // così se aggiungo righe al clone non modifico il modello originale!
+        for (String p : this.paragrafi) {
+            copia.aggiungiParagrafo(p);
+        }
+        return copia;
+    }
+
+    public void stampa() {
+        System.out.println("=== " + titolo + " (" + font + ", margine " + margine + ", " + lingua + ") ===");
+        for (String p : paragrafi) System.out.println("  - " + p);
+    }
+}
+
+// 3. PROTOTYPE REGISTRY (opzionale): l'archivio dei modelli già pronti
+class RegistroDocumenti {
+    private final Map<String, DocumentoPrototype> modelli = new HashMap<>();
+
+    public void salvaModello(String nome, DocumentoPrototype doc) {
+        modelli.put(nome, doc);
+    }
+
+    public DocumentoPrototype nuovoDaModello(String nome) {
+        DocumentoPrototype modello = modelli.get(nome);
+        // Attenzione: restituisce SEMPRE .clone(), mai il modello originale!
+        return (modello != null) ? modello.clone() : null;
+    }
+}
+
+// 4. CLIENT: usa i modelli senza fare "new" sulle classi concrete
+public class MainDocumenti {
+    public static void main(String[] args) {
+        // --- FASE 1: Setup iniziale (fatto una volta sola) ---
+        Documento templateLettera = new Documento("Arial", 2.0, "IT");
+        templateLettera.setTitolo("Bozza");
+        templateLettera.aggiungiParagrafo("Spett.le Cliente,");
+
+        RegistroDocumenti registro = new RegistroDocumenti();
+        registro.salvaModello("letteraFormale", templateLettera);
+
+        // --- FASE 2: Uso da parte del client ---
+        // Il client NON fa "new Documento(...)": chiede una copia del modello!
+        Documento doc1 = (Documento) registro.nuovoDaModello("letteraFormale");
+        doc1.setTitolo("Preventivo Marzo");
+        doc1.aggiungiParagrafo("In allegato trova l'offerta economica.");
+
+        Documento doc2 = (Documento) registro.nuovoDaModello("letteraFormale");
+        doc2.setTitolo("Sollecito Pagamento");
+        doc2.aggiungiParagrafo("Le ricordiamo la scadenza della fattura.");
+
+        templateLettera.stampa(); // Ha ancora solo "Spett.le Cliente,"!
+        doc1.stampa();            // Ha "Spett.le Cliente," + offerta economica
+        doc2.stampa();            // Ha "Spett.le Cliente," + sollecito
+    }
+}
+```
+
+---
+### DESIGN PATTERN STRUTTURALI
+#### ADAPTER
+L'**Adapter** è il primo dei design pattern **strutturali** ed è esattamente l'equivalente software di un **adattatore per prese elettriche**: serve a far collaborare due componenti che parlano "lingue" (interfacce) incompatibili tra loro, senza dover modificare nessuno dei due.
+
+##### 1. I quattro ruoli del pattern
+- **`Target`:** l'interfaccia (il contratto) che il `Client` conosce e si aspetta di usare.
+- **`Client`:** il codice applicativo che invoca le operazioni esclusivamente tramite `Target`, ignorando l'esistenza della libreria adattata.
+- **`Adaptee`:** la classe preesistente o di libreria che offre le funzionalità utili ma ha un'interfaccia incompatibile.
+- **`Adapter`:** il traduttore che implementa `Target`, riceve le chiamate del client e le inoltra all'`Adaptee` convertendo parametri, sequenze di chiamate o valori di ritorno.
+
+##### 2. Il problema: un'ottima libreria, ma con l'interfaccia sbagliata
+Immagina di avere già sviluppato la tua applicazione, in cui tutto il codice (`Client`) si aspetta di interagire con un determinato contratto (`Target`), ad esempio chiamando `getLabel()` e `oneUp()`. A un certo punto vuoi integrare una classe già pronta o una libreria esterna (`Adaptee`, es. `LabelServer`) che fa proprio il lavoro che ti serve, ma **ha nomi di metodi, parametri o tipi di ritorno diversi** (ad esempio espone `nextLabel(int)` e `skip(int)`).
+
+- **Perché non modifichi il `Client`?** Perché dovresti riscrivere tutti i punti dell'applicazione che usano `Target`, accoppiando il tuo programma a quella specifica libreria.
+- **Perché non modifichi l'`Adaptee`?** Perché spesso è una libreria esterna di cui non hai il codice sorgente, oppure è già usata altrove con il suo contratto originale.
+- **La soluzione Adapter:** Crei una classe intermediaria (`Adapter`) che si presenta al `Client` rispettando il contratto atteso (`Target`) e, al proprio interno, **traduce** ogni chiamata nel metodo corrispondente dell'`Adaptee`.
+
+##### 3. Le due varianti: Object Adapter vs Class Adapter
+La dispensa distingue due modi diversi di costruire l'adattatore (illustrati con l'esempio `Label` e `LabelC` nella sezione 8.2.2):
+
+1. **Object Adapter (basato sulla composizione — la variante più usata):**
+    - `Adapter` **implementa** `Target` e **conserva al suo interno un riferimento** (un campo) all'oggetto `Adaptee`.
+    - Quando il client chiama `request()`, l'adattatore delega la chiamata al proprio campo `adaptee.specificRequest()`.
+    - _Vantaggio:_ è molto flessibile. Puoi passare l'`Adaptee` dall'esterno, sostituirlo a runtime con una sua sottoclasse oppure istanziarlo pigramente (_lazy initialisation_) solo alla prima chiamata che ne ha davvero bisogno (come mostra il frame `opt` nel diagramma di sequenza della Figura 8.2).
+
+2. **Class Adapter (basato sull'ereditarietà):**
+    - `Adapter` **implementa** `Target` ed **estende** (`extends`) direttamente `Adaptee`.
+    - Non ha bisogno di un campo interno perché eredita direttamente i metodi dell'`Adaptee` e li richiama su se stesso.
+    - _Caratteristica chiave:_ è un **adapter a due vie**, perché l'oggetto risultante è sia un `Target` sia un `Adaptee`, quindi può essere passato a codice che si aspetta l'uno o l'altro tipo. Di contro, è legato rigidamente a quella specifica classe `Adaptee` (non può adattarne altre sottoclassi a runtime e in Java non funziona se devi adattare più classi contemporaneamente, perché non c'è ereditarietà multipla).
+
+##### 4. Esempio pratico in Java (ispirato a `Label` / `LabelServer`)
+Ecco come appare nel codice l'esempio in entrambe le varianti:
+```java
+// 1. TARGET: il contratto atteso dal nostro Client
+interface ILabel {
+    String getLabel();
+    void oneUp();
+}
+
+// 2. ADAPTEE: la libreria esterna con metodi incompatibili
+class LabelServer {
+    private int current = 1;
+    private final String prefix;
+
+    public LabelServer(String prefix) {
+        this.prefix = prefix;
+    }
+
+    public String nextLabel(int offset) {
+        return prefix + "-" + (current + offset);
+    }
+
+    public void skip(int step) {
+        current += step;
+    }
+}
+
+// 3A. OBJECT ADAPTER (Composizione + Lazy Initialization)
+class Label implements ILabel {
+    private LabelServer server; // Riferimento all'Adaptee
+    private final String prefix;
+
+    public Label(String prefix) {
+        this.prefix = prefix;
+    }
+
+    // Crea il server solo quando serve davvero (lazy)
+    private LabelServer getServer() {
+        if (server == null) {
+            server = new LabelServer(prefix);
+        }
+        return server;
+    }
+
+    @Override
+    public String getLabel() {
+        return getServer().nextLabel(0); // Traduce getLabel() -> nextLabel(0)
+    }
+
+    @Override
+    public void oneUp() {
+        getServer().skip(1);             // Traduce oneUp() -> skip(1)
+    }
+}
+
+// 3B. CLASS ADAPTER (Ereditarietà -> Adapter a due vie)
+class LabelC extends LabelServer implements ILabel {
+    public LabelC(String prefix) {
+        super(prefix);
+    }
+
+    @Override
+    public String getLabel() {
+        return nextLabel(0); // Chiama il metodo ereditato
+    }
+
+    @Override
+    public void oneUp() {
+        skip(1);             // Chiama il metodo ereditato
+    }
+}
+
+// 4. CLIENT: conosce solo ILabel
+public class MainAdapter {
+    public static void main(String[] args) {
+        ILabel etichetta = new Label("ORD"); // Oppure new LabelC("ORD")
+        System.out.println(etichetta.getLabel()); // Stampa: ORD-1
+        etichetta.oneUp();
+        System.out.println(etichetta.getLabel()); // Stampa: ORD-2
+    }
+}
+```
+
+###### Due punti da ricordare per l'esame
+- **Non confondere Adapter con Facade:** _Adapter_ fa comunicare due interfacce **incompatibili** traducendo un contratto in un altro; _Facade_ invece prende un sottosistema complesso formato da più classi e offre un'interfaccia nuova **più semplice e di alto livello**.
+- **Precondizioni, postcondizioni e costo:** Oltre a tradurre i nomi dei metodi, l'adattatore può verificare precondizioni prima di delegare all'`Adaptee` e garantire postcondizioni dopo la chiamata. Il costo è un livello aggiuntivo di indirezione (una chiamata in più a ogni operazione).
+
+>[!info] In breve...
+>Se ad esempio sul quel codice, in futuro dovessi cambiare libreria non devo modificare il main, ma solo la classe adapter in modo da tradurre le operazioni del nuovo adaptee in base all'interfaccia che il client (main) usa
 
 ---
 
